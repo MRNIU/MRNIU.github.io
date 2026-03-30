@@ -1,0 +1,20 @@
+{
+  "name": "gitpulse",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "fetch": "tsx scripts/src/fetch-data.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "astro": "^6.1.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "vitest": "^3.2.4"
+  }
+}
