@@ -16,8 +16,8 @@ module.exports = {
     customPrompt: "",
   },
   llm: {
-    baseUrl: "https://api.openai.com/v1",
-    model: "gpt-4o",
+    baseUrl: "https://models.inference.ai.azure.com/v1",
+    model: "gpt-4o-mini",
   },
   schedule: {
     fetchCron: "0 2 * * *",

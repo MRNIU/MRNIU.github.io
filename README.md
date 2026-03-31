@@ -21,9 +21,12 @@
 4. In repo **Settings**, enable:
    - **Actions → General → Workflow permissions** → **"Read and write permissions"**
    - **Pages → Build and deployment → Source** → **"GitHub Actions"**
-5. *(Optional)* Enable AI Roast — **Settings → Secrets and variables → Actions**:
-   - Add secret `LLM_API_KEY` (any OpenAI-compatible key)
-   - Optionally set variables `LLM_BASE_URL` and `LLM_MODEL`
+5. *(Optional)* AI Roast works out of the box via **GitHub Copilot** (free `gpt-4o-mini`).
+   No extra secrets needed — it uses your repo's `GITHUB_TOKEN` by default.
+   To use a different LLM provider, set in **Settings → Secrets and variables → Actions**:
+   - Secret `LLM_API_KEY` — any OpenAI-compatible key
+   - Variable `LLM_BASE_URL` — provider endpoint (default: GitHub Models)
+   - Variable `LLM_MODEL` — model name (default: `gpt-4o-mini`)
 6. Go to **Actions** tab → **"GitPulse Data Fetch"** → **"Run workflow"**
 7. Done — site live at `https://<your-username>.github.io` in minutes
 
@@ -57,8 +60,8 @@ All options in `devlog.config.cjs`:
 | `filters.ignoreShortComments` | `true` | Filter "LGTM", "+1", etc. |
 | `aiRoast.enabled` | `true` | Enable AI commentary |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`, `"encouraging_mentor"`, or `"custom"` |
-| `llm.baseUrl` | `"https://api.openai.com/v1"` | Any OpenAI-compatible endpoint |
-| `llm.model` | `"gpt-4o"` | Model name |
+| `llm.baseUrl` | `"https://models.inference.ai.azure.com/v1"` | Any OpenAI-compatible endpoint (default: GitHub Models) |
+| `llm.model` | `"gpt-4o-mini"` | Model name |
 
 `LLM_BASE_URL` and `LLM_MODEL` env vars override config values.
 

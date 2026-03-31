@@ -21,9 +21,12 @@
 4. 在仓库 **Settings** 中启用：
    - **Actions → General → Workflow permissions** → 选择 **"Read and write permissions"**
    - **Pages → Build and deployment → Source** → 选择 **"GitHub Actions"**
-5. **（可选）** 启用 AI 吐槽 — **Settings → Secrets and variables → Actions**：
-   - 添加密钥 `LLM_API_KEY`（任意 OpenAI 兼容的 API key）
-   - 可选设置变量 `LLM_BASE_URL` 和 `LLM_MODEL`
+5. **（可选）** AI 吐槽默认通过 **GitHub Copilot** 开箱即用（免费 `gpt-4o-mini`）。
+   无需额外配置密钥 — 默认使用仓库的 `GITHUB_TOKEN`。
+   如需使用其他 LLM 服务商，在 **Settings → Secrets and variables → Actions** 中设置：
+   - 密钥 `LLM_API_KEY` — 任意 OpenAI 兼容的 API key
+   - 变量 `LLM_BASE_URL` — 服务商接口地址（默认：GitHub Models）
+   - 变量 `LLM_MODEL` — 模型名称（默认：`gpt-4o-mini`）
 6. 前往 **Actions** 标签 → **"GitPulse Data Fetch"** → **"Run workflow"**
 7. 完成 — 几分钟内你的网站就在 `https://<你的用户名>.github.io` 上线了
 
@@ -57,8 +60,8 @@
 | `filters.ignoreShortComments` | `true` | 过滤 "LGTM"、"+1" 等短评论 |
 | `aiRoast.enabled` | `true` | 启用 AI 点评 |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`、`"encouraging_mentor"` 或 `"custom"` |
-| `llm.baseUrl` | `"https://api.openai.com/v1"` | 任意 OpenAI 兼容接口地址 |
-| `llm.model` | `"gpt-4o"` | 模型名称 |
+| `llm.baseUrl` | `"https://models.inference.ai.azure.com/v1"` | 任意 OpenAI 兼容接口地址（默认：GitHub Models） |
+| `llm.model` | `"gpt-4o-mini"` | 模型名称 |
 
 环境变量 `LLM_BASE_URL` 和 `LLM_MODEL` 会覆盖配置文件中的值。
 
