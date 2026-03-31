@@ -45,12 +45,12 @@
   --cp-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   /* ─── Fluid scale — presentation / storytelling size ─── */
-  --cp-fs-base: clamp(17px, 0.6vw + 12px, 26px);
-  --cp-fs-sm:   clamp(15px, 0.5vw + 10px, 22px);
-  --cp-fs-xs:   clamp(14px, 0.45vw + 9px, 20px);
-  --cp-fs-lg:   clamp(22px, 0.8vw + 14px, 36px);
-  --cp-fs-xl:   clamp(28px, 1.2vw + 16px, 52px);
-  --cp-fs-label: clamp(13px, 0.4vw + 8px, 18px);
+  --cp-fs-base: clamp(20px, 0.7vw + 14px, 30px);
+  --cp-fs-sm:   clamp(18px, 0.6vw + 12px, 26px);
+  --cp-fs-xs:   clamp(16px, 0.5vw + 11px, 24px);
+  --cp-fs-lg:   clamp(26px, 1.0vw + 16px, 40px);
+  --cp-fs-xl:   clamp(32px, 1.4vw + 18px, 58px);
+  --cp-fs-label: clamp(16px, 0.5vw + 10px, 22px);
 
   /* Fluid spacing */
   --cp-sidebar-w: clamp(220px, 14vw, 320px);

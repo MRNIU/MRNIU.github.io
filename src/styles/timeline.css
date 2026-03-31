@@ -4,8 +4,8 @@
 
 /* ─── Base Event Entry (terminal log line) ─── */
 .event-card {
-  padding: 8px 0;
-  margin-bottom: 2px;
+  padding: 14px 0;
+  margin-bottom: 6px;
   border-bottom: 1px solid var(--cp-border-muted);
   background: transparent;
   transition: background 0.1s;
