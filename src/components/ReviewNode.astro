@@ -24,13 +24,17 @@ interface Props {
 const { event } = Astro.props;
 const { data, repo, ts } = event;
 
-const stateConfig: Record<string, { bg: string; fg: string; label: string }> = {
-  APPROVED: { bg: "#238636", fg: "#fff", label: "Approved" },
-  CHANGES_REQUESTED: { bg: "#da3633", fg: "#fff", label: "Changes Requested" },
-  COMMENTED: { bg: "#768390", fg: "#fff", label: "Commented" },
+const badgeClass: Record<string, string> = {
+  APPROVED: "state-badge--approved",
+  CHANGES_REQUESTED: "state-badge--changes",
+  COMMENTED: "state-badge--commented",
 };
 
-const config = stateConfig[data.state] || stateConfig.COMMENTED;
+const badgeLabel: Record<string, string> = {
+  APPROVED: "approved",
+  CHANGES_REQUESTED: "changes",
+  COMMENTED: "commented",
+};
 
 const time = new Date(ts).toLocaleString("en-US", {
   month: "short",
@@ -40,31 +44,26 @@ const time = new Date(ts).toLocaleString("en-US", {
 });
 ---
 
-<div class="event-card">
-  <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
-    <span
-      style={`display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; background: ${config.bg}; color: ${config.fg};`}
-    >
-      {config.label}
-    </span>
-    <span style="font-weight: 600;">#{data.prNumber} {data.prTitle}</span>
+<div class="event-card event-card--indented">
+  <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+    <span class={`state-badge ${badgeClass[data.state] || 'state-badge--commented'}`}>{badgeLabel[data.state] || data.state}</span>
+    <span class="event-ref">#{data.prNumber}</span>
+    <span style="color: var(--cp-fg-default); font-size: 13px;">{data.prTitle}</span>
   </div>
-  <p class="color-fg-muted text-small" style="margin: 6px 0 4px;">
-    {data.body}
-  </p>
+  {data.body && (
+    <p class="event-body">{data.body}</p>
+  )}
   {data.inlineComments && data.inlineComments.length > 0 && (
-    <div style="margin-top: 8px;">
+    <div style="margin-top: 4px;">
       {data.inlineComments.map((comment) => (
         <div class="review-inline">
-          <div class="mono text-small color-fg-muted" style="margin-bottom: 4px;">
-            {comment.path}:{comment.line}
-          </div>
-          <div>{comment.body}</div>
+          <code>{comment.path}:{comment.line}</code>
+          <div style="color: var(--cp-fg-subtle); margin-top: 2px;">{comment.body}</div>
         </div>
       ))}
     </div>
   )}
-  <div style="display: flex; gap: 12px; margin-top: 4px;">
+  <div style="display: flex; gap: 10px; margin-top: 2px;">
     <span class="event-repo">{repo}</span>
     <span class="event-time">{time}</span>
   </div>

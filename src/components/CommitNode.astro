@@ -29,15 +29,15 @@ const time = new Date(ts).toLocaleString("en-US", {
 ---
 
 <div class="event-card" data-semantic={semantic}>
-  <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
+  <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
     <span class="event-sha">{shortSha}</span>
-    <span style="flex: 1; min-width: 0;">{firstLine}</span>
-    <span class="diff-stat text-small">
+    <span style="color: var(--cp-fg-default); font-size: 13px;">{firstLine}</span>
+    <span class="diff-stat">
       <span class="additions">+{data.additions}</span>
       <span class="deletions">-{data.deletions}</span>
     </span>
   </div>
-  <div style="display: flex; gap: 12px; margin-top: 4px;">
+  <div style="display: flex; gap: 10px; margin-top: 2px;">
     <span class="event-repo">{repo}</span>
     <span class="event-time">{time}</span>
   </div>

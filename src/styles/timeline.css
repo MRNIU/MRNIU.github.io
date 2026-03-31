@@ -1,55 +1,136 @@
+/* ═══════════════════════════════════════════════
+   Cyber-Primer: Timeline Events
+   ═══════════════════════════════════════════════ */
+
+/* ─── Base Event Entry (terminal log line) ─── */
 .event-card {
-  padding: 12px 16px;
-  border: 1px solid var(--borderColor-default);
-  border-radius: 6px;
-  margin-bottom: 8px;
-  background: var(--bgColor-default);
+  padding: 6px 0;
+  margin-bottom: 2px;
+  border-bottom: 1px solid var(--cp-border-muted);
+  background: transparent;
+  transition: background 0.1s;
 }
 
-.event-card .event-time {
-  font-size: 12px;
-  color: var(--fgColor-muted);
+.event-card:hover {
+  background: var(--cp-bg-hover);
 }
 
-.event-card .event-repo {
-  font-size: 12px;
-  color: var(--fgColor-muted);
-  font-family: var(--gitpulse-font-mono);
-}
-
-.event-card .event-sha {
-  font-family: var(--gitpulse-font-mono);
-  font-size: 13px;
-  color: var(--fgColor-accent);
-}
-
-/* Semantic color left border */
-.event-card[data-semantic="feat"] { border-left: 3px solid var(--color-semantic-feat); }
-.event-card[data-semantic="fix"] { border-left: 3px solid var(--color-semantic-fix); }
-.event-card[data-semantic="merge"] { border-left: 3px solid var(--color-semantic-merge); }
+/* Semantic left accent — razor-thin */
+.event-card[data-semantic="feat"]   { border-left: 2px solid var(--cp-green); padding-left: 8px; }
+.event-card[data-semantic="fix"]    { border-left: 2px solid var(--cp-red); padding-left: 8px; }
+.event-card[data-semantic="merge"]  { border-left: 2px solid var(--cp-purple); padding-left: 8px; }
 .event-card[data-semantic="refactor"],
-.event-card[data-semantic="docs"] { border-left: 3px solid var(--color-semantic-default); }
+.event-card[data-semantic="docs"]   { border-left: 2px solid var(--cp-fg-muted); padding-left: 8px; }
 
-/* AI Roast bubble */
-.ai-roast-card {
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid var(--color-ai-roast-border);
-  background: var(--color-ai-roast-bg);
-  margin-bottom: 8px;
-  box-shadow: 0 0 12px var(--color-ai-roast-glow);
+/* ─── Data elements (monospace slabs) ─── */
+.event-sha {
+  font-family: var(--cp-font-mono);
+  font-size: 12px;
+  color: var(--cp-blue);
+  background: var(--cp-bg-raised);
+  padding: 1px 5px;
+  border-radius: 2px;
 }
 
-/* Review inline quote */
+.event-repo {
+  font-family: var(--cp-font-mono);
+  font-size: 11px;
+  color: var(--cp-fg-muted);
+}
+
+.event-time {
+  font-family: var(--cp-font-mono);
+  font-size: 11px;
+  color: var(--cp-fg-muted);
+}
+
+/* ─── State badges (flat, no rounded pills) ─── */
+.state-badge {
+  display: inline-block;
+  padding: 0 6px;
+  font-family: var(--cp-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+}
+
+.state-badge--merged  { background: var(--cp-purple); color: #fff; }
+.state-badge--open    { background: var(--cp-green); color: #fff; }
+.state-badge--closed  { background: var(--cp-red); color: #fff; }
+.state-badge--approved { background: var(--cp-green); color: #fff; }
+.state-badge--changes  { background: var(--cp-red); color: #fff; }
+.state-badge--commented { background: var(--cp-fg-muted); color: var(--cp-fg-bright); }
+
+/* ─── Diff stats ─── */
+.diff-stat {
+  font-family: var(--cp-font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.diff-stat .additions { color: var(--cp-green); }
+.diff-stat .deletions { color: var(--cp-red); }
+
+/* ─── Indented elements (reviews, comments, AI) ─── */
+.event-card--indented {
+  margin-left: 16px;
+  padding-left: 10px;
+  border-left: 2px solid var(--cp-border);
+}
+
+/* Review inline code quotes */
 .review-inline {
-  border-left: 3px solid var(--borderColor-default);
-  padding-left: 12px;
-  margin-top: 8px;
-  background: var(--bgColor-muted);
-  border-radius: 0 6px 6px 0;
-  padding: 8px 12px;
-  font-size: 13px;
+  margin: 4px 0 4px 16px;
+  padding: 4px 8px;
+  border-left: 2px solid var(--cp-border);
+  background: var(--cp-bg-raised);
+  font-size: 12px;
 }
 
-.diff-stat .additions { color: var(--color-semantic-feat); }
-.diff-stat .deletions { color: var(--color-semantic-fix); }
+.review-inline code {
+  color: var(--cp-blue);
+  background: none;
+  padding: 0;
+}
+
+/* ─── The Anomaly: AI Roast ─── */
+.ai-roast-card {
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  margin-left: 16px;
+  border-left: 2px solid var(--cp-anomaly);
+  background: var(--cp-anomaly-dim);
+  box-shadow: 0 0 20px var(--cp-anomaly-glow), inset 0 0 20px var(--cp-anomaly-dim);
+  transition: box-shadow 0.3s;
+}
+
+.ai-roast-card:hover {
+  box-shadow: 0 0 30px var(--cp-anomaly-glow), inset 0 0 30px rgba(247, 120, 186, 0.05);
+}
+
+.ai-roast-card .anomaly-label {
+  font-family: var(--cp-font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cp-anomaly);
+}
+
+/* ─── Event body text (prose track) ─── */
+.event-body {
+  color: var(--cp-fg-subtle);
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 2px 0;
+}
+
+/* PR/Issue number (data slab) */
+.event-ref {
+  font-family: var(--cp-font-mono);
+  font-size: 12px;
+  color: var(--cp-fg-default);
+  background: var(--cp-bg-raised);
+  padding: 1px 5px;
+  border-radius: 2px;
+}

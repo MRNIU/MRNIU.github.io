@@ -13,7 +13,6 @@ interface Props {
 
 const { months } = Astro.props;
 
-// Aggregate repo event counts across all months
 const repoCounts = new Map<string, number>();
 for (const month of months) {
   const perRepo = month.eventCount / (month.repos.length || 1);
@@ -22,106 +21,89 @@ for (const month of months) {
   }
 }
 
-// Sort and take top 5
 const sorted = [...repoCounts.entries()]
   .sort((a, b) => b[1] - a[1])
   .slice(0, 5);
 
-const total = sorted.reduce((s, [, c]) => s + c, 0) || 1;
 const maxCount = sorted.length > 0 ? sorted[0][1] : 1;
-
-// GitHub-style palette for the bars
-const barColors = ['#238636', '#1f6feb', '#8957e5', '#da3633', '#d29922'];
+const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var(--cp-red)', 'var(--cp-yellow)'];
 ---
 
-<section style="padding: 24px 0;">
-  <h2 class="f3" style="margin: 0 0 16px;">Top Repositories</h2>
-
-  <!-- Stacked bar (GitHub language-bar style) -->
-  <div class="top-repos-bar">
+<section style="padding: 12px 0;">
+  <h2 class="section-heading">Top Repositories</h2>
+  <div class="repo-list">
     {sorted.map(([repo, count], i) => (
-      <div
-        class="top-repos-bar-segment"
-        style={`width: ${(count / total) * 100}%; background: ${barColors[i]};`}
-        title={`${repo}: ${count} events`}
-      />
+      <div class="repo-row">
+        <span class="repo-name">{repo}</span>
+        <div class="repo-bar-track">
+          <div class="repo-bar" style={`width: ${(count / maxCount) * 100}%; background: ${barColors[i]};`} />
+        </div>
+        <span class="repo-count">{count}</span>
+      </div>
     ))}
   </div>
-
-  <!-- Legend list -->
-  <ul class="top-repos-legend">
-    {sorted.map(([repo, count], i) => (
-      <li class="top-repos-legend-item">
-        <span class="top-repos-dot" style={`background: ${barColors[i]};`} />
-        <span class="top-repos-repo-name">{repo.split('/').pop()}</span>
-        <span class="top-repos-pct">{((count / total) * 100).toFixed(1)}%</span>
-        <span class="top-repos-count">{count}</span>
-      </li>
-    ))}
-  </ul>
 </section>
 
 <style>
-  /* ─── Stacked bar ─── */
-  .top-repos-bar {
-    display: flex;
-    height: 8px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: var(--bgColor-neutral-muted);
+  .section-heading {
+    font-family: var(--cp-font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--cp-fg-muted);
+    margin: 0 0 8px;
+    font-weight: 400;
   }
 
-  .top-repos-bar-segment {
-    min-width: 3px;
+  .repo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .repo-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 0;
+  }
+
+  .repo-name {
+    font-family: var(--cp-font-mono);
+    font-size: 12px;
+    color: var(--cp-fg-default);
+    min-width: 200px;
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .repo-bar-track {
+    flex: 1;
+    height: 4px;
+    background: var(--cp-bg-raised);
+  }
+
+  .repo-bar {
+    height: 100%;
+    min-width: 2px;
     transition: width 0.3s ease;
   }
 
-  .top-repos-bar-segment:first-child {
-    border-radius: 6px 0 0 6px;
+  .repo-count {
+    font-family: var(--cp-font-mono);
+    font-size: 11px;
+    color: var(--cp-fg-muted);
+    min-width: 36px;
+    text-align: right;
   }
 
-  .top-repos-bar-segment:last-child {
-    border-radius: 0 6px 6px 0;
-  }
-
-  .top-repos-bar-segment:only-child {
-    border-radius: 6px;
-  }
-
-  /* ─── Legend ─── */
-  .top-repos-legend {
-    list-style: none;
-    margin: 12px 0 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .top-repos-legend-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-  }
-
-  .top-repos-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .top-repos-repo-name {
-    font-weight: 600;
-    color: var(--fgColor-default);
-  }
-
-  .top-repos-pct {
-    color: var(--fgColor-default);
-  }
-
-  .top-repos-count {
-    color: var(--fgColor-muted);
+  @media (max-width: 768px) {
+    .repo-name {
+      min-width: 120px;
+      font-size: 11px;
+    }
   }
 </style>

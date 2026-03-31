@@ -19,13 +19,11 @@ interface Props {
 const { event } = Astro.props;
 const { data, repo, semantic, ts } = event;
 
-const stateColors: Record<string, { bg: string; fg: string }> = {
-  merged: { bg: "#8957e5", fg: "#fff" },
-  open: { bg: "#238636", fg: "#fff" },
-  closed: { bg: "#da3633", fg: "#fff" },
+const badgeClass: Record<string, string> = {
+  merged: "state-badge--merged",
+  open: "state-badge--open",
+  closed: "state-badge--closed",
 };
-
-const colors = stateColors[data.state] || stateColors.open;
 
 const time = new Date(ts).toLocaleString("en-US", {
   month: "short",
@@ -34,25 +32,23 @@ const time = new Date(ts).toLocaleString("en-US", {
   minute: "2-digit",
 });
 
-// Truncate body to ~2 lines worth
 const truncatedBody = data.body.length > 200
   ? data.body.slice(0, 200) + "..."
   : data.body;
 ---
 
 <div class="event-card" data-semantic={semantic}>
-  <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
-    <span
-      style={`display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; background: ${colors.bg}; color: ${colors.fg};`}
-    >
-      {data.state}
-    </span>
-    <span style="font-weight: 600;">#{data.number} {data.title}</span>
+  <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+    <span class={`state-badge ${badgeClass[data.state] || 'state-badge--open'}`}>{data.state}</span>
+    <span class="event-ref">#{data.number}</span>
+    <span style="color: var(--cp-fg-bright); font-size: 13px;">{data.title}</span>
   </div>
-  <p class="color-fg-muted text-small" style="margin: 6px 0 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-    {truncatedBody}
-  </p>
-  <div style="display: flex; gap: 12px;">
+  {truncatedBody && (
+    <p class="event-body" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+      {truncatedBody}
+    </p>
+  )}
+  <div style="display: flex; gap: 10px; margin-top: 2px;">
     <span class="event-repo">{repo}</span>
     <span class="event-time">{time}</span>
   </div>

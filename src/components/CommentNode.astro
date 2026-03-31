@@ -26,15 +26,14 @@ const time = new Date(ts).toLocaleString("en-US", {
 });
 ---
 
-<div class="event-card">
-  <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
-    <span class="color-fg-muted text-small">Commented on issue</span>
-    <span style="font-weight: 600;">#{data.issueNumber}: {data.issueTitle}</span>
+<div class="event-card event-card--indented">
+  <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+    <span class="event-time" style="color: var(--cp-fg-muted);">comment</span>
+    <span class="event-ref">#{data.issueNumber}</span>
+    <span style="color: var(--cp-fg-default); font-size: 13px;">{data.issueTitle}</span>
   </div>
-  <p class="color-fg-muted text-small" style="margin: 6px 0 4px;">
-    {data.body}
-  </p>
-  <div style="display: flex; gap: 12px;">
+  <p class="event-body">{data.body}</p>
+  <div style="display: flex; gap: 10px; margin-top: 2px;">
     <span class="event-repo">{repo}</span>
     <span class="event-time">{time}</span>
   </div>

@@ -7,6 +7,7 @@ import Sidebar from "../components/Sidebar.astro";
 import EventCard from "../components/EventCard.astro";
 import "../styles/global.css";
 import "../styles/timeline.css";
+/* Primer CSS removed — Cyber-Primer design system handles all styling */
 import { getMessages, t } from "../i18n/index.ts";
 
 import indexData from "../../data/index.json";
@@ -27,9 +28,9 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
 ---
 <BaseLayout title={`${t(m, "title")} — ${indexData.user}`}>
   <div class="top-section">
-    <header style="padding: 48px 0 24px; text-align: center;">
-      <h1 class="f1" style="margin: 0;">{t(m, "title")}</h1>
-      <p class="color-fg-muted f4" style="margin: 4px 0 0;">{t(m, "subtitle", { user: indexData.user })}</p>
+    <header style="padding: 32px 0 16px; text-align: center;">
+      <h1 style="margin: 0; font-family: var(--cp-font-mono); font-size: 24px; font-weight: 600; color: var(--cp-fg-bright); letter-spacing: -0.5px;">{t(m, "title")}</h1>
+      <p style="margin: 4px 0 0; font-family: var(--cp-font-mono); font-size: 12px; color: var(--cp-fg-muted);">{t(m, "subtitle", { user: indexData.user })}</p>
     </header>
 
     <Dashboard stats={indexData.stats} labels={{
@@ -45,7 +46,7 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
   </div>
 
   <section style="padding: 32px 0;">
-    <h2 class="f3 timeline-title" style="margin: 0 0 16px;">{t(m, "timeline.title")}</h2>
+    <h2 class="timeline-title" style="margin: 0 0 12px; font-family: var(--cp-font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cp-fg-muted); font-weight: 400;">{t(m, "timeline.title")}</h2>
 
     <button class="sidebar-toggle" id="sidebar-toggle">
       &#9776; {t(m, "sidebar.filtersToggle")}
@@ -247,91 +248,95 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
       switch (event.type) {
         case 'commit':
           return `<div class="event-card" data-semantic="${semantic}">
-              <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                <div>
-                  <span class="event-sha">${event.data.sha.slice(0, 7)}</span>
-                  <span style="margin-left: 8px;">${escapeHtml(event.data.message)}</span>
-                </div>
+              <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+                <span class="event-sha">${event.data.sha.slice(0, 7)}</span>
+                <span style="color: var(--cp-fg-default); font-size: 13px;">${escapeHtml(event.data.message)}</span>
                 <span class="diff-stat"><span class="additions">+${event.data.additions}</span> <span class="deletions">-${event.data.deletions}</span></span>
               </div>
-              <div style="margin-top: 4px;">
+              <div style="display: flex; gap: 10px; margin-top: 2px;">
                 <span class="event-repo">${event.repo}</span>
-                <span class="event-time" style="margin-left: 8px;">${time}</span>
+                <span class="event-time">${time}</span>
               </div>
             </div>`;
 
         case 'pull_request': {
-          const stateColor = event.data.state === 'merged' ? '#8957e5' : event.data.state === 'open' ? '#238636' : '#da3633';
+          const badgeClass = event.data.state === 'merged' ? 'state-badge--merged' : event.data.state === 'open' ? 'state-badge--open' : 'state-badge--closed';
           return `<div class="event-card" data-semantic="${semantic}">
-              <div style="display: flex; align-items: baseline; gap: 8px;">
-                <span class="Label" style="background: ${stateColor}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">${event.data.state}</span>
-                <span style="font-weight: 600;">#${event.data.number} ${escapeHtml(event.data.title)}</span>
+              <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+                <span class="state-badge ${badgeClass}">${event.data.state}</span>
+                <span class="event-ref">#${event.data.number}</span>
+                <span style="color: var(--cp-fg-bright); font-size: 13px;">${escapeHtml(event.data.title)}</span>
               </div>
-              ${event.data.body ? `<p style="margin: 8px 0 0; color: var(--fgColor-muted); font-size: 13px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${escapeHtml(event.data.body)}</p>` : ''}
-              <div style="margin-top: 4px;">
+              ${event.data.body ? `<p class="event-body" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${escapeHtml(event.data.body)}</p>` : ''}
+              <div style="display: flex; gap: 10px; margin-top: 2px;">
                 <span class="event-repo">${event.repo}</span>
-                <span class="event-time" style="margin-left: 8px;">${time}</span>
+                <span class="event-time">${time}</span>
               </div>
             </div>`;
         }
 
         case 'review': {
-          const stateColors: Record<string,string> = { 'APPROVED': '#238636', 'CHANGES_REQUESTED': '#da3633', 'COMMENTED': '#768390' };
-          const color = stateColors[event.data.state] || '#768390';
+          const stateMap: Record<string,string> = { 'APPROVED': 'state-badge--approved', 'CHANGES_REQUESTED': 'state-badge--changes', 'COMMENTED': 'state-badge--commented' };
+          const labelMap: Record<string,string> = { 'APPROVED': 'approved', 'CHANGES_REQUESTED': 'changes', 'COMMENTED': 'commented' };
           const inlineHtml = (event.data.inlineComments || []).map((c: any) =>
-            `<div class="review-inline"><code>${escapeHtml(c.path)}:${c.line}</code><br/>${escapeHtml(c.body)}</div>`
+            `<div class="review-inline"><code>${escapeHtml(c.path)}:${c.line}</code><div style="color: var(--cp-fg-subtle); margin-top: 2px;">${escapeHtml(c.body)}</div></div>`
           ).join('');
-          return `<div class="event-card">
-              <div style="display: flex; align-items: baseline; gap: 8px;">
-                <span class="Label" style="background: ${color}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">${event.data.state}</span>
-                <span>PR #${event.data.prNumber}: ${escapeHtml(event.data.prTitle)}</span>
+          return `<div class="event-card event-card--indented">
+              <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+                <span class="state-badge ${stateMap[event.data.state] || 'state-badge--commented'}">${labelMap[event.data.state] || event.data.state}</span>
+                <span class="event-ref">#${event.data.prNumber}</span>
+                <span style="color: var(--cp-fg-default); font-size: 13px;">${escapeHtml(event.data.prTitle)}</span>
               </div>
-              ${event.data.body ? `<p style="margin: 8px 0 0; font-size: 13px;">${escapeHtml(event.data.body)}</p>` : ''}
+              ${event.data.body ? `<p class="event-body">${escapeHtml(event.data.body)}</p>` : ''}
               ${inlineHtml}
-              <div style="margin-top: 4px;">
+              <div style="display: flex; gap: 10px; margin-top: 2px;">
                 <span class="event-repo">${event.repo}</span>
-                <span class="event-time" style="margin-left: 8px;">${time}</span>
+                <span class="event-time">${time}</span>
               </div>
             </div>`;
         }
 
         case 'issue': {
-          const icon = event.data.state === 'open' ? '\u{1F7E2}' : '\u{1F7E3}';
+          const isOpen = event.data.state === 'open';
           return `<div class="event-card" data-semantic="${semantic}">
-              <div style="display: flex; align-items: baseline; gap: 8px;">
-                <span>${icon}</span>
-                <span style="font-weight: 600;">#${event.data.number} ${escapeHtml(event.data.title)}</span>
+              <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+                <span class="state-badge ${isOpen ? 'state-badge--open' : 'state-badge--merged'}">${isOpen ? 'open' : 'closed'}</span>
+                <span class="event-ref">#${event.data.number}</span>
+                <span style="color: var(--cp-fg-bright); font-size: 13px;">${escapeHtml(event.data.title)}</span>
               </div>
-              ${event.data.body ? `<p style="margin: 8px 0 0; color: var(--fgColor-muted); font-size: 13px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${escapeHtml(event.data.body)}</p>` : ''}
-              <div style="margin-top: 4px;">
+              ${event.data.body ? `<p class="event-body" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${escapeHtml(event.data.body)}</p>` : ''}
+              <div style="display: flex; gap: 10px; margin-top: 2px;">
                 <span class="event-repo">${event.repo}</span>
-                <span class="event-time" style="margin-left: 8px;">${time}</span>
+                <span class="event-time">${time}</span>
               </div>
             </div>`;
         }
 
         case 'issue_comment':
-          return `<div class="event-card">
-              <div style="font-size: 13px; color: var(--fgColor-muted);">
-                Commented on <span style="font-weight: 600;">#${event.data.issueNumber}: ${escapeHtml(event.data.issueTitle)}</span>
+          return `<div class="event-card event-card--indented">
+              <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
+                <span class="event-time" style="color: var(--cp-fg-muted);">comment</span>
+                <span class="event-ref">#${event.data.issueNumber}</span>
+                <span style="color: var(--cp-fg-default); font-size: 13px;">${escapeHtml(event.data.issueTitle)}</span>
               </div>
-              <p style="margin: 8px 0 0; font-size: 13px;">${escapeHtml(event.data.body)}</p>
-              <div style="margin-top: 4px;">
+              <p class="event-body">${escapeHtml(event.data.body)}</p>
+              <div style="display: flex; gap: 10px; margin-top: 2px;">
                 <span class="event-repo">${event.repo}</span>
-                <span class="event-time" style="margin-left: 8px;">${time}</span>
+                <span class="event-time">${time}</span>
               </div>
             </div>`;
 
         case 'ai_roast':
           return `<div class="ai-roast-card">
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                <span style="font-size: 24px;">\u{1F916}</span>
-                <span class="text-bold">AI Weekly Roast</span>
-                <span class="event-time">${event.data.weekRange}</span>
+              <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;">
+                <span class="anomaly-label">&#x25C8; ai::roast</span>
+                <span style="font-family: var(--cp-font-mono); font-size: 11px; color: var(--cp-fg-muted);">${event.data.weekRange}</span>
               </div>
-              <p style="margin: 0; font-size: 14px; line-height: 1.6;">${escapeHtml(event.data.content)}</p>
-              <div style="margin-top: 8px; font-size: 12px; color: var(--fgColor-muted);">
-                ${event.data.stats.totalCommits} commits \u00B7 Top repo: ${event.data.stats.topRepo}
+              <p style="margin: 0 0 6px; font-size: 13px; line-height: 1.5; color: var(--cp-anomaly);">${escapeHtml(event.data.content)}</p>
+              <div style="display: flex; gap: 12px; font-family: var(--cp-font-mono); font-size: 11px; color: var(--cp-fg-muted);">
+                <span>${event.data.stats.totalCommits} commits</span>
+                <span>${event.data.stats.topRepo}</span>
+                <span>${time}</span>
               </div>
             </div>`;
 

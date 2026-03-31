@@ -5,10 +5,11 @@ interface Props {
 
 const { title = "GitPulse" } = Astro.props;
 ---
-<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0e14" />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
@@ -16,17 +17,5 @@ const { title = "GitPulse" } = Astro.props;
     <div class="page-container">
       <slot />
     </div>
-    <script>
-      // Theme detection: follow system preference
-      const html = document.documentElement;
-      const mq = window.matchMedia("(prefers-color-scheme: dark)");
-
-      function applyTheme(dark: boolean) {
-        html.setAttribute("data-color-mode", dark ? "dark" : "light");
-      }
-
-      applyTheme(mq.matches);
-      mq.addEventListener("change", (e) => applyTheme(e.matches));
-    </script>
   </body>
 </html>

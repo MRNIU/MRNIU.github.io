@@ -34,7 +34,7 @@ function formatMonth(key: string): string {
 ---
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-section">
-    <h3 class="f5 text-bold" style="margin: 0 0 8px;">{labels.months || "Months"}</h3>
+    <h3>{labels.months || "Months"}</h3>
     <nav class="month-nav">
       {months.map((m) => (
         <button
@@ -49,8 +49,8 @@ function formatMonth(key: string): string {
     </nav>
   </div>
 
-  <div class="sidebar-section" style="margin-top: 24px;">
-    <h3 class="f5 text-bold" style="margin: 0 0 8px;">{labels.filter || "Filter"}</h3>
+  <div class="sidebar-section" style="margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--cp-border-muted);">
+    <h3>{labels.filter || "Filter"}</h3>
     <div class="filter-list">
       {eventTypes.map((t) => (
         <label class="filter-item">

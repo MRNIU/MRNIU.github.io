@@ -1,61 +1,79 @@
-/* Primer CSS base */
-@import "@primer/css/dist/primer.css";
+/* ═══════════════════════════════════════════════
+   Cyber-Primer Design System
+   ═══════════════════════════════════════════════ */
 
-/* ─── Custom Properties (extend Primer) ─── */
+/* ─── Abyss Palette ─── */
 :root {
-  --gitpulse-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  /* The Abyss — deep blue-gray, not pure black */
+  --cp-bg-deep: #0a0e14;
+  --cp-bg-surface: #0d1117;
+  --cp-bg-raised: #161b22;
+  --cp-bg-hover: #1c2128;
 
-  /* Semantic colors */
-  --color-semantic-feat: #238636;
-  --color-semantic-fix: #da3633;
-  --color-semantic-merge: #8957e5;
-  --color-semantic-refactor: #768390;
-  --color-semantic-docs: #768390;
-  --color-semantic-default: #768390;
+  /* Text hierarchy */
+  --cp-fg-default: #c9d1d9;
+  --cp-fg-muted: #484f58;
+  --cp-fg-subtle: #6e7681;
+  --cp-fg-bright: #e6edf3;
 
-  /* AI Roast colors */
-  --color-ai-roast-bg: rgba(137, 87, 229, 0.08);
-  --color-ai-roast-border: #8957e5;
-  --color-ai-roast-glow: rgba(137, 87, 229, 0.3);
+  /* Borders */
+  --cp-border: #21262d;
+  --cp-border-muted: #161b22;
 
-  /* Heatmap levels */
-  --color-heatmap-0: var(--bgColor-neutral-muted, #161b22);
+  /* Absolute Semantic Indicators */
+  --cp-green: #238636;   /* Creation */
+  --cp-red: #da3633;     /* Resolution */
+  --cp-purple: #8957e5;  /* Convergence */
+  --cp-blue: #58a6ff;    /* Reference/link */
+  --cp-yellow: #d29922;  /* Warning */
+
+  /* The Anomaly — AI glow */
+  --cp-anomaly: #f778ba;
+  --cp-anomaly-dim: rgba(247, 120, 186, 0.08);
+  --cp-anomaly-glow: rgba(247, 120, 186, 0.4);
+  --cp-anomaly-alt: #58a6ff;
+
+  /* Heatmap */
+  --color-heatmap-0: #161b22;
   --color-heatmap-1: #0e4429;
   --color-heatmap-2: #006d32;
   --color-heatmap-3: #26a641;
   --color-heatmap-4: #39d353;
+
+  /* Typography */
+  --cp-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --cp-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
-/* Light theme overrides */
-[data-color-mode="light"] {
-  --color-heatmap-0: #ebedf0;
-  --color-heatmap-1: #9be9a8;
-  --color-heatmap-2: #40c463;
-  --color-heatmap-3: #30a14e;
-  --color-heatmap-4: #216e39;
-
-  --color-ai-roast-bg: rgba(137, 87, 229, 0.06);
-}
-
-/* ─── Base Styles ─── */
+/* ─── Base Reset ─── */
 * {
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  color: var(--fgColor-default);
-  background-color: var(--bgColor-default);
+  font-family: var(--cp-font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--cp-fg-default);
+  background: var(--cp-bg-deep);
+  -webkit-font-smoothing: antialiased;
 }
 
-code, .mono {
-  font-family: var(--gitpulse-font-mono);
-  font-size: 0.85em;
+/* Data track: monospace with subtle background slab */
+code, .mono, .data-slab {
+  font-family: var(--cp-font-mono);
+  font-size: 12px;
+  background: var(--cp-bg-raised);
+  padding: 1px 5px;
+  border-radius: 2px;
 }
 
-/* ─── Layout Grid ─── */
+/* ─── Page Container ─── */
 .page-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -64,132 +82,150 @@ code, .mono {
 
 /* Top section: offset to align with timeline main column */
 .top-section {
-  margin-left: calc(240px + 24px);
-}
-
-.timeline-layout {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 24px;
+  margin-left: calc(220px + 20px);
 }
 
 .timeline-title {
-  margin-left: calc(240px + 24px);
+  margin-left: calc(220px + 20px);
 }
 
-/* Tablet */
+/* ─── Timeline Layout ─── */
+.timeline-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+}
+
 @media (max-width: 1023px) {
-  .top-section {
-    margin-left: 0;
-  }
-  .timeline-title {
-    margin-left: 0;
-  }
-  .timeline-layout {
-    grid-template-columns: 1fr;
-  }
+  .top-section { margin-left: 0; }
+  .timeline-title { margin-left: 0; }
+  .timeline-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+  .top-section { margin-left: 0; }
+  .timeline-title { margin-left: 0; }
 }
 
 /* ─── Sidebar ─── */
 .sidebar {
   position: sticky;
-  top: 16px;
+  top: 12px;
   align-self: start;
-  max-height: calc(100vh - 32px);
+  max-height: calc(100vh - 24px);
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cp-border) transparent;
 }
 
 .sidebar-section {
-  padding: 12px 0;
+  padding: 8px 0;
+}
+
+.sidebar-section h3 {
+  font-family: var(--cp-font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--cp-fg-muted);
+  margin: 0 0 6px;
+  padding: 0 8px;
 }
 
 .month-nav {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .month-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border: none;
   background: transparent;
-  color: var(--fgColor-default);
-  border-radius: 6px;
+  color: var(--cp-fg-subtle);
+  border-radius: 0;
   cursor: pointer;
-  font-size: 14px;
+  font-family: var(--cp-font-mono);
+  font-size: 12px;
   text-align: left;
   width: 100%;
+  border-left: 2px solid transparent;
+  transition: background 0.1s, border-color 0.1s;
 }
 
 .month-btn:hover {
-  background: var(--bgColor-neutral-muted);
+  background: var(--cp-bg-hover);
 }
 
 .month-btn.active {
-  background: var(--bgColor-accent-muted);
-  color: var(--fgColor-accent);
-  font-weight: 600;
+  background: var(--cp-bg-raised);
+  color: var(--cp-fg-bright);
+  border-left-color: var(--cp-green);
+  font-weight: 400;
+}
+
+.month-btn .Counter {
+  font-family: var(--cp-font-mono);
+  font-size: 11px;
+  color: var(--cp-fg-muted);
+  background: none;
+  padding: 0;
 }
 
 .filter-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
 }
 
 .filter-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 6px;
+  font-size: 12px;
   cursor: pointer;
-  color: var(--fgColor-default);
+  color: var(--cp-fg-subtle);
+  padding: 2px 8px;
+}
+
+.filter-item:hover {
+  color: var(--cp-fg-default);
 }
 
 .filter-item input[type="checkbox"] {
-  accent-color: var(--fgColor-accent);
+  accent-color: var(--cp-green);
 }
 
 /* ─── Mobile sidebar toggle ─── */
 .sidebar-toggle {
   display: none;
-  padding: 8px 16px;
-  border: 1px solid var(--borderColor-default);
-  border-radius: 6px;
-  background: var(--bgColor-default);
-  color: var(--fgColor-default);
+  padding: 6px 12px;
+  border: 1px solid var(--cp-border);
+  border-radius: 0;
+  background: var(--cp-bg-surface);
+  color: var(--cp-fg-subtle);
   cursor: pointer;
-  font-size: 14px;
+  font-family: var(--cp-font-mono);
+  font-size: 12px;
   width: 100%;
   text-align: left;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 1023px) {
-  .sidebar {
-    position: static;
-  }
-
-  .sidebar-toggle {
-    display: block;
-  }
-
-  .sidebar.collapsed {
-    display: none;
-  }
+  .sidebar { position: static; }
+  .sidebar-toggle { display: block; }
+  .sidebar.collapsed { display: none; }
 }
 
-/* Mobile */
-@media (max-width: 767px) {
-  .top-section {
-    margin-left: 0;
-  }
-  .timeline-title {
-    margin-left: 0;
-  }
+/* ─── The Mainline (vertical lifeline) ─── */
+.timeline-main {
+  position: relative;
+  padding-left: 20px;
+  border-left: 1px solid var(--cp-border);
 }
 
 /* ─── Month dividers ─── */
@@ -197,17 +233,34 @@ code, .mono {
   position: sticky;
   top: 0;
   z-index: 1;
-  padding: 12px 0;
-  margin: 0 0 8px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--fgColor-default);
-  background: var(--bgColor-default);
-  border-bottom: 1px solid var(--borderColor-muted);
+  padding: 6px 0;
+  margin: 0 0 4px;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-family: var(--cp-font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cp-fg-muted);
+  background: var(--cp-bg-deep);
+  border-bottom: 1px solid var(--cp-border-muted);
+}
+
+/* Mainline dot on month header */
+.month-divider::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  background: var(--cp-fg-muted);
+  border-radius: 50%;
 }
 
 .month-section {
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 /* ─── Utility ─── */
