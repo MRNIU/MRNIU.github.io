@@ -23,9 +23,10 @@ const m = getMessages(locale);
 
 const activeMonth = indexData.months[0]?.key || "2026-03";
 const noDataMsg = t(m, "empty.noData");
+const allMonthKeys = indexData.months.map((m: any) => m.key);
 ---
 <BaseLayout title={`${t(m, "title")} — ${indexData.user}`}>
-  <header style="padding: 48px 0 24px;">
+  <header style="padding: 48px 0 24px; text-align: center;">
     <h1 class="f1" style="margin: 0;">{t(m, "title")}</h1>
     <p class="color-fg-muted f4" style="margin: 4px 0 0;">{t(m, "subtitle", { user: indexData.user })}</p>
   </header>
@@ -62,72 +63,36 @@ const noDataMsg = t(m, "empty.noData");
         },
       }} />
 
-      <main class="timeline-main" id="timeline-main" data-no-data-msg={noDataMsg}>
-        {marchData.events.map((event: any) => (
-          <div class="event-wrapper" data-event-type={event.type}>
-            <EventCard event={event} />
-          </div>
-        ))}
+      <main class="timeline-main" id="timeline-main"
+            data-no-data-msg={noDataMsg}
+            data-all-months={JSON.stringify(allMonthKeys)}>
+        <!-- First month rendered at build time -->
+        <div class="month-section" data-month-section={activeMonth} id={`month-${activeMonth}`}>
+          <h3 class="month-divider">{new Date(activeMonth + '-01').toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</h3>
+          {marchData.events.map((event: any) => (
+            <div class="event-wrapper" data-event-type={event.type}>
+              <EventCard event={event} />
+            </div>
+          ))}
+        </div>
+        <!-- Remaining months loaded dynamically on scroll -->
+        <div id="scroll-sentinel" style="height: 1px;"></div>
       </main>
     </div>
   </section>
 
   <script>
+    // ─── State ───
+    const timelineMain = document.getElementById('timeline-main')!;
+    const allMonths: string[] = JSON.parse(timelineMain.getAttribute('data-all-months')!);
+    const loadedMonths = new Set<string>([allMonths[0]]);
+    let loadingMonth = false;
+    let nextMonthIndex = 1; // next month to load (allMonths is newest-first)
+
     // ─── Type Filtering ───
     const filters = document.querySelectorAll<HTMLInputElement>('[data-filter-type]');
-    const eventWrappers = document.querySelectorAll<HTMLElement>('.event-wrapper');
-
     filters.forEach(checkbox => {
-      checkbox.addEventListener('change', () => {
-        applyFilters();
-      });
-    });
-
-    // ─── Mobile sidebar toggle ───
-    const toggleBtn = document.getElementById('sidebar-toggle');
-    const sidebar = document.getElementById('sidebar');
-    if (toggleBtn && sidebar) {
-      // Start collapsed on mobile
-      if (window.innerWidth < 1024) {
-        sidebar.classList.add('collapsed');
-      }
-      toggleBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('collapsed');
-      });
-    }
-
-    // ─── Month navigation (fetch + replace) ───
-    const monthBtns = document.querySelectorAll<HTMLButtonElement>('.month-btn');
-    const timelineMain = document.getElementById('timeline-main');
-
-    monthBtns.forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const file = btn.getAttribute('data-file');
-        const monthKey = btn.getAttribute('data-month');
-        if (!file || !timelineMain) return;
-
-        // Update active state
-        monthBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        try {
-          const resp = await fetch(`/data/${file}`);
-          if (!resp.ok) {
-            const noDataMsg = timelineMain.getAttribute('data-no-data-msg') || 'No data available for this month yet. Still backfilling...';
-            timelineMain.innerHTML = `<p class="color-fg-muted" style="padding: 24px; text-align: center;">${noDataMsg}</p>`;
-            return;
-          }
-          const data = await resp.json();
-
-          // Render events as HTML
-          timelineMain.innerHTML = data.events.map((event: any) => renderEventCard(event)).join('');
-
-          // Re-apply filters
-          applyFilters();
-        } catch (e) {
-          console.error('Failed to load month data:', e);
-        }
-      });
+      checkbox.addEventListener('change', () => applyFilters());
     });
 
     function applyFilters() {
@@ -141,14 +106,145 @@ const noDataMsg = t(m, "empty.noData");
       });
     }
 
+    // ─── Mobile sidebar toggle ───
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    if (toggleBtn && sidebar) {
+      if (window.innerWidth < 1024) sidebar.classList.add('collapsed');
+      toggleBtn.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+    }
+
+    // ─── Infinite scroll: load next month when sentinel is near viewport ───
+    const sentinel = document.getElementById('scroll-sentinel')!;
+
+    const scrollObserver = new IntersectionObserver(async (entries) => {
+      if (!entries[0].isIntersecting || loadingMonth) return;
+      await loadNextMonth();
+    }, { rootMargin: '600px' });
+
+    scrollObserver.observe(sentinel);
+
+    async function loadNextMonth() {
+      if (nextMonthIndex >= allMonths.length) {
+        scrollObserver.disconnect();
+        sentinel.remove();
+        return;
+      }
+      loadingMonth = true;
+      const monthKey = allMonths[nextMonthIndex];
+      nextMonthIndex++;
+
+      try {
+        const resp = await fetch(`/data/${monthKey}.json`);
+        if (!resp.ok) {
+          loadingMonth = false;
+          return;
+        }
+        const data = await resp.json();
+
+        // Build month section
+        const section = document.createElement('div');
+        section.className = 'month-section';
+        section.setAttribute('data-month-section', monthKey);
+        section.id = `month-${monthKey}`;
+
+        const header = document.createElement('h3');
+        header.className = 'month-divider';
+        const d = new Date(monthKey + '-01');
+        header.textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+        section.appendChild(header);
+
+        data.events.forEach((event: any) => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'event-wrapper';
+          wrapper.setAttribute('data-event-type', event.type);
+          wrapper.innerHTML = renderEventCard(event);
+          section.appendChild(wrapper);
+        });
+
+        // Insert before sentinel
+        sentinel.parentNode!.insertBefore(section, sentinel);
+        loadedMonths.add(monthKey);
+
+        // Observe new section for sidebar sync
+        sectionObserver.observe(section);
+
+        // Apply current filters to new content
+        applyFilters();
+      } catch (e) {
+        console.error('Failed to load month:', monthKey, e);
+      }
+      loadingMonth = false;
+    }
+
+    // ─── Sidebar sync: highlight active month on scroll ───
+    const monthBtns = document.querySelectorAll<HTMLButtonElement>('.month-btn');
+    let programmaticScroll = false;
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      if (programmaticScroll) return;
+      // Find the topmost visible section
+      let topSection: Element | null = null;
+      let topY = Infinity;
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const y = entry.boundingClientRect.top;
+          if (y < topY) {
+            topY = y;
+            topSection = entry.target;
+          }
+        }
+      });
+      if (topSection) {
+        const monthKey = (topSection as HTMLElement).getAttribute('data-month-section');
+        if (monthKey) setActiveMonth(monthKey);
+      }
+    }, { rootMargin: '-10% 0px -80% 0px' });
+
+    // Observe the initial month section
+    document.querySelectorAll('.month-section').forEach(s => sectionObserver.observe(s));
+
+    function setActiveMonth(monthKey: string) {
+      monthBtns.forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-month') === monthKey);
+      });
+      // Scroll active button into view within sidebar
+      const activeBtn = document.querySelector(`.month-btn[data-month="${monthKey}"]`);
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+
+    // ─── Sidebar click: scroll to month (load if needed) ───
+    monthBtns.forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const monthKey = btn.getAttribute('data-month');
+        if (!monthKey) return;
+
+        // Load all months up to the clicked one if not loaded yet
+        while (!loadedMonths.has(monthKey) && nextMonthIndex < allMonths.length) {
+          await loadNextMonth();
+        }
+
+        const section = document.getElementById(`month-${monthKey}`);
+        if (section) {
+          programmaticScroll = true;
+          setActiveMonth(monthKey);
+          section.scrollIntoView({ behavior: 'smooth' });
+          // Reset flag after scroll settles
+          setTimeout(() => { programmaticScroll = false; }, 1000);
+        }
+      });
+    });
+
+    // ─── Render helpers ───
     function renderEventCard(event: any): string {
       const time = new Date(event.ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
       const semantic = event.semantic || '';
 
       switch (event.type) {
         case 'commit':
-          return `<div class="event-wrapper" data-event-type="commit">
-            <div class="event-card" data-semantic="${semantic}">
+          return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; justify-content: space-between; align-items: baseline;">
                 <div>
                   <span class="event-sha">${event.data.sha.slice(0, 7)}</span>
@@ -160,13 +256,11 @@ const noDataMsg = t(m, "empty.noData");
                 <span class="event-repo">${event.repo}</span>
                 <span class="event-time" style="margin-left: 8px;">${time}</span>
               </div>
-            </div>
-          </div>`;
+            </div>`;
 
         case 'pull_request': {
           const stateColor = event.data.state === 'merged' ? '#8957e5' : event.data.state === 'open' ? '#238636' : '#da3633';
-          return `<div class="event-wrapper" data-event-type="pull_request">
-            <div class="event-card" data-semantic="${semantic}">
+          return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; align-items: baseline; gap: 8px;">
                 <span class="Label" style="background: ${stateColor}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">${event.data.state}</span>
                 <span style="font-weight: 600;">#${event.data.number} ${escapeHtml(event.data.title)}</span>
@@ -176,8 +270,7 @@ const noDataMsg = t(m, "empty.noData");
                 <span class="event-repo">${event.repo}</span>
                 <span class="event-time" style="margin-left: 8px;">${time}</span>
               </div>
-            </div>
-          </div>`;
+            </div>`;
         }
 
         case 'review': {
@@ -186,8 +279,7 @@ const noDataMsg = t(m, "empty.noData");
           const inlineHtml = (event.data.inlineComments || []).map((c: any) =>
             `<div class="review-inline"><code>${escapeHtml(c.path)}:${c.line}</code><br/>${escapeHtml(c.body)}</div>`
           ).join('');
-          return `<div class="event-wrapper" data-event-type="review">
-            <div class="event-card">
+          return `<div class="event-card">
               <div style="display: flex; align-items: baseline; gap: 8px;">
                 <span class="Label" style="background: ${color}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">${event.data.state}</span>
                 <span>PR #${event.data.prNumber}: ${escapeHtml(event.data.prTitle)}</span>
@@ -198,14 +290,12 @@ const noDataMsg = t(m, "empty.noData");
                 <span class="event-repo">${event.repo}</span>
                 <span class="event-time" style="margin-left: 8px;">${time}</span>
               </div>
-            </div>
-          </div>`;
+            </div>`;
         }
 
         case 'issue': {
           const icon = event.data.state === 'open' ? '\u{1F7E2}' : '\u{1F7E3}';
-          return `<div class="event-wrapper" data-event-type="issue">
-            <div class="event-card" data-semantic="${semantic}">
+          return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; align-items: baseline; gap: 8px;">
                 <span>${icon}</span>
                 <span style="font-weight: 600;">#${event.data.number} ${escapeHtml(event.data.title)}</span>
@@ -215,13 +305,11 @@ const noDataMsg = t(m, "empty.noData");
                 <span class="event-repo">${event.repo}</span>
                 <span class="event-time" style="margin-left: 8px;">${time}</span>
               </div>
-            </div>
-          </div>`;
+            </div>`;
         }
 
         case 'issue_comment':
-          return `<div class="event-wrapper" data-event-type="issue_comment">
-            <div class="event-card">
+          return `<div class="event-card">
               <div style="font-size: 13px; color: var(--fgColor-muted);">
                 Commented on <span style="font-weight: 600;">#${event.data.issueNumber}: ${escapeHtml(event.data.issueTitle)}</span>
               </div>
@@ -230,12 +318,10 @@ const noDataMsg = t(m, "empty.noData");
                 <span class="event-repo">${event.repo}</span>
                 <span class="event-time" style="margin-left: 8px;">${time}</span>
               </div>
-            </div>
-          </div>`;
+            </div>`;
 
         case 'ai_roast':
-          return `<div class="event-wrapper" data-event-type="ai_roast">
-            <div class="ai-roast-card">
+          return `<div class="ai-roast-card">
               <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
                 <span style="font-size: 24px;">\u{1F916}</span>
                 <span class="text-bold">AI Weekly Roast</span>
@@ -245,8 +331,7 @@ const noDataMsg = t(m, "empty.noData");
               <div style="margin-top: 8px; font-size: 12px; color: var(--fgColor-muted);">
                 ${event.data.stats.totalCommits} commits \u00B7 Top repo: ${event.data.stats.topRepo}
               </div>
-            </div>
-          </div>`;
+            </div>`;
 
         default:
           return '';

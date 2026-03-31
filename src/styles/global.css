@@ -80,6 +80,8 @@ code, .mono {
   position: sticky;
   top: 16px;
   align-self: start;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
 }
 
 .sidebar-section {
@@ -170,6 +172,24 @@ code, .mono {
   .timeline-layout {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─── Month dividers ─── */
+.month-divider {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 12px 0;
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fgColor-default);
+  background: var(--bgColor-default);
+  border-bottom: 1px solid var(--borderColor-muted);
+}
+
+.month-section {
+  padding-bottom: 16px;
 }
 
 /* ─── Utility ─── */
