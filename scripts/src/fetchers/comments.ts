@@ -5,7 +5,7 @@ import type { IssueCommentEvent, PageInfo } from "../types.js";
 const QUERY = `
 query($login: String!, $first: Int!, $after: String) {
   user(login: $login) {
-    issueComments(first: $first, after: $after, orderBy: { direction: DESC }) {
+    issueComments(first: $first, after: $after, orderBy: { field: UPDATED_AT, direction: DESC }) {
       nodes {
         createdAt
         body
