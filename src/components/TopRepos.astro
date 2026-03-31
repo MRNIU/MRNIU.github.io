@@ -25,21 +25,30 @@ const sorted = [...repoCounts.entries()]
   .sort((a, b) => b[1] - a[1])
   .slice(0, 5);
 
+const maxCount = sorted.length > 0 ? sorted[0][1] : 1;
 const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var(--cp-red)', 'var(--cp-yellow)'];
 ---
 
 <section style="padding: 12px 0;">
   <h2 class="section-heading">Top Repositories</h2>
   <div class="repo-list">
-    {sorted.map(([repo, count], i) => (
-      <div class="repo-row">
-        <div class="repo-name-box">
-          <a class="repo-name-text" href={`https://github.com/${repo}`} target="_blank" rel="noopener">{repo}</a>
+    {sorted.map(([repo, count], i) => {
+      const pct = Math.round((count / maxCount) * 100);
+      return (
+        <div class="repo-item">
+          <div class="repo-header">
+            <span class="repo-dot" style={`background: ${barColors[i]};`} />
+            <div class="repo-name-box">
+              <a class="repo-name-text" href={`https://github.com/${repo}`} target="_blank" rel="noopener">{repo}</a>
+            </div>
+            <span class="repo-count">{count}</span>
+          </div>
+          <div class="repo-bar-track">
+            <div class="repo-bar" style={`width: ${pct}%; background: ${barColors[i]};`} />
+          </div>
         </div>
-        <div class="repo-bar" style={`background: ${barColors[i]};`} />
-        <span class="repo-count">{count}</span>
-      </div>
-    ))}
+      );
+    })}
   </div>
 </section>
 
@@ -50,34 +59,44 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: var(--cp-fg-muted);
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     font-weight: 400;
   }
 
   .repo-list {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
   }
 
-  .repo-row {
-    display: grid;
-    grid-template-columns: 30% 1fr auto;
+  .repo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* ─── Header line: dot + name + count ─── */
+  .repo-header {
+    display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 3px 0;
+    gap: 8px;
   }
 
-  /* ─── Name: right-aligned, scroll on hover ─── */
+  .repo-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
   .repo-name-box {
+    flex: 1;
+    min-width: 0;
     overflow: hidden;
-    text-align: right;
-    direction: rtl; /* makes overflow clip from left, text stays right-aligned */
   }
 
   .repo-name-text {
     display: inline-block;
-    direction: ltr;
     font-family: var(--cp-font-mono);
     font-size: var(--cp-fs-sm);
     color: var(--cp-fg-default);
@@ -93,27 +112,26 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   @keyframes scroll-name {
     0%   { transform: translateX(0); }
     15%  { transform: translateX(0); }
-    85%  { transform: translateX(var(--scroll-dist, -40%)); }
-    100% { transform: translateX(var(--scroll-dist, -40%)); }
+    85%  { transform: translateX(calc(-100% + 200px)); }
+    100% { transform: translateX(calc(-100% + 200px)); }
   }
 
-  /* ─── Bar: full width, same length, only color differs ─── */
-  .repo-bar {
-    height: 5px;
-  }
-
-  /* ─── Count ─── */
   .repo-count {
     font-family: var(--cp-font-mono);
     font-size: var(--cp-fs-xs);
     color: var(--cp-fg-muted);
-    text-align: right;
-    min-width: 3ch;
+    flex-shrink: 0;
   }
 
-  @media (max-width: 768px) {
-    .repo-row {
-      grid-template-columns: 40% 1fr auto;
-    }
+  /* ─── Proportional bar below ─── */
+  .repo-bar-track {
+    height: 4px;
+    background: var(--cp-bg-raised);
+  }
+
+  .repo-bar {
+    height: 100%;
+    min-width: 3px;
+    transition: width 0.3s ease;
   }
 </style>
