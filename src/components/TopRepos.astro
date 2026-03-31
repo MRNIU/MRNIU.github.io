@@ -96,12 +96,14 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   }
 
   .repo-name-text {
-    display: inline-block;
+    display: block;
     font-family: var(--cp-font-mono);
     font-size: var(--cp-fs-sm);
     color: var(--cp-fg-default);
     white-space: nowrap;
     text-decoration: none;
+    width: fit-content;
+    max-width: 100%;
   }
 
   .repo-name-box:hover .repo-name-text {
@@ -110,10 +112,8 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   }
 
   @keyframes scroll-name {
-    0%   { transform: translateX(0); }
-    15%  { transform: translateX(0); }
-    85%  { transform: translateX(calc(-100% + 200px)); }
-    100% { transform: translateX(calc(-100% + 200px)); }
+    0%, 15%  { transform: translateX(0); }
+    85%, 100% { transform: translateX(calc(-100% + 200px)); }
   }
 
   .repo-count {
