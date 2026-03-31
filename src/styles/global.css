@@ -10,11 +10,11 @@
   --cp-bg-raised: #161b22;
   --cp-bg-hover: #1c2128;
 
-  /* Text hierarchy */
-  --cp-fg-default: #c9d1d9;
-  --cp-fg-muted: #484f58;
-  --cp-fg-subtle: #6e7681;
-  --cp-fg-bright: #e6edf3;
+  /* Text hierarchy — high contrast for readability */
+  --cp-fg-default: #e6edf3;
+  --cp-fg-muted: #8b949e;
+  --cp-fg-subtle: #8b949e;
+  --cp-fg-bright: #f0f6fc;
 
   /* Borders */
   --cp-border: #21262d;
@@ -57,8 +57,8 @@ html {
 body {
   margin: 0;
   font-family: var(--cp-font-sans);
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--cp-fg-default);
   background: var(--cp-bg-deep);
   -webkit-font-smoothing: antialiased;
@@ -124,7 +124,7 @@ code, .mono, .data-slab {
 
 .sidebar-section h3 {
   font-family: var(--cp-font-mono);
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--cp-fg-muted);
@@ -149,7 +149,7 @@ code, .mono, .data-slab {
   border-radius: 0;
   cursor: pointer;
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: 13px;
   text-align: left;
   width: 100%;
   border-left: 2px solid transparent;
@@ -185,7 +185,7 @@ code, .mono, .data-slab {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
   color: var(--cp-fg-subtle);
   padding: 2px 8px;
@@ -238,7 +238,7 @@ code, .mono, .data-slab {
   margin-left: -20px;
   padding-left: 20px;
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;

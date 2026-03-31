@@ -47,7 +47,7 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
 <style>
   .section-heading {
     font-family: var(--cp-font-mono);
-    font-size: 10px;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: var(--cp-fg-muted);
@@ -58,11 +58,12 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   .repo-list {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 4px;
   }
 
   .repo-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px 1fr 40px;
     align-items: center;
     gap: 10px;
     padding: 2px 0;
@@ -70,18 +71,15 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
 
   .repo-name {
     font-family: var(--cp-font-mono);
-    font-size: 12px;
+    font-size: 13px;
     color: var(--cp-fg-default);
-    min-width: 200px;
     text-align: right;
-    flex-shrink: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .repo-bar-track {
-    flex: 1;
     height: 4px;
     background: var(--cp-bg-raised);
   }
@@ -94,16 +92,17 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
 
   .repo-count {
     font-family: var(--cp-font-mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--cp-fg-muted);
-    min-width: 36px;
     text-align: right;
   }
 
   @media (max-width: 768px) {
+    .repo-row {
+      grid-template-columns: 120px 1fr 36px;
+    }
     .repo-name {
-      min-width: 120px;
-      font-size: 11px;
+      font-size: 12px;
     }
   }
 </style>

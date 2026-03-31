@@ -4,7 +4,7 @@
 
 /* ─── Base Event Entry (terminal log line) ─── */
 .event-card {
-  padding: 6px 0;
+  padding: 8px 0;
   margin-bottom: 2px;
   border-bottom: 1px solid var(--cp-border-muted);
   background: transparent;
@@ -25,7 +25,7 @@
 /* ─── Data elements (monospace slabs) ─── */
 .event-sha {
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--cp-blue);
   background: var(--cp-bg-raised);
   padding: 1px 5px;
@@ -34,22 +34,22 @@
 
 .event-repo {
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--cp-fg-muted);
 }
 
 .event-time {
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--cp-fg-muted);
 }
 
 /* ─── State badges (flat, no rounded pills) ─── */
 .state-badge {
   display: inline-block;
-  padding: 0 6px;
+  padding: 1px 6px;
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -66,7 +66,7 @@
 /* ─── Diff stats ─── */
 .diff-stat {
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   white-space: nowrap;
 }
 .diff-stat .additions { color: var(--cp-green); }
@@ -85,7 +85,7 @@
   padding: 4px 8px;
   border-left: 2px solid var(--cp-border);
   background: var(--cp-bg-raised);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .review-inline code {
@@ -111,7 +111,7 @@
 
 .ai-roast-card .anomaly-label {
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--cp-anomaly);
@@ -119,16 +119,16 @@
 
 /* ─── Event body text (prose track) ─── */
 .event-body {
-  color: var(--cp-fg-subtle);
-  font-size: 12px;
-  line-height: 1.4;
-  margin: 2px 0;
+  color: var(--cp-fg-muted);
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 3px 0;
 }
 
 /* PR/Issue number (data slab) */
 .event-ref {
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--cp-fg-default);
   background: var(--cp-bg-raised);
   padding: 1px 5px;
