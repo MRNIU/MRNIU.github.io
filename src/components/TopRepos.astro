@@ -27,69 +27,101 @@ const sorted = [...repoCounts.entries()]
   .sort((a, b) => b[1] - a[1])
   .slice(0, 5);
 
+const total = sorted.reduce((s, [, c]) => s + c, 0) || 1;
 const maxCount = sorted.length > 0 ? sorted[0][1] : 1;
+
+// GitHub-style palette for the bars
+const barColors = ['#238636', '#1f6feb', '#8957e5', '#da3633', '#d29922'];
 ---
 
 <section style="padding: 24px 0;">
   <h2 class="f3" style="margin: 0 0 16px;">Top Repositories</h2>
-  <div class="top-repos">
-    {sorted.map(([repo, count]) => (
-      <div class="repo-row">
-        <span class="repo-name mono text-small">{repo}</span>
-        <div class="bar-container">
-          <div
-            class="bar"
-            style={`width: ${(count / maxCount) * 100}%`}
-          />
-          <span class="bar-count text-small color-fg-muted">{count}</span>
-        </div>
-      </div>
+
+  <!-- Stacked bar (GitHub language-bar style) -->
+  <div class="top-repos-bar">
+    {sorted.map(([repo, count], i) => (
+      <div
+        class="top-repos-bar-segment"
+        style={`width: ${(count / total) * 100}%; background: ${barColors[i]};`}
+        title={`${repo}: ${count} events`}
+      />
     ))}
   </div>
+
+  <!-- Legend list -->
+  <ul class="top-repos-legend">
+    {sorted.map(([repo, count], i) => (
+      <li class="top-repos-legend-item">
+        <span class="top-repos-dot" style={`background: ${barColors[i]};`} />
+        <span class="top-repos-repo-name">{repo.split('/').pop()}</span>
+        <span class="top-repos-pct">{((count / total) * 100).toFixed(1)}%</span>
+        <span class="top-repos-count">{count}</span>
+      </li>
+    ))}
+  </ul>
 </section>
 
 <style>
-  .top-repos {
+  /* ─── Stacked bar ─── */
+  .top-repos-bar {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    height: 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--bgColor-neutral-muted);
   }
 
-  .repo-row {
+  .top-repos-bar-segment {
+    min-width: 3px;
+    transition: width 0.3s ease;
+  }
+
+  .top-repos-bar-segment:first-child {
+    border-radius: 6px 0 0 6px;
+  }
+
+  .top-repos-bar-segment:last-child {
+    border-radius: 0 6px 6px 0;
+  }
+
+  .top-repos-bar-segment:only-child {
+    border-radius: 6px;
+  }
+
+  /* ─── Legend ─── */
+  .top-repos-legend {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .top-repos-legend-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
+    font-size: 12px;
   }
 
-  .repo-name {
-    min-width: 260px;
-    text-align: right;
+  .top-repos-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
     flex-shrink: 0;
   }
 
-  @media (max-width: 768px) {
-    .repo-row {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 4px;
-    }
-    .repo-name {
-      min-width: auto;
-      text-align: left;
-    }
+  .top-repos-repo-name {
+    font-weight: 600;
+    color: var(--fgColor-default);
   }
 
-  .bar-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .top-repos-pct {
+    color: var(--fgColor-default);
   }
 
-  .bar {
-    height: 20px;
-    border-radius: 3px;
-    background: var(--bgColor-accent-emphasis);
-    min-width: 4px;
+  .top-repos-count {
+    color: var(--fgColor-muted);
   }
 </style>
