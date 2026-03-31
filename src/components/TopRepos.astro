@@ -25,7 +25,6 @@ const sorted = [...repoCounts.entries()]
   .sort((a, b) => b[1] - a[1])
   .slice(0, 5);
 
-const maxCount = sorted.length > 0 ? sorted[0][1] : 1;
 const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var(--cp-red)', 'var(--cp-yellow)'];
 ---
 
@@ -35,13 +34,9 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
     {sorted.map(([repo, count], i) => (
       <div class="repo-row">
         <div class="repo-name-box">
-          <a class="repo-name-text" href={`https://github.com/${repo}`} target="_blank" rel="noopener">
-            <span>{repo}</span>
-          </a>
+          <a class="repo-name-text" href={`https://github.com/${repo}`} target="_blank" rel="noopener">{repo}</a>
         </div>
-        <div class="repo-bar-track">
-          <div class="repo-bar" style={`width: ${(count / maxCount) * 100}%; background: ${barColors[i]};`} />
-        </div>
+        <div class="repo-bar" style={`background: ${barColors[i]};`} />
         <span class="repo-count">{count}</span>
       </div>
     ))}
@@ -67,20 +62,22 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
 
   .repo-row {
     display: grid;
-    grid-template-columns: 30% 1fr 50px;
+    grid-template-columns: 30% 1fr auto;
     align-items: center;
     gap: 12px;
     padding: 3px 0;
   }
 
-  /* Scrollable name container */
+  /* ─── Name: right-aligned, scroll on hover ─── */
   .repo-name-box {
     overflow: hidden;
     text-align: right;
+    direction: rtl; /* makes overflow clip from left, text stays right-aligned */
   }
 
   .repo-name-text {
     display: inline-block;
+    direction: ltr;
     font-family: var(--cp-font-mono);
     font-size: var(--cp-fs-sm);
     color: var(--cp-fg-default);
@@ -88,40 +85,35 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
     text-decoration: none;
   }
 
-  .repo-name-text:hover {
+  .repo-name-box:hover .repo-name-text {
     color: var(--cp-blue);
-    animation: scroll-name 3s linear infinite;
+    animation: scroll-name 4s linear infinite;
   }
 
   @keyframes scroll-name {
     0%   { transform: translateX(0); }
-    10%  { transform: translateX(0); }
-    90%  { transform: translateX(calc(-100% + 100px)); }
-    100% { transform: translateX(calc(-100% + 100px)); }
+    15%  { transform: translateX(0); }
+    85%  { transform: translateX(var(--scroll-dist, -40%)); }
+    100% { transform: translateX(var(--scroll-dist, -40%)); }
   }
 
-  .repo-bar-track {
-    height: 5px;
-    background: var(--cp-bg-raised);
-    min-width: 40px;
-  }
-
+  /* ─── Bar: full width, same length, only color differs ─── */
   .repo-bar {
-    height: 100%;
-    min-width: 2px;
-    transition: width 0.3s ease;
+    height: 5px;
   }
 
+  /* ─── Count ─── */
   .repo-count {
     font-family: var(--cp-font-mono);
     font-size: var(--cp-fs-xs);
     color: var(--cp-fg-muted);
     text-align: right;
+    min-width: 3ch;
   }
 
   @media (max-width: 768px) {
     .repo-row {
-      grid-template-columns: 40% 1fr 40px;
+      grid-template-columns: 40% 1fr auto;
     }
   }
 </style>
