@@ -1,0 +1,95 @@
+---
+interface Month {
+  key: string;
+  file: string;
+  eventCount: number;
+  repos: string[];
+  breakdown: Record<string, number>;
+}
+
+interface Props {
+  months: Month[];
+}
+
+const { months } = Astro.props;
+
+// Aggregate repo event counts across all months
+const repoCounts = new Map<string, number>();
+for (const month of months) {
+  const perRepo = month.eventCount / (month.repos.length || 1);
+  for (const repo of month.repos) {
+    repoCounts.set(repo, (repoCounts.get(repo) || 0) + Math.round(perRepo));
+  }
+}
+
+// Sort and take top 5
+const sorted = [...repoCounts.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5);
+
+const maxCount = sorted.length > 0 ? sorted[0][1] : 1;
+---
+
+<section style="padding: 24px 0;">
+  <h2 class="f3" style="margin: 0 0 16px;">Top Repositories</h2>
+  <div class="top-repos">
+    {sorted.map(([repo, count]) => (
+      <div class="repo-row">
+        <span class="repo-name mono text-small">{repo}</span>
+        <div class="bar-container">
+          <div
+            class="bar"
+            style={`width: ${(count / maxCount) * 100}%`}
+          />
+          <span class="bar-count text-small color-fg-muted">{count}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .top-repos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .repo-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .repo-name {
+    min-width: 260px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .repo-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .repo-name {
+      min-width: auto;
+      text-align: left;
+    }
+  }
+
+  .bar-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .bar {
+    height: 20px;
+    border-radius: 3px;
+    background: var(--bgColor-accent-emphasis);
+    min-width: 4px;
+  }
+</style>

@@ -1,0 +1,46 @@
+---
+import "../styles/timeline.css";
+
+interface Props {
+  event: {
+    type: "ai_roast";
+    ts: string;
+    repo: null;
+    semantic: null;
+    data: {
+      weekRange: string;
+      content: string;
+      stats: {
+        totalCommits: number;
+        topRepo: string;
+      };
+    };
+  };
+}
+
+const { event } = Astro.props;
+const { data, ts } = event;
+
+const time = new Date(ts).toLocaleString("en-US", {
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+---
+
+<div class="ai-roast-card">
+  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+    <span style="font-size: 20px;" aria-hidden="true">&#x1F916;</span>
+    <span style="font-weight: 600;">Weekly Roast</span>
+    <span class="color-fg-muted text-small">{data.weekRange}</span>
+  </div>
+  <p style="margin: 0 0 8px; line-height: 1.6;">
+    {data.content}
+  </p>
+  <div class="color-fg-muted text-small" style="display: flex; gap: 16px;">
+    <span>{data.stats.totalCommits} commits</span>
+    <span class="mono">{data.stats.topRepo}</span>
+    <span class="event-time">{time}</span>
+  </div>
+</div>

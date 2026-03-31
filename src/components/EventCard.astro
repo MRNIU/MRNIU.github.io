@@ -1,0 +1,17 @@
+---
+import CommitNode from "./CommitNode.astro";
+import PRNode from "./PRNode.astro";
+import ReviewNode from "./ReviewNode.astro";
+import IssueNode from "./IssueNode.astro";
+import CommentNode from "./CommentNode.astro";
+import AIRoastNode from "./AIRoastNode.astro";
+
+const { event } = Astro.props;
+---
+
+{event.type === "commit" && <CommitNode event={event} />}
+{event.type === "pull_request" && <PRNode event={event} />}
+{event.type === "review" && <ReviewNode event={event} />}
+{event.type === "issue" && <IssueNode event={event} />}
+{event.type === "issue_comment" && <CommentNode event={event} />}
+{event.type === "ai_roast" && <AIRoastNode event={event} />}

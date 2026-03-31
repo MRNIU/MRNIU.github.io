@@ -1,0 +1,55 @@
+.event-card {
+  padding: 12px 16px;
+  border: 1px solid var(--borderColor-default);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: var(--bgColor-default);
+}
+
+.event-card .event-time {
+  font-size: 12px;
+  color: var(--fgColor-muted);
+}
+
+.event-card .event-repo {
+  font-size: 12px;
+  color: var(--fgColor-muted);
+  font-family: var(--gitpulse-font-mono);
+}
+
+.event-card .event-sha {
+  font-family: var(--gitpulse-font-mono);
+  font-size: 13px;
+  color: var(--fgColor-accent);
+}
+
+/* Semantic color left border */
+.event-card[data-semantic="feat"] { border-left: 3px solid var(--color-semantic-feat); }
+.event-card[data-semantic="fix"] { border-left: 3px solid var(--color-semantic-fix); }
+.event-card[data-semantic="merge"] { border-left: 3px solid var(--color-semantic-merge); }
+.event-card[data-semantic="refactor"],
+.event-card[data-semantic="docs"] { border-left: 3px solid var(--color-semantic-default); }
+
+/* AI Roast bubble */
+.ai-roast-card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--color-ai-roast-border);
+  background: var(--color-ai-roast-bg);
+  margin-bottom: 8px;
+  box-shadow: 0 0 12px var(--color-ai-roast-glow);
+}
+
+/* Review inline quote */
+.review-inline {
+  border-left: 3px solid var(--borderColor-default);
+  padding-left: 12px;
+  margin-top: 8px;
+  background: var(--bgColor-muted);
+  border-radius: 0 6px 6px 0;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.diff-stat .additions { color: var(--color-semantic-feat); }
+.diff-stat .deletions { color: var(--color-semantic-fix); }

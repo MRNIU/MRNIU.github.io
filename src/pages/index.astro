@@ -1,10 +1,29 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Dashboard from "../components/Dashboard.astro";
+import TopRepos from "../components/TopRepos.astro";
+import Heatmap from "../components/Heatmap.astro";
+import EventCard from "../components/EventCard.astro";
 import "../styles/global.css";
+
+// Load mock data at build time
+import indexData from "../../data/index.json";
+import marchData from "../../data/2026-03.json";
 ---
-<BaseLayout title="GitPulse — MRNIU">
+<BaseLayout title={`GitPulse — ${indexData.user}`}>
   <header style="padding: 48px 0 24px;">
     <h1 class="f1" style="margin: 0;">GitPulse</h1>
-    <p class="color-fg-muted" style="margin: 4px 0 0;">Data pipeline active. Components coming next.</p>
+    <p class="color-fg-muted f4" style="margin: 4px 0 0;">{indexData.user}'s development activity</p>
   </header>
+
+  <Dashboard stats={indexData.stats} />
+  <Heatmap months={indexData.months} />
+  <TopRepos months={indexData.months} />
+
+  <section style="padding: 32px 0;">
+    <h2 class="f3" style="margin: 0 0 16px;">Timeline</h2>
+    {marchData.events.map((event: any) => (
+      <EventCard event={event} />
+    ))}
+  </section>
 </BaseLayout>

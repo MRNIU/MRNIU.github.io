@@ -1,0 +1,64 @@
+---
+interface Props {
+  stats: {
+    totalCommits: number;
+    totalPRs: number;
+    totalReviews: number;
+    totalIssues: number;
+    totalComments: number;
+    activeRepos: number;
+  };
+}
+
+const { stats } = Astro.props;
+
+const cards = [
+  { value: stats.totalCommits, label: "Commits" },
+  { value: stats.totalPRs, label: "Pull Requests" },
+  { value: stats.totalReviews, label: "Reviews" },
+  { value: stats.totalIssues, label: "Issues" },
+  { value: stats.totalComments, label: "Comments" },
+  { value: stats.activeRepos, label: "Active Repos" },
+];
+---
+
+<section class="dashboard-grid" style="padding: 24px 0;">
+  <div class="dashboard-cards">
+    {cards.map((card) => (
+      <div class="Box p-3 text-center">
+        <div class="f00 color-fg-default" data-countup={card.value}>0</div>
+        <div class="text-small color-fg-muted">{card.label}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .dashboard-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-countup]').forEach(el => {
+    const target = parseInt(el.getAttribute('data-countup')!, 10);
+    const duration = 1500;
+    const start = performance.now();
+    function update(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+</script>

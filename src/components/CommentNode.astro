@@ -1,0 +1,41 @@
+---
+import "../styles/timeline.css";
+
+interface Props {
+  event: {
+    type: "issue_comment";
+    ts: string;
+    repo: string;
+    semantic: string | null;
+    data: {
+      issueNumber: number;
+      issueTitle: string;
+      body: string;
+    };
+  };
+}
+
+const { event } = Astro.props;
+const { data, repo, ts } = event;
+
+const time = new Date(ts).toLocaleString("en-US", {
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+---
+
+<div class="event-card">
+  <div style="display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;">
+    <span class="color-fg-muted text-small">Commented on issue</span>
+    <span style="font-weight: 600;">#{data.issueNumber}: {data.issueTitle}</span>
+  </div>
+  <p class="color-fg-muted text-small" style="margin: 6px 0 4px;">
+    {data.body}
+  </p>
+  <div style="display: flex; gap: 12px;">
+    <span class="event-repo">{repo}</span>
+    <span class="event-time">{time}</span>
+  </div>
+</div>
