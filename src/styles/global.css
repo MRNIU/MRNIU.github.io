@@ -75,25 +75,25 @@ code, .mono, .data-slab {
 
 /* ─── Page Container ─── */
 .page-container {
-  max-width: 1280px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 32px;
 }
 
 /* Top section: offset to align with timeline main column */
 .top-section {
-  margin-left: calc(220px + 20px);
+  margin-left: calc(260px + 24px);
 }
 
 .timeline-title {
-  margin-left: calc(220px + 20px);
+  margin-left: calc(260px + 24px);
 }
 
 /* ─── Timeline Layout ─── */
 .timeline-layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 20px;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
 }
 
 @media (max-width: 1023px) {
