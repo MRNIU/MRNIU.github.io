@@ -1,0 +1,57 @@
+---
+interface MonthEntry {
+  key: string;
+  eventCount: number;
+}
+
+interface Props {
+  months: MonthEntry[];
+  activeMonth: string;
+}
+
+const { months, activeMonth } = Astro.props;
+
+const eventTypes = [
+  { value: "commit", label: "Commits" },
+  { value: "pull_request", label: "Pull Requests" },
+  { value: "review", label: "Reviews" },
+  { value: "issue", label: "Issues" },
+  { value: "issue_comment", label: "Comments" },
+  { value: "ai_roast", label: "AI Roasts" },
+];
+
+function formatMonth(key: string): string {
+  const [year, month] = key.split("-");
+  const date = new Date(parseInt(year), parseInt(month) - 1);
+  return date.toLocaleDateString("en-US", { year: "numeric", month: "short" });
+}
+---
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <h3 class="f5 text-bold" style="margin: 0 0 8px;">Months</h3>
+    <nav class="month-nav">
+      {months.map((m) => (
+        <button
+          class={`month-btn ${m.key === activeMonth ? 'active' : ''}`}
+          data-month={m.key}
+          data-file={m.key + '.json'}
+        >
+          <span>{formatMonth(m.key)}</span>
+          <span class="Counter">{m.eventCount}</span>
+        </button>
+      ))}
+    </nav>
+  </div>
+
+  <div class="sidebar-section" style="margin-top: 24px;">
+    <h3 class="f5 text-bold" style="margin: 0 0 8px;">Filter</h3>
+    <div class="filter-list">
+      {eventTypes.map((t) => (
+        <label class="filter-item">
+          <input type="checkbox" checked data-filter-type={t.value} />
+          <span>{t.label}</span>
+        </label>
+      ))}
+    </div>
+  </div>
+</aside>

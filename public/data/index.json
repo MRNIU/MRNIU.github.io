@@ -1,0 +1,37 @@
+{
+  "user": "MRNIU",
+  "generatedAt": "2026-03-30T02:00:00Z",
+  "stats": {
+    "totalCommits": 2847,
+    "totalPRs": 156,
+    "totalReviews": 389,
+    "totalIssues": 73,
+    "totalComments": 291,
+    "activeRepos": 18,
+    "earliestEvent": "2023-06-15T10:00:00Z",
+    "latestEvent": "2026-03-29T23:45:00Z"
+  },
+  "months": [
+    {
+      "key": "2026-03",
+      "file": "2026-03.json",
+      "eventCount": 187,
+      "repos": ["MRNIU/SimpleKernel", "rcore-os/rCore", "nicklnick/pinux", "rust-embedded/rust-raspberrypi-OS-tutorials"],
+      "breakdown": { "commit": 98, "pull_request": 12, "review": 35, "issue": 6, "issue_comment": 32, "ai_roast": 4 }
+    },
+    {
+      "key": "2026-02",
+      "file": "2026-02.json",
+      "eventCount": 156,
+      "repos": ["MRNIU/SimpleKernel", "rcore-os/rCore"],
+      "breakdown": { "commit": 82, "pull_request": 9, "review": 28, "issue": 5, "issue_comment": 28, "ai_roast": 4 }
+    },
+    {
+      "key": "2026-01",
+      "file": "2026-01.json",
+      "eventCount": 134,
+      "repos": ["MRNIU/SimpleKernel", "MRNIU/SiYuan-Chat-Plugin"],
+      "breakdown": { "commit": 71, "pull_request": 8, "review": 22, "issue": 4, "issue_comment": 25, "ai_roast": 4 }
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "user": "MRNIU",
+  "month": "2026-03",
+  "generatedAt": "2026-03-30T02:00:00Z",
+  "events": [
+    {
+      "id": "commit-0329-001",
+      "type": "commit",
+      "ts": "2026-03-29T23:45:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "a3f7c912",
+        "message": "feat(sched): implement CFS scheduler with priority inheritance\n\nAdd completely fair scheduler (CFS) with priority inheritance protocol\nto prevent priority inversion in real-time tasks. Includes red-black\ntree based run queue and virtual runtime accounting.",
+        "additions": 487,
+        "deletions": 31
+      }
+    },
+    {
+      "id": "commit-0329-002",
+      "type": "commit",
+      "ts": "2026-03-29T21:10:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "b8e2a441",
+        "message": "fix(mm): resolve use-after-free in slab allocator on SMP\n\nFix race condition where cache reaping could free a slab while another\nCPU held a pointer to an object within it. Add per-CPU lock and\nvalidate cache state before reclamation.",
+        "additions": 62,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "review-0329-001",
+      "type": "review",
+      "ts": "2026-03-29T18:30:00Z",
+      "repo": "rcore-os/rCore",
+      "semantic": null,
+      "data": {
+        "prNumber": 847,
+        "prTitle": "Add RISC-V SBI timer interrupt support",
+        "state": "CHANGES_REQUESTED",
+        "body": "整体思路是对的，但有几个问题需要解决。SBI ecall 的封装可以更通用一些，另外 `sbi_set_timer` 的参数应该用 `u64` 而非 `usize`，在 RV32 下会出问题。另外缺少对 `SBI_SUCCESS` 以外返回值的错误处理。",
+        "inlineComments": [
+          {
+            "path": "src/arch/riscv/sbi.rs",
+            "line": 42,
+            "body": "这里直接 `unwrap()` 太危险了，SBI 调用失败时会 panic。建议改成返回 `Result<(), SbiError>`。"
+          },
+          {
+            "path": "src/trap/timer.rs",
+            "line": 17,
+            "body": "`CLOCK_FREQ` 应该从设备树读取而不是硬编码，不同平台频率不一样。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "commit-0328-001",
+      "type": "commit",
+      "ts": "2026-03-28T22:05:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "c1d4b773",
+        "message": "refactor(vfs): unify file descriptor table with RCU protection\n\nReplace global fd table mutex with per-process RCU-protected table.\nReduces lock contention on fd lookup hot path by ~40% in benchmarks.",
+        "additions": 334,
+        "deletions": 289
+      }
+    },
+    {
+      "id": "pr-0328-001",
+      "type": "pull_request",
+      "ts": "2026-03-28T16:20:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "number": 214,
+        "title": "feat: Add virtio-blk driver with async I/O support",
+        "state": "merged",
+        "body": "## Summary\n\nImplements a virtio-blk block device driver with full async I/O support using the kernel's async task system.\n\n## Changes\n- VirtIO split virtqueue implementation\n- DMA-safe buffer management with bounce buffers for non-IOMMU platforms\n- Block layer integration with pluggable scheduler (noop/deadline)\n- Benchmarks: 420k IOPS on 4KB random reads vs 180k with synchronous driver\n\n## Testing\n- Tested on QEMU virt machine (RISC-V and x86_64)\n- All existing fs tests pass\n- Added 23 new unit tests for virtqueue management"
+      }
+    },
+    {
+      "id": "issue_comment-0328-001",
+      "type": "issue_comment",
+      "ts": "2026-03-28T14:05:00Z",
+      "repo": "nicklnick/pinux",
+      "semantic": null,
+      "data": {
+        "issueNumber": 92,
+        "issueTitle": "Kernel panic on boot with more than 4 CPUs",
+        "body": "我能复现这个问题。根本原因是 `percpu_area_init()` 在 BSP 完成初始化前就被 AP 调用了。可以在 AP 的启动序列里加一个屏障，等待 `percpu_ready` 标志位置位。\n\n临时 workaround：在 QEMU 启动参数里加 `-smp 4,maxcpus=4` 限制 CPU 数量。我这边会提个 PR 修正。"
+      }
+    },
+    {
+      "id": "commit-0327-001",
+      "type": "commit",
+      "ts": "2026-03-27T23:58:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "d9f3e221",
+        "message": "feat(net): implement TCP/IP stack over virtio-net\n\nMinimal TCP/IP stack implementation. Supports IPv4, ARP, ICMP echo,\nTCP with Nagle algorithm and basic congestion control (Reno).\nIntegrated with socket layer API.",
+        "additions": 1203,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "ai_roast-0327-001",
+      "type": "ai_roast",
+      "ts": "2026-03-27T20:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-03-23 ~ 2026-03-29",
+        "content": "本周你在 SimpleKernel 里写了 1200 行 TCP 栈，然后第二天用三行代码修了一个让你卡了三天的 slab 分配器 bug。建议在提交信息里加一栏\"我为什么没早点想到这个\"。另外，凌晨十二点还在 push 代码说明你的 work-life balance 和你的内核一样——还在开发中。",
+        "stats": {
+          "totalCommits": 27,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "review-0327-001",
+      "type": "review",
+      "ts": "2026-03-27T15:45:00Z",
+      "repo": "nicklnick/pinux",
+      "semantic": null,
+      "data": {
+        "prNumber": 108,
+        "prTitle": "Implement futex-based mutex for userspace",
+        "state": "APPROVED",
+        "body": "代码整体质量很高，futex 的 FUTEX_WAIT/FUTEX_WAKE 调用封装得很干净。robust list 的处理也考虑到了，赞。LGTM，可以合入。",
+        "inlineComments": [
+          {
+            "path": "src/sync/mutex.c",
+            "line": 89,
+            "body": "这个 `while (atomic_load(&m->state) != MUTEX_UNLOCKED)` 自旋等待最好加个上限，或者直接去掉用纯 futex，避免在高竞争场景下 CPU 空转。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "commit-0326-001",
+      "type": "commit",
+      "ts": "2026-03-26T20:30:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "e5a7c834",
+        "message": "docs: add architecture overview and memory layout diagrams\n\nAdd comprehensive documentation covering kernel virtual address space\nlayout, page table hierarchy (Sv48), and boot sequence flowchart.\nDiagrams generated with draw.io, source files included.",
+        "additions": 512,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "issue-0326-001",
+      "type": "issue",
+      "ts": "2026-03-26T17:00:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 187,
+        "title": "Add support for RISC-V N extension (user-mode interrupts)",
+        "state": "open",
+        "body": "## Feature Request\n\nThe RISC-V N extension allows user-mode software to handle interrupts directly without kernel intervention. This would be useful for implementing fast userspace interrupt handlers and could significantly reduce latency for certain device classes.\n\n## Proposed Approach\n\n1. Detect N extension support via `misa` CSR at boot\n2. Add `ustatus`, `uie`, `uip`, `utvec`, `uepc`, `ucause`, `utval` CSR management\n3. Expose via `prctl(PR_SET_USER_INTR, ...)` syscall\n4. Update context switch to save/restore N extension state\n\nEstimated scope: ~400 lines. Happy to implement if there's interest."
+      }
+    },
+    {
+      "id": "commit-0326-002",
+      "type": "commit",
+      "ts": "2026-03-26T11:15:00Z",
+      "repo": "rust-embedded/rust-raspberrypi-OS-tutorials",
+      "semantic": "fix",
+      "data": {
+        "sha": "f2b1d957",
+        "message": "fix(14_exceptions): correct ESR_EL1 decoding for data abort\n\nFix incorrect bit mask for ISS field extraction in data abort handler.\nPrevious mask `0x1FFFFFF` was one bit too wide; should be `0xFFFFFF`.\nThis caused spurious \"unknown fault\" messages on unaligned accesses.",
+        "additions": 8,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "pr-0325-001",
+      "type": "pull_request",
+      "ts": "2026-03-25T19:40:00Z",
+      "repo": "nicklnick/pinux",
+      "semantic": "fix",
+      "data": {
+        "number": 115,
+        "title": "fix: repair SMP percpu init race on AP startup",
+        "state": "open",
+        "body": "Fixes #92.\n\n## Root Cause\n\n`percpu_area_init()` was being invoked by Application Processors before the BSP had finished setting up the percpu memory region. The AP trampoline code lacked a synchronization barrier.\n\n## Fix\n\nAdd a spinlock-based barrier (`smp_percpu_ready`) that APs spin on until the BSP sets it after completing `percpu_area_init()`. The barrier uses the same MESI-coherent memory that the SMP init already depends on, so no new cache concerns.\n\n## Tested\n- QEMU with 1/2/4/8 vCPUs — no more panics\n- Stress-tested with 1000 boot iterations using a shell script"
+      }
+    },
+    {
+      "id": "commit-0325-001",
+      "type": "commit",
+      "ts": "2026-03-25T16:55:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "03c9e481",
+        "message": "feat(ipc): add POSIX message queue implementation\n\nImplement mq_open, mq_send, mq_receive, mq_close, mq_unlink syscalls\nper POSIX.1-2017. Uses priority-sorted linked list internally.\nSupports blocking and non-blocking modes, notification via SIGEV_SIGNAL.",
+        "additions": 641,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "review-0325-001",
+      "type": "review",
+      "ts": "2026-03-25T11:00:00Z",
+      "repo": "rcore-os/rCore",
+      "semantic": null,
+      "data": {
+        "prNumber": 851,
+        "prTitle": "Implement copy-on-write fork",
+        "state": "COMMENTED",
+        "body": "思路完全正确，COW fork 的核心逻辑没问题。主要的 concern 是 page fault handler 里的 CoW 路径和 swap-in 路径共用了同一把锁，在高内存压力下可能死锁。建议把两个路径的锁粒度分开。",
+        "inlineComments": [
+          {
+            "path": "src/mm/page_fault.rs",
+            "line": 134,
+            "body": "`vma.lock()` 在这里持有时间太长了，整个 `do_cow_fault` 流程都在锁里面。可以只在修改 PTE 的时候加锁，分配物理页的操作不需要持有 VMA 锁。"
+          },
+          {
+            "path": "src/mm/page_fault.rs",
+            "line": 201,
+            "body": "如果 `alloc_page()` 在这里返回 `None`（OOM），应该触发 OOM killer 而不是直接 panic。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "commit-0324-001",
+      "type": "commit",
+      "ts": "2026-03-24T22:20:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "14ab7e63",
+        "message": "Merge branch 'feat/virtio-blk' into main\n\nMerge virtio-blk async driver after 3 weeks of development and review.\nAll CI checks pass. Closes #203.",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "issue_comment-0324-001",
+      "type": "issue_comment",
+      "ts": "2026-03-24T18:30:00Z",
+      "repo": "rcore-os/rCore",
+      "semantic": null,
+      "data": {
+        "issueNumber": 723,
+        "issueTitle": "Performance regression in pipe read/write after #801",
+        "body": "我看了一下，问题出在 #801 把 pipe 的内部缓冲从栈上的 `[u8; 4096]` 改成了 `Vec<u8>`，导致每次 `pipe_read` 都会触发堆分配。\n\n最简单的修法是用 `Box<[u8; PIPE_BUF]>` 替代 `Vec`，分配一次之后就不会再触发 allocator。或者更激进一点，用 `VecDeque` 加对象池。我倾向于前者，改动更小，性能恢复也够用。"
+      }
+    },
+    {
+      "id": "commit-0323-001",
+      "type": "commit",
+      "ts": "2026-03-23T21:45:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "27dc5b09",
+        "message": "refactor(arch): abstract platform HAL behind trait objects\n\nIntroduce `Platform` trait to abstract architecture-specific operations.\nAllows compile-time platform selection without #[cfg] scattered everywhere.\nInitial implementations for riscv64 and aarch64.",
+        "additions": 892,
+        "deletions": 734
+      }
+    },
+    {
+      "id": "commit-0322-001",
+      "type": "commit",
+      "ts": "2026-03-22T14:00:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "39ef1c47",
+        "message": "fix(timer): fix jiffies overflow after 497 days on 32-bit targets\n\nReplace `u32` jiffies counter with `u64` to avoid overflow. Also fix\nrelated timeout calculations that cast to `i32` internally.",
+        "additions": 24,
+        "deletions": 19
+      }
+    },
+    {
+      "id": "ai_roast-0322-001",
+      "type": "ai_roast",
+      "ts": "2026-03-22T20:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-03-16 ~ 2026-03-22",
+        "content": "你这周重构了整个平台抽象层，删了 734 行，新增 892 行。换句话说，你把一个能跑的内核换成了另一个……也能跑的内核。感谢你的 refactor commit 让 git blame 彻底失去了意义。顺便，把 `u32` 改成 `u64` 这个 bug 修了之后你的内核终于能撑过 497 天了，但按你的更新速度，497 天后这份代码早就被你重构三遍了。",
+        "stats": {
+          "totalCommits": 21,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "issue_comment-0321-001",
+      "type": "issue_comment",
+      "ts": "2026-03-21T16:20:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 187,
+        "issueTitle": "Add support for RISC-V N extension (user-mode interrupts)",
+        "body": "@contributor-xyz 好的，这个 feature 我们有兴趣支持。不过要注意 N 扩展在最新的 RISC-V spec 里已经被标记为 ratified 但实现很稀少，主要的参考实现只有 QEMU 和少数 FPGA 平台。建议先在 QEMU 上实现和测试，同时把代码写成 feature flag 可选，避免影响不支持该扩展的目标平台。"
+      }
+    },
+    {
+      "id": "commit-0320-001",
+      "type": "commit",
+      "ts": "2026-03-20T23:10:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "4ae82d15",
+        "message": "feat(syscall): implement execve with proper ELF loader\n\nFull ELF64 loader supporting LOAD segments, dynamic linking via ld.so,\nand interpreter execution. Handles AT_* auxiliary vector population.\nNow possible to run musl-libc compiled binaries.",
+        "additions": 718,
+        "deletions": 45
+      }
+    },
+    {
+      "id": "review-0319-001",
+      "type": "review",
+      "ts": "2026-03-19T14:30:00Z",
+      "repo": "rcore-os/rCore",
+      "semantic": null,
+      "data": {
+        "prNumber": 855,
+        "prTitle": "Add ext2 filesystem read-only support",
+        "state": "APPROVED",
+        "body": "代码很干净，ext2 的 inode 和 block group 解析都正确。read-only 的范围也清晰标注了。直接 LGTM。",
+        "inlineComments": []
+      }
+    },
+    {
+      "id": "commit-0318-001",
+      "type": "commit",
+      "ts": "2026-03-18T19:55:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5bd93f28",
+        "message": "wip: initial spike for io_uring-like async syscall interface\n\nVery rough prototype, not for review. Just getting the submission and\ncompletion queue data structures sketched out.",
+        "additions": 203,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "pr-0317-001",
+      "type": "pull_request",
+      "ts": "2026-03-17T11:30:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "number": 210,
+        "title": "fix: handle SIGCHLD correctly when parent is in waitpid",
+        "state": "closed",
+        "body": "## Problem\n\nWhen a child process exits while the parent is blocked in `waitpid(-1, ...)`, the SIGCHLD delivery was racing with the wait queue wakeup, occasionally causing the parent to remain blocked forever.\n\n## Fix\n\nEnsure the wakeup happens under the `task_lock` in `do_exit()`, before the signal is dispatched. This serializes the two wakeup paths.\n\n## Note\n\nClosing this PR — the fix was superseded by the larger process management refactor in #212 which handles this correctly as a side effect. Changes are included there."
+      }
+    },
+    {
+      "id": "issue-0315-001",
+      "type": "issue",
+      "ts": "2026-03-15T09:45:00Z",
+      "repo": "nicklnick/pinux",
+      "semantic": null,
+      "data": {
+        "number": 99,
+        "title": "Stack overflow detection / guard pages not working on AArch64",
+        "state": "closed",
+        "body": "## Bug Report\n\nStack guard pages are configured on x86_64 but the AArch64 port doesn't set up `sp_el0` guard page mappings. When userspace overflows its stack, instead of receiving SIGSEGV it hits a data abort that isn't handled gracefully and the kernel panics.\n\n## Steps to Reproduce\n\n```c\nvoid recurse(void) { char buf[4096]; recurse(); }\nint main() { recurse(); }\n```\n\nCompile for AArch64 target, run in simulator → kernel panic.\n\n## Expected\n\nProcess receives SIGSEGV and terminates cleanly.\n\n## Environment\n\n- Target: AArch64 QEMU virt\n- Pinux commit: d4e3b991"
+      }
+    },
+    {
+      "id": "commit-0314-001",
+      "type": "commit",
+      "ts": "2026-03-14T22:30:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "6ce74a39",
+        "message": "feat(mm): implement huge page (2MB) support for kernel mappings\n\nAdd huge page allocation and mapping in the buddy allocator. Kernel\ntext and rodata sections now mapped with 2MB pages on both x86_64 and\nrv64, reducing TLB pressure significantly on large workloads.",
+        "additions": 301,
+        "deletions": 57
+      }
+    },
+    {
+      "id": "issue_comment-0312-001",
+      "type": "issue_comment",
+      "ts": "2026-03-12T15:10:00Z",
+      "repo": "nicklnick/pinux",
+      "semantic": null,
+      "data": {
+        "issueNumber": 99,
+        "issueTitle": "Stack overflow detection / guard pages not working on AArch64",
+        "body": "确认可以复现。AArch64 的问题在于 `do_page_fault` 里没有对 `ESR_EL1.EC == 0x25`（data abort from lower EL）做 guard page 的特判。x86_64 有这个逻辑，但移植时漏掉了。\n\n我在 PR #115 里顺带修了这个，可以关闭这个 issue。"
+      }
+    },
+    {
+      "id": "commit-0310-001",
+      "type": "commit",
+      "ts": "2026-03-10T18:40:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "7df85b12",
+        "message": "refactor(boot): split early init into platform-specific stubs\n\nExtract architecture-specific early boot (UART init, page table setup,\ncache configuration) into per-arch `early_init()` functions. Removes\n~200 lines of #[cfg(target_arch)] from common boot code.",
+        "additions": 445,
+        "deletions": 398
+      }
+    },
+    {
+      "id": "ai_roast-0308-001",
+      "type": "ai_roast",
+      "ts": "2026-03-08T20:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-03-02 ~ 2026-03-08",
+        "content": "本周你的最大成就是：把一个能用的 fork 实现拆开重构，然后花两天把它重新拼回来。评审者说你的 COW 路径\"思路完全正确\"，但锁粒度有问题——这翻译成人话就是\"代码逻辑对，但写法让人捏一把汗\"。好消息是你本周的提交时间分布非常均匀，说明你终于学会了 24 小时不间断工作。",
+        "stats": {
+          "totalCommits": 18,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "commit-0307-001",
+      "type": "commit",
+      "ts": "2026-03-07T14:20:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "8ec96c25",
+        "message": "fix(net): fix off-by-one in TCP sequence number wraparound\n\nTCP sequence numbers wrap at 2^32. Comparison using plain subtraction\nwas incorrect when the gap exceeded 2^31. Use RFC 793 modular arithmetic\nfor all SEQ comparisons.",
+        "additions": 37,
+        "deletions": 29
+      }
+    },
+    {
+      "id": "commit-0305-001",
+      "type": "commit",
+      "ts": "2026-03-05T10:05:00Z",
+      "repo": "rust-embedded/rust-raspberrypi-OS-tutorials",
+      "semantic": "docs",
+      "data": {
+        "sha": "9fa14d63",
+        "message": "docs(15_virtual_mem_part3): clarify ASID management and TLB flush semantics\n\nExpand explanation of why ASID rollovers require a full TLB flush and\nadd a diagram showing the relationship between ASID, TTBR0_EL1, and\nthe TLB context tags. Fixes several unclear sentences in the prose.",
+        "additions": 89,
+        "deletions": 34
+      }
+    },
+    {
+      "id": "ai_roast-0301-001",
+      "type": "ai_roast",
+      "ts": "2026-03-01T20:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-02-23 ~ 2026-03-01",
+        "content": "二月最后一周你给 rCore 审了 6 个 PR，其中 5 个你要求修改，1 个直接 LGTM。这个通过率在代码审查界已经算是出了名的严格，建议你在 GitHub profile 上挂一个\"此处审查，九死一生\"的警示牌。另外你在凌晨两点提交的那个 ELF loader 修复，commit message 里有三个错别字，可见深夜 coding 对人类的伤害是真实存在的。",
+        "stats": {
+          "totalCommits": 14,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "commit-0301-001",
+      "type": "commit",
+      "ts": "2026-03-01T09:30:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "a0b12e74",
+        "message": "feat(proc): implement process groups and sessions (POSIX job control)\n\nAdd setpgid, getpgid, setsid, getsid syscalls. Implement foreground\nprocess group management for terminal I/O. Foundation for a working\nshell with job control (bg/fg/Ctrl-Z).",
+        "additions": 528,
+        "deletions": 12
+      }
+    }
+  ]
+}

@@ -3,12 +3,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Dashboard from "../components/Dashboard.astro";
 import TopRepos from "../components/TopRepos.astro";
 import Heatmap from "../components/Heatmap.astro";
+import Sidebar from "../components/Sidebar.astro";
 import EventCard from "../components/EventCard.astro";
 import "../styles/global.css";
+import "../styles/timeline.css";
 
-// Load mock data at build time
 import indexData from "../../data/index.json";
 import marchData from "../../data/2026-03.json";
+
+const activeMonth = indexData.months[0]?.key || "2026-03";
 ---
 <BaseLayout title={`GitPulse — ${indexData.user}`}>
   <header style="padding: 48px 0 24px;">
@@ -22,8 +25,207 @@ import marchData from "../../data/2026-03.json";
 
   <section style="padding: 32px 0;">
     <h2 class="f3" style="margin: 0 0 16px;">Timeline</h2>
-    {marchData.events.map((event: any) => (
-      <EventCard event={event} />
-    ))}
+
+    <button class="sidebar-toggle" id="sidebar-toggle">
+      &#9776; Filters &amp; Navigation
+    </button>
+
+    <div class="timeline-layout">
+      <Sidebar months={indexData.months} activeMonth={activeMonth} />
+
+      <main class="timeline-main" id="timeline-main">
+        {marchData.events.map((event: any) => (
+          <div class="event-wrapper" data-event-type={event.type}>
+            <EventCard event={event} />
+          </div>
+        ))}
+      </main>
+    </div>
   </section>
+
+  <script>
+    // ─── Type Filtering ───
+    const filters = document.querySelectorAll<HTMLInputElement>('[data-filter-type]');
+    const eventWrappers = document.querySelectorAll<HTMLElement>('.event-wrapper');
+
+    filters.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        applyFilters();
+      });
+    });
+
+    // ─── Mobile sidebar toggle ───
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    if (toggleBtn && sidebar) {
+      // Start collapsed on mobile
+      if (window.innerWidth < 1024) {
+        sidebar.classList.add('collapsed');
+      }
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+      });
+    }
+
+    // ─── Month navigation (fetch + replace) ───
+    const monthBtns = document.querySelectorAll<HTMLButtonElement>('.month-btn');
+    const timelineMain = document.getElementById('timeline-main');
+
+    monthBtns.forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const file = btn.getAttribute('data-file');
+        const monthKey = btn.getAttribute('data-month');
+        if (!file || !timelineMain) return;
+
+        // Update active state
+        monthBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        try {
+          const resp = await fetch(`/data/${file}`);
+          if (!resp.ok) {
+            timelineMain.innerHTML = '<p class="color-fg-muted" style="padding: 24px; text-align: center;">No data available for this month yet. Still backfilling...</p>';
+            return;
+          }
+          const data = await resp.json();
+
+          // Render events as HTML
+          timelineMain.innerHTML = data.events.map((event: any) => renderEventCard(event)).join('');
+
+          // Re-apply filters
+          applyFilters();
+        } catch (e) {
+          console.error('Failed to load month data:', e);
+        }
+      });
+    });
+
+    function applyFilters() {
+      const activeTypes = new Set<string>();
+      filters.forEach(f => {
+        if ((f as HTMLInputElement).checked) activeTypes.add(f.getAttribute('data-filter-type')!);
+      });
+      document.querySelectorAll<HTMLElement>('.event-wrapper').forEach(wrapper => {
+        const type = wrapper.getAttribute('data-event-type')!;
+        wrapper.style.display = activeTypes.has(type) ? '' : 'none';
+      });
+    }
+
+    function renderEventCard(event: any): string {
+      const time = new Date(event.ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+      const semantic = event.semantic || '';
+
+      switch (event.type) {
+        case 'commit':
+          return `<div class="event-wrapper" data-event-type="commit">
+            <div class="event-card" data-semantic="${semantic}">
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <div>
+                  <span class="event-sha">${event.data.sha.slice(0, 7)}</span>
+                  <span style="margin-left: 8px;">${escapeHtml(event.data.message)}</span>
+                </div>
+                <span class="diff-stat"><span class="additions">+${event.data.additions}</span> <span class="deletions">-${event.data.deletions}</span></span>
+              </div>
+              <div style="margin-top: 4px;">
+                <span class="event-repo">${event.repo}</span>
+                <span class="event-time" style="margin-left: 8px;">${time}</span>
+              </div>
+            </div>
+          </div>`;
+
+        case 'pull_request': {
+          const stateColor = event.data.state === 'merged' ? '#8957e5' : event.data.state === 'open' ? '#238636' : '#da3633';
+          return `<div class="event-wrapper" data-event-type="pull_request">
+            <div class="event-card" data-semantic="${semantic}">
+              <div style="display: flex; align-items: baseline; gap: 8px;">
+                <span class="Label" style="background: ${stateColor}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">${event.data.state}</span>
+                <span style="font-weight: 600;">#${event.data.number} ${escapeHtml(event.data.title)}</span>
+              </div>
+              ${event.data.body ? `<p style="margin: 8px 0 0; color: var(--fgColor-muted); font-size: 13px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${escapeHtml(event.data.body)}</p>` : ''}
+              <div style="margin-top: 4px;">
+                <span class="event-repo">${event.repo}</span>
+                <span class="event-time" style="margin-left: 8px;">${time}</span>
+              </div>
+            </div>
+          </div>`;
+        }
+
+        case 'review': {
+          const stateColors: Record<string,string> = { 'APPROVED': '#238636', 'CHANGES_REQUESTED': '#da3633', 'COMMENTED': '#768390' };
+          const color = stateColors[event.data.state] || '#768390';
+          const inlineHtml = (event.data.inlineComments || []).map((c: any) =>
+            `<div class="review-inline"><code>${escapeHtml(c.path)}:${c.line}</code><br/>${escapeHtml(c.body)}</div>`
+          ).join('');
+          return `<div class="event-wrapper" data-event-type="review">
+            <div class="event-card">
+              <div style="display: flex; align-items: baseline; gap: 8px;">
+                <span class="Label" style="background: ${color}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">${event.data.state}</span>
+                <span>PR #${event.data.prNumber}: ${escapeHtml(event.data.prTitle)}</span>
+              </div>
+              ${event.data.body ? `<p style="margin: 8px 0 0; font-size: 13px;">${escapeHtml(event.data.body)}</p>` : ''}
+              ${inlineHtml}
+              <div style="margin-top: 4px;">
+                <span class="event-repo">${event.repo}</span>
+                <span class="event-time" style="margin-left: 8px;">${time}</span>
+              </div>
+            </div>
+          </div>`;
+        }
+
+        case 'issue': {
+          const icon = event.data.state === 'open' ? '\u{1F7E2}' : '\u{1F7E3}';
+          return `<div class="event-wrapper" data-event-type="issue">
+            <div class="event-card" data-semantic="${semantic}">
+              <div style="display: flex; align-items: baseline; gap: 8px;">
+                <span>${icon}</span>
+                <span style="font-weight: 600;">#${event.data.number} ${escapeHtml(event.data.title)}</span>
+              </div>
+              ${event.data.body ? `<p style="margin: 8px 0 0; color: var(--fgColor-muted); font-size: 13px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${escapeHtml(event.data.body)}</p>` : ''}
+              <div style="margin-top: 4px;">
+                <span class="event-repo">${event.repo}</span>
+                <span class="event-time" style="margin-left: 8px;">${time}</span>
+              </div>
+            </div>
+          </div>`;
+        }
+
+        case 'issue_comment':
+          return `<div class="event-wrapper" data-event-type="issue_comment">
+            <div class="event-card">
+              <div style="font-size: 13px; color: var(--fgColor-muted);">
+                Commented on <span style="font-weight: 600;">#${event.data.issueNumber}: ${escapeHtml(event.data.issueTitle)}</span>
+              </div>
+              <p style="margin: 8px 0 0; font-size: 13px;">${escapeHtml(event.data.body)}</p>
+              <div style="margin-top: 4px;">
+                <span class="event-repo">${event.repo}</span>
+                <span class="event-time" style="margin-left: 8px;">${time}</span>
+              </div>
+            </div>
+          </div>`;
+
+        case 'ai_roast':
+          return `<div class="event-wrapper" data-event-type="ai_roast">
+            <div class="ai-roast-card">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <span style="font-size: 24px;">\u{1F916}</span>
+                <span class="text-bold">AI Weekly Roast</span>
+                <span class="event-time">${event.data.weekRange}</span>
+              </div>
+              <p style="margin: 0; font-size: 14px; line-height: 1.6;">${escapeHtml(event.data.content)}</p>
+              <div style="margin-top: 8px; font-size: 12px; color: var(--fgColor-muted);">
+                ${event.data.stats.totalCommits} commits \u00B7 Top repo: ${event.data.stats.topRepo}
+              </div>
+            </div>
+          </div>`;
+
+        default:
+          return '';
+      }
+    }
+
+    function escapeHtml(str: string): string {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+  </script>
 </BaseLayout>
