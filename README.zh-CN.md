@@ -3,46 +3,44 @@
 > 一个全自动、AI 驱动的开源开发者个人主页模板。
 > 抓取你所有的 GitHub 公开活动，以高密度时间线展示在 `<username>.github.io`。
 
-**在线演示：** [mrniu.github.io](https://mrniu.github.io)
+**在线演示：** [mrniu.github.io](https://mrniu.github.io) | **[English](./README.md)**
 
-**[English](./README.md)**
+---
+
+## 如何使用
+
+1. 点击本仓库顶部绿色 **"Use this template"** 按钮 → **"Create a new repository"**
+2. 仓库名填 **`<你的用户名>.github.io`**
+3. 编辑 `devlog.config.cjs` — 把 `username` 改成你的：
+   ```javascript
+   module.exports = {
+     username: "你的GitHub用户名",  // ← 改成你的
+     locale: "zh-CN",  // "en" 或 "zh-CN"
+   };
+   ```
+4. 在仓库 **Settings** 中启用：
+   - **Actions → General → Workflow permissions** → 选择 **"Read and write permissions"**
+   - **Pages → Build and deployment → Source** → 选择 **"GitHub Actions"**
+5. **（可选）** 启用 AI 吐槽 — **Settings → Secrets and variables → Actions**：
+   - 添加密钥 `LLM_API_KEY`（任意 OpenAI 兼容的 API key）
+   - 可选设置变量 `LLM_BASE_URL` 和 `LLM_MODEL`
+6. 前往 **Actions** 标签 → **"GitPulse Data Fetch"** → **"Run workflow"**
+7. 完成 — 几分钟内你的网站就在 `https://<你的用户名>.github.io` 上线了
+
+> **说明：** 模板自带演示数据。首次运行时，抓取脚本会自动检测用户名不匹配并清空旧数据，然后抓取你自己的数据。所有数据都会提交到你的仓库中，方便随时查看。
 
 ---
 
 ## 功能特性
 
 - **全方位活动追踪** — 跨所有公开仓库的提交、PR、代码审查、Issue 和评论
-- **无限滚动时间线** — 滚动时自动加载所有月份，侧边栏月份指示器随滚动位置同步高亮
+- **无限滚动时间线** — 滚动时自动加载所有月份，侧边栏随滚动位置同步高亮
 - **渐进式回填** — 多次运行自动抓取完整历史，遵守 API 速率限制
-- **AI 每周吐槽** — 可选的 LLM 生成的每周开发模式趣味点评（自动回补历史周数据）
-- **GitHub 风格热力图** — 可缩放的 SVG 贡献图
-- **Cyber-Primer 设计** — 终端美学暗色主题，高密度布局，演示级流式字体
-- **零服务器成本** — 完全运行在 GitHub Actions + GitHub Pages 上
-- **国际化支持** — 内置英文和简体中文，可扩展
-
-## 快速开始
-
-1. **使用此模板** — 点击 **"Use this template"** → **"Create a new repository"**，命名为 `<你的用户名>.github.io`
-
-2. **配置** — 编辑 `devlog.config.cjs`：
-   ```javascript
-   module.exports = {
-     username: "你的GitHub用户名",  // ← 改成你的用户名
-     locale: "zh-CN",  // "en" 或 "zh-CN"
-   };
-   ```
-
-3. **启用权限** — 在仓库 **Settings** 中：
-   - **Actions → General → Workflow permissions** → 选择 **"Read and write permissions"**
-   - **Pages → Build and deployment → Source** → 选择 **"GitHub Actions"**
-
-4. **启用 AI 吐槽（可选）** — 前往 **Settings → Secrets and variables → Actions**：
-   - 添加密钥 `LLM_API_KEY`（你的 API key）
-   - 可选设置变量 `LLM_BASE_URL` 和 `LLM_MODEL`（默认使用 OpenAI gpt-4o）
-
-5. **运行数据抓取** — **Actions** 标签 → **"GitPulse Data Fetch"** → **"Run workflow"**
-
-6. **完成** — 几分钟内你的网站将在 `https://<你的用户名>.github.io` 上线，每日定时任务自动保持更新。
+- **AI 每周吐槽** — LLM 生成的每周开发模式点评（自动回补历史周数据）
+- **可缩放热力图** — SVG 贡献图自动填充容器宽度
+- **Cyber-Primer 设计** — 终端美学暗色主题，`clamp()` 流式字体适配手机到 4K
+- **零服务器成本** — 仅需 GitHub Actions + GitHub Pages
+- **国际化** — 内置英文和简体中文
 
 ## 配置项
 
@@ -50,15 +48,15 @@
 
 | 选项 | 默认值 | 描述 |
 |---|---|---|
-| `username` | — | 你的 GitHub 用户名（必填） |
-| `locale` | `"en"` | 界面语言：`"en"` 或 `"zh-CN"` |
+| `username` | — | GitHub 用户名（必填） |
+| `locale` | `"en"` | `"en"` 或 `"zh-CN"` |
 | `scope` | `"all"` | `"all"` 追踪全部，`"specific"` 仅追踪指定仓库 |
 | `targetRepos` | `[]` | scope 为 `"specific"` 时追踪的仓库列表 |
 | `ignoredRepos` | `[]` | 始终排除的仓库列表 |
 | `filters.ignoreKeywords` | `["wip", "typo", ...]` | 包含这些关键词的提交将被过滤 |
 | `filters.ignoreShortComments` | `true` | 过滤 "LGTM"、"+1" 等短评论 |
 | `aiRoast.enabled` | `true` | 启用 AI 点评 |
-| `aiRoast.promptMode` | `"toxic_senior_dev"` | 提示词模式：`"toxic_senior_dev"`、`"encouraging_mentor"` 或 `"custom"` |
+| `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`、`"encouraging_mentor"` 或 `"custom"` |
 | `llm.baseUrl` | `"https://api.openai.com/v1"` | 任意 OpenAI 兼容接口地址 |
 | `llm.model` | `"gpt-4o"` | 模型名称 |
 
@@ -70,14 +68,14 @@
 GitHub Actions（每日定时任务）
   │
   ├── 数据抓取：GitHub GraphQL API → data/*.json（按月分片）
-  ├── AI 评论：LLM API → ai_roast 事件（可选，自动回补历史）
+  ├── AI 评论：LLM API → ai_roast 事件（自动回补历史）
   ├── 提交：data/ 目录推送回仓库
   └── 部署：触发 Astro 构建 → GitHub Pages
 ```
 
-- **数据抓取** — 增量更新 + 渐进式回填，带断点续传，遵守 5000 点/小时速率限制。遇到 5xx 错误自动指数退避重试。
-- **AI 吐槽** — 扫描所有历史数据，为缺少吐槽的周自动生成。随时启用都安全，不会重复生成。
-- **前端** — Astro 静态生成，Cyber-Primer 设计系统，`clamp()` 流式字体，IntersectionObserver 无限滚动
+- **数据** — 增量更新 + 渐进式回填，带断点续传。5xx 错误自动指数退避重试。检测到用户名变更时自动清空旧数据（模板使用场景）。
+- **AI 吐槽** — 扫描所有历史数据，为缺少吐槽的周自动生成。随时启用都安全。
+- **前端** — Astro 静态生成，Cyber-Primer 设计系统，IntersectionObserver 无限滚动
 - **存储** — JSON 文件提交到仓库，作为静态资源提供
 
 ## 自定义域名

@@ -147,11 +147,40 @@ async function runBackfill(
   return allEvents;
 }
 
+function clearDataDir(dataDir: string): void {
+  const fs = require("node:fs") as typeof import("node:fs");
+  const entries = fs.readdirSync(dataDir);
+  for (const entry of entries) {
+    const fullPath = path.join(dataDir, entry);
+    if (fs.statSync(fullPath).isFile()) {
+      fs.unlinkSync(fullPath);
+    }
+  }
+}
+
+function detectOwnerChange(dataDir: string, username: string): boolean {
+  const fs = require("node:fs") as typeof import("node:fs");
+  const indexPath = path.join(dataDir, "index.json");
+  if (!fs.existsSync(indexPath)) return false;
+  try {
+    const content = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
+    return content.user && content.user !== username;
+  } catch {
+    return false;
+  }
+}
+
 async function main() {
   const config = loadConfig();
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
     throw new Error("GITHUB_TOKEN environment variable is required");
+  }
+
+  // Detect template usage: if data belongs to a different user, start fresh
+  if (detectOwnerChange(DATA_DIR, config.username)) {
+    console.log(`[init] Data belongs to a different user, clearing for ${config.username}...`);
+    clearDataDir(DATA_DIR);
   }
 
   const tracker = new RateLimitTracker(500);
