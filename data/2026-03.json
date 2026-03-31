@@ -2,6 +2,109 @@
   "month": "2026-03",
   "events": [
     {
+      "id": "commit-42249a6b3ab0eea4efabf93b7556feea70e697d9",
+      "type": "commit",
+      "ts": "2026-03-31T23:51:38Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "42249a6b3ab0eea4efabf93b7556feea70e697d9",
+        "message": "fix: replace require/dynamic import with static ESM import in fetch-data\n\nThe three require(\"node:fs\") and await import(\"node:fs\") calls failed\nin the ESM runtime on CI. Use a single top-level static import instead.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 1,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-a95cd562e5f3f45e6f4345c7cf80d0baac20656a",
+      "type": "commit",
+      "ts": "2026-03-31T23:49:17Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "a95cd562e5f3f45e6f4345c7cf80d0baac20656a",
+        "message": "feat: default to GitHub Copilot (GitHub Models) for AI Roast\n\nSwitch LLM default from OpenAI gpt-4o to GitHub Models gpt-4o-mini,\nso template users get AI Roast working with zero extra configuration.\nLLM_API_KEY falls back to GITHUB_TOKEN when not set.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 20,
+        "deletions": 14
+      }
+    },
+    {
+      "id": "comment-rust-embedded/aarch64-cpu-77-0",
+      "type": "issue_comment",
+      "ts": "2026-03-31T16:15:00Z",
+      "repo": "rust-embedded/aarch64-cpu",
+      "semantic": null,
+      "data": {
+        "issueNumber": 77,
+        "issueTitle": "Add TLBI (TLB Invalidate) instruction wrappers with typed operands",
+        "body": "### Code review\n\nNo issues found. Checked for bugs and CLAUDE.md compliance.\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\n<sub>- If this code review was useful, please react with 👍. Otherwise, react with 👎.</sub>"
+      }
+    },
+    {
+      "id": "commit-b480dcdb45f179d675aff4d933ee28707b4424e0",
+      "type": "commit",
+      "ts": "2026-03-31T16:14:22Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "b480dcdb45f179d675aff4d933ee28707b4424e0",
+        "message": "feat: auto-clear data on template usage, rewrite READMEs\n\n- fetch-data.ts: detect username mismatch in data/index.json and\n  auto-clear all data files before fetching (template user flow)\n- READMEs: \"Use This Template\" instructions moved to top,\n  note about auto-cleanup of demo data on first run\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 95,
+        "deletions": 70
+      }
+    },
+    {
+      "id": "commit-8196499d00599594d4d30661152810ef93264b7f",
+      "type": "commit",
+      "ts": "2026-03-31T16:10:22Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "8196499d00599594d4d30661152810ef93264b7f",
+        "message": "feat: use GitHub username as page title, enable template repo\n\n- Page title: \"MRNIU — GitPulse\" instead of \"GitPulse — MRNIU\"\n- Page h1 shows username instead of project name\n- Repo marked as GitHub template so others can click\n  \"Use this template\" to create their own copy\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-9685b7088ccff127177ac65b854fd8923cff1241",
+      "type": "commit",
+      "ts": "2026-03-31T16:08:34Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "docs",
+      "data": {
+        "sha": "9685b7088ccff127177ac65b854fd8923cff1241",
+        "message": "docs: split README into separate English and Chinese documents\n\nREADME.md is now English-only, linking to README.zh-CN.md.\nBoth updated to reflect current architecture (Cyber-Primer design,\nAI roast backfill, retry logic, deploy trigger chain).\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 158,
+        "deletions": 73
+      }
+    },
+    {
+      "id": "commit-def4bd2433b6429a3921aa098b71b724c661c9ed",
+      "type": "commit",
+      "ts": "2026-03-31T16:06:07Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "def4bd2433b6429a3921aa098b71b724c661c9ed",
+        "message": "feat: AI roast backfills historical data, not just new events\n\nRead all existing monthly data files and merge with newly fetched\nevents before generating AI roasts. This ensures weeks from months\nor years ago that were fetched without LLM_API_KEY will get roasts\nwhen the key is later configured. Deduplicates by event id.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 18,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-3856f15daec1c6835819d3613ecd0d5245235d5f",
+      "type": "commit",
+      "ts": "2026-03-31T15:59:04Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "3856f15daec1c6835819d3613ecd0d5245235d5f",
+        "message": "fix: trigger deploy after data fetch commits\n\nGITHUB_TOKEN pushes don't trigger other workflows (GitHub security).\nAdded explicit gh workflow run deploy.yml step after data commit.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 13,
+        "deletions": 1
+      }
+    },
+    {
       "id": "commit-3d50f03e310d2d142688848e0154ee8c08f0575b",
       "type": "commit",
       "ts": "2026-03-31T15:52:48Z",
