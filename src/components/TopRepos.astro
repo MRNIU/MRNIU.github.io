@@ -34,7 +34,11 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   <div class="repo-list">
     {sorted.map(([repo, count], i) => (
       <div class="repo-row">
-        <a class="repo-name" href={`https://github.com/${repo}`} target="_blank" rel="noopener">{repo}</a>
+        <div class="repo-name-box">
+          <a class="repo-name-text" href={`https://github.com/${repo}`} target="_blank" rel="noopener">
+            <span>{repo}</span>
+          </a>
+        </div>
         <div class="repo-bar-track">
           <div class="repo-bar" style={`width: ${(count / maxCount) * 100}%; background: ${barColors[i]};`} />
         </div>
@@ -63,28 +67,43 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
 
   .repo-row {
     display: grid;
-    grid-template-columns: auto 1fr 50px;
+    grid-template-columns: 30% 1fr 50px;
     align-items: center;
     gap: 12px;
     padding: 3px 0;
   }
 
-  .repo-name {
+  /* Scrollable name container */
+  .repo-name-box {
+    overflow: hidden;
+    text-align: right;
+  }
+
+  .repo-name-text {
+    display: inline-block;
     font-family: var(--cp-font-mono);
     font-size: var(--cp-fs-sm);
     color: var(--cp-fg-default);
-    text-align: right;
     white-space: nowrap;
+    text-decoration: none;
   }
 
-  .repo-name:hover {
+  .repo-name-text:hover {
     color: var(--cp-blue);
+    animation: scroll-name 3s linear infinite;
+  }
+
+  @keyframes scroll-name {
+    0%   { transform: translateX(0); }
+    10%  { transform: translateX(0); }
+    90%  { transform: translateX(calc(-100% + 100px)); }
+    100% { transform: translateX(calc(-100% + 100px)); }
   }
 
   .repo-bar-track {
     height: 5px;
     background: var(--cp-bg-raised);
-    min-width: 60px;
+    min-width: 40px;
   }
 
   .repo-bar {
@@ -101,8 +120,8 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   }
 
   @media (max-width: 768px) {
-    .repo-name {
-      text-align: left;
+    .repo-row {
+      grid-template-columns: 40% 1fr 40px;
     }
   }
 </style>

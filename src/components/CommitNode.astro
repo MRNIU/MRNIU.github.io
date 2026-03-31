@@ -27,13 +27,17 @@ const time = new Date(ts).toLocaleString("en-US", {
   minute: "2-digit",
 });
 
-const commitUrl = `https://github.com/${repo}/commit/${data.sha}`;
+const isRealSha = data.sha.length >= 12;
+const commitUrl = isRealSha ? `https://github.com/${repo}/commit/${data.sha}` : '';
 const repoUrl = `https://github.com/${repo}`;
 ---
 
 <div class="event-card" data-semantic={semantic}>
   <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
-    <a class="event-sha" href={commitUrl} target="_blank" rel="noopener">{shortSha}</a>
+    {commitUrl
+      ? <a class="event-sha" href={commitUrl} target="_blank" rel="noopener">{shortSha}</a>
+      : <span class="event-sha">{shortSha}</span>
+    }
     <span>{firstLine}</span>
     <span class="diff-stat">
       <span class="additions">+{data.additions}</span>

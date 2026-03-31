@@ -76,9 +76,9 @@ const svgHeight = 7 * totalSize + 16;
 ---
 
 <section style="padding: 12px 0;">
-  <h2 class="section-heading" style="font-family: var(--cp-font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cp-fg-muted); margin: 0 0 6px; font-weight: 400;">Contributions</h2>
-  <div style="overflow-x: auto; display: flex; justify-content: center;">
-    <svg width={svgWidth} height={svgHeight} role="img" aria-label="Contribution heatmap">
+  <h2 class="section-heading" style="font-family: var(--cp-font-mono); font-size: var(--cp-fs-label); text-transform: uppercase; letter-spacing: 1.5px; color: var(--cp-fg-muted); margin: 0 0 6px; font-weight: 400;">Contributions</h2>
+  <div style="width: 100%;">
+    <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} width="100%" role="img" aria-label="Contribution heatmap" style="display: block;">
       {monthLabels.map((label) => (
         <text
           x={label.x}

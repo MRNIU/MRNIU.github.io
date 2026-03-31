@@ -249,10 +249,14 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
       const repoLink = `<a class="event-repo" href="${ghUrl(event.repo)}" target="_blank" rel="noopener">${event.repo}</a>`;
 
       switch (event.type) {
-        case 'commit':
+        case 'commit': {
+          const sha = event.data.sha;
+          const shaHtml = sha.length >= 12
+            ? `<a class="event-sha" href="${ghUrl(event.repo, `/commit/${sha}`)}" target="_blank" rel="noopener">${sha.slice(0, 7)}</a>`
+            : `<span class="event-sha">${sha.slice(0, 7)}</span>`;
           return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
-                <a class="event-sha" href="${ghUrl(event.repo, `/commit/${event.data.sha}`)}" target="_blank" rel="noopener">${event.data.sha.slice(0, 7)}</a>
+                ${shaHtml}
                 <span>${escapeHtml(event.data.message)}</span>
                 <span class="diff-stat"><span class="additions">+${event.data.additions}</span> <span class="deletions">-${event.data.deletions}</span></span>
               </div>
@@ -261,6 +265,7 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
                 <span class="event-time">${time}</span>
               </div>
             </div>`;
+        }
 
         case 'pull_request': {
           const badgeClass = event.data.state === 'merged' ? 'state-badge--merged' : event.data.state === 'open' ? 'state-badge--open' : 'state-badge--closed';

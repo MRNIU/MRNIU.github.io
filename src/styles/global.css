@@ -94,11 +94,23 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ─── Page Container ─── */
+/* ─── Page Container — golden ratio ~62% on large screens ─── */
 .page-container {
-  max-width: 1920px;
+  width: 62%;
   margin: 0 auto;
   padding: 0 var(--cp-gap);
+}
+
+@media (max-width: 1600px) {
+  .page-container { width: 78%; }
+}
+
+@media (max-width: 1200px) {
+  .page-container { width: 90%; }
+}
+
+@media (max-width: 768px) {
+  .page-container { width: 95%; }
 }
 
 /* Top section: offset to align with timeline main column */
