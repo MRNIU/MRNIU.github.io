@@ -338,10 +338,10 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
           return `<div class="ai-roast-card">
               <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;">
                 <span class="anomaly-label">&#x25C8; ai::roast</span>
-                <span style="font-family: var(--cp-font-mono); color: var(--cp-fg-muted);">${event.data.weekRange}</span>
+                <span style="font-family: var(--cp-font-mono); font-size: var(--cp-fs-xs); color: var(--cp-fg-muted);">${event.data.weekRange}</span>
               </div>
-              <p style="margin: 0 0 6px; line-height: 1.5; color: var(--cp-anomaly);">${escapeHtml(event.data.content)}</p>
-              <div style="display: flex; gap: 12px; font-family: var(--cp-font-mono); color: var(--cp-fg-muted);">
+              <p style="margin: 0 0 8px; font-size: var(--cp-fs-base); line-height: 1.6; color: var(--cp-anomaly);">${escapeHtml(event.data.content)}</p>
+              <div style="display: flex; gap: 12px; font-family: var(--cp-font-mono); font-size: var(--cp-fs-xs); color: var(--cp-fg-muted);">
                 <span>${event.data.stats.totalCommits} commits</span>
                 <a class="event-repo" href="${ghUrl(event.data.stats.topRepo)}" target="_blank" rel="noopener">${event.data.stats.topRepo}</a>
                 <span>${time}</span>
