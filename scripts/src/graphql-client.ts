@@ -26,20 +26,32 @@ export class GraphQLClient {
     variables?: Record<string, unknown>
   ): Promise<T> {
     const wrappedQuery = wrapWithRateLimit(query);
+    const MAX_RETRIES = 3;
 
-    const response = await fetch(GITHUB_GRAPHQL_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `bearer ${this.token}`,
-        "Content-Type": "application/json",
-        "User-Agent": "GitPulse/1.0",
-      },
-      body: JSON.stringify({ query: wrappedQuery, variables }),
-    });
+    let response: Response | undefined;
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      response = await fetch(GITHUB_GRAPHQL_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `bearer ${this.token}`,
+          "Content-Type": "application/json",
+          "User-Agent": "GitPulse/1.0",
+        },
+        body: JSON.stringify({ query: wrappedQuery, variables }),
+      });
 
-    if (!response.ok) {
+      if (response.ok || (response.status < 500 && response.status !== 429)) break;
+
+      if (attempt < MAX_RETRIES) {
+        const delay = Math.pow(2, attempt + 1) * 1000; // 2s, 4s, 8s
+        console.log(`[retry] GitHub API ${response.status}, retrying in ${delay / 1000}s (${attempt + 1}/${MAX_RETRIES})`);
+        await new Promise(r => setTimeout(r, delay));
+      }
+    }
+
+    if (!response!.ok) {
       throw new Error(
-        `GitHub API error: ${response.status} ${response.statusText}`
+        `GitHub API error: ${response!.status} ${response!.statusText}`
       );
     }
 
