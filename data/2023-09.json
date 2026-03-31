@@ -1,0 +1,140 @@
+{
+  "month": "2023-09",
+  "events": [
+    {
+      "id": "commit-43ffce1f95ff4cf7c4f1374874192138d1ae321d",
+      "type": "commit",
+      "ts": "2023-09-22T00:42:49Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "43ffce1f95ff4cf7c4f1374874192138d1ae321d",
+        "message": "add 2023 proposal\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 0,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-180-32",
+      "type": "issue_comment",
+      "ts": "2023-09-12T13:21:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 180,
+        "issueTitle": "代码规范 & commit 规范 & 文档规范",
+        "body": "fixed #184 \n"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-184-33",
+      "type": "issue_comment",
+      "ts": "2023-09-12T13:02:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 184,
+        "issueTitle": "构建系统重写与 UEFI 支持",
+        "body": "fix #164 \r\nfix #166 \r\nfix #167 \r\nfix #171 \r\nfix #172 \r\nfix #173 \r\nfix #174 \r\nfix #175 \r\nfix #176\r\nclose #177 \r\nfix #178 \r\nfix #179 \r\nfix #180 \r\nfix #181 \r\nfix #182 \r\nfix #183 "
+      }
+    },
+    {
+      "id": "commit-e0c8e0215f7332c8f70e431522561afbf1061bf6",
+      "type": "commit",
+      "ts": "2023-09-10T07:31:55Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "e0c8e0215f7332c8f70e431522561afbf1061bf6",
+        "message": "电力采矿机速度45，满蓝带\n\nSigned-off-by: Zone.N <Zone.NiuZH@hotmail.com>",
+        "additions": 15,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-17-34",
+      "type": "issue_comment",
+      "ts": "2023-09-09T15:53:36Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 17,
+        "issueTitle": "测试",
+        "body": "mock 需要了再做"
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-18-35",
+      "type": "issue_comment",
+      "ts": "2023-09-05T15:58:05Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 18,
+        "issueTitle": "CI",
+        "body": "添加 codecov action"
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-18-36",
+      "type": "issue_comment",
+      "ts": "2023-09-05T15:02:17Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 18,
+        "issueTitle": "CI",
+        "body": "coverage 完成，尝试集成到 doxygen 文档中"
+      }
+    },
+    {
+      "id": "commit-a2f8b166ac0181d93c5136bea521797830675604",
+      "type": "commit",
+      "ts": "2023-09-05T10:04:59Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": null,
+      "data": {
+        "sha": "a2f8b166ac0181d93c5136bea521797830675604",
+        "message": "Initial commit",
+        "additions": 675,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-14-37",
+      "type": "issue_comment",
+      "ts": "2023-09-04T14:25:06Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 14,
+        "issueTitle": "内核构建",
+        "body": "已在st中实现基本代码，可以顺利跳转到内核，但是有一个内存地址问题很难受，尝试解决"
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-11-38",
+      "type": "issue_comment",
+      "ts": "2023-09-03T14:19:21Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 11,
+        "issueTitle": "跨平台支持",
+        "body": "osx 下没有 libc 头文件，先不考虑"
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-18-39",
+      "type": "issue_comment",
+      "ts": "2023-09-03T14:18:28Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 18,
+        "issueTitle": "CI",
+        "body": "github ci done"
+      }
+    }
+  ]
+}

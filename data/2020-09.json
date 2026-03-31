@@ -1,0 +1,343 @@
+{
+  "month": "2020-09",
+  "events": [
+    {
+      "id": "commit-16fe8925d93a69cd2b68865f6d50e609e2ca278d",
+      "type": "commit",
+      "ts": "2020-09-30T09:27:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "16fe8925d93a69cd2b68865f6d50e609e2ca278d",
+        "message": "refactor(docs): move\npref(build): 准备使用 cmake 完成工具链的配置",
+        "additions": 117,
+        "deletions": 42883
+      }
+    },
+    {
+      "id": "commit-8cde3035c493c40e244695f8164c10c31e2a9fc6",
+      "type": "commit",
+      "ts": "2020-09-30T08:50:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8cde3035c493c40e244695f8164c10c31e2a9fc6",
+        "message": "pref(build): small change",
+        "additions": 13,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-26fd2140dae0ff96d1a091c9e448ede2d4023456",
+      "type": "commit",
+      "ts": "2020-09-30T08:36:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "26fd2140dae0ff96d1a091c9e448ede2d4023456",
+        "message": "feat(build): 添加 Linux 脚本",
+        "additions": 26,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-aa577dc7d9b32832d23f00ef7dcd18f1ddcaab33",
+      "type": "commit",
+      "ts": "2020-09-30T08:08:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "aa577dc7d9b32832d23f00ef7dcd18f1ddcaab33",
+        "message": "pref(build): 更新了 x86_64 mac 的工具链脚本",
+        "additions": 89,
+        "deletions": 179
+      }
+    },
+    {
+      "id": "commit-6f387e094e2a5c9797fd305145cf17d7bfb38893",
+      "type": "commit",
+      "ts": "2020-09-30T04:38:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "style",
+      "data": {
+        "sha": "6f387e094e2a5c9797fd305145cf17d7bfb38893",
+        "message": "style: 更新代码格式，添加 clang-format 文件",
+        "additions": 4778,
+        "deletions": 5831
+      }
+    },
+    {
+      "id": "commit-827d3213996c90af2dc6395dc027ff4749aee42c",
+      "type": "commit",
+      "ts": "2020-09-30T04:20:56Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "827d3213996c90af2dc6395dc027ff4749aee42c",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-66d671a9b3cb7c6ba4531354a403ba2af27a8ed5",
+      "type": "commit",
+      "ts": "2020-09-30T04:20:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "66d671a9b3cb7c6ba4531354a403ba2af27a8ed5",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-f7d6fbafb1f88ef476e1edeb3efa6f322c9ad9e8",
+      "type": "commit",
+      "ts": "2020-09-30T04:19:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "f7d6fbafb1f88ef476e1edeb3efa6f322c9ad9e8",
+        "message": "fix: 删除多余文件",
+        "additions": 357,
+        "deletions": 834
+      }
+    },
+    {
+      "id": "commit-58d931b97264412debd4f4b2f003f23cd31ba501",
+      "type": "commit",
+      "ts": "2020-09-30T04:19:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "58d931b97264412debd4f4b2f003f23cd31ba501",
+        "message": "fix(run.sh): 现在可以正常使用了",
+        "additions": 5,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-2aeccfdcba66e513a0b4721fc60525ac0badc1f3",
+      "type": "commit",
+      "ts": "2020-09-29T19:31:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2aeccfdcba66e513a0b4721fc60525ac0badc1f3",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-10a4766d4c74cfd0fd870bfa507c4bb6428e0dcd",
+      "type": "commit",
+      "ts": "2020-09-29T19:31:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "10a4766d4c74cfd0fd870bfa507c4bb6428e0dcd",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-189ffca6db22141ca84cb0cb7b4eea367f8aa78c",
+      "type": "commit",
+      "ts": "2020-09-29T19:30:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "189ffca6db22141ca84cb0cb7b4eea367f8aa78c",
+        "message": "fix(gitignore): small change",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-22a9bfa05a3a00dd878d711a50f1c368665aa683",
+      "type": "commit",
+      "ts": "2020-09-29T19:27:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "22a9bfa05a3a00dd878d711a50f1c368665aa683",
+        "message": "feat(gitignore): 忽略 build 文件夹\nfix(vmm.c): 重复定义问题",
+        "additions": 112,
+        "deletions": 161
+      }
+    },
+    {
+      "id": "commit-3da46cb9a8ec7d38fa34b298c43d680e80218c1a",
+      "type": "commit",
+      "ts": "2020-09-29T19:13:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "3da46cb9a8ec7d38fa34b298c43d680e80218c1a",
+        "message": "fix(include): 重复定义问题",
+        "additions": 23,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-245d8892e4907f4f00f8162c57021ffa5db7e8d3",
+      "type": "commit",
+      "ts": "2020-09-29T18:17:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "245d8892e4907f4f00f8162c57021ffa5db7e8d3",
+        "message": "fix(cmake): 补全缺少的部分",
+        "additions": 75,
+        "deletions": 68
+      }
+    },
+    {
+      "id": "commit-5f113fb968c76f31aabf5b77ab0393e2bf2dca71",
+      "type": "commit",
+      "ts": "2020-09-29T15:58:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "5f113fb968c76f31aabf5b77ab0393e2bf2dca71",
+        "message": "fix(.gitignore): 现在会忽略 .DS_Store 文件",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-4163065f6f55ab2a98afd839a7ce3f561b5f1299",
+      "type": "commit",
+      "ts": "2020-09-29T15:56:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4163065f6f55ab2a98afd839a7ce3f561b5f1299",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-8d6f65a35794824bff6e62956452445813ad32b4",
+      "type": "commit",
+      "ts": "2020-09-29T15:56:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8d6f65a35794824bff6e62956452445813ad32b4",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-fe350a50b15f3fb7d7d992a826a9c03daae4ba1c",
+      "type": "commit",
+      "ts": "2020-09-29T15:55:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fe350a50b15f3fb7d7d992a826a9c03daae4ba1c",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-635edbd0af09a777bba95db0418b9e025638d7f8",
+      "type": "commit",
+      "ts": "2020-09-29T15:54:53Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "635edbd0af09a777bba95db0418b9e025638d7f8",
+        "message": "Delete .DS_Store",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-be23012f8b6f2a0d48816ee0dc0bd1f83148028f",
+      "type": "commit",
+      "ts": "2020-09-29T15:50:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "be23012f8b6f2a0d48816ee0dc0bd1f83148028f",
+        "message": "refactor(cmake): 现在可以使用 cmake 进行构建了\nrefactor(arch_init): 移动文件",
+        "additions": 832,
+        "deletions": 1027
+      }
+    },
+    {
+      "id": "pr-8-SynestiaOS/SynestiaOS",
+      "type": "pull_request",
+      "ts": "2020-09-21T08:45:50Z",
+      "repo": "SynestiaOS/SynestiaOS",
+      "semantic": null,
+      "data": {
+        "number": 8,
+        "title": "[MRNIU] #SYSCALL: sys_fork",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-854530ed341bfac5440c5fe12ba6dd543c57bcda",
+      "type": "commit",
+      "ts": "2020-09-17T11:14:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "854530ed341bfac5440c5fe12ba6dd543c57bcda",
+        "message": "build: try to cmake",
+        "additions": 944,
+        "deletions": 1449
+      }
+    },
+    {
+      "id": "commit-577307110020a2a51ebfeb02db0fc9bf7fffa49e",
+      "type": "commit",
+      "ts": "2020-09-17T06:39:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "577307110020a2a51ebfeb02db0fc9bf7fffa49e",
+        "message": "build: try to cmake",
+        "additions": 401,
+        "deletions": 261
+      }
+    },
+    {
+      "id": "pr-7-SynestiaOS/SynestiaOS",
+      "type": "pull_request",
+      "ts": "2020-09-14T08:50:07Z",
+      "repo": "SynestiaOS/SynestiaOS",
+      "semantic": null,
+      "data": {
+        "number": 7,
+        "title": "[MRNIU] #thread: fix bug",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-02d064578443e1404ae83502a56f85b9cc027dba",
+      "type": "commit",
+      "ts": "2020-09-03T16:01:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "02d064578443e1404ae83502a56f85b9cc027dba",
+        "message": "docs: add commit standard",
+        "additions": 4,
+        "deletions": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "month": "2022-08",
+  "events": [
+    {
+      "id": "commit-e1189a37e09758ac4ca3d1a9cce0a9ffd1d400e8",
+      "type": "commit",
+      "ts": "2022-08-07T16:44:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "e1189a37e09758ac4ca3d1a9cce0a9ffd1d400e8",
+        "message": "feat(install): install.sh\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 212,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-6735179e14c1daa29c0265d9aa1c0ce0853cad17",
+      "type": "commit",
+      "ts": "2022-08-07T10:00:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "perf",
+      "data": {
+        "sha": "6735179e14c1daa29c0265d9aa1c0ce0853cad17",
+        "message": "perf(run.py): remove\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 0,
+        "deletions": 75
+      }
+    }
+  ]
+}

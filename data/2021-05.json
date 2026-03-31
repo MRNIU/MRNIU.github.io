@@ -1,0 +1,495 @@
+{
+  "month": "2021-05",
+  "events": [
+    {
+      "id": "comment-HUST-OS/xv6-k210-30-71",
+      "type": "issue_comment",
+      "ts": "2021-05-30T17:47:27Z",
+      "repo": "HUST-OS/xv6-k210",
+      "semantic": null,
+      "data": {
+        "issueNumber": 30,
+        "issueTitle": "K210 无法进行 SD 卡读取",
+        "body": "ohhhhhhhhhhhh我读到了！\r\n换掉 dma 之后解决了！\r\n谢谢大哥！"
+      }
+    },
+    {
+      "id": "commit-4b0360c17a8ed471b12a9872127a7a83b3c36f3b",
+      "type": "commit",
+      "ts": "2021-05-30T15:52:38Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4b0360c17a8ed471b12a9872127a7a83b3c36f3b",
+        "message": "git: update .gitignore\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 89,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "comment-HUST-OS/xv6-k210-30-72",
+      "type": "issue_comment",
+      "ts": "2021-05-30T04:27:47Z",
+      "repo": "HUST-OS/xv6-k210",
+      "semantic": null,
+      "data": {
+        "issueNumber": 30,
+        "issueTitle": "K210 无法进行 SD 卡读取",
+        "body": "不是哦，在 `intr init` 中只是填充了一下中断表，没有开启中断。\r\n代码在 `https://gitlab.eduxiji.net/PTRNULL/simplekernel_oscomp_2021/-/blob/master/src/arch/riscv64/intr/intr.cpp`"
+      }
+    },
+    {
+      "id": "comment-HUST-OS/xv6-k210-30-73",
+      "type": "issue_comment",
+      "ts": "2021-05-29T16:17:54Z",
+      "repo": "HUST-OS/xv6-k210",
+      "semantic": null,
+      "data": {
+        "issueNumber": 30,
+        "issueTitle": "K210 无法进行 SD 卡读取",
+        "body": "麻烦的地方就在这里，别说多核了，连多线程都没有，要不然也不敢不用锁啊。\r\n目前的情况是在一张空的 fat32 卡上可以读到0，但是没法写，我还在尝试，但是完全没头绪。\r\n硬件方面我换了两块板子与三张卡，问题可以稳定复现。"
+      }
+    },
+    {
+      "id": "issue-30-HUST-OS/xv6-k210",
+      "type": "issue",
+      "ts": "2021-05-29T13:54:46Z",
+      "repo": "HUST-OS/xv6-k210",
+      "semantic": null,
+      "data": {
+        "number": 30,
+        "title": "K210 无法进行 SD 卡读取",
+        "state": "closed",
+        "body": "# K210 无法进行 SD 卡读取\r\n\r\n- 描述\r\n\r\n    参考此 repo 实现的 SD 卡读写程序，在 `sdcard_write_sector()` 函数中出现 `sdcard: invalid response token` 错误。\r\n\r\n- 错误信息\r\n\r\n  `sdcard: invalid response token`\r\n\r\n- 截图\r\n\r\n    ![截屏2021-05-29 下午9.44.30](https://tva1.sinaimg.cn/large/008i3skNly1gqzmsmahfoj30u010w4qp.jpg)\r\n\r\n- 复现\r\n\r\n    clone `\thttps://gitlab.eduxiji.net/PTRNULL/simplekernel_oscomp_2021.git`，按照 RUN.md 中的描述运行（K210）即可观察到。\r\n\r\n- diff\r\n\r\n    代码位于 `https://gitlab.eduxiji.net/PTRNULL/simplekernel_oscomp_2021/-/blob/master/src/drv/sdcard/sdcard.c`\r\n    \r\n    1. 修改了数据类型\r\n    \r\n          `uint8` -> `uint8_t`\r\n    \r\n          `uint16` -> `uint16_t`\r\n    \r\n          `uint32` -> `uint32_t`\r\n    \r\n          `uint64` -> `uint64_t`\r\n    \r\n    2. 注释了锁相关代码\r\n    \r\n        注释了 `static struct sleeplock sdcard_lock` 相关定义，以及依赖它的函数。\r\n"
+      }
+    },
+    {
+      "id": "comment-Alinshans/MyTinySTL-79-74",
+      "type": "issue_comment",
+      "ts": "2021-05-28T16:53:37Z",
+      "repo": "Alinshans/MyTinySTL",
+      "semantic": null,
+      "data": {
+        "issueNumber": 79,
+        "issueTitle": "vector有一个namespace不能用",
+        "body": "#include \"algo.h\"\r\n可以解决"
+      }
+    },
+    {
+      "id": "commit-acea2a50b7071e41828458ca8238c305e7f45420",
+      "type": "commit",
+      "ts": "2021-05-16T17:04:29Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "acea2a50b7071e41828458ca8238c305e7f45420",
+        "message": "pref(INTR): try keyboard input\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 33,
+        "deletions": 37
+      }
+    },
+    {
+      "id": "commit-e8da1e8709ba738e9dac3c45484e7176d9c19522",
+      "type": "commit",
+      "ts": "2021-05-16T11:35:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "e8da1e8709ba738e9dac3c45484e7176d9c19522",
+        "message": "feat(INTR): riscv timer intr done\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 38,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-e9fdace8e230ba3505216d4c3ad242b42f761a86",
+      "type": "commit",
+      "ts": "2021-05-15T17:54:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e9fdace8e230ba3505216d4c3ad242b42f761a86",
+        "message": "pref(INTR): working on riscv intr\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 22,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-fa0a209e773ab7a1fcce8054dcc90d0644cd03c1",
+      "type": "commit",
+      "ts": "2021-05-15T10:20:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fa0a209e773ab7a1fcce8054dcc90d0644cd03c1",
+        "message": "pref(INTR): working on riscv intr\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 208,
+        "deletions": 79
+      }
+    },
+    {
+      "id": "commit-051cf6b9886fed253243df5fecca28b7ec1c9f30",
+      "type": "commit",
+      "ts": "2021-05-08T16:39:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "051cf6b9886fed253243df5fecca28b7ec1c9f30",
+        "message": "bug(cxxabi): x86_64\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 3,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-2297d02861a219beb3f67c1ae81c294dd2b63bf6",
+      "type": "commit",
+      "ts": "2021-05-08T15:38:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2297d02861a219beb3f67c1ae81c294dd2b63bf6",
+        "message": "pref(IO): remove static\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 3,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-118cf4af43e1997031ebeb9398a2036a4298d776",
+      "type": "commit",
+      "ts": "2021-05-08T15:04:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "118cf4af43e1997031ebeb9398a2036a4298d776",
+        "message": "pref(TUI): change define\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-d415f1517503c1e872fdfee075c869b5a5dc1492",
+      "type": "commit",
+      "ts": "2021-05-08T13:49:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d415f1517503c1e872fdfee075c869b5a5dc1492",
+        "message": "pref(cxxabi): update ctor\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 41,
+        "deletions": 38
+      }
+    },
+    {
+      "id": "commit-f07780d7505a96db4c094b21c52b0c51e29dc247",
+      "type": "commit",
+      "ts": "2021-05-08T13:26:00Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f07780d7505a96db4c094b21c52b0c51e29dc247",
+        "message": "bug(cxxabi): global ctor err at x64\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 13,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "commit-0f9ab2ac9d3f8b9037f45c929406e1b390dc745f",
+      "type": "commit",
+      "ts": "2021-05-08T09:39:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "style",
+      "data": {
+        "sha": "0f9ab2ac9d3f8b9037f45c929406e1b390dc745f",
+        "message": "style(boot, sh): update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 18,
+        "deletions": 41
+      }
+    },
+    {
+      "id": "commit-003771795b5159e2a510da4357039d8dd8ee0aff",
+      "type": "commit",
+      "ts": "2021-05-08T09:17:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "003771795b5159e2a510da4357039d8dd8ee0aff",
+        "message": "feat(x86_64): x86_64 allowed\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 58,
+        "deletions": 120
+      }
+    },
+    {
+      "id": "commit-83b9cb851c2deaaa408261eb79352b973002aab2",
+      "type": "commit",
+      "ts": "2021-05-08T08:06:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "83b9cb851c2deaaa408261eb79352b973002aab2",
+        "message": "feat(INTR): working on riscv intr\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 146,
+        "deletions": 33
+      }
+    },
+    {
+      "id": "commit-094bba57bdf8e9e15eb89bbccee687a0e301846d",
+      "type": "commit",
+      "ts": "2021-05-07T02:53:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "094bba57bdf8e9e15eb89bbccee687a0e301846d",
+        "message": "pref(VMM): riscv vmm done\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 29,
+        "deletions": 22
+      }
+    },
+    {
+      "id": "commit-ab08701647f9e13000450bd160ee5dcb8c47e4df",
+      "type": "commit",
+      "ts": "2021-05-07T02:20:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ab08701647f9e13000450bd160ee5dcb8c47e4df",
+        "message": "pref(CPU): add ENABLE_PG() for riscv\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 10,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-693af78a3aef8389c498c10dda7a1cbb4fc33602",
+      "type": "commit",
+      "ts": "2021-05-06T13:37:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "693af78a3aef8389c498c10dda7a1cbb4fc33602",
+        "message": "pref(VMM): riscv vmm almost there\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 66,
+        "deletions": 189
+      }
+    },
+    {
+      "id": "commit-0f07a852fe240b4f7271439bfc01394a103b726c",
+      "type": "commit",
+      "ts": "2021-05-06T12:33:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0f07a852fe240b4f7271439bfc01394a103b726c",
+        "message": "pref(VMM): remove excess code\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 0,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-07f8a5f516bb8a4f696627ad80296ddfbdfe65eb",
+      "type": "commit",
+      "ts": "2021-05-06T12:21:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "07f8a5f516bb8a4f696627ad80296ddfbdfe65eb",
+        "message": "pref(VMM): working on riscv vmm\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-47da8ad97fcfe27dddf9387f0c6037e9a18ea0aa",
+      "type": "commit",
+      "ts": "2021-05-06T11:03:15Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": "docs",
+      "data": {
+        "sha": "47da8ad97fcfe27dddf9387f0c6037e9a18ea0aa",
+        "message": "docs(2021): update renderer info\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 12,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-9ab066fa56dcd1b367be5ed4c532e3317151c8f2",
+      "type": "commit",
+      "ts": "2021-05-06T07:56:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9ab066fa56dcd1b367be5ed4c532e3317151c8f2",
+        "message": "pref(VMM): working on riscv vmm\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 79,
+        "deletions": 33
+      }
+    },
+    {
+      "id": "commit-6a0ed155224fefaa61431d2fef5d3b6ee0a8e137",
+      "type": "commit",
+      "ts": "2021-05-02T04:51:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "6a0ed155224fefaa61431d2fef5d3b6ee0a8e137",
+        "message": "pref(VMM): change VMM_PAGE_ name\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 13,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-0e4c2ff88bffb9d87867b9a3a3d30c1b61c2f51d",
+      "type": "commit",
+      "ts": "2021-05-02T04:25:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "0e4c2ff88bffb9d87867b9a3a3d30c1b61c2f51d",
+        "message": "fix(PMM): add init()\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 18,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-96338e1ced88223ab2525ccdb4fd278e8cab2b83",
+      "type": "commit",
+      "ts": "2021-05-02T04:13:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "96338e1ced88223ab2525ccdb4fd278e8cab2b83",
+        "message": "pref(APIC): remove __init_priority__\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-70a86896dd51e9d34f615089346b51162063d715",
+      "type": "commit",
+      "ts": "2021-05-02T04:11:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "70a86896dd51e9d34f615089346b51162063d715",
+        "message": "pref(VMM): remove __init_priority__\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-d31ecec275fa4cac11ebc4a51ec336cfa090c962",
+      "type": "commit",
+      "ts": "2021-05-02T04:10:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d31ecec275fa4cac11ebc4a51ec336cfa090c962",
+        "message": "pref(VMM): remove __init_priority__\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-59560cbdff9fb9955570cd17e83f3fb3239c7458",
+      "type": "commit",
+      "ts": "2021-05-02T04:09:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "59560cbdff9fb9955570cd17e83f3fb3239c7458",
+        "message": "pref(PMM): remove __init_priority__, add init\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-ba4ffa3ac361072826aa490a57472fd461c0fadd",
+      "type": "commit",
+      "ts": "2021-05-02T04:08:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ba4ffa3ac361072826aa490a57472fd461c0fadd",
+        "message": "pref(PMM): remove __init_priority__, add init\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 9,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-77bb86ee37932d122038b66609f536e018d3ac10",
+      "type": "commit",
+      "ts": "2021-05-02T04:06:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "77bb86ee37932d122038b66609f536e018d3ac10",
+        "message": "pref(IO): remove __init_priority__\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-7fcb9ef255d22981a502cd82d249509909e58644",
+      "type": "commit",
+      "ts": "2021-05-01T15:22:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7fcb9ef255d22981a502cd82d249509909e58644",
+        "message": "comment(kernel): add TODO\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-005ac4d9475a452587c595c97d31721f85ffc6d2",
+      "type": "commit",
+      "ts": "2021-05-01T14:23:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "005ac4d9475a452587c595c97d31721f85ffc6d2",
+        "message": "pref(kernel_main): remove kernel.cpp\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 16,
+        "deletions": 44
+      }
+    },
+    {
+      "id": "commit-74f792915290fe45e83c50e9bed65ee493bf36a6",
+      "type": "commit",
+      "ts": "2021-05-01T14:13:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "74f792915290fe45e83c50e9bed65ee493bf36a6",
+        "message": "comment(kernel_main): add comment\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-b9863becf9279d14fc47f231f8de7698421e6f1b",
+      "type": "commit",
+      "ts": "2021-05-01T13:51:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "b9863becf9279d14fc47f231f8de7698421e6f1b",
+        "message": "fix(libcxx): rename cassert.h to assert.h\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 809,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-7d2db172c34c18dc0adc1552ff404922bc0c706b",
+      "type": "commit",
+      "ts": "2021-05-01T03:57:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7d2db172c34c18dc0adc1552ff404922bc0c706b",
+        "message": "pref(PMM, MULTIBOOT2): add get_e820()\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 224,
+        "deletions": 239
+      }
+    }
+  ]
+}

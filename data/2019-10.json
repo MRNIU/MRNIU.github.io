@@ -1,0 +1,160 @@
+{
+  "month": "2019-10",
+  "events": [
+    {
+      "id": "commit-933b6cb215c4673f6335e9e1406edf4072fb875b",
+      "type": "commit",
+      "ts": "2019-10-26T18:54:16Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "933b6cb215c4673f6335e9e1406edf4072fb875b",
+        "message": "Successful running under ARCH=i386",
+        "additions": 732,
+        "deletions": 343
+      }
+    },
+    {
+      "id": "commit-9cf2408994252de7358726cff78e89bf631164c6",
+      "type": "commit",
+      "ts": "2019-10-26T16:29:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9cf2408994252de7358726cff78e89bf631164c6",
+        "message": "setup done, but can not find kernel",
+        "additions": 290,
+        "deletions": 291
+      }
+    },
+    {
+      "id": "commit-6320eee9386bb7eba081ba69630d79eaeb5efc00",
+      "type": "commit",
+      "ts": "2019-10-26T15:24:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "6320eee9386bb7eba081ba69630d79eaeb5efc00",
+        "message": "update",
+        "additions": 76,
+        "deletions": 74
+      }
+    },
+    {
+      "id": "commit-04dc6f84c44ae54c7d99a6b339dbc30cc23da1ea",
+      "type": "commit",
+      "ts": "2019-10-26T15:10:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "04dc6f84c44ae54c7d99a6b339dbc30cc23da1ea",
+        "message": "improve makefile",
+        "additions": 44,
+        "deletions": 36
+      }
+    },
+    {
+      "id": "commit-f14f5afdd18fb7414717fc6e275bb947c882af98",
+      "type": "commit",
+      "ts": "2019-10-26T14:08:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f14f5afdd18fb7414717fc6e275bb947c882af98",
+        "message": "Improve makefile\nReady to rewrite boot.s",
+        "additions": 1457,
+        "deletions": 236
+      }
+    },
+    {
+      "id": "commit-16d1ed9e32a30e13e150325bc5d3148ef491037c",
+      "type": "commit",
+      "ts": "2019-10-26T08:48:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "16d1ed9e32a30e13e150325bc5d3148ef491037c",
+        "message": "multiboot2 nit support x86_64, I should separated kernel.kernek into\nbootloader and kernel",
+        "additions": 83,
+        "deletions": 83
+      }
+    },
+    {
+      "id": "commit-e0bfded89ef3ebe8757ef6115290ed40b95b700f",
+      "type": "commit",
+      "ts": "2019-10-24T09:22:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e0bfded89ef3ebe8757ef6115290ed40b95b700f",
+        "message": "working on x86_64 and c++ support",
+        "additions": 115,
+        "deletions": 21
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-45718-121",
+      "type": "issue_comment",
+      "ts": "2019-10-24T03:44:51Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 45718,
+        "issueTitle": "x86_64-elf cross-toolchain",
+        "body": "Now we can use x86_64-elf- for both 32bit and 64 bit, also other targets provided.\r\nMaybe we should replace i386-elf with x86_64-elf toolchain."
+      }
+    },
+    {
+      "id": "pr-45718-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2019-10-23T09:12:13Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 45718,
+        "title": "x86_64-elf cross-toolchain",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Is your test running fine `brew test <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    },
+    {
+      "id": "commit-9d3a2126ffa75254949993dc6de5c8a8ec80713d",
+      "type": "commit",
+      "ts": "2019-10-22T08:33:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9d3a2126ffa75254949993dc6de5c8a8ec80713d",
+        "message": "Add x86_64-elf support",
+        "additions": 77,
+        "deletions": 56
+      }
+    },
+    {
+      "id": "commit-66bdaa7b7daec07100c3fbb800ce293c4dbe58fc",
+      "type": "commit",
+      "ts": "2019-10-21T10:34:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "66bdaa7b7daec07100c3fbb800ce293c4dbe58fc",
+        "message": "add compile parameter, crt*.o maybe neened",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-c3090e51b0c9308166062348fa6fcefc1c218944",
+      "type": "commit",
+      "ts": "2019-10-21T08:42:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c3090e51b0c9308166062348fa6fcefc1c218944",
+        "message": "Preliminary completion of XXX support",
+        "additions": 1724,
+        "deletions": 1450
+      }
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "month": "2024-07",
+  "events": [
+    {
+      "id": "commit-939e6f4742cfba18839ff1d3563ff79fb833f18a",
+      "type": "commit",
+      "ts": "2024-07-21T07:35:38Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "939e6f4742cfba18839ff1d3563ff79fb833f18a",
+        "message": "1.4.7\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 57,
+        "deletions": 19
+      }
+    },
+    {
+      "id": "commit-16a907f7764890f09ef9ea5462d88e571d633750",
+      "type": "commit",
+      "ts": "2024-07-21T04:46:07Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "16a907f7764890f09ef9ea5462d88e571d633750",
+        "message": "1.4.6\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 82,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-53048f27815541e6b48176ca3a5cef9672e71054",
+      "type": "commit",
+      "ts": "2024-07-20T20:52:22Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "53048f27815541e6b48176ca3a5cef9672e71054",
+        "message": "1.4.5\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 65,
+        "deletions": 29
+      }
+    },
+    {
+      "id": "commit-fb90f4932bd60be3d56562d1559ce54f5adad55e",
+      "type": "commit",
+      "ts": "2024-07-20T19:57:32Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "fb90f4932bd60be3d56562d1559ce54f5adad55e",
+        "message": "update\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 495,
+        "deletions": 234
+      }
+    },
+    {
+      "id": "commit-0d9207e7d849be195651095f5c7735e9d224d3c8",
+      "type": "commit",
+      "ts": "2024-07-20T14:48:53Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "0d9207e7d849be195651095f5c7735e9d224d3c8",
+        "message": "1.4.4\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 6,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-ac45fbdbbd1aeafbd3af3dc0ecf10821be3211c1",
+      "type": "commit",
+      "ts": "2024-07-20T14:40:51Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "ac45fbdbbd1aeafbd3af3dc0ecf10821be3211c1",
+        "message": "1.4.3\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 15,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-fcbdf660be1601bc3832c82f942b7ac9dff6b4be",
+      "type": "commit",
+      "ts": "2024-07-18T12:48:40Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "fcbdf660be1601bc3832c82f942b7ac9dff6b4be",
+        "message": "1.4.2\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-d17f72a21252ee5364731ea522d9bfce83f4c06a",
+      "type": "commit",
+      "ts": "2024-07-18T12:47:51Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "d17f72a21252ee5364731ea522d9bfce83f4c06a",
+        "message": "1.4.2\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 33,
+        "deletions": 19
+      }
+    },
+    {
+      "id": "commit-3bc5cdc64c86bb2f9db99cf086d26619a08bef65",
+      "type": "commit",
+      "ts": "2024-07-18T12:35:38Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "3bc5cdc64c86bb2f9db99cf086d26619a08bef65",
+        "message": "1.4.0\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-33b78a19f9b545ecdff5d0c019ad65b0314c019d",
+      "type": "commit",
+      "ts": "2024-07-18T12:35:30Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "33b78a19f9b545ecdff5d0c019ad65b0314c019d",
+        "message": "1.4.0\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 135,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-85e90034dde4a2b1e5138f6c4439875a1eeca6d5",
+      "type": "commit",
+      "ts": "2024-07-18T11:43:32Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "85e90034dde4a2b1e5138f6c4439875a1eeca6d5",
+        "message": "1.3.0\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 165,
+        "deletions": 49
+      }
+    },
+    {
+      "id": "commit-44b6fab0ad1bf11001c9dac16d48eb89731d5416",
+      "type": "commit",
+      "ts": "2024-07-17T12:20:02Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "44b6fab0ad1bf11001c9dac16d48eb89731d5416",
+        "message": "1.3.0\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 50,
+        "deletions": 286
+      }
+    },
+    {
+      "id": "commit-1c5d23e79e7a8703c1e1bc452181813a122f42ba",
+      "type": "commit",
+      "ts": "2024-07-17T00:47:06Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "1c5d23e79e7a8703c1e1bc452181813a122f42ba",
+        "message": "1.2.0\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 6,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-bd1dc0826a2af2e400f817476ad3a31fe5c55e25",
+      "type": "commit",
+      "ts": "2024-07-17T00:46:09Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "bd1dc0826a2af2e400f817476ad3a31fe5c55e25",
+        "message": "refactor\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 14,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-8dca4870c43f8c4b3fb950e66562ebd7c97b81d9",
+      "type": "commit",
+      "ts": "2024-07-17T00:42:30Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "8dca4870c43f8c4b3fb950e66562ebd7c97b81d9",
+        "message": "refactor\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-24ff43b7c259d0221a076fab5acec87c69d78e12",
+      "type": "commit",
+      "ts": "2024-07-17T00:16:14Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "24ff43b7c259d0221a076fab5acec87c69d78e12",
+        "message": "refactor\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 11,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-feeae1a50fa91694d97a7dd0294cc5bebb86ceb2",
+      "type": "commit",
+      "ts": "2024-07-16T14:20:46Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "feeae1a50fa91694d97a7dd0294cc5bebb86ceb2",
+        "message": "refactor\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 169,
+        "deletions": 91
+      }
+    },
+    {
+      "id": "commit-0d02b6562050a1086eec8c9ca550a02d31d42bb7",
+      "type": "commit",
+      "ts": "2024-07-16T11:09:10Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "0d02b6562050a1086eec8c9ca550a02d31d42bb7",
+        "message": "refactor\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 186,
+        "deletions": 686
+      }
+    }
+  ]
+}

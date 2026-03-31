@@ -1,0 +1,18 @@
+{
+  "month": "2024-12",
+  "events": [
+    {
+      "id": "commit-bee098949e99980ffe4e47eed9f3362f629b928d",
+      "type": "commit",
+      "ts": "2024-12-13T06:03:31Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "bee098949e99980ffe4e47eed9f3362f629b928d",
+        "message": "update\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 17,
+        "deletions": 8
+      }
+    }
+  ]
+}

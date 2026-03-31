@@ -1,0 +1,245 @@
+{
+  "month": "2023-11",
+  "events": [
+    {
+      "id": "comment-bkaradzic/bgfx.cmake-archived-218-25",
+      "type": "issue_comment",
+      "ts": "2023-11-28T14:21:01Z",
+      "repo": "bkaradzic/bgfx.cmake-archived",
+      "semantic": null,
+      "data": {
+        "issueNumber": 218,
+        "issueTitle": "Add direct3d shaderc support on linux",
+        "body": "@bwrsandman cleared, thank you"
+      }
+    },
+    {
+      "id": "pr-218-bkaradzic/bgfx.cmake-archived",
+      "type": "pull_request",
+      "ts": "2023-11-28T12:53:24Z",
+      "repo": "bkaradzic/bgfx.cmake-archived",
+      "semantic": null,
+      "data": {
+        "number": 218,
+        "title": "Add direct3d shaderc support on linux",
+        "state": "closed",
+        "body": "To adapt to the changes in \r\nhttps://github.com/bkaradzic/bgfx/commit/4c0baf5603626b328e25c26b23b1e0ceda029178 and https://github.com/bkaradzic/bgfx/commit/f14c14a48554de4e66a4b2334f623d988c06f36d"
+      }
+    },
+    {
+      "id": "pr-28-Simple-XX/SimplePhysicsEngine",
+      "type": "pull_request",
+      "ts": "2023-11-20T07:51:20Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": "refactor",
+      "data": {
+        "number": 28,
+        "title": "refactor: rename file",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimplePhysicsEngine-25-26",
+      "type": "issue_comment",
+      "ts": "2023-11-20T07:49:17Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "issueNumber": 25,
+        "issueTitle": "整理 dtk.h 中缺失的头文件",
+        "body": "@xiaoerlaigeid \r\n\r\n在 dtk.h 中缺失的头文件如下：\r\n\r\ndtkVolume.h\r\ndtkCUDA.h\r\ndtkSmallMatrix.h\r\ndtkStaticTriangleMeshQuery.h\r\ndtkDynamicTriangleMesh.h\r\ndtkPNTriangles.h\r\ndtkStaticTetraMeshQuery.h\r\ndtkStaticTetraMeshVertexSorter.h\r\ndtkBinaryImage3D.h\r\ndtkBinaryImage3DAlgos.h\r\ndtkDelaunay3D.h\r\ndtkCVTMeshing.h\r\ndtkCVTDensityFunc.h\r\ndtkCVTDensityFuncDistance.h\r\ndtkGenTetraMeshFromPts.h\r\ndtkDynamicStage.h\r\ndtkDynamicObject.h\r\ndtkDynamicObjectImpl.h\r\ndtkDynamicAABBTreeImpl.h\r\ndtkDynamicBallImpl.h\r\ndtkDynamicCellLabel.h\r\ndtkDynamicBallCellLabel.h\r\ndtkDynamicPointProject.h\r\ndtkDynamicBallPointProject.h\r\ndtkGraph.h\r\ndtkCenterLineMeshing.h\r\ndtkMassSpringSimulator.h\r\ndtkRigidBodySimulator.h\r\ndtkMassSpringDataSourceBasic.h\r\ndtkMassSpringMediator.h\r\ndtkSceneDataCollector.h\r\ndtkSceneDriver.h\r\ndtkPointsImporter.h\r\ndtkPointsExporter.h\r\ndtkStaticTetraMeshImporter.h\r\ndtkStaticTetraMeshExporter.h\r\ndtkStaticTriangleMeshImporter.h\r\ndtkStaticTriangleMeshExporter.h\r\ndtkFEMSolver.h\r\ndtkSPHSolver.h\r\n"
+      }
+    },
+    {
+      "id": "issue-27-Simple-XX/SimplePhysicsEngine",
+      "type": "issue",
+      "ts": "2023-11-19T12:03:15Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "number": 27,
+        "title": "整理 demo 与框架重构",
+        "state": "closed",
+        "body": ""
+      }
+    },
+    {
+      "id": "issue-26-Simple-XX/SimplePhysicsEngine",
+      "type": "issue",
+      "ts": "2023-11-19T12:02:53Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "number": 26,
+        "title": "整理 demo 与框架重构",
+        "state": "open",
+        "body": ""
+      }
+    },
+    {
+      "id": "issue-25-Simple-XX/SimplePhysicsEngine",
+      "type": "issue",
+      "ts": "2023-11-19T11:58:04Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "number": 25,
+        "title": "整理 dtk.h 中缺失的头文件",
+        "state": "open",
+        "body": ""
+      }
+    },
+    {
+      "id": "issue-7-Simple-XX/SimpleGameEngine",
+      "type": "issue",
+      "ts": "2023-11-14T03:20:46Z",
+      "repo": "Simple-XX/SimpleGameEngine",
+      "semantic": null,
+      "data": {
+        "number": 7,
+        "title": "根据 SimpleGameEngine 设计 render 提供的内容",
+        "state": "open",
+        "body": "https://github.com/Simple-XX/SimpleGameEngine/issues/1"
+      }
+    },
+    {
+      "id": "issue-24-Simple-XX/SimplePhysicsEngine",
+      "type": "issue",
+      "ts": "2023-11-14T03:20:45Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "number": 24,
+        "title": "根据 SimpleGameEngine 设计 physics 提供的内容",
+        "state": "open",
+        "body": "https://github.com/Simple-XX/SimpleGameEngine/issues/1"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleGameEngine-6-27",
+      "type": "issue_comment",
+      "ts": "2023-11-13T09:32:32Z",
+      "repo": "Simple-XX/SimpleGameEngine",
+      "semantic": null,
+      "data": {
+        "issueNumber": 6,
+        "issueTitle": "内部提供显示接口",
+        "body": "重载 framebuffer_t 的 pixel 方法即可"
+      }
+    },
+    {
+      "id": "issue-6-Simple-XX/SimpleGameEngine",
+      "type": "issue",
+      "ts": "2023-11-13T09:31:10Z",
+      "repo": "Simple-XX/SimpleGameEngine",
+      "semantic": null,
+      "data": {
+        "number": 6,
+        "title": "内部提供显示接口",
+        "state": "closed",
+        "body": "目前的实现为将渲染结果保存在内存中，库内部不提供显示接口。\n\n目标：同时支持 sdl2 和 opengl 的显示，加一层抽象实现\n\n"
+      }
+    },
+    {
+      "id": "issue-5-Simple-XX/SimpleGameEngine",
+      "type": "issue",
+      "ts": "2023-11-11T02:54:26Z",
+      "repo": "Simple-XX/SimpleGameEngine",
+      "semantic": null,
+      "data": {
+        "number": 5,
+        "title": "将 sdl 替换为 opengl",
+        "state": "open",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-23-Simple-XX/SimplePhysicsEngine",
+      "type": "pull_request",
+      "ts": "2023-11-10T06:11:29Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "number": 23,
+        "title": "refactor",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-22-Simple-XX/SimplePhysicsEngine",
+      "type": "pull_request",
+      "ts": "2023-11-08T02:30:02Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "number": 22,
+        "title": "fix #18",
+        "state": "merged",
+        "body": "fix #18"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimplePhysicsEngine-8-28",
+      "type": "issue_comment",
+      "ts": "2023-11-08T01:46:33Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "issueNumber": 8,
+        "issueTitle": "The total energy never stop increasing",
+        "body": "This example has been deprecated."
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimplePhysicsEngine-9-29",
+      "type": "issue_comment",
+      "ts": "2023-11-08T01:46:10Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "issueNumber": 9,
+        "issueTitle": "Object goes out of shape while increasing the Young's modulus",
+        "body": "This example has been deprecated."
+      }
+    },
+    {
+      "id": "issue-21-Simple-XX/SimplePhysicsEngine",
+      "type": "issue",
+      "ts": "2023-11-08T01:27:16Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "number": 21,
+        "title": "在 osx 下无法正常执行 lcov",
+        "state": "open",
+        "body": "在 osx 下无法正常执行 lcov\r\n\r\n```shell\r\n➜  build git:(main) ✗ make coverage\r\n[ 86%] Built target SimplePhysicsEngine-static\r\n[ 90%] Built target gtest\r\n[ 95%] Built target gtest_main\r\n[100%] Built target unit_test\r\nTest project /Users/nzh/Documents/SimplePhysicsEngine/build/test\r\n    Start 1: example.示例\r\n1/1 Test #1: example.示例 ...................   Passed    0.11 sec\r\n\r\n100% tests passed, 0 tests failed out of 1\r\n\r\nTotal Test time (real) =   0.12 sec\r\nGenerating coverage report ...\r\nCapturing coverage data from /Users/nzh/Documents/SimplePhysicsEngine/build\r\ngeninfo cmd: '/usr/local/Cellar/lcov/2.0/bin/geninfo /Users/nzh/Documents/SimplePhysicsEngine/build --output-filename /Users/nzh/Documents/SimplePhysicsEngine/build/coverage/coverage.info --base-directory /Users/nzh/Documents/SimplePhysicsEngine --exclude /Users/nzh/Documents/SimplePhysicsEngine/3rd/* --memory 0'\r\nFound LLVM gcov version 15.0.0, which emulates gcov version 4.2.0\r\nUsing intermediate gcov format\r\nWriting temporary data to /tmp/geninfo_datLui2\r\nScanning /Users/nzh/Documents/SimplePhysicsEngine/build for .gcda files ...\r\nFound 1 data files in /Users/nzh/Documents/SimplePhysicsEngine/build\r\nProcessing /Users/nzh/Documents/SimplePhysicsEngine/build/test/unit_test/CMakeFiles/unit_test.dir/example.cpp.gcda\r\nExcluded data for 6 files due to include/exclude options\r\ngeninfo: ERROR: \"/Users/nzh/Documents/SimplePhysicsEngine/test/unit_test/example.cpp\":0:  function __cxx_global_var_init found on line but no corresponding 'line' coverage data point.  Cannot derive function end line.\r\n\t(use \"geninfo --ignore-errors inconsistent ...\" to bypass this error)\r\nmake[3]: *** [coverage] Error 255\r\nmake[2]: *** [test/CMakeFiles/coverage.dir/all] Error 2\r\nmake[1]: *** [test/CMakeFiles/coverage.dir/rule] Error 2\r\nmake: *** [coverage] Error 2\r\n```\r\n"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimplePhysicsEngine-5-30",
+      "type": "issue_comment",
+      "ts": "2023-11-07T09:15:39Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "issueNumber": 5,
+        "issueTitle": "Failed to build FemSimulation demo",
+        "body": "fixed #18 "
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimplePhysicsEngine-1-31",
+      "type": "issue_comment",
+      "ts": "2023-11-07T08:47:51Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "issueNumber": 1,
+        "issueTitle": "Setup CGAL",
+        "body": "fixed #18 "
+      }
+    }
+  ]
+}

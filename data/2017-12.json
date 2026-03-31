@@ -1,0 +1,18 @@
+{
+  "month": "2017-12",
+  "events": [
+    {
+      "id": "issue-2735-xitu/gold-miner",
+      "type": "issue",
+      "ts": "2017-12-14T10:03:21Z",
+      "repo": "xitu/gold-miner",
+      "semantic": null,
+      "data": {
+        "number": 2735,
+        "title": "申请加入Android文档抓虫计划",
+        "state": "closed",
+        "body": "-  #公司/学校：西安石油大学\r\n- 工作内容/专业：计算机科学\r\n- 常浏览的国外网站：Stack Overflow; Google+;GitHub;YouTube;Coursera;MIT OpenCourseWare.\r\n- 英语水平：四级\r\n- 翻译经验：掘金翻译计划译者；TensorFlow 中文文档译者\r\n- 个人博客：https://www.mrniu.github.io ; http://blog.csdn.net/a6813140\r\n- 个人介绍：有独立的个人Android项目，希望能对社区有自己的贡献"
+      }
+    }
+  ]
+}

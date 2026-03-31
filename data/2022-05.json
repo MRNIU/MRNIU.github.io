@@ -1,0 +1,157 @@
+{
+  "month": "2022-05",
+  "events": [
+    {
+      "id": "comment-haiku/website-593-62",
+      "type": "issue_comment",
+      "ts": "2022-05-30T09:33:57Z",
+      "repo": "haiku/website",
+      "semantic": null,
+      "data": {
+        "issueNumber": 593,
+        "issueTitle": "gsoc2022 introduction blog",
+        "body": "\r\n\r\n\r\n> basically lgtm\r\n> \r\n> one minor thing: perhaps you could be a bit more specific with \"run Haiku on ARM\" - I assume it's the 32-bit ARM port and main target is running it in qemu? but better write it down explicitly...\r\n\r\nfixed"
+      }
+    },
+    {
+      "id": "comment-haiku/website-593-63",
+      "type": "issue_comment",
+      "ts": "2022-05-30T08:21:02Z",
+      "repo": "haiku/website",
+      "semantic": null,
+      "data": {
+        "issueNumber": 593,
+        "issueTitle": "gsoc2022 introduction blog",
+        "body": "@scottmc @pulkomandy @davidkaroly "
+      }
+    },
+    {
+      "id": "pr-593-haiku/website",
+      "type": "pull_request",
+      "ts": "2022-05-30T08:17:34Z",
+      "repo": "haiku/website",
+      "semantic": null,
+      "data": {
+        "number": 593,
+        "title": "gsoc2022 introduction blog",
+        "state": "merged",
+        "body": "Signed-off-by: Zone.N <Zone.Niuzh@hotmail.com>"
+      }
+    },
+    {
+      "id": "commit-bd0ed44f66cbd7a9c637ad8830669b533c45f814",
+      "type": "commit",
+      "ts": "2022-05-30T05:42:34Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "bd0ed44f66cbd7a9c637ad8830669b533c45f814",
+        "message": "update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 18,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-88ac55077f383bf9e4ec55546f0f6ffaa4f0bae8",
+      "type": "commit",
+      "ts": "2022-05-28T15:00:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "88ac55077f383bf9e4ec55546f0f6ffaa4f0bae8",
+        "message": "pref(boot_info, plic, dtb): update dtb_init_hart\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 18,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-52fba3237172e8e2e02d9ffd95e21b7e0d57f0b6",
+      "type": "commit",
+      "ts": "2022-05-28T14:50:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "52fba3237172e8e2e02d9ffd95e21b7e0d57f0b6",
+        "message": "feat(plic): add PLIC_M*\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 26,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-dba44d8929b43960a9ba140ac13ec3ac25d23196",
+      "type": "commit",
+      "ts": "2022-05-28T14:04:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "test",
+      "data": {
+        "sha": "dba44d8929b43960a9ba140ac13ec3ac25d23196",
+        "message": "test(vmm): use PMM alloc pa\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-74c3f898004751b862db42fe8540e9fc245a5d78",
+      "type": "commit",
+      "ts": "2022-05-26T16:45:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "74c3f898004751b862db42fe8540e9fc245a5d78",
+        "message": "fix(CPU): vmm update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 17,
+        "deletions": 32
+      }
+    },
+    {
+      "id": "comment-hzcx998/XBook-8-64",
+      "type": "issue_comment",
+      "ts": "2022-05-22T10:08:41Z",
+      "repo": "hzcx998/XBook",
+      "semantic": null,
+      "data": {
+        "issueNumber": 8,
+        "issueTitle": "在 mac 上编译问题",
+        "body": "建议去 xbook2 看看\r\n\r\n2022年5月22日 18:07，27Onion Nebell ***@***.******@***.***>> 写道：\r\n\r\n\r\n\r\n麻烦你了，希望你解决后可以告诉我，这样，以后有其他人在mac上开发就会少很多麻烦。\r\n…<x-msg://4/#>\r\n---原始邮件--- 发件人: ***@***.******@***.***>> 发送时间: 2020年3月10日(星期二) 晚上9:04 收件人: ***@***.******@***.***>>; 抄送: \"State ***@***.******@***.***>>;\"Jason ***@***.******@***.***>>; 主题: Re: [huzichengdevelop/XBook] 在 mac 上编译问题 (#8<https://github.com/hzcx998/XBook/issues/8>) 我记得我当时做过相关调整。。不过记不太清了，这几天有空我再试试 2020年3月10日 下午8:44，Dorbmon ***@***.******@***.******@***.******@***.***>>> 写道： 是不是因为gcc在macos下会自动使用64位模式构建程序？ — You are receiving this because you authored the thread. Reply to this email directly, view it on GitHub<#8<https://github.com/hzcx998/XBook/issues/8>;, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ADC57SUDIMMGYGGF6XOCFY3RGYY2DANCNFSM4KOXFXSA>. — You are receiving this because you modified the open/close state. Reply to this email directly, view it on GitHub, or unsubscribe.\r\n\r\n我在这里坐等macos（M1）的环境配置教程 *摆烂*\r\n\r\n—\r\nReply to this email directly, view it on GitHub<https://github.com/hzcx998/XBook/issues/8#issuecomment-1133862023>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ADC57SRZHELKU4QBB6JOT2DVLIBNLANCNFSM4KOXFXSA>.\r\nYou are receiving this because you modified the open/close state.Message ID: ***@***.***>\r\n\r\n"
+      }
+    },
+    {
+      "id": "comment-EugeneLiu/translationCSAPP-107-65",
+      "type": "issue_comment",
+      "ts": "2022-05-22T07:11:05Z",
+      "repo": "EugeneLiu/translationCSAPP",
+      "semantic": null,
+      "data": {
+        "issueNumber": 107,
+        "issueTitle": "fix translation error ",
+        "body": "@EugeneLiu "
+      }
+    },
+    {
+      "id": "pr-112-gsoc-cn/gsoc-cn",
+      "type": "pull_request",
+      "ts": "2022-05-22T06:52:31Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "number": 112,
+        "title": "Add Haiku org",
+        "state": "merged",
+        "body": "Signed-off-by: Zone.N <Zone.Niuzh@hotmail.com>"
+      }
+    },
+    {
+      "id": "commit-3b091c15fa75b6663a1d87fcf7a5be3a5573d402",
+      "type": "commit",
+      "ts": "2022-05-06T07:17:00Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "3b091c15fa75b6663a1d87fcf7a5be3a5573d402",
+        "message": "add 2022\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 123,
+        "deletions": 0
+      }
+    }
+  ]
+}

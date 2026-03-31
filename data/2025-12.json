@@ -1,0 +1,134 @@
+{
+  "month": "2025-12",
+  "events": [
+    {
+      "id": "commit-972d826d6d5ef033643059e2cd8e0781fd590b04",
+      "type": "commit",
+      "ts": "2025-12-31T03:05:37Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "972d826d6d5ef033643059e2cd8e0781fd590b04",
+        "message": "Delete .vscode/settings.json",
+        "additions": 0,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-439b71c682397f9a7adc00673a6254271aabb2a9",
+      "type": "commit",
+      "ts": "2025-12-31T03:02:48Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "439b71c682397f9a7adc00673a6254271aabb2a9",
+        "message": "feat: v1.0.2\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 13,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-d0462e29904cea5eba7263551ac55b659cd4b0a0",
+      "type": "commit",
+      "ts": "2025-12-30T17:43:53Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": null,
+      "data": {
+        "sha": "d0462e29904cea5eba7263551ac55b659cd4b0a0",
+        "message": "--amend\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-4d59889a7909e5725f54bd99a5a44e414bf8edb4",
+      "type": "commit",
+      "ts": "2025-12-30T17:40:42Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "4d59889a7909e5725f54bd99a5a44e414bf8edb4",
+        "message": "feat: init\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 410,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-478454e12e1957dc80214b55ffdef6227aa40fd9",
+      "type": "commit",
+      "ts": "2025-12-30T15:14:44Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "478454e12e1957dc80214b55ffdef6227aa40fd9",
+        "message": "feat: v1.0.1\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 11,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-031d5bcc5d5bb9c6c44d14acf4a5b14ba8125aeb",
+      "type": "commit",
+      "ts": "2025-12-30T13:57:26Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "031d5bcc5d5bb9c6c44d14acf4a5b14ba8125aeb",
+        "message": "feat: v1.0.2\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 8,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-c57bf6fa9293c48f0aa5b9d69920b98c985626ab",
+      "type": "commit",
+      "ts": "2025-12-30T13:25:30Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "c57bf6fa9293c48f0aa5b9d69920b98c985626ab",
+        "message": "feat: v1.0.1\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 15,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-9f417abad24317dafad12ea8312f7cbebf1ccdb0",
+      "type": "commit",
+      "ts": "2025-12-27T16:14:57Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "9f417abad24317dafad12ea8312f7cbebf1ccdb0",
+        "message": "feat: init\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 705,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-4ba74918664b86f4547693744572948bed9f0e35",
+      "type": "commit",
+      "ts": "2025-12-27T14:43:00Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "4ba74918664b86f4547693744572948bed9f0e35",
+        "message": "feat: init\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 593,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-95979-4",
+      "type": "issue_comment",
+      "ts": "2025-12-24T06:38:34Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 95979,
+        "issueTitle": "boards: Add Xunlong Orange Pi 5 Ultra RK3588",
+        "body": "Friendly ping @mbolivar "
+      }
+    }
+  ]
+}

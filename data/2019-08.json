@@ -1,0 +1,31 @@
+{
+  "month": "2019-08",
+  "events": [
+    {
+      "id": "pr-1024-alibaba/AliOS-Things",
+      "type": "pull_request",
+      "ts": "2019-08-01T07:49:55Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "number": 1024,
+        "title": "Update hal_uart_stm32l4.c",
+        "state": "closed",
+        "body": "fix bug\r\n"
+      }
+    },
+    {
+      "id": "pr-1023-alibaba/AliOS-Things",
+      "type": "pull_request",
+      "ts": "2019-08-01T07:48:42Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "number": 1023,
+        "title": "Update hal_uart_stm32l4.c",
+        "state": "closed",
+        "body": "fix bug\r\n"
+      }
+    }
+  ]
+}

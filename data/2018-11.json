@@ -1,0 +1,168 @@
+{
+  "month": "2018-11",
+  "events": [
+    {
+      "id": "comment-EugeneLiu/translationCSAPP-25-144",
+      "type": "issue_comment",
+      "ts": "2018-11-28T11:23:58Z",
+      "repo": "EugeneLiu/translationCSAPP",
+      "semantic": null,
+      "data": {
+        "issueNumber": 25,
+        "issueTitle": "L ecture08校对完成",
+        "body": "那我把这些都改成 ... 吧"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-34288-145",
+      "type": "issue_comment",
+      "ts": "2018-11-27T08:11:05Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 34288,
+        "issueTitle": "The GNU Project debugger for i386-elf cross development",
+        "body": "Sorry, is this not allowed? I executed the inappropriate git commands, there is a redundant commit to come in, so just reopen one."
+      }
+    },
+    {
+      "id": "comment-EugeneLiu/translationCSAPP-25-146",
+      "type": "issue_comment",
+      "ts": "2018-11-23T02:27:50Z",
+      "repo": "EugeneLiu/translationCSAPP",
+      "semantic": null,
+      "data": {
+        "issueNumber": 25,
+        "issueTitle": "L ecture08校对完成",
+        "body": "@coiby @EugeneLiu "
+      }
+    },
+    {
+      "id": "pr-25-EugeneLiu/translationCSAPP",
+      "type": "pull_request",
+      "ts": "2018-11-23T02:26:44Z",
+      "repo": "EugeneLiu/translationCSAPP",
+      "semantic": null,
+      "data": {
+        "number": 25,
+        "title": "L ecture08校对完成",
+        "state": "merged",
+        "body": "- 107  structures or structs -> structures or struck youtobe字母上是 struck\r\n\r\n- 诸如 {\\s1} 等标记需不需要在中文里面出现，比如\r\n\tline 150 151\r\n\t\t`{\\s1}然后我们将{\\s0}该声明实际上做两件事`\r\n\tline 557 558\r\n\t\t`同时，你也正在创建一个允许在指针运算使用的数组名称`\r\n\r\n\r\n- 从 531 开始的关于 An 的讨论，老师说的到底是 A1 A[1] 还是啥别的不是很清楚，这里得留意下\r\n\r\n- 文中关于 scale 的翻译，我全给改成缩放了，如果有不合适的请指出\r\n\r\n- 中文里数字用汉字还是阿拉伯需要统一，或者是有一个规范，比如一位数用汉字，两位数及以上用阿拉伯数字 etc.\r\n\r\n\t例如 \r\n\tline 121\r\n\t\t`那么，要创建一个有 12 个字符的数组需要 12 个字节`\r\n\tline 123\r\n\t\t`而整型需要四个字节，因此具有五个整数的数组需要 20 个字节`\r\n\tline 131 \r\n\t\t`双精度或长整数则是八个字节，指针也是八个字节`\r\n"
+      }
+    },
+    {
+      "id": "comment-EugeneLiu/translationCSAPP-24-147",
+      "type": "issue_comment",
+      "ts": "2018-11-21T11:07:33Z",
+      "repo": "EugeneLiu/translationCSAPP",
+      "semantic": null,
+      "data": {
+        "issueNumber": 24,
+        "issueTitle": "Lecture 08 Machine Level Programming IV Data.ass",
+        "body": "申请校对 @EugeneLiu "
+      }
+    },
+    {
+      "id": "comment-EugeneLiu/translationCSAPP-23-148",
+      "type": "issue_comment",
+      "ts": "2018-11-21T09:23:04Z",
+      "repo": "EugeneLiu/translationCSAPP",
+      "semantic": null,
+      "data": {
+        "issueNumber": 23,
+        "issueTitle": "Lecture 07 Machine Level Programming III Procedures.ass",
+        "body": "申请校对 @EugeneLiu \r\n"
+      }
+    },
+    {
+      "id": "pr-247-haiku/website",
+      "type": "pull_request",
+      "ts": "2018-11-20T04:05:09Z",
+      "repo": "haiku/website",
+      "semantic": null,
+      "data": {
+        "number": 247,
+        "title": "Pre reqs: homebrew/dupes/less->less",
+        "state": "merged",
+        "body": "At https://www.haiku-os.org/guides/building/pre-reqs, OS X\r\n\r\n    brew install autoconf cdrtools gawk wget nasm homebrew/dupes/less mpfr gmp libmpc bison mtools\r\n\r\n`homebrew/dupes/less` seems to be no longer usable, here is brew's log\r\n\r\n    Error: homebrew/dupes was deprecated. This tap is now empty as all its formulae were migrated.\r\n\r\nI use `brew install less` to install `less`."
+      }
+    },
+    {
+      "id": "pr-34288-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2018-11-19T09:26:17Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 34288,
+        "title": "The GNU Project debugger for i386-elf cross development",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    },
+    {
+      "id": "pr-34059-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2018-11-14T16:23:17Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 34059,
+        "title": "The GNU Project debugger for i386-elf cross development",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    },
+    {
+      "id": "pr-34055-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2018-11-14T13:26:30Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 34055,
+        "title": "I386 elf gdb",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    },
+    {
+      "id": "commit-08d28194de44bf276e4ee3fbd249830a596c1293",
+      "type": "commit",
+      "ts": "2018-11-14T13:09:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "08d28194de44bf276e4ee3fbd249830a596c1293",
+        "message": "change CFLAGS",
+        "additions": 4,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-11d74f85a30fba368deec891ba394483a4d8d5cf",
+      "type": "commit",
+      "ts": "2018-11-12T16:40:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "11d74f85a30fba368deec891ba394483a4d8d5cf",
+        "message": "update cross compiler install method",
+        "additions": 3,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "comment-ApolloZhu/Dynamic-Dark-Mode-36-149",
+      "type": "issue_comment",
+      "ts": "2018-11-01T03:50:57Z",
+      "repo": "ApolloZhu/Dynamic-Dark-Mode",
+      "semantic": null,
+      "data": {
+        "issueNumber": 36,
+        "issueTitle": "[Simplified Chinese Translation] toggle 的翻译",
+        "body": "我觉得还是明确一些比较好。\r\n\r\n比如 `切换至深色模式` `切换至浅色模式`，或者干脆用 `深色模式` `浅色模式`，这样不会引起误会，你觉得咋样？\r\n\r\n另外这个小插件挺好用的，非常感谢。"
+      }
+    }
+  ]
+}

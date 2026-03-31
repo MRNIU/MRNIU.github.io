@@ -1,0 +1,299 @@
+{
+  "month": "2018-10",
+  "events": [
+    {
+      "id": "issue-36-ApolloZhu/Dynamic-Dark-Mode",
+      "type": "issue",
+      "ts": "2018-10-31T14:41:13Z",
+      "repo": "ApolloZhu/Dynamic-Dark-Mode",
+      "semantic": null,
+      "data": {
+        "number": 36,
+        "title": "[Simplified Chinese Translation] toggle 的翻译",
+        "state": "closed",
+        "body": "In the dark mode, the taskbar switching option is still \"switch to dark mode\".\r\n\r\n![2018-10-31 10 30 26](https://user-images.githubusercontent.com/12967882/47795767-0b3cd300-dd5e-11e8-832e-f0d0476d3681.png)\r\n"
+      }
+    },
+    {
+      "id": "commit-f0fce089fde995229ba4bb8f5f68bc0c4aa5126e",
+      "type": "commit",
+      "ts": "2018-10-30T17:26:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f0fce089fde995229ba4bb8f5f68bc0c4aa5126e",
+        "message": "update travis config",
+        "additions": 1,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-1b6f0ca22e3fc6785d273ec4f0efba8c826805cd",
+      "type": "commit",
+      "ts": "2018-10-30T12:18:30Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "1b6f0ca22e3fc6785d273ec4f0efba8c826805cd",
+        "message": "init.",
+        "additions": 13,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-2745ebbb3bcfcb5ae197636d5b3e819b15423782",
+      "type": "commit",
+      "ts": "2018-10-30T12:12:21Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "2745ebbb3bcfcb5ae197636d5b3e819b15423782",
+        "message": "Initial commit",
+        "additions": 55,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "pr-33504-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2018-10-30T11:11:59Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 33504,
+        "title": "I386 elf compilers",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n@fxcoudert \r\nI submitted a PR before https://github.com/Homebrew/homebrew-core/pull/33299, But it was accidentally closed by me...\r\n"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-33299-150",
+      "type": "issue_comment",
+      "ts": "2018-10-30T10:39:37Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 33299,
+        "issueTitle": "I386-elf cross compilers",
+        "body": "But I committed nothing..."
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-33299-151",
+      "type": "issue_comment",
+      "ts": "2018-10-30T10:25:22Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 33299,
+        "issueTitle": "I386-elf cross compilers",
+        "body": "Sorry, I accidentally closed this PR.. I will open a new one.😭"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-33299-152",
+      "type": "issue_comment",
+      "ts": "2018-10-30T03:44:28Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 33299,
+        "issueTitle": "I386-elf cross compilers",
+        "body": "@fxcoudert  Fixed, thank you."
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-33299-153",
+      "type": "issue_comment",
+      "ts": "2018-10-28T16:15:43Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 33299,
+        "issueTitle": "I386-elf cross compilers",
+        "body": "I've noticed that `jenkins` did not install `i386-elf-binutil` when testing, so we could not use\r\n\r\n    assert_match \"file format elf32-i386\", shell_output(\"#{Formula[\"i386-elf-binutils\"].bin}/i386-elf-objdump -a test-c.o\")\r\n\r\nfor testing, although it work well on my Mac. Is there any way to specify that `i386-elf-binutils` is necessary during the test? The `i386-elf-binutils` and `i386-elf-gcc` are in this PR. Or should I open PR separately for them?"
+      }
+    },
+    {
+      "id": "commit-abd8d624d7371aa577a52e445dad078a9e938c40",
+      "type": "commit",
+      "ts": "2018-10-27T03:54:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "abd8d624d7371aa577a52e445dad078a9e938c40",
+        "message": "update",
+        "additions": 0,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-aec6f1616bc42b0570b4b1c6c67884e3592be07c",
+      "type": "commit",
+      "ts": "2018-10-26T16:04:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "aec6f1616bc42b0570b4b1c6c67884e3592be07c",
+        "message": "update",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-705aa4d1897819e4061f64835e68bab998b770b9",
+      "type": "commit",
+      "ts": "2018-10-26T14:27:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "705aa4d1897819e4061f64835e68bab998b770b9",
+        "message": "update",
+        "additions": 0,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-70e5d332f0c62454412aa4fef3ee26a575d65512",
+      "type": "commit",
+      "ts": "2018-10-26T14:05:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "70e5d332f0c62454412aa4fef3ee26a575d65512",
+        "message": "update",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-cf0cc126e45d550e51d0bc28b7e17cf3502c3089",
+      "type": "commit",
+      "ts": "2018-10-26T13:57:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cf0cc126e45d550e51d0bc28b7e17cf3502c3089",
+        "message": "init",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-8edab2fd3cfaa3821892e654c7d7a3436e514d14",
+      "type": "commit",
+      "ts": "2018-10-26T13:30:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8edab2fd3cfaa3821892e654c7d7a3436e514d14",
+        "message": "init",
+        "additions": 4,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-1be6d081c6877635066c4eabf9bde3a0b85b94f6",
+      "type": "commit",
+      "ts": "2018-10-26T12:57:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "1be6d081c6877635066c4eabf9bde3a0b85b94f6",
+        "message": "init",
+        "additions": 4,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-33b82cacdfc2a722a5b0a24a4da476725fac59bf",
+      "type": "commit",
+      "ts": "2018-10-26T11:48:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "33b82cacdfc2a722a5b0a24a4da476725fac59bf",
+        "message": "Update travis config",
+        "additions": 7,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-ca87d55aa636fd6923bccb9a27e0aa815942fb62",
+      "type": "commit",
+      "ts": "2018-10-26T11:27:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ca87d55aa636fd6923bccb9a27e0aa815942fb62",
+        "message": "Update travis config",
+        "additions": 9,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-8cfa31e3a8ffbfab394be38e1e786e074c4b5348",
+      "type": "commit",
+      "ts": "2018-10-26T11:19:54Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8cfa31e3a8ffbfab394be38e1e786e074c4b5348",
+        "message": "Update travis config file.",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-d4b9deeccaf6f0713c5fb360c65a1691b2ec0f45",
+      "type": "commit",
+      "ts": "2018-10-26T11:14:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d4b9deeccaf6f0713c5fb360c65a1691b2ec0f45",
+        "message": "Add Travis CI init.",
+        "additions": 79,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-926b4ebb606431aa7cd9f2b565796c88981c775b",
+      "type": "commit",
+      "ts": "2018-10-26T09:33:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "926b4ebb606431aa7cd9f2b565796c88981c775b",
+        "message": "Update.",
+        "additions": 0,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-33299-154",
+      "type": "issue_comment",
+      "ts": "2018-10-23T17:45:32Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 33299,
+        "issueTitle": "I386-elf cross compilers",
+        "body": "@fxcoudert Fixed. I am new here, If I have anything wrong, please point out, thank you very much.\r\n"
+      }
+    },
+    {
+      "id": "pr-33299-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2018-10-23T10:44:29Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 33299,
+        "title": "I386-elf cross compilers",
+        "state": "merged",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    }
+  ]
+}

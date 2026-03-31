@@ -1,0 +1,70 @@
+{
+  "month": "2025-11",
+  "events": [
+    {
+      "id": "commit-debf249143729b530afed99d4f1c601dcd117420",
+      "type": "commit",
+      "ts": "2025-11-24T06:01:23Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "fix",
+      "data": {
+        "sha": "debf249143729b530afed99d4f1c601dcd117420",
+        "message": "fix: aarch64 vmm\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-4f7443c544adb3f1a806be93916d0e36b2bf52b3",
+      "type": "commit",
+      "ts": "2025-11-19T09:03:05Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "fix",
+      "data": {
+        "sha": "4f7443c544adb3f1a806be93916d0e36b2bf52b3",
+        "message": "fix: update GetKernelPagePermissions exe premission\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 29,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-1af557c7ad435fce803afb68da5f8a2921b268fe",
+      "type": "commit",
+      "ts": "2025-11-19T08:59:05Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "fix",
+      "data": {
+        "sha": "1af557c7ad435fce803afb68da5f8a2921b268fe",
+        "message": "fix: update GetKernelPagePermissions exe premission\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-326e61fb3c32314d3803088486975993ec2f615e",
+      "type": "commit",
+      "ts": "2025-11-18T08:02:19Z",
+      "repo": "MRNIU/bmalloc",
+      "semantic": "feat",
+      "data": {
+        "sha": "326e61fb3c32314d3803088486975993ec2f615e",
+        "message": "feat: bump\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 120,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-11ec521c9e39c87aaa6d54f78b81edbb3e100dd3",
+      "type": "commit",
+      "ts": "2025-11-18T05:19:05Z",
+      "repo": "MRNIU/bmalloc",
+      "semantic": "feat",
+      "data": {
+        "sha": "11ec521c9e39c87aaa6d54f78b81edbb3e100dd3",
+        "message": "feat: new buddy_alloc version\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    }
+  ]
+}

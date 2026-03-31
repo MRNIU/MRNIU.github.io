@@ -1,0 +1,96 @@
+{
+  "month": "2018-09",
+  "events": [
+    {
+      "id": "commit-61b1290a382192572b1b04328a40879a010ae5a7",
+      "type": "commit",
+      "ts": "2018-09-26T05:43:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "61b1290a382192572b1b04328a40879a010ae5a7",
+        "message": "delete some useless file",
+        "additions": 0,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-8b28ef930bd2b34795810c422b5a5646198042e5",
+      "type": "commit",
+      "ts": "2018-09-26T05:41:55Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8b28ef930bd2b34795810c422b5a5646198042e5",
+        "message": "change ignore rule",
+        "additions": 5,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-4520fcfb09b0b6036d95f2beaea4d426278566a9",
+      "type": "commit",
+      "ts": "2018-09-26T05:38:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4520fcfb09b0b6036d95f2beaea4d426278566a9",
+        "message": " add ignore rule",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-ac0be12cf06ea8b1aba23636fdc96c351c621aae",
+      "type": "commit",
+      "ts": "2018-09-24T15:06:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ac0be12cf06ea8b1aba23636fdc96c351c621aae",
+        "message": "正在解决 GP 错误，脑壳疼",
+        "additions": 61,
+        "deletions": 133
+      }
+    },
+    {
+      "id": "commit-2d8a030c578fbf0b2e2a6b6b9a1b6a6e3c0084e6",
+      "type": "commit",
+      "ts": "2018-09-24T12:05:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2d8a030c578fbf0b2e2a6b6b9a1b6a6e3c0084e6",
+        "message": "找到键盘中断不响应的原因：把 IRQ1 错写成了 IRQ0",
+        "additions": 16,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-0937a9a85fc1dd5e828f510690ad57874dccc050",
+      "type": "commit",
+      "ts": "2018-09-20T11:23:00Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0937a9a85fc1dd5e828f510690ad57874dccc050",
+        "message": "添加了 eflags 寄存器状态判断的相关函数。现在 debug() isr 基本可用，还没有测试过。die() 函数基本可用，只能保证eflags显示正确，其余未测试",
+        "additions": 174,
+        "deletions": 46
+      }
+    },
+    {
+      "id": "commit-17e439aee79ac0ead9e1485833af4dfbaf05ab18",
+      "type": "commit",
+      "ts": "2018-09-20T05:45:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "17e439aee79ac0ead9e1485833af4dfbaf05ab18",
+        "message": "目前可以响应键盘中断，但出现 GP，尝试修复 die()，方便调试",
+        "additions": 81,
+        "deletions": 152
+      }
+    }
+  ]
+}

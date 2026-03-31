@@ -1,0 +1,209 @@
+{
+  "month": "2020-04",
+  "events": [
+    {
+      "id": "comment-arduino-libraries/Keyboard-35-98",
+      "type": "issue_comment",
+      "ts": "2020-04-24T06:56:45Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35,
+        "issueTitle": "Refer to HID to improve the code",
+        "body": "@PaulStoffregen Already remove those codes.\r\n@per1234 I will rewrite the keymap, which will take a few days, Thank you."
+      }
+    },
+    {
+      "id": "comment-arduino-libraries/Keyboard-35-99",
+      "type": "issue_comment",
+      "ts": "2020-04-23T04:58:33Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35,
+        "issueTitle": "Refer to HID to improve the code",
+        "body": "I am so sorry for that, please excuse my carelessness.\r\n\r\nI have added those information and submitted an [issue](https://github.com/NicoHood/HID/issues/216) for update the credits info.\r\n\r\nApologize to you again @PaulStoffregen "
+      }
+    },
+    {
+      "id": "issue-216-NicoHood/HID",
+      "type": "issue",
+      "ts": "2020-04-23T04:21:08Z",
+      "repo": "NicoHood/HID",
+      "semantic": null,
+      "data": {
+        "number": 216,
+        "title": "Update the Copyright info",
+        "state": "closed",
+        "body": "I noticed that the copyright information was not updated:\r\n`See the readme for credit to other people.`\r\nBut the information is actually here: [Useful-Links-Credits](https://github.com/NicoHood/HID/wiki/Useful-Links-Credits).\r\nCan I replace this sentence with `See the wiki/Useful-Links-Credits for credit to other people.`?"
+      }
+    },
+    {
+      "id": "comment-arduino-libraries/Keyboard-35-100",
+      "type": "issue_comment",
+      "ts": "2020-04-23T03:36:20Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35,
+        "issueTitle": "Refer to HID to improve the code",
+        "body": "I apologize if any infringement, but I had add the README file [here](https://github.com/MRNIU/Keyboard/blob/sync_with_HID/src/KeyboardLayouts/README.adoc).\r\n\r\nAbout keyboard layouts, they are copy from [NicoHood/HID](https://github.com/NicoHood/HID/tree/master/src/KeyboardLayouts) with few changes, not from Teensy."
+      }
+    },
+    {
+      "id": "comment-arduino-libraries/Keyboard-35-101",
+      "type": "issue_comment",
+      "ts": "2020-04-20T17:24:53Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35,
+        "issueTitle": "Refer to HID to improve the code",
+        "body": "I do not currently have an Arduino Leonardo available, and I will solve this problem in the next few days."
+      }
+    },
+    {
+      "id": "commit-466fcdc6e45a19a15f1f951fb61f7581b13652e7",
+      "type": "commit",
+      "ts": "2020-04-07T10:33:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "466fcdc6e45a19a15f1f951fb61f7581b13652e7",
+        "message": "Add sync",
+        "additions": 513,
+        "deletions": 384
+      }
+    },
+    {
+      "id": "commit-4e82094446afcfe3e028f3246566c593f6cd21ae",
+      "type": "commit",
+      "ts": "2020-04-07T06:21:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "4e82094446afcfe3e028f3246566c593f6cd21ae",
+        "message": "Merge into TODO",
+        "additions": 78,
+        "deletions": 187
+      }
+    },
+    {
+      "id": "commit-1ecaac94325e2c9185698049d2ce43fa7c3ccec6",
+      "type": "commit",
+      "ts": "2020-04-07T05:53:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "1ecaac94325e2c9185698049d2ce43fa7c3ccec6",
+        "message": "Update devlog",
+        "additions": 3,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-76b394bc907b41728c1f80faad79ef5c77e324c2",
+      "type": "commit",
+      "ts": "2020-04-07T05:42:16Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "76b394bc907b41728c1f80faad79ef5c77e324c2",
+        "message": "task_test finished",
+        "additions": 15,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-897c7fed5a71b2c7d28742f28206f006bcbdfc0c",
+      "type": "commit",
+      "ts": "2020-04-07T05:30:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "897c7fed5a71b2c7d28742f28206f006bcbdfc0c",
+        "message": "Update .gitignore",
+        "additions": 5,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-952b2ee4b3dca3df1df74dbc735bf6ff97af09ff",
+      "type": "commit",
+      "ts": "2020-04-06T14:03:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "952b2ee4b3dca3df1df74dbc735bf6ff97af09ff",
+        "message": "Update",
+        "additions": 13,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-cb4c25dc0b8df7d3952df1b2f35828b88e7cf647",
+      "type": "commit",
+      "ts": "2020-04-06T13:55:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cb4c25dc0b8df7d3952df1b2f35828b88e7cf647",
+        "message": "Add",
+        "additions": 67,
+        "deletions": 30
+      }
+    },
+    {
+      "id": "commit-bb3db6e5f68168ceb025b87b67e67b32565b0d5d",
+      "type": "commit",
+      "ts": "2020-04-06T12:32:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bb3db6e5f68168ceb025b87b67e67b32565b0d5d",
+        "message": "Add a sorts of debug functions",
+        "additions": 119,
+        "deletions": 28
+      }
+    },
+    {
+      "id": "commit-feb54a9a565a92f5f7722579e2d6a9407db044ae",
+      "type": "commit",
+      "ts": "2020-04-06T12:03:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "feb54a9a565a92f5f7722579e2d6a9407db044ae",
+        "message": "Add",
+        "additions": 53,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-5dfcab356007450d1eeecc479839ff779df77c10",
+      "type": "commit",
+      "ts": "2020-04-06T11:40:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5dfcab356007450d1eeecc479839ff779df77c10",
+        "message": "Update",
+        "additions": 43,
+        "deletions": 40
+      }
+    },
+    {
+      "id": "commit-17e5cda378751709a46b78521a60619c085130f9",
+      "type": "commit",
+      "ts": "2020-04-06T11:00:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "17e5cda378751709a46b78521a60619c085130f9",
+        "message": "Update",
+        "additions": 17,
+        "deletions": 13
+      }
+    }
+  ]
+}

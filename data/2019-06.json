@@ -1,0 +1,53 @@
+{
+  "month": "2019-06",
+  "events": [
+    {
+      "id": "comment-Simple-XX/SimpleKernel-17-122",
+      "type": "issue_comment",
+      "ts": "2019-06-02T11:46:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 17,
+        "issueTitle": "运行不起来啊",
+        "body": "😂\r\n好的，谢谢你"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-17-123",
+      "type": "issue_comment",
+      "ts": "2019-06-02T02:49:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 17,
+        "issueTitle": "运行不起来啊",
+        "body": "按你的描述来看，是复制文件这一步出错了。\r\n这里的逻辑是把 disk 挂载到 folder 上，然后把 img 复制进去，你可以 用 set -x 看看哪一步出错了。\r\nps: 可能需要 sudo 权限"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-17-124",
+      "type": "issue_comment",
+      "ts": "2019-06-01T13:31:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 17,
+        "issueTitle": "运行不起来啊",
+        "body": "你好，我刚刚在 manjaro 上测试过，没有发现你遇到的问题，请问有兴趣解决这个问题吗？"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-17-125",
+      "type": "issue_comment",
+      "ts": "2019-06-01T09:11:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 17,
+        "issueTitle": "运行不起来啊",
+        "body": "请问可以提供详细的运行环境吗"
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "month": "2023-12",
+  "events": [
+    {
+      "id": "commit-14b0a67dc01f8c629af43b9bc5aab8386623f0ce",
+      "type": "commit",
+      "ts": "2023-12-21T09:51:31Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "14b0a67dc01f8c629af43b9bc5aab8386623f0ce",
+        "message": "update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 35,
+        "deletions": 284
+      }
+    },
+    {
+      "id": "commit-78473cac00b336fc0f6bbb909c47589e11853e1d",
+      "type": "commit",
+      "ts": "2023-12-20T16:06:17Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "78473cac00b336fc0f6bbb909c47589e11853e1d",
+        "message": "update\n\nSigned-off-by: Zone.N <Zone.NiuZH@hotmail.com>",
+        "additions": 222,
+        "deletions": 768
+      }
+    },
+    {
+      "id": "commit-e3dad3e8acc8356fe32ce89e41e7c857434bfc95",
+      "type": "commit",
+      "ts": "2023-12-20T13:28:35Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "e3dad3e8acc8356fe32ce89e41e7c857434bfc95",
+        "message": "add https://github.com/hijiangtao/resume\n\nSigned-off-by: Zone.N <Zone.NiuZH@hotmail.com>",
+        "additions": 1083,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-64353dcf869b09cedd52a5daca16a6398330432e",
+      "type": "commit",
+      "ts": "2023-12-20T10:32:52Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "64353dcf869b09cedd52a5daca16a6398330432e",
+        "message": "update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 98,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "pr-8-Simple-XX/SimpleGameEngine",
+      "type": "pull_request",
+      "ts": "2023-12-13T02:35:39Z",
+      "repo": "Simple-XX/SimpleGameEngine",
+      "semantic": null,
+      "data": {
+        "number": 8,
+        "title": "on going: render as a lib",
+        "state": "closed",
+        "body": ""
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimplePhysicsEngine-25-23",
+      "type": "issue_comment",
+      "ts": "2023-12-13T01:35:05Z",
+      "repo": "Simple-XX/SimplePhysicsEngine",
+      "semantic": null,
+      "data": {
+        "issueNumber": 25,
+        "issueTitle": "整理 dtk.h 中缺失的头文件",
+        "body": "在 https://github.com/Deformable-Toolkit/dtk 中也没有找到"
+      }
+    },
+    {
+      "id": "comment-bkaradzic/bgfx.cmake-archived-218-24",
+      "type": "issue_comment",
+      "ts": "2023-12-02T10:14:35Z",
+      "repo": "bkaradzic/bgfx.cmake-archived",
+      "semantic": null,
+      "data": {
+        "issueNumber": 218,
+        "issueTitle": "Add direct3d shaderc support on linux",
+        "body": "It seems that shaderc where not support d3d on linux yet(`SHADERC_CONFIG_HLSL` is false, shaderc.h#L15). Maybe we should take up this issue?"
+      }
+    }
+  ]
+}

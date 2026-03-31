@@ -1,0 +1,291 @@
+{
+  "month": "2021-08",
+  "events": [
+    {
+      "id": "commit-a6c58e2b78a72b1a37f1073a9aaf07f30b39cd1d",
+      "type": "commit",
+      "ts": "2021-08-27T09:21:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a6c58e2b78a72b1a37f1073a9aaf07f30b39cd1d",
+        "message": "pref(resource): update cout\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-9b3902b94e31dd9c2dc09539117c5eed752bd137",
+      "type": "commit",
+      "ts": "2021-08-27T09:14:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9b3902b94e31dd9c2dc09539117c5eed752bd137",
+        "message": "pref(resource): update cout\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-15eff53c14ab51362e05b67aa3c04c0b5002ae84",
+      "type": "commit",
+      "ts": "2021-08-27T09:07:38Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "15eff53c14ab51362e05b67aa3c04c0b5002ae84",
+        "message": "feat(dtb): find_via_prefix\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 52,
+        "deletions": 29
+      }
+    },
+    {
+      "id": "commit-8678a6a0edd0a30e1643f4e86ba35f31a9a69976",
+      "type": "commit",
+      "ts": "2021-08-27T07:29:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8678a6a0edd0a30e1643f4e86ba35f31a9a69976",
+        "message": "pref(gdt): prinrf->info\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-aa875932b625fb7f25279b0f3db6cc7e264868ae",
+      "type": "commit",
+      "ts": "2021-08-27T07:26:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "aa875932b625fb7f25279b0f3db6cc7e264868ae",
+        "message": "pref(dtb): change find\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 35,
+        "deletions": 37
+      }
+    },
+    {
+      "id": "commit-88e663bf1c13f3b2a8cc6668506b09fbcf4a85b9",
+      "type": "commit",
+      "ts": "2021-08-15T15:32:03Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": "docs",
+      "data": {
+        "sha": "88e663bf1c13f3b2a8cc6668506b09fbcf4a85b9",
+        "message": "docs(README): add usage; comment(*): update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 10,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-c4d80407758b73c2b2f357afc21bffc1f6d1bec0",
+      "type": "commit",
+      "ts": "2021-08-15T15:32:03Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": "refactor",
+      "data": {
+        "sha": "c4d80407758b73c2b2f357afc21bffc1f6d1bec0",
+        "message": "refactor(*): remove redundant files, change to cmake\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
+        "additions": 2119,
+        "deletions": 3866
+      }
+    },
+    {
+      "id": "commit-767b05acdc234e9a55dc75f5454ebf6eff252744",
+      "type": "commit",
+      "ts": "2021-08-15T15:32:03Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "767b05acdc234e9a55dc75f5454ebf6eff252744",
+        "message": "update",
+        "additions": 310,
+        "deletions": 51
+      }
+    },
+    {
+      "id": "commit-f8abf259b2a39e5f6b088cdcc0169c5aacb64094",
+      "type": "commit",
+      "ts": "2021-08-04T03:23:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f8abf259b2a39e5f6b088cdcc0169c5aacb64094",
+        "message": "pref(intr): move timer after clint and plic\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 3,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-bef35193ece4012beb9b20ba0c151ec9f5c07a73",
+      "type": "commit",
+      "ts": "2021-08-04T03:20:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "bef35193ece4012beb9b20ba0c151ec9f5c07a73",
+        "message": "fix(dtb): use parent node\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 7,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-1dfc192c5997cb39107767ca328cc6a88d3d453b",
+      "type": "commit",
+      "ts": "2021-08-03T18:36:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "1dfc192c5997cb39107767ca328cc6a88d3d453b",
+        "message": "feat(dtb): add inited\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 25,
+        "deletions": 14
+      }
+    },
+    {
+      "id": "commit-1f903a27f35f7ebdfda395f6a1b58faf3431dcab",
+      "type": "commit",
+      "ts": "2021-08-03T18:29:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "1f903a27f35f7ebdfda395f6a1b58faf3431dcab",
+        "message": "docs(README): update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-efcbb3f601a3c940513dda0777dcd1ea0d2e7901",
+      "type": "commit",
+      "ts": "2021-08-03T18:21:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "efcbb3f601a3c940513dda0777dcd1ea0d2e7901",
+        "message": "pref(dtb): add find()\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 169,
+        "deletions": 88
+      }
+    },
+    {
+      "id": "issue-4-Simple-XX/SimpleCompiler",
+      "type": "issue",
+      "ts": "2021-08-03T04:30:29Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "number": 4,
+        "title": "osx 的编译出错",
+        "state": "closed",
+        "body": "分支：parser\r\n系统：osx\r\n描述：按照 README 执行 `cmake ..` `make` 后出错\r\n\r\n```\r\n[  9%] Building CXX object src/CMakeFiles/SimpleCompiler.dir/init.cpp.o\r\n[ 18%] Building CXX object src/CMakeFiles/SimpleCompiler.dir/main.cpp.o\r\nIn file included from /Users/nzh/Documents/Simple-XX/SimpleCompiler/src/main.cpp:10:\r\nIn file included from /Users/nzh/Documents/Simple-XX/SimpleCompiler/src/include/common.h:14:\r\n/Users/nzh/Documents/Simple-XX/SimpleCompiler/src/include/parser.h:15:10: fatal error: 'bits/stdc++.h' file not found\r\n#include <bits/stdc++.h>\r\n         ^~~~~~~~~~~~~~~\r\n1 error generated.\r\nmake[2]: *** [src/CMakeFiles/SimpleCompiler.dir/main.cpp.o] Error 1\r\nmake[1]: *** [src/CMakeFiles/SimpleCompiler.dir/all] Error 2\r\nmake: *** [all] Error 2\r\n```"
+      }
+    },
+    {
+      "id": "commit-ac226cbc5011eb54635cdc04f9e33630c553257a",
+      "type": "commit",
+      "ts": "2021-08-02T05:01:33Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "ac226cbc5011eb54635cdc04f9e33630c553257a",
+        "message": "fix(dtb): re init\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-c8850edb65091fc4f287b5aea8ac402ef965423b",
+      "type": "commit",
+      "ts": "2021-08-02T04:30:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c8850edb65091fc4f287b5aea8ac402ef965423b",
+        "message": "pref(*): change printf color\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 7,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-242d70780500f1935d78cd7da29072c7b5ee6cd5",
+      "type": "commit",
+      "ts": "2021-08-02T04:29:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "242d70780500f1935d78cd7da29072c7b5ee6cd5",
+        "message": "pref(*): change printf color\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-bc79f4f7c82c00269bdab210f725ef6a538980b2",
+      "type": "commit",
+      "ts": "2021-08-02T04:28:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bc79f4f7c82c00269bdab210f725ef6a538980b2",
+        "message": "pref(*): change printf color\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 5,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-4cef7bf310e7a2597e3c72891ab30f69e66ea79d",
+      "type": "commit",
+      "ts": "2021-08-02T04:25:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "4cef7bf310e7a2597e3c72891ab30f69e66ea79d",
+        "message": "fix(dtb): set dtb total size\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-dbc22337341a090e37b4ec4a8638789aefa6cdc0",
+      "type": "commit",
+      "ts": "2021-08-02T04:18:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "dbc22337341a090e37b4ec4a8638789aefa6cdc0",
+        "message": "preff(dtb): get mem info automatically\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 37,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "commit-4ea201479b564f1062515cdd97fe5f2d6aa0c083",
+      "type": "commit",
+      "ts": "2021-08-01T17:30:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4ea201479b564f1062515cdd97fe5f2d6aa0c083",
+        "message": "refeactor(dtb): done\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 315,
+        "deletions": 262
+      }
+    },
+    {
+      "id": "commit-2be5c8b8747566d59f46bf1fc7058b6e037ad3c9",
+      "type": "commit",
+      "ts": "2021-08-01T12:20:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2be5c8b8747566d59f46bf1fc7058b6e037ad3c9",
+        "message": "refeactor(dtb): working on dtv\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 570,
+        "deletions": 112
+      }
+    }
+  ]
+}

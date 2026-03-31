@@ -1,0 +1,268 @@
+{
+  "month": "2020-05",
+  "events": [
+    {
+      "id": "comment-arduino/summer-of-code-76-88",
+      "type": "issue_comment",
+      "ts": "2020-05-23T06:16:43Z",
+      "repo": "arduino/summer-of-code",
+      "semantic": null,
+      "data": {
+        "issueNumber": 76,
+        "issueTitle": "Gsoc2020: port FreeRTOS to Portenta",
+        "body": "I am Zone233.\r\nLooking forward to your message.\r\n\r\n在 2020年5月23日，13:43，Ashutosh Pandey <notifications@github.com> 写道：\r\n\r\n﻿\r\n\r\nYeah sure!\r\n\r\nI'm Ashu_tosh_Pandey (username) on Telegram.\r\n\r\n—\r\nYou are receiving this because you are subscribed to this thread.\r\nReply to this email directly, view it on GitHub<https://github.com/arduino/summer-of-code/issues/76#issuecomment-632989663>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ADC57SXH3KXQKV2FNO7QPILRS5O75ANCNFSM4LFROE6A>.\r\n"
+      }
+    },
+    {
+      "id": "comment-arduino/summer-of-code-76-89",
+      "type": "issue_comment",
+      "ts": "2020-05-23T05:06:24Z",
+      "repo": "arduino/summer-of-code",
+      "semantic": null,
+      "data": {
+        "issueNumber": 76,
+        "issueTitle": "Gsoc2020: port FreeRTOS to Portenta",
+        "body": "@AshutoshPandey123456 \nSame to you.\nMaybe we can exchange telegram?"
+      }
+    },
+    {
+      "id": "commit-4d239fd520269d478ec3935b126d7f0c6f41dca0",
+      "type": "commit",
+      "ts": "2020-05-22T09:13:49Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "4d239fd520269d478ec3935b126d7f0c6f41dca0",
+        "message": "Add email",
+        "additions": 4,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-9b18ad5ac94bcc954082cbb6a628c945d30f3da8",
+      "type": "commit",
+      "ts": "2020-05-19T08:53:59Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "9b18ad5ac94bcc954082cbb6a628c945d30f3da8",
+        "message": "Update",
+        "additions": 218,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-197d919bc7f8306fe1c6b100b08af2f459e5c999",
+      "type": "commit",
+      "ts": "2020-05-15T01:23:10Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "197d919bc7f8306fe1c6b100b08af2f459e5c999",
+        "message": "Add proposal template",
+        "additions": 27,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-2e626a0b892b621c5eef74183411760c9b759eef",
+      "type": "commit",
+      "ts": "2020-05-14T07:18:48Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "2e626a0b892b621c5eef74183411760c9b759eef",
+        "message": "Initial commit",
+        "additions": 727,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-8633a15110e792a093613d1d8924d3f8adc04721",
+      "type": "commit",
+      "ts": "2020-05-14T00:25:54Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "8633a15110e792a093613d1d8924d3f8adc04721",
+        "message": "init",
+        "additions": 45,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-01a6f6bd2acf4b355762742b8440f4b84d16580e",
+      "type": "commit",
+      "ts": "2020-05-14T00:10:58Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "01a6f6bd2acf4b355762742b8440f4b84d16580e",
+        "message": "init",
+        "additions": 137,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-6797242787cd2880a658df7b12c9384b06cb6eee",
+      "type": "commit",
+      "ts": "2020-05-13T23:23:58Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "6797242787cd2880a658df7b12c9384b06cb6eee",
+        "message": "Initial commit",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "comment-arduino-libraries/Keyboard-35-90",
+      "type": "issue_comment",
+      "ts": "2020-05-08T16:04:44Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35,
+        "issueTitle": "Refer to HID to improve the code",
+        "body": "@per1234 ,\r\nHi, I thought about it for a few days, checked the code of NicoHood/HID, and found that moving it here does not seem to make much sense.\r\nSo I just refactored the code. Hope this is useful."
+      }
+    },
+    {
+      "id": "comment-arduino/summer-of-code-76-91",
+      "type": "issue_comment",
+      "ts": "2020-05-06T10:48:49Z",
+      "repo": "arduino/summer-of-code",
+      "semantic": null,
+      "data": {
+        "issueNumber": 76,
+        "issueTitle": "Gsoc2020: port FreeRTOS to Portenta",
+        "body": "@alranel \r\nHello, I am honored to be able to participate in this year's event. Is there any contact information to discuss?"
+      }
+    },
+    {
+      "id": "pr-91-gsoc-cn/gsoc-cn",
+      "type": "pull_request",
+      "ts": "2020-05-06T09:36:26Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "number": 91,
+        "title": "Exclude .DS_Store on macosx. #90",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "comment-gsoc-cn/gsoc-cn-90-92",
+      "type": "issue_comment",
+      "ts": "2020-05-06T09:07:24Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "issueNumber": 90,
+        "issueTitle": "generate-resource-readme.py is not adapt macOS X",
+        "body": "```\r\ndef parse(self):\r\n        result = []\r\n        for filename in os.listdir(self.resource_path):\r\n            if filename.endswith(\".md\"):\r\n                continue\r\n            if sys.platform == \"darwin\" and filename == \".DS_Store\":\r\n                continue\r\n            else:\r\n                result.append(filename)\r\n        result.sort(key=lambda v: v.upper())\r\n        return result\r\n```\r\nWorked fine on my machine."
+      }
+    },
+    {
+      "id": "comment-gsoc-cn/gsoc-cn-90-93",
+      "type": "issue_comment",
+      "ts": "2020-05-06T09:03:38Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "issueNumber": 90,
+        "issueTitle": "generate-resource-readme.py is not adapt macOS X",
+        "body": "@LovelyBuggies \r\nHey, I have fix that, may I open a new PR?"
+      }
+    },
+    {
+      "id": "comment-gsoc-cn/gsoc-cn-90-94",
+      "type": "issue_comment",
+      "ts": "2020-05-06T00:10:00Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "issueNumber": 90,
+        "issueTitle": "generate-resource-readme.py is not adapt macOS X",
+        "body": "I thought we may remove it by the .py script.\nJust like “if uname==Darwin than remove XXX”."
+      }
+    },
+    {
+      "id": "comment-gsoc-cn/gsoc-cn-89-95",
+      "type": "issue_comment",
+      "ts": "2020-05-05T17:30:42Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "issueNumber": 89,
+        "issueTitle": "Add GSoC2020: Arduino, first time accepted by GSoC",
+        "body": "@LovelyBuggies ,\r\nCould you check it if anywhere should be change?\r\nThere is a little bug at `generate-resource-readme.py`, It doesn't work on my computer(macosx). #90 "
+      }
+    },
+    {
+      "id": "comment-gsoc-cn/gsoc-cn-90-96",
+      "type": "issue_comment",
+      "ts": "2020-05-05T17:27:03Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "issueNumber": 90,
+        "issueTitle": "generate-resource-readme.py is not adapt macOS X",
+        "body": "I will fix this in the few days."
+      }
+    },
+    {
+      "id": "comment-gsoc-cn/gsoc-cn-90-97",
+      "type": "issue_comment",
+      "ts": "2020-05-05T17:25:38Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "issueNumber": 90,
+        "issueTitle": "generate-resource-readme.py is not adapt macOS X",
+        "body": "It cannot exclude `.DS_Store`, which is a file that the system generates by default."
+      }
+    },
+    {
+      "id": "issue-90-gsoc-cn/gsoc-cn",
+      "type": "issue",
+      "ts": "2020-05-05T17:23:12Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "number": 90,
+        "title": "generate-resource-readme.py is not adapt macOS X",
+        "state": "closed",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-89-gsoc-cn/gsoc-cn",
+      "type": "pull_request",
+      "ts": "2020-05-05T15:49:48Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "number": 89,
+        "title": "Add GSoC2020: Arduino, first time accepted by GSoC",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "issue-88-gsoc-cn/gsoc-cn",
+      "type": "issue",
+      "ts": "2020-05-05T11:37:11Z",
+      "repo": "gsoc-cn/gsoc-cn",
+      "semantic": null,
+      "data": {
+        "number": 88,
+        "title": "[Join Request]",
+        "state": "closed",
+        "body": "I am a student working on [Arduino](https://arduino.cc) project.\r\n\r\nMy project is [https://summerofcode.withgoogle.com/projects/#6482418854264832](https://summerofcode.withgoogle.com/projects/#6482418854264832).\r\n\r\nThank you."
+      }
+    }
+  ]
+}

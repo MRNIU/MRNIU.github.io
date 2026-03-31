@@ -1,0 +1,122 @@
+{
+  "month": "2018-08",
+  "events": [
+    {
+      "id": "commit-86f8b5b68c72a73c14b809a81c48430a11476b62",
+      "type": "commit",
+      "ts": "2018-08-31T07:09:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "86f8b5b68c72a73c14b809a81c48430a11476b62",
+        "message": "尝试添加键盘和鼠标中断，然而不知道为什么用不了，目前没什么头绪，复习一下再看看",
+        "additions": 333,
+        "deletions": 43
+      }
+    },
+    {
+      "id": "issue-10-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2018-08-16T17:25:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 10,
+        "title": "debug中断、intr.c/die() 显示的信息有问题",
+        "state": "closed",
+        "body": "eflags寄存器信息与 bochs 显示的不同"
+      }
+    },
+    {
+      "id": "commit-ae49790ba2c34871addbb5bad8ca760e7401ba93",
+      "type": "commit",
+      "ts": "2018-08-16T17:23:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ae49790ba2c34871addbb5bad8ca760e7401ba93",
+        "message": "之前的问题先搁置，以后解决",
+        "additions": 9,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-fca7f8b12bb31ab3c2bbfaf118e6593e602d1cd6",
+      "type": "commit",
+      "ts": "2018-08-15T10:21:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fca7f8b12bb31ab3c2bbfaf118e6593e602d1cd6",
+        "message": "尝试解决调试信息的问题，未果",
+        "additions": 12,
+        "deletions": 21
+      }
+    },
+    {
+      "id": "commit-bbed64340d1062a6baf0e1fee8d54a681b2c6dc4",
+      "type": "commit",
+      "ts": "2018-08-13T03:19:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bbed64340d1062a6baf0e1fee8d54a681b2c6dc4",
+        "message": "中断信息和 bochs 显示的不同，可能是读取中断信息的地址错了",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-00c7898670864103184921f666635e45a785919b",
+      "type": "commit",
+      "ts": "2018-08-04T04:28:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "00c7898670864103184921f666635e45a785919b",
+        "message": "添加主要中断，然而好像有问题",
+        "additions": 159,
+        "deletions": 45
+      }
+    },
+    {
+      "id": "issue-9-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2018-08-02T19:49:55Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 9,
+        "title": "clock有问题",
+        "state": "closed",
+        "body": "使用 `cpu_hlt(); ` 打印出来的 tick 数量有时候不够，很难复现"
+      }
+    },
+    {
+      "id": "commit-5121325fde73f17e097a3670b006c0e5a015e039",
+      "type": "commit",
+      "ts": "2018-08-02T13:49:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5121325fde73f17e097a3670b006c0e5a015e039",
+        "message": "改进 makefile，setup.sh，添加了 eflags 寄存器读取函数，增加 printk_color 函数，添加 bool 类型的支持，时钟中断完成，未测试。",
+        "additions": 2479,
+        "deletions": 45
+      }
+    },
+    {
+      "id": "commit-194e845e7775f036be7217d0cee825bed76ef773",
+      "type": "commit",
+      "ts": "2018-08-01T10:32:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "194e845e7775f036be7217d0cee825bed76ef773",
+        "message": "将 cpu 操作移到独立的文件中。改进 makefile。消除编译警告。",
+        "additions": 128,
+        "deletions": 109
+      }
+    }
+  ]
+}

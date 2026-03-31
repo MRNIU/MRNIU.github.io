@@ -1,0 +1,397 @@
+{
+  "month": "2025-07",
+  "events": [
+    {
+      "id": "commit-c46d4569a94ff7ee570ab4baefcec73506722cad",
+      "type": "commit",
+      "ts": "2025-07-29T09:58:39Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": null,
+      "data": {
+        "sha": "c46d4569a94ff7ee570ab4baefcec73506722cad",
+        "message": "working on msr apic\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 439,
+        "deletions": 80
+      }
+    },
+    {
+      "id": "commit-8cf8465fc5be0ec0aa018f80d6c3845b19020201",
+      "type": "commit",
+      "ts": "2025-07-29T05:23:10Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "8cf8465fc5be0ec0aa018f80d6c3845b19020201",
+        "message": "feat: add cpuid\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 151,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-702d814eec44b28185021300d267b562ac181419",
+      "type": "commit",
+      "ts": "2025-07-25T08:45:30Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "702d814eec44b28185021300d267b562ac181419",
+        "message": "update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 23,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "pr-93631-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-24T03:58:40Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93631,
+        "title": "boards: Add Xunlong Orange Pi 5 Ultra RK3588",
+        "state": "closed",
+        "body": "This pull request adds support for the Orange Pi 5 Ultra board, which is based on the Rockchip RK3588 SoC. It includes board-specific configuration, documentation, and device tree files, as well as updates to the Zephyr build system and SoC configuration to enable RK3588 support.\r\n\r\n### Board Support for Orange Pi 5 Ultra\r\n\r\n* Added board-specific files for `orangepi_5_ultra_rk3588`, including `CMakeLists.txt`, `Kconfig`, `board.yml`, `doc/index.rst`, `dts`, and `defconfig` files. These define the board's hardware features, supported peripherals, and configuration options.\r\n\r\n* Detailed documentation added in `doc/index.rst` for the Orange Pi 5 Ultra, including hardware specifications, supported features, and instructions for building, flashing, and debugging Zephyr applications.\r\n\r\n### SoC Support for Rockchip RK3588\r\n\r\n* Introduced SoC-specific configuration for RK3588 in `soc/rockchip/rk35/rk3588`, including `CMakeLists.txt`, `Kconfig`, `Kconfig.defconfig`, and device tree files. These enable core features such as ARM64 architecture, ARM Cortex-A55 and Cortex-A76 CPUs, and ARM MMU.\r\n\r\n* Updated `soc/rockchip/rk35/CMakeLists.txt` to include support for the RK3588 SoC.\r\n\r\n### Device Tree and Bindings Enhancements\r\n\r\n* Added RK3588-specific device tree files (`rk3588.dtsi`) and updated bindings to define CPU cache properties, power management states, and other hardware details.\r\n\r\n* Introduced a new header file `rockchip,rk3588-cru.h` for clock bindings specific to RK3588.\r\n\r\nThis comprehensive addition lays the groundwork for using Zephyr on the Orange Pi 5 Ultra board and the Rockchip RK3588 SoC."
+      }
+    },
+    {
+      "id": "pr-93550-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-23T06:30:49Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93550,
+        "title": "dt-bindings: input: fix swapped comments for gear buttons",
+        "state": "merged",
+        "body": "The comments for INPUT_BTN_GEAR_DOWN and INPUT_BTN_GEAR_UP were incorrectly swapped. \r\nThis commit fixes the documentation to match the actual button definitions."
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93418-6",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:17:18Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93418,
+        "issueTitle": "dt-bindings: interrupt-controller: add arm-gic definitions",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93416-7",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:17:05Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93416,
+        "issueTitle": "dt-bindings: interrupt-controller: add irq definition",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93407-8",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:16:49Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93407,
+        "issueTitle": "dt-bindings: add rockchip pinctrl",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93410-9",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:16:23Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93410,
+        "issueTitle": "dt-bindings: add thermal define",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93411-10",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:16:13Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93411,
+        "issueTitle": "dt-bindings: add ata ahci definition",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93413-11",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:16:07Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93413,
+        "issueTitle": "dt-bindings: add phy definition",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93414-12",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:16:00Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93414,
+        "issueTitle": "dt-bindings: add rockchip rk3588 reset define",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93419-13",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:15:34Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93419,
+        "issueTitle": "dt-bindings: add rockchip rk3588 clock define",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93422-14",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:15:26Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93422,
+        "issueTitle": "dt-bindings: add rockchip rk3588 soc define",
+        "body": "Close because https://github.com/zephyrproject-rtos/zephyr/pull/93406"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93406-15",
+      "type": "issue_comment",
+      "ts": "2025-07-21T11:04:15Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93406,
+        "issueTitle": "dt-bindings: add rockchip rk3588 power define",
+        "body": "Thank you and close this PR"
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-93406-16",
+      "type": "issue_comment",
+      "ts": "2025-07-21T08:48:21Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93406,
+        "issueTitle": "dt-bindings: add rockchip rk3588 power define",
+        "body": "> where is this file used?\r\n\r\nI'm adding support for the rk3588 development board, and this code will be used in other PRs."
+      }
+    },
+    {
+      "id": "pr-93422-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T08:21:53Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93422,
+        "title": "dt-bindings: add rockchip rk3588 soc define",
+        "state": "closed",
+        "body": "Added rockchip rk3588 vop2 header file."
+      }
+    },
+    {
+      "id": "pr-93419-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T08:10:15Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93419,
+        "title": "dt-bindings: add rockchip rk3588 clock define",
+        "state": "closed",
+        "body": "Added rockchip rk3588 clock header file."
+      }
+    },
+    {
+      "id": "pr-93418-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T08:02:57Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93418,
+        "title": "dt-bindings: interrupt-controller: add arm-gic definitions",
+        "state": "closed",
+        "body": "Added ESPI and EPPI define."
+      }
+    },
+    {
+      "id": "pr-93416-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:58:35Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93416,
+        "title": "dt-bindings: interrupt-controller: add irq definition",
+        "state": "closed",
+        "body": "Added irq header file."
+      }
+    },
+    {
+      "id": "pr-93414-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:53:10Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93414,
+        "title": "dt-bindings: add rockchip rk3588 reset define",
+        "state": "closed",
+        "body": "Added rockchip rk3588 reset header file."
+      }
+    },
+    {
+      "id": "pr-93413-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:45:14Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93413,
+        "title": "dt-bindings: add phy definition",
+        "state": "closed",
+        "body": "Added phy header file."
+      }
+    },
+    {
+      "id": "pr-93412-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:42:29Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93412,
+        "title": "dt-bindings: add phy definition",
+        "state": "closed",
+        "body": "Added phy header file."
+      }
+    },
+    {
+      "id": "pr-93411-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:30:37Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93411,
+        "title": "dt-bindings: add ata ahci definition",
+        "state": "closed",
+        "body": "Added ahci header file."
+      }
+    },
+    {
+      "id": "pr-93410-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:24:49Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93410,
+        "title": "dt-bindings: add thermal define",
+        "state": "closed",
+        "body": "Added thermal header file."
+      }
+    },
+    {
+      "id": "pr-93407-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:12:47Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93407,
+        "title": "dt-bindings: add rockchip pinctrl",
+        "state": "closed",
+        "body": "Added rockchip pinctrl header file."
+      }
+    },
+    {
+      "id": "pr-93406-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T07:08:46Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93406,
+        "title": "dt-bindings: add rockchip rk3588 power define",
+        "state": "closed",
+        "body": "Added rockchip rk3588 power domain header file."
+      }
+    },
+    {
+      "id": "pr-93402-zephyrproject-rtos/zephyr",
+      "type": "pull_request",
+      "ts": "2025-07-21T06:10:08Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "number": 93402,
+        "title": "dt-bindings: add rockchip pinctrl",
+        "state": "closed",
+        "body": "add rockchip pinctrl define from include/dt-bindings/pinctrl/rockchip.h"
+      }
+    },
+    {
+      "id": "commit-6643d6bc37c7d19878627206f257c52d294e3eae",
+      "type": "commit",
+      "ts": "2025-07-17T10:00:02Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "6643d6bc37c7d19878627206f257c52d294e3eae",
+        "message": "update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 62,
+        "deletions": 1285
+      }
+    },
+    {
+      "id": "commit-616c0e032c4060f100f7d0b12eab1bbd2950eecc",
+      "type": "commit",
+      "ts": "2025-07-17T06:33:49Z",
+      "repo": "MRNIU/misc",
+      "semantic": null,
+      "data": {
+        "sha": "616c0e032c4060f100f7d0b12eab1bbd2950eecc",
+        "message": "Initial commit",
+        "additions": 64,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-dbf6f376a571f61d0e82217bb58115160818f24a",
+      "type": "commit",
+      "ts": "2025-07-16T05:13:54Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "perf",
+      "data": {
+        "sha": "dbf6f376a571f61d0e82217bb58115160818f24a",
+        "message": "perf: default copy cotr func\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 10,
+        "deletions": 11
+      }
+    }
+  ]
+}

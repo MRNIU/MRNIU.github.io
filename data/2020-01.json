@@ -1,0 +1,369 @@
+{
+  "month": "2020-01",
+  "events": [
+    {
+      "id": "commit-388203051e11435d49aca4aa00d85b814610c1a3",
+      "type": "commit",
+      "ts": "2020-01-31T08:46:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "388203051e11435d49aca4aa00d85b814610c1a3",
+        "message": "Update codestyle",
+        "additions": 197,
+        "deletions": 197
+      }
+    },
+    {
+      "id": "commit-cc2f4809ca58eee5210c1b51c452a9d908d07833",
+      "type": "commit",
+      "ts": "2020-01-31T08:43:44Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "cc2f4809ca58eee5210c1b51c452a9d908d07833",
+        "message": "Ready to writing the parser",
+        "additions": 108,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-cf02f4f4f7e6d4879831b69fa75c39d185b447fe",
+      "type": "commit",
+      "ts": "2020-01-31T08:08:32Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "cf02f4f4f7e6d4879831b69fa75c39d185b447fe",
+        "message": "- Improve error handle",
+        "additions": 39,
+        "deletions": 40
+      }
+    },
+    {
+      "id": "commit-758193e2e9252350a5965fc813b82d75962822b5",
+      "type": "commit",
+      "ts": "2020-01-31T07:15:21Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "758193e2e9252350a5965fc813b82d75962822b5",
+        "message": "- Add simple error handling\n- Fix bugs\n- Add unit test for lexer",
+        "additions": 283,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-bffecea0e8bedf9a9125c7231596cdb59ac10255",
+      "type": "commit",
+      "ts": "2020-01-31T03:38:14Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "bffecea0e8bedf9a9125c7231596cdb59ac10255",
+        "message": "Update code_line_count",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-160e0e807bd1313693d82e436d09b79df30d6a81",
+      "type": "commit",
+      "ts": "2020-01-31T03:33:59Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "160e0e807bd1313693d82e436d09b79df30d6a81",
+        "message": "- Fix bugs",
+        "additions": 34,
+        "deletions": 50
+      }
+    },
+    {
+      "id": "commit-198e1a90d059bd4ef48e72159c9172a6b459c435",
+      "type": "commit",
+      "ts": "2020-01-30T15:48:38Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "198e1a90d059bd4ef48e72159c9172a6b459c435",
+        "message": "- Lexer all most there",
+        "additions": 361,
+        "deletions": 38
+      }
+    },
+    {
+      "id": "commit-0fffde38cb732ca0778cc4cedddf303645f6dc70",
+      "type": "commit",
+      "ts": "2020-01-30T12:50:20Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "0fffde38cb732ca0778cc4cedddf303645f6dc70",
+        "message": "- Working on lexer, preliminary available\n- Fix bugs",
+        "additions": 323,
+        "deletions": 144
+      }
+    },
+    {
+      "id": "commit-41a843d261f76b4bd0fc261c8196f5bd46f69975",
+      "type": "commit",
+      "ts": "2020-01-29T16:17:21Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "41a843d261f76b4bd0fc261c8196f5bd46f69975",
+        "message": "- Rewrite into c++\n- Improve hash in lexical.h",
+        "additions": 327,
+        "deletions": 135
+      }
+    },
+    {
+      "id": "commit-35239cb04fde9b06a9912aa453f712214aa848a9",
+      "type": "commit",
+      "ts": "2020-01-29T12:07:27Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "35239cb04fde9b06a9912aa453f712214aa848a9",
+        "message": "- update",
+        "additions": 24,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-facc2fa6802d78cc408576f741fe7546fb458fe9",
+      "type": "commit",
+      "ts": "2020-01-29T09:20:41Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "facc2fa6802d78cc408576f741fe7546fb458fe9",
+        "message": "- Update codestyle file\n- Scanner works very well\n- Add two test file",
+        "additions": 232,
+        "deletions": 121
+      }
+    },
+    {
+      "id": "commit-949dcb93742354f03dfc8fd8a77295400163124a",
+      "type": "commit",
+      "ts": "2020-01-16T09:39:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "949dcb93742354f03dfc8fd8a77295400163124a",
+        "message": "- Update devlog\n- Woeking on task and schedule\n    I need to know which registers need to be saved",
+        "additions": 209,
+        "deletions": 21
+      }
+    },
+    {
+      "id": "commit-173ac27432a7c9d368fdacb2aae462c3acebd5f6",
+      "type": "commit",
+      "ts": "2020-01-16T06:58:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "173ac27432a7c9d368fdacb2aae462c3acebd5f6",
+        "message": "Working on task",
+        "additions": 73,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-a7bc7ee6d9524d96760cbd51ad3e5577c38f18aa",
+      "type": "commit",
+      "ts": "2020-01-16T03:19:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a7bc7ee6d9524d96760cbd51ad3e5577c38f18aa",
+        "message": "- Update devlog",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-93ab0caec8a8a7b9b6ada66915819ce11ed42cee",
+      "type": "commit",
+      "ts": "2020-01-16T03:14:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "93ab0caec8a8a7b9b6ada66915819ce11ed42cee",
+        "message": "- Update devlog\n- Heap finished\n    Allocated chunks will not be umap\n- Update declarations in kernel which defined in link script",
+        "additions": 88,
+        "deletions": 51
+      }
+    },
+    {
+      "id": "commit-01bfdec1b1cc0a5020a0db5437c1a6fc835b0a0c",
+      "type": "commit",
+      "ts": "2020-01-15T14:15:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "01bfdec1b1cc0a5020a0db5437c1a6fc835b0a0c",
+        "message": "- Fix bug at map(), umap() maybe have a similar problem\n- Preliminary work of heap\n- Add task and sched files",
+        "additions": 464,
+        "deletions": 102
+      }
+    },
+    {
+      "id": "commit-94b2723618d9bedaa73e8baec82fc444c4624ca1",
+      "type": "commit",
+      "ts": "2020-01-15T01:34:00Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "94b2723618d9bedaa73e8baec82fc444c4624ca1",
+        "message": "Update",
+        "additions": 25,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-6901115efc63f1deb31e5f6a6abcbabc4b235356",
+      "type": "commit",
+      "ts": "2020-01-15T01:14:00Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "6901115efc63f1deb31e5f6a6abcbabc4b235356",
+        "message": "Merge pull request #18 from MRNIU/vmm_and_pmm\n\nVmm and pmm",
+        "additions": 8577,
+        "deletions": 5107
+      }
+    },
+    {
+      "id": "pr-18-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-01-15T01:12:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 18,
+        "title": "Vmm and pmm",
+        "state": "merged",
+        "body": "- The initial setup of pmm and vmm was completed\r\n- Improve directory structure\r\n- Update README\r\n"
+      }
+    },
+    {
+      "id": "commit-56a3daf6a5b1a7afc8c7da9768a2391efa736ea6",
+      "type": "commit",
+      "ts": "2020-01-14T15:17:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "56a3daf6a5b1a7afc8c7da9768a2391efa736ea6",
+        "message": "- vmm_init finished!\n- Update devlog\n- Improve bootinit",
+        "additions": 31,
+        "deletions": 54
+      }
+    },
+    {
+      "id": "commit-4bdd8e180c314e1138d02a380fc69e5c464376bb",
+      "type": "commit",
+      "ts": "2020-01-14T14:05:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4bdd8e180c314e1138d02a380fc69e5c464376bb",
+        "message": "- Update devlog\n- Improve bootinit.c and add commits\n- Now vmm_init can use a single page-table",
+        "additions": 107,
+        "deletions": 35
+      }
+    },
+    {
+      "id": "commit-47e5629de1f3b1b435fa079ca3653dc7d97da3b2",
+      "type": "commit",
+      "ts": "2020-01-13T09:00:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "47e5629de1f3b1b435fa079ca3653dc7d97da3b2",
+        "message": "- Update macor in vmm",
+        "additions": 112,
+        "deletions": 204
+      }
+    },
+    {
+      "id": "commit-cefcba93a14e31cfa872ac95def1b22fa45d7c79",
+      "type": "commit",
+      "ts": "2020-01-11T10:56:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cefcba93a14e31cfa872ac95def1b22fa45d7c79",
+        "message": "- Add codestyle file\n- Fixup code style\n- Update devlog\n- Update paging related structure definitions",
+        "additions": 2610,
+        "deletions": 949
+      }
+    },
+    {
+      "id": "commit-b983a360eee267ad0cf2eef68e8177e60552323d",
+      "type": "commit",
+      "ts": "2020-01-09T07:26:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b983a360eee267ad0cf2eef68e8177e60552323d",
+        "message": "rename  into",
+        "additions": 29,
+        "deletions": 23
+      }
+    },
+    {
+      "id": "commit-353f6862857657cd91e403479ba95b28f153034c",
+      "type": "commit",
+      "ts": "2020-01-05T10:38:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "353f6862857657cd91e403479ba95b28f153034c",
+        "message": "update",
+        "additions": 118,
+        "deletions": 64
+      }
+    },
+    {
+      "id": "commit-cc7712509718fffc7d87c0db9a16f01585011873",
+      "type": "commit",
+      "ts": "2020-01-05T07:37:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cc7712509718fffc7d87c0db9a16f01585011873",
+        "message": "- Add some functions about cr0,cr2,cr3,cr4\n- TODO: function naming in cpu.hpp is not uniform",
+        "additions": 179,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-91edee378108c5dbb6949d730c969d22f183c611",
+      "type": "commit",
+      "ts": "2020-01-04T15:54:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "91edee378108c5dbb6949d730c969d22f183c611",
+        "message": "update",
+        "additions": 23,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-271dc6eb1d427dcee705c35a9a511387a610fc1a",
+      "type": "commit",
+      "ts": "2020-01-04T03:20:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "271dc6eb1d427dcee705c35a9a511387a610fc1a",
+        "message": "Hello 2020!\n- Add Heap's test case\n- fix bug for `kfree`\nTODO: improve heap, rewrite vmm.c",
+        "additions": 45,
+        "deletions": 5
+      }
+    }
+  ]
+}

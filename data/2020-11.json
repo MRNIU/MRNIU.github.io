@@ -1,0 +1,213 @@
+{
+  "month": "2020-11",
+  "events": [
+    {
+      "id": "commit-c5ebb96f5660d3554af6c01c5c2a9f807b13aec7",
+      "type": "commit",
+      "ts": "2020-11-06T21:52:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "c5ebb96f5660d3554af6c01c5c2a9f807b13aec7",
+        "message": "Merge pull request #47 from MRNIU/master\n\n更新为经过测试的版本",
+        "additions": 5870,
+        "deletions": 51117
+      }
+    },
+    {
+      "id": "commit-f661aff91289a626b6ba70283a403cf562416bf1",
+      "type": "commit",
+      "ts": "2020-11-06T21:47:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f661aff91289a626b6ba70283a403cf562416bf1",
+        "message": "pref(workflow): 更新测试脚本",
+        "additions": 7,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-ea26b4c9daca99e584aa6371dafa605338dd4a38",
+      "type": "commit",
+      "ts": "2020-11-06T21:42:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ea26b4c9daca99e584aa6371dafa605338dd4a38",
+        "message": "pref(cmake): 添加 CMAKE_BUILD_TYPE 选项",
+        "additions": 9,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "pr-1-Simple-XX/SimpleGameEngine",
+      "type": "pull_request",
+      "ts": "2020-11-06T21:14:40Z",
+      "repo": "Simple-XX/SimpleGameEngine",
+      "semantic": null,
+      "data": {
+        "number": 1,
+        "title": "update",
+        "state": "merged",
+        "body": "进度为渲染带光照的模型"
+      }
+    },
+    {
+      "id": "pr-1-Simple-XX/tools",
+      "type": "pull_request",
+      "ts": "2020-11-06T18:02:17Z",
+      "repo": "Simple-XX/tools",
+      "semantic": null,
+      "data": {
+        "number": 1,
+        "title": "update",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-829cc67fb43719f0db2a11518c99270bdee66ce8",
+      "type": "commit",
+      "ts": "2020-11-05T15:04:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "829cc67fb43719f0db2a11518c99270bdee66ce8",
+        "message": "fix(PR): 按 review 修改",
+        "additions": 15,
+        "deletions": 31
+      }
+    },
+    {
+      "id": "pr-47-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-11-05T14:19:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 47,
+        "title": "更新为经过测试的版本",
+        "state": "merged",
+        "body": "做了大量更新\r\n\r\n1. 到物理内存管理为止的部分可用\r\n2. 将 makefile 更换为 cmake\r\n3. 更加完善的环境脚本\r\netc."
+      }
+    },
+    {
+      "id": "commit-bfe2beda97e3dde448f1820013d948c3e602e74b",
+      "type": "commit",
+      "ts": "2020-11-04T15:35:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "bfe2beda97e3dde448f1820013d948c3e602e74b",
+        "message": "docs(docs): 添加相关文档",
+        "additions": 1159,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-74a682ec9c20664561c1e9df5f73fa925bfc6950",
+      "type": "commit",
+      "ts": "2020-11-04T15:34:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "74a682ec9c20664561c1e9df5f73fa925bfc6950",
+        "message": "docs(README): update",
+        "additions": 171,
+        "deletions": 208
+      }
+    },
+    {
+      "id": "commit-d9eb659afa35b7acab39b156f6f6a5a3ae92fb83",
+      "type": "commit",
+      "ts": "2020-11-04T15:08:33Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "d9eb659afa35b7acab39b156f6f6a5a3ae92fb83",
+        "message": "Merge pull request #46 from MRNIU/print_only\n\nPrint only",
+        "additions": 1667,
+        "deletions": 82
+      }
+    },
+    {
+      "id": "pr-46-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-11-04T15:07:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 46,
+        "title": "Print only",
+        "state": "merged",
+        "body": "树莓派2 支持"
+      }
+    },
+    {
+      "id": "commit-5b016d29900a42578fb706212eed38f4485b007b",
+      "type": "commit",
+      "ts": "2020-11-04T15:05:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "5b016d29900a42578fb706212eed38f4485b007b",
+        "message": "docs(READMD): update",
+        "additions": 8,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-1f6946e08341297ef1669d63ec53934eb86b76eb",
+      "type": "commit",
+      "ts": "2020-11-04T14:37:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "1f6946e08341297ef1669d63ec53934eb86b76eb",
+        "message": "pref(cmake): 撤销修改",
+        "additions": 2,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-0488f64f009ead310cb3ea2f20d8b283a76cbfc7",
+      "type": "commit",
+      "ts": "2020-11-04T14:26:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0488f64f009ead310cb3ea2f20d8b283a76cbfc7",
+        "message": "pref(mailbox): 完善 mailbox 相关程序",
+        "additions": 410,
+        "deletions": 294
+      }
+    },
+    {
+      "id": "commit-b41da007e61983d3235afb17091310a7d1a00a5a",
+      "type": "commit",
+      "ts": "2020-11-03T18:04:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "b41da007e61983d3235afb17091310a7d1a00a5a",
+        "message": "feat(mailbox): 按类别将 tag 对应数据结构分类",
+        "additions": 513,
+        "deletions": 87
+      }
+    },
+    {
+      "id": "commit-ee0144fbede69ee5aae3bfbccaff93473ad6772f",
+      "type": "commit",
+      "ts": "2020-11-03T07:22:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "ee0144fbede69ee5aae3bfbccaff93473ad6772f",
+        "message": "fix(vsprintf): 解决了 arm 架构下不能用除法的问题\nfeat(math): 数学库",
+        "additions": 123,
+        "deletions": 28
+      }
+    }
+  ]
+}

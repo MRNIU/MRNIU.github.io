@@ -1,0 +1,484 @@
+{
+  "month": "2019-01",
+  "events": [
+    {
+      "id": "commit-a584795be6a7318feb252b13597ee1b9799297d6",
+      "type": "commit",
+      "ts": "2019-01-31T15:01:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a584795be6a7318feb252b13597ee1b9799297d6",
+        "message": "update reaadme",
+        "additions": 178,
+        "deletions": 112
+      }
+    },
+    {
+      "id": "commit-647c8ab1d8628bd13fd63e66e1f4734de0aea0e3",
+      "type": "commit",
+      "ts": "2019-01-31T14:42:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "647c8ab1d8628bd13fd63e66e1f4734de0aea0e3",
+        "message": "update",
+        "additions": 54,
+        "deletions": 55
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-35821-141",
+      "type": "issue_comment",
+      "ts": "2019-01-30T18:23:11Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35821,
+        "issueTitle": "GNU GRUB 2 for i386-elf",
+        "body": "@Varriount Yes, but you can use it by `brew install i386-elf-grub.rb`."
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-35821-142",
+      "type": "issue_comment",
+      "ts": "2019-01-26T11:08:09Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35821,
+        "issueTitle": "GNU GRUB 2 for i386-elf",
+        "body": "@pcr910303 \r\nIt's a coincidence. Are you work on cross compile? Maybe you need them:\r\ni386-elf-gcc, i386-elf-binutils, i386-elf-gdb, of course i386-elf-grub."
+      }
+    },
+    {
+      "id": "commit-c5195ae3a3a80f4dc2863bb0f7598ba6ea5c43f2",
+      "type": "commit",
+      "ts": "2019-01-23T04:40:07Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "c5195ae3a3a80f4dc2863bb0f7598ba6ea5c43f2",
+        "message": "update",
+        "additions": 64,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-7cf04c5f40a925bb925ba17e4fd2be2edc3174cb",
+      "type": "commit",
+      "ts": "2019-01-23T04:35:39Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "7cf04c5f40a925bb925ba17e4fd2be2edc3174cb",
+        "message": "完成了王垠的解释器",
+        "additions": 59,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-407517150737706ca847387259469aafd3a0a5f4",
+      "type": "commit",
+      "ts": "2019-01-22T15:58:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "407517150737706ca847387259469aafd3a0a5f4",
+        "message": "继续处理内存管理\n这里有些卡进度，先去看看书再来",
+        "additions": 131,
+        "deletions": 51
+      }
+    },
+    {
+      "id": "commit-fc4783cc83ade5919194ca3486965fdbb0119a26",
+      "type": "commit",
+      "ts": "2019-01-22T14:53:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "fc4783cc83ade5919194ca3486965fdbb0119a26",
+        "message": "Merge pull request #15 from MRNIU/TODO\n\nUpdate to multiboot2",
+        "additions": 46123,
+        "deletions": 685
+      }
+    },
+    {
+      "id": "commit-ec4a401a70ce4f870eeab196cb8eb1faf7892f2f",
+      "type": "commit",
+      "ts": "2019-01-17T16:04:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ec4a401a70ce4f870eeab196cb8eb1faf7892f2f",
+        "message": "Working on memory management",
+        "additions": 264,
+        "deletions": 234
+      }
+    },
+    {
+      "id": "commit-36bbc6631a6babec0a466c89297bb73687fc35a6",
+      "type": "commit",
+      "ts": "2019-01-15T13:30:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "36bbc6631a6babec0a466c89297bb73687fc35a6",
+        "message": "Add some details. Ready to deal with memory management",
+        "additions": 20,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "pr-15-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2019-01-15T05:33:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 15,
+        "title": "Update to multiboot2",
+        "state": "merged",
+        "body": "- Update to multiboot2\r\n- Fix some bug\r\n- Backspace is working-"
+      }
+    },
+    {
+      "id": "commit-49f383eadd827a274dcaa3fa793fcf469e180e28",
+      "type": "commit",
+      "ts": "2019-01-15T05:16:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "49f383eadd827a274dcaa3fa793fcf469e180e28",
+        "message": "It is confused to get elf symbol from grub2, I decided delve into it\nlater.\nFix some warning.\nAdd .multiboot section before .text.\ndebug almost complete except elf.",
+        "additions": 223,
+        "deletions": 248
+      }
+    },
+    {
+      "id": "commit-3c101fee099222ee272d697075748af3bac2dfe1",
+      "type": "commit",
+      "ts": "2019-01-14T10:08:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3c101fee099222ee272d697075748af3bac2dfe1",
+        "message": "Update .travis.yml",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-dbc16dcd195d854b68b34c355d8bb19a21aa5e40",
+      "type": "commit",
+      "ts": "2019-01-14T10:08:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "dbc16dcd195d854b68b34c355d8bb19a21aa5e40",
+        "message": "Update .travis.yml",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-a89139c78ce3e3733bd460f19bc16eb2923e8ab9",
+      "type": "commit",
+      "ts": "2019-01-14T10:08:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a89139c78ce3e3733bd460f19bc16eb2923e8ab9",
+        "message": "Update .travis.yml",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-d4b44c91681f2dd5e5d36d728f955af269f43b18",
+      "type": "commit",
+      "ts": "2019-01-14T09:55:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d4b44c91681f2dd5e5d36d728f955af269f43b18",
+        "message": "update",
+        "additions": 6,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-9a90604252a8ca76d695d4f1b382d9a47d893f56",
+      "type": "commit",
+      "ts": "2019-01-14T02:58:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9a90604252a8ca76d695d4f1b382d9a47d893f56",
+        "message": "update to grub2",
+        "additions": 248,
+        "deletions": 228
+      }
+    },
+    {
+      "id": "commit-6bed92c6d0078952f3dfb2c8a17773d94448edd8",
+      "type": "commit",
+      "ts": "2019-01-14T02:41:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "6bed92c6d0078952f3dfb2c8a17773d94448edd8",
+        "message": "update to grub2",
+        "additions": 770,
+        "deletions": 410
+      }
+    },
+    {
+      "id": "commit-a3d431aa4d7e4159ef58bff16c5aad2d8658f76a",
+      "type": "commit",
+      "ts": "2019-01-14T02:35:54Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a3d431aa4d7e4159ef58bff16c5aad2d8658f76a",
+        "message": "update to grub2",
+        "additions": 1152,
+        "deletions": 662
+      }
+    },
+    {
+      "id": "commit-491f64664925c5636fcd023cd9e7860f19fc069d",
+      "type": "commit",
+      "ts": "2019-01-11T14:57:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "491f64664925c5636fcd023cd9e7860f19fc069d",
+        "message": "Working on kernel debug",
+        "additions": 231,
+        "deletions": 78
+      }
+    },
+    {
+      "id": "issue-14-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2019-01-11T13:08:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 14,
+        "title": "backspace has a mistake",
+        "state": "closed",
+        "body": "**Describe the bug**\r\n退格键会影响到上一行；且会留下多余字符\r\n\r\n**To Reproduce**\r\nSteps to reproduce the behavior:\r\n1. 运行kernel\r\n2. 使用退格键\r\n3. See error\r\n\r\n**Expected behavior**\r\n应该没有多余的字符，且不应该影响上一行\r\n\r\n**Screenshots**\r\n![2019-01-11 9 03 28](https://user-images.githubusercontent.com/12967882/51035441-ef1ea300-15e4-11e9-8d64-abada6a911e3.png)\r\n![2019-01-11 9 03 37](https://user-images.githubusercontent.com/12967882/51035443-f04fd000-15e4-11e9-98d9-17df1ce5bcf8.png)\r\n\r\n**Desktop (please complete the following information):**\r\n - OS: MacOS 10.14.2\r\n - Compile tools: i386-elf-gcc i386-elf-ld\r\n - Emulator: Bochs 2.6.9\r\n - Branch: TODO\r\n\r\n"
+      }
+    },
+    {
+      "id": "commit-c36012487594f64d1cfb3897c10c5788e4b9b89d",
+      "type": "commit",
+      "ts": "2019-01-11T13:02:54Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c36012487594f64d1cfb3897c10c5788e4b9b89d",
+        "message": "Add '\\b'",
+        "additions": 5,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-43ef52ad8958d4fb155a859b67b2aa43c58c4224",
+      "type": "commit",
+      "ts": "2019-01-11T12:15:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "43ef52ad8958d4fb155a859b67b2aa43c58c4224",
+        "message": "Try to implement linked list with C.\nRefactoring tty and console.\nAdd input buffer for keyboard.",
+        "additions": 416,
+        "deletions": 204
+      }
+    },
+    {
+      "id": "commit-4b09e52c566b143ba9c528ee121540c3135d5748",
+      "type": "commit",
+      "ts": "2019-01-11T08:00:16Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4b09e52c566b143ba9c528ee121540c3135d5748",
+        "message": "Update issue templates",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "issue-13-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2019-01-11T07:59:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 13,
+        "title": "使用回车、tab时会显示多余的白点",
+        "state": "closed",
+        "body": "**Describe the bug**\r\n使用回车、tab时会显示多余的白点\r\n\r\n**To Reproduce**\r\nSteps to reproduce the behavior:\r\n1. 运行kernel\r\n2. 在tty里使用回车或tab\r\n3. See error\r\n\r\n**Expected behavior**\r\n因该没有多余的东西出现\r\n\r\n**Screenshots**\r\n<img width=\"788\" alt=\"2019-01-11 3 58 10\" src=\"https://user-images.githubusercontent.com/12967882/51020540-d220aa80-15b9-11e9-9b38-ab79b0dc4364.png\">\r\n\r\n**Desktop (please complete the following information):**\r\n - OS: MacOS 10.14.2\r\n - Compile tools: i386-elf-gcc i386-elf-ld\r\n - Emulator: e.g. Bochs 2.6.9\r\n - Branch: TODO\r\n\r\n"
+      }
+    },
+    {
+      "id": "commit-a2cee1169d5bbbd0c88369805d60533b9b9b6720",
+      "type": "commit",
+      "ts": "2019-01-11T07:54:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a2cee1169d5bbbd0c88369805d60533b9b9b6720",
+        "message": "Fix #12",
+        "additions": 32,
+        "deletions": 117
+      }
+    },
+    {
+      "id": "issue-12-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2019-01-11T07:51:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 12,
+        "title": "一行写满时不能自动换行",
+        "state": "closed",
+        "body": "**Describe the bug**\r\n一行写满时不能自动换行\r\n\r\n**To Reproduce**\r\nSteps to reproduce the behavior:\r\n1. 运行kernel\r\n2. 将一行写满，不手动换行\r\n3. 多余的字符不显示，也没有自动换行\r\n\r\n**Expected behavior**\r\n一行写满时应自动从下一行开始继续\r\n\r\n**Screenshots**\r\n<img width=\"832\" alt=\"2019-01-11 3 50 14\" src=\"https://user-images.githubusercontent.com/12967882/51020161-9fc27d80-15b8-11e9-82c2-5443208dfba1.png\">\r\n\r\n\r\n**Desktop (please complete the following information):**\r\n - OS: MacOS 10.14.2\r\n - Compile tools: i386-elf-gcc i386-elf-ld\r\n - Emulator: Bochs 2.6.9\r\n - Branch: TODO\r\n"
+      }
+    },
+    {
+      "id": "commit-1f7c4d1c5020f431f5b984abc5c98b10da08d197",
+      "type": "commit",
+      "ts": "2019-01-11T03:22:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "1f7c4d1c5020f431f5b984abc5c98b10da08d197",
+        "message": "update",
+        "additions": 0,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-cf8f9f0547869dbab9144752a9a9ab172ceaaeab",
+      "type": "commit",
+      "ts": "2019-01-11T02:59:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cf8f9f0547869dbab9144752a9a9ab172ceaaeab",
+        "message": "update",
+        "additions": 0,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-204649917c6070f27734b61e9ba93cd144ba2ef9",
+      "type": "commit",
+      "ts": "2019-01-11T02:47:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "204649917c6070f27734b61e9ba93cd144ba2ef9",
+        "message": "Working on debug by multiboot2: Show function call stack.\nTry to fix bug on tty.",
+        "additions": 25,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-5994733a99aef73606c99a77abb2bbc3f5161a71",
+      "type": "commit",
+      "ts": "2019-01-11T02:19:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5994733a99aef73606c99a77abb2bbc3f5161a71",
+        "message": "Working on debug by multiboot2: Show function call stack.\nTry to fix bug on tty.",
+        "additions": 118,
+        "deletions": 80
+      }
+    },
+    {
+      "id": "pr-35821-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2019-01-09T05:18:39Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 35821,
+        "title": "GNU GRUB 2 for i386-elf",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Is your test running fine `brew test <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    },
+    {
+      "id": "commit-990d79b205367815e7dcd370e63274685611eaaf",
+      "type": "commit",
+      "ts": "2019-01-09T04:30:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "990d79b205367815e7dcd370e63274685611eaaf",
+        "message": "Upgrade to  Multiboot2 down.\nTry implementing scroll bar.",
+        "additions": 7,
+        "deletions": 16
+      }
+    },
+    {
+      "id": "commit-d931bf270dd6742c57c854de7e4c0af9e17502c3",
+      "type": "commit",
+      "ts": "2019-01-09T04:18:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d931bf270dd6742c57c854de7e4c0af9e17502c3",
+        "message": "初步解决之前的 bug",
+        "additions": 15,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-77e5f44e2f87edb9c8a8f913ef7008d8e79e47f9",
+      "type": "commit",
+      "ts": "2019-01-05T23:23:54Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "77e5f44e2f87edb9c8a8f913ef7008d8e79e47f9",
+        "message": "Still wirking on multiboot2... Maybe I have a stuck here.\nI have check boot.s and debug.carefully, but it never\nwork as expected. I feel down...",
+        "additions": 167,
+        "deletions": 288
+      }
+    },
+    {
+      "id": "commit-81d83d19299222317e7d8cdb87c6ba306c8514ce",
+      "type": "commit",
+      "ts": "2019-01-02T06:58:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "81d83d19299222317e7d8cdb87c6ba306c8514ce",
+        "message": "uodate",
+        "additions": 67,
+        "deletions": 65
+      }
+    },
+    {
+      "id": "issue-204-ruanyf/weekly",
+      "type": "issue",
+      "ts": "2019-01-01T09:21:06Z",
+      "repo": "ruanyf/weekly",
+      "semantic": null,
+      "data": {
+        "number": 204,
+        "title": "自荐项目：SimpleKernel",
+        "state": "closed",
+        "body": "## 项目推荐\r\n- 项目名称：\r\nSimpleKernel\r\n- 项目地址：\r\nhttps://github.com/MRNIU/SimpleKernel\r\n- 项目描述：\r\n用于学习操作系统内核的项目。\r\n这里有实现一个内核过程中，各个阶段的源码，你可以从自己感兴趣的地方开始。\r\n目前已经完成了启动、gdt、idt 的初始化，系统中断（isr）以及键盘输入。\r\n\r\n项目中需要了解的知识我会整理成文档放到一块，免去了到处找资料的麻烦，参考项目我也有列出，你可以对比不同内核的实现思路有什么不一样。\r\n"
+      }
+    }
+  ]
+}

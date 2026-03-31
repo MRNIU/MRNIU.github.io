@@ -1,0 +1,381 @@
+{
+  "month": "2025-06",
+  "events": [
+    {
+      "id": "commit-041db80d2065c31d3474b38cc7ef3c66096d6e30",
+      "type": "commit",
+      "ts": "2025-06-23T11:58:54Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "041db80d2065c31d3474b38cc7ef3c66096d6e30",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-636a375e7a58dc754a71a0159ca1b13408db6415",
+      "type": "commit",
+      "ts": "2025-06-22T12:15:09Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "636a375e7a58dc754a71a0159ca1b13408db6415",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 102,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-25dd72913b92ca11c38db0ff5d7fccae9d501fcf",
+      "type": "commit",
+      "ts": "2025-06-22T08:26:24Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "25dd72913b92ca11c38db0ff5d7fccae9d501fcf",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-a9129babf039dbe3e0848918f7762a51221cb187",
+      "type": "commit",
+      "ts": "2025-06-22T08:19:49Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "a9129babf039dbe3e0848918f7762a51221cb187",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 8,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-fc9a20decc8f1afa1d6f4ccb1a47cbbe7f3a53d0",
+      "type": "commit",
+      "ts": "2025-06-22T08:17:28Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "fc9a20decc8f1afa1d6f4ccb1a47cbbe7f3a53d0",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 37,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-5d931567fa35b810864c3fb30f0b2206eb183e3d",
+      "type": "commit",
+      "ts": "2025-06-20T13:17:39Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "5d931567fa35b810864c3fb30f0b2206eb183e3d",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 18,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-9b0fe907f337cf4349c5e7d7094d9f447ed097bc",
+      "type": "commit",
+      "ts": "2025-06-19T13:16:24Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "9b0fe907f337cf4349c5e7d7094d9f447ed097bc",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 35,
+        "deletions": 61
+      }
+    },
+    {
+      "id": "commit-5887c9903477f4b5409fea5237a31f037c0d7da8",
+      "type": "commit",
+      "ts": "2025-06-19T12:43:33Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "5887c9903477f4b5409fea5237a31f037c0d7da8",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 53,
+        "deletions": 41
+      }
+    },
+    {
+      "id": "commit-2cf495238189f03716061b56b913a5460b7a2f88",
+      "type": "commit",
+      "ts": "2025-06-19T10:44:39Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "2cf495238189f03716061b56b913a5460b7a2f88",
+        "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 15,
+        "deletions": 128
+      }
+    },
+    {
+      "id": "commit-f5801e0975303ae80d230c659d6713d22562f68d",
+      "type": "commit",
+      "ts": "2025-06-19T09:45:55Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": "refactor",
+      "data": {
+        "sha": "f5801e0975303ae80d230c659d6713d22562f68d",
+        "message": "refactor: clean code\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 98,
+        "deletions": 37
+      }
+    },
+    {
+      "id": "commit-31598e1a7f642b9d227d35cfc34a9cb924bd911b",
+      "type": "commit",
+      "ts": "2025-06-19T09:29:14Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": "refactor",
+      "data": {
+        "sha": "31598e1a7f642b9d227d35cfc34a9cb924bd911b",
+        "message": "refactor: clean code\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 65,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-6e0664bf5e97cc209b6a365cdf1ac33b1ec9a27f",
+      "type": "commit",
+      "ts": "2025-06-19T08:52:16Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": "refactor",
+      "data": {
+        "sha": "6e0664bf5e97cc209b6a365cdf1ac33b1ec9a27f",
+        "message": "refactor: clean code\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 37,
+        "deletions": 74
+      }
+    },
+    {
+      "id": "commit-fb5831e139f7bf76087a6ca34d643a296b6ab627",
+      "type": "commit",
+      "ts": "2025-06-19T08:30:12Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": "refactor",
+      "data": {
+        "sha": "fb5831e139f7bf76087a6ca34d643a296b6ab627",
+        "message": "refactor: clean code\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 0,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-38b69436884ea241a8ab5181078f183ff34dd155",
+      "type": "commit",
+      "ts": "2025-06-19T08:21:45Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": "refactor",
+      "data": {
+        "sha": "38b69436884ea241a8ab5181078f183ff34dd155",
+        "message": "refactor: clean code\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 45,
+        "deletions": 263
+      }
+    },
+    {
+      "id": "commit-9d08a3fdb80d66d193a80eb0f50e026fef421442",
+      "type": "commit",
+      "ts": "2025-06-19T07:51:46Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": "refactor",
+      "data": {
+        "sha": "9d08a3fdb80d66d193a80eb0f50e026fef421442",
+        "message": "refactor: clean code\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 165,
+        "deletions": 177
+      }
+    },
+    {
+      "id": "commit-02d578e3870a95789fe71879ef33ab7a36a6e4f8",
+      "type": "commit",
+      "ts": "2025-06-19T05:29:59Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": "refactor",
+      "data": {
+        "sha": "02d578e3870a95789fe71879ef33ab7a36a6e4f8",
+        "message": "refactor: clean code\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 19,
+        "deletions": 138
+      }
+    },
+    {
+      "id": "commit-329a725915f908fc310d612818b76e85f03ff8ea",
+      "type": "commit",
+      "ts": "2025-06-19T03:31:20Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "329a725915f908fc310d612818b76e85f03ff8ea",
+        "message": "add generate_resources_pattern\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 188,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-10b8fd6e63de56c6113894d87763c8729548db1c",
+      "type": "commit",
+      "ts": "2025-06-19T02:00:42Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "10b8fd6e63de56c6113894d87763c8729548db1c",
+        "message": "Update chunk_utils.lua",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-b03c716dd65f800092ea8082ebb0c15d79b50200",
+      "type": "commit",
+      "ts": "2025-06-19T02:00:14Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "b03c716dd65f800092ea8082ebb0c15d79b50200",
+        "message": "Update area_cleaner.lua",
+        "additions": 5,
+        "deletions": 33
+      }
+    },
+    {
+      "id": "commit-46765983f8d4486d27a0ba56ca8c23356155a19f",
+      "type": "commit",
+      "ts": "2025-06-19T00:59:58Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "46765983f8d4486d27a0ba56ca8c23356155a19f",
+        "message": "add legendary_items\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 317,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-6c1a1db14389ac78f595da138332b8ece8177952",
+      "type": "commit",
+      "ts": "2025-06-18T17:28:06Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "6c1a1db14389ac78f595da138332b8ece8177952",
+        "message": "area_clear and resource generate almost there\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 127,
+        "deletions": 128
+      }
+    },
+    {
+      "id": "commit-ec20aec217a76c28062afb8909d191019a5b4877",
+      "type": "commit",
+      "ts": "2025-06-18T15:49:57Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "ec20aec217a76c28062afb8909d191019a5b4877",
+        "message": "update area_cleaner\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 20,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-f29c525fa9c389d7b45207df7d4c3ad633e4c4a0",
+      "type": "commit",
+      "ts": "2025-06-18T15:30:18Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "f29c525fa9c389d7b45207df7d4c3ad633e4c4a0",
+        "message": "add chunk_utils\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 57,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-fc48531cc3af6cb645bd00462b0f07bb616252cf",
+      "type": "commit",
+      "ts": "2025-06-18T14:34:52Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "fc48531cc3af6cb645bd00462b0f07bb616252cf",
+        "message": "add generate_resources\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 517,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-0d3ad7dd06926eab33e74745d1b0c13acad111f2",
+      "type": "commit",
+      "ts": "2025-06-18T12:38:06Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "0d3ad7dd06926eab33e74745d1b0c13acad111f2",
+        "message": "add area_cleaner\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 51,
+        "deletions": 29
+      }
+    },
+    {
+      "id": "commit-ab03d80e994aa86d2ac1a83adb5d7295b075cf2f",
+      "type": "commit",
+      "ts": "2025-06-18T11:51:35Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "ab03d80e994aa86d2ac1a83adb5d7295b075cf2f",
+        "message": "update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 137,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "comment-factoriotools/factorio-docker-473-17",
+      "type": "issue_comment",
+      "ts": "2025-06-18T09:19:31Z",
+      "repo": "factoriotools/factorio-docker",
+      "semantic": null,
+      "data": {
+        "issueNumber": 473,
+        "issueTitle": "希望能更新一下中文使用说明。",
+        "body": "fixed https://github.com/factoriotools/factorio-docker/pull/569"
+      }
+    },
+    {
+      "id": "pr-569-factoriotools/factorio-docker",
+      "type": "pull_request",
+      "ts": "2025-06-18T09:16:02Z",
+      "repo": "factoriotools/factorio-docker",
+      "semantic": null,
+      "data": {
+        "number": 569,
+        "title": "Update README_zh_CN.md",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-89f276c245b5d8ef44fba5f23add092446a62440",
+      "type": "commit",
+      "ts": "2025-06-17T16:03:37Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "89f276c245b5d8ef44fba5f23add092446a62440",
+        "message": "update to spa\n\nSigned-off-by: Zhihong <zhihong@nzhnb.com>",
+        "additions": 338,
+        "deletions": 2294
+      }
+    }
+  ]
+}

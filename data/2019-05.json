@@ -1,0 +1,139 @@
+{
+  "month": "2019-05",
+  "events": [
+    {
+      "id": "comment-alibaba/AliOS-Things-974-126",
+      "type": "issue_comment",
+      "ts": "2019-05-30T17:29:17Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 974,
+        "issueTitle": "[SoC2019]Application development framework",
+        "body": "@librae8226 \r\n你好，我已在网站再次尝试提交，依然提示我提交次数受限\r\n<img width=\"544\" alt=\"屏幕快照 2019-05-31 上午1 26 01\" src=\"https://user-images.githubusercontent.com/12967882/58651270-6b6f1400-8343-11e9-9048-74d1d8cf13b5.png\">\r\n"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-974-127",
+      "type": "issue_comment",
+      "ts": "2019-05-29T12:38:21Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 974,
+        "issueTitle": "[SoC2019]Application development framework",
+        "body": "我刚刚完成移植 Arduino 库的提案，但是提交的时候才发现我已经把两次提交的机会用完了。。。我在官方网站没有找到撤销的相关选项。。请问有什么其它的方法吗？"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-974-128",
+      "type": "issue_comment",
+      "ts": "2019-05-28T01:22:30Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 974,
+        "issueTitle": "[SoC2019]Application development framework",
+        "body": "请问方向一中，[arduino 库](https://www.arduino.cc/en/Reference/Libraries)的移植是仅需要移植标准库，还是全部都要移植？"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-978-129",
+      "type": "issue_comment",
+      "ts": "2019-05-28T01:10:09Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 978,
+        "issueTitle": "2019 Alibaba Summer of Code",
+        "body": "我本来是想做 fat 的，但是发现贵方已经写好了。文件系统方向似乎没有适合我的 idea 了。。。我会再考虑一下的，谢谢"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-978-130",
+      "type": "issue_comment",
+      "ts": "2019-05-27T04:31:42Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 978,
+        "issueTitle": "2019 Alibaba Summer of Code",
+        "body": "@Hunter1990 \r\n我已提交一篇关于为 AliOS-Things 实现 ext2 文件系统的 proposal，请问是否与贵项目开发人员有撞车风险？"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-976-131",
+      "type": "issue_comment",
+      "ts": "2019-05-26T04:28:52Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 976,
+        "issueTitle": "[SoC2019]Speech algorithm based on AliOS Things",
+        "body": "仔细研究这个问题后我觉得这个 idea 不是很适合我。\r\n想搞这个的同学加油"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-978-132",
+      "type": "issue_comment",
+      "ts": "2019-05-24T02:00:43Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 978,
+        "issueTitle": "2019 Alibaba Summer of Code",
+        "body": "请问我可以提出自己的 idea 吗？\r\n我想为 AliOS-Things 移植新的文件系统比如 tmpfs。"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-976-133",
+      "type": "issue_comment",
+      "ts": "2019-05-23T16:27:07Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 976,
+        "issueTitle": "[SoC2019]Speech algorithm based on AliOS Things",
+        "body": "@Hunter1990 感谢回复，我会在近期提交 proposal 到指定页面"
+      }
+    },
+    {
+      "id": "comment-alibaba/AliOS-Things-976-134",
+      "type": "issue_comment",
+      "ts": "2019-05-23T05:22:06Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "issueNumber": 976,
+        "issueTitle": "[SoC2019]Speech algorithm based on AliOS Things",
+        "body": "Hello, I would like to working on this idea.\r\nThere are some questions:\r\n  - Could I write my proposal in Chinese?\r\n  - Will the mentor give advice on the revision of the proposal\r\n  - Is there any chance to modify proposal after submission?\r\n  - Is it necessary to submit PR for this project before?"
+      }
+    },
+    {
+      "id": "commit-8f7b06f00a764818302eccf04669f73816bb17d6",
+      "type": "commit",
+      "ts": "2019-05-22T10:55:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8f7b06f00a764818302eccf04669f73816bb17d6",
+        "message": "update",
+        "additions": 26,
+        "deletions": 330
+      }
+    },
+    {
+      "id": "commit-4eb30bfd0505ac53cbe7400e7427d54e3874dd0a",
+      "type": "commit",
+      "ts": "2019-05-10T15:52:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4eb30bfd0505ac53cbe7400e7427d54e3874dd0a",
+        "message": "- 重新实现，参考了优秀的设计，下一步将 kernel.c 中的 init 部分改写为汇编",
+        "additions": 141,
+        "deletions": 132
+      }
+    }
+  ]
+}

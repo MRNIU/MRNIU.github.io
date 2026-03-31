@@ -1,0 +1,41 @@
+{
+  "month": "2023-08",
+  "events": [
+    {
+      "id": "comment-MRNIU/SimpleKernel-22-40",
+      "type": "issue_comment",
+      "ts": "2023-08-20T05:49:52Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 22,
+        "issueTitle": "调试",
+        "body": "都有了，但是 uefi 方式启动的断不进去"
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-15-42",
+      "type": "issue_comment",
+      "ts": "2023-08-20T05:48:55Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 15,
+        "issueTitle": "代码格式化",
+        "body": "使用 clang-format 与 clang-tidy 支持了 c/c++ 文件的格式化，汇编暂时没有涉及到，可以考虑用内嵌汇编解决，cmake 与 shell 脚本使用 clion 自动格式化"
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-19-43",
+      "type": "issue_comment",
+      "ts": "2023-08-20T05:47:30Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 19,
+        "issueTitle": "IDE",
+        "body": "使用 cmakepreset 解决"
+      }
+    }
+  ]
+}

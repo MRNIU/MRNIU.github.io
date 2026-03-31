@@ -1,0 +1,367 @@
+{
+  "month": "2023-07",
+  "events": [
+    {
+      "id": "comment-MRNIU/SimpleKernel-14-44",
+      "type": "issue_comment",
+      "ts": "2023-07-16T15:48:06Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 14,
+        "issueTitle": "内核构建",
+        "body": "目前发现与链接顺序有关，reloc_${TARGET_ARCH}.o 需要在 text 段最开始"
+      }
+    },
+    {
+      "id": "comment-MRNIU/SimpleKernel-14-45",
+      "type": "issue_comment",
+      "ts": "2023-07-15T21:38:14Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 14,
+        "issueTitle": "内核构建",
+        "body": "boot 已完成，但是在 gnu-efi 下工作不正常"
+      }
+    },
+    {
+      "id": "issue-183-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:11:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 183,
+        "title": "doxygen 文档生成",
+        "state": "closed",
+        "body": "1. 使用 doxygen 从注释生成文档\n2. doxygen 配置文件\n3. doxygen 在代码中的格式规范"
+      }
+    },
+    {
+      "id": "issue-182-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:11:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 182,
+        "title": "内核构建",
+        "state": "closed",
+        "body": "生成 boot、内核 elf 文件\n\n需要考虑不同平台的区分，使用最小编译参数\n"
+      }
+    },
+    {
+      "id": "issue-181-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:10:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 181,
+        "title": "代码格式化",
+        "state": "closed",
+        "body": "1. c/c++ 代码\n2. 汇编代码\n3. cmake 代码\n4. shell 脚本"
+      }
+    },
+    {
+      "id": "issue-180-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:10:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 180,
+        "title": "代码规范 & commit 规范 & 文档规范",
+        "state": "closed",
+        "body": "1. 代码规范参考 .clang-format 文件\n2. commit 规范参考文件\n3. 文档规范 TODO"
+      }
+    },
+    {
+      "id": "issue-179-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:10:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 179,
+        "title": "测试",
+        "state": "closed",
+        "body": "内核测试比较麻烦，需要先设计出测试框架\n\n"
+      }
+    },
+    {
+      "id": "issue-178-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:10:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 178,
+        "title": "CI",
+        "state": "closed",
+        "body": "支持 github action，codecov 等"
+      }
+    },
+    {
+      "id": "issue-177-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:10:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 177,
+        "title": "IDE",
+        "state": "closed",
+        "body": "1. clion 配置文件\n2. vscode 配置文件"
+      }
+    },
+    {
+      "id": "issue-176-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:10:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 176,
+        "title": "定义项目信息",
+        "state": "closed",
+        "body": "在 cmake 中定义相关信息，生成头文件以供在内核中使用"
+      }
+    },
+    {
+      "id": "issue-175-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:10:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 175,
+        "title": "指定输出目录",
+        "state": "closed",
+        "body": "将第三方依赖、内核等编译生成的文件放到指定位置"
+      }
+    },
+    {
+      "id": "issue-174-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:09:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 174,
+        "title": "调试",
+        "state": "closed",
+        "body": "1. gdbinit\n2. make debug\n3. qemu 脚本"
+      }
+    },
+    {
+      "id": "issue-173-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:09:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 173,
+        "title": "docker",
+        "state": "closed",
+        "body": "dockerfile"
+      }
+    },
+    {
+      "id": "issue-172-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:08:55Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 172,
+        "title": "对第三方依赖的支持/构建",
+        "state": "closed",
+        "body": "自动下载并编译第三方依赖，自动生成相关 licence\n\n预计要使用的第三方内容\n\n|                          第三方内容                          |                     描述                      |     类型     |\n| :----------------------------------------------------------: | :-------------------------------------------: | :----------: |\n|        [CPM](https://github.com/cpm-cmake/CPM.cmake)         |                 cmake 包管理                  | cmake module |\n| [CPMLicences.cmake](https://github.com/TheLartians/CPMLicenses.cmake) |            为第三方包生成 licence             | cmake module |\n|  [google/googletest](https://github.com/google/googletest)   |                     测试                      |      库      |\n|   [easylogingpp](https://github.com/amrayn/easyloggingpp)    |                     日志                      |      库      |\n|           [rttr](https://github.com/rttrorg/rttr)            |         c++ 反射库，在设备驱动部分用          |      库      |\n| [Format.cmake](https://github.com/TheLartians/Format.cmake)  | 代码格式化，支持 clang-format 与 cmake-format | cmake module |\n|        [FreeImage](http://freeimage.sourceforge.net/)        |                   图片渲染                    |      库      |\n|            [Freetype](https://www.freetype.org/)             |                   字体渲染                    |      库      |\n|   [opensbi](https://github.com/riscv-software-src/opensbi)   |                  riscv 引导                   |      库      |\n|     [gnu-efi](https://sourceforge.net/projects/gnu-efi/)     |                 gnu uefi 引导                 |      库      |\n|      [posix-uefi](https://gitlab.com/bztsrc/posix-uefi)      |                posix uefi 引导                |      库      |\n|                [ovmf](SimpleKernel/3rd/ovmf)                 |             qemu 使用的 uefi 固件             |     bin      |\n|          [edk2](https://github.com/tianocore/edk2)           |        构建 qemu 使用的 uefi 固件 ovmf        |      库      |\n\n\n"
+      }
+    },
+    {
+      "id": "issue-171-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T23:08:36Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 171,
+        "title": "跨平台支持",
+        "state": "closed",
+        "body": "在不同的 host 上编译不同的 target，支持以下组合\n\n|      host     | target  | gcc | clang |\n|:-------------:|:-------:|:-------------:|:-------------:|\n| x86_64-osx    | x86_64  | x86_64_elf-gcc | TEST |\n| x86_64-osx    | aarch64 | aarch64-unknown-linux-gnu-gcc | TEST |\n| x86_64-osx    | riscv64 | riscv64-unknown-elf-gcc | TEST |\n| aarch64-osx   | x86_64  | TODO | TODO |\n| aarch64-osx   | aarch64 | TODO | TODO |\n| aarch64-osx   | riscv64 | TODO | TODO |\n| x86_64-ubuntu | x86_64  | gcc | TEST |\n| x86_64-ubuntu | aarch64 | aarch64-linux-gnu-gcc | TEST |\n| x86_64-ubuntu | riscv64 | riscv64-linux-gnu-gcc | TEST |\n| aarch64-ubuntu | x86_64  | TODO | TEST |\n| aarch64-ubuntu | aarch64 | TODO | TEST |\n| aarch64-ubuntu | riscv64 | TODO | TEST |\n| riscv64-ubuntu | x86_64  | TODO | TODO |\n| riscv64-ubuntu | aarch64 | TODO | TODO |\n| riscv64-ubuntu | riscv64 | TODO | TODO |\n\nhost:    编译平台\ntarget: 内核要运行的平台\ngcc:     使用的 gcc 名称\nclang:  使用的 clang 参数\nTODO: 暂无测试条件\nTEST:   需要进一步验证。"
+      }
+    },
+    {
+      "id": "issue-23-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:15:21Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 23,
+        "title": "docker",
+        "state": "closed",
+        "body": "dockerfile"
+      }
+    },
+    {
+      "id": "issue-22-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:15:06Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 22,
+        "title": "调试",
+        "state": "closed",
+        "body": "1. gdbinit\n2. make debug\n3. qemu 脚本"
+      }
+    },
+    {
+      "id": "issue-21-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:14:42Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 21,
+        "title": "指定输出目录",
+        "state": "closed",
+        "body": "将第三方依赖、内核等编译生成的文件放到指定位置"
+      }
+    },
+    {
+      "id": "issue-20-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:14:22Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 20,
+        "title": "定义项目信息",
+        "state": "closed",
+        "body": "在 cmake 中定义相关信息，生成头文件以供在内核中使用"
+      }
+    },
+    {
+      "id": "issue-19-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:13:36Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 19,
+        "title": "IDE",
+        "state": "closed",
+        "body": "1. clion 配置文件\n2. vscode 配置文件"
+      }
+    },
+    {
+      "id": "issue-18-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:13:02Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 18,
+        "title": "CI",
+        "state": "closed",
+        "body": "支持 github action，codecov 等"
+      }
+    },
+    {
+      "id": "issue-17-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:12:36Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 17,
+        "title": "测试",
+        "state": "closed",
+        "body": "内核测试比较麻烦，需要先设计出测试框架"
+      }
+    },
+    {
+      "id": "issue-16-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:12:03Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 16,
+        "title": "代码规范 & commit 规范 & 文档规范",
+        "state": "closed",
+        "body": "1. 代码规范参考 .clang-format 文件\n2. commit 规范参考文件\n3. 文档规范 TODO"
+      }
+    },
+    {
+      "id": "issue-15-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:10:52Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 15,
+        "title": "代码格式化",
+        "state": "closed",
+        "body": "1. c/c++ 代码\n2. 汇编代码\n3. cmake 代码\n4. shell 脚本"
+      }
+    },
+    {
+      "id": "issue-14-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:09:57Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 14,
+        "title": "内核构建",
+        "state": "closed",
+        "body": "生成 boot、内核 elf 文件\n\n需要考虑不同平台的区分，使用最小编译参数\n"
+      }
+    },
+    {
+      "id": "issue-13-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:08:55Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 13,
+        "title": "doxygen 文档生成",
+        "state": "closed",
+        "body": "1. 使用 doxygen 从注释生成文档\n2. doxygen 配置文件\n3. doxygen 在代码中的格式规范"
+      }
+    },
+    {
+      "id": "issue-12-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T16:07:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 12,
+        "title": "对第三方依赖的支持/构建",
+        "state": "closed",
+        "body": "自动下载并编译第三方依赖，自动生成相关 licence\n\n预计要使用的第三方内容\n\n|                          第三方内容                          |                     描述                      |     类型     |\n| :----------------------------------------------------------: | :-------------------------------------------: | :----------: |\n|        [CPM](https://github.com/cpm-cmake/CPM.cmake)         |                 cmake 包管理                  | cmake module |\n| [CPMLicences.cmake](https://github.com/TheLartians/CPMLicenses.cmake) |            为第三方包生成 licence             | cmake module |\n|  [google/googletest](https://github.com/google/googletest)   |                     测试                      |      库      |\n|   [easylogingpp](https://github.com/amrayn/easyloggingpp)    |                     日志                      |      库      |\n|           [rttr](https://github.com/rttrorg/rttr)            |         c++ 反射库，在设备驱动部分用          |      库      |\n| [Format.cmake](https://github.com/TheLartians/Format.cmake)  | 代码格式化，支持 clang-format 与 cmake-format | cmake module |\n|        [FreeImage](http://freeimage.sourceforge.net/)        |                   图片渲染                    |      库      |\n|            [Freetype](https://www.freetype.org/)             |                   字体渲染                    |      库      |\n|   [opensbi](https://github.com/riscv-software-src/opensbi)   |                  riscv 引导                   |      库      |\n|     [gnu-efi](https://sourceforge.net/projects/gnu-efi/)     |                 gnu uefi 引导                 |      库      |\n|      [posix-uefi](https://gitlab.com/bztsrc/posix-uefi)      |                posix uefi 引导                |      库      |\n|                [ovmf](SimpleKernel/3rd/ovmf)                 |             qemu 使用的 uefi 固件             |     bin      |\n|          [edk2](https://github.com/tianocore/edk2)           |        构建 qemu 使用的 uefi 固件 ovmf        |      库      |\n|          [gdbinit](https://github.com/gdbinit/Gdbinit)           |        gdb 配置        |      txt      |\n\n\n"
+      }
+    },
+    {
+      "id": "issue-11-MRNIU/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-07-11T15:48:21Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 11,
+        "title": "跨平台支持",
+        "state": "closed",
+        "body": "在不同的 host 上编译不同的 target，支持以下组合\n\n|      host     | target  | gcc | clang |\n|:-------------:|:-------:|:-------------:|:-------------:|\n| x86_64-osx    | x86_64  | x86_64_elf-gcc | TEST |\n| x86_64-osx    | aarch64 | aarch64-unknown-linux-gnu-gcc | TEST |\n| x86_64-osx    | riscv64 | riscv64-unknown-elf-gcc | TEST |\n| aarch64-osx   | x86_64  | TODO | TODO |\n| aarch64-osx   | aarch64 | TODO | TODO |\n| aarch64-osx   | riscv64 | TODO | TODO |\n| x86_64-ubuntu | x86_64  | gcc | TEST |\n| x86_64-ubuntu | aarch64 | aarch64-linux-gnu-gcc | TEST |\n| x86_64-ubuntu | riscv64 | riscv64-linux-gnu-gcc | TEST |\n| aarch64-ubuntu | x86_64  | TODO | TEST |\n| aarch64-ubuntu | aarch64 | TODO | TEST |\n| aarch64-ubuntu | riscv64 | TODO | TEST |\n| riscv64-ubuntu | x86_64  | TODO | TODO |\n| riscv64-ubuntu | aarch64 | TODO | TODO |\n| riscv64-ubuntu | riscv64 | TODO | TODO |\n\nhost:    编译平台\ntarget: 内核要运行的平台\ngcc:     使用的 gcc 名称\nclang:  使用的 clang 参数\nTODO: 暂无测试条件\nTEST:   需要进一步验证。"
+      }
+    }
+  ]
+}

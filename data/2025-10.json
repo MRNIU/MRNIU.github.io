@@ -1,0 +1,70 @@
+{
+  "month": "2025-10",
+  "events": [
+    {
+      "id": "commit-4a7e8f934cf7bda57097c200c987fff88d710bca",
+      "type": "commit",
+      "ts": "2025-10-30T09:56:03Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "4a7e8f934cf7bda57097c200c987fff88d710bca",
+        "message": "feat: add more TCR_EL1  bits\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 153,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-605ed9d86acbb230ef69149c0c07f66407d8fdce",
+      "type": "commit",
+      "ts": "2025-10-30T09:39:45Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "605ed9d86acbb230ef69149c0c07f66407d8fdce",
+        "message": "feat: add more SCTLR_EL1 bits\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-a85d9f31b073bc9e5bb5d79c5a9d9e4f3007d0d2",
+      "type": "commit",
+      "ts": "2025-10-30T09:39:34Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "a85d9f31b073bc9e5bb5d79c5a9d9e4f3007d0d2",
+        "message": "feat: add more SCTLR_EL1 bits\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 50,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-a810b378bcf4bd9f640a1fd95b5f4ec00cf37ad8",
+      "type": "commit",
+      "ts": "2025-10-15T06:14:53Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "a810b378bcf4bd9f640a1fd95b5f4ec00cf37ad8",
+        "message": "feat: add virtual memory support for aarch64\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 305,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-3c20a63240997566bde9aa74b4f54619e5ea4c1e",
+      "type": "commit",
+      "ts": "2025-10-15T06:05:39Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "3c20a63240997566bde9aa74b4f54619e5ea4c1e",
+        "message": "feat: add functions to get kernel/user page attribute\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 61,
+        "deletions": 0
+      }
+    }
+  ]
+}

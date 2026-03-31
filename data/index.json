@@ -1,37 +1,1255 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-03-30T02:00:00Z",
+  "generatedAt": "2026-03-31T15:54:39.998Z",
   "stats": {
-    "totalCommits": 2847,
-    "totalPRs": 156,
-    "totalReviews": 389,
-    "totalIssues": 73,
-    "totalComments": 291,
-    "activeRepos": 18,
-    "earliestEvent": "2023-06-15T10:00:00Z",
-    "latestEvent": "2026-03-29T23:45:00Z"
+    "totalCommits": 1984,
+    "totalPRs": 223,
+    "totalReviews": 4,
+    "totalIssues": 80,
+    "totalComments": 166,
+    "activeRepos": 64,
+    "earliestEvent": "2017-11-13T08:04:30Z",
+    "latestEvent": "2026-03-31T15:52:48Z"
   },
   "months": [
     {
       "key": "2026-03",
       "file": "2026-03.json",
-      "eventCount": 187,
-      "repos": ["MRNIU/SimpleKernel", "rcore-os/rCore", "nicklnick/pinux", "rust-embedded/rust-raspberrypi-OS-tutorials"],
-      "breakdown": { "commit": 98, "pull_request": 12, "review": 35, "issue": 6, "issue_comment": 32, "ai_roast": 4 }
+      "eventCount": 108,
+      "repos": [
+        "ETLCPP/etl",
+        "MRNIU/MRNIU.github.io",
+        "MRNIU/SimpleKernel",
+        "MRNIU/bmalloc",
+        "MRNIU/cpu_io",
+        "MRNIU/etl",
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleKernel",
+        "nicklnick/pinux",
+        "rcore-os/rCore",
+        "royal12646/Chinese-offensive-language-detect",
+        "rust-embedded/aarch64-cpu",
+        "rust-embedded/rust-raspberrypi-OS-tutorials",
+        "zephyrproject-rtos/zephyr"
+      ],
+      "breakdown": {
+        "commit": 74,
+        "pull_request": 17,
+        "issue_comment": 6,
+        "review": 4,
+        "ai_roast": 4,
+        "issue": 3
+      }
     },
     {
       "key": "2026-02",
       "file": "2026-02.json",
-      "eventCount": 156,
-      "repos": ["MRNIU/SimpleKernel", "rcore-os/rCore"],
-      "breakdown": { "commit": 82, "pull_request": 9, "review": 28, "issue": 5, "issue_comment": 28, "ai_roast": 4 }
+      "eventCount": 11,
+      "repos": [
+        "521xueweihan/HelloGitHub",
+        "GitHubDaily/GitHubDaily",
+        "MRNIU/FreeRTOS-PortentaH7",
+        "MRNIU/MPMCQueue",
+        "MRNIU/cpu_io",
+        "Simple-XX/SimpleKernel",
+        "Wechat-ggGitHub/Awesome-GitHub-Repo"
+      ],
+      "breakdown": {
+        "commit": 6,
+        "issue": 3,
+        "pull_request": 1,
+        "issue_comment": 1
+      }
     },
     {
       "key": "2026-01",
       "file": "2026-01.json",
-      "eventCount": 134,
-      "repos": ["MRNIU/SimpleKernel", "MRNIU/SiYuan-Chat-Plugin"],
-      "breakdown": { "commit": 71, "pull_request": 8, "review": 22, "issue": 4, "issue_comment": 25, "ai_roast": 4 }
+      "eventCount": 38,
+      "repos": [
+        "MRNIU/MPMCQueue",
+        "MRNIU/bmalloc",
+        "MRNIU/cpu_io",
+        "MRNIU/factorio_BestLanding",
+        "MRNIU/factorio_LegendaryMechStart",
+        "MRNIU/factorio_LegendaryShipStart",
+        "MRNIU/siyuan-note-ai",
+        "zephyrproject-rtos/zephyr"
+      ],
+      "breakdown": {
+        "commit": 37,
+        "issue_comment": 1
+      }
+    },
+    {
+      "key": "2025-12",
+      "file": "2025-12.json",
+      "eventCount": 10,
+      "repos": [
+        "MRNIU/factorio_BestLanding",
+        "MRNIU/factorio_LegendaryMechStart",
+        "MRNIU/factorio_LegendaryShipStart",
+        "zephyrproject-rtos/zephyr"
+      ],
+      "breakdown": {
+        "commit": 9,
+        "issue_comment": 1
+      }
+    },
+    {
+      "key": "2025-11",
+      "file": "2025-11.json",
+      "eventCount": 5,
+      "repos": [
+        "MRNIU/bmalloc",
+        "MRNIU/cpu_io"
+      ],
+      "breakdown": {
+        "commit": 5
+      }
+    },
+    {
+      "key": "2025-10",
+      "file": "2025-10.json",
+      "eventCount": 5,
+      "repos": [
+        "MRNIU/cpu_io"
+      ],
+      "breakdown": {
+        "commit": 5
+      }
+    },
+    {
+      "key": "2025-09",
+      "file": "2025-09.json",
+      "eventCount": 46,
+      "repos": [
+        "MRNIU/bmalloc",
+        "zephyrproject-rtos/zephyr"
+      ],
+      "breakdown": {
+        "commit": 41,
+        "issue_comment": 1,
+        "pull_request": 4
+      }
+    },
+    {
+      "key": "2025-08",
+      "file": "2025-08.json",
+      "eventCount": 147,
+      "repos": [
+        "MRNIU/bmalloc",
+        "MRNIU/cpu_io",
+        "MRNIU/opensbi_interface"
+      ],
+      "breakdown": {
+        "commit": 147
+      }
+    },
+    {
+      "key": "2025-07",
+      "file": "2025-07.json",
+      "eventCount": 31,
+      "repos": [
+        "MRNIU/cpu_io",
+        "MRNIU/misc",
+        "MRNIU/resume",
+        "zephyrproject-rtos/zephyr"
+      ],
+      "breakdown": {
+        "commit": 6,
+        "pull_request": 14,
+        "issue_comment": 11
+      }
+    },
+    {
+      "key": "2025-06",
+      "file": "2025-06.json",
+      "eventCount": 29,
+      "repos": [
+        "MRNIU/nzh_factorio_mod",
+        "factoriotools/factorio-docker"
+      ],
+      "breakdown": {
+        "commit": 27,
+        "issue_comment": 1,
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2025-05",
+      "file": "2025-05.json",
+      "eventCount": 4,
+      "repos": [
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "pull_request": 1,
+        "commit": 3
+      }
+    },
+    {
+      "key": "2025-04",
+      "file": "2025-04.json",
+      "eventCount": 5,
+      "repos": [
+        "MRNIU/cpu_io"
+      ],
+      "breakdown": {
+        "commit": 5
+      }
+    },
+    {
+      "key": "2025-02",
+      "file": "2025-02.json",
+      "eventCount": 3,
+      "repos": [
+        "MRNIU/cpu_io"
+      ],
+      "breakdown": {
+        "commit": 3
+      }
+    },
+    {
+      "key": "2025-01",
+      "file": "2025-01.json",
+      "eventCount": 71,
+      "repos": [
+        "MRNIU/cpu_io"
+      ],
+      "breakdown": {
+        "commit": 71
+      }
+    },
+    {
+      "key": "2024-12",
+      "file": "2024-12.json",
+      "eventCount": 1,
+      "repos": [
+        "MRNIU/resume"
+      ],
+      "breakdown": {
+        "commit": 1
+      }
+    },
+    {
+      "key": "2024-09",
+      "file": "2024-09.json",
+      "eventCount": 3,
+      "repos": [
+        "MRNIU/nzh_factorio_mod",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "pull_request": 2,
+        "commit": 1
+      }
+    },
+    {
+      "key": "2024-08",
+      "file": "2024-08.json",
+      "eventCount": 4,
+      "repos": [
+        "MRNIU/nzh_factorio_mod",
+        "ST-Robot/bulletin",
+        "Simple-XX/SimpleGameEngine"
+      ],
+      "breakdown": {
+        "commit": 2,
+        "issue_comment": 2
+      }
+    },
+    {
+      "key": "2024-07",
+      "file": "2024-07.json",
+      "eventCount": 18,
+      "repos": [
+        "MRNIU/nzh_factorio_mod"
+      ],
+      "breakdown": {
+        "commit": 18
+      }
+    },
+    {
+      "key": "2024-06",
+      "file": "2024-06.json",
+      "eventCount": 7,
+      "repos": [
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleGameEngine",
+        "Simple-XX/SimpleKernel",
+        "libunwind/libunwind",
+        "riscv-software-src/opensbi"
+      ],
+      "breakdown": {
+        "pull_request": 2,
+        "commit": 1,
+        "issue_comment": 2,
+        "issue": 2
+      }
+    },
+    {
+      "key": "2024-05",
+      "file": "2024-05.json",
+      "eventCount": 1,
+      "repos": [
+        "Simple-XX/SimpleGameEngine"
+      ],
+      "breakdown": {
+        "issue_comment": 1
+      }
+    },
+    {
+      "key": "2024-04",
+      "file": "2024-04.json",
+      "eventCount": 7,
+      "repos": [
+        "MRNIU/opensbi_interface",
+        "Simple-XX/OSPP"
+      ],
+      "breakdown": {
+        "commit": 7
+      }
+    },
+    {
+      "key": "2024-03",
+      "file": "2024-03.json",
+      "eventCount": 18,
+      "repos": [
+        "MRNIU/opensbi_interface",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 18
+      }
+    },
+    {
+      "key": "2024-01",
+      "file": "2024-01.json",
+      "eventCount": 1,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue": 1
+      }
+    },
+    {
+      "key": "2023-12",
+      "file": "2023-12.json",
+      "eventCount": 7,
+      "repos": [
+        "MRNIU/resume",
+        "Simple-XX/SimpleGameEngine",
+        "Simple-XX/SimplePhysicsEngine",
+        "bkaradzic/bgfx.cmake-archived"
+      ],
+      "breakdown": {
+        "commit": 4,
+        "pull_request": 1,
+        "issue_comment": 2
+      }
+    },
+    {
+      "key": "2023-11",
+      "file": "2023-11.json",
+      "eventCount": 19,
+      "repos": [
+        "Simple-XX/SimpleGameEngine",
+        "Simple-XX/SimplePhysicsEngine",
+        "bkaradzic/bgfx.cmake-archived"
+      ],
+      "breakdown": {
+        "issue_comment": 7,
+        "pull_request": 4,
+        "issue": 8
+      }
+    },
+    {
+      "key": "2023-10",
+      "file": "2023-10.json",
+      "eventCount": 37,
+      "repos": [
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleGameEngine",
+        "Simple-XX/SimplePhysicsEngine"
+      ],
+      "breakdown": {
+        "pull_request": 3,
+        "issue": 1,
+        "commit": 33
+      }
+    },
+    {
+      "key": "2023-09",
+      "file": "2023-09.json",
+      "eventCount": 11,
+      "repos": [
+        "MRNIU/MRNIU.github.io",
+        "MRNIU/SimpleKernel",
+        "MRNIU/nzh_factorio_mod",
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 3,
+        "issue_comment": 8
+      }
+    },
+    {
+      "key": "2023-08",
+      "file": "2023-08.json",
+      "eventCount": 3,
+      "repos": [
+        "MRNIU/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 3
+      }
+    },
+    {
+      "key": "2023-07",
+      "file": "2023-07.json",
+      "eventCount": 28,
+      "repos": [
+        "MRNIU/SimpleKernel",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 2,
+        "issue": 26
+      }
+    },
+    {
+      "key": "2023-06",
+      "file": "2023-06.json",
+      "eventCount": 11,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 2,
+        "issue": 6,
+        "pull_request": 3
+      }
+    },
+    {
+      "key": "2023-05",
+      "file": "2023-05.json",
+      "eventCount": 46,
+      "repos": [
+        "MRNIU/nzh_factorio_mod",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 1,
+        "commit": 34,
+        "pull_request": 11
+      }
+    },
+    {
+      "key": "2023-04",
+      "file": "2023-04.json",
+      "eventCount": 102,
+      "repos": [
+        "MRNIU/nzh_factorio_mod",
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 75,
+        "pull_request": 18,
+        "issue_comment": 9
+      }
+    },
+    {
+      "key": "2023-03",
+      "file": "2023-03.json",
+      "eventCount": 34,
+      "repos": [
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleGameEngine",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 32,
+        "issue_comment": 1,
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2023-02",
+      "file": "2023-02.json",
+      "eventCount": 1,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue": 1
+      }
+    },
+    {
+      "key": "2022-11",
+      "file": "2022-11.json",
+      "eventCount": 3,
+      "repos": [
+        "Simple-XX/SimpleGameEngine"
+      ],
+      "breakdown": {
+        "issue_comment": 2,
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2022-08",
+      "file": "2022-08.json",
+      "eventCount": 2,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 2
+      }
+    },
+    {
+      "key": "2022-07",
+      "file": "2022-07.json",
+      "eventCount": 1,
+      "repos": [
+        "haiku/website"
+      ],
+      "breakdown": {
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2022-06",
+      "file": "2022-06.json",
+      "eventCount": 16,
+      "repos": [
+        "MRNIU/FreeRTOS-PortentaH7",
+        "MRNIU/libcxxrt",
+        "Simple-XX/SimpleKernel",
+        "haiku/website"
+      ],
+      "breakdown": {
+        "pull_request": 2,
+        "issue": 2,
+        "commit": 11,
+        "issue_comment": 1
+      }
+    },
+    {
+      "key": "2022-05",
+      "file": "2022-05.json",
+      "eventCount": 12,
+      "repos": [
+        "EugeneLiu/translationCSAPP",
+        "MRNIU/resume",
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleKernel",
+        "gsoc-cn/gsoc-cn",
+        "haiku/website",
+        "hzcx998/XBook"
+      ],
+      "breakdown": {
+        "issue_comment": 4,
+        "pull_request": 2,
+        "commit": 6
+      }
+    },
+    {
+      "key": "2022-04",
+      "file": "2022-04.json",
+      "eventCount": 22,
+      "repos": [
+        "MRNIU/resume",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 13,
+        "pull_request": 9
+      }
+    },
+    {
+      "key": "2022-03",
+      "file": "2022-03.json",
+      "eventCount": 11,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 11
+      }
+    },
+    {
+      "key": "2022-02",
+      "file": "2022-02.json",
+      "eventCount": 5,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 5
+      }
+    },
+    {
+      "key": "2022-01",
+      "file": "2022-01.json",
+      "eventCount": 114,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 103,
+        "issue_comment": 2,
+        "pull_request": 9
+      }
+    },
+    {
+      "key": "2021-12",
+      "file": "2021-12.json",
+      "eventCount": 19,
+      "repos": [
+        "MRNIU/SimpleKernel",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 1,
+        "commit": 18
+      }
+    },
+    {
+      "key": "2021-11",
+      "file": "2021-11.json",
+      "eventCount": 82,
+      "repos": [
+        "MRNIU/SimpleKernel",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 68,
+        "pull_request": 13,
+        "issue_comment": 1
+      }
+    },
+    {
+      "key": "2021-08",
+      "file": "2021-08.json",
+      "eventCount": 22,
+      "repos": [
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 21,
+        "issue": 1
+      }
+    },
+    {
+      "key": "2021-07",
+      "file": "2021-07.json",
+      "eventCount": 167,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 164,
+        "pull_request": 3
+      }
+    },
+    {
+      "key": "2021-06",
+      "file": "2021-06.json",
+      "eventCount": 71,
+      "repos": [
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 64,
+        "pull_request": 7
+      }
+    },
+    {
+      "key": "2021-05",
+      "file": "2021-05.json",
+      "eventCount": 38,
+      "repos": [
+        "Alinshans/MyTinySTL",
+        "HUST-OS/xv6-k210",
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 4,
+        "commit": 33,
+        "issue": 1
+      }
+    },
+    {
+      "key": "2021-04",
+      "file": "2021-04.json",
+      "eventCount": 188,
+      "repos": [
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 173,
+        "pull_request": 15
+      }
+    },
+    {
+      "key": "2021-03",
+      "file": "2021-03.json",
+      "eventCount": 2,
+      "repos": [
+        "GitHubDaily/GitHubDaily",
+        "GrowingGit/GitHub-Chinese-Top-Charts"
+      ],
+      "breakdown": {
+        "issue": 2
+      }
+    },
+    {
+      "key": "2021-02",
+      "file": "2021-02.json",
+      "eventCount": 52,
+      "repos": [
+        "MRNIU/libcxxrt",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 1,
+        "commit": 41,
+        "pull_request": 10
+      }
+    },
+    {
+      "key": "2021-01",
+      "file": "2021-01.json",
+      "eventCount": 49,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 46,
+        "issue_comment": 3
+      }
+    },
+    {
+      "key": "2020-12",
+      "file": "2020-12.json",
+      "eventCount": 23,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "pull_request": 7,
+        "commit": 15,
+        "issue_comment": 1
+      }
+    },
+    {
+      "key": "2020-11",
+      "file": "2020-11.json",
+      "eventCount": 16,
+      "repos": [
+        "Simple-XX/SimpleGameEngine",
+        "Simple-XX/SimpleKernel",
+        "Simple-XX/tools"
+      ],
+      "breakdown": {
+        "commit": 12,
+        "pull_request": 4
+      }
+    },
+    {
+      "key": "2020-10",
+      "file": "2020-10.json",
+      "eventCount": 123,
+      "repos": [
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleKernel",
+        "SynestiaOS/SynestiaOS"
+      ],
+      "breakdown": {
+        "commit": 104,
+        "pull_request": 19
+      }
+    },
+    {
+      "key": "2020-09",
+      "file": "2020-09.json",
+      "eventCount": 26,
+      "repos": [
+        "Simple-XX/SimpleKernel",
+        "SynestiaOS/SynestiaOS"
+      ],
+      "breakdown": {
+        "commit": 24,
+        "pull_request": 2
+      }
+    },
+    {
+      "key": "2020-08",
+      "file": "2020-08.json",
+      "eventCount": 12,
+      "repos": [
+        "MRNIU/FreeRTOS-PortentaH7",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue": 1,
+        "commit": 7,
+        "issue_comment": 4
+      }
+    },
+    {
+      "key": "2020-07",
+      "file": "2020-07.json",
+      "eventCount": 11,
+      "repos": [
+        "MRNIU/FreeRTOS-PortentaH7",
+        "MRNIU/MRNIU",
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 1,
+        "commit": 10
+      }
+    },
+    {
+      "key": "2020-06",
+      "file": "2020-06.json",
+      "eventCount": 10,
+      "repos": [
+        "MRNIU/FreeRTOS-PortentaH7",
+        "Simple-XX/OSPP"
+      ],
+      "breakdown": {
+        "commit": 10
+      }
+    },
+    {
+      "key": "2020-05",
+      "file": "2020-05.json",
+      "eventCount": 21,
+      "repos": [
+        "MRNIU/FreeRTOS-PortentaH7",
+        "Simple-XX/OSPP",
+        "Simple-XX/SimpleCompiler",
+        "arduino-libraries/Keyboard",
+        "arduino/summer-of-code",
+        "gsoc-cn/gsoc-cn"
+      ],
+      "breakdown": {
+        "issue_comment": 10,
+        "commit": 7,
+        "pull_request": 2,
+        "issue": 2
+      }
+    },
+    {
+      "key": "2020-04",
+      "file": "2020-04.json",
+      "eventCount": 16,
+      "repos": [
+        "NicoHood/HID",
+        "Simple-XX/SimpleKernel",
+        "arduino-libraries/Keyboard"
+      ],
+      "breakdown": {
+        "issue_comment": 4,
+        "issue": 1,
+        "commit": 11
+      }
+    },
+    {
+      "key": "2020-03",
+      "file": "2020-03.json",
+      "eventCount": 19,
+      "repos": [
+        "Simple-XX/SimpleKernel",
+        "arduino-libraries/Keyboard",
+        "arduino/summer-of-code",
+        "hzcx998/XBook"
+      ],
+      "breakdown": {
+        "issue_comment": 5,
+        "pull_request": 1,
+        "commit": 12,
+        "issue": 1
+      }
+    },
+    {
+      "key": "2020-02",
+      "file": "2020-02.json",
+      "eventCount": 49,
+      "repos": [
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleKernel",
+        "hzcx998/XBook"
+      ],
+      "breakdown": {
+        "commit": 42,
+        "pull_request": 5,
+        "issue_comment": 1,
+        "issue": 1
+      }
+    },
+    {
+      "key": "2020-01",
+      "file": "2020-01.json",
+      "eventCount": 28,
+      "repos": [
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 27,
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2019-12",
+      "file": "2019-12.json",
+      "eventCount": 54,
+      "repos": [
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 42,
+        "issue_comment": 11,
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2019-11",
+      "file": "2019-11.json",
+      "eventCount": 9,
+      "repos": [
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 7,
+        "issue_comment": 2
+      }
+    },
+    {
+      "key": "2019-10",
+      "file": "2019-10.json",
+      "eventCount": 12,
+      "repos": [
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 10,
+        "issue_comment": 1,
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2019-09",
+      "file": "2019-09.json",
+      "eventCount": 9,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 9
+      }
+    },
+    {
+      "key": "2019-08",
+      "file": "2019-08.json",
+      "eventCount": 2,
+      "repos": [
+        "alibaba/AliOS-Things"
+      ],
+      "breakdown": {
+        "pull_request": 2
+      }
+    },
+    {
+      "key": "2019-07",
+      "file": "2019-07.json",
+      "eventCount": 1,
+      "repos": [
+        "alibaba/AliOS-Things"
+      ],
+      "breakdown": {
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2019-06",
+      "file": "2019-06.json",
+      "eventCount": 4,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue_comment": 4
+      }
+    },
+    {
+      "key": "2019-05",
+      "file": "2019-05.json",
+      "eventCount": 11,
+      "repos": [
+        "Simple-XX/SimpleKernel",
+        "alibaba/AliOS-Things"
+      ],
+      "breakdown": {
+        "issue_comment": 9,
+        "commit": 2
+      }
+    },
+    {
+      "key": "2019-04",
+      "file": "2019-04.json",
+      "eventCount": 6,
+      "repos": [
+        "996icu/996.ICU",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 4,
+        "pull_request": 2
+      }
+    },
+    {
+      "key": "2019-03",
+      "file": "2019-03.json",
+      "eventCount": 21,
+      "repos": [
+        "EugeneLiu/translationCSAPP",
+        "Simple-XX/SimpleKernel",
+        "haiku/website"
+      ],
+      "breakdown": {
+        "commit": 17,
+        "issue_comment": 2,
+        "pull_request": 2
+      }
+    },
+    {
+      "key": "2019-02",
+      "file": "2019-02.json",
+      "eventCount": 5,
+      "repos": [
+        "EugeneLiu/translationCSAPP",
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 2,
+        "issue_comment": 3
+      }
+    },
+    {
+      "key": "2019-01",
+      "file": "2019-01.json",
+      "eventCount": 37,
+      "repos": [
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleKernel",
+        "ruanyf/weekly"
+      ],
+      "breakdown": {
+        "commit": 29,
+        "issue_comment": 2,
+        "pull_request": 2,
+        "issue": 4
+      }
+    },
+    {
+      "key": "2018-12",
+      "file": "2018-12.json",
+      "eventCount": 48,
+      "repos": [
+        "521xueweihan/HelloGitHub",
+        "CasterWx/AntzOS",
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 44,
+        "issue_comment": 1,
+        "pull_request": 2,
+        "issue": 1
+      }
+    },
+    {
+      "key": "2018-11",
+      "file": "2018-11.json",
+      "eventCount": 13,
+      "repos": [
+        "ApolloZhu/Dynamic-Dark-Mode",
+        "EugeneLiu/translationCSAPP",
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleKernel",
+        "haiku/website"
+      ],
+      "breakdown": {
+        "issue_comment": 6,
+        "pull_request": 5,
+        "commit": 2
+      }
+    },
+    {
+      "key": "2018-10",
+      "file": "2018-10.json",
+      "eventCount": 23,
+      "repos": [
+        "ApolloZhu/Dynamic-Dark-Mode",
+        "Homebrew/homebrew-core",
+        "Simple-XX/SimpleCompiler",
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "issue": 1,
+        "commit": 15,
+        "pull_request": 2,
+        "issue_comment": 5
+      }
+    },
+    {
+      "key": "2018-09",
+      "file": "2018-09.json",
+      "eventCount": 7,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 7
+      }
+    },
+    {
+      "key": "2018-08",
+      "file": "2018-08.json",
+      "eventCount": 9,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 7,
+        "issue": 2
+      }
+    },
+    {
+      "key": "2018-07",
+      "file": "2018-07.json",
+      "eventCount": 11,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 11
+      }
+    },
+    {
+      "key": "2018-06",
+      "file": "2018-06.json",
+      "eventCount": 42,
+      "repos": [
+        "Simple-XX/SimpleKernel",
+        "atom/atom"
+      ],
+      "breakdown": {
+        "issue_comment": 3,
+        "issue": 4,
+        "commit": 30,
+        "pull_request": 5
+      }
+    },
+    {
+      "key": "2018-05",
+      "file": "2018-05.json",
+      "eventCount": 12,
+      "repos": [
+        "Simple-XX/SimpleKernel"
+      ],
+      "breakdown": {
+        "commit": 12
+      }
+    },
+    {
+      "key": "2018-04",
+      "file": "2018-04.json",
+      "eventCount": 2,
+      "repos": [
+        "Simple-XX/SimpleKernel",
+        "falvaro/pme_parser"
+      ],
+      "breakdown": {
+        "commit": 1,
+        "issue_comment": 1
+      }
+    },
+    {
+      "key": "2018-03",
+      "file": "2018-03.json",
+      "eventCount": 11,
+      "repos": [
+        "Simple-XX/SimpleKernel",
+        "TeamStuQ/skill-map",
+        "falvaro/seshat",
+        "haiku/website",
+        "xitu/tensorflow-docs"
+      ],
+      "breakdown": {
+        "issue_comment": 4,
+        "pull_request": 1,
+        "commit": 5,
+        "issue": 1
+      }
+    },
+    {
+      "key": "2018-02",
+      "file": "2018-02.json",
+      "eventCount": 6,
+      "repos": [
+        "racket/racket",
+        "racket/string-constants",
+        "tyrchen/racket-book"
+      ],
+      "breakdown": {
+        "issue_comment": 3,
+        "issue": 2,
+        "pull_request": 1
+      }
+    },
+    {
+      "key": "2017-12",
+      "file": "2017-12.json",
+      "eventCount": 1,
+      "repos": [
+        "xitu/gold-miner"
+      ],
+      "breakdown": {
+        "issue": 1
+      }
+    },
+    {
+      "key": "2017-11",
+      "file": "2017-11.json",
+      "eventCount": 3,
+      "repos": [
+        "xitu/gold-miner"
+      ],
+      "breakdown": {
+        "issue_comment": 2,
+        "issue": 1
+      }
     }
   ]
 }

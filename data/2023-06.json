@@ -1,0 +1,146 @@
+{
+  "month": "2023-06",
+  "events": [
+    {
+      "id": "comment-Simple-XX/SimpleKernel-169-46",
+      "type": "issue_comment",
+      "ts": "2023-06-29T02:44:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 169,
+        "issueTitle": "[HELP]无法生成iso文件",
+        "body": "@Exbilar \r\nhi，可以把你的解决方式贴上来，帮助其他同学。"
+      }
+    },
+    {
+      "id": "issue-168-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-06-16T16:36:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 168,
+        "title": "stl 支持",
+        "state": "closed",
+        "body": "为内核提供 stl 支持"
+      }
+    },
+    {
+      "id": "issue-167-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-06-16T05:41:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 167,
+        "title": "x86_64 UEFI 支持",
+        "state": "closed",
+        "body": "x86_64 平台下的 uefi 支持。\n启动、ui、硬件信息处理。"
+      }
+    },
+    {
+      "id": "issue-166-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-06-16T04:31:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 166,
+        "title": "文档",
+        "state": "closed",
+        "body": "长期维护"
+      }
+    },
+    {
+      "id": "issue-165-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-06-16T04:30:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 165,
+        "title": "aarch64 支持",
+        "state": "closed",
+        "body": ""
+      }
+    },
+    {
+      "id": "issue-164-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-06-16T04:30:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 164,
+        "title": "代码格式",
+        "state": "closed",
+        "body": "长期问题，保证代码风格的一致性"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-163-47",
+      "type": "issue_comment",
+      "ts": "2023-06-16T04:26:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 163,
+        "issueTitle": "clang 支持",
+        "body": "添加了脚本支持，但还编不过\r\nhttps://github.com/MRNIU/SimpleKernel/commit/fa2df85ab3fbb706a145eb6c03a0a2411155168a"
+      }
+    },
+    {
+      "id": "issue-163-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-06-16T04:25:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 163,
+        "title": "clang 支持",
+        "state": "closed",
+        "body": "相比 gcc，clang 可以简单构造出交叉编译工具链，可以省去配置环境的麻烦。"
+      }
+    },
+    {
+      "id": "pr-162-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2023-06-15T01:32:00Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 162,
+        "title": "Parse boot info",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-161-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2023-06-15T01:31:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 161,
+        "title": "Printf",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-160-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2023-06-15T01:31:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 160,
+        "title": "Boot",
+        "state": "merged",
+        "body": ""
+      }
+    }
+  ]
+}

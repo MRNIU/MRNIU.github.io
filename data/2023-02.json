@@ -1,0 +1,18 @@
+{
+  "month": "2023-02",
+  "events": [
+    {
+      "id": "issue-126-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2023-02-20T08:53:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 126,
+        "title": "env 部分添加注释",
+        "state": "closed",
+        "body": "https://github.com/Simple-XX/SimpleKernel/pull/125"
+      }
+    }
+  ]
+}

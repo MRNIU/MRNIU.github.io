@@ -1,0 +1,70 @@
+{
+  "month": "2025-04",
+  "events": [
+    {
+      "id": "commit-47c3a1ac1cc64e429233cea6a81dea252c48bce8",
+      "type": "commit",
+      "ts": "2025-04-07T09:03:29Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "47c3a1ac1cc64e429233cea6a81dea252c48bce8",
+        "message": "feat: aarch64 smc psci support\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 12,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-66871f1436e1cf21b222a74e2d885637a6d40341",
+      "type": "commit",
+      "ts": "2025-04-07T08:24:22Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "66871f1436e1cf21b222a74e2d885637a6d40341",
+        "message": "feat: aarch64 smc psci support\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 41,
+        "deletions": 28
+      }
+    },
+    {
+      "id": "commit-ce1a729eb3f80d2374eef55f889619f58e36fdbb",
+      "type": "commit",
+      "ts": "2025-04-07T07:32:49Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "ce1a729eb3f80d2374eef55f889619f58e36fdbb",
+        "message": "feat: aarch64 smc psci support\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 25,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-c25ca77b34280c8ea6881dd36eb6ace54197380b",
+      "type": "commit",
+      "ts": "2025-04-07T07:31:54Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "c25ca77b34280c8ea6881dd36eb6ace54197380b",
+        "message": "feat: aarch64 smc psci support\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 185,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-f5ea4c0bf9c1d9a28ab59c7d21b630019bfe8ae1",
+      "type": "commit",
+      "ts": "2025-04-03T04:28:39Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "f5ea4c0bf9c1d9a28ab59c7d21b630019bfe8ae1",
+        "message": "feat: add aarch64 x0\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
+        "additions": 9,
+        "deletions": 2
+      }
+    }
+  ]
+}

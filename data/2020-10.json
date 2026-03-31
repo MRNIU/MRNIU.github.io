@@ -1,0 +1,1604 @@
+{
+  "month": "2020-10",
+  "events": [
+    {
+      "id": "commit-fbb2ff552108f1e2606e4486ec0c31ceef1ecf95",
+      "type": "commit",
+      "ts": "2020-10-27T20:02:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "fbb2ff552108f1e2606e4486ec0c31ceef1ecf95",
+        "message": "feat(framebuffer): 现在可以操作 raspi2 的显存了",
+        "additions": 38,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-cc6ab8900174da3e005dcfbd4da33ef95cdeffab",
+      "type": "commit",
+      "ts": "2020-10-27T18:23:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "cc6ab8900174da3e005dcfbd4da33ef95cdeffab",
+        "message": "Merge pull request #43 from MRNIU/pmm\n\nPmm",
+        "additions": 196,
+        "deletions": 178
+      }
+    },
+    {
+      "id": "commit-2ee155803166ea3357514acdd9fb6ae071cc713e",
+      "type": "commit",
+      "ts": "2020-10-27T18:21:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "2ee155803166ea3357514acdd9fb6ae071cc713e",
+        "message": "Merge pull request #45 from MRNIU/vmm\n\nVmm",
+        "additions": 201,
+        "deletions": 180
+      }
+    },
+    {
+      "id": "commit-b4f35e55614cec4fd62e4d9f0d61f951d19db2ce",
+      "type": "commit",
+      "ts": "2020-10-27T18:20:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "b4f35e55614cec4fd62e4d9f0d61f951d19db2ce",
+        "message": "Merge pull request #40 from MRNIU/print_only\n\nPrint only",
+        "additions": 16,
+        "deletions": 42
+      }
+    },
+    {
+      "id": "pr-45-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-27T18:19:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 45,
+        "title": "Vmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-44-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-27T18:19:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 44,
+        "title": "Pmm buffer",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-43-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-27T18:18:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 43,
+        "title": "Pmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-42-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-27T18:18:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 42,
+        "title": "Keyboard init",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-41-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-27T18:18:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 41,
+        "title": "Intr timer",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-40-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-27T18:17:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 40,
+        "title": "Print only",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-ed8bb1949773ce17de21e5078230d88254cf5cda",
+      "type": "commit",
+      "ts": "2020-10-27T18:16:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ed8bb1949773ce17de21e5078230d88254cf5cda",
+        "message": "dosc(README)",
+        "additions": 9,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-f55d1d4e28d7a6c089f99da9ec85830b1d42a96b",
+      "type": "commit",
+      "ts": "2020-10-27T18:13:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "f55d1d4e28d7a6c089f99da9ec85830b1d42a96b",
+        "message": "feat(raspi2): 树莓派2 支持\ndocs(codestyle): 更新 clang-format 文件\nfeat(hardware): 将硬件相关代码移到 headware.h",
+        "additions": 868,
+        "deletions": 72
+      }
+    },
+    {
+      "id": "commit-ed229a508ea5231d3f6c7025db7b09a6359f2254",
+      "type": "commit",
+      "ts": "2020-10-27T10:23:07Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "ed229a508ea5231d3f6c7025db7b09a6359f2254",
+        "message": "feat(cmake): toolchain for arm",
+        "additions": 129,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-4a2b8fe8d8b6f7671950454cfe799ab35a6f6328",
+      "type": "commit",
+      "ts": "2020-10-27T10:08:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4a2b8fe8d8b6f7671950454cfe799ab35a6f6328",
+        "message": "pref: 删除不必要的文件",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-8c95a7996906f5c1cecbc9921659c7af22770e33",
+      "type": "commit",
+      "ts": "2020-10-27T10:07:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8c95a7996906f5c1cecbc9921659c7af22770e33",
+        "message": "style(copyright)",
+        "additions": 110,
+        "deletions": 108
+      }
+    },
+    {
+      "id": "commit-a10a321daca7cadcfadd2111b49c431dd1282fc9",
+      "type": "commit",
+      "ts": "2020-10-27T10:05:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a10a321daca7cadcfadd2111b49c431dd1282fc9",
+        "message": "docs(gitignore)",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-85c0a83874248831e9e80432db43f19852ccd95b",
+      "type": "commit",
+      "ts": "2020-10-27T10:00:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "85c0a83874248831e9e80432db43f19852ccd95b",
+        "message": "pref(cmake)",
+        "additions": 1,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-77527498c10da04652223fb0f6b8be179b7402bb",
+      "type": "commit",
+      "ts": "2020-10-27T09:55:20Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "77527498c10da04652223fb0f6b8be179b7402bb",
+        "message": "docs(gitignore)",
+        "additions": 4,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-dc7ffe0001e3271696762fca69d22694270160ed",
+      "type": "commit",
+      "ts": "2020-10-27T09:54:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "dc7ffe0001e3271696762fca69d22694270160ed",
+        "message": "pref: 删除不必要的文件",
+        "additions": 0,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-c5e8628693b445d18b584f2c6a4485a359d2cd67",
+      "type": "commit",
+      "ts": "2020-10-27T09:53:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c5e8628693b445d18b584f2c6a4485a359d2cd67",
+        "message": "pref: 删除不必要的文件",
+        "additions": 2,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-918597d01978172ce6ac48d122bd3028d247f9bc",
+      "type": "commit",
+      "ts": "2020-10-27T09:49:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "918597d01978172ce6ac48d122bd3028d247f9bc",
+        "message": "Delete kernel.bin",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-4a7146d1b05639a2e811a9545f41017b9802e07d",
+      "type": "commit",
+      "ts": "2020-10-27T09:49:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4a7146d1b05639a2e811a9545f41017b9802e07d",
+        "message": "Delete simplekernel.iso",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-5991cf8a41d174052d8ad609c8631cbd72f29dc0",
+      "type": "commit",
+      "ts": "2020-10-27T09:49:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5991cf8a41d174052d8ad609c8631cbd72f29dc0",
+        "message": "Delete simplekernel.img",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-aa7955a6857e8b9a33d732ea5b6053ad67ddc904",
+      "type": "commit",
+      "ts": "2020-10-27T09:48:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "aa7955a6857e8b9a33d732ea5b6053ad67ddc904",
+        "message": "docs(gitignore)",
+        "additions": 3,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-21c45b20dd5b05494ca94fe8f564b7e408210156",
+      "type": "commit",
+      "ts": "2020-10-27T09:46:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "21c45b20dd5b05494ca94fe8f564b7e408210156",
+        "message": "pref(cmake): 优化变量名",
+        "additions": 9,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-e584ed6c048ede442fc10efb62a28e487c3da9a3",
+      "type": "commit",
+      "ts": "2020-10-23T17:55:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e584ed6c048ede442fc10efb62a28e487c3da9a3",
+        "message": "style(kernel.c)",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-5d930726daed096ab13ef4b175265c7890aae66e",
+      "type": "commit",
+      "ts": "2020-10-23T17:52:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5d930726daed096ab13ef4b175265c7890aae66e",
+        "message": "test",
+        "additions": 12,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-acbe7f3c111e313657e979b78a1ff84c901bf443",
+      "type": "commit",
+      "ts": "2020-10-23T17:47:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "acbe7f3c111e313657e979b78a1ff84c901bf443",
+        "message": "pref(pmm): 对齐内存",
+        "additions": 28,
+        "deletions": 28
+      }
+    },
+    {
+      "id": "commit-96feffc5753e04557dbe844c63ef3c4fd4e421e1",
+      "type": "commit",
+      "ts": "2020-10-23T17:44:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "96feffc5753e04557dbe844c63ef3c4fd4e421e1",
+        "message": "feat(pmm): 分配内存页",
+        "additions": 32,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-6aa8c380badb8727369225e7abb85a9af9285114",
+      "type": "commit",
+      "ts": "2020-10-23T14:47:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "6aa8c380badb8727369225e7abb85a9af9285114",
+        "message": "fix(vmm): 添加需要的头文件",
+        "additions": 1,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-2c7ace5d95dabd587721f4c2500d123581bb3274",
+      "type": "commit",
+      "ts": "2020-10-23T11:37:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "2c7ace5d95dabd587721f4c2500d123581bb3274",
+        "message": "Merge pull request #37 from MRNIU/vmm\n\nVmm",
+        "additions": 91,
+        "deletions": 96
+      }
+    },
+    {
+      "id": "commit-e34d39dfa54b8d84517caac74e547000df402bfa",
+      "type": "commit",
+      "ts": "2020-10-23T11:36:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "e34d39dfa54b8d84517caac74e547000df402bfa",
+        "message": "Merge pull request #38 from MRNIU/pmm\n\nPmm",
+        "additions": 46,
+        "deletions": 43
+      }
+    },
+    {
+      "id": "pr-39-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T11:34:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 39,
+        "title": "Pmm buffer",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-38-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T11:34:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 38,
+        "title": "Pmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-37-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T11:34:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 37,
+        "title": "Vmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-cbc3ccb5279439d1e0b1a4ed9f8a9913d37b925b",
+      "type": "commit",
+      "ts": "2020-10-23T11:31:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "test",
+      "data": {
+        "sha": "cbc3ccb5279439d1e0b1a4ed9f8a9913d37b925b",
+        "message": "test(pmm): 添加测试",
+        "additions": 23,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-71f594d20f39563cf3c60f936ec832ae3d9709a9",
+      "type": "commit",
+      "ts": "2020-10-23T11:30:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "71f594d20f39563cf3c60f936ec832ae3d9709a9",
+        "message": "feat: 将物理内存修改为 2GB",
+        "additions": 22,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-36e397c93ef5d3eeb819c1c4c3acaaa8c31587b4",
+      "type": "commit",
+      "ts": "2020-10-23T11:27:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "36e397c93ef5d3eeb819c1c4c3acaaa8c31587b4",
+        "message": "feat(vmm): 完成 vmm 处理",
+        "additions": 90,
+        "deletions": 74
+      }
+    },
+    {
+      "id": "commit-98c3a883e8f9cd41cf0555358547426d980bbf22",
+      "type": "commit",
+      "ts": "2020-10-23T07:01:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "98c3a883e8f9cd41cf0555358547426d980bbf22",
+        "message": "docs(README): update",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-5fc17e990885019ea66ae14344fbf109d5412260",
+      "type": "commit",
+      "ts": "2020-10-23T06:59:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "5fc17e990885019ea66ae14344fbf109d5412260",
+        "message": "docs(README): update",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-5296a64772469ca7bfe1b6fa48bd6eb34bf21508",
+      "type": "commit",
+      "ts": "2020-10-23T06:58:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "5296a64772469ca7bfe1b6fa48bd6eb34bf21508",
+        "message": "docs(README): update",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-3ee14cfc32ea1f3cc512b9c18fe3418faea7483b",
+      "type": "commit",
+      "ts": "2020-10-23T06:54:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "3ee14cfc32ea1f3cc512b9c18fe3418faea7483b",
+        "message": "docs(CI): 删除 travis.yml",
+        "additions": 0,
+        "deletions": 21
+      }
+    },
+    {
+      "id": "commit-a9848b7de3b5d33c2af80d1d115cc0ee2c2a39cc",
+      "type": "commit",
+      "ts": "2020-10-23T06:43:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "a9848b7de3b5d33c2af80d1d115cc0ee2c2a39cc",
+        "message": "Merge pull request #36 from MRNIU/vmm\n\nVmm",
+        "additions": 637,
+        "deletions": 2211
+      }
+    },
+    {
+      "id": "commit-6b49159f13c2da083e0dac08b4956e31d64e6d94",
+      "type": "commit",
+      "ts": "2020-10-23T06:42:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "6b49159f13c2da083e0dac08b4956e31d64e6d94",
+        "message": "Merge pull request #34 from MRNIU/pmm\n\nPmm",
+        "additions": 572,
+        "deletions": 2103
+      }
+    },
+    {
+      "id": "commit-3e442253a80108cf547ef50354d22d498a41920e",
+      "type": "commit",
+      "ts": "2020-10-23T06:42:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "3e442253a80108cf547ef50354d22d498a41920e",
+        "message": "Merge pull request #31 from MRNIU/print_only\n\nPrint only",
+        "additions": 318,
+        "deletions": 671
+      }
+    },
+    {
+      "id": "pr-36-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:41:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 36,
+        "title": "Vmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-35-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:41:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 35,
+        "title": "Pmm buffer",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-34-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:40:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 34,
+        "title": "Pmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-33-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:40:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 33,
+        "title": "Keyboard init",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-32-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:40:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 32,
+        "title": "Intr timer",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-31-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:39:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 31,
+        "title": "Print only",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-30-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:37:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 30,
+        "title": "Print only",
+        "state": "closed",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-29-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-10-23T06:36:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 29,
+        "title": "Print only",
+        "state": "closed",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-b448c051669b2c4cb470c7be7d69caa84602298d",
+      "type": "commit",
+      "ts": "2020-10-23T06:26:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "style",
+      "data": {
+        "sha": "b448c051669b2c4cb470c7be7d69caa84602298d",
+        "message": "style: 注释单独成行",
+        "additions": 276,
+        "deletions": 178
+      }
+    },
+    {
+      "id": "commit-f6bf69289686b3d0d78834d613dc8c081af4016c",
+      "type": "commit",
+      "ts": "2020-10-23T05:39:16Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "f6bf69289686b3d0d78834d613dc8c081af4016c",
+        "message": "docs: 删除 docs/",
+        "additions": 0,
+        "deletions": 688
+      }
+    },
+    {
+      "id": "commit-b3905641233d05c7ac0bf8c2ce3bb6990e510ba3",
+      "type": "commit",
+      "ts": "2020-10-23T05:36:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b3905641233d05c7ac0bf8c2ce3bb6990e510ba3",
+        "message": "pref: 优化代码，调整格式",
+        "additions": 173,
+        "deletions": 88
+      }
+    },
+    {
+      "id": "commit-d40321b7781c45fa488b453110f24e39ae82cea6",
+      "type": "commit",
+      "ts": "2020-10-23T05:36:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "d40321b7781c45fa488b453110f24e39ae82cea6",
+        "message": "Merge init_timer",
+        "additions": 0,
+        "deletions": 466
+      }
+    },
+    {
+      "id": "commit-23f630e996c3a3e96df40c32eb44c38ab17ab3c7",
+      "type": "commit",
+      "ts": "2020-10-23T05:34:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "23f630e996c3a3e96df40c32eb44c38ab17ab3c7",
+        "message": "pref: 优化代码，调整格式",
+        "additions": 1,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-9f5df81a14acdbf4bdbe80ca401351d1080f2ab3",
+      "type": "commit",
+      "ts": "2020-10-23T05:33:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "9f5df81a14acdbf4bdbe80ca401351d1080f2ab3",
+        "message": "docs: 删除 docs/",
+        "additions": 0,
+        "deletions": 471
+      }
+    },
+    {
+      "id": "commit-e38b508199025c384ecd062655158492accc7840",
+      "type": "commit",
+      "ts": "2020-10-23T05:27:20Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e38b508199025c384ecd062655158492accc7840",
+        "message": "pref: 优化代码，调整格式",
+        "additions": 40,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-8962fd179f5a8d094b6d8eeb5543a97aa4847f5d",
+      "type": "commit",
+      "ts": "2020-10-23T05:21:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "8962fd179f5a8d094b6d8eeb5543a97aa4847f5d",
+        "message": "feat(vmm): working on vmm",
+        "additions": 99,
+        "deletions": 118
+      }
+    },
+    {
+      "id": "commit-7d0dc7b0129817c64c6ba0aec25a89898d3eb1be",
+      "type": "commit",
+      "ts": "2020-10-23T04:26:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7d0dc7b0129817c64c6ba0aec25a89898d3eb1be",
+        "message": "docs(README, .github)",
+        "additions": 2,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-07e1830f56b5d48921cdeea098a85bdc93c8d8e4",
+      "type": "commit",
+      "ts": "2020-10-23T04:07:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "07e1830f56b5d48921cdeea098a85bdc93c8d8e4",
+        "message": "Merge remote-tracking branch 'upstream/pmm' into vmm",
+        "additions": 10,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-2efdc3330bcba0655635fd05adecf4fb5e1b3188",
+      "type": "commit",
+      "ts": "2020-10-23T04:02:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "2efdc3330bcba0655635fd05adecf4fb5e1b3188",
+        "message": "Merge pull request #28 from cy295957410/patch-4\n\nUpdate grub4mac.sh",
+        "additions": 12,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-9ebb8315d494c8e482ec1e2bb35c1ecdbfdd8cdb",
+      "type": "commit",
+      "ts": "2020-10-23T04:02:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "9ebb8315d494c8e482ec1e2bb35c1ecdbfdd8cdb",
+        "message": "Merge pull request #27 from cy295957410/patch-3\n\nUpdate first_fit.c",
+        "additions": 10,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-907f6a00f24d469d9c6b87595f90ffc935f49413",
+      "type": "commit",
+      "ts": "2020-10-22T10:44:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "907f6a00f24d469d9c6b87595f90ffc935f49413",
+        "message": "feat(vmm): working on vmm",
+        "additions": 357,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-5d2c48a7c68ce4b45cf98fc970764d650839131f",
+      "type": "commit",
+      "ts": "2020-10-22T10:20:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5d2c48a7c68ce4b45cf98fc970764d650839131f",
+        "message": "pref(pmm): 删除多余代码",
+        "additions": 36,
+        "deletions": 47
+      }
+    },
+    {
+      "id": "commit-fc23695f9b0490bfcc3cd8dbf7e996eca8c0b7de",
+      "type": "commit",
+      "ts": "2020-10-22T09:29:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fc23695f9b0490bfcc3cd8dbf7e996eca8c0b7de",
+        "message": "pref(pmm): 删除多余代码",
+        "additions": 112,
+        "deletions": 155
+      }
+    },
+    {
+      "id": "commit-5f5b05e4b43d31da5a72c621aeab49ee802ca37d",
+      "type": "commit",
+      "ts": "2020-10-22T09:28:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "test",
+      "data": {
+        "sha": "5f5b05e4b43d31da5a72c621aeab49ee802ca37d",
+        "message": "test(pmm): 添加测试",
+        "additions": 73,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-3a41e0194b6da625087006e2f758ba5abd6a3a0c",
+      "type": "commit",
+      "ts": "2020-10-22T08:15:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3a41e0194b6da625087006e2f758ba5abd6a3a0c",
+        "message": "pref(pmm): 删除多余代码",
+        "additions": 198,
+        "deletions": 187
+      }
+    },
+    {
+      "id": "commit-e935541220b6cb4c57473f05d9409ec1e21d473d",
+      "type": "commit",
+      "ts": "2020-10-22T06:33:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e935541220b6cb4c57473f05d9409ec1e21d473d",
+        "message": "pref: 删除不必要的代码",
+        "additions": 206,
+        "deletions": 268
+      }
+    },
+    {
+      "id": "commit-245b7879e2248625ca38f69f44dbda055c64638e",
+      "type": "commit",
+      "ts": "2020-10-21T12:40:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "style",
+      "data": {
+        "sha": "245b7879e2248625ca38f69f44dbda055c64638e",
+        "message": "style: fixup",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-004e6b002a427927afe38e891a5143d10e758203",
+      "type": "commit",
+      "ts": "2020-10-21T12:29:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "004e6b002a427927afe38e891a5143d10e758203",
+        "message": "fix(pmm): 初始化过程中的错误",
+        "additions": 6,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-b16ef08a9dfc2f83655ecee98d23e63f3a388fc6",
+      "type": "commit",
+      "ts": "2020-10-21T09:39:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "b16ef08a9dfc2f83655ecee98d23e63f3a388fc6",
+        "message": "refactor(pmm): done",
+        "additions": 32,
+        "deletions": 29
+      }
+    },
+    {
+      "id": "commit-2f5f79e99185f5aeeafd21e35f634df1e256ec06",
+      "type": "commit",
+      "ts": "2020-10-21T09:11:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "2f5f79e99185f5aeeafd21e35f634df1e256ec06",
+        "message": "refactor(pmm): working on pmm",
+        "additions": 559,
+        "deletions": 2420
+      }
+    },
+    {
+      "id": "commit-5da82d09b1e84a2a99183425f71cb50c18d14888",
+      "type": "commit",
+      "ts": "2020-10-21T08:36:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "5da82d09b1e84a2a99183425f71cb50c18d14888",
+        "message": "refactor: working on pmm",
+        "additions": 30,
+        "deletions": 236
+      }
+    },
+    {
+      "id": "commit-64479ff0b92a701ca2ed71546d14cea9b8b51708",
+      "type": "commit",
+      "ts": "2020-10-21T08:06:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "64479ff0b92a701ca2ed71546d14cea9b8b51708",
+        "message": "refactor: 准备重写内存部分",
+        "additions": 73,
+        "deletions": 1748
+      }
+    },
+    {
+      "id": "commit-de4dbb727b5d0e8c92aade53956e3a5f734f3f9f",
+      "type": "commit",
+      "ts": "2020-10-21T07:32:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "style",
+      "data": {
+        "sha": "de4dbb727b5d0e8c92aade53956e3a5f734f3f9f",
+        "message": "style: 调整代码格式\npref: 删除不必要的代码",
+        "additions": 385,
+        "deletions": 676
+      }
+    },
+    {
+      "id": "commit-9ccb52151ef1b79a9210d1d05340200227715e86",
+      "type": "commit",
+      "ts": "2020-10-21T07:04:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "style",
+      "data": {
+        "sha": "9ccb52151ef1b79a9210d1d05340200227715e86",
+        "message": "style: 调整注释位置",
+        "additions": 61,
+        "deletions": 32
+      }
+    },
+    {
+      "id": "commit-96ac42f2caf950e49d328d0751beb1bdd2f6ebac",
+      "type": "commit",
+      "ts": "2020-10-21T05:03:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "96ac42f2caf950e49d328d0751beb1bdd2f6ebac",
+        "message": "fix(libc): printk",
+        "additions": 12,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "pr-9-SynestiaOS/SynestiaOS",
+      "type": "pull_request",
+      "ts": "2020-10-12T05:28:26Z",
+      "repo": "SynestiaOS/SynestiaOS",
+      "semantic": null,
+      "data": {
+        "number": 9,
+        "title": "[MRNIU] #LIBC: vsprintf",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-61954-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2020-10-02T18:02:45Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 61954,
+        "title": "x86_64-elf-gdb(New Formula)",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/HEAD/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Is your test running fine `brew test <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    },
+    {
+      "id": "commit-07c6d291d332b2a1dfa979a37f826e4842c99cc6",
+      "type": "commit",
+      "ts": "2020-10-02T16:06:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "07c6d291d332b2a1dfa979a37f826e4842c99cc6",
+        "message": "pref(build): qemu support",
+        "additions": 18,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "commit-01cff7189ceaa52c90186e9be262833d5c73a79d",
+      "type": "commit",
+      "ts": "2020-10-02T11:44:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "test",
+      "data": {
+        "sha": "01cff7189ceaa52c90186e9be262833d5c73a79d",
+        "message": "test(CI): update",
+        "additions": 25,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-dbff7664b9e4cd29c8a2f42409018ecf22b04ce3",
+      "type": "commit",
+      "ts": "2020-10-02T11:43:36Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "test",
+      "data": {
+        "sha": "dbff7664b9e4cd29c8a2f42409018ecf22b04ce3",
+        "message": "test(CI): update",
+        "additions": 25,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-ac5ebfdddf7e410793453b59927426413d016601",
+      "type": "commit",
+      "ts": "2020-10-02T11:43:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "test",
+      "data": {
+        "sha": "ac5ebfdddf7e410793453b59927426413d016601",
+        "message": "test(CI): update",
+        "additions": 25,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-4e508c7e273b852e9287cac19cc32ca6fd18be5e",
+      "type": "commit",
+      "ts": "2020-10-02T11:42:07Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "test",
+      "data": {
+        "sha": "4e508c7e273b852e9287cac19cc32ca6fd18be5e",
+        "message": "test(CI): update",
+        "additions": 25,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-4529c29c93b5c73ab8ec5c6ea3d639fa790e5e71",
+      "type": "commit",
+      "ts": "2020-10-02T11:06:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "4529c29c93b5c73ab8ec5c6ea3d639fa790e5e71",
+        "message": "fix(kernel): 原因是忘了开中断",
+        "additions": 159,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-99793596a40790c28bd1687baf7d607e6c10df23",
+      "type": "commit",
+      "ts": "2020-10-02T10:36:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "99793596a40790c28bd1687baf7d607e6c10df23",
+        "message": "sync(ALL): 同步新的代码，存在 bug",
+        "additions": 3943,
+        "deletions": 4305
+      }
+    },
+    {
+      "id": "commit-3b877a0acc19a6a13b2e077e39dfd47ed0049d92",
+      "type": "commit",
+      "ts": "2020-10-02T10:00:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3b877a0acc19a6a13b2e077e39dfd47ed0049d92",
+        "message": "sync(ALL): 同步新的代码",
+        "additions": 3507,
+        "deletions": 3096
+      }
+    },
+    {
+      "id": "commit-f60f72d01a93210883f623641a4d012015e4e8de",
+      "type": "commit",
+      "ts": "2020-10-02T09:36:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f60f72d01a93210883f623641a4d012015e4e8de",
+        "message": "sync(ALL): 同步新的代码",
+        "additions": 2564,
+        "deletions": 1556
+      }
+    },
+    {
+      "id": "commit-1bfb1a8751cd3a9b87408615fbca0189c20b9cea",
+      "type": "commit",
+      "ts": "2020-10-01T19:53:16Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "1bfb1a8751cd3a9b87408615fbca0189c20b9cea",
+        "message": "docs(README): update",
+        "additions": 88,
+        "deletions": 39
+      }
+    },
+    {
+      "id": "commit-95b0e0f2579f9db171fe3f143ab19b7f702d89f7",
+      "type": "commit",
+      "ts": "2020-10-01T19:44:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "95b0e0f2579f9db171fe3f143ab19b7f702d89f7",
+        "message": "Update cmake.yml",
+        "additions": 40,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-5119040f6409562be5f47fab610bcf04ddbaffd0",
+      "type": "commit",
+      "ts": "2020-10-01T19:24:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5119040f6409562be5f47fab610bcf04ddbaffd0",
+        "message": "pref(build)",
+        "additions": 36,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-16d18fac59ff5451c102ffd834da000211aba382",
+      "type": "commit",
+      "ts": "2020-10-01T19:20:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "16d18fac59ff5451c102ffd834da000211aba382",
+        "message": "pref(bochs): 添加 linux 选项\npref(build): add bochs-x",
+        "additions": 16,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-c6fc4170079501ff67a3ccd0bd54f1daade073d1",
+      "type": "commit",
+      "ts": "2020-10-01T19:04:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "c6fc4170079501ff67a3ccd0bd54f1daade073d1",
+        "message": "docs(bochsrc): update",
+        "additions": 6,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-592be5e6ece2fa7f53902e0de6553a4f8fe1ac6e",
+      "type": "commit",
+      "ts": "2020-10-01T18:56:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "592be5e6ece2fa7f53902e0de6553a4f8fe1ac6e",
+        "message": "docs(README): change svg icon",
+        "additions": 2,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-c6b56342c8cad862744667a9e5525e997d21d240",
+      "type": "commit",
+      "ts": "2020-10-01T18:45:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c6b56342c8cad862744667a9e5525e997d21d240",
+        "message": "pref(build): 移除非必须依赖的错误警告",
+        "additions": 7,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-178673f00a4b27f4d627e746a16fe7390266a366",
+      "type": "commit",
+      "ts": "2020-10-01T18:42:56Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "178673f00a4b27f4d627e746a16fe7390266a366",
+        "message": "pref(build): 大小写问题，更完善的工具",
+        "additions": 46,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-80f23205352edc6cd13bf301196bcadb035a9457",
+      "type": "commit",
+      "ts": "2020-10-01T18:35:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "80f23205352edc6cd13bf301196bcadb035a9457",
+        "message": "fix(build): 大小写问题",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-cfef5dec948f75ec6396481443dc399c0a596ae4",
+      "type": "commit",
+      "ts": "2020-10-01T18:28:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cfef5dec948f75ec6396481443dc399c0a596ae4",
+        "message": "pref(build): 在 archlinux 上构建",
+        "additions": 62,
+        "deletions": 35
+      }
+    },
+    {
+      "id": "commit-c827b64f563d7e70236f7a4e1b24093b3e158cb7",
+      "type": "commit",
+      "ts": "2020-10-01T14:52:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "c827b64f563d7e70236f7a4e1b24093b3e158cb7",
+        "message": "fix(shell): 指定 bash",
+        "additions": 7,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-ee102037ec18a5142c8f96219fd9df5873e9bee5",
+      "type": "commit",
+      "ts": "2020-10-01T14:48:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "ee102037ec18a5142c8f96219fd9df5873e9bee5",
+        "message": "fix(build): 路径问题",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-0420ff0174b0e9ce219dacc63bf231f0be45207b",
+      "type": "commit",
+      "ts": "2020-10-01T14:44:38Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0420ff0174b0e9ce219dacc63bf231f0be45207b",
+        "message": "Update cmake.yml",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-6af3f3978109a8a90274d963c7a8f3cff2505d76",
+      "type": "commit",
+      "ts": "2020-10-01T14:34:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "6af3f3978109a8a90274d963c7a8f3cff2505d76",
+        "message": "Update cmake.yml",
+        "additions": 8,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-cd20cdd147678c56c1c25b6c44905f066d91300d",
+      "type": "commit",
+      "ts": "2020-10-01T14:23:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cd20cdd147678c56c1c25b6c44905f066d91300d",
+        "message": "Update cmake.yml",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-478d548ec6df9eb631d2fc332e787ea15561cb06",
+      "type": "commit",
+      "ts": "2020-10-01T14:15:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "478d548ec6df9eb631d2fc332e787ea15561cb06",
+        "message": "Update cmake.yml",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-5e0b87a680f37a531d4e31e0f492952f5c1977f1",
+      "type": "commit",
+      "ts": "2020-10-01T14:12:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5e0b87a680f37a531d4e31e0f492952f5c1977f1",
+        "message": "Update cmake.yml",
+        "additions": 5,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-72d659a590b7507b1858f3644152c044bc736f0e",
+      "type": "commit",
+      "ts": "2020-10-01T14:10:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "72d659a590b7507b1858f3644152c044bc736f0e",
+        "message": "Update cmake.yml",
+        "additions": 9,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-8c8e5d0c7d3fc49764c842f27817bc8f61c4ad04",
+      "type": "commit",
+      "ts": "2020-10-01T14:06:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8c8e5d0c7d3fc49764c842f27817bc8f61c4ad04",
+        "message": "Update cmake.yml",
+        "additions": 3,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-5a505d6f80a2c3f0ff5d3edf9bc9f286d01dc1f3",
+      "type": "commit",
+      "ts": "2020-10-01T14:02:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5a505d6f80a2c3f0ff5d3edf9bc9f286d01dc1f3",
+        "message": "Update cmake.yml",
+        "additions": 4,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-e65d4db6b1124edee66831c77d7e554f6126d561",
+      "type": "commit",
+      "ts": "2020-10-01T13:58:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e65d4db6b1124edee66831c77d7e554f6126d561",
+        "message": "Update cmake.yml",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-c4c67bd9916e89f176b7f77b1e201b2a046ecfea",
+      "type": "commit",
+      "ts": "2020-10-01T13:56:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c4c67bd9916e89f176b7f77b1e201b2a046ecfea",
+        "message": "Update cmake.yml",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-6555146c1ee756650957675dea3f09b5b9b9e96b",
+      "type": "commit",
+      "ts": "2020-10-01T13:53:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "6555146c1ee756650957675dea3f09b5b9b9e96b",
+        "message": "Update cmake.yml",
+        "additions": 5,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-2a9b8cd8ae883b9890cd6f12a593754a84851124",
+      "type": "commit",
+      "ts": "2020-10-01T13:39:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2a9b8cd8ae883b9890cd6f12a593754a84851124",
+        "message": "Update cmake.yml",
+        "additions": 0,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-4f322cf2ec59991ce26d79130ea22958be4422a5",
+      "type": "commit",
+      "ts": "2020-10-01T13:36:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4f322cf2ec59991ce26d79130ea22958be4422a5",
+        "message": "Update cmake.yml",
+        "additions": 5,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-8f6e757d6f33caf352f14be5770289779580d3fe",
+      "type": "commit",
+      "ts": "2020-10-01T13:34:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8f6e757d6f33caf352f14be5770289779580d3fe",
+        "message": "Update cmake.yml",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-51529e3fadd2a617a67f326b747fd26cd58118e2",
+      "type": "commit",
+      "ts": "2020-10-01T13:29:29Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "51529e3fadd2a617a67f326b747fd26cd58118e2",
+        "message": "Create cmake.yml",
+        "additions": 44,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-58d1bf03e81addb3a0240bf163a73c4c9283b49f",
+      "type": "commit",
+      "ts": "2020-10-01T12:50:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "58d1bf03e81addb3a0240bf163a73c4c9283b49f",
+        "message": "fix(CI): update",
+        "additions": 8,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-ca775a81b58e0dc9d38d8162c460f085fa2ee66f",
+      "type": "commit",
+      "ts": "2020-10-01T12:41:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "ca775a81b58e0dc9d38d8162c460f085fa2ee66f",
+        "message": "fix(copyright): MRNIU->SimpleXX",
+        "additions": 231,
+        "deletions": 231
+      }
+    },
+    {
+      "id": "commit-5cdfb9e0d03624acea9a8aac372fb1ce219fa41f",
+      "type": "commit",
+      "ts": "2020-10-01T12:36:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5cdfb9e0d03624acea9a8aac372fb1ce219fa41f",
+        "message": "pref(build): 优化工具链配置",
+        "additions": 19,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-be2ea34153ce13851ccf54bc7ee1922eb9d2f259",
+      "type": "commit",
+      "ts": "2020-10-01T11:31:29Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "be2ea34153ce13851ccf54bc7ee1922eb9d2f259",
+        "message": "revert(build)",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-c33e4f3c5cd5996404de88b97e1a238617c66b73",
+      "type": "commit",
+      "ts": "2020-10-01T11:15:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "c33e4f3c5cd5996404de88b97e1a238617c66b73",
+        "message": "feat(build): 构建好的 grub for mac",
+        "additions": 0,
+        "deletions": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1070 @@
+{
+  "month": "2021-11",
+  "events": [
+    {
+      "id": "commit-593fdb3dd8b4e6e4013ba164f4757005b8919375",
+      "type": "commit",
+      "ts": "2021-11-28T04:05:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "593fdb3dd8b4e6e4013ba164f4757005b8919375",
+        "message": "feature(aarch64): init\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 120,
+        "deletions": 151
+      }
+    },
+    {
+      "id": "commit-321501b802b3e450ba487139540020557d2bcba0",
+      "type": "commit",
+      "ts": "2021-11-25T14:56:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "321501b802b3e450ba487139540020557d2bcba0",
+        "message": "build(env): default use bochs\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-55dcc4c054d65e06c3d841771a9e6261c2113649",
+      "type": "commit",
+      "ts": "2021-11-25T14:37:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "55dcc4c054d65e06c3d841771a9e6261c2113649",
+        "message": "build(shell, cmake): update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 65,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-5e4f11136968038e010fb419a02bc88ebb2ad94e",
+      "type": "commit",
+      "ts": "2021-11-25T14:20:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5e4f11136968038e010fb419a02bc88ebb2ad94e",
+        "message": "Update build.yml",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-3817a52936e3da346ba51cb7d288d278546b60ac",
+      "type": "commit",
+      "ts": "2021-11-25T14:16:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3817a52936e3da346ba51cb7d288d278546b60ac",
+        "message": "build(CI, cmake): update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 15,
+        "deletions": 136
+      }
+    },
+    {
+      "id": "commit-8c58ea290bc623c25995f5e8bb56f033e79f9c31",
+      "type": "commit",
+      "ts": "2021-11-25T14:05:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8c58ea290bc623c25995f5e8bb56f033e79f9c31",
+        "message": "Update build.yml",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-57940a61a1cb961478f76df18fb47ce70ecaa805",
+      "type": "commit",
+      "ts": "2021-11-25T14:01:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "57940a61a1cb961478f76df18fb47ce70ecaa805",
+        "message": "Update build.yml",
+        "additions": 7,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-698f135049189fe730cb656ee568724502d77146",
+      "type": "commit",
+      "ts": "2021-11-25T13:55:53Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "698f135049189fe730cb656ee568724502d77146",
+        "message": "Update CMakeLists.txt",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-b584b73bd5b416018af5ed728cd76b148c2661a6",
+      "type": "commit",
+      "ts": "2021-11-25T13:51:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b584b73bd5b416018af5ed728cd76b148c2661a6",
+        "message": "Update CMakeLists.txt",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-dbe622b69712ca4de40607497b78488edcc3a18c",
+      "type": "commit",
+      "ts": "2021-11-25T13:48:29Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "dbe622b69712ca4de40607497b78488edcc3a18c",
+        "message": "Update CMakeLists.txt",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-fce99d41fb3bc13837746532510c5fe5d4a61308",
+      "type": "commit",
+      "ts": "2021-11-25T13:39:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fce99d41fb3bc13837746532510c5fe5d4a61308",
+        "message": "Update build.yml",
+        "additions": 17,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-5a7eb014438ad39045bafe63cbb53c0a7d31914b",
+      "type": "commit",
+      "ts": "2021-11-25T13:31:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5a7eb014438ad39045bafe63cbb53c0a7d31914b",
+        "message": "Update build.yml",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-abd0bf48c0dc81ff0d5d78c09b19cc4e501c0598",
+      "type": "commit",
+      "ts": "2021-11-25T13:28:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "abd0bf48c0dc81ff0d5d78c09b19cc4e501c0598",
+        "message": "Update build.yml",
+        "additions": 17,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-94024c6a20f00006c1f519b9683dfe7c844ae5fd",
+      "type": "commit",
+      "ts": "2021-11-25T13:20:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "94024c6a20f00006c1f519b9683dfe7c844ae5fd",
+        "message": "Update build.yml",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-ba4674104e12a50c08b08272535942325868cc07",
+      "type": "commit",
+      "ts": "2021-11-25T13:08:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ba4674104e12a50c08b08272535942325868cc07",
+        "message": "Update build.yml",
+        "additions": 4,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-2a434cc7a35133be29fe7e77f610132b20cebf8d",
+      "type": "commit",
+      "ts": "2021-11-24T16:27:54Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2a434cc7a35133be29fe7e77f610132b20cebf8d",
+        "message": "Update build.yml",
+        "additions": 22,
+        "deletions": 22
+      }
+    },
+    {
+      "id": "commit-751d805dd0ecd42a6c5c26d7bb8f13ff0ce14f89",
+      "type": "commit",
+      "ts": "2021-11-24T16:26:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "751d805dd0ecd42a6c5c26d7bb8f13ff0ce14f89",
+        "message": "build(CI): test\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 98,
+        "deletions": 87
+      }
+    },
+    {
+      "id": "commit-c71e4f93b99cde6b287e29dab6bd94ad992ef951",
+      "type": "commit",
+      "ts": "2021-11-24T16:12:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c71e4f93b99cde6b287e29dab6bd94ad992ef951",
+        "message": "Update build.yml",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-a218778a644d0b10b04048555fda63c8170a3158",
+      "type": "commit",
+      "ts": "2021-11-24T16:05:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a218778a644d0b10b04048555fda63c8170a3158",
+        "message": "Update build.yml",
+        "additions": 6,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-a19ad9283c98fee9e7641889e8baa1157cc36c8a",
+      "type": "commit",
+      "ts": "2021-11-24T16:05:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a19ad9283c98fee9e7641889e8baa1157cc36c8a",
+        "message": "Update build.yml",
+        "additions": 2,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-e39731c73afa7d6c482e5717c6c453c897655492",
+      "type": "commit",
+      "ts": "2021-11-24T16:03:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e39731c73afa7d6c482e5717c6c453c897655492",
+        "message": "build(CI): test\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 69,
+        "deletions": 40
+      }
+    },
+    {
+      "id": "commit-acca5eb3434c342c06f68d2254c71c20d0a9f85d",
+      "type": "commit",
+      "ts": "2021-11-24T15:12:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "acca5eb3434c342c06f68d2254c71c20d0a9f85d",
+        "message": "Merge pull request #105 from MRNIU/master\n\nmaster",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "pr-105-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T15:09:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 105,
+        "title": "master",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-91ebac7e350b39555998c54f93e9d4b879230c26",
+      "type": "commit",
+      "ts": "2021-11-24T15:08:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "91ebac7e350b39555998c54f93e9d4b879230c26",
+        "message": "Merge remote-tracking branch 'upstream/master'",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "pr-104-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T15:07:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 104,
+        "title": "Intr",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-50e8341f68f12031562fc5643837b5679dac83ce",
+      "type": "commit",
+      "ts": "2021-11-24T15:07:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "50e8341f68f12031562fc5643837b5679dac83ce",
+        "message": "Merge remote-tracking branch 'upstream/intr' into intr",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-beb09ced24e097407ae9abb115c97eab17fc9e9f",
+      "type": "commit",
+      "ts": "2021-11-24T15:06:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "beb09ced24e097407ae9abb115c97eab17fc9e9f",
+        "message": "build(env): set default ARCH\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-e0bcc968018448678fcc4c622f0d1511038297ac",
+      "type": "commit",
+      "ts": "2021-11-24T15:01:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "e0bcc968018448678fcc4c622f0d1511038297ac",
+        "message": "Merge pull request #103 from MRNIU/intr\n\nIntr",
+        "additions": 14475,
+        "deletions": 9159
+      }
+    },
+    {
+      "id": "pr-103-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T15:01:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 103,
+        "title": "Intr",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-d05800c4290ca6875a133dc913019feaac70eb7b",
+      "type": "commit",
+      "ts": "2021-11-24T15:01:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "d05800c4290ca6875a133dc913019feaac70eb7b",
+        "message": "Merge remote-tracking branch 'upstream/intr' into intr\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "pr-102-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:58:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 102,
+        "title": "Lib",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-0b22c54112be59b86d10ac9065797eff767fc86d",
+      "type": "commit",
+      "ts": "2021-11-24T14:57:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "0b22c54112be59b86d10ac9065797eff767fc86d",
+        "message": "Merge remote-tracking branch 'upstream/lib' into lib",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-cca6c922c2085330d267327a3c71361f43536a37",
+      "type": "commit",
+      "ts": "2021-11-24T14:56:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cca6c922c2085330d267327a3c71361f43536a37",
+        "message": "build(env): set default ARCH\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-fc04f338d8049f7c105ded542bcade13bea1e047",
+      "type": "commit",
+      "ts": "2021-11-24T14:54:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "fc04f338d8049f7c105ded542bcade13bea1e047",
+        "message": "Merge pull request #101 from MRNIU/lib\n\nLib",
+        "additions": 8012,
+        "deletions": 4137
+      }
+    },
+    {
+      "id": "pr-101-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:53:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 101,
+        "title": "Lib",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-100-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:53:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 100,
+        "title": "Heap",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-99-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:53:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 99,
+        "title": "Vmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-9b9f62a47162f80fa7bb7bb40894894f07b81e1b",
+      "type": "commit",
+      "ts": "2021-11-24T14:53:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "9b9f62a47162f80fa7bb7bb40894894f07b81e1b",
+        "message": "Merge remote-tracking branch 'upstream/lib' into lib",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-a674e3332d1974ae020971d1a9cf3d79fb50b7c6",
+      "type": "commit",
+      "ts": "2021-11-24T14:52:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "a674e3332d1974ae020971d1a9cf3d79fb50b7c6",
+        "message": "Merge remote-tracking branch 'upstream/heap' into heap",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-1e8d10b8ea116193f9114a107134401b8936dbc6",
+      "type": "commit",
+      "ts": "2021-11-24T14:51:00Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "1e8d10b8ea116193f9114a107134401b8936dbc6",
+        "message": "Merge remote-tracking branch 'upstream/vmm' into vmm\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "pr-98-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:36:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 98,
+        "title": "Pmm",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-97-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:36:38Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 97,
+        "title": "Parse boot info",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-72eec5b26000d531ddc78bea15004a357d927617",
+      "type": "commit",
+      "ts": "2021-11-24T14:35:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "72eec5b26000d531ddc78bea15004a357d927617",
+        "message": "Merge remote-tracking branch 'upstream/pmm' into pmm",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-7d79d506cd2aebb0f9e186bad0cbb44254c7d683",
+      "type": "commit",
+      "ts": "2021-11-24T14:34:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "7d79d506cd2aebb0f9e186bad0cbb44254c7d683",
+        "message": "Merge remote-tracking branch 'upstream/parse_boot_info' into parse_boot_info",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-3b711c7c89982c7161e5038d09c524d34769ea88",
+      "type": "commit",
+      "ts": "2021-11-24T14:32:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "3b711c7c89982c7161e5038d09c524d34769ea88",
+        "message": "Merge pull request #96 from MRNIU/printf\n\nPrintf",
+        "additions": 2761,
+        "deletions": 687
+      }
+    },
+    {
+      "id": "pr-96-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:32:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 96,
+        "title": "Printf",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-95-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:32:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 95,
+        "title": "Boot",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-2ff763c3715dcac8b6aca4305c659e4173ea3263",
+      "type": "commit",
+      "ts": "2021-11-24T14:30:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "2ff763c3715dcac8b6aca4305c659e4173ea3263",
+        "message": "Merge remote-tracking branch 'upstream/printf' into printf",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-bed8ed214ce71df5d920667a17cde7e17d7e69d2",
+      "type": "commit",
+      "ts": "2021-11-24T14:22:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "bed8ed214ce71df5d920667a17cde7e17d7e69d2",
+        "message": "Merge remote-tracking branch 'upstream/boot' into boot",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-721bfee25958d01ac20e66751c2b9fda8777faf1",
+      "type": "commit",
+      "ts": "2021-11-24T14:18:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "721bfee25958d01ac20e66751c2b9fda8777faf1",
+        "message": "Merge pull request #94 from MRNIU/master\n\nmaster",
+        "additions": 33618,
+        "deletions": 7185
+      }
+    },
+    {
+      "id": "pr-94-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-24T14:05:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 94,
+        "title": "master",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-c8428b1c1117bebae15973a39fc2bf410534befa",
+      "type": "commit",
+      "ts": "2021-11-24T13:53:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "c8428b1c1117bebae15973a39fc2bf410534befa",
+        "message": "Merge remote-tracking branch 'upstream/master'\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-9f8e0c4167eb15c4aa9a708ba6ad4c3bca645a7e",
+      "type": "commit",
+      "ts": "2021-11-23T15:31:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "9f8e0c4167eb15c4aa9a708ba6ad4c3bca645a7e",
+        "message": "fix(TUI): redefinition\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 0,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-00427ef7b1f15d75bd3b87f93c61d7525eac46be",
+      "type": "commit",
+      "ts": "2021-11-23T15:08:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "00427ef7b1f15d75bd3b87f93c61d7525eac46be",
+        "message": "build(cmake): change Debug to DEBUG\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-c8b9b206a82b80ff1f37e22f42a4a42199e36420",
+      "type": "commit",
+      "ts": "2021-11-23T14:48:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c8b9b206a82b80ff1f37e22f42a4a42199e36420",
+        "message": "build(build.yml)\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 21,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-4480ec8f50e0a433bf5ab68228b82e179db869c3",
+      "type": "commit",
+      "ts": "2021-11-23T14:23:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4480ec8f50e0a433bf5ab68228b82e179db869c3",
+        "message": "add code\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 44,
+        "deletions": 37
+      }
+    },
+    {
+      "id": "commit-08c348199ce1007b0368b0f10462a4644cfbbc33",
+      "type": "commit",
+      "ts": "2021-11-23T14:10:20Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "08c348199ce1007b0368b0f10462a4644cfbbc33",
+        "message": "add code\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4017,
+        "deletions": 135
+      }
+    },
+    {
+      "id": "commit-22f613cc2dadd31323ef2fc8bc1dde240730336f",
+      "type": "commit",
+      "ts": "2021-11-23T12:33:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "22f613cc2dadd31323ef2fc8bc1dde240730336f",
+        "message": "doc(README): update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 3,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-546dc2a1ea358459ee47df33020da6d3389f22f3",
+      "type": "commit",
+      "ts": "2021-11-23T12:31:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "546dc2a1ea358459ee47df33020da6d3389f22f3",
+        "message": "add code\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 19923,
+        "deletions": 90
+      }
+    },
+    {
+      "id": "commit-0235fb9061f2b9db7b61ec3814630871acb308c5",
+      "type": "commit",
+      "ts": "2021-11-23T12:27:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0235fb9061f2b9db7b61ec3814630871acb308c5",
+        "message": "add code\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 819,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-d54ae16b4ec4c1378b588b4f453ed2c65c2356b1",
+      "type": "commit",
+      "ts": "2021-11-22T16:56:15Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d54ae16b4ec4c1378b588b4f453ed2c65c2356b1",
+        "message": "pref(boot): remove redundant code\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 0,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-bdccc80ebe941d48e83bc1d858c52e5db1812c88",
+      "type": "commit",
+      "ts": "2021-11-22T16:36:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "bdccc80ebe941d48e83bc1d858c52e5db1812c88",
+        "message": "fix(VMM): bzero before use\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-d845a519f80c1f60f3f3672f3fef03131a48c913",
+      "type": "commit",
+      "ts": "2021-11-22T16:33:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d845a519f80c1f60f3f3672f3fef03131a48c913",
+        "message": "style\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-e529b0647ab7ed6389cb8af217e58e81d659ed33",
+      "type": "commit",
+      "ts": "2021-11-22T16:22:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e529b0647ab7ed6389cb8af217e58e81d659ed33",
+        "message": "style\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-97f2a8017b6fb08804158de7127af6be154be679",
+      "type": "commit",
+      "ts": "2021-11-22T15:01:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "97f2a8017b6fb08804158de7127af6be154be679",
+        "message": "Merge pull request #9 from MRNIU/revert-3-lib\n\nRevert \"Lib\"",
+        "additions": 119,
+        "deletions": 24667
+      }
+    },
+    {
+      "id": "pr-9-MRNIU/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2021-11-22T15:01:35Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 9,
+        "title": "Revert \"Lib\"",
+        "state": "merged",
+        "body": "Reverts MRNIU/SimpleKernel#3"
+      }
+    },
+    {
+      "id": "commit-d966e6083acfabb5a4767d94b52958a280d76555",
+      "type": "commit",
+      "ts": "2021-11-22T15:00:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d966e6083acfabb5a4767d94b52958a280d76555",
+        "message": "Revert \"Lib\"",
+        "additions": 119,
+        "deletions": 24667
+      }
+    },
+    {
+      "id": "commit-de39a1f197d994f6be38028960b7f8fed78915dc",
+      "type": "commit",
+      "ts": "2021-11-22T14:33:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "de39a1f197d994f6be38028960b7f8fed78915dc",
+        "message": "build: add cpp include path\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 13,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-8c0323df1ee4afc792ab2d42081b09752699beaa",
+      "type": "commit",
+      "ts": "2021-11-22T14:30:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "8c0323df1ee4afc792ab2d42081b09752699beaa",
+        "message": "fix(TUI): add get_char\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 12,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-e9bc1f87572bdb594c27e4ace532cd91028bac15",
+      "type": "commit",
+      "ts": "2021-11-22T14:08:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e9bc1f87572bdb594c27e4ace532cd91028bac15",
+        "message": "build: env.sh: ARCH\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-be283fd993f63f21477e5443a92ffccc0f51a0fe",
+      "type": "commit",
+      "ts": "2021-11-22T14:07:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "be283fd993f63f21477e5443a92ffccc0f51a0fe",
+        "message": "fix(boot): boos.S mov instruction error\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 7,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-52aae803bb46e881d36a3cf2e92ae976d3ae5d9e",
+      "type": "commit",
+      "ts": "2021-11-22T14:04:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "52aae803bb46e881d36a3cf2e92ae976d3ae5d9e",
+        "message": "build\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 9,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-de34e7a455ba2b36d6a819d1e7f1258b2cb93ffc",
+      "type": "commit",
+      "ts": "2021-11-22T13:45:53Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "de34e7a455ba2b36d6a819d1e7f1258b2cb93ffc",
+        "message": "build: support doxygen\nbuild: move .clang-format\nbuild: add .vscode/\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 127,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-bbe74f22cbeebc1104222dc30d279f39c7fe2cfa",
+      "type": "commit",
+      "ts": "2021-11-22T13:24:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "bbe74f22cbeebc1104222dc30d279f39c7fe2cfa",
+        "message": "Merge pull request #3 from digmouse233/lib\n\nLib",
+        "additions": 24667,
+        "deletions": 119
+      }
+    },
+    {
+      "id": "commit-aa1cee7eace32844fbf8dd17774d1ec4547ecf11",
+      "type": "commit",
+      "ts": "2021-11-22T13:24:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "aa1cee7eace32844fbf8dd17774d1ec4547ecf11",
+        "message": "Merge pull request #1 from digmouse233/heap\n\nHeap",
+        "additions": 3166,
+        "deletions": 1483
+      }
+    },
+    {
+      "id": "commit-c3c1e3b205d32e1f8a1f6661e98752eb7fdc3b5e",
+      "type": "commit",
+      "ts": "2021-11-22T13:24:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "c3c1e3b205d32e1f8a1f6661e98752eb7fdc3b5e",
+        "message": "Merge pull request #4 from digmouse233/intr\n\nIntr",
+        "additions": 3913,
+        "deletions": 1761
+      }
+    },
+    {
+      "id": "commit-4ec9ea83b41a85520fec4b962402a745f2d0328e",
+      "type": "commit",
+      "ts": "2021-11-22T13:24:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "4ec9ea83b41a85520fec4b962402a745f2d0328e",
+        "message": "Merge pull request #8 from digmouse233/parse_boot_info\n\nParse boot info",
+        "additions": 1963,
+        "deletions": 636
+      }
+    },
+    {
+      "id": "commit-af8b64d452a6d3b83a04adc56612e5e1fecc073d",
+      "type": "commit",
+      "ts": "2021-11-22T13:24:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "af8b64d452a6d3b83a04adc56612e5e1fecc073d",
+        "message": "Merge pull request #2 from digmouse233/vmm\n\nVmm",
+        "additions": 2979,
+        "deletions": 1348
+      }
+    },
+    {
+      "id": "commit-482ae13090c1e45b2361b607af0e162499a84cf8",
+      "type": "commit",
+      "ts": "2021-11-22T13:23:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "482ae13090c1e45b2361b607af0e162499a84cf8",
+        "message": "Merge pull request #5 from digmouse233/pmm\n\ncomment",
+        "additions": 2817,
+        "deletions": 1279
+      }
+    },
+    {
+      "id": "commit-8650da1de00754ced653737e14f168dce3f9165f",
+      "type": "commit",
+      "ts": "2021-11-22T13:23:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "8650da1de00754ced653737e14f168dce3f9165f",
+        "message": "Merge pull request #6 from digmouse233/boot\n\ncomment",
+        "additions": 483,
+        "deletions": 111
+      }
+    },
+    {
+      "id": "commit-443d4ffb9fd1fe7bb6ca599409c846dab1661103",
+      "type": "commit",
+      "ts": "2021-11-22T13:23:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "443d4ffb9fd1fe7bb6ca599409c846dab1661103",
+        "message": "Merge pull request #7 from digmouse233/printf\n\nPrintf",
+        "additions": 1584,
+        "deletions": 392
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-93-70",
+      "type": "issue_comment",
+      "ts": "2021-11-02T14:42:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 93,
+        "issueTitle": "build error",
+        "body": "hi NukeWilliams, you can install grub via /tools/grub4mac.sh\r\n\r\n```shell\r\ncd tools/\r\nsh ./grub4mac.sh\r\n```\r\n"
+      }
+    }
+  ]
+}

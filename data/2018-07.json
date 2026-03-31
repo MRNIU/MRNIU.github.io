@@ -1,0 +1,148 @@
+{
+  "month": "2018-07",
+  "events": [
+    {
+      "id": "commit-11c1ece84aa25547e2bd40a342b411f1556b3d5e",
+      "type": "commit",
+      "ts": "2018-07-31T11:46:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "11c1ece84aa25547e2bd40a342b411f1556b3d5e",
+        "message": "修改了 pmm.c，现在可以显示 memory_map 了，正确性未验证，这里解决方案是取巧了，后面需要改进。",
+        "additions": 50,
+        "deletions": 28
+      }
+    },
+    {
+      "id": "commit-4727d66854301216deeb44fc3392230f480b05ad",
+      "type": "commit",
+      "ts": "2018-07-31T03:48:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4727d66854301216deeb44fc3392230f480b05ad",
+        "message": "正在进行clock中断，出现问题。初步判断是中断服务这里出了问题",
+        "additions": 110,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-fd19df283cbde6ef968204af93fafc464647e3c5",
+      "type": "commit",
+      "ts": "2018-07-19T17:23:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fd19df283cbde6ef968204af93fafc464647e3c5",
+        "message": "顺利显示内存情况，不过没有验证准确性。修改了链接脚本，有些地方还不明确",
+        "additions": 49,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-d0b63ddd9f5ebecfcf7f2db2b4764b35e23192df",
+      "type": "commit",
+      "ts": "2018-07-19T16:22:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d0b63ddd9f5ebecfcf7f2db2b4764b35e23192df",
+        "message": "Update",
+        "additions": 9,
+        "deletions": 170
+      }
+    },
+    {
+      "id": "commit-c95d30ba5cf5ca4f36b05d2906b21e58f166d4a7",
+      "type": "commit",
+      "ts": "2018-07-19T16:21:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c95d30ba5cf5ca4f36b05d2906b21e58f166d4a7",
+        "message": "内存管理，虚拟内存与物理内存，目前仅为 debug 服务",
+        "additions": 4,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-a2cf00d198fcdb1145bd392949c3f61a1b2fafe8",
+      "type": "commit",
+      "ts": "2018-07-19T16:21:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a2cf00d198fcdb1145bd392949c3f61a1b2fafe8",
+        "message": "内存管理，虚拟内存与物理内存，目前仅为 debug 服务",
+        "additions": 36,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-fbaa2340d875d2b790e8d9341a213f2bfaab349c",
+      "type": "commit",
+      "ts": "2018-07-19T16:18:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fbaa2340d875d2b790e8d9341a213f2bfaab349c",
+        "message": "为 debug 服务的头文件，包括 elf 结构和 multiboot 结构",
+        "additions": 147,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-1ae75e91024c55be0619c6293cddc53a3697bc69",
+      "type": "commit",
+      "ts": "2018-07-19T16:16:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "1ae75e91024c55be0619c6293cddc53a3697bc69",
+        "message": "内核 debug 程序，未完成",
+        "additions": 11,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-3bd8a0d0d0cdeb462c30405678130da5b924bb65",
+      "type": "commit",
+      "ts": "2018-07-19T16:16:16Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3bd8a0d0d0cdeb462c30405678130da5b924bb65",
+        "message": "建立boot文件夹，内核boot代码在这里",
+        "additions": 89,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-bbfe0fe2a38811da942d81d98e40030816eb0d00",
+      "type": "commit",
+      "ts": "2018-07-19T16:15:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bbfe0fe2a38811da942d81d98e40030816eb0d00",
+        "message": "添加部分字符串操作函数，添加了 printk_color() 函数",
+        "additions": 49,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-4cca62c7510d35732764f4d069065b69f09728fc",
+      "type": "commit",
+      "ts": "2018-07-19T16:14:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4cca62c7510d35732764f4d069065b69f09728fc",
+        "message": "添加arch目录",
+        "additions": 3,
+        "deletions": 2
+      }
+    }
+  ]
+}

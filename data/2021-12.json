@@ -1,0 +1,251 @@
+{
+  "month": "2021-12",
+  "events": [
+    {
+      "id": "comment-MRNIU/SimpleKernel-10-69",
+      "type": "issue_comment",
+      "ts": "2021-12-29T14:37:00Z",
+      "repo": "MRNIU/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 10,
+        "issueTitle": "合并代码",
+        "body": "此分支只支持 riscv64，其它架构 ci 跑不过，合入后进行修改"
+      }
+    },
+    {
+      "id": "commit-7ff9c370eecce9ec1609e0b6b114d1fd4e1902ac",
+      "type": "commit",
+      "ts": "2021-12-24T13:07:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "feat",
+      "data": {
+        "sha": "7ff9c370eecce9ec1609e0b6b114d1fd4e1902ac",
+        "message": "feat(dtb): support INTR_NO for resource_t\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 15,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-9c8bd6c9af71ea0a5494a4367a5e1b7482cd8091",
+      "type": "commit",
+      "ts": "2021-12-24T12:50:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9c8bd6c9af71ea0a5494a4367a5e1b7482cd8091",
+        "message": "pref(resource_t): pref dtb.cpp get resource\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 15,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-8040f4b6f4d446cef126a7e35722f97ac54d7aa3",
+      "type": "commit",
+      "ts": "2021-12-20T05:40:20Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "refactor",
+      "data": {
+        "sha": "8040f4b6f4d446cef126a7e35722f97ac54d7aa3",
+        "message": "refactor(riscv intr): move some fun to intr\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 101,
+        "deletions": 97
+      }
+    },
+    {
+      "id": "commit-515890c352208c70cb566f01e56ea843e7222a86",
+      "type": "commit",
+      "ts": "2021-12-19T15:38:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "515890c352208c70cb566f01e56ea843e7222a86",
+        "message": "fix(vmm): remap flag\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-3c8d3fc0e3aa16e114f8022b94408ca5b2b9e8eb",
+      "type": "commit",
+      "ts": "2021-12-19T15:31:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "3c8d3fc0e3aa16e114f8022b94408ca5b2b9e8eb",
+        "message": "fix(vmm): remap flag\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-81c3a30c64d9f4210b6b3d29b5df6cdec1bf8163",
+      "type": "commit",
+      "ts": "2021-12-19T15:27:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "81c3a30c64d9f4210b6b3d29b5df6cdec1bf8163",
+        "message": "pref(riscv): update link\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-2bed8d891516db50e61a300d4e27328f574372ad",
+      "type": "commit",
+      "ts": "2021-12-19T15:25:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "2bed8d891516db50e61a300d4e27328f574372ad",
+        "message": "fix(boot): change x86_64 link file\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 23,
+        "deletions": 19
+      }
+    },
+    {
+      "id": "commit-f2f3b8a05740cac485491a4f17463b806946b388",
+      "type": "commit",
+      "ts": "2021-12-01T15:04:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "f2f3b8a05740cac485491a4f17463b806946b388",
+        "message": "fix(multiboot2): remove header file\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-39b5e9b2e3374c0c64f70e4b74e83b24d6f69bee",
+      "type": "commit",
+      "ts": "2021-12-01T15:03:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "fix",
+      "data": {
+        "sha": "39b5e9b2e3374c0c64f70e4b74e83b24d6f69bee",
+        "message": "fix(multiboot2): remove header file\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 2,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-f2522f48646a06a5b72b813e90b1817f42b88f42",
+      "type": "commit",
+      "ts": "2021-12-01T14:34:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f2522f48646a06a5b72b813e90b1817f42b88f42",
+        "message": "pref(IO): change to singleton\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 335,
+        "deletions": 242
+      }
+    },
+    {
+      "id": "commit-c44f0a52accb465629df8ed28e29fbfcd9540329",
+      "type": "commit",
+      "ts": "2021-12-01T14:16:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c44f0a52accb465629df8ed28e29fbfcd9540329",
+        "message": "style(BOOT_INFO)\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 44,
+        "deletions": 31
+      }
+    },
+    {
+      "id": "commit-eff5028f600fc543d4fe822466a6f586e104ab4d",
+      "type": "commit",
+      "ts": "2021-12-01T14:15:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "eff5028f600fc543d4fe822466a6f586e104ab4d",
+        "message": "style(BOOT_INFO)\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 40,
+        "deletions": 31
+      }
+    },
+    {
+      "id": "commit-5d46d63034135e53ced46991144966e5b47961e9",
+      "type": "commit",
+      "ts": "2021-12-01T13:59:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5d46d63034135e53ced46991144966e5b47961e9",
+        "message": "pref(IO): change to singleton\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 17,
+        "deletions": 16
+      }
+    },
+    {
+      "id": "commit-95e6833752a5b08fbdc80463fa3a312514a1f098",
+      "type": "commit",
+      "ts": "2021-12-01T13:51:43Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "95e6833752a5b08fbdc80463fa3a312514a1f098",
+        "message": "pref(IO): change to singleton\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 45,
+        "deletions": 26
+      }
+    },
+    {
+      "id": "commit-cec9114d7f48e30dedc64a4ae6b69376c0d19ba1",
+      "type": "commit",
+      "ts": "2021-12-01T13:47:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cec9114d7f48e30dedc64a4ae6b69376c0d19ba1",
+        "message": "pref(IO): change to singleton\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 45,
+        "deletions": 33
+      }
+    },
+    {
+      "id": "commit-ed1b63df6cf3c0d75ca433e38fb8f838a6c96660",
+      "type": "commit",
+      "ts": "2021-12-01T13:39:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "ed1b63df6cf3c0d75ca433e38fb8f838a6c96660",
+        "message": "pref(IO): change to singleton\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 100,
+        "deletions": 76
+      }
+    },
+    {
+      "id": "commit-509f80489a7e2a0ba302de7a7ce9b0d62faeec3a",
+      "type": "commit",
+      "ts": "2021-12-01T13:06:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "509f80489a7e2a0ba302de7a7ce9b0d62faeec3a",
+        "message": "pref(IO): change to singleton\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 44,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-c27698a6dfeb197973a9326ee0852864743f9be9",
+      "type": "commit",
+      "ts": "2021-12-01T12:23:06Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c27698a6dfeb197973a9326ee0852864743f9be9",
+        "message": "pref(aarch64): remove redundant file\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 0,
+        "deletions": 16
+      }
+    }
+  ]
+}

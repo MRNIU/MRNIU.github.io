@@ -1,0 +1,641 @@
+{
+  "month": "2020-02",
+  "events": [
+    {
+      "id": "commit-7f17cbf6fe7f3c7a66860b5d2b00ac1541125e8f",
+      "type": "commit",
+      "ts": "2020-02-26T01:06:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7f17cbf6fe7f3c7a66860b5d2b00ac1541125e8f",
+        "message": "Improve switch_to\n- Update devlog\n- Improve switch_to into embedded assemble language",
+        "additions": 72,
+        "deletions": 51
+      }
+    },
+    {
+      "id": "commit-bc60018f785df55cecd100d64e3a95e2f3d2631d",
+      "type": "commit",
+      "ts": "2020-02-24T13:04:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bc60018f785df55cecd100d64e3a95e2f3d2631d",
+        "message": "update",
+        "additions": 187,
+        "deletions": 139
+      }
+    },
+    {
+      "id": "commit-8c0f514da0f62d0b4d49804bd617664526bd6aee",
+      "type": "commit",
+      "ts": "2020-02-22T12:59:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8c0f514da0f62d0b4d49804bd617664526bd6aee",
+        "message": "Update\n- Update devlog\n- Add SWITCH_TO macro that will be used in the future\n- Working on bugs",
+        "additions": 94,
+        "deletions": 49
+      }
+    },
+    {
+      "id": "commit-dcb35cc6268a61c204e5d85285f177039ec2c430",
+      "type": "commit",
+      "ts": "2020-02-22T09:21:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "dcb35cc6268a61c204e5d85285f177039ec2c430",
+        "message": "- Update devlog\n- Fix bug in task and sched\n- Add `print_stack(size_t)` at debug.c. This function can output the\ndata in current stack.",
+        "additions": 169,
+        "deletions": 52
+      }
+    },
+    {
+      "id": "commit-b1592d8d74a1dc5f7cdefcb7ee536e68d5b8b317",
+      "type": "commit",
+      "ts": "2020-02-17T15:59:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b1592d8d74a1dc5f7cdefcb7ee536e68d5b8b317",
+        "message": "Update",
+        "additions": 7,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-7dbe4f7db67203b6436745e1cf6914a40822afe5",
+      "type": "commit",
+      "ts": "2020-02-17T11:42:07Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7dbe4f7db67203b6436745e1cf6914a40822afe5",
+        "message": "Update",
+        "additions": 58,
+        "deletions": 131
+      }
+    },
+    {
+      "id": "commit-eddfb8dbeb03393a413c145cdfc48ead2fd0fa7a",
+      "type": "commit",
+      "ts": "2020-02-17T09:39:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "eddfb8dbeb03393a413c145cdfc48ead2fd0fa7a",
+        "message": "Recover the previous kernel_stack",
+        "additions": 137,
+        "deletions": 83
+      }
+    },
+    {
+      "id": "commit-0cad35a57a52292dbd812662dda67a98d74f408a",
+      "type": "commit",
+      "ts": "2020-02-16T11:38:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0cad35a57a52292dbd812662dda67a98d74f408a",
+        "message": "Update",
+        "additions": 4,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-cae18ef84e1771e3d6c7d52e408584e39a28afee",
+      "type": "commit",
+      "ts": "2020-02-16T10:14:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cae18ef84e1771e3d6c7d52e408584e39a28afee",
+        "message": "Barely run",
+        "additions": 105,
+        "deletions": 48
+      }
+    },
+    {
+      "id": "commit-7b95ce59bb6b6b9cc78291d6843aa9d9ad88d58c",
+      "type": "commit",
+      "ts": "2020-02-16T06:50:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7b95ce59bb6b6b9cc78291d6843aa9d9ad88d58c",
+        "message": "- Update devlog\n- Task and sched have been preliminarily completed\n    Without arguments and no IOPL switch",
+        "additions": 39,
+        "deletions": 82
+      }
+    },
+    {
+      "id": "commit-7c4bf83427e95bbc9b706d9ec560f892199aa996",
+      "type": "commit",
+      "ts": "2020-02-16T06:06:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7c4bf83427e95bbc9b706d9ec560f892199aa996",
+        "message": "Remove debug code",
+        "additions": 7,
+        "deletions": 46
+      }
+    },
+    {
+      "id": "commit-91cc4cb1f9e8eb94569a2b71880f5c9c007afb71",
+      "type": "commit",
+      "ts": "2020-02-16T06:02:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "91cc4cb1f9e8eb94569a2b71880f5c9c007afb71",
+        "message": "fix bug",
+        "additions": 73,
+        "deletions": 53
+      }
+    },
+    {
+      "id": "commit-a07f1c9ee2d18ba5ba5a840ac07f34cf1c783b5d",
+      "type": "commit",
+      "ts": "2020-02-15T13:25:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a07f1c9ee2d18ba5ba5a840ac07f34cf1c783b5d",
+        "message": "Bug fixing",
+        "additions": 27,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-46772e01ef7e45890bd74880644f1cf7a3ebd42f",
+      "type": "commit",
+      "ts": "2020-02-15T12:28:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "46772e01ef7e45890bd74880644f1cf7a3ebd42f",
+        "message": "Update",
+        "additions": 18,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-e6cc965287d3fae0f6a9c7cab82ab9b72bcc6283",
+      "type": "commit",
+      "ts": "2020-02-15T11:43:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e6cc965287d3fae0f6a9c7cab82ab9b72bcc6283",
+        "message": "Update devlog",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-8725126d5af3ac8a8057f1d697ca8b24bae266d1",
+      "type": "commit",
+      "ts": "2020-02-15T11:43:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8725126d5af3ac8a8057f1d697ca8b24bae266d1",
+        "message": "Improve kernel_stack",
+        "additions": 39,
+        "deletions": 19
+      }
+    },
+    {
+      "id": "commit-a0b0bafd4d4776854843e245b5be65bf84b25fc6",
+      "type": "commit",
+      "ts": "2020-02-15T10:07:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a0b0bafd4d4776854843e245b5be65bf84b25fc6",
+        "message": "Update",
+        "additions": 40,
+        "deletions": 30
+      }
+    },
+    {
+      "id": "commit-db642f787a6583df89707852509e8ac05c1e477f",
+      "type": "commit",
+      "ts": "2020-02-15T08:58:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "db642f787a6583df89707852509e8ac05c1e477f",
+        "message": "- Update devlog20200202\n- Sched runs successfully, but stil problems",
+        "additions": 60,
+        "deletions": 64
+      }
+    },
+    {
+      "id": "commit-5d76d9bf2dc45748d7c4319c33b2ee4499fe4536",
+      "type": "commit",
+      "ts": "2020-02-14T11:18:45Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "sha": "5d76d9bf2dc45748d7c4319c33b2ee4499fe4536",
+        "message": "- Add devlog20200214\n- Working on parser\n- Improve lexer",
+        "additions": 85,
+        "deletions": 27
+      }
+    },
+    {
+      "id": "commit-b3ba1df51b70157617213158fa7ff2e65f1d69d6",
+      "type": "commit",
+      "ts": "2020-02-10T14:46:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b3ba1df51b70157617213158fa7ff2e65f1d69d6",
+        "message": "- Update devlog\n- Bugs on sched",
+        "additions": 244,
+        "deletions": 205
+      }
+    },
+    {
+      "id": "commit-74e2534dbddfe7737238d665e155c2fb30a07949",
+      "type": "commit",
+      "ts": "2020-02-10T07:42:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "74e2534dbddfe7737238d665e155c2fb30a07949",
+        "message": "update",
+        "additions": 5,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-b7d8730d6102b357d126d0c75ae39573a14e5535",
+      "type": "commit",
+      "ts": "2020-02-07T14:02:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b7d8730d6102b357d126d0c75ae39573a14e5535",
+        "message": "Update",
+        "additions": 272,
+        "deletions": 57
+      }
+    },
+    {
+      "id": "commit-c18b62f45310111a187d1f8f6b2fe6ba0572bb88",
+      "type": "commit",
+      "ts": "2020-02-07T08:25:16Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c18b62f45310111a187d1f8f6b2fe6ba0572bb88",
+        "message": "- Update devlog\n- Fix bug that slab:alloc used be skip init block",
+        "additions": 17,
+        "deletions": 35
+      }
+    },
+    {
+      "id": "commit-26d050fa330b24e2578a377d28d2547fdb16c2ad",
+      "type": "commit",
+      "ts": "2020-02-07T07:59:31Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "26d050fa330b24e2578a377d28d2547fdb16c2ad",
+        "message": "Working on task; Fix bug that slab:alloc only able to access two linked-list entry",
+        "additions": 121,
+        "deletions": 69
+      }
+    },
+    {
+      "id": "commit-528dc37b4bf20de30ff9b1b77f220345cc410cae",
+      "type": "commit",
+      "ts": "2020-02-06T09:07:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "528dc37b4bf20de30ff9b1b77f220345cc410cae",
+        "message": "Merge pull request #23 from MRNIU/heap\n\nHeap",
+        "additions": 379,
+        "deletions": 115
+      }
+    },
+    {
+      "id": "pr-23-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-02-06T09:01:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 23,
+        "title": "Heap",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-f5ce18efdb1dcd4248cfde63fc5306fd2732c0c1",
+      "type": "commit",
+      "ts": "2020-02-06T08:58:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f5ce18efdb1dcd4248cfde63fc5306fd2732c0c1",
+        "message": "Delete redundant code",
+        "additions": 7,
+        "deletions": 38
+      }
+    },
+    {
+      "id": "commit-b33926399d723be9c636037608ceb3dc85608e14",
+      "type": "commit",
+      "ts": "2020-02-06T08:49:10Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b33926399d723be9c636037608ceb3dc85608e14",
+        "message": "- Update devlog\n- Slab almost there, I think it can be optimized",
+        "additions": 57,
+        "deletions": 45
+      }
+    },
+    {
+      "id": "commit-4695a599568e3e673c51053a35cc521929658252",
+      "type": "commit",
+      "ts": "2020-02-06T03:02:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4695a599568e3e673c51053a35cc521929658252",
+        "message": "- Update devlog\n- Working on slab:alloc\n- Fix bug at vmm.c:map()",
+        "additions": 408,
+        "deletions": 125
+      }
+    },
+    {
+      "id": "commit-620866c2b87461f5629f15dd51735f98efb26c38",
+      "type": "commit",
+      "ts": "2020-02-05T08:22:33Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "620866c2b87461f5629f15dd51735f98efb26c38",
+        "message": "Merge pull request #22 from MRNIU/vp\n\nVp->master",
+        "additions": 1673,
+        "deletions": 1037
+      }
+    },
+    {
+      "id": "pr-22-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-02-05T08:19:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 22,
+        "title": "Vp->master",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "pr-21-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-02-05T08:18:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 21,
+        "title": "Vp",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-235e793debc8bc60c92d74a0a504e4dfc6bbba0e",
+      "type": "commit",
+      "ts": "2020-02-05T08:18:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "235e793debc8bc60c92d74a0a504e4dfc6bbba0e",
+        "message": "Update pmm management",
+        "additions": 358,
+        "deletions": 1015
+      }
+    },
+    {
+      "id": "commit-74b8f3a8bc99bde36a3d6e4dfa00e602d30ab426",
+      "type": "commit",
+      "ts": "2020-02-05T08:09:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "74b8f3a8bc99bde36a3d6e4dfa00e602d30ab426",
+        "message": "Merge pull request #20 from MRNIU/mem_dev\n\nMem dev",
+        "additions": 221,
+        "deletions": 146
+      }
+    },
+    {
+      "id": "pr-20-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-02-05T08:03:38Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 20,
+        "title": "Mem dev",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-f5b5e50b942d20b881709304ab1da23b140b439f",
+      "type": "commit",
+      "ts": "2020-02-05T08:02:49Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f5b5e50b942d20b881709304ab1da23b140b439f",
+        "message": "Ready to heap",
+        "additions": 3,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-eb55546f7963343e0eb3db1837c5a926be3b52a4",
+      "type": "commit",
+      "ts": "2020-02-05T08:00:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "eb55546f7963343e0eb3db1837c5a926be3b52a4",
+        "message": "Clean up code style, check #include",
+        "additions": 218,
+        "deletions": 145
+      }
+    },
+    {
+      "id": "commit-082002970c24331dd9306a325bb32f3ce6aedab6",
+      "type": "commit",
+      "ts": "2020-02-05T06:50:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "082002970c24331dd9306a325bb32f3ce6aedab6",
+        "message": "Merge pull request #19 from MRNIU/mem_dev\n\nMem dev",
+        "additions": 1108,
+        "deletions": 571
+      }
+    },
+    {
+      "id": "pr-19-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2020-02-05T03:35:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 19,
+        "title": "Mem dev",
+        "state": "merged",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-0a4b4ce87d35a816171037a1faadc91b31eccc3c",
+      "type": "commit",
+      "ts": "2020-02-05T03:33:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0a4b4ce87d35a816171037a1faadc91b31eccc3c",
+        "message": "Update",
+        "additions": 5,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-78cce3199e2efdc29e09139201313a4ae3227cf8",
+      "type": "commit",
+      "ts": "2020-02-05T03:25:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "78cce3199e2efdc29e09139201313a4ae3227cf8",
+        "message": "ff management almost there",
+        "additions": 13,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-891914ab9ed3d46ad5674b754a00ba8758a18cf9",
+      "type": "commit",
+      "ts": "2020-02-05T03:05:38Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "891914ab9ed3d46ad5674b754a00ba8758a18cf9",
+        "message": "- Update devlog\n- ff->free almost there",
+        "additions": 44,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-a8e4b9d615f7c3206bdfcdf5cbda3d2d5b6d9b81",
+      "type": "commit",
+      "ts": "2020-02-05T01:03:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "a8e4b9d615f7c3206bdfcdf5cbda3d2d5b6d9b81",
+        "message": "- Update devlog\n- Fix bug at fitstfit.c",
+        "additions": 48,
+        "deletions": 30
+      }
+    },
+    {
+      "id": "commit-4da8eaea463fe38643dbd6d5442725085c32b11e",
+      "type": "commit",
+      "ts": "2020-02-04T16:42:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4da8eaea463fe38643dbd6d5442725085c32b11e",
+        "message": "- Update  devlog\n- Extend initialize virtual memory to 8MB\n- fitstfit algorithm for the kernel initialization phase almost there",
+        "additions": 152,
+        "deletions": 66
+      }
+    },
+    {
+      "id": "commit-77f622b28786f99b70eb1e3ef3f18c54325ca9f3",
+      "type": "commit",
+      "ts": "2020-02-03T15:47:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "77f622b28786f99b70eb1e3ef3f18c54325ca9f3",
+        "message": "- Working on pmm managemant\n    Add ff, buddy and slob files, and I have a problem with ff algorithm\n\n- Update devlog\n- Change STACK_SIZE into 16KB\n- Add e820.h for physical memory managemant",
+        "additions": 568,
+        "deletions": 201
+      }
+    },
+    {
+      "id": "commit-4dcca8de57bf50a1d0739c57ce07f5868c0bb021",
+      "type": "commit",
+      "ts": "2020-02-02T15:23:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4dcca8de57bf50a1d0739c57ce07f5868c0bb021",
+        "message": "- Update devlog\n- Stop dev on task, because there are many bugs in memory management\n- Remove unused codes",
+        "additions": 185,
+        "deletions": 89
+      }
+    },
+    {
+      "id": "commit-fdfea317d11b66deff5abd5c9ae18464777c7e5c",
+      "type": "commit",
+      "ts": "2020-02-02T06:51:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fdfea317d11b66deff5abd5c9ae18464777c7e5c",
+        "message": "Delete old code",
+        "additions": 18,
+        "deletions": 87
+      }
+    },
+    {
+      "id": "comment-hzcx998/XBook-8-107",
+      "type": "issue_comment",
+      "ts": "2020-02-02T03:53:24Z",
+      "repo": "hzcx998/XBook",
+      "semantic": null,
+      "data": {
+        "issueNumber": 8,
+        "issueTitle": "在 mac 上编译问题",
+        "body": "好的，谢谢\r\n\r\n发自我的iPhone\r\n\r\n在 2020年2月2日，11:51，Jason Hu <notifications@github.com> 写道：\r\n\r\n﻿你好，\r\n&nbsp;&nbsp;&nbsp;&nbsp;很高兴你能尝试使用这个系统，并且你还在mac平台下面做开发。我只使用过win和linux，mac都没用过，所以我对mac是一无所知，很难帮助到你！如果你成功在mac上运行，记得来信告诉我，帮助我在mac上搭建开发环境，很感谢！\r\n--BookOS主开发者拜上\r\n\r\n\r\n---原始邮件---\r\n发件人: &quot;Zone.N&quot;<notifications@github.com&gt;\r\n发送时间: 2020年2月2日(星期日) 中午11:44\r\n收件人: &quot;huzichengdevelop/XBook&quot;<XBook@noreply.github.com&gt;;\r\n抄送: &quot;Subscribed&quot;<subscribed@noreply.github.com&gt;;\r\n主题: [huzichengdevelop/XBook] 在 mac 上编译问题 (#8)\r\n\r\n\r\n\r\n你好：\r\n我正在尝试在 mac 上跑 XBook，但是在编译过程中遇到了一个小问题，以下是错误报告：\r\n/Library/Developer/CommandLineTools/usr/bin/make -C arch/x86/ -f /***/XBook/src/Makefile.build /Library/Developer/CommandLineTools/usr/bin/make -C boot -f /***/XBook/src/Makefile.build make[2]: Nothing to be done for `__build'. /Library/Developer/CommandLineTools/usr/bin/make -C kernel -f /***/XBook/src/Makefile.build [CC] arch/x86/kernel/arch.o /var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:13:2: error: instruction requires: Not 64-bit mode pushl %ebp ^ /var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:17:2: error: instruction requires: Not 64-bit mode pushl %ebx ^ /var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:29:2: error: instruction requires: Not 64-bit mode pushl %eax ^ /var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:30:2: error: instruction requires: Not 64-bit mode call *%edx ^ /var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:43:2: error: instruction requires: Not 64-bit mode pushl %eax ^ /var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:44:2: error: instruction requires: Not 64-bit mode call *%edx ^ make[2]: *** [arch.o] Error 1 make[1]: *** [kernel] Error 2 make: *** [arch/x86/] Error 2\r\n我对原代码做出了如下修改：\r\ndiff --git a/src/makefile b/src/makefile index a4d771f..f5a3eeb 100644 --- a/src/makefile +++ b/src/makefile @@ -14,10 +14,17 @@ all: BOCHS_DIR = ../bochs/ # ar 是库打包工具 -AR = ar +ifneq ($(HOSTOS),macos) +AR = gcc-ar-9 +CC= gcc-9 +LD = ld-9 +else +AR = ar +CC= gcc +LD = ld +endif + NASM = nasm -CC= gcc -LD = ld DD = dd QEMU = qemu-system-i386 BOCHS = bochs #----dir---- #arch @@ -75,7 +82,7 @@ TOPDIR:= $(CURDIR) ifeq ($(OS),Windows_NT) HOSTOS:= windows else -ifeq ($(shell uname),Darwin) +ifeq ($(shell uname),\"Darwin\") HOSTOS:= macos else ifeq ($(shell uname),Linux)\r\n这看起来是目标文&#x4EF6;格式不一致导致的，请问你有什么解决思路吗(当然能顺手解决掉更好)\r\n\r\n谢谢！\r\n\r\n&mdash;\r\nYou are receiving this because you are subscribed to this thread.\r\nReply to this email directly, view it on GitHub, or unsubscribe.\r\n\r\n—\r\nYou are receiving this because you authored the thread.\r\nReply to this email directly, view it on GitHub<https://github.com/huzichengdevelop/XBook/issues/8?email_source=notifications&email_token=ADC57SQLE7BXOB3OVH7N7ELRAY7NFA5CNFSM4KOXFXSKYY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGOEKRNALI#issuecomment-581095469>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ADC57SUGI5S5GUMD6W54I3DRAY7NFANCNFSM4KOXFXSA>.\r\n"
+      }
+    },
+    {
+      "id": "issue-8-hzcx998/XBook",
+      "type": "issue",
+      "ts": "2020-02-02T03:44:53Z",
+      "repo": "hzcx998/XBook",
+      "semantic": null,
+      "data": {
+        "number": 8,
+        "title": "在 mac 上编译问题",
+        "state": "closed",
+        "body": "你好：\r\n我正在尝试在 mac 上跑 XBook，但是在编译过程中遇到了一个小问题，以下是错误报告：\r\n```\r\n/Library/Developer/CommandLineTools/usr/bin/make -C arch/x86/ -f /***/XBook/src/Makefile.build\r\n/Library/Developer/CommandLineTools/usr/bin/make -C boot -f /***/XBook/src/Makefile.build\r\nmake[2]: Nothing to be done for `__build'.\r\n/Library/Developer/CommandLineTools/usr/bin/make -C kernel -f /***/XBook/src/Makefile.build\r\n[CC] arch/x86/kernel/arch.o\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:13:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %ebp\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:17:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %ebx\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:29:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %eax\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:30:2: error: instruction requires: Not 64-bit mode\r\n        call    *%edx\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:43:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %eax\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:44:2: error: instruction requires: Not 64-bit mode\r\n        call    *%edx\r\n        ^\r\nmake[2]: *** [arch.o] Error 1\r\nmake[1]: *** [kernel] Error 2\r\nmake: *** [arch/x86/] Error 2\r\n```\r\n\r\n我对原代码做出了如下修改：\r\n```\r\ndiff --git a/src/makefile b/src/makefile\r\nindex a4d771f..f5a3eeb 100644\r\n--- a/src/makefile\r\n+++ b/src/makefile\r\n@@ -14,10 +14,17 @@ all:\r\n BOCHS_DIR = ../bochs/\r\n \r\n # ar 是库打包工具\r\n-AR \t= ar\r\n+ifneq ($(HOSTOS),macos)\r\n+\tAR \t\t\t= gcc-ar-9\r\n+\tCC\t\t\t= gcc-9\r\n+\tLD \t\t\t= ld-9\r\n+else\r\n+\tAR \t\t\t= ar\r\n+\tCC\t\t\t= gcc\r\n+\tLD \t\t\t= ld\r\n+endif\r\n+\r\n NASM \t\t= nasm\r\n-CC\t\t\t= gcc\r\n-LD \t\t\t= ld\r\n DD \t\t\t= dd\r\n QEMU \t\t= qemu-system-i386\r\n BOCHS \t\t= bochs\r\n\r\n #----dir----\r\n #arch\r\n@@ -75,7 +82,7 @@ TOPDIR\t:= $(CURDIR)\r\n ifeq ($(OS),Windows_NT)\r\n \tHOSTOS\t\t:= windows\r\n else\r\n-\tifeq ($(shell uname),Darwin)\r\n+\tifeq ($(shell uname),\"Darwin\")\r\n \t\tHOSTOS\t\t:= macos\r\n \telse\r\n \t\tifeq ($(shell uname),Linux)\r\n```\r\n\r\n这看起来是目标文件格式不一致导致的，请问你有什么解决思路吗(当然能顺手解决掉更好)\r\n\r\n谢谢！"
+      }
+    }
+  ]
+}

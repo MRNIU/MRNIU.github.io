@@ -1,0 +1,18 @@
+{
+  "month": "2024-01",
+  "events": [
+    {
+      "id": "issue-185-Simple-XX/SimpleKernel",
+      "type": "issue",
+      "ts": "2024-01-04T09:28:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 185,
+        "title": "重新规划分支内容",
+        "state": "closed",
+        "body": "\n\n![Image](https://github.com/Simple-XX/SimpleKernel/assets/12967882/9a845d0c-4b3b-4c71-aa4b-4aa5afc449fd)\n\n"
+      }
+    }
+  ]
+}

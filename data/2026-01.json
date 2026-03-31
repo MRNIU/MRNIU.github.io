@@ -1,0 +1,498 @@
+{
+  "month": "2026-01",
+  "events": [
+    {
+      "id": "commit-0573cc0801b362b573e814cf99f27bd80e081316",
+      "type": "commit",
+      "ts": "2026-01-30T06:39:24Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "style",
+      "data": {
+        "sha": "0573cc0801b362b573e814cf99f27bd80e081316",
+        "message": "style: replace static constexpr const with static constexpr\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 171,
+        "deletions": 171
+      }
+    },
+    {
+      "id": "commit-f2119197ef8739bb609fb710d4b9d6a0606c4320",
+      "type": "commit",
+      "ts": "2026-01-30T06:38:17Z",
+      "repo": "MRNIU/bmalloc",
+      "semantic": "style",
+      "data": {
+        "sha": "f2119197ef8739bb609fb710d4b9d6a0606c4320",
+        "message": "style: replace static constexpr const with static constexpr\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-8bf684ae50519738dadee17c82a890d070089440",
+      "type": "commit",
+      "ts": "2026-01-22T17:09:24Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "8bf684ae50519738dadee17c82a890d070089440",
+        "message": "feat: UserStackPointer ThreadPointer ReturnValue\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 24,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-af9949f43dd99de9a1189df1c9667991f8f01ab9",
+      "type": "commit",
+      "ts": "2026-01-20T07:23:07Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "refactor",
+      "data": {
+        "sha": "af9949f43dd99de9a1189df1c9667991f8f01ab9",
+        "message": "refactor: TrapContext\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 42,
+        "deletions": 57
+      }
+    },
+    {
+      "id": "commit-472bb70d021400ad94a916fd7b56a154dbf10447",
+      "type": "commit",
+      "ts": "2026-01-20T07:12:39Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "refactor",
+      "data": {
+        "sha": "472bb70d021400ad94a916fd7b56a154dbf10447",
+        "message": "refactor: TrapContext\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 70,
+        "deletions": 33
+      }
+    },
+    {
+      "id": "commit-c24a38290a78a28ee91cfe75a1b77405ab5929b4",
+      "type": "commit",
+      "ts": "2026-01-19T13:07:04Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "c24a38290a78a28ee91cfe75a1b77405ab5929b4",
+        "message": "feat: CPU_IO_INCLUDE_X86_64_CONTEXT_HPP_\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 23,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-bb72cf20a1e83da66695774a173d61808c62de91",
+      "type": "commit",
+      "ts": "2026-01-19T08:10:00Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "bb72cf20a1e83da66695774a173d61808c62de91",
+        "message": "feat: ICC_SGI1R_EL1Info\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 134,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-786fce7f1ea29c93c034eb4dcd1f4dd8f64de33d",
+      "type": "commit",
+      "ts": "2026-01-16T09:56:25Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "786fce7f1ea29c93c034eb4dcd1f4dd8f64de33d",
+        "message": "feat: Pause\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 20,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-a19fe39995240ad2cdac63812e22b5caf10627a1",
+      "type": "commit",
+      "ts": "2026-01-16T08:43:37Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "a19fe39995240ad2cdac63812e22b5caf10627a1",
+        "message": "feat: context.hpp for aarch64\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-7e8d6beb6bd2c8adb59b40572673b0f5cb8e70fc",
+      "type": "commit",
+      "ts": "2026-01-16T08:42:13Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "7e8d6beb6bd2c8adb59b40572673b0f5cb8e70fc",
+        "message": "feat: context.hpp for aarch64\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 152,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-9e54ecddbff86a42db0c1fe15a05f4511f737b23",
+      "type": "commit",
+      "ts": "2026-01-15T15:14:49Z",
+      "repo": "MRNIU/siyuan-note-ai",
+      "semantic": null,
+      "data": {
+        "sha": "9e54ecddbff86a42db0c1fe15a05f4511f737b23",
+        "message": "Initial commit",
+        "additions": 2232,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-27f5bf75e0d09b1cb0c0d7af9729d14c8e27d044",
+      "type": "commit",
+      "ts": "2026-01-11T07:57:21Z",
+      "repo": "MRNIU/MPMCQueue",
+      "semantic": "test",
+      "data": {
+        "sha": "27f5bf75e0d09b1cb0c0d7af9729d14c8e27d044",
+        "message": "test: update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 43,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-06f785b736ecedfaea8139170bab507e1cb4a0bc",
+      "type": "commit",
+      "ts": "2026-01-11T07:50:42Z",
+      "repo": "MRNIU/MPMCQueue",
+      "semantic": "test",
+      "data": {
+        "sha": "06f785b736ecedfaea8139170bab507e1cb4a0bc",
+        "message": "test: update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 296,
+        "deletions": 589
+      }
+    },
+    {
+      "id": "commit-686bc4084cc3cd082cbda585a717ac1f3c6c1f75",
+      "type": "commit",
+      "ts": "2026-01-11T07:26:20Z",
+      "repo": "MRNIU/MPMCQueue",
+      "semantic": null,
+      "data": {
+        "sha": "686bc4084cc3cd082cbda585a717ac1f3c6c1f75",
+        "message": "init commit\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 527,
+        "deletions": 716
+      }
+    },
+    {
+      "id": "commit-c3256046a3ab19880f955c3d2b602fea9206716d",
+      "type": "commit",
+      "ts": "2026-01-11T07:10:45Z",
+      "repo": "MRNIU/MPMCQueue",
+      "semantic": "merge",
+      "data": {
+        "sha": "c3256046a3ab19880f955c3d2b602fea9206716d",
+        "message": "Merge pull request #1 from MRNIU/copilot/add-mpmc-lock-free-queue\n\nAdd C++26 MPMC lock-free queue for freestanding environments",
+        "additions": 1327,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-394f3ee1ffc7276bf46a3e095aa69412c59cf74f",
+      "type": "commit",
+      "ts": "2026-01-11T06:52:58Z",
+      "repo": "MRNIU/MPMCQueue",
+      "semantic": null,
+      "data": {
+        "sha": "394f3ee1ffc7276bf46a3e095aa69412c59cf74f",
+        "message": "Initial commit",
+        "additions": 41,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-28d9bdaf1e6a35d595fa43831345a068d900854b",
+      "type": "commit",
+      "ts": "2026-01-08T18:27:20Z",
+      "repo": "MRNIU/bmalloc",
+      "semantic": "style",
+      "data": {
+        "sha": "28d9bdaf1e6a35d595fa43831345a068d900854b",
+        "message": "style: update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 7,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-e6606515feb7d2bb1ef439df255fcd3e617b2f38",
+      "type": "commit",
+      "ts": "2026-01-08T13:34:43Z",
+      "repo": "MRNIU/bmalloc",
+      "semantic": "test",
+      "data": {
+        "sha": "e6606515feb7d2bb1ef439df255fcd3e617b2f38",
+        "message": "test: update system test\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 3,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-589afcf44ed35def871d03285a840da83948bb6c",
+      "type": "commit",
+      "ts": "2026-01-07T16:39:35Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "589afcf44ed35def871d03285a840da83948bb6c",
+        "message": "feat: working on task\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 3,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-1107462b27eceec7c73d1af98c82ab9ae5298205",
+      "type": "commit",
+      "ts": "2026-01-07T14:27:58Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "fix",
+      "data": {
+        "sha": "1107462b27eceec7c73d1af98c82ab9ae5298205",
+        "message": "fix: trap entry must be aligned with 4 bytes\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-64e22a62e97905eae81a7b03692177288cf095e7",
+      "type": "commit",
+      "ts": "2026-01-06T19:13:42Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "sha": "64e22a62e97905eae81a7b03692177288cf095e7",
+        "message": "soc: rockchip: replace MT_NS with MT_DEFAULT_SECURE_STATE for rk3588\n\nUpdated the MMU region entries for the GIC device to use\nMT_DEFAULT_SECURE_STATE instead of MT_NS,\naligning the security attribute with the default secure sate macro.\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 5,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-51f1161329a3fc42ec249a04a33e941b6c732228",
+      "type": "commit",
+      "ts": "2026-01-06T19:13:42Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "sha": "51f1161329a3fc42ec249a04a33e941b6c732228",
+        "message": "soc: rockchip: update rk3588 NUM_IRQS\n\nUpdate NUM_IRQS value according to datasheet\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-5970763138a56b307c03bafbeb340f97916486df",
+      "type": "commit",
+      "ts": "2026-01-06T17:15:45Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "5970763138a56b307c03bafbeb340f97916486df",
+        "message": "feat: context\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 36,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-4cca955c6ee43292d6e9256017ef80b53ab9b826",
+      "type": "commit",
+      "ts": "2026-01-06T16:26:00Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "4cca955c6ee43292d6e9256017ef80b53ab9b826",
+        "message": "feat: context.hpp\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 131,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-7b8666e6eafe5f6bd7e75174b105a34db7e6bbbb",
+      "type": "commit",
+      "ts": "2026-01-06T03:23:06Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "7b8666e6eafe5f6bd7e75174b105a34db7e6bbbb",
+        "message": "feat: x86_64 vmm\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 373,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "comment-zephyrproject-rtos/zephyr-95978-3",
+      "type": "issue_comment",
+      "ts": "2026-01-06T01:42:30Z",
+      "repo": "zephyrproject-rtos/zephyr",
+      "semantic": null,
+      "data": {
+        "issueNumber": 95978,
+        "issueTitle": "soc: rockchip: fix rk3588 mistake",
+        "body": "Friendly ping @dcpleung @nordicjm @wearyzen "
+      }
+    },
+    {
+      "id": "commit-3476c9a78d2d0b38045ef6d6bcfd8c29aabb1103",
+      "type": "commit",
+      "ts": "2026-01-05T07:55:29Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "3476c9a78d2d0b38045ef6d6bcfd8c29aabb1103",
+        "message": "feat: GetTableEntryPermissions\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 20,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-0e4b7af9ccd380bd7d48e9bc93d4682f43347a9b",
+      "type": "commit",
+      "ts": "2026-01-01T15:38:38Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "0e4b7af9ccd380bd7d48e9bc93d4682f43347a9b",
+        "message": "feat: v1.1.2\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 8,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-86b30dbdbea3e37a2a25f0f93a26730ac35f3340",
+      "type": "commit",
+      "ts": "2026-01-01T03:37:28Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "86b30dbdbea3e37a2a25f0f93a26730ac35f3340",
+        "message": "feat: v1.1.2\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 8,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-bdaf530dfafb3b505d7b7d9474c735d108e72cb5",
+      "type": "commit",
+      "ts": "2026-01-01T03:36:42Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "bdaf530dfafb3b505d7b7d9474c735d108e72cb5",
+        "message": "feat: v1.1.1\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 24,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-03de2f102d9341049da648e0ca3094e1e35c6fe4",
+      "type": "commit",
+      "ts": "2026-01-01T03:23:04Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "03de2f102d9341049da648e0ca3094e1e35c6fe4",
+        "message": "feat: v1.1.1\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 9,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-806f1cd6fa0ffff23c9f6449863ca55a5496206c",
+      "type": "commit",
+      "ts": "2026-01-01T03:20:42Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "806f1cd6fa0ffff23c9f6449863ca55a5496206c",
+        "message": "feat: v1.1.1\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 198,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-5539d23b44e0414ec74caa4d712e02b373a25d72",
+      "type": "commit",
+      "ts": "2026-01-01T02:22:44Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "5539d23b44e0414ec74caa4d712e02b373a25d72",
+        "message": "feat: v1.1.0\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 24,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-9e9a3eeff1e1733912a788cec050426aaea1aa15",
+      "type": "commit",
+      "ts": "2026-01-01T02:20:59Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "9e9a3eeff1e1733912a788cec050426aaea1aa15",
+        "message": "misc: update copyright\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-621fa177cac7ad3391e294f21ad62313f8e1a2b5",
+      "type": "commit",
+      "ts": "2026-01-01T02:09:38Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "621fa177cac7ad3391e294f21ad62313f8e1a2b5",
+        "message": "feat: v1.1.0\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-0e66e226154e1847539034fb6e1d90b3dbaac8b9",
+      "type": "commit",
+      "ts": "2026-01-01T02:09:01Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "0e66e226154e1847539034fb6e1d90b3dbaac8b9",
+        "message": "feat: v1.1.0\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 7,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-932d131b94dff93721ddff0d6e32b2ca26876d63",
+      "type": "commit",
+      "ts": "2026-01-01T02:08:14Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "932d131b94dff93721ddff0d6e32b2ca26876d63",
+        "message": "feat: v1.1.0\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 50,
+        "deletions": 24
+      }
+    },
+    {
+      "id": "commit-6ba64407a1bbee0bfc279423076e2b589b1b4659",
+      "type": "commit",
+      "ts": "2026-01-01T02:05:20Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "6ba64407a1bbee0bfc279423076e2b589b1b4659",
+        "message": "feat: v1.1.0\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 160,
+        "deletions": 8
+      }
+    }
+  ]
+}

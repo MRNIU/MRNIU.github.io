@@ -1,0 +1,147 @@
+{
+  "month": "2026-02",
+  "events": [
+    {
+      "id": "commit-c0a92df5daeaf586b7b9c0e7e028f8a06fa0d9ae",
+      "type": "commit",
+      "ts": "2026-02-28T06:02:01Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "fix",
+      "data": {
+        "sha": "c0a92df5daeaf586b7b9c0e7e028f8a06fa0d9ae",
+        "message": "fix: x86 io\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-f9d46b4488ff8e3cc2db6d6d28891caa78e95148",
+      "type": "commit",
+      "ts": "2026-02-24T10:19:28Z",
+      "repo": "MRNIU/MPMCQueue",
+      "semantic": "style",
+      "data": {
+        "sha": "f9d46b4488ff8e3cc2db6d6d28891caa78e95148",
+        "message": "style: update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 269,
+        "deletions": 283
+      }
+    },
+    {
+      "id": "commit-d7be3e392921ff4500d96c5b4f5120e4bfa56ffd",
+      "type": "commit",
+      "ts": "2026-02-12T06:21:43Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "d7be3e392921ff4500d96c5b4f5120e4bfa56ffd",
+        "message": "feat: add mb, rmb, wmb\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 65,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "issue-739-GitHubDaily/GitHubDaily",
+      "type": "issue",
+      "ts": "2026-02-09T08:51:34Z",
+      "repo": "GitHubDaily/GitHubDaily",
+      "semantic": null,
+      "data": {
+        "number": 739,
+        "title": "[开源推荐] SimpleKernel - 面向 AI 的操作系统学习项目",
+        "state": "open",
+        "body": "### 项目地址\n\nhttps://github.com/Simple-XX/SimpleKernel\n\n### 类别\n\nC++\n\n### 项目标题\n\nSimpleKernel - 面向 AI 的操作系统学习项目\n\n### 项目描述\n\n一个面向 AI 辅助学习的现代化操作系统内核项目。采用 C++23 编写，支持 x86_64、RISC-V 64、AArch64 三种主流架构\n\n### 亮点\n\n**拥有 3k+ star**\n\n传统学 OS 的方式是：读一堆复杂的代码 → 理解原理 → 艰难模仿。SimpleKernel 换了个思路：**读接口文档 → AI 帮你写代码 → 跑测试验证**。\n\n核心特色：\n- 🤖 **接口即 prompt**：每个模块都有完整的头文件和 Doxygen 文档，你的 AI 助手（GitHub Copilot / ChatGPT 等）可以直接根据接口生成实现\n- 📐 **接口与实现分离**：头文件只有声明和契约，实现在独立的 .cpp 中，降低理解成本\n- 🧪 **测试驱动**：GoogleTest 测试套件验证 AI 生成的代码是否符合接口契约\n- 🌐 **三架构支持**：同一套接口，适配不同的硬件（x86、ARM、RISC-V）\n\n### 示例代码\n\n内核初始化部分代码\n\n```c++\nauto main(int argc, const char** argv) -> int {\n  // 初始化当前核心的 per_cpu 数据\n  per_cpu::GetCurrentCore() = per_cpu::PerCpu(cpu_io::GetCurrentCoreId());\n\n  // 架构相关初始化\n  ArchInit(argc, argv);\n  // 内存相关初始化\n  MemoryInit();\n  // 中断相关初始化\n  InterruptInit(argc, argv);\n  // 初始化任务管理器 (设置主线程)\n  Singleton<TaskManager>::GetInstance().InitCurrentCore();\n\n  // 唤醒其余 core\n  // WakeUpOtherCores();\n\n  DumpStack();\n\n  klog::info << \"Hello SimpleKernel\\n\";\n  klog::Info(\"Initializing test tasks...\\n\");\n\n  // 为主核心创建测试任务\n  create_test_tasks();\n\n  klog::Info(\"Main: Starting scheduler...\\n\");\n\n  // 启动调度器，不再返回\n  // 从这里开始，系统将在各个任务之间切换\n  Singleton<TaskManager>::GetInstance().Schedule();\n\n  // 不应该执行到这里\n  __builtin_unreachable();\n}\n\n```\n\n### 截图或演示视频\n\n在 QEMU 中运行 riscv64 内核，实现定时器与时间片调度\n\n```markdown\n➜  build_riscv64 git:(main) make run\n[0][KernelFdt::KernelFdt(uint64_t)] Load dtb at [0x84298130], size [0x15C0]\n[0]physical_memory_addr: 0x80000000, size 0x40000000.\n[0]kernel_addr: 0x80200000, size 0x7F4A8.\n[0]elf_addr: 0x80200000\n[0]fdt_addr: 0x84298130\n[0]core_count: 2\n[0][KernelElf::KernelElf(uint64_t)] sh_name: []\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.boot]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.note.gnu.build-id]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.text]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.rodata]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.eh_frame]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.init_array]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.data.rel.ro]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.data]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.got]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.bss]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.comment]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.riscv.attributes]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_aranges]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_info]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_abbrev]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_line]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_str]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_line_str]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_loclists]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_rnglists]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.symtab]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.strtab]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.shstrtab]\n[0]Hello riscv64 ArchInit\n[0]bmalloc address: 0x80498000, size: 0x3FB68000\n[0]Kernel memory mapped from 0x80000000 to 0xC0000000\n[0]Memory initialization completed\n[0]Interrupt init.\n[0]RegisterInterruptFunc [Supervisor External Interrupt] 0x9, 0x0x80234f3e\n[0]RegisterInterruptFunc [Breakpoint] 0x3, 0x0x802350b4\n[0]RegisterInterruptFunc [Instruction Page Fault] 0xC, 0x0x8023519a\n[0]RegisterInterruptFunc [Load Page Fault] 0xD, 0x0x8023519a\n[0]RegisterInterruptFunc [Store/AMO Page Fault] 0xF, 0x0x8023519a\n[0]RegisterInterruptFunc [Environment Call from U-mode] 0x8, 0x0x8023520c\n[0]RegisterInterruptFunc [Supervisor Software Interrupt] 0x1, 0x0x802352b8\n[0]Setting all interrupt priorities to 0\n[0]Disabling all interrupts for all contexts\n[0]PLIC initialization: all interrupts disabled, priorities set to 0\n[0]RegisterInterruptFunc [Supervisor Timer Interrupt] 0x5, 0x0x80234c46\n[0]Hello InterruptInit\n[0][main] 0x0x8022562c\n[0][_start] 0x0x8022556a\n[0]Hello SimpleKernel\n[0]Initializing test tasks...\n[0]Created 4 test tasks\n[0]Main: Starting scheduler...\n[0]Task1: arg = 0x1111\n[0]Task1: iteration 1/5\n[0]Task2: arg = 0x2222\n[0]Task2: yield count=0\n[0]Task3: arg = 0x3333\n[0]Task3: global_counter 0 -> 1\n[0]Task4: arg = 0x4444\n[0]Task4: sleeping for 4s (iteration 0)\n[0]Task1: iteration 2/5\n[0]Task1: iteration 3/5\n[0]Task2: yield count=1\n[0]Task3: global_counter 1 -> 2\n[0]Task1: iteration 4/5\n[0]Task4: woke up (slept ~4001 ticks)\n[0]Task4: sleeping for 4s (iteration 1)\n[0]Task1: iteration 5/5\n[0]Task2: yield count=2\n[0]Task1: exiting with code 0\n[0][Syscall] Process 1 exited with code 0\n[0][void TaskManager::ReapTask(TaskControlBlock*)] ReapTask: Task 1 resources freed\n[0]Task3: global_counter 2 -> 3\n[0]Task2: yield count=3\n[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 2)\n[0]Task2: yield count=4\n[0]Task3: global_counter 3 -> 4\n[0]Task2: yield count=5\n[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 3)\n[0]Task3: global_counter 4 -> 5\n[0]Task2: yield count=6\n[0]Task2: yield count=7\n[0]Task3: global_counter 5 -> 6\nHELL[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 4)\n[0]Task2: yield count=8\nhello[0]Task3: global_counter 6 -> 7\n[0]Task2: yield count=9\ngithub[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 5)\n[0]Task2: yield count=10\n[0]Task3: global_counter 7 -> 8\n```\n"
+      }
+    },
+    {
+      "id": "issue-281-Wechat-ggGitHub/Awesome-GitHub-Repo",
+      "type": "issue",
+      "ts": "2026-02-09T08:50:59Z",
+      "repo": "Wechat-ggGitHub/Awesome-GitHub-Repo",
+      "semantic": null,
+      "data": {
+        "number": 281,
+        "title": "[开源推荐] SimpleKernel - 面向 AI 的操作系统学习项目",
+        "state": "open",
+        "body": "### 项目地址\n\nhttps://github.com/Simple-XX/SimpleKernel\n\n### 类别\n\nC++\n\n### 项目标题\n\nSimpleKernel - 面向 AI 的操作系统学习项目\n\n### 项目描述\n\n一个面向 AI 辅助学习的现代化操作系统内核项目。采用 C++23 编写，支持 x86_64、RISC-V 64、AArch64 三种主流架构\n\n### 亮点\n\n**拥有 3k+ star**\n\n传统学 OS 的方式是：读一堆复杂的代码 → 理解原理 → 艰难模仿。SimpleKernel 换了个思路：**读接口文档 → AI 帮你写代码 → 跑测试验证**。\n\n核心特色：\n- 🤖 **接口即 prompt**：每个模块都有完整的头文件和 Doxygen 文档，你的 AI 助手（GitHub Copilot / ChatGPT 等）可以直接根据接口生成实现\n- 📐 **接口与实现分离**：头文件只有声明和契约，实现在独立的 .cpp 中，降低理解成本\n- 🧪 **测试驱动**：GoogleTest 测试套件验证 AI 生成的代码是否符合接口契约\n- 🌐 **三架构支持**：同一套接口，适配不同的硬件（x86、ARM、RISC-V）\n\n### 示例代码\n\n内核初始化部分代码\n\n```c++\nauto main(int argc, const char** argv) -> int {\n  // 初始化当前核心的 per_cpu 数据\n  per_cpu::GetCurrentCore() = per_cpu::PerCpu(cpu_io::GetCurrentCoreId());\n\n  // 架构相关初始化\n  ArchInit(argc, argv);\n  // 内存相关初始化\n  MemoryInit();\n  // 中断相关初始化\n  InterruptInit(argc, argv);\n  // 初始化任务管理器 (设置主线程)\n  Singleton<TaskManager>::GetInstance().InitCurrentCore();\n\n  // 唤醒其余 core\n  // WakeUpOtherCores();\n\n  DumpStack();\n\n  klog::info << \"Hello SimpleKernel\\n\";\n  klog::Info(\"Initializing test tasks...\\n\");\n\n  // 为主核心创建测试任务\n  create_test_tasks();\n\n  klog::Info(\"Main: Starting scheduler...\\n\");\n\n  // 启动调度器，不再返回\n  // 从这里开始，系统将在各个任务之间切换\n  Singleton<TaskManager>::GetInstance().Schedule();\n\n  // 不应该执行到这里\n  __builtin_unreachable();\n}\n\n```\n\n### 截图或演示视频\n\n在 QEMU 中运行 riscv64 内核，实现定时器与时间片调度\n\n```markdown\n➜  build_riscv64 git:(main) make run\n[0][KernelFdt::KernelFdt(uint64_t)] Load dtb at [0x84298130], size [0x15C0]\n[0]physical_memory_addr: 0x80000000, size 0x40000000.\n[0]kernel_addr: 0x80200000, size 0x7F4A8.\n[0]elf_addr: 0x80200000\n[0]fdt_addr: 0x84298130\n[0]core_count: 2\n[0][KernelElf::KernelElf(uint64_t)] sh_name: []\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.boot]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.note.gnu.build-id]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.text]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.rodata]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.eh_frame]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.init_array]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.data.rel.ro]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.data]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.got]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.bss]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.comment]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.riscv.attributes]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_aranges]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_info]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_abbrev]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_line]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_str]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_line_str]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_loclists]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_rnglists]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.symtab]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.strtab]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.shstrtab]\n[0]Hello riscv64 ArchInit\n[0]bmalloc address: 0x80498000, size: 0x3FB68000\n[0]Kernel memory mapped from 0x80000000 to 0xC0000000\n[0]Memory initialization completed\n[0]Interrupt init.\n[0]RegisterInterruptFunc [Supervisor External Interrupt] 0x9, 0x0x80234f3e\n[0]RegisterInterruptFunc [Breakpoint] 0x3, 0x0x802350b4\n[0]RegisterInterruptFunc [Instruction Page Fault] 0xC, 0x0x8023519a\n[0]RegisterInterruptFunc [Load Page Fault] 0xD, 0x0x8023519a\n[0]RegisterInterruptFunc [Store/AMO Page Fault] 0xF, 0x0x8023519a\n[0]RegisterInterruptFunc [Environment Call from U-mode] 0x8, 0x0x8023520c\n[0]RegisterInterruptFunc [Supervisor Software Interrupt] 0x1, 0x0x802352b8\n[0]Setting all interrupt priorities to 0\n[0]Disabling all interrupts for all contexts\n[0]PLIC initialization: all interrupts disabled, priorities set to 0\n[0]RegisterInterruptFunc [Supervisor Timer Interrupt] 0x5, 0x0x80234c46\n[0]Hello InterruptInit\n[0][main] 0x0x8022562c\n[0][_start] 0x0x8022556a\n[0]Hello SimpleKernel\n[0]Initializing test tasks...\n[0]Created 4 test tasks\n[0]Main: Starting scheduler...\n[0]Task1: arg = 0x1111\n[0]Task1: iteration 1/5\n[0]Task2: arg = 0x2222\n[0]Task2: yield count=0\n[0]Task3: arg = 0x3333\n[0]Task3: global_counter 0 -> 1\n[0]Task4: arg = 0x4444\n[0]Task4: sleeping for 4s (iteration 0)\n[0]Task1: iteration 2/5\n[0]Task1: iteration 3/5\n[0]Task2: yield count=1\n[0]Task3: global_counter 1 -> 2\n[0]Task1: iteration 4/5\n[0]Task4: woke up (slept ~4001 ticks)\n[0]Task4: sleeping for 4s (iteration 1)\n[0]Task1: iteration 5/5\n[0]Task2: yield count=2\n[0]Task1: exiting with code 0\n[0][Syscall] Process 1 exited with code 0\n[0][void TaskManager::ReapTask(TaskControlBlock*)] ReapTask: Task 1 resources freed\n[0]Task3: global_counter 2 -> 3\n[0]Task2: yield count=3\n[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 2)\n[0]Task2: yield count=4\n[0]Task3: global_counter 3 -> 4\n[0]Task2: yield count=5\n[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 3)\n[0]Task3: global_counter 4 -> 5\n[0]Task2: yield count=6\n[0]Task2: yield count=7\n[0]Task3: global_counter 5 -> 6\nHELL[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 4)\n[0]Task2: yield count=8\nhello[0]Task3: global_counter 6 -> 7\n[0]Task2: yield count=9\ngithub[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 5)\n[0]Task2: yield count=10\n[0]Task3: global_counter 7 -> 8\n```\n"
+      }
+    },
+    {
+      "id": "issue-3137-521xueweihan/HelloGitHub",
+      "type": "issue",
+      "ts": "2026-02-09T08:34:18Z",
+      "repo": "521xueweihan/HelloGitHub",
+      "semantic": null,
+      "data": {
+        "number": 3137,
+        "title": "[开源推荐] SimpleKernel - 面向 AI 的操作系统学习项目",
+        "state": "open",
+        "body": "### 项目地址\n\nhttps://github.com/Simple-XX/SimpleKernel\n\n### 类别\n\nC++\n\n### 项目标题\n\nSimpleKernel - 面向 AI 的操作系统学习项目\n\n### 项目描述\n\n一个面向 AI 辅助学习的现代化操作系统内核项目。采用 C++23 编写，支持 x86_64、RISC-V 64、AArch64 三种主流架构\n\n### 亮点\n\n**拥有 3k+ star**\n\n传统学 OS 的方式是：读一堆复杂的代码 → 理解原理 → 艰难模仿。SimpleKernel 换了个思路：**读接口文档 → AI 帮你写代码 → 跑测试验证**。\n\n核心特色：\n- 🤖 **接口即 prompt**：每个模块都有完整的头文件和 Doxygen 文档，你的 AI 助手（GitHub Copilot / ChatGPT 等）可以直接根据接口生成实现\n- 📐 **接口与实现分离**：头文件只有声明和契约，实现在独立的 .cpp 中，降低理解成本\n- 🧪 **测试驱动**：GoogleTest 测试套件验证 AI 生成的代码是否符合接口契约\n- 🌐 **三架构支持**：同一套接口，适配不同的硬件（x86、ARM、RISC-V）\n\n### 示例代码\n\n内核初始化部分代码\n\n```c++\nauto main(int argc, const char** argv) -> int {\n  // 初始化当前核心的 per_cpu 数据\n  per_cpu::GetCurrentCore() = per_cpu::PerCpu(cpu_io::GetCurrentCoreId());\n\n  // 架构相关初始化\n  ArchInit(argc, argv);\n  // 内存相关初始化\n  MemoryInit();\n  // 中断相关初始化\n  InterruptInit(argc, argv);\n  // 初始化任务管理器 (设置主线程)\n  Singleton<TaskManager>::GetInstance().InitCurrentCore();\n\n  // 唤醒其余 core\n  // WakeUpOtherCores();\n\n  DumpStack();\n\n  klog::info << \"Hello SimpleKernel\\n\";\n  klog::Info(\"Initializing test tasks...\\n\");\n\n  // 为主核心创建测试任务\n  create_test_tasks();\n\n  klog::Info(\"Main: Starting scheduler...\\n\");\n\n  // 启动调度器，不再返回\n  // 从这里开始，系统将在各个任务之间切换\n  Singleton<TaskManager>::GetInstance().Schedule();\n\n  // 不应该执行到这里\n  __builtin_unreachable();\n}\n\n```\n\n### 截图或演示视频\n\n在 QEMU 中运行 riscv64 内核，实现定时器与时间片调度\n\n```markdown\n➜  build_riscv64 git:(main) make run\n[0][KernelFdt::KernelFdt(uint64_t)] Load dtb at [0x84298130], size [0x15C0]\n[0]physical_memory_addr: 0x80000000, size 0x40000000.\n[0]kernel_addr: 0x80200000, size 0x7F4A8.\n[0]elf_addr: 0x80200000\n[0]fdt_addr: 0x84298130\n[0]core_count: 2\n[0][KernelElf::KernelElf(uint64_t)] sh_name: []\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.boot]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.note.gnu.build-id]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.text]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.rodata]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.eh_frame]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.init_array]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.data.rel.ro]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.data]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.got]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.bss]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.comment]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.riscv.attributes]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_aranges]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_info]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_abbrev]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_line]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_str]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_line_str]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_loclists]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.debug_rnglists]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.symtab]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.strtab]\n[0][KernelElf::KernelElf(uint64_t)] sh_name: [.shstrtab]\n[0]Hello riscv64 ArchInit\n[0]bmalloc address: 0x80498000, size: 0x3FB68000\n[0]Kernel memory mapped from 0x80000000 to 0xC0000000\n[0]Memory initialization completed\n[0]Interrupt init.\n[0]RegisterInterruptFunc [Supervisor External Interrupt] 0x9, 0x0x80234f3e\n[0]RegisterInterruptFunc [Breakpoint] 0x3, 0x0x802350b4\n[0]RegisterInterruptFunc [Instruction Page Fault] 0xC, 0x0x8023519a\n[0]RegisterInterruptFunc [Load Page Fault] 0xD, 0x0x8023519a\n[0]RegisterInterruptFunc [Store/AMO Page Fault] 0xF, 0x0x8023519a\n[0]RegisterInterruptFunc [Environment Call from U-mode] 0x8, 0x0x8023520c\n[0]RegisterInterruptFunc [Supervisor Software Interrupt] 0x1, 0x0x802352b8\n[0]Setting all interrupt priorities to 0\n[0]Disabling all interrupts for all contexts\n[0]PLIC initialization: all interrupts disabled, priorities set to 0\n[0]RegisterInterruptFunc [Supervisor Timer Interrupt] 0x5, 0x0x80234c46\n[0]Hello InterruptInit\n[0][main] 0x0x8022562c\n[0][_start] 0x0x8022556a\n[0]Hello SimpleKernel\n[0]Initializing test tasks...\n[0]Created 4 test tasks\n[0]Main: Starting scheduler...\n[0]Task1: arg = 0x1111\n[0]Task1: iteration 1/5\n[0]Task2: arg = 0x2222\n[0]Task2: yield count=0\n[0]Task3: arg = 0x3333\n[0]Task3: global_counter 0 -> 1\n[0]Task4: arg = 0x4444\n[0]Task4: sleeping for 4s (iteration 0)\n[0]Task1: iteration 2/5\n[0]Task1: iteration 3/5\n[0]Task2: yield count=1\n[0]Task3: global_counter 1 -> 2\n[0]Task1: iteration 4/5\n[0]Task4: woke up (slept ~4001 ticks)\n[0]Task4: sleeping for 4s (iteration 1)\n[0]Task1: iteration 5/5\n[0]Task2: yield count=2\n[0]Task1: exiting with code 0\n[0][Syscall] Process 1 exited with code 0\n[0][void TaskManager::ReapTask(TaskControlBlock*)] ReapTask: Task 1 resources freed\n[0]Task3: global_counter 2 -> 3\n[0]Task2: yield count=3\n[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 2)\n[0]Task2: yield count=4\n[0]Task3: global_counter 3 -> 4\n[0]Task2: yield count=5\n[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 3)\n[0]Task3: global_counter 4 -> 5\n[0]Task2: yield count=6\n[0]Task2: yield count=7\n[0]Task3: global_counter 5 -> 6\nHELL[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 4)\n[0]Task2: yield count=8\nhello[0]Task3: global_counter 6 -> 7\n[0]Task2: yield count=9\ngithub[0]Task4: woke up (slept ~4000 ticks)\n[0]Task4: sleeping for 4s (iteration 5)\n[0]Task2: yield count=10\n[0]Task3: global_counter 7 -> 8\n```\n"
+      }
+    },
+    {
+      "id": "commit-bb1f4e700517a44da4b2d7242f85867b0a114c2c",
+      "type": "commit",
+      "ts": "2026-02-09T07:00:35Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "merge",
+      "data": {
+        "sha": "bb1f4e700517a44da4b2d7242f85867b0a114c2c",
+        "message": "Merge pull request #192 from MRNIU/main\n\n面向 AI 的重构",
+        "additions": 56751,
+        "deletions": 97644
+      }
+    },
+    {
+      "id": "pr-192-Simple-XX/SimpleKernel",
+      "type": "pull_request",
+      "ts": "2026-02-09T06:31:02Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "number": 192,
+        "title": "面向 AI 的重构",
+        "state": "merged",
+        "body": "# SimpleKernel 变更对比\r\n\r\n> 对比版本：`Simple-XX/SimpleKernel/main` vs `MRNIU/SimpleKernel/main`  \r\n> 变更规模：855 个文件，+56731 行 / -97647 行\r\n\r\n---\r\n\r\n## 核心定位变化\r\n\r\n| 维度 | Simple-XX/SimpleKernel/main | MRNIU/SimpleKernel/main |\r\n|------|---------------|-----------|\r\n| **项目定位** | 提供各阶段完成度不同的内核 | **面向 AI 的操作系统学习项目** |\r\n| **学习方式** | 传统阶段式学习（boot→printf→pmm...） | **读接口 → AI 实现 → 测试验证** |\r\n| **核心理念** | 分支式学习 | 接口驱动（Interface-Driven） |\r\n\r\n---\r\n\r\n## 新增核心特性\r\n\r\n🤖 **AI-First 设计** - 接口文档即 prompt，AI 可直接生成实现  \r\n📐 **接口与实现分离** - 头文件只有声明和契约，实现在独立 `.cpp`  \r\n🌐 **三架构支持** - x86_64、RISC-V 64、AArch64  \r\n🧪 **测试驱动验证** - GoogleTest 测试套件验证正确性  \r\n📖 **完整 Doxygen 文档** - 每个接口都有完整的契约文档  \r\n🏗️ **工程化基础设施** - CMake + Docker + CI/CD  \r\n\r\n---\r\n\r\n## 技术栈升级\r\n\r\n- **语言标准**：C23 / C++23\r\n- **构建系统**：CMake 3.27+ with Presets\r\n- **测试框架**：GoogleTest\r\n- **容器化**：Docker 支持\r\n- **代码质量**：clang-format / clang-tidy / codecov\r\n\r\n---\r\n\r\n## 架构支持变化\r\n\r\n| 架构 | Upstream | MRNIU/SimpleKernel/main |\r\n|------|----------|-----------|\r\n| x86_64 | ✅ | ✅ |\r\n| riscv64 | ✅ | ✅ |\r\n| aarch64 | ❌ (TODO) | ✅ |\r\n| i386 | ✅ | ❌ (已移除) |\r\n\r\n---\r\n\r\n## 项目结构变化\r\n\r\n### 新增目录\r\n```\r\n├── src/include/          # 📐 核心接口定义\r\n├── src/task/             # 任务管理与调度器\r\n├── tests/                # 测试套件（unit/integration/system）\r\n├── 3rd/                  # 第三方依赖（submodule）\r\n└── doc/                  # 完整文档\r\n```\r\n\r\n### 移除目录\r\n```\r\n├── src/kernel/          # 合并到 src/\r\n├── src/drv/             # 重构为 src/driver/\r\n├── docs/                # 重命名为 doc/\r\n└── tools/opensbi/       # 改用 submodule\r\n```\r\n\r\n---\r\n\r\n## 学习路径对比\r\n\r\n### Simple-XX/SimpleKernel/main\r\nboot → printf → parse_boot_info → pmm → vmm → heap → lib → intr → TODO...\r\n\r\n### MRNIU/SimpleKernel/main（模块式）\r\n**初级**：启动与输出 → 中断管理 → 内存管理  \r\n**中级**：设备树/ELF 解析 → 任务调度 → 同步原语  \r\n**高级**：系统调用 → 多核启动\r\n\r\n每个模块都有对应的接口文件，可独立学习，AI 辅助实现。\r\n\r\n---\r\n\r\n## 快速开始命令变化\r\n\r\n### Simple-XX/SimpleKernel/main\r\n```bash\r\ngit clone https://github.com/Simple-XX/SimpleKernel.git\r\ncd SimpleKernel/\r\nbash ./run.sh\r\n```\r\n\r\n### MRNIU/SimpleKernel/main\r\n```bash\r\n# 1. 克隆（包含子模块）\r\ngit clone --recursive https://github.com/Simple-XX/SimpleKernel.git\r\n\r\n# 2. 配置架构\r\ncmake --preset build_riscv64  # 或 build_aarch64 / build_x86_64\r\n\r\n# 3. 编译运行\r\ncd build_riscv64\r\nmake SimpleKernel\r\nmake run\r\n```\r\n\r\n---\r\n\r\n## 文档结构对比\r\n\r\n### Simple-XX/SimpleKernel/main\r\n- 简单的 markdown\r\n- 关键词 + 分支说明\r\n- 基本目录结构\r\n\r\n### MRNIU/SimpleKernel/main\r\n- 📖 12 个章节的完整目录\r\n- 🤖 详细的 AI 设计理念说明\r\n- 🏛️ 接口体系总览\r\n- 🎯 清晰的学习路线图\r\n- 📦 第三方依赖管理\r\n- 🤝 贡献指南\r\n\r\n---\r\n\r\n## Badge 变化\r\n\r\n**新增**：代码覆盖率（codecov）、提交活跃度统计  \r\n**优化**：更精准的 CI 状态标识  \r\n**移除**：多余的 languages badge\r\n\r\n---\r\n\r\n## 总结\r\n\r\n这是一次**学习范式的革命**，从传统的\"阅读实现代码学习\"转变为\"定义接口契约，AI 生成实现\"的新模式。\r\n\r\n**目标用户**：从传统 OS 课程学习者 → AI 时代的 OS 学习者，拥抱 AI 作为学习助手\r\n\r\n**核心价值**：\r\n- ✅ 降低内核学习门槛\r\n- ✅ 接口文档即是 AI prompt\r\n- ✅ 测试驱动保证正确性\r\n- ✅ 三架构统一接口设计\r\n"
+      }
+    },
+    {
+      "id": "comment-MRNIU/FreeRTOS-PortentaH7-3-2",
+      "type": "issue_comment",
+      "ts": "2026-02-05T09:56:42Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "issueNumber": 3,
+        "issueTitle": "Portenta MCU fails to compile due to a missing dependency",
+        "body": "Hi @ElrohirGT,\n\nThank you for bringing this to my attention! I have fixed the issue. You can find the details in this commit: https://github.com/MRNIU/FreeRTOS-PortentaH7/commit/d0a6481c0ee69303954a6ea72eeb3acaddead790.\n\nBest regards.\n"
+      }
+    },
+    {
+      "id": "commit-d0a6481c0ee69303954a6ea72eeb3acaddead790",
+      "type": "commit",
+      "ts": "2026-02-05T09:53:59Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": "fix",
+      "data": {
+        "sha": "d0a6481c0ee69303954a6ea72eeb3acaddead790",
+        "message": "fix: remove STATIC_LIB\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 0,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-4aed17eb4f57a0ebc99e94f136808e2613ef8d64",
+      "type": "commit",
+      "ts": "2026-02-03T08:39:29Z",
+      "repo": "MRNIU/cpu_io",
+      "semantic": "feat",
+      "data": {
+        "sha": "4aed17eb4f57a0ebc99e94f136808e2613ef8d64",
+        "message": "feat: new method for CalleeSavedContext\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 28,
+        "deletions": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "month": "2020-08",
+  "events": [
+    {
+      "id": "issue-1-MRNIU/FreeRTOS-PortentaH7",
+      "type": "issue",
+      "ts": "2020-08-30T06:32:11Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "number": 1,
+        "title": "Task could not be initialized properly on CM7",
+        "state": "open",
+        "body": ""
+      }
+    },
+    {
+      "id": "commit-437ac53a7a8edb87e276e23d3fe94b7f14cb7d56",
+      "type": "commit",
+      "ts": "2020-08-30T06:30:57Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": "test",
+      "data": {
+        "sha": "437ac53a7a8edb87e276e23d3fe94b7f14cb7d56",
+        "message": "test: add test code",
+        "additions": 132,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-1046cc3561d8ad71209a615c8550b00c5c1398c8",
+      "type": "commit",
+      "ts": "2020-08-30T05:55:35Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": "fix",
+      "data": {
+        "sha": "1046cc3561d8ad71209a615c8550b00c5c1398c8",
+        "message": "fix(FreeRTOSConfig.h): configTICK_RATE_HZ too big",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-80048cc2993b1ab1e45cb4a7d32caf39d017b95d",
+      "type": "commit",
+      "ts": "2020-08-24T06:25:25Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "80048cc2993b1ab1e45cb4a7d32caf39d017b95d",
+        "message": "docs: 添加 git commit 规范",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-a3ecbb38ecf1d48240919e63ad5da9bd23c0a0ec",
+      "type": "commit",
+      "ts": "2020-08-24T06:24:51Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "a3ecbb38ecf1d48240919e63ad5da9bd23c0a0ec",
+        "message": "docs: 添加 git commit 规范",
+        "additions": 58,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-389878a8d458fc080b4176914e600df65bfe4c97",
+      "type": "commit",
+      "ts": "2020-08-22T15:39:46Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "389878a8d458fc080b4176914e600df65bfe4c97",
+        "message": "fix bug",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-26-83",
+      "type": "issue_comment",
+      "ts": "2020-08-15T11:11:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 26,
+        "issueTitle": "1",
+        "body": "@dzwduan 很抱歉大兄弟。。已经添加了相关的检验代码。我们目前还没有在 wsl 下测试过，建议您用 linux 哦。"
+      }
+    },
+    {
+      "id": "commit-33976c52491956184428c4f6f7db59f974717de7",
+      "type": "commit",
+      "ts": "2020-08-15T11:03:44Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "docs",
+      "data": {
+        "sha": "33976c52491956184428c4f6f7db59f974717de7",
+        "message": "docs(README):添加 commit 规范，代码样式规定",
+        "additions": 9,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-47735de9e5ef30e3749fde6fbefc4aae2a0442ae",
+      "type": "commit",
+      "ts": "2020-08-15T11:02:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": "chore",
+      "data": {
+        "sha": "47735de9e5ef30e3749fde6fbefc4aae2a0442ae",
+        "message": "chore(script):在敏感操作前添加检测",
+        "additions": 8,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-25-84",
+      "type": "issue_comment",
+      "ts": "2020-08-03T03:32:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 25,
+        "issueTitle": "Updated README: changed \"UXIN-like\" to \"UNIX-like\", is that a typo?",
+        "body": "@rakino Thank you!"
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-24-85",
+      "type": "issue_comment",
+      "ts": "2020-08-02T16:01:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 24,
+        "issueTitle": "MacOS x86_64-elf-ld reports link error",
+        "body": "@zivyou Are you sure you have pulled the latest code? It works fine with me."
+      }
+    },
+    {
+      "id": "comment-Simple-XX/SimpleKernel-24-86",
+      "type": "issue_comment",
+      "ts": "2020-08-02T14:20:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "issueNumber": 24,
+        "issueTitle": "MacOS x86_64-elf-ld reports link error",
+        "body": "@zivyou hi, which branch you are in?"
+      }
+    }
+  ]
+}

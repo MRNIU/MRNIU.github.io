@@ -1,0 +1,18 @@
+{
+  "month": "2019-07",
+  "events": [
+    {
+      "id": "pr-1019-alibaba/AliOS-Things",
+      "type": "pull_request",
+      "ts": "2019-07-29T10:39:56Z",
+      "repo": "alibaba/AliOS-Things",
+      "semantic": null,
+      "data": {
+        "number": 1019,
+        "title": "correct header file mistake",
+        "state": "closed",
+        "body": "correct a header file mistake."
+      }
+    }
+  ]
+}

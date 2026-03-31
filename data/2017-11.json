@@ -1,0 +1,42 @@
+{
+  "month": "2017-11",
+  "events": [
+    {
+      "id": "comment-xitu/gold-miner-2466-166",
+      "type": "issue_comment",
+      "ts": "2017-11-16T04:31:35Z",
+      "repo": "xitu/gold-miner",
+      "semantic": null,
+      "data": {
+        "issueNumber": 2466,
+        "issueTitle": "僵尸币时代即将到来?",
+        "body": "@wendylinlin @leviding 校对完成"
+      }
+    },
+    {
+      "id": "comment-xitu/gold-miner-2466-167",
+      "type": "issue_comment",
+      "ts": "2017-11-16T03:24:09Z",
+      "repo": "xitu/gold-miner",
+      "semantic": null,
+      "data": {
+        "issueNumber": 2466,
+        "issueTitle": "僵尸币时代即将到来?",
+        "body": "@leviding 校对认领"
+      }
+    },
+    {
+      "id": "issue-2467-xitu/gold-miner",
+      "type": "issue",
+      "ts": "2017-11-13T08:04:30Z",
+      "repo": "xitu/gold-miner",
+      "semantic": null,
+      "data": {
+        "number": 2467,
+        "title": "申请成为译者",
+        "state": "closed",
+        "body": "- 公司/学校：西安石油大学\r\n- 工作内容/专业：计算机科学，主要是C/C++,操作系统方面\r\n- 常浏览的国外网站：eBay;Stack Overflow;GitHub;WiKi;还有经常上英文Google算嘛\r\n- 英语水平：专业书籍读懂没问题\r\n- 有无翻译经验：并没有\r\n- 个人博客：https://mrniu.github.io\r\n- 个人介绍：正在着手写简单的OS。如果可以，我想从简单的OS类文章开始。\r\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "month": "2020-03",
+  "events": [
+    {
+      "id": "comment-arduino/summer-of-code-76-102",
+      "type": "issue_comment",
+      "ts": "2020-03-27T00:11:37Z",
+      "repo": "arduino/summer-of-code",
+      "semantic": null,
+      "data": {
+        "issueNumber": 76,
+        "issueTitle": "Gsoc2020: port FreeRTOS to Portenta",
+        "body": "@alranel I have shared my draft but there is no comments until now. What should I do to get a feedback?\r\n"
+      }
+    },
+    {
+      "id": "comment-arduino-libraries/Keyboard-35-103",
+      "type": "issue_comment",
+      "ts": "2020-03-26T12:55:00Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35,
+        "issueTitle": "Refer to HID to improve the code",
+        "body": "Do we have any test case?"
+      }
+    },
+    {
+      "id": "comment-arduino-libraries/Keyboard-35-104",
+      "type": "issue_comment",
+      "ts": "2020-03-26T12:53:27Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "issueNumber": 35,
+        "issueTitle": "Refer to HID to improve the code",
+        "body": "@per1234 My fault"
+      }
+    },
+    {
+      "id": "comment-arduino/summer-of-code-76-105",
+      "type": "issue_comment",
+      "ts": "2020-03-24T13:29:25Z",
+      "repo": "arduino/summer-of-code",
+      "semantic": null,
+      "data": {
+        "issueNumber": 76,
+        "issueTitle": "Gsoc2020: port FreeRTOS to Portenta",
+        "body": "@alranel hi, I have summit a pr: https://github.com/arduino-libraries/Keyboard/pull/35"
+      }
+    },
+    {
+      "id": "pr-35-arduino-libraries/Keyboard",
+      "type": "pull_request",
+      "ts": "2020-03-24T08:50:35Z",
+      "repo": "arduino-libraries/Keyboard",
+      "semantic": null,
+      "data": {
+        "number": 35,
+        "title": "Refer to HID to improve the code",
+        "state": "closed",
+        "body": "Hey guys, I tried replace current code with HID's keyboard control code.\r\nNow we support more keys, and US/DE layout.\r\nPlease point out any mistakes.\r\nThanks!"
+      }
+    },
+    {
+      "id": "commit-2ce94b503089fdd96de372e185694cb3420b388f",
+      "type": "commit",
+      "ts": "2020-03-12T09:06:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2ce94b503089fdd96de372e185694cb3420b388f",
+        "message": "alloc_page finished",
+        "additions": 4,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-341e9b98c151a204565c843df9fce2477c779776",
+      "type": "commit",
+      "ts": "2020-03-12T09:02:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "341e9b98c151a204565c843df9fce2477c779776",
+        "message": "Update",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-d6b93f69252d1257eef29699cac65d5a2f332004",
+      "type": "commit",
+      "ts": "2020-03-12T08:59:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d6b93f69252d1257eef29699cac65d5a2f332004",
+        "message": "Update",
+        "additions": 43,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-c3f29766793576ca35f41a251cbf53a44add664c",
+      "type": "commit",
+      "ts": "2020-03-12T06:40:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c3f29766793576ca35f41a251cbf53a44add664c",
+        "message": "Update",
+        "additions": 9,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-610b17a2c395e0518aa11231027e567e0c91d8ca",
+      "type": "commit",
+      "ts": "2020-03-12T06:24:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "610b17a2c395e0518aa11231027e567e0c91d8ca",
+        "message": "Update",
+        "additions": 15,
+        "deletions": 46
+      }
+    },
+    {
+      "id": "issue-76-arduino/summer-of-code",
+      "type": "issue",
+      "ts": "2020-03-11T09:35:56Z",
+      "repo": "arduino/summer-of-code",
+      "semantic": null,
+      "data": {
+        "number": 76,
+        "title": "Gsoc2020: port FreeRTOS to Portenta",
+        "state": "closed",
+        "body": "Hello, everyone!\r\nI'm interested in the work of porting the FreeRTOS to Portenta. I have experience in developing operating systems and using rtos. And I have written the compatibility layer of Arduino for AliOS-Things.\r\n\r\nThis is my operating system work, it is not finished yet: [SimpleKernel](https://github.com/MRNIU/SimpleKernel)\r\nAnd this is the Arduino compatible layer I wrote for AliOS-Things: [AliOS-Things_ArduinoFramework](https://github.com/MRNIU/AliOS-Things)\r\n\r\nThis is a challenging job for me, and I will write my work plan in as much detail as possible in the proposal.\r\n\r\nThere is a problem. The [Application Instructions](https://github.com/arduino/summer-of-code/blob/master/how-to-apply.md#during-the-application-phase-february-20th---march-31st) requires a bug to be solved. Is there a requirement for the difficulty of this bug?\r\n\r\nThink you!"
+      }
+    },
+    {
+      "id": "comment-hzcx998/XBook-8-106",
+      "type": "issue_comment",
+      "ts": "2020-03-10T13:04:20Z",
+      "repo": "hzcx998/XBook",
+      "semantic": null,
+      "data": {
+        "issueNumber": 8,
+        "issueTitle": "在 mac 上编译问题",
+        "body": "我记得我当时做过相关调整。。不过记不太清了，这几天有空我再试试\r\n\r\n2020年3月10日 下午8:44，Dorbmon <notifications@github.com<mailto:notifications@github.com>> 写道：\r\n\r\n\r\n是不是因为gcc在macos下会自动使用64位模式构建程序？\r\n\r\n—\r\nYou are receiving this because you authored the thread.\r\nReply to this email directly, view it on GitHub<https://github.com/huzichengdevelop/XBook/issues/8?email_source=notifications&email_token=ADC57SWMCOZG6EBV4QUSILDRGYY2DA5CNFSM4KOXFXSKYY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGOEOLIAOI#issuecomment-597065785>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ADC57SUDIMMGYGGF6XOCFY3RGYY2DANCNFSM4KOXFXSA>.\r\n\r\n"
+      }
+    },
+    {
+      "id": "commit-c1b3eb50c5e2522a9b2306dd24aa84238f64f26a",
+      "type": "commit",
+      "ts": "2020-03-10T06:06:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c1b3eb50c5e2522a9b2306dd24aa84238f64f26a",
+        "message": "Update",
+        "additions": 46,
+        "deletions": 16
+      }
+    },
+    {
+      "id": "commit-d1c79b2ad1606a8e097e0dc1de3c2eebe5bb25a4",
+      "type": "commit",
+      "ts": "2020-03-10T04:46:57Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "d1c79b2ad1606a8e097e0dc1de3c2eebe5bb25a4",
+        "message": "Update",
+        "additions": 29,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-7fa2dad253685356d3252432f596b1a28ff94895",
+      "type": "commit",
+      "ts": "2020-03-09T09:43:46Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7fa2dad253685356d3252432f596b1a28ff94895",
+        "message": "Update",
+        "additions": 41,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-1aaa560ffa4bb8522fcf7c8a683684993e943ba4",
+      "type": "commit",
+      "ts": "2020-03-09T03:36:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "1aaa560ffa4bb8522fcf7c8a683684993e943ba4",
+        "message": "- Update devlog\n- Fix bugs\n- Uniform data type",
+        "additions": 76,
+        "deletions": 51
+      }
+    },
+    {
+      "id": "commit-bbab14455b26227e1e55958b1e0258b93f34a57f",
+      "type": "commit",
+      "ts": "2020-03-07T08:10:22Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bbab14455b26227e1e55958b1e0258b93f34a57f",
+        "message": "Update",
+        "additions": 28,
+        "deletions": 16
+      }
+    },
+    {
+      "id": "commit-fb86c2b80ddb24438cac170391393626472999c6",
+      "type": "commit",
+      "ts": "2020-03-07T07:50:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fb86c2b80ddb24438cac170391393626472999c6",
+        "message": "Update kernel stack",
+        "additions": 42,
+        "deletions": 26
+      }
+    },
+    {
+      "id": "commit-7c1052dc9b4ecb32fba673622b43af0c51d6bf0b",
+      "type": "commit",
+      "ts": "2020-03-06T15:17:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7c1052dc9b4ecb32fba673622b43af0c51d6bf0b",
+        "message": "backup",
+        "additions": 53,
+        "deletions": 17
+      }
+    }
+  ]
+}

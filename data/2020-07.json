@@ -1,0 +1,147 @@
+{
+  "month": "2020-07",
+  "events": [
+    {
+      "id": "comment-Simple-XX/SimpleCompiler-1-87",
+      "type": "issue_comment",
+      "ts": "2020-07-20T07:01:14Z",
+      "repo": "Simple-XX/SimpleCompiler",
+      "semantic": null,
+      "data": {
+        "issueNumber": 1,
+        "issueTitle": "建议加一份教程",
+        "body": "@ltoddy 等框架搭建好了会加上的，谢谢"
+      }
+    },
+    {
+      "id": "commit-7e3cb1c8af365e8b60ac20467decd9baeb94fb99",
+      "type": "commit",
+      "ts": "2020-07-17T14:57:27Z",
+      "repo": "MRNIU/MRNIU",
+      "semantic": null,
+      "data": {
+        "sha": "7e3cb1c8af365e8b60ac20467decd9baeb94fb99",
+        "message": "Initial commit",
+        "additions": 16,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-5ec3645ecd2989e9fa2f318a4b8b5e68e2fb5e83",
+      "type": "commit",
+      "ts": "2020-07-14T07:04:35Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "5ec3645ecd2989e9fa2f318a4b8b5e68e2fb5e83",
+        "message": "Change  to 1000000. Add dev log",
+        "additions": 176,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-a3cbf637e99ea29a3f0ec9c13ea4f1389410348d",
+      "type": "commit",
+      "ts": "2020-07-06T19:51:01Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "a3cbf637e99ea29a3f0ec9c13ea4f1389410348d",
+        "message": "Small change, No functional changes",
+        "additions": 82,
+        "deletions": 97
+      }
+    },
+    {
+      "id": "commit-6690e6092843834a0485267fbc12c9146f94425d",
+      "type": "commit",
+      "ts": "2020-07-06T11:01:56Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "6690e6092843834a0485267fbc12c9146f94425d",
+        "message": "find bug, task create by CM7 not work",
+        "additions": 47,
+        "deletions": 44
+      }
+    },
+    {
+      "id": "commit-a908abc77793c4d293c72204177eb06b65e1c462",
+      "type": "commit",
+      "ts": "2020-07-05T15:58:22Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "a908abc77793c4d293c72204177eb06b65e1c462",
+        "message": "fix bug that can not work. Add author info",
+        "additions": 595,
+        "deletions": 660
+      }
+    },
+    {
+      "id": "commit-7c8f0ac922aa49281eac4629b7bea28e28ccf996",
+      "type": "commit",
+      "ts": "2020-07-02T08:11:50Z",
+      "repo": "Simple-XX/OSPP",
+      "semantic": null,
+      "data": {
+        "sha": "7c8f0ac922aa49281eac4629b7bea28e28ccf996",
+        "message": "添加中选学生信息",
+        "additions": 11,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-f53337a0f026f4b6907a008d879d6896f02b37b1",
+      "type": "commit",
+      "ts": "2020-07-01T14:44:09Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "f53337a0f026f4b6907a008d879d6896f02b37b1",
+        "message": "add Osc init code",
+        "additions": 26,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-622d79ca766597af69e1d963f89f5de72d32cab4",
+      "type": "commit",
+      "ts": "2020-07-01T14:31:50Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "622d79ca766597af69e1d963f89f5de72d32cab4",
+        "message": "small change",
+        "additions": 3,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-1673acc226d9dffa2afa6a3738a092d2717c4298",
+      "type": "commit",
+      "ts": "2020-07-01T14:19:27Z",
+      "repo": "MRNIU/FreeRTOS-PortentaH7",
+      "semantic": null,
+      "data": {
+        "sha": "1673acc226d9dffa2afa6a3738a092d2717c4298",
+        "message": "update dir structure",
+        "additions": 35,
+        "deletions": 2093
+      }
+    },
+    {
+      "id": "commit-943db49c06c1f0fb8cef5b3f8c625ac123bd8704",
+      "type": "commit",
+      "ts": "2020-07-01T13:53:27Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "943db49c06c1f0fb8cef5b3f8c625ac123bd8704",
+        "message": "update shell script, unavailable",
+        "additions": 252,
+        "deletions": 228
+      }
+    }
+  ]
+}

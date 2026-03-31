@@ -1,0 +1,696 @@
+{
+  "month": "2019-12",
+  "events": [
+    {
+      "id": "commit-b8ea3e29f7a9335e722882f77ca312bdf76120d2",
+      "type": "commit",
+      "ts": "2019-12-29T15:52:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b8ea3e29f7a9335e722882f77ca312bdf76120d2",
+        "message": "update",
+        "additions": 35,
+        "deletions": 39
+      }
+    },
+    {
+      "id": "commit-c434b165848b235fd5e9c9efa454273bf12bc4cc",
+      "type": "commit",
+      "ts": "2019-12-29T15:50:01Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c434b165848b235fd5e9c9efa454273bf12bc4cc",
+        "message": "update",
+        "additions": 59,
+        "deletions": 70
+      }
+    },
+    {
+      "id": "commit-4241ba9e807baba3f0ef13eb1758f892deafca7b",
+      "type": "commit",
+      "ts": "2019-12-29T15:43:03Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4241ba9e807baba3f0ef13eb1758f892deafca7b",
+        "message": "update",
+        "additions": 67,
+        "deletions": 47
+      }
+    },
+    {
+      "id": "commit-44f81190c3efbbef3cdb7b225690e85287571146",
+      "type": "commit",
+      "ts": "2019-12-29T15:36:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "44f81190c3efbbef3cdb7b225690e85287571146",
+        "message": "update",
+        "additions": 12,
+        "deletions": 42
+      }
+    },
+    {
+      "id": "commit-3fc2691db474c91dceb86105224f3d21d67a075a",
+      "type": "commit",
+      "ts": "2019-12-29T15:33:48Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3fc2691db474c91dceb86105224f3d21d67a075a",
+        "message": "update",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-32f9bb13369c2020cbf9ada162f60e9fcec5bbe4",
+      "type": "commit",
+      "ts": "2019-12-29T15:20:53Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "32f9bb13369c2020cbf9ada162f60e9fcec5bbe4",
+        "message": "- Update devlog\n- Add ``kmalloc` and `kfree`\nIt hasn't been tested yet\n`",
+        "additions": 42,
+        "deletions": 11
+      }
+    },
+    {
+      "id": "commit-bbdb464255f2e072a7b972530636e708f8491f2c",
+      "type": "commit",
+      "ts": "2019-12-29T15:03:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bbdb464255f2e072a7b972530636e708f8491f2c",
+        "message": "update",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-0afcf883c38fcce18c2912a8448ce95f5763cb6c",
+      "type": "commit",
+      "ts": "2019-12-29T15:02:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0afcf883c38fcce18c2912a8448ce95f5763cb6c",
+        "message": "update",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-6e478400c6e03591e73fa4d0c6388721f751a1b4",
+      "type": "commit",
+      "ts": "2019-12-29T15:01:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "6e478400c6e03591e73fa4d0c6388721f751a1b4",
+        "message": "- Update devlog\n- Eliminate the warning",
+        "additions": 38,
+        "deletions": 28
+      }
+    },
+    {
+      "id": "commit-4378605b1ca0f5adf206d374a1a365471b7732f7",
+      "type": "commit",
+      "ts": "2019-12-27T16:01:17Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4378605b1ca0f5adf206d374a1a365471b7732f7",
+        "message": "- update setup.sh\n- update devlog\n- Add x86_64-elf-gcc toolchain",
+        "additions": 85,
+        "deletions": 80
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-108",
+      "type": "issue_comment",
+      "ts": "2019-12-27T05:47:07Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "@fxcoudert "
+      }
+    },
+    {
+      "id": "commit-8efc2c6d34c3e058a11c3f03e4109012c5937995",
+      "type": "commit",
+      "ts": "2019-12-26T06:56:12Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "8efc2c6d34c3e058a11c3f03e4109012c5937995",
+        "message": "updatre CI configuration",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-5534aa3b5f69eeeb5ee593d65aab276ca009bf29",
+      "type": "commit",
+      "ts": "2019-12-25T17:53:36Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5534aa3b5f69eeeb5ee593d65aab276ca009bf29",
+        "message": "- Add LinkedList\n- update devlog\n- update library file",
+        "additions": 435,
+        "deletions": 376
+      }
+    },
+    {
+      "id": "commit-7bcf174e2f414bba212965cbaa6d31db82c871bf",
+      "type": "commit",
+      "ts": "2019-12-23T16:02:45Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7bcf174e2f414bba212965cbaa6d31db82c871bf",
+        "message": "- Add devlog\n- Fixed incorrect multiboot2 magic number\n- vmm finished, no test\n- update pmm_alloc",
+        "additions": 189,
+        "deletions": 28
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-109",
+      "type": "issue_comment",
+      "ts": "2019-12-22T16:36:36Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "@fxcoudert\r\nI have [raised this issue in the forum](https://discourse.brew.sh/t/error-non-file-alias-encountered-with-add-an-alias/6528), do you have any thought?"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-110",
+      "type": "issue_comment",
+      "ts": "2019-12-19T07:43:41Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "The lesson: don't count your chickens before they hatch"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-111",
+      "type": "issue_comment",
+      "ts": "2019-12-19T06:50:28Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "@fxcoudert\r\nIt's finally done."
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-112",
+      "type": "issue_comment",
+      "ts": "2019-12-18T17:07:15Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "I am sorry for that...if I can do anything, just tell me"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-113",
+      "type": "issue_comment",
+      "ts": "2019-12-18T01:23:35Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "@fxcoudert \r\nI think I might have finished, thank you."
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-114",
+      "type": "issue_comment",
+      "ts": "2019-12-17T18:59:10Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "@fxcoudert \r\nSo should I create a new pr named `x86_64-elf-binutils` and `x86_64-elf-gcc`?"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-115",
+      "type": "issue_comment",
+      "ts": "2019-12-17T10:41:33Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "@fxcoudert \r\nSo there's a new question, if we use target `x86_64-elf`, and we are going to get something like `x86_64-elf-ld`, `x86_64-elf-as`, instead of `i386-elf-xxx`\r\nIs that allowed?"
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-47935-116",
+      "type": "issue_comment",
+      "ts": "2019-12-16T14:40:19Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 47935,
+        "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "body": "@fxcoudert \r\n\r\nHi, I have an question, when I test i386-elf-gcc with the following configure:\r\n```\r\nsystem \"../configure\", \"--target=i386-elf\",\r\n                             \"--enable-targets=all\",\r\n                             \"--prefix=#{prefix}\",\r\n                             \"--without-isl\",\r\n                             \"--enable-multilib\",\r\n                             \"--disable-werror\",\r\n                             \"--without-headers\",\r\n                             \"--with-as=#{Formula[\"i386-elf-binutils\"].bin}/i386-elf-as\",\r\n                             \"--with-ld=#{Formula[\"i386-elf-binutils\"].bin}/i386-elf-ld\",\r\n                             \"--enable-languages=c,c++\"\r\n```\r\nthe error is:\r\n```\r\n> i386-elf-gcc tmp.c -c -m64\r\n> cc1: 对不起，尚未实现：未编译入对 64 位模式的支持\r\n```\r\nWhich means that 64-bit is not supported.\r\nI am not sure if I made a mistake, but in fact, I succeeded with target=x86_64.\r\nDo you have any suggestions?"
+      }
+    },
+    {
+      "id": "commit-4ce72a4376d70ded25244d1d8adf97af3cfc7e2e",
+      "type": "commit",
+      "ts": "2019-12-16T06:30:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4ce72a4376d70ded25244d1d8adf97af3cfc7e2e",
+        "message": "update",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-4762ef4a5182ad88e75492a4072942a86f4dd43b",
+      "type": "commit",
+      "ts": "2019-12-16T06:21:07Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4762ef4a5182ad88e75492a4072942a86f4dd43b",
+        "message": "update",
+        "additions": 3,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-bc013238ba2c5e3efc365355eed8b4b6d43f3f02",
+      "type": "commit",
+      "ts": "2019-12-16T06:19:30Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bc013238ba2c5e3efc365355eed8b4b6d43f3f02",
+        "message": "Update FUNDING.yml",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-1c2a64d8e464c863f89d359d006d941ee815113b",
+      "type": "commit",
+      "ts": "2019-12-16T06:14:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "1c2a64d8e464c863f89d359d006d941ee815113b",
+        "message": "update",
+        "additions": 55,
+        "deletions": 43
+      }
+    },
+    {
+      "id": "commit-e16479b8e96d9cce83521ad8525375c656e9ad56",
+      "type": "commit",
+      "ts": "2019-12-16T05:37:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e16479b8e96d9cce83521ad8525375c656e9ad56",
+        "message": "Create FUNDING.yml\n\ninit",
+        "additions": 12,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-f4a8e228b2aea1f66e5b2704bc888e87ab76420a",
+      "type": "commit",
+      "ts": "2019-12-16T04:59:04Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "f4a8e228b2aea1f66e5b2704bc888e87ab76420a",
+        "message": "clean up code style, update setup.sh, try cpp",
+        "additions": 100,
+        "deletions": 40
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-45718-117",
+      "type": "issue_comment",
+      "ts": "2019-12-16T04:09:21Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 45718,
+        "issueTitle": "x86_64-elf cross-toolchain",
+        "body": "@fxcoudert \r\nHere we go.\r\nhttps://github.com/Homebrew/homebrew-core/pull/47935\r\nThank you."
+      }
+    },
+    {
+      "id": "pr-47935-Homebrew/homebrew-core",
+      "type": "pull_request",
+      "ts": "2019-12-16T04:07:36Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "number": 47935,
+        "title": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
+        "state": "closed",
+        "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Is your test running fine `brew test <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
+      }
+    },
+    {
+      "id": "commit-470c683fae2ab681ee7b636c89cb7418b26a8654",
+      "type": "commit",
+      "ts": "2019-12-15T04:53:09Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "470c683fae2ab681ee7b636c89cb7418b26a8654",
+        "message": "Working on vmm",
+        "additions": 96,
+        "deletions": 92
+      }
+    },
+    {
+      "id": "commit-7a921719c678e34258cc28d2aea8df545822ebc3",
+      "type": "commit",
+      "ts": "2019-12-14T16:48:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "7a921719c678e34258cc28d2aea8df545822ebc3",
+        "message": "clean up code style",
+        "additions": 154,
+        "deletions": 93
+      }
+    },
+    {
+      "id": "commit-30f7a76356c699547191d57ff5be769d5480dca5",
+      "type": "commit",
+      "ts": "2019-12-14T16:20:42Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "30f7a76356c699547191d57ff5be769d5480dca5",
+        "message": "fix up CI",
+        "additions": 3,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-534fff6ca5bcc8363c3fc376a378ee780e37dedb",
+      "type": "commit",
+      "ts": "2019-12-14T16:20:21Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "534fff6ca5bcc8363c3fc376a378ee780e37dedb",
+        "message": "fix up CI",
+        "additions": 3,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-5b728e0deb10779bbf83524a089a57767e643539",
+      "type": "commit",
+      "ts": "2019-12-14T16:19:50Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5b728e0deb10779bbf83524a089a57767e643539",
+        "message": "fix up CI",
+        "additions": 3,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-5edff6e02c71c9211dba9ab19a8416008c5a7b27",
+      "type": "commit",
+      "ts": "2019-12-14T16:18:14Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5edff6e02c71c9211dba9ab19a8416008c5a7b27",
+        "message": "fix up CI",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-2fb2affbc769607ae6da79e1198392c17b72926b",
+      "type": "commit",
+      "ts": "2019-12-14T15:43:52Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "2fb2affbc769607ae6da79e1198392c17b72926b",
+        "message": "fix up CI",
+        "additions": 68,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-6f75229cca61435e82a6d1e51d22109f2ee4751b",
+      "type": "commit",
+      "ts": "2019-12-14T15:38:26Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "6f75229cca61435e82a6d1e51d22109f2ee4751b",
+        "message": "fix up CI",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-45718-118",
+      "type": "issue_comment",
+      "ts": "2019-12-14T15:28:03Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 45718,
+        "issueTitle": "x86_64-elf cross-toolchain",
+        "body": "@fxcoudert \r\nIt's been a long time."
+      }
+    },
+    {
+      "id": "commit-cf5a72ee35048dd4c917b78e8bd558faf3edfc5a",
+      "type": "commit",
+      "ts": "2019-12-14T14:33:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cf5a72ee35048dd4c917b78e8bd558faf3edfc5a",
+        "message": "update",
+        "additions": 0,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-08598080b1d684fb75917322500df257d0634985",
+      "type": "commit",
+      "ts": "2019-12-14T14:32:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "08598080b1d684fb75917322500df257d0634985",
+        "message": "update",
+        "additions": 4553,
+        "deletions": 3023
+      }
+    },
+    {
+      "id": "commit-9d6847ba38487d34e3232a2fbf04f0fa63a682d4",
+      "type": "commit",
+      "ts": "2019-12-14T14:06:08Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9d6847ba38487d34e3232a2fbf04f0fa63a682d4",
+        "message": "update",
+        "additions": 0,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-e1dd79d425e6b8ca484238fe0e5e8156df0cd0e4",
+      "type": "commit",
+      "ts": "2019-12-14T14:05:34Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e1dd79d425e6b8ca484238fe0e5e8156df0cd0e4",
+        "message": "update",
+        "additions": 3301,
+        "deletions": 1717
+      }
+    },
+    {
+      "id": "commit-da3056a6a48ef1ed8c044369e42407e54dad4265",
+      "type": "commit",
+      "ts": "2019-12-13T19:59:47Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "da3056a6a48ef1ed8c044369e42407e54dad4265",
+        "message": "update",
+        "additions": 1682,
+        "deletions": 672
+      }
+    },
+    {
+      "id": "commit-98c0f2e91aa87f53d01b032cfd9b61effb0835de",
+      "type": "commit",
+      "ts": "2019-12-13T19:00:36Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "98c0f2e91aa87f53d01b032cfd9b61effb0835de",
+        "message": "remove trashy file",
+        "additions": 4,
+        "deletions": 119
+      }
+    },
+    {
+      "id": "commit-0f282f4f064f5fee02852fdc9ee990ab793ec532",
+      "type": "commit",
+      "ts": "2019-12-13T18:45:37Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0f282f4f064f5fee02852fdc9ee990ab793ec532",
+        "message": "Add `printk_info()` `printk_debug()` `printk_test()` `printk_err()`, and replaced old version\nAll the above should be optimized.",
+        "additions": 157,
+        "deletions": 137
+      }
+    },
+    {
+      "id": "commit-5227687ef9c03a895a034d4a6fb7c83c81195cb2",
+      "type": "commit",
+      "ts": "2019-12-11T15:56:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "5227687ef9c03a895a034d4a6fb7c83c81195cb2",
+        "message": "update",
+        "additions": 71,
+        "deletions": 49
+      }
+    },
+    {
+      "id": "commit-b5839d25cd156f8accb7ec53466781b375587f70",
+      "type": "commit",
+      "ts": "2019-12-11T04:07:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "b5839d25cd156f8accb7ec53466781b375587f70",
+        "message": "clean up code style, replace pointer with ptr_t",
+        "additions": 280,
+        "deletions": 478
+      }
+    },
+    {
+      "id": "commit-72f313784ff431264e0638d935ec861bf3b11c53",
+      "type": "commit",
+      "ts": "2019-12-11T03:15:23Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "72f313784ff431264e0638d935ec861bf3b11c53",
+        "message": "improve dir structure, clean up code style, add ptr_t type",
+        "additions": 37,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-9ad0547f4f1bf507a7b4c9ea6641f50980d2ced9",
+      "type": "commit",
+      "ts": "2019-12-10T16:10:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9ad0547f4f1bf507a7b4c9ea6641f50980d2ced9",
+        "message": "improve dir structure, clean up code style",
+        "additions": 33,
+        "deletions": 225
+      }
+    },
+    {
+      "id": "commit-e4370eec958f4ae316696e3a3dc817730693de0b",
+      "type": "commit",
+      "ts": "2019-12-08T18:00:13Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e4370eec958f4ae316696e3a3dc817730693de0b",
+        "message": "- Paging finished.\n- TODO:\n  optimized code\n  write docs\n  update old releases",
+        "additions": 132,
+        "deletions": 69
+      }
+    },
+    {
+      "id": "commit-aa231f065a3859f7758d54d61d8904362c1460eb",
+      "type": "commit",
+      "ts": "2019-12-08T17:10:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "aa231f065a3859f7758d54d61d8904362c1460eb",
+        "message": "update",
+        "additions": 99,
+        "deletions": 71
+      }
+    },
+    {
+      "id": "commit-0992dd762fcc89174f0356c5d1f33e03ab79aa56",
+      "type": "commit",
+      "ts": "2019-12-08T12:19:05Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0992dd762fcc89174f0356c5d1f33e03ab79aa56",
+        "message": "update",
+        "additions": 55,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-cb1300eaa150cd841ef95901814e2f02f5641179",
+      "type": "commit",
+      "ts": "2019-12-08T11:40:24Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cb1300eaa150cd841ef95901814e2f02f5641179",
+        "message": "update",
+        "additions": 2,
+        "deletions": 2
+      }
+    }
+  ]
+}

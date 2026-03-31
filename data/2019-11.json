@@ -1,0 +1,120 @@
+{
+  "month": "2019-11",
+  "events": [
+    {
+      "id": "commit-e1e5654bd64a80cb51097eb4303af3a735e01fb0",
+      "type": "commit",
+      "ts": "2019-11-15T05:29:38Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "e1e5654bd64a80cb51097eb4303af3a735e01fb0",
+        "message": "update",
+        "additions": 14,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-bae54a357db620ef68942cb7f3d3050bfc07e841",
+      "type": "commit",
+      "ts": "2019-11-15T04:33:59Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bae54a357db620ef68942cb7f3d3050bfc07e841",
+        "message": "fix warnning",
+        "additions": 437,
+        "deletions": 438
+      }
+    },
+    {
+      "id": "commit-3e0d85a6f52a949879b9f0095054c3d4327bb594",
+      "type": "commit",
+      "ts": "2019-11-15T03:18:07Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3e0d85a6f52a949879b9f0095054c3d4327bb594",
+        "message": "Enable paging",
+        "additions": 41,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-3309e95c2daeec758db7b81a13de24f3663953e2",
+      "type": "commit",
+      "ts": "2019-11-15T03:05:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "3309e95c2daeec758db7b81a13de24f3663953e2",
+        "message": "Try to paging",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-bb75f5a455c5270c90ac8375c53492d39b2ea0e0",
+      "type": "commit",
+      "ts": "2019-11-14T13:55:11Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bb75f5a455c5270c90ac8375c53492d39b2ea0e0",
+        "message": "Try to paging",
+        "additions": 168,
+        "deletions": 28
+      }
+    },
+    {
+      "id": "commit-fc3eceb6174cf607a756f0f0e35cd2854e4ebbeb",
+      "type": "commit",
+      "ts": "2019-11-14T10:14:40Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "fc3eceb6174cf607a756f0f0e35cd2854e4ebbeb",
+        "message": "Update pmm_init()",
+        "additions": 78,
+        "deletions": 74
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-45718-119",
+      "type": "issue_comment",
+      "ts": "2019-11-06T15:08:08Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 45718,
+        "issueTitle": "x86_64-elf cross-toolchain",
+        "body": "I'd love to but I can't, which i386-elf with \"--enable-targets=all\" and \"--enable-multilib\" can only be forward compatible, without the ability of 64 bits, so we can not just update."
+      }
+    },
+    {
+      "id": "commit-0253624707f18c2e1e286be34c7ba1bb8e32a923",
+      "type": "commit",
+      "ts": "2019-11-06T10:47:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "0253624707f18c2e1e286be34c7ba1bb8e32a923",
+        "message": "move kernel initialization code to bootinit.c",
+        "additions": 43,
+        "deletions": 45
+      }
+    },
+    {
+      "id": "comment-Homebrew/homebrew-core-45718-120",
+      "type": "issue_comment",
+      "ts": "2019-11-06T10:13:57Z",
+      "repo": "Homebrew/homebrew-core",
+      "semantic": null,
+      "data": {
+        "issueNumber": 45718,
+        "issueTitle": "x86_64-elf cross-toolchain",
+        "body": "Is there anyone here?"
+      }
+    }
+  ]
+}

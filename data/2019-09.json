@@ -1,0 +1,122 @@
+{
+  "month": "2019-09",
+  "events": [
+    {
+      "id": "commit-4e396b4fe86d98eddd1520ec3534bef2d2f3231d",
+      "type": "commit",
+      "ts": "2019-09-25T15:12:36Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "4e396b4fe86d98eddd1520ec3534bef2d2f3231d",
+        "message": "working on x86_64",
+        "additions": 11,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-44abaa821ecc05cee93733f146d59e31af3da1f2",
+      "type": "commit",
+      "ts": "2019-09-25T10:09:32Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "44abaa821ecc05cee93733f146d59e31af3da1f2",
+        "message": "working on entry long mode, almost there",
+        "additions": 77,
+        "deletions": 35
+      }
+    },
+    {
+      "id": "commit-354344ab40407b8aed3ca2817be72049cf6ee27f",
+      "type": "commit",
+      "ts": "2019-09-24T15:29:20Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "354344ab40407b8aed3ca2817be72049cf6ee27f",
+        "message": "1. Update directory structure\n2. merge i386 and x64 into x86_64\n\nTODO:\nOpen PG",
+        "additions": 724,
+        "deletions": 781
+      }
+    },
+    {
+      "id": "commit-9d78157fdd0d33e257360ab736fe52076e00547f",
+      "type": "commit",
+      "ts": "2019-09-24T12:29:18Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "9d78157fdd0d33e257360ab736fe52076e00547f",
+        "message": "improve existing boot code\nTODO:\nimprove architecture",
+        "additions": 24,
+        "deletions": 37
+      }
+    },
+    {
+      "id": "commit-538acd4bcdc970326129712b0c09dc92f16a762a",
+      "type": "commit",
+      "ts": "2019-09-24T12:07:39Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "538acd4bcdc970326129712b0c09dc92f16a762a",
+        "message": "初步解决启动时的内存问题",
+        "additions": 139,
+        "deletions": 118
+      }
+    },
+    {
+      "id": "commit-bc579db5b6e76c44705207d9b530334bce605ee3",
+      "type": "commit",
+      "ts": "2019-09-05T09:27:58Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "bc579db5b6e76c44705207d9b530334bce605ee3",
+        "message": "testing pmm",
+        "additions": 37,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-c61ece1e74be6ffd13c92aea13691a18b6cb16ef",
+      "type": "commit",
+      "ts": "2019-09-05T09:12:19Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "c61ece1e74be6ffd13c92aea13691a18b6cb16ef",
+        "message": "pmm ready",
+        "additions": 129,
+        "deletions": 126
+      }
+    },
+    {
+      "id": "commit-cd40cbda16c40d59fa0ddaf7b2f064f1f7ae6450",
+      "type": "commit",
+      "ts": "2019-09-05T07:09:28Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "cd40cbda16c40d59fa0ddaf7b2f064f1f7ae6450",
+        "message": "clean coding style",
+        "additions": 1232,
+        "deletions": 1232
+      }
+    },
+    {
+      "id": "commit-03c349cc1ba91262b075fdbd8136f09974dedcc8",
+      "type": "commit",
+      "ts": "2019-09-05T07:05:41Z",
+      "repo": "Simple-XX/SimpleKernel",
+      "semantic": null,
+      "data": {
+        "sha": "03c349cc1ba91262b075fdbd8136f09974dedcc8",
+        "message": "rollback",
+        "additions": 135,
+        "deletions": 221
+      }
+    }
+  ]
+}

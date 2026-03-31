@@ -1,0 +1,80 @@
+{
+  "month": "2018-02",
+  "events": [
+    {
+      "id": "comment-racket/string-constants-23-163",
+      "type": "issue_comment",
+      "ts": "2018-02-10T14:15:36Z",
+      "repo": "racket/string-constants",
+      "semantic": null,
+      "data": {
+        "issueNumber": 23,
+        "issueTitle": "revise some translate",
+        "body": "Sorry, the reply is so late.\r\nI understand.Thanks for your reply.\r\nThan this PR can be over?\r\nThank you for the help. "
+      }
+    },
+    {
+      "id": "issue-20-tyrchen/racket-book",
+      "type": "issue",
+      "ts": "2018-02-07T18:35:58Z",
+      "repo": "tyrchen/racket-book",
+      "semantic": null,
+      "data": {
+        "number": 20,
+        "title": "这。。。凉了？？？",
+        "state": "closed",
+        "body": ""
+      }
+    },
+    {
+      "id": "comment-racket/string-constants-23-164",
+      "type": "issue_comment",
+      "ts": "2018-02-07T16:16:25Z",
+      "repo": "racket/string-constants",
+      "semantic": null,
+      "data": {
+        "issueNumber": 23,
+        "issueTitle": "revise some translate",
+        "body": "@bennn \r\n\r\nSorry, it's a free translation.\r\n\r\nI think `for defining programs` in `Interface Essentials` means \"edit source file (编辑源文件)\".\r\nIn my opinion, `define` is used to define functions, not a whole program. "
+      }
+    },
+    {
+      "id": "pr-23-racket/string-constants",
+      "type": "pull_request",
+      "ts": "2018-02-06T12:31:49Z",
+      "repo": "racket/string-constants",
+      "semantic": null,
+      "data": {
+        "number": 23,
+        "title": "revise some translate",
+        "state": "closed",
+        "body": "A little bit change\r\n\r\n`使用简体中文作DrRacket界面语言` -> `使用简体中文作为DrRacket界面语言`\r\n`无用的require`-> `无效的require`\r\n`使用高亮突出`-> `使用高亮显示错误`\r\n`\"警告：定义视窗改变了。请单击“运行”`-> ` \"警告：程序文件改变了。请单击“运行”。`"
+      }
+    },
+    {
+      "id": "comment-racket/racket-1944-165",
+      "type": "issue_comment",
+      "ts": "2018-02-05T18:20:19Z",
+      "repo": "racket/racket",
+      "semantic": null,
+      "data": {
+        "issueNumber": 1944,
+        "issueTitle": "Chinese version is inappropriate",
+        "body": "Ok , I will be see what can I do.Thank you."
+      }
+    },
+    {
+      "id": "issue-1944-racket/racket",
+      "type": "issue",
+      "ts": "2018-02-05T17:36:34Z",
+      "repo": "racket/racket",
+      "semantic": null,
+      "data": {
+        "number": 1944,
+        "title": "Chinese version is inappropriate",
+        "state": "closed",
+        "body": "If I use a define without Run,IDE show me a message\r\n`警告：定义视窗改变了。请单击运行`\r\nI think it's inappropriate, maybe we can show as\r\n`警告：请点击运行以更新定义`\r\nor something better."
+      }
+    }
+  ]
+}
