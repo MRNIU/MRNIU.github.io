@@ -44,13 +44,13 @@
   --cp-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   --cp-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-  /* ─── Fluid scale (mobile 15px → 4K 22px) ─── */
-  --cp-fs-base: clamp(15px, 0.45vw + 10px, 22px);
-  --cp-fs-sm:   clamp(13px, 0.38vw + 9px, 18px);
-  --cp-fs-xs:   clamp(12px, 0.34vw + 8px, 16px);
-  --cp-fs-lg:   clamp(18px, 0.55vw + 12px, 28px);
-  --cp-fs-xl:   clamp(22px, 0.7vw + 14px, 36px);
-  --cp-fs-label: clamp(11px, 0.3vw + 7px, 15px);
+  /* ─── Fluid scale — presentation / storytelling size ─── */
+  --cp-fs-base: clamp(17px, 0.6vw + 12px, 26px);
+  --cp-fs-sm:   clamp(15px, 0.5vw + 10px, 22px);
+  --cp-fs-xs:   clamp(14px, 0.45vw + 9px, 20px);
+  --cp-fs-lg:   clamp(22px, 0.8vw + 14px, 36px);
+  --cp-fs-xl:   clamp(28px, 1.2vw + 16px, 52px);
+  --cp-fs-label: clamp(13px, 0.4vw + 8px, 18px);
 
   /* Fluid spacing */
   --cp-sidebar-w: clamp(220px, 14vw, 320px);
