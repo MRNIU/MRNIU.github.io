@@ -8,17 +8,25 @@ interface Props {
     totalComments: number;
     activeRepos: number;
   };
+  labels?: {
+    commits?: string;
+    prs?: string;
+    reviews?: string;
+    issues?: string;
+    comments?: string;
+    repos?: string;
+  };
 }
 
-const { stats } = Astro.props;
+const { stats, labels = {} } = Astro.props;
 
 const cards = [
-  { value: stats.totalCommits, label: "Commits" },
-  { value: stats.totalPRs, label: "Pull Requests" },
-  { value: stats.totalReviews, label: "Reviews" },
-  { value: stats.totalIssues, label: "Issues" },
-  { value: stats.totalComments, label: "Comments" },
-  { value: stats.activeRepos, label: "Active Repos" },
+  { value: stats.totalCommits, label: labels.commits || "Commits" },
+  { value: stats.totalPRs, label: labels.prs || "Pull Requests" },
+  { value: stats.totalReviews, label: labels.reviews || "Reviews" },
+  { value: stats.totalIssues, label: labels.issues || "Issues" },
+  { value: stats.totalComments, label: labels.comments || "Comments" },
+  { value: stats.activeRepos, label: labels.repos || "Active Repos" },
 ];
 ---
 

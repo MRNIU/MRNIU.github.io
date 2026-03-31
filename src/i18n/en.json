@@ -1,0 +1,48 @@
+{
+  "title": "GitPulse",
+  "subtitle": "{user}'s development activity",
+  "dashboard": {
+    "commits": "Commits",
+    "prs": "Pull Requests",
+    "reviews": "Reviews",
+    "issues": "Issues",
+    "comments": "Comments",
+    "repos": "Active Repos"
+  },
+  "heatmap": {
+    "title": "Contribution Activity",
+    "less": "Less",
+    "more": "More"
+  },
+  "topRepos": {
+    "title": "Top Repositories"
+  },
+  "timeline": {
+    "title": "Timeline"
+  },
+  "sidebar": {
+    "months": "Months",
+    "filter": "Filter",
+    "filtersToggle": "Filters & Navigation"
+  },
+  "eventTypes": {
+    "commit": "Commits",
+    "pull_request": "Pull Requests",
+    "review": "Reviews",
+    "issue": "Issues",
+    "issue_comment": "Comments",
+    "ai_roast": "AI Roasts"
+  },
+  "review": {
+    "commentedOn": "Commented on",
+    "pr": "PR"
+  },
+  "aiRoast": {
+    "title": "AI Weekly Roast",
+    "commits": "commits",
+    "topRepo": "Top repo"
+  },
+  "empty": {
+    "noData": "No data available for this month yet. Still backfilling..."
+  }
+}

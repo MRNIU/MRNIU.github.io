@@ -7,17 +7,23 @@ interface MonthEntry {
 interface Props {
   months: MonthEntry[];
   activeMonth: string;
+  labels?: {
+    months?: string;
+    filter?: string;
+    eventTypes?: Record<string, string>;
+  };
 }
 
-const { months, activeMonth } = Astro.props;
+const { months, activeMonth, labels = {} } = Astro.props;
 
+const eventTypeLabels = labels.eventTypes || {};
 const eventTypes = [
-  { value: "commit", label: "Commits" },
-  { value: "pull_request", label: "Pull Requests" },
-  { value: "review", label: "Reviews" },
-  { value: "issue", label: "Issues" },
-  { value: "issue_comment", label: "Comments" },
-  { value: "ai_roast", label: "AI Roasts" },
+  { value: "commit", label: eventTypeLabels.commit || "Commits" },
+  { value: "pull_request", label: eventTypeLabels.pull_request || "Pull Requests" },
+  { value: "review", label: eventTypeLabels.review || "Reviews" },
+  { value: "issue", label: eventTypeLabels.issue || "Issues" },
+  { value: "issue_comment", label: eventTypeLabels.issue_comment || "Comments" },
+  { value: "ai_roast", label: eventTypeLabels.ai_roast || "AI Roasts" },
 ];
 
 function formatMonth(key: string): string {
@@ -28,7 +34,7 @@ function formatMonth(key: string): string {
 ---
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-section">
-    <h3 class="f5 text-bold" style="margin: 0 0 8px;">Months</h3>
+    <h3 class="f5 text-bold" style="margin: 0 0 8px;">{labels.months || "Months"}</h3>
     <nav class="month-nav">
       {months.map((m) => (
         <button
@@ -44,7 +50,7 @@ function formatMonth(key: string): string {
   </div>
 
   <div class="sidebar-section" style="margin-top: 24px;">
-    <h3 class="f5 text-bold" style="margin: 0 0 8px;">Filter</h3>
+    <h3 class="f5 text-bold" style="margin: 0 0 8px;">{labels.filter || "Filter"}</h3>
     <div class="filter-list">
       {eventTypes.map((t) => (
         <label class="filter-item">

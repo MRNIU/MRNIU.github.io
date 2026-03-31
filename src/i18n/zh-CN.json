@@ -1,0 +1,48 @@
+{
+  "title": "GitPulse",
+  "subtitle": "{user} 的开发活动",
+  "dashboard": {
+    "commits": "提交",
+    "prs": "拉取请求",
+    "reviews": "代码审查",
+    "issues": "议题",
+    "comments": "评论",
+    "repos": "活跃仓库"
+  },
+  "heatmap": {
+    "title": "贡献活动",
+    "less": "少",
+    "more": "多"
+  },
+  "topRepos": {
+    "title": "热门仓库"
+  },
+  "timeline": {
+    "title": "时间线"
+  },
+  "sidebar": {
+    "months": "月份",
+    "filter": "筛选",
+    "filtersToggle": "筛选与导航"
+  },
+  "eventTypes": {
+    "commit": "提交",
+    "pull_request": "拉取请求",
+    "review": "代码审查",
+    "issue": "议题",
+    "issue_comment": "评论",
+    "ai_roast": "AI 点评"
+  },
+  "review": {
+    "commentedOn": "评论了",
+    "pr": "PR"
+  },
+  "aiRoast": {
+    "title": "AI 每周点评",
+    "commits": "次提交",
+    "topRepo": "最活跃仓库"
+  },
+  "empty": {
+    "noData": "本月暂无数据，正在回填中..."
+  }
+}

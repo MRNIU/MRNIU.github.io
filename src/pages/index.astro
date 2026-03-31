@@ -7,33 +7,62 @@ import Sidebar from "../components/Sidebar.astro";
 import EventCard from "../components/EventCard.astro";
 import "../styles/global.css";
 import "../styles/timeline.css";
+import { getMessages, t } from "../i18n/index.ts";
 
 import indexData from "../../data/index.json";
 import marchData from "../../data/2026-03.json";
 
+import { createRequire } from "node:module";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const configPath = path.resolve(process.cwd(), "devlog.config.cjs");
+const require = createRequire(import.meta.url);
+const config = require(configPath);
+const locale = config.locale || "en";
+const m = getMessages(locale);
+
 const activeMonth = indexData.months[0]?.key || "2026-03";
+const noDataMsg = t(m, "empty.noData");
 ---
-<BaseLayout title={`GitPulse — ${indexData.user}`}>
+<BaseLayout title={`${t(m, "title")} — ${indexData.user}`}>
   <header style="padding: 48px 0 24px;">
-    <h1 class="f1" style="margin: 0;">GitPulse</h1>
-    <p class="color-fg-muted f4" style="margin: 4px 0 0;">{indexData.user}'s development activity</p>
+    <h1 class="f1" style="margin: 0;">{t(m, "title")}</h1>
+    <p class="color-fg-muted f4" style="margin: 4px 0 0;">{t(m, "subtitle", { user: indexData.user })}</p>
   </header>
 
-  <Dashboard stats={indexData.stats} />
+  <Dashboard stats={indexData.stats} labels={{
+    commits: t(m, "dashboard.commits"),
+    prs: t(m, "dashboard.prs"),
+    reviews: t(m, "dashboard.reviews"),
+    issues: t(m, "dashboard.issues"),
+    comments: t(m, "dashboard.comments"),
+    repos: t(m, "dashboard.repos"),
+  }} />
   <Heatmap months={indexData.months} />
   <TopRepos months={indexData.months} />
 
   <section style="padding: 32px 0;">
-    <h2 class="f3" style="margin: 0 0 16px;">Timeline</h2>
+    <h2 class="f3" style="margin: 0 0 16px;">{t(m, "timeline.title")}</h2>
 
     <button class="sidebar-toggle" id="sidebar-toggle">
-      &#9776; Filters &amp; Navigation
+      &#9776; {t(m, "sidebar.filtersToggle")}
     </button>
 
     <div class="timeline-layout">
-      <Sidebar months={indexData.months} activeMonth={activeMonth} />
+      <Sidebar months={indexData.months} activeMonth={activeMonth} labels={{
+        months: t(m, "sidebar.months"),
+        filter: t(m, "sidebar.filter"),
+        eventTypes: {
+          commit: t(m, "eventTypes.commit"),
+          pull_request: t(m, "eventTypes.pull_request"),
+          review: t(m, "eventTypes.review"),
+          issue: t(m, "eventTypes.issue"),
+          issue_comment: t(m, "eventTypes.issue_comment"),
+          ai_roast: t(m, "eventTypes.ai_roast"),
+        },
+      }} />
 
-      <main class="timeline-main" id="timeline-main">
+      <main class="timeline-main" id="timeline-main" data-no-data-msg={noDataMsg}>
         {marchData.events.map((event: any) => (
           <div class="event-wrapper" data-event-type={event.type}>
             <EventCard event={event} />
@@ -84,7 +113,8 @@ const activeMonth = indexData.months[0]?.key || "2026-03";
         try {
           const resp = await fetch(`/data/${file}`);
           if (!resp.ok) {
-            timelineMain.innerHTML = '<p class="color-fg-muted" style="padding: 24px; text-align: center;">No data available for this month yet. Still backfilling...</p>';
+            const noDataMsg = timelineMain.getAttribute('data-no-data-msg') || 'No data available for this month yet. Still backfilling...';
+            timelineMain.innerHTML = `<p class="color-fg-muted" style="padding: 24px; text-align: center;">${noDataMsg}</p>`;
             return;
           }
           const data = await resp.json();
