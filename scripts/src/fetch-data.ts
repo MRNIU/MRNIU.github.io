@@ -5,6 +5,7 @@ import { RateLimitTracker } from "./rate-limit.js";
 import { readCheckpoint, writeCheckpoint } from "./checkpoint.js";
 import { createEventFilter } from "./filters.js";
 import { writeEvents } from "./data-writer.js";
+import { generateAIRoasts } from "./ai-roast.js";
 import { fetchPullRequests } from "./fetchers/pull-requests.js";
 import { fetchIssues } from "./fetchers/issues.js";
 import { fetchComments } from "./fetchers/comments.js";
@@ -171,6 +172,29 @@ async function main() {
 
   if (filtered.length > 0) {
     writeEvents(DATA_DIR, config.username, filtered);
+  }
+
+  // AI Roast generation
+  if (config.aiRoast.enabled) {
+    // Collect existing roast week ranges to avoid duplicates
+    const existingRoastWeeks = new Set<string>();
+    // Read from all existing monthly files
+    const fs = await import("node:fs");
+    const dataFiles = fs.readdirSync(DATA_DIR).filter(f => /^\d{4}-\d{2}\.json$/.test(f));
+    for (const file of dataFiles) {
+      const content = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf-8"));
+      for (const event of content.events) {
+        if (event.type === "ai_roast") {
+          existingRoastWeeks.add(event.data.weekRange);
+        }
+      }
+    }
+
+    const roastEvents = await generateAIRoasts(config, filtered, existingRoastWeeks);
+    if (roastEvents.length > 0) {
+      writeEvents(DATA_DIR, config.username, roastEvents);
+      console.log(`[ai-roast] Generated ${roastEvents.length} AI roast(s)`);
+    }
   }
 
   checkpoint.lastFetchedAt = new Date().toISOString();
