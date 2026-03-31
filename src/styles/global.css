@@ -62,15 +62,19 @@ code, .mono {
   padding: 0 16px;
 }
 
-.timeline-layout {
+.page-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 24px;
 }
 
+.main-content {
+  min-width: 0; /* prevent grid blowout */
+}
+
 /* Tablet */
 @media (max-width: 1023px) {
-  .timeline-layout {
+  .page-layout {
     grid-template-columns: 1fr;
   }
 }
@@ -167,9 +171,9 @@ code, .mono {
   }
 }
 
-/* Mobile: stats grid */
+/* Mobile */
 @media (max-width: 767px) {
-  .timeline-layout {
+  .page-layout {
     grid-template-columns: 1fr;
   }
 }

@@ -26,60 +26,62 @@ const noDataMsg = t(m, "empty.noData");
 const allMonthKeys = indexData.months.map((m: any) => m.key);
 ---
 <BaseLayout title={`${t(m, "title")} — ${indexData.user}`}>
-  <header style="padding: 48px 0 24px; text-align: center;">
-    <h1 class="f1" style="margin: 0;">{t(m, "title")}</h1>
-    <p class="color-fg-muted f4" style="margin: 4px 0 0;">{t(m, "subtitle", { user: indexData.user })}</p>
-  </header>
+  <button class="sidebar-toggle" id="sidebar-toggle">
+    &#9776; {t(m, "sidebar.filtersToggle")}
+  </button>
 
-  <Dashboard stats={indexData.stats} labels={{
-    commits: t(m, "dashboard.commits"),
-    prs: t(m, "dashboard.prs"),
-    reviews: t(m, "dashboard.reviews"),
-    issues: t(m, "dashboard.issues"),
-    comments: t(m, "dashboard.comments"),
-    repos: t(m, "dashboard.repos"),
-  }} />
-  <Heatmap months={indexData.months} />
-  <TopRepos months={indexData.months} />
+  <div class="page-layout">
+    <Sidebar months={indexData.months} activeMonth={activeMonth} labels={{
+      months: t(m, "sidebar.months"),
+      filter: t(m, "sidebar.filter"),
+      eventTypes: {
+        commit: t(m, "eventTypes.commit"),
+        pull_request: t(m, "eventTypes.pull_request"),
+        review: t(m, "eventTypes.review"),
+        issue: t(m, "eventTypes.issue"),
+        issue_comment: t(m, "eventTypes.issue_comment"),
+        ai_roast: t(m, "eventTypes.ai_roast"),
+      },
+    }} />
 
-  <section style="padding: 32px 0;">
-    <h2 class="f3" style="margin: 0 0 16px;">{t(m, "timeline.title")}</h2>
+    <div class="main-content">
+      <header style="padding: 48px 0 24px; text-align: center;">
+        <h1 class="f1" style="margin: 0;">{t(m, "title")}</h1>
+        <p class="color-fg-muted f4" style="margin: 4px 0 0;">{t(m, "subtitle", { user: indexData.user })}</p>
+      </header>
 
-    <button class="sidebar-toggle" id="sidebar-toggle">
-      &#9776; {t(m, "sidebar.filtersToggle")}
-    </button>
-
-    <div class="timeline-layout">
-      <Sidebar months={indexData.months} activeMonth={activeMonth} labels={{
-        months: t(m, "sidebar.months"),
-        filter: t(m, "sidebar.filter"),
-        eventTypes: {
-          commit: t(m, "eventTypes.commit"),
-          pull_request: t(m, "eventTypes.pull_request"),
-          review: t(m, "eventTypes.review"),
-          issue: t(m, "eventTypes.issue"),
-          issue_comment: t(m, "eventTypes.issue_comment"),
-          ai_roast: t(m, "eventTypes.ai_roast"),
-        },
+      <Dashboard stats={indexData.stats} labels={{
+        commits: t(m, "dashboard.commits"),
+        prs: t(m, "dashboard.prs"),
+        reviews: t(m, "dashboard.reviews"),
+        issues: t(m, "dashboard.issues"),
+        comments: t(m, "dashboard.comments"),
+        repos: t(m, "dashboard.repos"),
       }} />
+      <Heatmap months={indexData.months} />
+      <TopRepos months={indexData.months} />
 
-      <main class="timeline-main" id="timeline-main"
-            data-no-data-msg={noDataMsg}
-            data-all-months={JSON.stringify(allMonthKeys)}>
-        <!-- First month rendered at build time -->
-        <div class="month-section" data-month-section={activeMonth} id={`month-${activeMonth}`}>
-          <h3 class="month-divider">{new Date(activeMonth + '-01').toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</h3>
-          {marchData.events.map((event: any) => (
-            <div class="event-wrapper" data-event-type={event.type}>
-              <EventCard event={event} />
-            </div>
-          ))}
-        </div>
-        <!-- Remaining months loaded dynamically on scroll -->
-        <div id="scroll-sentinel" style="height: 1px;"></div>
-      </main>
+      <section style="padding: 32px 0;">
+        <h2 class="f3" style="margin: 0 0 16px;">{t(m, "timeline.title")}</h2>
+
+        <main class="timeline-main" id="timeline-main"
+              data-no-data-msg={noDataMsg}
+              data-all-months={JSON.stringify(allMonthKeys)}>
+          <!-- First month rendered at build time -->
+          <div class="month-section" data-month-section={activeMonth} id={`month-${activeMonth}`}>
+            <h3 class="month-divider">{new Date(activeMonth + '-01').toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</h3>
+            {marchData.events.map((event: any) => (
+              <div class="event-wrapper" data-event-type={event.type}>
+                <EventCard event={event} />
+              </div>
+            ))}
+          </div>
+          <!-- Remaining months loaded dynamically on scroll -->
+          <div id="scroll-sentinel" style="height: 1px;"></div>
+        </main>
+      </section>
     </div>
-  </section>
+  </div>
 
   <script>
     // ─── State ───
