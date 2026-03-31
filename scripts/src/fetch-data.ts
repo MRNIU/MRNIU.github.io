@@ -174,26 +174,39 @@ async function main() {
     writeEvents(DATA_DIR, config.username, filtered);
   }
 
-  // AI Roast generation
+  // AI Roast generation — covers both new events AND historical data missing roasts
   if (config.aiRoast.enabled) {
-    // Collect existing roast week ranges to avoid duplicates
-    const existingRoastWeeks = new Set<string>();
-    // Read from all existing monthly files
     const fs = await import("node:fs");
     const dataFiles = fs.readdirSync(DATA_DIR).filter(f => /^\d{4}-\d{2}\.json$/.test(f));
+
+    // Collect all existing events + roast weeks from data files
+    const existingRoastWeeks = new Set<string>();
+    const allHistoricalEvents: GitPulseEvent[] = [];
     for (const file of dataFiles) {
       const content = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf-8"));
       for (const event of content.events) {
         if (event.type === "ai_roast") {
           existingRoastWeeks.add(event.data.weekRange);
+        } else {
+          allHistoricalEvents.push(event);
         }
       }
     }
 
-    const roastEvents = await generateAIRoasts(config, filtered, existingRoastWeeks);
+    // Merge: historical events + newly fetched events (deduplicated by id)
+    const seenIds = new Set(allHistoricalEvents.map(e => e.id));
+    for (const e of filtered) {
+      if (!seenIds.has(e.id)) {
+        allHistoricalEvents.push(e);
+      }
+    }
+
+    const roastEvents = await generateAIRoasts(config, allHistoricalEvents, existingRoastWeeks);
     if (roastEvents.length > 0) {
       writeEvents(DATA_DIR, config.username, roastEvents);
       console.log(`[ai-roast] Generated ${roastEvents.length} AI roast(s)`);
+    } else {
+      console.log("[ai-roast] All weeks already have roasts, nothing to generate");
     }
   }
 
