@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 import { loadConfig } from "./config.js";
 import { GraphQLClient } from "./graphql-client.js";
@@ -148,7 +149,6 @@ async function runBackfill(
 }
 
 function clearDataDir(dataDir: string): void {
-  const fs = require("node:fs") as typeof import("node:fs");
   const entries = fs.readdirSync(dataDir);
   for (const entry of entries) {
     const fullPath = path.join(dataDir, entry);
@@ -159,7 +159,6 @@ function clearDataDir(dataDir: string): void {
 }
 
 function detectOwnerChange(dataDir: string, username: string): boolean {
-  const fs = require("node:fs") as typeof import("node:fs");
   const indexPath = path.join(dataDir, "index.json");
   if (!fs.existsSync(indexPath)) return false;
   try {
@@ -205,7 +204,6 @@ async function main() {
 
   // AI Roast generation — covers both new events AND historical data missing roasts
   if (config.aiRoast.enabled) {
-    const fs = await import("node:fs");
     const dataFiles = fs.readdirSync(DATA_DIR).filter(f => /^\d{4}-\d{2}\.json$/.test(f));
 
     // Collect all existing events + roast weeks from data files
