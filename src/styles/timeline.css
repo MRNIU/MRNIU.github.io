@@ -25,22 +25,30 @@
 /* ─── Data elements (monospace slabs) ─── */
 .event-sha {
   font-family: var(--cp-font-mono);
-  font-size: 13px;
+  font-size: var(--cp-fs-sm);
   color: var(--cp-blue);
   background: var(--cp-bg-raised);
   padding: 1px 5px;
   border-radius: 2px;
 }
 
+.event-sha:hover {
+  text-decoration: underline;
+}
+
 .event-repo {
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-xs);
   color: var(--cp-fg-muted);
+}
+
+.event-repo:hover {
+  color: var(--cp-blue);
 }
 
 .event-time {
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-xs);
   color: var(--cp-fg-muted);
 }
 
@@ -49,7 +57,7 @@
   display: inline-block;
   padding: 1px 6px;
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-xs);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -66,7 +74,7 @@
 /* ─── Diff stats ─── */
 .diff-stat {
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-xs);
   white-space: nowrap;
 }
 .diff-stat .additions { color: var(--cp-green); }
@@ -85,7 +93,7 @@
   padding: 4px 8px;
   border-left: 2px solid var(--cp-border);
   background: var(--cp-bg-raised);
-  font-size: 13px;
+  font-size: var(--cp-fs-sm);
 }
 
 .review-inline code {
@@ -111,7 +119,7 @@
 
 .ai-roast-card .anomaly-label {
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-xs);
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--cp-anomaly);
@@ -120,17 +128,22 @@
 /* ─── Event body text (prose track) ─── */
 .event-body {
   color: var(--cp-fg-muted);
-  font-size: 13px;
+  font-size: var(--cp-fs-sm);
   line-height: 1.45;
   margin: 3px 0;
 }
 
-/* PR/Issue number (data slab) */
+/* PR/Issue number (data slab) — clickable */
 .event-ref {
   font-family: var(--cp-font-mono);
-  font-size: 13px;
+  font-size: var(--cp-fs-sm);
   color: var(--cp-fg-default);
   background: var(--cp-bg-raised);
   padding: 1px 5px;
   border-radius: 2px;
+}
+
+.event-ref:hover {
+  color: var(--cp-blue);
+  text-decoration: underline;
 }

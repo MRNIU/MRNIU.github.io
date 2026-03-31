@@ -42,13 +42,16 @@ const time = new Date(ts).toLocaleString("en-US", {
   hour: "2-digit",
   minute: "2-digit",
 });
+
+const prUrl = `https://github.com/${repo}/pull/${data.prNumber}`;
+const repoUrl = `https://github.com/${repo}`;
 ---
 
 <div class="event-card event-card--indented">
   <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
     <span class={`state-badge ${badgeClass[data.state] || 'state-badge--commented'}`}>{badgeLabel[data.state] || data.state}</span>
-    <span class="event-ref">#{data.prNumber}</span>
-    <span style="color: var(--cp-fg-default); font-size: 13px;">{data.prTitle}</span>
+    <a class="event-ref" href={prUrl} target="_blank" rel="noopener">#{data.prNumber}</a>
+    <span>{data.prTitle}</span>
   </div>
   {data.body && (
     <p class="event-body">{data.body}</p>
@@ -64,7 +67,7 @@ const time = new Date(ts).toLocaleString("en-US", {
     </div>
   )}
   <div style="display: flex; gap: 10px; margin-top: 2px;">
-    <span class="event-repo">{repo}</span>
+    <a class="event-repo" href={repoUrl} target="_blank" rel="noopener">{repo}</a>
     <span class="event-time">{time}</span>
   </div>
 </div>

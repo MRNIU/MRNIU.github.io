@@ -21,11 +21,11 @@
   --cp-border-muted: #161b22;
 
   /* Absolute Semantic Indicators */
-  --cp-green: #238636;   /* Creation */
-  --cp-red: #da3633;     /* Resolution */
-  --cp-purple: #8957e5;  /* Convergence */
-  --cp-blue: #58a6ff;    /* Reference/link */
-  --cp-yellow: #d29922;  /* Warning */
+  --cp-green: #238636;
+  --cp-red: #da3633;
+  --cp-purple: #8957e5;
+  --cp-blue: #58a6ff;
+  --cp-yellow: #d29922;
 
   /* The Anomaly — AI glow */
   --cp-anomaly: #f778ba;
@@ -43,6 +43,18 @@
   /* Typography */
   --cp-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   --cp-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* ─── Fluid scale (mobile 15px → 4K 22px) ─── */
+  --cp-fs-base: clamp(15px, 0.45vw + 10px, 22px);
+  --cp-fs-sm:   clamp(13px, 0.38vw + 9px, 18px);
+  --cp-fs-xs:   clamp(12px, 0.34vw + 8px, 16px);
+  --cp-fs-lg:   clamp(18px, 0.55vw + 12px, 28px);
+  --cp-fs-xl:   clamp(22px, 0.7vw + 14px, 36px);
+  --cp-fs-label: clamp(11px, 0.3vw + 7px, 15px);
+
+  /* Fluid spacing */
+  --cp-sidebar-w: clamp(220px, 14vw, 320px);
+  --cp-gap: clamp(16px, 1.2vw, 32px);
 }
 
 /* ─── Base Reset ─── */
@@ -57,7 +69,7 @@ html {
 body {
   margin: 0;
   font-family: var(--cp-font-sans);
-  font-size: 14px;
+  font-size: var(--cp-fs-base);
   line-height: 1.5;
   color: var(--cp-fg-default);
   background: var(--cp-bg-deep);
@@ -67,33 +79,42 @@ body {
 /* Data track: monospace with subtle background slab */
 code, .mono, .data-slab {
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-sm);
   background: var(--cp-bg-raised);
   padding: 1px 5px;
   border-radius: 2px;
+}
+
+/* Links — inherit color, underline on hover only */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 /* ─── Page Container ─── */
 .page-container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 var(--cp-gap);
 }
 
 /* Top section: offset to align with timeline main column */
 .top-section {
-  margin-left: calc(260px + 24px);
+  margin-left: calc(var(--cp-sidebar-w) + var(--cp-gap));
 }
 
 .timeline-title {
-  margin-left: calc(260px + 24px);
+  margin-left: calc(var(--cp-sidebar-w) + var(--cp-gap));
 }
 
 /* ─── Timeline Layout ─── */
 .timeline-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 24px;
+  grid-template-columns: var(--cp-sidebar-w) 1fr;
+  gap: var(--cp-gap);
 }
 
 @media (max-width: 1023px) {
@@ -124,7 +145,7 @@ code, .mono, .data-slab {
 
 .sidebar-section h3 {
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: var(--cp-fs-label);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--cp-fg-muted);
@@ -142,14 +163,14 @@ code, .mono, .data-slab {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 8px;
+  padding: 5px 8px;
   border: none;
   background: transparent;
   color: var(--cp-fg-subtle);
   border-radius: 0;
   cursor: pointer;
   font-family: var(--cp-font-mono);
-  font-size: 13px;
+  font-size: var(--cp-fs-sm);
   text-align: left;
   width: 100%;
   border-left: 2px solid transparent;
@@ -169,7 +190,7 @@ code, .mono, .data-slab {
 
 .month-btn .Counter {
   font-family: var(--cp-font-mono);
-  font-size: 11px;
+  font-size: var(--cp-fs-xs);
   color: var(--cp-fg-muted);
   background: none;
   padding: 0;
@@ -185,7 +206,7 @@ code, .mono, .data-slab {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
+  font-size: var(--cp-fs-sm);
   cursor: pointer;
   color: var(--cp-fg-subtle);
   padding: 2px 8px;
@@ -209,7 +230,7 @@ code, .mono, .data-slab {
   color: var(--cp-fg-subtle);
   cursor: pointer;
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-sm);
   width: 100%;
   text-align: left;
   margin-bottom: 12px;
@@ -238,7 +259,7 @@ code, .mono, .data-slab {
   margin-left: -20px;
   padding-left: 20px;
   font-family: var(--cp-font-mono);
-  font-size: 12px;
+  font-size: var(--cp-fs-sm);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;

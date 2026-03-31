@@ -31,13 +31,16 @@ const time = new Date(ts).toLocaleString("en-US", {
 const truncatedBody = data.body.length > 200
   ? data.body.slice(0, 200) + "..."
   : data.body;
+
+const issueUrl = `https://github.com/${repo}/issues/${data.number}`;
+const repoUrl = `https://github.com/${repo}`;
 ---
 
 <div class="event-card">
   <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
     <span class={`state-badge ${isOpen ? 'state-badge--open' : 'state-badge--merged'}`}>{isOpen ? 'open' : 'closed'}</span>
-    <span class="event-ref">#{data.number}</span>
-    <span style="color: var(--cp-fg-bright); font-size: 13px;">{data.title}</span>
+    <a class="event-ref" href={issueUrl} target="_blank" rel="noopener">#{data.number}</a>
+    <span style="color: var(--cp-fg-bright);">{data.title}</span>
   </div>
   {truncatedBody && (
     <p class="event-body" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
@@ -45,7 +48,7 @@ const truncatedBody = data.body.length > 200
     </p>
   )}
   <div style="display: flex; gap: 10px; margin-top: 2px;">
-    <span class="event-repo">{repo}</span>
+    <a class="event-repo" href={repoUrl} target="_blank" rel="noopener">{repo}</a>
     <span class="event-time">{time}</span>
   </div>
 </div>

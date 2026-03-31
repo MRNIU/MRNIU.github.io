@@ -26,19 +26,22 @@ const time = new Date(ts).toLocaleString("en-US", {
   hour: "2-digit",
   minute: "2-digit",
 });
+
+const commitUrl = `https://github.com/${repo}/commit/${data.sha}`;
+const repoUrl = `https://github.com/${repo}`;
 ---
 
 <div class="event-card" data-semantic={semantic}>
   <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
-    <span class="event-sha">{shortSha}</span>
-    <span style="color: var(--cp-fg-default); font-size: 13px;">{firstLine}</span>
+    <a class="event-sha" href={commitUrl} target="_blank" rel="noopener">{shortSha}</a>
+    <span>{firstLine}</span>
     <span class="diff-stat">
       <span class="additions">+{data.additions}</span>
       <span class="deletions">-{data.deletions}</span>
     </span>
   </div>
   <div style="display: flex; gap: 10px; margin-top: 2px;">
-    <span class="event-repo">{repo}</span>
+    <a class="event-repo" href={repoUrl} target="_blank" rel="noopener">{repo}</a>
     <span class="event-time">{time}</span>
   </div>
 </div>

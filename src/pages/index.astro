@@ -29,8 +29,8 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
 <BaseLayout title={`${t(m, "title")} — ${indexData.user}`}>
   <div class="top-section">
     <header style="padding: 32px 0 16px; text-align: center;">
-      <h1 style="margin: 0; font-family: var(--cp-font-mono); font-size: 24px; font-weight: 600; color: var(--cp-fg-bright); letter-spacing: -0.5px;">{t(m, "title")}</h1>
-      <p style="margin: 4px 0 0; font-family: var(--cp-font-mono); font-size: 12px; color: var(--cp-fg-muted);">{t(m, "subtitle", { user: indexData.user })}</p>
+      <h1 style="margin: 0; font-family: var(--cp-font-mono); font-size: var(--cp-fs-xl); font-weight: 600; color: var(--cp-fg-bright); letter-spacing: -0.5px;">{t(m, "title")}</h1>
+      <p style="margin: 4px 0 0; font-family: var(--cp-font-mono); font-size: var(--cp-fs-sm); color: var(--cp-fg-muted);">{t(m, "subtitle", { user: indexData.user })}</p>
     </header>
 
     <Dashboard stats={indexData.stats} labels={{
@@ -46,7 +46,7 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
   </div>
 
   <section style="padding: 32px 0;">
-    <h2 class="timeline-title" style="margin: 0 0 12px; font-family: var(--cp-font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cp-fg-muted); font-weight: 400;">{t(m, "timeline.title")}</h2>
+    <h2 class="timeline-title" style="margin: 0 0 12px; font-family: var(--cp-font-mono); font-size: var(--cp-fs-label); text-transform: uppercase; letter-spacing: 1.5px; color: var(--cp-fg-muted); font-weight: 400;">{t(m, "timeline.title")}</h2>
 
     <button class="sidebar-toggle" id="sidebar-toggle">
       &#9776; {t(m, "sidebar.filtersToggle")}
@@ -241,20 +241,23 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
     });
 
     // ─── Render helpers ───
+    function ghUrl(repo: string, path = '') { return `https://github.com/${repo}${path}`; }
+
     function renderEventCard(event: any): string {
       const time = new Date(event.ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
       const semantic = event.semantic || '';
+      const repoLink = `<a class="event-repo" href="${ghUrl(event.repo)}" target="_blank" rel="noopener">${event.repo}</a>`;
 
       switch (event.type) {
         case 'commit':
           return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
-                <span class="event-sha">${event.data.sha.slice(0, 7)}</span>
-                <span style="color: var(--cp-fg-default); font-size: 13px;">${escapeHtml(event.data.message)}</span>
+                <a class="event-sha" href="${ghUrl(event.repo, `/commit/${event.data.sha}`)}" target="_blank" rel="noopener">${event.data.sha.slice(0, 7)}</a>
+                <span>${escapeHtml(event.data.message)}</span>
                 <span class="diff-stat"><span class="additions">+${event.data.additions}</span> <span class="deletions">-${event.data.deletions}</span></span>
               </div>
               <div style="display: flex; gap: 10px; margin-top: 2px;">
-                <span class="event-repo">${event.repo}</span>
+                ${repoLink}
                 <span class="event-time">${time}</span>
               </div>
             </div>`;
@@ -264,12 +267,12 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
           return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
                 <span class="state-badge ${badgeClass}">${event.data.state}</span>
-                <span class="event-ref">#${event.data.number}</span>
-                <span style="color: var(--cp-fg-bright); font-size: 13px;">${escapeHtml(event.data.title)}</span>
+                <a class="event-ref" href="${ghUrl(event.repo, `/pull/${event.data.number}`)}" target="_blank" rel="noopener">#${event.data.number}</a>
+                <span style="color: var(--cp-fg-bright);">${escapeHtml(event.data.title)}</span>
               </div>
               ${event.data.body ? `<p class="event-body" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${escapeHtml(event.data.body)}</p>` : ''}
               <div style="display: flex; gap: 10px; margin-top: 2px;">
-                <span class="event-repo">${event.repo}</span>
+                ${repoLink}
                 <span class="event-time">${time}</span>
               </div>
             </div>`;
@@ -284,13 +287,13 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
           return `<div class="event-card event-card--indented">
               <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
                 <span class="state-badge ${stateMap[event.data.state] || 'state-badge--commented'}">${labelMap[event.data.state] || event.data.state}</span>
-                <span class="event-ref">#${event.data.prNumber}</span>
-                <span style="color: var(--cp-fg-default); font-size: 13px;">${escapeHtml(event.data.prTitle)}</span>
+                <a class="event-ref" href="${ghUrl(event.repo, `/pull/${event.data.prNumber}`)}" target="_blank" rel="noopener">#${event.data.prNumber}</a>
+                <span>${escapeHtml(event.data.prTitle)}</span>
               </div>
               ${event.data.body ? `<p class="event-body">${escapeHtml(event.data.body)}</p>` : ''}
               ${inlineHtml}
               <div style="display: flex; gap: 10px; margin-top: 2px;">
-                <span class="event-repo">${event.repo}</span>
+                ${repoLink}
                 <span class="event-time">${time}</span>
               </div>
             </div>`;
@@ -301,12 +304,12 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
           return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
                 <span class="state-badge ${isOpen ? 'state-badge--open' : 'state-badge--merged'}">${isOpen ? 'open' : 'closed'}</span>
-                <span class="event-ref">#${event.data.number}</span>
-                <span style="color: var(--cp-fg-bright); font-size: 13px;">${escapeHtml(event.data.title)}</span>
+                <a class="event-ref" href="${ghUrl(event.repo, `/issues/${event.data.number}`)}" target="_blank" rel="noopener">#${event.data.number}</a>
+                <span style="color: var(--cp-fg-bright);">${escapeHtml(event.data.title)}</span>
               </div>
               ${event.data.body ? `<p class="event-body" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${escapeHtml(event.data.body)}</p>` : ''}
               <div style="display: flex; gap: 10px; margin-top: 2px;">
-                <span class="event-repo">${event.repo}</span>
+                ${repoLink}
                 <span class="event-time">${time}</span>
               </div>
             </div>`;
@@ -316,12 +319,12 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
           return `<div class="event-card event-card--indented">
               <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
                 <span class="event-time" style="color: var(--cp-fg-muted);">comment</span>
-                <span class="event-ref">#${event.data.issueNumber}</span>
-                <span style="color: var(--cp-fg-default); font-size: 13px;">${escapeHtml(event.data.issueTitle)}</span>
+                <a class="event-ref" href="${ghUrl(event.repo, `/issues/${event.data.issueNumber}`)}" target="_blank" rel="noopener">#${event.data.issueNumber}</a>
+                <span>${escapeHtml(event.data.issueTitle)}</span>
               </div>
               <p class="event-body">${escapeHtml(event.data.body)}</p>
               <div style="display: flex; gap: 10px; margin-top: 2px;">
-                <span class="event-repo">${event.repo}</span>
+                ${repoLink}
                 <span class="event-time">${time}</span>
               </div>
             </div>`;
@@ -330,12 +333,12 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
           return `<div class="ai-roast-card">
               <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px;">
                 <span class="anomaly-label">&#x25C8; ai::roast</span>
-                <span style="font-family: var(--cp-font-mono); font-size: 11px; color: var(--cp-fg-muted);">${event.data.weekRange}</span>
+                <span style="font-family: var(--cp-font-mono); color: var(--cp-fg-muted);">${event.data.weekRange}</span>
               </div>
-              <p style="margin: 0 0 6px; font-size: 13px; line-height: 1.5; color: var(--cp-anomaly);">${escapeHtml(event.data.content)}</p>
-              <div style="display: flex; gap: 12px; font-family: var(--cp-font-mono); font-size: 11px; color: var(--cp-fg-muted);">
+              <p style="margin: 0 0 6px; line-height: 1.5; color: var(--cp-anomaly);">${escapeHtml(event.data.content)}</p>
+              <div style="display: flex; gap: 12px; font-family: var(--cp-font-mono); color: var(--cp-fg-muted);">
                 <span>${event.data.stats.totalCommits} commits</span>
-                <span>${event.data.stats.topRepo}</span>
+                <a class="event-repo" href="${ghUrl(event.data.stats.topRepo)}" target="_blank" rel="noopener">${event.data.stats.topRepo}</a>
                 <span>${time}</span>
               </div>
             </div>`;

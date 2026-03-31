@@ -34,7 +34,7 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   <div class="repo-list">
     {sorted.map(([repo, count], i) => (
       <div class="repo-row">
-        <span class="repo-name">{repo}</span>
+        <a class="repo-name" href={`https://github.com/${repo}`} target="_blank" rel="noopener">{repo}</a>
         <div class="repo-bar-track">
           <div class="repo-bar" style={`width: ${(count / maxCount) * 100}%; background: ${barColors[i]};`} />
         </div>
@@ -47,7 +47,7 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
 <style>
   .section-heading {
     font-family: var(--cp-font-mono);
-    font-size: 11px;
+    font-size: var(--cp-fs-label);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: var(--cp-fg-muted);
@@ -58,30 +58,33 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
   .repo-list {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
   }
 
   .repo-row {
     display: grid;
-    grid-template-columns: 200px 1fr 40px;
+    grid-template-columns: auto 1fr 50px;
     align-items: center;
-    gap: 10px;
-    padding: 2px 0;
+    gap: 12px;
+    padding: 3px 0;
   }
 
   .repo-name {
     font-family: var(--cp-font-mono);
-    font-size: 13px;
+    font-size: var(--cp-fs-sm);
     color: var(--cp-fg-default);
     text-align: right;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  }
+
+  .repo-name:hover {
+    color: var(--cp-blue);
   }
 
   .repo-bar-track {
-    height: 4px;
+    height: 5px;
     background: var(--cp-bg-raised);
+    min-width: 60px;
   }
 
   .repo-bar {
@@ -92,17 +95,14 @@ const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var
 
   .repo-count {
     font-family: var(--cp-font-mono);
-    font-size: 12px;
+    font-size: var(--cp-fs-xs);
     color: var(--cp-fg-muted);
     text-align: right;
   }
 
   @media (max-width: 768px) {
-    .repo-row {
-      grid-template-columns: 120px 1fr 36px;
-    }
     .repo-name {
-      font-size: 12px;
+      text-align: left;
     }
   }
 </style>
