@@ -62,19 +62,30 @@ code, .mono {
   padding: 0 16px;
 }
 
-.page-layout {
+/* Top section: offset to align with timeline main column */
+.top-section {
+  margin-left: calc(240px + 24px);
+}
+
+.timeline-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 24px;
 }
 
-.main-content {
-  min-width: 0; /* prevent grid blowout */
+.timeline-title {
+  margin-left: calc(240px + 24px);
 }
 
 /* Tablet */
 @media (max-width: 1023px) {
-  .page-layout {
+  .top-section {
+    margin-left: 0;
+  }
+  .timeline-title {
+    margin-left: 0;
+  }
+  .timeline-layout {
     grid-template-columns: 1fr;
   }
 }
@@ -173,8 +184,11 @@ code, .mono {
 
 /* Mobile */
 @media (max-width: 767px) {
-  .page-layout {
-    grid-template-columns: 1fr;
+  .top-section {
+    margin-left: 0;
+  }
+  .timeline-title {
+    margin-left: 0;
   }
 }
 
