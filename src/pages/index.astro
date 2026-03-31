@@ -26,10 +26,10 @@ const activeMonth = indexData.months[0]?.key || "2026-03";
 const noDataMsg = t(m, "empty.noData");
 const allMonthKeys = indexData.months.map((m: any) => m.key);
 ---
-<BaseLayout title={`${t(m, "title")} — ${indexData.user}`}>
+<BaseLayout title={`${indexData.user} — ${t(m, "title")}`}>
   <div class="top-section">
     <header style="padding: 32px 0 16px; text-align: center;">
-      <h1 style="margin: 0; font-family: var(--cp-font-mono); font-size: var(--cp-fs-xl); font-weight: 600; color: var(--cp-fg-bright); letter-spacing: -0.5px;">{t(m, "title")}</h1>
+      <h1 style="margin: 0; font-family: var(--cp-font-mono); font-size: var(--cp-fs-xl); font-weight: 600; color: var(--cp-fg-bright); letter-spacing: -0.5px;">{indexData.user}</h1>
       <p style="margin: 4px 0 0; font-family: var(--cp-font-mono); font-size: var(--cp-fs-sm); color: var(--cp-fg-muted);">{t(m, "subtitle", { user: indexData.user })}</p>
     </header>
 
