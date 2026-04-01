@@ -2,12 +2,12 @@
   "user": "MRNIU",
   "generatedAt": "2026-04-01T00:28:19.713Z",
   "stats": {
-    "totalCommits": 1994,
+    "totalCommits": 1977,
     "totalPRs": 223,
     "totalReviews": 5,
     "totalIssues": 80,
     "totalComments": 167,
-    "activeRepos": 64,
+    "activeRepos": 63,
     "earliestEvent": "2017-11-13T08:04:30Z",
     "latestEvent": "2026-04-05T00:00:00Z"
   },
@@ -30,7 +30,7 @@
     {
       "key": "2026-03",
       "file": "2026-03.json",
-      "eventCount": 117,
+      "eventCount": 96,
       "repos": [
         "ETLCPP/etl",
         "MRNIU/MRNIU.github.io",
@@ -44,24 +44,22 @@
         "rcore-os/rCore",
         "royal12646/Chinese-offensive-language-detect",
         "rust-embedded/aarch64-cpu",
-        "rust-embedded/rust-raspberrypi-OS-tutorials",
         "zephyrproject-rtos/zephyr"
       ],
       "breakdown": {
-        "commit": 81,
+        "commit": 64,
         "issue_comment": 7,
         "pull_request": 17,
         "review": 4,
-        "ai_roast": 5,
-        "issue": 3
+        "issue": 3,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/MRNIU.github.io": 42,
         "rust-embedded/aarch64-cpu": 8,
-        "MRNIU/SimpleKernel": 19,
         "rcore-os/rCore": 4,
+        "MRNIU/SimpleKernel": 4,
         "nicklnick/pinux": 5,
-        "rust-embedded/rust-raspberrypi-OS-tutorials": 2,
         "Simple-XX/SimpleKernel": 18,
         "royal12646/Chinese-offensive-language-detect": 1,
         "MRNIU/cpu_io": 7,
@@ -75,7 +73,7 @@
     {
       "key": "2026-02",
       "file": "2026-02.json",
-      "eventCount": 12,
+      "eventCount": 13,
       "repos": [
         "521xueweihan/HelloGitHub",
         "GitHubDaily/GitHubDaily",
@@ -87,7 +85,7 @@
       ],
       "breakdown": {
         "commit": 6,
-        "ai_roast": 1,
+        "ai_roast": 2,
         "issue": 3,
         "pull_request": 1,
         "issue_comment": 1
@@ -135,7 +133,7 @@
     {
       "key": "2025-12",
       "file": "2025-12.json",
-      "eventCount": 10,
+      "eventCount": 11,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
@@ -144,7 +142,8 @@
       ],
       "breakdown": {
         "commit": 9,
-        "issue_comment": 1
+        "issue_comment": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/factorio_BestLanding": 4,
@@ -225,7 +224,7 @@
     {
       "key": "2025-07",
       "file": "2025-07.json",
-      "eventCount": 31,
+      "eventCount": 33,
       "repos": [
         "MRNIU/cpu_io",
         "MRNIU/misc",
@@ -235,7 +234,8 @@
       "breakdown": {
         "commit": 6,
         "pull_request": 14,
-        "issue_comment": 11
+        "issue_comment": 11,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "MRNIU/cpu_io": 3,
@@ -247,7 +247,7 @@
     {
       "key": "2025-06",
       "file": "2025-06.json",
-      "eventCount": 29,
+      "eventCount": 30,
       "repos": [
         "MRNIU/nzh_factorio_mod",
         "factoriotools/factorio-docker"
@@ -255,7 +255,8 @@
       "breakdown": {
         "commit": 27,
         "issue_comment": 1,
-        "pull_request": 1
+        "pull_request": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/nzh_factorio_mod": 27,
@@ -282,12 +283,13 @@
     {
       "key": "2025-04",
       "file": "2025-04.json",
-      "eventCount": 5,
+      "eventCount": 6,
       "repos": [
         "MRNIU/cpu_io"
       ],
       "breakdown": {
-        "commit": 5
+        "commit": 5,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/cpu_io": 5
@@ -296,12 +298,13 @@
     {
       "key": "2025-02",
       "file": "2025-02.json",
-      "eventCount": 3,
+      "eventCount": 4,
       "repos": [
         "MRNIU/cpu_io"
       ],
       "breakdown": {
-        "commit": 3
+        "commit": 3,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/cpu_io": 3
@@ -310,12 +313,13 @@
     {
       "key": "2025-01",
       "file": "2025-01.json",
-      "eventCount": 71,
+      "eventCount": 74,
       "repos": [
         "MRNIU/cpu_io"
       ],
       "breakdown": {
-        "commit": 71
+        "commit": 71,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "MRNIU/cpu_io": 71
@@ -338,14 +342,15 @@
     {
       "key": "2024-09",
       "file": "2024-09.json",
-      "eventCount": 3,
+      "eventCount": 4,
       "repos": [
         "MRNIU/nzh_factorio_mod",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "pull_request": 2,
-        "commit": 1
+        "commit": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 2,
@@ -374,12 +379,13 @@
     {
       "key": "2024-07",
       "file": "2024-07.json",
-      "eventCount": 18,
+      "eventCount": 19,
       "repos": [
         "MRNIU/nzh_factorio_mod"
       ],
       "breakdown": {
-        "commit": 18
+        "commit": 18,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/nzh_factorio_mod": 18
@@ -388,7 +394,7 @@
     {
       "key": "2024-06",
       "file": "2024-06.json",
-      "eventCount": 7,
+      "eventCount": 8,
       "repos": [
         "Simple-XX/OSPP",
         "Simple-XX/SimpleGameEngine",
@@ -400,7 +406,8 @@
         "pull_request": 2,
         "commit": 1,
         "issue_comment": 2,
-        "issue": 2
+        "issue": 2,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleGameEngine": 1,
@@ -427,13 +434,14 @@
     {
       "key": "2024-04",
       "file": "2024-04.json",
-      "eventCount": 7,
+      "eventCount": 8,
       "repos": [
         "MRNIU/opensbi_interface",
         "Simple-XX/OSPP"
       ],
       "breakdown": {
-        "commit": 7
+        "commit": 7,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/OSPP": 1,
@@ -443,13 +451,14 @@
     {
       "key": "2024-03",
       "file": "2024-03.json",
-      "eventCount": 18,
+      "eventCount": 19,
       "repos": [
         "MRNIU/opensbi_interface",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 18
+        "commit": 18,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 1,
@@ -473,7 +482,7 @@
     {
       "key": "2023-12",
       "file": "2023-12.json",
-      "eventCount": 7,
+      "eventCount": 9,
       "repos": [
         "MRNIU/resume",
         "Simple-XX/SimpleGameEngine",
@@ -483,7 +492,8 @@
       "breakdown": {
         "commit": 4,
         "pull_request": 1,
-        "issue_comment": 2
+        "issue_comment": 2,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "MRNIU/resume": 4,
@@ -495,7 +505,7 @@
     {
       "key": "2023-11",
       "file": "2023-11.json",
-      "eventCount": 19,
+      "eventCount": 22,
       "repos": [
         "Simple-XX/SimpleGameEngine",
         "Simple-XX/SimplePhysicsEngine",
@@ -504,7 +514,8 @@
       "breakdown": {
         "issue_comment": 7,
         "pull_request": 4,
-        "issue": 8
+        "issue": 8,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "bkaradzic/bgfx.cmake-archived": 2,
@@ -515,7 +526,7 @@
     {
       "key": "2023-10",
       "file": "2023-10.json",
-      "eventCount": 37,
+      "eventCount": 38,
       "repos": [
         "Simple-XX/SimpleCompiler",
         "Simple-XX/SimpleGameEngine",
@@ -524,7 +535,8 @@
       "breakdown": {
         "pull_request": 3,
         "issue": 1,
-        "commit": 33
+        "commit": 33,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimplePhysicsEngine": 3,
@@ -535,7 +547,7 @@
     {
       "key": "2023-09",
       "file": "2023-09.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "MRNIU/MRNIU.github.io",
         "MRNIU/SimpleKernel",
@@ -545,7 +557,8 @@
       ],
       "breakdown": {
         "commit": 3,
-        "issue_comment": 8
+        "issue_comment": 8,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/OSPP": 1,
@@ -558,12 +571,13 @@
     {
       "key": "2023-08",
       "file": "2023-08.json",
-      "eventCount": 3,
+      "eventCount": 4,
       "repos": [
         "MRNIU/SimpleKernel"
       ],
       "breakdown": {
-        "issue_comment": 3
+        "issue_comment": 3,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/SimpleKernel": 3
@@ -572,14 +586,15 @@
     {
       "key": "2023-07",
       "file": "2023-07.json",
-      "eventCount": 28,
+      "eventCount": 29,
       "repos": [
         "MRNIU/SimpleKernel",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "issue_comment": 2,
-        "issue": 26
+        "issue": 26,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/SimpleKernel": 15,
@@ -589,14 +604,15 @@
     {
       "key": "2023-06",
       "file": "2023-06.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "issue_comment": 2,
         "issue": 6,
-        "pull_request": 3
+        "pull_request": 3,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 11
@@ -605,7 +621,7 @@
     {
       "key": "2023-05",
       "file": "2023-05.json",
-      "eventCount": 46,
+      "eventCount": 48,
       "repos": [
         "MRNIU/nzh_factorio_mod",
         "Simple-XX/SimpleKernel"
@@ -613,7 +629,8 @@
       "breakdown": {
         "issue_comment": 1,
         "commit": 34,
-        "pull_request": 11
+        "pull_request": 11,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 30,
@@ -623,7 +640,7 @@
     {
       "key": "2023-04",
       "file": "2023-04.json",
-      "eventCount": 102,
+      "eventCount": 106,
       "repos": [
         "MRNIU/nzh_factorio_mod",
         "Simple-XX/OSPP",
@@ -632,7 +649,8 @@
       "breakdown": {
         "commit": 75,
         "pull_request": 18,
-        "issue_comment": 9
+        "issue_comment": 9,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "MRNIU/nzh_factorio_mod": 4,
@@ -677,13 +695,14 @@
     {
       "key": "2022-11",
       "file": "2022-11.json",
-      "eventCount": 3,
+      "eventCount": 4,
       "repos": [
         "Simple-XX/SimpleGameEngine"
       ],
       "breakdown": {
         "issue_comment": 2,
-        "pull_request": 1
+        "pull_request": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleGameEngine": 3
@@ -720,7 +739,7 @@
     {
       "key": "2022-06",
       "file": "2022-06.json",
-      "eventCount": 16,
+      "eventCount": 17,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "MRNIU/libcxxrt",
@@ -731,7 +750,8 @@
         "pull_request": 2,
         "issue": 2,
         "commit": 11,
-        "issue_comment": 1
+        "issue_comment": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "haiku/website": 3,
@@ -743,7 +763,7 @@
     {
       "key": "2022-05",
       "file": "2022-05.json",
-      "eventCount": 13,
+      "eventCount": 15,
       "repos": [
         "EugeneLiu/translationCSAPP",
         "MRNIU/resume",
@@ -757,7 +777,8 @@
         "issue_comment": 4,
         "pull_request": 2,
         "commit": 6,
-        "review": 1
+        "review": 1,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "haiku/website": 3,
@@ -772,14 +793,15 @@
     {
       "key": "2022-04",
       "file": "2022-04.json",
-      "eventCount": 22,
+      "eventCount": 24,
       "repos": [
         "MRNIU/resume",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 13,
-        "pull_request": 9
+        "pull_request": 9,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 18,
@@ -789,12 +811,13 @@
     {
       "key": "2022-03",
       "file": "2022-03.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 11
+        "commit": 11,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 11
@@ -803,12 +826,13 @@
     {
       "key": "2022-02",
       "file": "2022-02.json",
-      "eventCount": 5,
+      "eventCount": 7,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 5
+        "commit": 5,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 5
@@ -817,14 +841,15 @@
     {
       "key": "2022-01",
       "file": "2022-01.json",
-      "eventCount": 114,
+      "eventCount": 119,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 103,
         "issue_comment": 2,
-        "pull_request": 9
+        "pull_request": 9,
+        "ai_roast": 5
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 114
@@ -833,14 +858,15 @@
     {
       "key": "2021-12",
       "file": "2021-12.json",
-      "eventCount": 19,
+      "eventCount": 22,
       "repos": [
         "MRNIU/SimpleKernel",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "issue_comment": 1,
-        "commit": 18
+        "commit": 18,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "MRNIU/SimpleKernel": 1,
@@ -850,7 +876,7 @@
     {
       "key": "2021-11",
       "file": "2021-11.json",
-      "eventCount": 82,
+      "eventCount": 83,
       "repos": [
         "MRNIU/SimpleKernel",
         "Simple-XX/SimpleKernel"
@@ -858,7 +884,8 @@
       "breakdown": {
         "commit": 68,
         "pull_request": 13,
-        "issue_comment": 1
+        "issue_comment": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 81,
@@ -868,14 +895,15 @@
     {
       "key": "2021-08",
       "file": "2021-08.json",
-      "eventCount": 22,
+      "eventCount": 26,
       "repos": [
         "Simple-XX/SimpleCompiler",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 21,
-        "issue": 1
+        "issue": 1,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 18,
@@ -885,13 +913,14 @@
     {
       "key": "2021-07",
       "file": "2021-07.json",
-      "eventCount": 167,
+      "eventCount": 171,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 164,
-        "pull_request": 3
+        "pull_request": 3,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 167
@@ -900,14 +929,15 @@
     {
       "key": "2021-06",
       "file": "2021-06.json",
-      "eventCount": 71,
+      "eventCount": 72,
       "repos": [
         "Simple-XX/OSPP",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 64,
-        "pull_request": 7
+        "pull_request": 7,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/OSPP": 1,
@@ -917,7 +947,7 @@
     {
       "key": "2021-05",
       "file": "2021-05.json",
-      "eventCount": 38,
+      "eventCount": 42,
       "repos": [
         "Alinshans/MyTinySTL",
         "HUST-OS/xv6-k210",
@@ -927,7 +957,8 @@
       "breakdown": {
         "issue_comment": 4,
         "commit": 33,
-        "issue": 1
+        "issue": 1,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "HUST-OS/xv6-k210": 4,
@@ -939,14 +970,15 @@
     {
       "key": "2021-04",
       "file": "2021-04.json",
-      "eventCount": 188,
+      "eventCount": 192,
       "repos": [
         "Simple-XX/OSPP",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 173,
-        "pull_request": 15
+        "pull_request": 15,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 185,
@@ -972,7 +1004,7 @@
     {
       "key": "2021-02",
       "file": "2021-02.json",
-      "eventCount": 52,
+      "eventCount": 53,
       "repos": [
         "MRNIU/libcxxrt",
         "Simple-XX/SimpleKernel"
@@ -980,7 +1012,8 @@
       "breakdown": {
         "issue_comment": 1,
         "commit": 41,
-        "pull_request": 10
+        "pull_request": 10,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/libcxxrt": 1,
@@ -990,13 +1023,14 @@
     {
       "key": "2021-01",
       "file": "2021-01.json",
-      "eventCount": 49,
+      "eventCount": 53,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 46,
-        "issue_comment": 3
+        "issue_comment": 3,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 49
@@ -1005,14 +1039,15 @@
     {
       "key": "2020-12",
       "file": "2020-12.json",
-      "eventCount": 23,
+      "eventCount": 25,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "pull_request": 7,
         "commit": 15,
-        "issue_comment": 1
+        "issue_comment": 1,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 23
@@ -1021,7 +1056,7 @@
     {
       "key": "2020-11",
       "file": "2020-11.json",
-      "eventCount": 16,
+      "eventCount": 18,
       "repos": [
         "Simple-XX/SimpleGameEngine",
         "Simple-XX/SimpleKernel",
@@ -1029,7 +1064,8 @@
       ],
       "breakdown": {
         "commit": 12,
-        "pull_request": 4
+        "pull_request": 4,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 14,
@@ -1040,7 +1076,7 @@
     {
       "key": "2020-10",
       "file": "2020-10.json",
-      "eventCount": 123,
+      "eventCount": 125,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel",
@@ -1048,7 +1084,8 @@
       ],
       "breakdown": {
         "commit": 104,
-        "pull_request": 19
+        "pull_request": 19,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 121,
@@ -1059,14 +1096,15 @@
     {
       "key": "2020-09",
       "file": "2020-09.json",
-      "eventCount": 26,
+      "eventCount": 27,
       "repos": [
         "Simple-XX/SimpleKernel",
         "SynestiaOS/SynestiaOS"
       ],
       "breakdown": {
         "commit": 24,
-        "pull_request": 2
+        "pull_request": 2,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 24,
@@ -1076,7 +1114,7 @@
     {
       "key": "2020-08",
       "file": "2020-08.json",
-      "eventCount": 12,
+      "eventCount": 14,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "Simple-XX/SimpleKernel"
@@ -1084,7 +1122,8 @@
       "breakdown": {
         "issue": 1,
         "commit": 7,
-        "issue_comment": 4
+        "issue_comment": 4,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "MRNIU/FreeRTOS-PortentaH7": 4,
@@ -1094,7 +1133,7 @@
     {
       "key": "2020-07",
       "file": "2020-07.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "MRNIU/MRNIU",
@@ -1104,7 +1143,8 @@
       ],
       "breakdown": {
         "issue_comment": 1,
-        "commit": 10
+        "commit": 10,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleCompiler": 1,
@@ -1117,13 +1157,14 @@
     {
       "key": "2020-06",
       "file": "2020-06.json",
-      "eventCount": 10,
+      "eventCount": 12,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "Simple-XX/OSPP"
       ],
       "breakdown": {
-        "commit": 10
+        "commit": 10,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "MRNIU/FreeRTOS-PortentaH7": 8,
@@ -1133,7 +1174,7 @@
     {
       "key": "2020-05",
       "file": "2020-05.json",
-      "eventCount": 21,
+      "eventCount": 24,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "Simple-XX/OSPP",
@@ -1146,7 +1187,8 @@
         "issue_comment": 10,
         "commit": 7,
         "pull_request": 2,
-        "issue": 2
+        "issue": 2,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "arduino/summer-of-code": 3,
@@ -1160,7 +1202,7 @@
     {
       "key": "2020-04",
       "file": "2020-04.json",
-      "eventCount": 16,
+      "eventCount": 18,
       "repos": [
         "NicoHood/HID",
         "Simple-XX/SimpleKernel",
@@ -1169,7 +1211,8 @@
       "breakdown": {
         "issue_comment": 4,
         "issue": 1,
-        "commit": 11
+        "commit": 11,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "arduino-libraries/Keyboard": 4,
@@ -1180,7 +1223,7 @@
     {
       "key": "2020-03",
       "file": "2020-03.json",
-      "eventCount": 19,
+      "eventCount": 22,
       "repos": [
         "Simple-XX/SimpleKernel",
         "arduino-libraries/Keyboard",
@@ -1191,7 +1234,8 @@
         "issue_comment": 5,
         "pull_request": 1,
         "commit": 12,
-        "issue": 1
+        "issue": 1,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "arduino/summer-of-code": 3,
@@ -1203,7 +1247,7 @@
     {
       "key": "2020-02",
       "file": "2020-02.json",
-      "eventCount": 49,
+      "eventCount": 53,
       "repos": [
         "Simple-XX/SimpleCompiler",
         "Simple-XX/SimpleKernel",
@@ -1213,7 +1257,8 @@
         "commit": 42,
         "pull_request": 5,
         "issue_comment": 1,
-        "issue": 1
+        "issue": 1,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 46,
@@ -1224,14 +1269,15 @@
     {
       "key": "2020-01",
       "file": "2020-01.json",
-      "eventCount": 28,
+      "eventCount": 30,
       "repos": [
         "Simple-XX/SimpleCompiler",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 27,
-        "pull_request": 1
+        "pull_request": 1,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 18,
@@ -1241,7 +1287,7 @@
     {
       "key": "2019-12",
       "file": "2019-12.json",
-      "eventCount": 54,
+      "eventCount": 58,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel"
@@ -1249,7 +1295,8 @@
       "breakdown": {
         "commit": 42,
         "issue_comment": 11,
-        "pull_request": 1
+        "pull_request": 1,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 42,
@@ -1259,14 +1306,15 @@
     {
       "key": "2019-11",
       "file": "2019-11.json",
-      "eventCount": 9,
+      "eventCount": 11,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 7,
-        "issue_comment": 2
+        "issue_comment": 2,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 7,
@@ -1276,7 +1324,7 @@
     {
       "key": "2019-10",
       "file": "2019-10.json",
-      "eventCount": 12,
+      "eventCount": 13,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel"
@@ -1284,7 +1332,8 @@
       "breakdown": {
         "commit": 10,
         "issue_comment": 1,
-        "pull_request": 1
+        "pull_request": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 10,
@@ -1294,12 +1343,13 @@
     {
       "key": "2019-09",
       "file": "2019-09.json",
-      "eventCount": 9,
+      "eventCount": 11,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 9
+        "commit": 9,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 9
@@ -1308,12 +1358,13 @@
     {
       "key": "2019-08",
       "file": "2019-08.json",
-      "eventCount": 2,
+      "eventCount": 3,
       "repos": [
         "alibaba/AliOS-Things"
       ],
       "breakdown": {
-        "pull_request": 2
+        "pull_request": 2,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "alibaba/AliOS-Things": 2
@@ -1336,12 +1387,13 @@
     {
       "key": "2019-06",
       "file": "2019-06.json",
-      "eventCount": 4,
+      "eventCount": 5,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "issue_comment": 4
+        "issue_comment": 4,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 4
@@ -1350,14 +1402,15 @@
     {
       "key": "2019-05",
       "file": "2019-05.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "Simple-XX/SimpleKernel",
         "alibaba/AliOS-Things"
       ],
       "breakdown": {
         "issue_comment": 9,
-        "commit": 2
+        "commit": 2,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "alibaba/AliOS-Things": 9,
@@ -1367,14 +1420,15 @@
     {
       "key": "2019-04",
       "file": "2019-04.json",
-      "eventCount": 6,
+      "eventCount": 8,
       "repos": [
         "996icu/996.ICU",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 4,
-        "pull_request": 2
+        "pull_request": 2,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 4,
@@ -1384,7 +1438,7 @@
     {
       "key": "2019-03",
       "file": "2019-03.json",
-      "eventCount": 21,
+      "eventCount": 24,
       "repos": [
         "EugeneLiu/translationCSAPP",
         "Simple-XX/SimpleKernel",
@@ -1393,7 +1447,8 @@
       "breakdown": {
         "commit": 17,
         "issue_comment": 2,
-        "pull_request": 2
+        "pull_request": 2,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 17,
@@ -1404,7 +1459,7 @@
     {
       "key": "2019-02",
       "file": "2019-02.json",
-      "eventCount": 5,
+      "eventCount": 6,
       "repos": [
         "EugeneLiu/translationCSAPP",
         "Homebrew/homebrew-core",
@@ -1412,7 +1467,8 @@
       ],
       "breakdown": {
         "commit": 2,
-        "issue_comment": 3
+        "issue_comment": 3,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 2,
@@ -1423,7 +1479,7 @@
     {
       "key": "2019-01",
       "file": "2019-01.json",
-      "eventCount": 37,
+      "eventCount": 41,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleCompiler",
@@ -1434,7 +1490,8 @@
         "commit": 29,
         "issue_comment": 2,
         "pull_request": 2,
-        "issue": 4
+        "issue": 4,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 31,
@@ -1446,7 +1503,7 @@
     {
       "key": "2018-12",
       "file": "2018-12.json",
-      "eventCount": 48,
+      "eventCount": 52,
       "repos": [
         "521xueweihan/HelloGitHub",
         "CasterWx/AntzOS",
@@ -1457,7 +1514,8 @@
         "commit": 44,
         "issue_comment": 1,
         "pull_request": 2,
-        "issue": 1
+        "issue": 1,
+        "ai_roast": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 45,
@@ -1469,7 +1527,7 @@
     {
       "key": "2018-11",
       "file": "2018-11.json",
-      "eventCount": 13,
+      "eventCount": 16,
       "repos": [
         "ApolloZhu/Dynamic-Dark-Mode",
         "EugeneLiu/translationCSAPP",
@@ -1480,7 +1538,8 @@
       "breakdown": {
         "issue_comment": 6,
         "pull_request": 5,
-        "commit": 2
+        "commit": 2,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "EugeneLiu/translationCSAPP": 5,
@@ -1493,7 +1552,7 @@
     {
       "key": "2018-10",
       "file": "2018-10.json",
-      "eventCount": 23,
+      "eventCount": 24,
       "repos": [
         "ApolloZhu/Dynamic-Dark-Mode",
         "Homebrew/homebrew-core",
@@ -1504,7 +1563,8 @@
         "issue": 1,
         "commit": 15,
         "pull_request": 2,
-        "issue_comment": 5
+        "issue_comment": 5,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "ApolloZhu/Dynamic-Dark-Mode": 1,
@@ -1516,12 +1576,13 @@
     {
       "key": "2018-09",
       "file": "2018-09.json",
-      "eventCount": 7,
+      "eventCount": 8,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 7
+        "commit": 7,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 7
@@ -1530,13 +1591,14 @@
     {
       "key": "2018-08",
       "file": "2018-08.json",
-      "eventCount": 9,
+      "eventCount": 11,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 7,
-        "issue": 2
+        "issue": 2,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 9
@@ -1545,12 +1607,13 @@
     {
       "key": "2018-07",
       "file": "2018-07.json",
-      "eventCount": 11,
+      "eventCount": 13,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 11
+        "commit": 11,
+        "ai_roast": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 11
@@ -1559,7 +1622,7 @@
     {
       "key": "2018-06",
       "file": "2018-06.json",
-      "eventCount": 42,
+      "eventCount": 45,
       "repos": [
         "Simple-XX/SimpleKernel",
         "atom/atom"
@@ -1568,7 +1631,8 @@
         "issue_comment": 3,
         "issue": 4,
         "commit": 30,
-        "pull_request": 5
+        "pull_request": 5,
+        "ai_roast": 3
       },
       "repoBreakdown": {
         "atom/atom": 3,
@@ -1578,12 +1642,13 @@
     {
       "key": "2018-05",
       "file": "2018-05.json",
-      "eventCount": 12,
+      "eventCount": 13,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 12
+        "commit": 12,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 12
@@ -1609,7 +1674,7 @@
     {
       "key": "2018-03",
       "file": "2018-03.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "Simple-XX/SimpleKernel",
         "TeamStuQ/skill-map",
@@ -1621,7 +1686,8 @@
         "issue_comment": 4,
         "pull_request": 1,
         "commit": 5,
-        "issue": 1
+        "issue": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "haiku/website": 2,
@@ -1634,7 +1700,7 @@
     {
       "key": "2018-02",
       "file": "2018-02.json",
-      "eventCount": 6,
+      "eventCount": 7,
       "repos": [
         "racket/racket",
         "racket/string-constants",
@@ -1643,7 +1709,8 @@
       "breakdown": {
         "issue_comment": 3,
         "issue": 2,
-        "pull_request": 1
+        "pull_request": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "racket/string-constants": 3,
@@ -1668,13 +1735,14 @@
     {
       "key": "2017-11",
       "file": "2017-11.json",
-      "eventCount": 3,
+      "eventCount": 4,
       "repos": [
         "xitu/gold-miner"
       ],
       "breakdown": {
         "issue_comment": 2,
-        "issue": 1
+        "issue": 1,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "xitu/gold-miner": 3
