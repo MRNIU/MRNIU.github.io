@@ -60,7 +60,7 @@ All options in `devlog.config.cjs`:
 | `filters.ignoreShortComments` | `true` | Filter "LGTM", "+1", etc. |
 | `aiRoast.enabled` | `true` | Enable AI commentary |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`, `"encouraging_mentor"`, or `"custom"` |
-| `llm.baseUrl` | `"https://models.inference.ai.azure.com"` | Any OpenAI-compatible endpoint (default: GitHub Models) |
+| `llm.baseUrl` | `"https://models.github.ai/inference"` | Any OpenAI-compatible endpoint (default: GitHub Models) |
 | `llm.model` | `"gpt-4o-mini"` | Model name |
 
 `LLM_BASE_URL` and `LLM_MODEL` env vars override config values.

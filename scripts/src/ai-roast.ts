@@ -163,6 +163,7 @@ export async function generateAIRoasts(
 
   const weeks = groupEventsByWeek(events);
   const roasts: AIRoastEvent[] = [];
+  const RATE_LIMIT_DELAY_MS = 5000; // 5s between requests to stay under 15/min
 
   for (const summary of weeks) {
     const weekRange = `${summary.weekStart} ~ ${summary.weekEnd}`;
@@ -174,6 +175,10 @@ export async function generateAIRoasts(
     if (summary.totalCommits + summary.totalPRs + summary.totalReviews < 3) continue;
 
     try {
+      if (roasts.length > 0) {
+        await new Promise(resolve => setTimeout(resolve, RATE_LIMIT_DELAY_MS));
+      }
+
       const userMessage = buildUserMessage(summary);
       const content = await callLLM(config, systemPrompt, userMessage);
 
@@ -197,7 +202,10 @@ export async function generateAIRoasts(
       }
     } catch (err) {
       console.warn(`  [ai-roast] Failed for ${weekRange}:`, (err as Error).message);
-      // Graceful degradation: skip this week, continue with others
+      // On rate limit, wait and continue; on other errors, skip
+      if ((err as Error).message.includes("429")) {
+        await new Promise(resolve => setTimeout(resolve, 60_000));
+      }
     }
   }
 
