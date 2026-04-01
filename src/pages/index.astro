@@ -252,13 +252,14 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
       switch (event.type) {
         case 'commit': {
           const sha = event.data.sha;
+          const firstLine = event.data.message.split('\n')[0];
           const shaHtml = sha.length >= 12
             ? `<a class="event-sha" href="${ghUrl(event.repo, `/commit/${sha}`)}" target="_blank" rel="noopener">${sha.slice(0, 7)}</a>`
             : `<span class="event-sha">${sha.slice(0, 7)}</span>`;
           return `<div class="event-card" data-semantic="${semantic}">
               <div style="display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;">
                 ${shaHtml}
-                <span>${escapeHtml(event.data.message)}</span>
+                <span>${escapeHtml(firstLine)}</span>
                 <span class="diff-stat"><span class="additions">+${event.data.additions}</span> <span class="deletions">-${event.data.deletions}</span></span>
               </div>
               <div style="display: flex; gap: 10px; margin-top: 2px;">
