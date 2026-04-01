@@ -17,6 +17,97 @@
       }
     },
     {
+      "id": "commit-bde064cbb4c0c1159767bce8c9ea90ede16f6ddc",
+      "type": "commit",
+      "ts": "2026-04-01T01:08:42Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "bde064cbb4c0c1159767bce8c9ea90ede16f6ddc",
+        "message": "feat: rename Top Repositories to Recent, show 8 from last 3 months\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 6,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-6dd99fbadf986f8b6aaf1b987451d4d369102be2",
+      "type": "commit",
+      "ts": "2026-04-01T01:06:37Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "6dd99fbadf986f8b6aaf1b987451d4d369102be2",
+        "message": "fix: remove 21 mock events from 2026-03 data\n\nRemove 17 fake commits (short 8-char SHAs like d9f3e221, a3f7c912)\nand 4 old mock AI roasts (ai_roast-03xx IDs) that were demo data.\nRebuild index.json with correct stats.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 219,
+        "deletions": 432
+      }
+    },
+    {
+      "id": "commit-55aadbbd1105ff64044955cda917db1fc76737f9",
+      "type": "commit",
+      "ts": "2026-04-01T01:03:40Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "55aadbbd1105ff64044955cda917db1fc76737f9",
+        "message": "fix: truncate commit messages to first line in client-side renderer\n\nThe SSR CommitNode.astro correctly used firstLine, but the client-side\nrenderEventCard() displayed the full multi-line message. Now consistent.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-99416b4d4b78c55cc420d1cbee1dc81573d9af32",
+      "type": "commit",
+      "ts": "2026-04-01T01:01:05Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "99416b4d4b78c55cc420d1cbee1dc81573d9af32",
+        "message": "fix: TopRepos uses real per-repo counts, first month loaded dynamically\n\n- Add repoBreakdown field to MonthSummary with actual event counts per repo\n- TopRepos component reads repoBreakdown instead of dividing evenly\n- index.astro loads the latest month dynamically instead of hardcoding 2026-03\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 430,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-8e8d279c9d6f6720309e8d7c525830d0c50d5beb",
+      "type": "commit",
+      "ts": "2026-04-01T00:53:47Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "8e8d279c9d6f6720309e8d7c525830d0c50d5beb",
+        "message": "feat: backfill 139 weekly AI roasts across all historical data\n\nGenerated locally via Claude, covering 2017-11 through 2026-02.\nEach roast references specific patterns from that week's activity.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 2156,
+        "deletions": 71
+      }
+    },
+    {
+      "id": "commit-fd4f2f84dd24c4144266be4e94ccd0a2076dfc01",
+      "type": "commit",
+      "ts": "2026-04-01T00:36:46Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "fd4f2f84dd24c4144266be4e94ccd0a2076dfc01",
+        "message": "fix: add circuit breakers for AI roast API calls\n\n- Stop immediately on 403 (budget/auth exhausted)\n- Wait 60s on 429 then resume\n- Stop after 3 consecutive unknown failures\n- Always delay between requests, not just after success\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 31,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-a07fcbfef534636b2aa44f1ca8972e2448f2136d",
+      "type": "commit",
+      "ts": "2026-04-01T00:32:23Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "a07fcbfef534636b2aa44f1ca8972e2448f2136d",
+        "message": "fix: use correct GitHub Models endpoint and add rate limit handling\n\n- Base URL: models.github.ai/inference (not models.inference.ai.azure.com)\n- Model name: openai/gpt-4o-mini (vendor prefix required)\n- Add 5s delay between AI roast requests to stay under 15/min limit\n- On 429, wait 60s before continuing\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 14,
+        "deletions": 6
+      }
+    },
+    {
       "id": "commit-1ce1cbb0d2ed33209e36fad4c02cad6002183da7",
       "type": "commit",
       "ts": "2026-04-01T00:29:06Z",
