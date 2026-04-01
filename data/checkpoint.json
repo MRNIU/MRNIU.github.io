@@ -1,5 +1,5 @@
 {
-  "lastFetchedAt": "2026-03-31T23:50:29.040Z",
+  "lastFetchedAt": "2026-04-01T00:08:41.597Z",
   "backfill": {
     "completed": false,
     "pullRequests": {
@@ -15,7 +15,7 @@
       "done": true
     },
     "reviews": {
-      "currentYear": 2024,
+      "currentYear": 2023,
       "pageCursor": null,
       "done": false
     },
