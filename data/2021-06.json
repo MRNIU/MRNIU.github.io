@@ -923,6 +923,21 @@
         "additions": 75,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2021-05-31",
+      "type": "ai_roast",
+      "ts": "2021-06-06T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-31 ~ 2021-06-06",
+        "content": "32个commit，7个PR全merge了——从intr到lib到heap到pmm到printf，这周简直是SimpleKernel的\"清仓大甩卖\"，积压了多少feature branch一口气全合了。\"pref(PMM): instead static with extren\"里extern都拼错了，但至少代码能跑。",
+        "stats": {
+          "totalCommits": 32,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

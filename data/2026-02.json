@@ -157,6 +157,21 @@
         "additions": 28,
         "deletions": 1
       }
+    },
+    {
+      "id": "ai-roast-2026-02-02",
+      "type": "ai_roast",
+      "ts": "2026-02-08T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-02-02 ~ 2026-02-08",
+        "content": "Two commits on FreeRTOS-PortentaH7 — one fix removing a static lib and one feat adding a new method for CalleeSavedContext. A real-time operating system port with two commits a week has the same energy as training for a marathon by walking to the fridge. At least the commit messages are actually descriptive for once, so personal growth is happening.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        }
+      }
     }
   ]
 }

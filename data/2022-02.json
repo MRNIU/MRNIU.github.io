@@ -65,6 +65,36 @@
         "additions": 36,
         "deletions": 4
       }
+    },
+    {
+      "id": "ai-roast-2022-01-31",
+      "type": "ai_roast",
+      "ts": "2022-02-06T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-31 ~ 2022-02-06",
+        "content": "4 commits — a personal record for restraint! \"comment(intr): update\" is back, your most loyal commit message, appearing like clockwork every few weeks. At least \"feat(intr): pass arg to intr handler\" tells me something actually happened, even if the other three messages are aggressively vague.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-02-14",
+      "type": "ai_roast",
+      "ts": "2022-02-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-02-14 ~ 2022-02-20",
+        "content": "5 commits on Valentine's Day week, all dedicated to your one true love: SimpleKernel's interrupt handler. \"fix(intr_s): fix sp value\" — fixing the fix, a romance as old as time. Spending Valentine's week adjusting stack pointers is either deeply dedicated or deeply concerning.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

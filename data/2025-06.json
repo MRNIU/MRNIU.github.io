@@ -376,6 +376,21 @@
         "additions": 338,
         "deletions": 2294
       }
+    },
+    {
+      "id": "ai-roast-2025-06-16",
+      "type": "ai_roast",
+      "ts": "2025-06-22T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-06-16 ~ 2025-06-22",
+        "content": "26 commits on the Factorio mod: 8 just say \"fix\" and 7 say \"refactor: clean code\" — you wrote 15 commits with essentially two unique messages between them. This is what happens when you let your commit history double as a meditation mantra. The one PR you opened was presumably titled \"fix and clean things, trust me.\"",
+        "stats": {
+          "totalCommits": 26,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
+      }
     }
   ]
 }

@@ -675,6 +675,21 @@
         "additions": 402,
         "deletions": 585
       }
+    },
+    {
+      "id": "ai-roast-2021-02-01",
+      "type": "ai_roast",
+      "ts": "2021-02-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-02-01 ~ 2021-02-07",
+        "content": "41 commits, 10 PRs, and commit messages including \"dovs\", \"docs\", \"pref\", \"update\", and \"re init\" — did you fall asleep on the keyboard halfway through? Half your commits are merges and single-word messages with no context. \"dovs\" is my personal favorite: not quite docs, not quite anything.",
+        "stats": {
+          "totalCommits": 41,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

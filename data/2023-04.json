@@ -1317,6 +1317,66 @@
         "additions": 235,
         "deletions": 58
       }
+    },
+    {
+      "id": "ai-roast-2023-03-27",
+      "type": "ai_roast",
+      "ts": "2023-04-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-03-27 ~ 2023-04-02",
+        "content": "29 commits and the dominant verb is \"merge\" — you're not developing, you're playing git Tetris trying to fit pieces back together after a 4-month hiatus. Three \"style(*): update\" commits suggest the code looked ugly enough to need cosmetic surgery before you could bear to work on it again. Welcome back; the kernel didn't miss you but clearly you missed it.",
+        "stats": {
+          "totalCommits": 29,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2023-04-03",
+      "type": "ai_roast",
+      "ts": "2023-04-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-04-03 ~ 2023-04-09",
+        "content": "55 commits — the merge marathon continues with another week of shoving subsystems together like IKEA furniture without the manual. Five consecutive \"perf(boot): update\" commits prove that boot performance improves one vague commit at a time. You went from merge(printf) to merge(heap) to merge(vmm) — basically reassembling the entire kernel commit by commit, which is an interesting alternative to just using branches.",
+        "stats": {
+          "totalCommits": 55,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2023-04-10",
+      "type": "ai_roast",
+      "ts": "2023-04-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-04-10 ~ 2023-04-16",
+        "content": "15 commits, 18 PRs — more PRs than commits is an achievement that defies the laws of git. Four identical \"perf(build): not support bochs any more\" commits: bochs died four times this week, each death more dramatic than the last. The Chinese commit \"更新要求\" mixed with English ones suggests a bilingual developer who can't decide which language to be vague in.",
+        "stats": {
+          "totalCommits": 15,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2023-04-24",
+      "type": "ai_roast",
+      "ts": "2023-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-04-24 ~ 2023-04-30",
+        "content": "5 commits split between a Factorio mod and kernel docs — the duality of man: one moment you're optimizing interrupt handlers, the next you're optimizing factory throughput. \"refactor(time): time done\" is the most ominously philosophical commit message I've ever seen. Starting yet another repo (nzh_factorio_mod) because SimpleKernel, SimpleCompiler, SimpleGameEngine, and a resume weren't enough unfinished projects.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
+      }
     }
   ]
 }

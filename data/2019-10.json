@@ -155,6 +155,21 @@
         "additions": 1724,
         "deletions": 1450
       }
+    },
+    {
+      "id": "ai-roast-2019-10-21",
+      "type": "ai_roast",
+      "ts": "2019-10-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-10-21 ~ 2019-10-27",
+        "content": "Ten commits and you wrote \"multiboot2 nit support x86_64, I should separated kernel.kernek\" — discovering architectural flaws mid-commit-message is a bold strategy. Between \"Improve makefile\" and \"improve makefile\" I see capitalization is the only thing you refactored. \"Preliminary completion of XXX support\" sounds like a placeholder you forgot to fill in.",
+        "stats": {
+          "totalCommits": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

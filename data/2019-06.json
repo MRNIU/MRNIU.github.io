@@ -48,6 +48,21 @@
         "issueTitle": "运行不起来啊",
         "body": "请问可以提供详细的运行环境吗"
       }
+    },
+    {
+      "id": "ai-roast-2019-05-27",
+      "type": "ai_roast",
+      "ts": "2019-06-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-05-27 ~ 2019-06-02",
+        "content": "Zero commits, zero PRs, but 9 comments on AliOS-Things — you've perfected the art of being a backseat driver in open source. All talk, no code. Somewhere a JIRA ticket is weeping.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "alibaba/AliOS-Things"
+        }
+      }
     }
   ]
 }

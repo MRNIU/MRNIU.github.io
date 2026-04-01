@@ -479,6 +479,66 @@
         "state": "closed",
         "body": "## 项目推荐\r\n- 项目名称：\r\nSimpleKernel\r\n- 项目地址：\r\nhttps://github.com/MRNIU/SimpleKernel\r\n- 项目描述：\r\n用于学习操作系统内核的项目。\r\n这里有实现一个内核过程中，各个阶段的源码，你可以从自己感兴趣的地方开始。\r\n目前已经完成了启动、gdt、idt 的初始化，系统中断（isr）以及键盘输入。\r\n\r\n项目中需要了解的知识我会整理成文档放到一块，免去了到处找资料的麻烦，参考项目我也有列出，你可以对比不同内核的实现思路有什么不一样。\r\n"
       }
+    },
+    {
+      "id": "ai-roast-2018-12-31",
+      "type": "ai_roast",
+      "ts": "2019-01-06T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-31 ~ 2019-01-06",
+        "content": "2 commits to ring in the new year: \"Still wirking on multiboot2... Maybe I have a stuck here\" and \"uodate.\" You can't spell \"working\" or \"update\" but you're writing an OS kernel — priorities are clearly in order.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-01-07",
+      "type": "ai_roast",
+      "ts": "2019-01-13T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-01-07 ~ 2019-01-13",
+        "content": "11 commits, 3 issues opened, and you're simultaneously working on kernel debug, linked lists in C, and multiboot2 — pick a lane! The same commit message \"Working on debug by multiboot2: Show function call stack\" appears twice, because apparently copy-pasting extends to your git workflow too.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-01-14",
+      "type": "ai_roast",
+      "ts": "2019-01-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-01-14 ~ 2019-01-20",
+        "content": "\"Update .travis.yml\" three times in a row — the CI config is getting more attention than the actual kernel. \"It is confused to get elf symbol from grub2\" — I think you mean YOU are confused, but at this point the code probably is too.",
+        "stats": {
+          "totalCommits": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-01-21",
+      "type": "ai_roast",
+      "ts": "2019-01-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-01-21 ~ 2019-01-27",
+        "content": "从SimpleKernel跳到SimpleCompiler，一周之内完成了\"王垠的解释器\"——你是在集邮还是在做项目？内存管理还没搞定就去写编译器了，经典程序员ADHD。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        }
+      }
     }
   ]
 }

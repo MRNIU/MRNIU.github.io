@@ -143,6 +143,36 @@
         "additions": 3,
         "deletions": 2
       }
+    },
+    {
+      "id": "ai-roast-2018-06-25",
+      "type": "ai_roast",
+      "ts": "2018-07-01T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-06-25 ~ 2018-07-01",
+        "content": "Zero commits, but you found time to file an issue on atom/atom. When your own kernel has unfixed interrupts and messy code, naturally the priority is to go complain about someone else's text editor.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "atom/atom"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-07-16",
+      "type": "ai_roast",
+      "ts": "2018-07-22T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-07-16 ~ 2018-07-22",
+        "content": "\"顺利显示内存情况，不过没有验证准确性\"——Schrödinger的内存管理：既显示了又没显示。9次提交全在debug相关功能上打转，\"未完成\"出现的频率比你的函数返回值还高。",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

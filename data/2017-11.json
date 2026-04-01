@@ -37,6 +37,21 @@
         "state": "closed",
         "body": "- 公司/学校：西安石油大学\r\n- 工作内容/专业：计算机科学，主要是C/C++,操作系统方面\r\n- 常浏览的国外网站：eBay;Stack Overflow;GitHub;WiKi;还有经常上英文Google算嘛\r\n- 英语水平：专业书籍读懂没问题\r\n- 有无翻译经验：并没有\r\n- 个人博客：https://mrniu.github.io\r\n- 个人介绍：正在着手写简单的OS。如果可以，我想从简单的OS类文章开始。\r\n"
       }
+    },
+    {
+      "id": "ai-roast-2017-11-13",
+      "type": "ai_roast",
+      "ts": "2017-11-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2017-11-13 ~ 2017-11-19",
+        "content": "Zero commits, one issue, two comments — you basically showed up to someone else's repo (xitu/gold-miner), looked around, said \"nice place,\" and left. This is the GitHub equivalent of window shopping.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "xitu/gold-miner"
+        }
+      }
     }
   ]
 }

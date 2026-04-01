@@ -286,6 +286,66 @@
         "additions": 570,
         "deletions": 112
       }
+    },
+    {
+      "id": "ai-roast-2021-07-26",
+      "type": "ai_roast",
+      "ts": "2021-08-01T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-07-26 ~ 2021-08-01",
+        "content": "37 commits including both \"feat(heap): show allocator_used_count\" and \"fix(heap): show allocator_used_count\" — the classic \"ship it then immediately regret it\" workflow. Two reverts in one week means your git history reads like a choose-your-own-adventure book where every choice is wrong. At least you're branching out to RISC-V, because clearly one architecture wasn't enough to have bugs in.",
+        "stats": {
+          "totalCommits": 37,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-08-02",
+      "type": "ai_roast",
+      "ts": "2021-08-08T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-08-02 ~ 2021-08-08",
+        "content": "Three separate commits saying \"pref(*): change printf color\" — apparently getting the terminal color right is a three-attempt endeavor. Also \"preff(dtb)\" with two f's: when you're committing so fast you can't even spell your own commit convention. Down from 70 to 11 commits though, so either you're learning restraint or just ran out of things to break.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-08-09",
+      "type": "ai_roast",
+      "ts": "2021-08-15T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-08-09 ~ 2021-08-15",
+        "content": "3 commits and one of them is literally just \"update\" — the commit message equivalent of shrugging. You jumped from SimpleKernel to SimpleCompiler, which is like saying \"I got bored breaking one project so let me start fresh with another.\" At least the refactor to cmake shows some sophistication between the existential void of non-messages.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-08-23",
+      "type": "ai_roast",
+      "ts": "2021-08-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-08-23 ~ 2021-08-29",
+        "content": "5 commits, two of which are identical \"pref(resource): update cout\" — copy-paste committing is a bold strategy. \"pref(gdt): prinrf->info\" tells me you fix typos in code but not in commit messages, which is a fascinating set of priorities. A quiet week by your standards; the kernel must be relieved.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

@@ -134,6 +134,21 @@
         "additions": 141,
         "deletions": 132
       }
+    },
+    {
+      "id": "ai-roast-2019-05-20",
+      "type": "ai_roast",
+      "ts": "2019-05-26T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-05-20 ~ 2019-05-26",
+        "content": "One commit with the message \"update\" and 4 comments on alibaba/AliOS-Things — so you mass-commented on Alibaba's code while contributing the absolute minimum yourself. The ratio of opinions to actual work is truly inspiring.",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "alibaba/AliOS-Things"
+        }
+      }
     }
   ]
 }

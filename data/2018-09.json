@@ -91,6 +91,21 @@
         "additions": 81,
         "deletions": 152
       }
+    },
+    {
+      "id": "ai-roast-2018-09-24",
+      "type": "ai_roast",
+      "ts": "2018-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-09-24 ~ 2018-09-30",
+        "content": "\"脑壳疼\"作为commit message的一部分，是对GP错误调试过程最真实的描述。把IRQ1错写成IRQ0——恭喜你用一个字符的typo浪费了自己不知道多少小时。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

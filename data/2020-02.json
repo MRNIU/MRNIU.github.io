@@ -636,6 +636,66 @@
         "state": "closed",
         "body": "你好：\r\n我正在尝试在 mac 上跑 XBook，但是在编译过程中遇到了一个小问题，以下是错误报告：\r\n```\r\n/Library/Developer/CommandLineTools/usr/bin/make -C arch/x86/ -f /***/XBook/src/Makefile.build\r\n/Library/Developer/CommandLineTools/usr/bin/make -C boot -f /***/XBook/src/Makefile.build\r\nmake[2]: Nothing to be done for `__build'.\r\n/Library/Developer/CommandLineTools/usr/bin/make -C kernel -f /***/XBook/src/Makefile.build\r\n[CC] arch/x86/kernel/arch.o\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:13:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %ebp\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:17:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %ebx\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:29:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %eax\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:30:2: error: instruction requires: Not 64-bit mode\r\n        call    *%edx\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:43:2: error: instruction requires: Not 64-bit mode\r\n        pushl   %eax\r\n        ^\r\n/var/folders/mm/6t0gjqhs5_v9pkxwlpfvl0tm0000gn/T//ccGgr1xu.s:44:2: error: instruction requires: Not 64-bit mode\r\n        call    *%edx\r\n        ^\r\nmake[2]: *** [arch.o] Error 1\r\nmake[1]: *** [kernel] Error 2\r\nmake: *** [arch/x86/] Error 2\r\n```\r\n\r\n我对原代码做出了如下修改：\r\n```\r\ndiff --git a/src/makefile b/src/makefile\r\nindex a4d771f..f5a3eeb 100644\r\n--- a/src/makefile\r\n+++ b/src/makefile\r\n@@ -14,10 +14,17 @@ all:\r\n BOCHS_DIR = ../bochs/\r\n \r\n # ar 是库打包工具\r\n-AR \t= ar\r\n+ifneq ($(HOSTOS),macos)\r\n+\tAR \t\t\t= gcc-ar-9\r\n+\tCC\t\t\t= gcc-9\r\n+\tLD \t\t\t= ld-9\r\n+else\r\n+\tAR \t\t\t= ar\r\n+\tCC\t\t\t= gcc\r\n+\tLD \t\t\t= ld\r\n+endif\r\n+\r\n NASM \t\t= nasm\r\n-CC\t\t\t= gcc\r\n-LD \t\t\t= ld\r\n DD \t\t\t= dd\r\n QEMU \t\t= qemu-system-i386\r\n BOCHS \t\t= bochs\r\n\r\n #----dir----\r\n #arch\r\n@@ -75,7 +82,7 @@ TOPDIR\t:= $(CURDIR)\r\n ifeq ($(OS),Windows_NT)\r\n \tHOSTOS\t\t:= windows\r\n else\r\n-\tifeq ($(shell uname),Darwin)\r\n+\tifeq ($(shell uname),\"Darwin\")\r\n \t\tHOSTOS\t\t:= macos\r\n \telse\r\n \t\tifeq ($(shell uname),Linux)\r\n```\r\n\r\n这看起来是目标文件格式不一致导致的，请问你有什么解决思路吗(当然能顺手解决掉更好)\r\n\r\n谢谢！"
       }
+    },
+    {
+      "id": "ai-roast-2020-01-27",
+      "type": "ai_roast",
+      "ts": "2020-02-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-01-27 ~ 2020-02-02",
+        "content": "You jumped from SimpleKernel to SimpleCompiler — because why finish one ambitious project when you can start another? Thirteen commits including \"Lexer all most there\" and \"Rewrite into c++\" in the same week tells me you rewrote the whole thing before the first version even worked. \"Delete old code\" on day one of a new project is a bold speedrun.",
+        "stats": {
+          "totalCommits": 13,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-02-03",
+      "type": "ai_roast",
+      "ts": "2020-02-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-02-03 ~ 2020-02-09",
+        "content": "Nineteen commits and five PRs across SimpleKernel — you merged four of your own PRs in one week, which is just talking to yourself with extra steps. \"ff management almost there\" is a commit message so truncated it could mean anything. The slab allocator bug description got cut off mid-sentence, much like your attention span.",
+        "stats": {
+          "totalCommits": 19,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-02-10",
+      "type": "ai_roast",
+      "ts": "2020-02-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-02-10 ~ 2020-02-16",
+        "content": "\"Barely run\" is the most honest commit message I've ever seen — finally, truth in version control. Fourteen commits including \"fix bug\" and \"Bug fixing\" as separate entries, because apparently one round of bug fixing wasn't enough. Four \"Update\" commits to maintain your brand consistency.",
+        "stats": {
+          "totalCommits": 14,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-02-17",
+      "type": "ai_roast",
+      "ts": "2020-02-23T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-02-17 ~ 2020-02-23",
+        "content": "Five commits: three \"Update\"s, one devlog update, and \"Recover the previous kernel_stack\" — so you spent the week undoing last week's work. The kernel_stack had to be recovered like a deleted file from the recycle bin. Progress!",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

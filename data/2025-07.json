@@ -392,6 +392,36 @@
         "additions": 10,
         "deletions": 11
       }
+    },
+    {
+      "id": "ai-roast-2025-07-14",
+      "type": "ai_roast",
+      "ts": "2025-07-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-07-14 ~ 2025-07-20",
+        "content": "Three commits across two repos — one \"update\" on your resume, one \"Initial commit\" on something new, and a lone C++ optimization on cpu_io. The resume \"update\" is back, which means either job hunting season has begun or you just remembered you have a GitHub profile. Starting a new repo while your other 5 projects collect dust is peak developer ADHD.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/resume"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2025-07-21",
+      "type": "ai_roast",
+      "ts": "2025-07-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-07-21 ~ 2025-07-27",
+        "content": "1 commit saying \"update\" but 14 PRs on zephyrproject-rtos/zephyr — either you've become a prolific open-source contributor overnight or you're spam-opening PRs on a major RTOS project. 11 comments and 14 PRs with a single commit is the ratio of someone who talks a LOT in code review but barely writes code themselves.",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "zephyrproject-rtos/zephyr"
+        }
+      }
     }
   ]
 }

@@ -362,6 +362,21 @@
         "state": "closed",
         "body": "在不同的 host 上编译不同的 target，支持以下组合\n\n|      host     | target  | gcc | clang |\n|:-------------:|:-------:|:-------------:|:-------------:|\n| x86_64-osx    | x86_64  | x86_64_elf-gcc | TEST |\n| x86_64-osx    | aarch64 | aarch64-unknown-linux-gnu-gcc | TEST |\n| x86_64-osx    | riscv64 | riscv64-unknown-elf-gcc | TEST |\n| aarch64-osx   | x86_64  | TODO | TODO |\n| aarch64-osx   | aarch64 | TODO | TODO |\n| aarch64-osx   | riscv64 | TODO | TODO |\n| x86_64-ubuntu | x86_64  | gcc | TEST |\n| x86_64-ubuntu | aarch64 | aarch64-linux-gnu-gcc | TEST |\n| x86_64-ubuntu | riscv64 | riscv64-linux-gnu-gcc | TEST |\n| aarch64-ubuntu | x86_64  | TODO | TEST |\n| aarch64-ubuntu | aarch64 | TODO | TEST |\n| aarch64-ubuntu | riscv64 | TODO | TEST |\n| riscv64-ubuntu | x86_64  | TODO | TODO |\n| riscv64-ubuntu | aarch64 | TODO | TODO |\n| riscv64-ubuntu | riscv64 | TODO | TODO |\n\nhost:    编译平台\ntarget: 内核要运行的平台\ngcc:     使用的 gcc 名称\nclang:  使用的 clang 参数\nTODO: 暂无测试条件\nTEST:   需要进一步验证。"
       }
+    },
+    {
+      "id": "ai-roast-2023-07-10",
+      "type": "ai_roast",
+      "ts": "2023-07-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-07-10 ~ 2023-07-16",
+        "content": "26 issues opened with zero commits — you've essentially spent the week writing yourself a very detailed TODO list while doing absolutely none of the TODOs. This is the GitHub equivalent of rearranging your desk instead of studying for the exam. SimpleKernel's issue tracker is now your personal journal.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
+      }
     }
   ]
 }

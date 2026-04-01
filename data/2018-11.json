@@ -163,6 +163,51 @@
         "issueTitle": "[Simplified Chinese Translation] toggle 的翻译",
         "body": "我觉得还是明确一些比较好。\r\n\r\n比如 `切换至深色模式` `切换至浅色模式`，或者干脆用 `深色模式` `浅色模式`，这样不会引起误会，你觉得咋样？\r\n\r\n另外这个小插件挺好用的，非常感谢。"
       }
+    },
+    {
+      "id": "ai-roast-2018-10-29",
+      "type": "ai_roast",
+      "ts": "2018-11-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-10-29 ~ 2018-11-04",
+        "content": "3 commits across Homebrew and your own repos, all variations of \"init\" and \"update\" — you've now achieved a perfect record of never writing a meaningful commit message. Bonus points for branching out to homebrew-core though, ambition is nice.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Homebrew/homebrew-core"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-11-12",
+      "type": "ai_roast",
+      "ts": "2018-11-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-11-12 ~ 2018-11-18",
+        "content": "2 commits, 2 PRs to Homebrew — \"change CFLAGS\" and \"update cross compiler install method\" are actually descriptive commit messages, which is unprecedented for you. I'm genuinely proud; the bar was underground and you still managed to clear it.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Homebrew/homebrew-core"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-11-19",
+      "type": "ai_roast",
+      "ts": "2018-11-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-11-19 ~ 2018-11-25",
+        "content": "Zero commits but 3 PRs to a CSAPP translation project — so you took a week off from your kernel to translate a textbook? I respect the pivot from \"I don't understand interrupts\" to \"let me help translate the book that explains interrupts.\"",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "EugeneLiu/translationCSAPP"
+        }
+      }
     }
   ]
 }

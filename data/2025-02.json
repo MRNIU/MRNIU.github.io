@@ -39,6 +39,21 @@
         "additions": 7,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2025-02-03",
+      "type": "ai_roast",
+      "ts": "2025-02-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-02-03 ~ 2025-02-09",
+        "content": "Three commits, two of which are identical \"feat: add ICC_IGRPEN1_EL1Info\" — because one ICC_IGRPEN1_EL1Info is never enough, you need a backup. You've been adding ARM registers one per week for a month now; at this deceleration curve you'll finish the ISA sometime around 2030.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/cpu_io"
+        }
+      }
     }
   ]
 }

@@ -89,6 +89,21 @@
         "state": "open",
         "body": "Hi,\r\n\r\nI am looking into how to add RISC-V CMake support for libunwind.\r\n\r\nhttps://github.com/libunwind/libunwind/blob/master/CMakeLists.txt\r\nhttps://github.com/libunwind/libunwind/blob/master/src/CMakeLists.txt\r\n\r\nExcept for these two files, are there any other files that need to be modified?\r\n\r\nThank you!"
       }
+    },
+    {
+      "id": "ai-roast-2024-06-10",
+      "type": "ai_roast",
+      "ts": "2024-06-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-06-10 ~ 2024-06-16",
+        "content": "Zero commits, one PR, two issues, and two comments on SimpleKernel — you're keeping the project alive in the same way leaving a nightlight on keeps a house \"occupied.\" This is your periodic quarterly check-in where you touch the kernel just enough to remember it exists.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

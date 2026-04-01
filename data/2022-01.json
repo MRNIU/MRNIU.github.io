@@ -1480,6 +1480,81 @@
         "additions": 127,
         "deletions": 41
       }
+    },
+    {
+      "id": "ai-roast-2021-12-27",
+      "type": "ai_roast",
+      "ts": "2022-01-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-12-27 ~ 2022-01-02",
+        "content": "4 commits to ring in the new year, including \"comment(intr): update\" — starting 2022 the same way you ended 2021, by updating comments nobody reads. \"fix(CPU, VMM): GET_PGD\" is doing a lot of heavy lifting in that commit message; I'm sure the fix was as descriptive as the message. Your first comment on an issue this period though — social skills loading at 1%.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-01-03",
+      "type": "ai_roast",
+      "ts": "2022-01-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-03 ~ 2022-01-09",
+        "content": "19 commits and 4 consecutive \"fix(CI): update\" — you're not fixing CI, you're having a conversation with it one commit at a time. \"build(cmake): audo gen\" — autocorrect can't save you if you don't use it, but at least cmake is auto-generating something even if your spelling isn't. The word \"update\" appears in almost every message; at this point it's less a commit message and more a mantra.",
+        "stats": {
+          "totalCommits": 19,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-01-10",
+      "type": "ai_roast",
+      "ts": "2022-01-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-10 ~ 2022-01-16",
+        "content": "9 out of 16 commits are \"build(cmake): update\" — at this point cmake owns you, not the other way around. You opened 9 PRs this week which is either very productive or very concerning depending on whether any of them had more than one line changed. Three commits just to set up CLion: the IDE is literally harder to configure than the kernel you're writing.",
+        "stats": {
+          "totalCommits": 16,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-01-17",
+      "type": "ai_roast",
+      "ts": "2022-01-23T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-17 ~ 2022-01-23",
+        "content": "48 commits including \"bug(vmm): flush\" — love the honesty of using \"bug\" as a commit type, most people at least pretend they're fixing something. \"fix(heap): find bug on unmmap\" followed by \"fix(HEAP): update\" is the classic two-stage grief: discovery and denial. You replaced malloc with kmalloc and free with kfree in separate commits, which means for a brief moment your kernel was half-userspace, half-kernel — Schrödinger's allocator.",
+        "stats": {
+          "totalCommits": 48,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-01-24",
+      "type": "ai_roast",
+      "ts": "2022-01-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-24 ~ 2022-01-30",
+        "content": "12 commits and 5 of them are \"pref(intr): update context\" — the interrupt context has been updated more times than most people update their resumes. \"pref(test): finit\" appears twice, so you finished finishing. The word \"context\" in your commits is ironic because these messages provide absolutely none.",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

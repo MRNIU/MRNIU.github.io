@@ -364,6 +364,36 @@
         "additions": 45,
         "deletions": 5
       }
+    },
+    {
+      "id": "ai-roast-2019-12-30",
+      "type": "ai_roast",
+      "ts": "2020-01-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-12-30 ~ 2020-01-05",
+        "content": "\"Hello 2020!\" as a commit message — nothing like ringing in the new year with a commit that tells future-you absolutely nothing about what changed. Four commits, two of which are \"update\", so at least you're consistent across calendar years.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-01-13",
+      "type": "ai_roast",
+      "ts": "2020-01-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-01-13 ~ 2020-01-19",
+        "content": "Ten commits, four \"Update devlog\" entries — you're spending more time documenting the journey than actually making progress on it. \"vmm_init finished!\" with an exclamation mark suggests this was a surprise to you too. \"Update macor in vmm\" — macro, it's called a macro.",
+        "stats": {
+          "totalCommits": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

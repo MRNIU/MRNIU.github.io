@@ -36,6 +36,21 @@
         "issueTitle": "IDE",
         "body": "使用 cmakepreset 解决"
       }
+    },
+    {
+      "id": "ai-roast-2023-08-14",
+      "type": "ai_roast",
+      "ts": "2023-08-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-08-14 ~ 2023-08-20",
+        "content": "Three comments, zero everything else — you showed up to the repo like someone who goes to the gym just to use the water fountain. At this rate SimpleKernel is going to need a new maintainer or at least a wellness check on the current one.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
+      }
     }
   ]
 }

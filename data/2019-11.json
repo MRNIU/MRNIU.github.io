@@ -115,6 +115,36 @@
         "issueTitle": "x86_64-elf cross-toolchain",
         "body": "Is there anyone here?"
       }
+    },
+    {
+      "id": "ai-roast-2019-11-04",
+      "type": "ai_roast",
+      "ts": "2019-11-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-11-04 ~ 2019-11-10",
+        "content": "One commit to SimpleKernel but 2 comments on Homebrew — so you took a week off from writing your OS to argue about package management. Priorities: kernel initialization can wait, but someone on the internet is wrong about their Homebrew formula.",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "Homebrew/homebrew-core"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-11-11",
+      "type": "ai_roast",
+      "ts": "2019-11-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-11-11 ~ 2019-11-17",
+        "content": "\"Try to paging\", \"Try to paging\" — when your commit history reads like a toddler learning to walk. Six commits and two of them are literally identical messages, which tracks perfectly with the \"fix warnning\" typo energy.",
+        "stats": {
+          "totalCommits": 6,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

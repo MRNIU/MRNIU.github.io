@@ -286,6 +286,36 @@
         "additions": 298,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2022-04-11",
+      "type": "ai_roast",
+      "ts": "2022-04-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-04-11 ~ 2022-04-17",
+        "content": "4 commits on a resume repo: \"Initial commit\", \"init\", \"update\", \"update\" — your resume's git history has more padding than your resume. Two commits that just say \"update\" on a resume repo is peak irony: you can't even describe your own changes, but you want employers to trust you'll document theirs.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/resume"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-04-18",
+      "type": "ai_roast",
+      "ts": "2022-04-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-04-18 ~ 2022-04-24",
+        "content": "9 commits, 9 PRs — a perfect 1:1 ratio that screams \"I open a PR for every single commit.\" Back to SimpleKernel after your brief resume adventure, still updating interrupt handlers and CPU structures like it's a part-time job that never ends. \"(cmake, CI): add tap target\" — even forgot the commit type prefix, the convention is breaking down faster than the kernel.",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

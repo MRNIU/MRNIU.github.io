@@ -1599,6 +1599,36 @@
         "additions": 0,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2020-09-28",
+      "type": "ai_roast",
+      "ts": "2020-10-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-09-28 ~ 2020-10-04",
+        "content": "62个commit，四次\"Delete .DS_Store\"——兄弟，.gitignore了解一下？一边加gitignore一边又提交.DS_Store，这就是传说中的左手加规范右手破规范。从\"small change\"到\"删除多余文件\"，这周的主题基本就是在给上周的自己擦屁股。",
+        "stats": {
+          "totalCommits": 62,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-10-19",
+      "type": "ai_roast",
+      "ts": "2020-10-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-10-19 ~ 2020-10-25",
+        "content": "44个commit，11个PR，三次\"docs(README): update\"——README到底有多难写需要更新三次？commit message里出现了孤零零的\"test\"，没有任何上下文，这种信息量约等于对着深渊喊了一声。好在pmm和vmm都merge了，至少内存管理比commit message管理做得好。",
+        "stats": {
+          "totalCommits": 44,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

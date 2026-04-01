@@ -623,6 +623,66 @@
         "additions": 4,
         "deletions": 4
       }
+    },
+    {
+      "id": "ai-roast-2018-12-03",
+      "type": "ai_roast",
+      "ts": "2018-12-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-03 ~ 2018-12-09",
+        "content": "\"尝试加入C++支持，没有完成\"——写C的内核还没稳定就想上C++，这叫还没学会走就想跑。好在你终于找到了键盘中断GP的原因，虽然那个bug已经困扰了你好几个月。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-12-10",
+      "type": "ai_roast",
+      "ts": "2018-12-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-10 ~ 2018-12-16",
+        "content": "20 commits in one week — your most productive week ever! Unfortunately, 7 of them are just \"Update\" and one literally says \"backspace is not available\" as if git commit messages are a bug tracker. At least you're consistent in your inconsistency.",
+        "stats": {
+          "totalCommits": 20,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-12-17",
+      "type": "ai_roast",
+      "ts": "2018-12-23T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-17 ~ 2018-12-23",
+        "content": "\"Still bugs:\" as a complete commit message is a mood, not a changelog entry. \"iit\" — I assume that was supposed to be \"init\" but even your typos have typos now. 9 commits of trying things and nothing quite working: the multiboot saga continues.",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-12-24",
+      "type": "ai_roast",
+      "ts": "2018-12-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-24 ~ 2018-12-30",
+        "content": "\"If I have enough time, I will finish it\" — committing existential dread to git on Christmas week, bold move. 12 commits wrestling with multiboot2, half saying \"working on\" and the other half saying \"not successful,\" your repo is basically a public therapy journal.",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

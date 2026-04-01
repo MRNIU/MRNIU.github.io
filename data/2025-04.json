@@ -65,6 +65,21 @@
         "additions": 9,
         "deletions": 2
       }
+    },
+    {
+      "id": "ai-roast-2025-04-07",
+      "type": "ai_roast",
+      "ts": "2025-04-13T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-04-07 ~ 2025-04-13",
+        "content": "Four commits, all with the exact same message: \"feat: aarch64 smc psci support\" — at this point just use `--amend` like a normal person instead of committing the same feature four times. Either PSCI support is incredibly hard or your git workflow is \"commit early, commit often, commit identically.\"",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/cpu_io"
+        }
+      }
     }
   ]
 }

@@ -298,6 +298,36 @@
         "state": "merged",
         "body": ""
       }
+    },
+    {
+      "id": "ai-roast-2020-11-30",
+      "type": "ai_roast",
+      "ts": "2020-12-06T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-11-30 ~ 2020-12-06",
+        "content": "A grand total of 2 commits in a week: one README update and one merge PR. At this rate, your annual commit count will fit on a Post-it note. The ratio of merge commits to actual code is giving \"project manager who accidentally has repo access\" vibes.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-12-21",
+      "type": "ai_roast",
+      "ts": "2020-12-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-12-21 ~ 2020-12-27",
+        "content": "5个commit里有一个直接叫\"rewrite\"——重写了什么？整个项目？人生？slab优化、堆管理、pmm测试都在一周里搞，然后还顺手\"暂时移除zone机制\"，这个\"暂时\"我赌它到现在还没加回来。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

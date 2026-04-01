@@ -135,6 +135,21 @@
         "issueTitle": "CI",
         "body": "github ci done"
       }
+    },
+    {
+      "id": "ai-roast-2023-09-04",
+      "type": "ai_roast",
+      "ts": "2023-09-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-09-04 ~ 2023-09-10",
+        "content": "两个 commit，一个是「电力采矿机速度45，满蓝带」，另一个是 \"Initial commit\"——所以你这周的产出是：开了个新仓库，然后又跑去调 Factorio 了。内核开发的优先级显然排在异星工厂的传送带优化之后。",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
+      }
     }
   ]
 }

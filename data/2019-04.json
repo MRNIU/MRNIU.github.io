@@ -78,6 +78,36 @@
         "additions": 50,
         "deletions": 1
       }
+    },
+    {
+      "id": "ai-roast-2019-04-01",
+      "type": "ai_roast",
+      "ts": "2019-04-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-04-01 ~ 2019-04-07",
+        "content": "One commit, two PRs, and both on 996.ICU — so your biggest open-source contribution this week was literally protesting having to work too much. The commit message \"Update LICENSE\" really captures the revolutionary energy. At least your keyboard got a rest.",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "996icu/996.ICU"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-04-22",
+      "type": "ai_roast",
+      "ts": "2019-04-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-04-22 ~ 2019-04-28",
+        "content": "三个 commit，一个叫「修 bug」，一个叫「调整目录」——这描述能力跟内核的虚拟内存一样，初步完成但仍然有问题。虚拟内存放在 0xC0000000，commit message 的信息量放在 0x00000000。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

@@ -89,6 +89,36 @@
         "issueTitle": "Add direct3d shaderc support on linux",
         "body": "It seems that shaderc where not support d3d on linux yet(`SHADERC_CONFIG_HLSL` is false, shaderc.h#L15). Maybe we should take up this issue?"
       }
+    },
+    {
+      "id": "ai-roast-2023-11-27",
+      "type": "ai_roast",
+      "ts": "2023-12-03T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-11-27 ~ 2023-12-03",
+        "content": "Zero commits and one PR to someone else's archived bgfx.cmake repo — you're literally submitting pull requests to dead projects now. Two comments on an archived repository is the open-source equivalent of talking to a wall. At least the wall won't reject your PR... wait, it might.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "bkaradzic/bgfx.cmake-archived"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2023-12-18",
+      "type": "ai_roast",
+      "ts": "2023-12-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-12-18 ~ 2023-12-24",
+        "content": "Four commits on your resume, three of which are just \"update\" — either your career changed dramatically three times in one week or you're using git like a save button in Microsoft Word. The one meaningful commit message is literally a link to someone else's resume template, so even your resume is a fork.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/resume"
+        }
+      }
     }
   ]
 }

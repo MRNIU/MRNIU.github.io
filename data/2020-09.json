@@ -338,6 +338,21 @@
         "additions": 4,
         "deletions": 6
       }
+    },
+    {
+      "id": "ai-roast-2020-09-14",
+      "type": "ai_roast",
+      "ts": "2020-09-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-09-14 ~ 2020-09-20",
+        "content": "Two commits, both saying \"build: try to cmake\" — the word \"try\" in a commit message is basically a cry for help. One PR with two identical attempts at CMake gives off strong \"I'll just push and see if CI passes\" energy.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

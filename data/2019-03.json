@@ -271,6 +271,51 @@
         "additions": 1,
         "deletions": 1
       }
+    },
+    {
+      "id": "ai-roast-2019-02-25",
+      "type": "ai_roast",
+      "ts": "2019-03-03T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-02-25 ~ 2019-03-03",
+        "content": "\"linked list finished, no test yet\" — the four most dangerous words in software: \"it works, trust me.\" 8 commits and one of them is literally just \"fix\" with no context — fix what? Fix how? The world may never know.",
+        "stats": {
+          "totalCommits": 8,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-03-11",
+      "type": "ai_roast",
+      "ts": "2019-03-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-03-11 ~ 2019-03-17",
+        "content": "\"Skip the previous bug\" is not a debugging strategy, it's denial. 5 commits working on vmm, heap, libc, AND multiboot2 all at once — you're writing a kernel the way someone plays whack-a-mole, just swinging at whatever pops up.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-03-25",
+      "type": "ai_roast",
+      "ts": "2019-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-03-25 ~ 2019-03-31",
+        "content": "2 commits: \"update 996 license\" and \"update\" — so instead of actually coding your kernel, you added the anti-996 license? Solidarity with overworked developers is great, but maybe finish the memory management first before worrying about labor rights.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

@@ -91,6 +91,21 @@
         "additions": 92,
         "deletions": 54
       }
+    },
+    {
+      "id": "ai-roast-2024-04-22",
+      "type": "ai_roast",
+      "ts": "2024-04-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-04-22 ~ 2024-04-28",
+        "content": "7 commits and 3 of them are \"fix: upload fw_jump.elf for test\" — because if at first the ELF doesn't upload, try the exact same thing two more times. One commit just says \"add 2024 OSPP\" sandwiched between CI fixes, giving off strong \"I added one feature then spent the rest of the week making it actually build\" energy.",
+        "stats": {
+          "totalCommits": 7,
+          "topRepo": "MRNIU/opensbi_interface"
+        }
+      }
     }
   ]
 }

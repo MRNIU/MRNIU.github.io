@@ -634,6 +634,66 @@
         "issueTitle": "Will this repo update on the base of Rust implementation one day in the future?",
         "body": "@jacklanda \r\nhi jacklanda, As you see our kernel is not complete now, and there is no other plan until we complete its basic functions.\r\nMaybe this repo could help you: [rCore](https://github.com/rcore-os/rCore)"
       }
+    },
+    {
+      "id": "ai-roast-2020-12-28",
+      "type": "ai_roast",
+      "ts": "2021-01-03T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-12-28 ~ 2021-01-03",
+        "content": "\"重命名 ptr_t\"出现了三次，\"addr_t 修改为 void*\"出现了两次——一个类型重命名需要五个commit来完成，这是在写代码还是在玩回合制游戏？6个PR配8个commit，merge commit比实际代码commit还多，真正的merge驱动开发。",
+        "stats": {
+          "totalCommits": 8,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-01-04",
+      "type": "ai_roast",
+      "ts": "2021-01-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-01-04 ~ 2021-01-10",
+        "content": "20 commits with THREE \"Delete boot.s\", THREE \"fix(build): github action error\", and TWO \"fix(case): Case sensitive on osx\" — you deleted the same file three times and fixed the same CI error three times, which means you broke it, fixed it, broke it again, and acted surprised each time. At least \"feat(c++): Now we have c++ support\" landed, so the week wasn't a total loop of git archaeology.",
+        "stats": {
+          "totalCommits": 20,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-01-18",
+      "type": "ai_roast",
+      "ts": "2021-01-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-01-18 ~ 2021-01-24",
+        "content": "22 commits: \"pref(NULL): replace with nullptr\" appears twice and \"pref(firstfit): change type name\" also appears twice — apparently find-and-replace is a multi-commit operation now. You went from removing raspi2 code to adding raspi2 code in the same week, which is the git equivalent of putting your shoes on and then taking them off. \"style(commit): update commit style\" is peak irony given the message quality this week.",
+        "stats": {
+          "totalCommits": 22,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-01-25",
+      "type": "ai_roast",
+      "ts": "2021-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-01-25 ~ 2021-01-31",
+        "content": "3 commits, one of which is just \"refactor\" with zero additional context — the commit message equivalent of shrugging at a code review. \"no global objects now\" is either a major architectural win or you just deleted everything; with only 3 commits this week, I'm leaning toward the latter.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

@@ -481,6 +481,21 @@
         "state": "merged",
         "body": "1. 删除了 clion、vscode 文件夹\r\n2. 重写构建系统\r\n3. 第三方资源管理\r\n4. renderer 独立为库，只负责渲染数据"
       }
+    },
+    {
+      "id": "ai-roast-2023-10-23",
+      "type": "ai_roast",
+      "ts": "2023-10-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-10-23 ~ 2023-10-29",
+        "content": "33 commits on SimpleCompiler and roughly 30 of them are some variation of \"refactor: token rename\" — you renamed tokens so many times I'm starting to think even the tokens don't know what they're called anymore. The ratio of \"refactor\" and \"comment\" commits to actual \"feat\" commits suggests you spent the week reorganizing furniture in a house that has one room.",
+        "stats": {
+          "totalCommits": 33,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        }
+      }
     }
   ]
 }

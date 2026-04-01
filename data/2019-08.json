@@ -26,6 +26,21 @@
         "state": "closed",
         "body": "fix bug\r\n"
       }
+    },
+    {
+      "id": "ai-roast-2019-07-29",
+      "type": "ai_roast",
+      "ts": "2019-08-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-07-29 ~ 2019-08-04",
+        "content": "Three PRs and zero commits — either you're submitting empty PRs or you've discovered how to open pull requests through sheer willpower. The AliOS-Things maintainers must love seeing your name in their notifications.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "alibaba/AliOS-Things"
+        }
+      }
     }
   ]
 }

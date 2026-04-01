@@ -490,6 +490,66 @@
         "additions": 224,
         "deletions": 239
       }
+    },
+    {
+      "id": "ai-roast-2021-04-26",
+      "type": "ai_roast",
+      "ts": "2021-05-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-26 ~ 2021-05-02",
+        "content": "47个commit，其中\"__init_priority__\"出现了六次——你这周基本上就是在跟C++的全局构造顺序打架，而且看起来打了六个回合还没赢。\"pref(IO): change __init_priority__\"出现两次说明第一次改错了，这在init priority领域属于经典递归bug。",
+        "stats": {
+          "totalCommits": 47,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-05-03",
+      "type": "ai_roast",
+      "ts": "2021-05-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-03 ~ 2021-05-09",
+        "content": "15 commits with \"bug(cxxabi): global ctor err at x64\" and \"working on riscv vmm\" appearing multiple times — you're juggling x86_64 constructor bugs AND riscv VMM at the same time, which is like trying to put out two fires in different buildings simultaneously. \"pref(VMM): riscv vmm almost there\" is the developer equivalent of \"5 more minutes\" that stretches into three more weeks.",
+        "stats": {
+          "totalCommits": 15,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-05-10",
+      "type": "ai_roast",
+      "ts": "2021-05-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-10 ~ 2021-05-16",
+        "content": "4 commits, all about INTR, two of which say \"working on riscv intr\" — this is the sequel to last week's \"working on riscv vmm\" saga, same energy, same cliffhanger ending. At least \"riscv timer intr done\" landed, so one interrupt actually got interrupted from being perpetually in progress.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-05-24",
+      "type": "ai_roast",
+      "ts": "2021-05-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-24 ~ 2021-05-30",
+        "content": "1 commit that says \"git: update .gitignore\" but 4 comments and 1 issue on someone else's repo — so your biggest contribution this week was telling git what to ignore, and then telling other people what they're doing wrong. Peak senior developer energy from someone with a single-commit week.",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "HUST-OS/xv6-k210"
+        }
+      }
     }
   ]
 }

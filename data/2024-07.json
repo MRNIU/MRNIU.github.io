@@ -234,6 +234,21 @@
         "additions": 186,
         "deletions": 686
       }
+    },
+    {
+      "id": "ai-roast-2024-07-15",
+      "type": "ai_roast",
+      "ts": "2024-07-21T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-07-15 ~ 2024-07-21",
+        "content": "18 commits on your Factorio mod and half of them are just version numbers — 1.2.0, 1.3.0, 1.4.0 through 1.4.7 in a single week, that's a release velocity that would make most startups jealous. You bumped the major version three times which either means massive breaking changes or you don't know what semver means. The lone \"update\" and \"refactor\" commits tie it all together like a bow on a chaotic present.",
+        "stats": {
+          "totalCommits": 18,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
+      }
     }
   ]
 }

@@ -242,6 +242,51 @@
         "additions": 53,
         "deletions": 17
       }
+    },
+    {
+      "id": "ai-roast-2020-03-02",
+      "type": "ai_roast",
+      "ts": "2020-03-08T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-03-02 ~ 2020-03-08",
+        "content": "Three commits: \"Update\", \"Update kernel stack\", and \"backup\" — the word \"backup\" as a commit message radiates the energy of someone about to do something very dangerous to their codebase. This is the git equivalent of saying \"hold my beer.\"",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-03-09",
+      "type": "ai_roast",
+      "ts": "2020-03-15T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-03-09 ~ 2020-03-15",
+        "content": "Nine commits: seven of them are \"Update\" and one is \"alloc_page finished\" — your git log is basically a static website that says \"Update\" with occasional breaking news. At this point `git log --oneline` just prints a loading screen.",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-03-23",
+      "type": "ai_roast",
+      "ts": "2020-03-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-03-23 ~ 2020-03-29",
+        "content": "Zero commits but one PR and 4 comments on arduino-libraries/Keyboard — you've pivoted from writing a kernel to commenting on Arduino keyboard libraries. The range of your attention span is truly as wide as an ocean and as deep as a puddle.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "arduino-libraries/Keyboard"
+        }
+      }
     }
   ]
 }

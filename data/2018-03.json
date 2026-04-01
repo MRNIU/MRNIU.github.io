@@ -139,6 +139,21 @@
         "state": "closed",
         "body": ""
       }
+    },
+    {
+      "id": "ai-roast-2018-03-05",
+      "type": "ai_roast",
+      "ts": "2018-03-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-03-05 ~ 2018-03-11",
+        "content": "5次提交里有2次叫\"Update\"——SimpleKernel的诞生始于一个bootsect.s和两条毫无信息量的commit message。好消息是你编译通过了，坏消息是你的commit message没通过code review。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

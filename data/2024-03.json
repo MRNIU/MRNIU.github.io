@@ -234,6 +234,21 @@
         "additions": 1104,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2024-03-04",
+      "type": "ai_roast",
+      "ts": "2024-03-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-03-04 ~ 2024-03-10",
+        "content": "17 commits on opensbi_interface with version bumps from 1.0.5 to 1.0.6 via \"fix\" commits — you speedran through patch versions faster than most people speedrun through their morning coffee. Six \"fix\" commits in one week either means you're very thorough or you keep breaking what you just fixed. The classic \"fix: fix warning\" double-fix energy is *chef's kiss*.",
+        "stats": {
+          "totalCommits": 17,
+          "topRepo": "MRNIU/opensbi_interface"
+        }
+      }
     }
   ]
 }

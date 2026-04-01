@@ -130,6 +130,36 @@
         "additions": 1067300,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2020-06-01",
+      "type": "ai_roast",
+      "ts": "2020-06-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-06-01 ~ 2020-06-07",
+        "content": "3 commits, zero PRs, zero reviews — the classic \"First commit!\" energy of someone who just discovered GitHub has a green contribution graph. Adding a Slack invite link and a licence in the same week as your first commit is like furnishing a house before you've poured the foundation.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/OSPP"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-06-22",
+      "type": "ai_roast",
+      "ts": "2020-06-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-06-22 ~ 2020-06-28",
+        "content": "\"FreeRTOS now available on Portenta theoretical, not test\" — shipping untested code and proudly announcing it in the commit message is a level of honesty most engineers only achieve after their third incident. \"small change\" appearing as a commit message tells me the change was either trivially small or terrifyingly large.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        }
+      }
     }
   ]
 }

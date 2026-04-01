@@ -597,6 +597,36 @@
         "additions": 44,
         "deletions": 1
       }
+    },
+    {
+      "id": "ai-roast-2023-05-01",
+      "type": "ai_roast",
+      "ts": "2023-05-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-05-01 ~ 2023-05-07",
+        "content": "16 commits on a Factorio mod — three of them are identical \"perf(startup): more item\" like you were hoping the compiler would eventually take the hint. Mixing English commits with 手搓 and 雷达 is giving bilingual chaos energy. At least you're optimizing your game mods with the same intensity most people reserve for, you know, actual work.",
+        "stats": {
+          "totalCommits": 16,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2023-05-08",
+      "type": "ai_roast",
+      "ts": "2023-05-14T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-05-08 ~ 2023-05-14",
+        "content": "8 out of 18 commits are literally \"style(*): update\" — at this point you could write a cron job to commit that message every hour and nobody would notice the difference. 11 PRs opened but zero reviews received, which tracks because who's going to review a diff that says \"update\" 8 times? SimpleKernel is earning its name because the commit messages sure aren't complex.",
+        "stats": {
+          "totalCommits": 18,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

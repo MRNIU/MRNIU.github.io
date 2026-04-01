@@ -143,6 +143,21 @@
         "additions": 93,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2022-03-21",
+      "type": "ai_roast",
+      "ts": "2022-03-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-03-21 ~ 2022-03-27",
+        "content": "11 commits and 4 of them are \"remove volatile\" — congratulations on discovering that volatile doesn't mean what you thought it meant. \"pref(cmake): use -O0\" is the compiler optimization equivalent of giving up. At least you're adding proper type definitions now; the kernel is slowly maturing even if the commit messages aren't.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

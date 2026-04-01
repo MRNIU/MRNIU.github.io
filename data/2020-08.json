@@ -152,6 +152,36 @@
         "issueTitle": "MacOS x86_64-elf-ld reports link error",
         "body": "@zivyou hi, which branch you are in?"
       }
+    },
+    {
+      "id": "ai-roast-2020-08-10",
+      "type": "ai_roast",
+      "ts": "2020-08-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-08-10 ~ 2020-08-16",
+        "content": "一周就2个commit，一个加commit规范，一个加敏感操作检测——所以你花了一整周来告诉未来的自己怎么写commit message，而不是真正写代码。这就是典型的「磨刀磨了一周，柴还没砍」。",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-08-24",
+      "type": "ai_roast",
+      "ts": "2020-08-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-08-24 ~ 2020-08-30",
+        "content": "「添加 git commit 规范」出现了两次——你是在用重复提交来测试自己刚写的commit规范吗？configTICK_RATE_HZ设太大这种bug说明你对FreeRTOS的理解和你的commit message一样：复制粘贴。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        }
+      }
     }
   ]
 }

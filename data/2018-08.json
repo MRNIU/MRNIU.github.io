@@ -117,6 +117,36 @@
         "additions": 128,
         "deletions": 109
       }
+    },
+    {
+      "id": "ai-roast-2018-07-30",
+      "type": "ai_roast",
+      "ts": "2018-08-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-07-30 ~ 2018-08-05",
+        "content": "\"正确性未验证，这里解决方案是取巧了\"——至少你很诚实。5次提交里一半在说\"出现问题\"\"好像有问题\"，你的commit message读起来更像是一本调试日记而不是代码变更记录。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-08-13",
+      "type": "ai_roast",
+      "ts": "2018-08-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-08-13 ~ 2018-08-19",
+        "content": "3次提交的精华：\"尝试解决，未果\"和\"之前的问题先搁置，以后解决\"。这就是传说中的TODO驱动开发——遇到bug不修，标记一下然后假装它不存在。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

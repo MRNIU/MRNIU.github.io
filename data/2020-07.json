@@ -142,6 +142,21 @@
         "additions": 252,
         "deletions": 228
       }
+    },
+    {
+      "id": "ai-roast-2020-06-29",
+      "type": "ai_roast",
+      "ts": "2020-07-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-06-29 ~ 2020-07-05",
+        "content": "8 commits across two repos with gems like \"small change\" and \"update shell script, unavailable\" — so you updated it and it still doesn't work, and you committed that? Two \"small change\" commits in a week means either you're allergic to descriptive messages or you're sneaking in war crimes one line at a time.",
+        "stats": {
+          "totalCommits": 8,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        }
+      }
     }
   ]
 }

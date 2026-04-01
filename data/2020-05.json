@@ -263,6 +263,51 @@
         "state": "closed",
         "body": "I am a student working on [Arduino](https://arduino.cc) project.\r\n\r\nMy project is [https://summerofcode.withgoogle.com/projects/#6482418854264832](https://summerofcode.withgoogle.com/projects/#6482418854264832).\r\n\r\nThank you."
       }
+    },
+    {
+      "id": "ai-roast-2020-05-04",
+      "type": "ai_roast",
+      "ts": "2020-05-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-05-04 ~ 2020-05-10",
+        "content": "Zero commits, two PRs, two issues, and eight comments on gsoc-cn — you're applying to Google Summer of Code with all the energy of someone who writes \"update\" as commit messages. The comment-to-code ratio this week is literally infinity.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "gsoc-cn/gsoc-cn"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-05-11",
+      "type": "ai_roast",
+      "ts": "2020-05-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-05-11 ~ 2020-05-17",
+        "content": "Five commits across two repos and three of them are variations of \"Initial commit\" and \"init\" — you initialized more projects than you finished this week. The OSPP repo got a proposal template, which is just a document about the code you plan to eventually write someday.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/OSPP"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-05-18",
+      "type": "ai_roast",
+      "ts": "2020-05-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-05-18 ~ 2020-05-24",
+        "content": "Two commits: \"Add email\" and \"Update\" on arduino/summer-of-code — so your entire week's contribution to open source was adding your contact info and then updating something unspecified. The bar was on the floor and you managed to limbo under it.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "arduino/summer-of-code"
+        }
+      }
     }
   ]
 }

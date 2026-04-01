@@ -39,6 +39,21 @@
         "additions": 559,
         "deletions": 330
       }
+    },
+    {
+      "id": "ai-roast-2024-08-26",
+      "type": "ai_roast",
+      "ts": "2024-09-01T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-08-26 ~ 2024-09-01",
+        "content": "Two commits on the Factorio mod: \"nzh_mining_drill\" and \"fix long\" — truly the Hemingway of commit messages, every word counts because there are barely any. \"fix long\" is the kind of message that will haunt you in six months when you're trying to figure out what was too long and why it needed fixing.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
+      }
     }
   ]
 }

@@ -166,6 +166,36 @@
         "additions": 123,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2022-05-16",
+      "type": "ai_roast",
+      "ts": "2022-05-22T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-05-16 ~ 2022-05-22",
+        "content": "Zero commits, one PR review, two comments — this is your most productive week because you finally stopped committing and started reading other people's code. Contributing to a CSAPP translation project is the developer equivalent of going back to school after burning down the lab. A week of reflection; the git log thanks you.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "EugeneLiu/translationCSAPP"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-05-23",
+      "type": "ai_roast",
+      "ts": "2022-05-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-05-23 ~ 2022-05-29",
+        "content": "4 commits and \"fix(CPU): vmm update\" — calling a VMM change a CPU fix is the kind of architectural confusion that explains why you're still working on this kernel. Back from your one-week reading retreat and immediately back to breaking things. At least \"feat(plic): add PLIC_M*\" suggests forward progress, assuming the asterisk isn't hiding tears.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

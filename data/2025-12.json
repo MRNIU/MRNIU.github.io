@@ -129,6 +129,21 @@
         "issueTitle": "boards: Add Xunlong Orange Pi 5 Ultra RK3588",
         "body": "Friendly ping @mbolivar "
       }
+    },
+    {
+      "id": "ai-roast-2025-12-22",
+      "type": "ai_roast",
+      "ts": "2025-12-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-12-22 ~ 2025-12-28",
+        "content": "Two commits both saying \"feat: init\" on factorio_BestLanding — Merry Christmas, you started yet another Factorio mod. Committing \"feat: init\" twice implies your first initialization wasn't good enough, which is concerning for a project whose entire purpose is landing. At least you're consistent: holidays are for Factorio, not family.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        }
+      }
     }
   ]
 }

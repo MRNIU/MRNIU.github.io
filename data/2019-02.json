@@ -62,6 +62,21 @@
         "issueTitle": "Lecture 15 Exceptional Control Flow Signals and Nonlocal Jumps.ass",
         "body": "@leviding 翻译认领"
       }
+    },
+    {
+      "id": "ai-roast-2019-01-28",
+      "type": "ai_roast",
+      "ts": "2019-02-03T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-01-28 ~ 2019-02-03",
+        "content": "2 commits: \"update reaadme\" and \"update\" — you can't even spell \"readme\" right in a commit about updating the readme. At this rate your commit messages have more typos than your kernel has features.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

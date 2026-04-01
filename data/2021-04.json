@@ -2444,6 +2444,66 @@
         "additions": 4,
         "deletions": 0
       }
+    },
+    {
+      "id": "ai-roast-2021-03-29",
+      "type": "ai_roast",
+      "ts": "2021-04-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-03-29 ~ 2021-04-04",
+        "content": "31 commits almost entirely \"pref(FIRST FIT)\" — you spent the whole week optimizing a first-fit allocator one tiny commit at a time, like refactoring via acupuncture. Two commits end with \"not finish\" which is both honest and a little heartbreaking. At least you opened 2 issues, so there's written evidence of the pain.",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-04-05",
+      "type": "ai_roast",
+      "ts": "2021-04-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-05 ~ 2021-04-11",
+        "content": "46 commits with FIVE that just say \"merge(*)\" — at this point you're not merging branches, you're merging your will to write proper commit messages into the void. Four \"docs(README): update\" in one week means you're either perfecting a README or using it as a diary. 7 PRs is impressive until you notice half the commits are merge conflict resolution.",
+        "stats": {
+          "totalCommits": 46,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-04-12",
+      "type": "ai_roast",
+      "ts": "2021-04-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-12 ~ 2021-04-18",
+        "content": "31 commits and \"working on riscv vmm\" appears FIVE times — we get it, you're working on it, you don't need to narrate your journey like it's a hiking vlog. You also reverted your own \"change to uppercase\" commit in the same week, which is the git equivalent of loudly changing your mind at a restaurant. At least the i386 VMM actually got done between all the riscv soul-searching.",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-04-19",
+      "type": "ai_roast",
+      "ts": "2021-04-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-19 ~ 2021-04-25",
+        "content": "31 commits and you're simultaneously building a kernel AND reimplementing the C++ standard library — vector, list, type_traits, iostream, bitmap, string — because why use an existing libcxx when you can spend a week recreating 40 years of C++ in a hobby OS? \"feat(LIBCXX): new\" appearing twice tells me you started the standard library, forgot, and started it again.",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

@@ -141,6 +141,21 @@
         "state": "merged",
         "body": ""
       }
+    },
+    {
+      "id": "ai-roast-2023-06-12",
+      "type": "ai_roast",
+      "ts": "2023-06-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-06-12 ~ 2023-06-18",
+        "content": "Zero commits, 3 PRs, and 6 issues — congratulations, you've achieved the dream of every project manager: all planning, no coding. Opening issues on SimpleKernel without writing a single line is just filing bug reports against yourself. The one comment you left was presumably \"I'll get to this later.\"",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

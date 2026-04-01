@@ -207,6 +207,21 @@
         "issueTitle": "gsoc2022 introduction blog",
         "body": "@pulkomandy maybe we can merge this?"
       }
+    },
+    {
+      "id": "ai-roast-2022-05-30",
+      "type": "ai_roast",
+      "ts": "2022-06-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-05-30 ~ 2022-06-05",
+        "content": "12 commits and 10 of them are \"doc(N): update\" counting up from 1 to 8 — you're not writing documentation, you're playing a number game with git. \"doc(01): update\" appears twice because apparently chapter 1 needed a director's cut. One lonely \"update\" commit with no prefix at all, a cry for help lost in a sea of numbered docs.",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

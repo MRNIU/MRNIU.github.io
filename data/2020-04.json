@@ -204,6 +204,36 @@
         "additions": 17,
         "deletions": 13
       }
+    },
+    {
+      "id": "ai-roast-2020-04-06",
+      "type": "ai_roast",
+      "ts": "2020-04-12T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-04-06 ~ 2020-04-12",
+        "content": "Eleven commits with messages like \"Add\", \"Add\", \"Update\", \"Update\" — you've stripped commit messages down to their most primal, caveman form. \"task_test finished\" is the weekly victory declaration, nestled between commits that communicate absolutely nothing.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-04-20",
+      "type": "ai_roast",
+      "ts": "2020-04-26T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-04-20 ~ 2020-04-26",
+        "content": "Zero commits, zero PRs, one issue, and 4 comments on an Arduino Keyboard library — you're now a full-time Arduino keyboard consultant apparently. Your kernel is gathering dust while you debate HID protocols. Priorities.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "arduino-libraries/Keyboard"
+        }
+      }
     }
   ]
 }

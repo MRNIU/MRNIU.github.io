@@ -75,6 +75,21 @@
         "state": "closed",
         "body": "If I use a define without Run,IDE show me a message\r\n`警告：定义视窗改变了。请单击运行`\r\nI think it's inappropriate, maybe we can show as\r\n`警告：请点击运行以更新定义`\r\nor something better."
       }
+    },
+    {
+      "id": "ai-roast-2018-02-05",
+      "type": "ai_roast",
+      "ts": "2018-02-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-02-05 ~ 2018-02-11",
+        "content": "One PR to racket/string-constants with zero commits — so you opened a PR on a Racket project without writing any code? That's either impressively meta or you accidentally clicked a button.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "racket/string-constants"
+        }
+      }
     }
   ]
 }

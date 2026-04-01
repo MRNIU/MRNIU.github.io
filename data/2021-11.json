@@ -1065,6 +1065,21 @@
         "issueTitle": "build error",
         "body": "hi NukeWilliams, you can install grub via /tools/grub4mac.sh\r\n\r\n```shell\r\ncd tools/\r\nsh ./grub4mac.sh\r\n```\r\n"
       }
+    },
+    {
+      "id": "ai-roast-2021-11-22",
+      "type": "ai_roast",
+      "ts": "2021-11-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-11-22 ~ 2021-11-28",
+        "content": "68 commits, 13 PRs, and at least 8 of your sample messages are literally \"Update build.yml\" or \"Update CMakeLists.txt\" — GitHub's default commit message is doing more writing than you are. This is what CI/CD looks like when you treat the CI pipeline as your local compiler. You started aarch64 support though, so congrats on adding a third architecture to not finish.",
+        "stats": {
+          "totalCommits": 68,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

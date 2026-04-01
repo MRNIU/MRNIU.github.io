@@ -294,6 +294,21 @@
         "state": "merged",
         "body": "- [x] Have you followed the [guidelines for contributing](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md)?\r\n- [x] Have you checked that there aren't other open [pull requests](https://github.com/Homebrew/homebrew-core/pulls) for the same formula update/change?\r\n- [x] Have you built your formula locally with `brew install --build-from-source <formula>`, where `<formula>` is the name of the formula you're submitting?\r\n- [x] Does your build pass `brew audit --strict <formula>` (after doing `brew install <formula>`)?\r\n\r\n-----\r\n"
       }
+    },
+    {
+      "id": "ai-roast-2018-10-22",
+      "type": "ai_roast",
+      "ts": "2018-10-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-10-22 ~ 2018-10-28",
+        "content": "12 commits: 4x \"update\", 3x \"init\", 3x \"Update travis config\" — your git log reads like a broken record stuck on the world's least informative words. At this point Travis CI knows more about your project than your commit history does.",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }

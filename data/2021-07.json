@@ -2171,6 +2171,66 @@
         "additions": 22,
         "deletions": 17
       }
+    },
+    {
+      "id": "ai-roast-2021-06-28",
+      "type": "ai_roast",
+      "ts": "2021-07-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-06-28 ~ 2021-07-04",
+        "content": "38 commits with \"fear(plic): add plic to riscv\" appearing twice — yes, \"fear\" is right, that's exactly the emotion PLIC configuration should evoke. You also have \"pref(OPENSBI): change to static\" duplicated, suggesting you committed the same thing twice, which for a kernel developer is basically a double-free bug in your git workflow. The typo escalation from \"docs\" to \"dovs\" to \"fear\" suggests your keyboard is slowly giving up on you.",
+        "stats": {
+          "totalCommits": 38,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-07-05",
+      "type": "ai_roast",
+      "ts": "2021-07-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-07-05 ~ 2021-07-11",
+        "content": "22 commits all about PMM, firstfit, and VMM — you replaced a linked list with a bitmap, then immediately started fixing bitmap bugs, which is the classic \"the grass is greener on the other data structure\" arc. \"pref(SLAB): working on slab\" at the top means you've already moved on to the next allocator before finishing the current one. Your memory management code has more rewrites than a Hollywood screenplay.",
+        "stats": {
+          "totalCommits": 22,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-07-12",
+      "type": "ai_roast",
+      "ts": "2021-07-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-07-12 ~ 2021-07-18",
+        "content": "31 commits on slab allocator and half of them are \"fix: overflow\" — at this point the slab isn't overflowing, your commit history is. \"pref(slab): add printf for debug\" followed by \"pref(slab): add assert\" followed by more fixes is just rubber-duck debugging with git as the duck. Maybe try reading the code before committing it?",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-07-19",
+      "type": "ai_roast",
+      "ts": "2021-07-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-07-19 ~ 2021-07-25",
+        "content": "70 commits in one week — are you speedrunning git history? Four consecutive \"pref(intr): change to static class\" commits suggest you discovered the compile button exists but the \"think before committing\" button does not. At least you opened 3 PRs, so someone else might get to witness this beautiful chaos.",
+        "stats": {
+          "totalCommits": 70,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
     }
   ]
 }
