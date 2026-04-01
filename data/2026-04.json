@@ -2,6 +2,19 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "commit-eebfff5ba5f0eb977c3cd7427f5235e57d99ac78",
+      "type": "commit",
+      "ts": "2026-04-01T00:20:01Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "eebfff5ba5f0eb977c3cd7427f5235e57d99ac78",
+        "message": "fix: add models:read permission for GitHub Models API access\n\nGITHUB_TOKEN needs the models permission to call the GitHub Models\ninference endpoint. Without it AI roast generation fails with 401.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
       "id": "commit-5be066b1654368e9bb53e51848a8db9c8c87b489",
       "type": "commit",
       "ts": "2026-04-01T00:09:40Z",
