@@ -13,8 +13,10 @@ interface Props {
 
 const { months } = Astro.props;
 
+// Use only the 3 most recent months
+const recentMonths = months.slice(0, 3);
 const repoCounts = new Map<string, number>();
-for (const month of months) {
+for (const month of recentMonths) {
   if (month.repoBreakdown) {
     for (const [repo, count] of Object.entries(month.repoBreakdown)) {
       repoCounts.set(repo, (repoCounts.get(repo) || 0) + (count as number));
@@ -28,14 +30,14 @@ for (const month of months) {
 
 const sorted = [...repoCounts.entries()]
   .sort((a, b) => b[1] - a[1])
-  .slice(0, 5);
+  .slice(0, 8);
 
 const maxCount = sorted.length > 0 ? sorted[0][1] : 1;
-const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var(--cp-red)', 'var(--cp-yellow)'];
+const barColors = ['var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)', 'var(--cp-red)', 'var(--cp-yellow)', 'var(--cp-green)', 'var(--cp-blue)', 'var(--cp-purple)'];
 ---
 
 <section style="padding: 12px 0;">
-  <h2 class="section-heading">Top Repositories</h2>
+  <h2 class="section-heading">Recent Repositories</h2>
   <div class="repo-list">
     {sorted.map(([repo, count], i) => {
       const pct = Math.round((count / maxCount) * 100);
