@@ -164,6 +164,9 @@ export async function generateAIRoasts(
   const weeks = groupEventsByWeek(events);
   const roasts: AIRoastEvent[] = [];
   const RATE_LIMIT_DELAY_MS = 5000; // 5s between requests to stay under 15/min
+  const MAX_CONSECUTIVE_FAILURES = 3;
+  let consecutiveFailures = 0;
+  let requestCount = 0;
 
   for (const summary of weeks) {
     const weekRange = `${summary.weekStart} ~ ${summary.weekEnd}`;
@@ -174,11 +177,13 @@ export async function generateAIRoasts(
     // Skip weeks with very little activity
     if (summary.totalCommits + summary.totalPRs + summary.totalReviews < 3) continue;
 
-    try {
-      if (roasts.length > 0) {
-        await new Promise(resolve => setTimeout(resolve, RATE_LIMIT_DELAY_MS));
-      }
+    // Delay between requests
+    if (requestCount > 0) {
+      await new Promise(resolve => setTimeout(resolve, RATE_LIMIT_DELAY_MS));
+    }
+    requestCount++;
 
+    try {
       const userMessage = buildUserMessage(summary);
       const content = await callLLM(config, systemPrompt, userMessage);
 
@@ -199,12 +204,31 @@ export async function generateAIRoasts(
           },
         });
         console.log(`  [ai-roast] Generated for ${weekRange}`);
+        consecutiveFailures = 0;
       }
     } catch (err) {
-      console.warn(`  [ai-roast] Failed for ${weekRange}:`, (err as Error).message);
-      // On rate limit, wait and continue; on other errors, skip
-      if ((err as Error).message.includes("429")) {
+      const msg = (err as Error).message;
+      console.warn(`  [ai-roast] Failed for ${weekRange}:`, msg);
+      consecutiveFailures++;
+
+      // Budget exhausted or auth revoked — stop immediately
+      if (msg.includes("403")) {
+        console.warn("[ai-roast] Budget limit or auth error, stopping");
+        break;
+      }
+
+      // Rate limited — wait for the period indicated by the API
+      if (msg.includes("429")) {
+        console.warn("[ai-roast] Rate limited, waiting 60s...");
         await new Promise(resolve => setTimeout(resolve, 60_000));
+        consecutiveFailures = 0; // reset after waiting
+        continue;
+      }
+
+      // Too many consecutive unknown failures — stop
+      if (consecutiveFailures >= MAX_CONSECUTIVE_FAILURES) {
+        console.warn(`[ai-roast] ${MAX_CONSECUTIVE_FAILURES} consecutive failures, stopping`);
+        break;
       }
     }
   }
