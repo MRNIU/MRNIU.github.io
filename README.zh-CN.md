@@ -60,7 +60,7 @@
 | `filters.ignoreShortComments` | `true` | 过滤 "LGTM"、"+1" 等短评论 |
 | `aiRoast.enabled` | `true` | 启用 AI 点评 |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`、`"encouraging_mentor"` 或 `"custom"` |
-| `llm.baseUrl` | `"https://models.inference.ai.azure.com/v1"` | 任意 OpenAI 兼容接口地址（默认：GitHub Models） |
+| `llm.baseUrl` | `"https://models.inference.ai.azure.com"` | 任意 OpenAI 兼容接口地址（默认：GitHub Models） |
 | `llm.model` | `"gpt-4o-mini"` | 模型名称 |
 
 环境变量 `LLM_BASE_URL` 和 `LLM_MODEL` 会覆盖配置文件中的值。
