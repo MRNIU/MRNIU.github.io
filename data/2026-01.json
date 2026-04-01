@@ -28,6 +28,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-01-19",
+      "type": "ai_roast",
+      "ts": "2026-01-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-01-19 ~ 2026-01-25",
+        "content": "Ah, the classic \"let's refactor the same thing twice in one week\" strategy, very avant-garde! And those commit messages? I'm still trying to decipher what \"UserStackPointer ThreadPointer ReturnValue\" actually means—sounds like an overambitious novel title. Don't worry, I'm sure the future will be filled with PRs where you can actually show off these \"features\" instead of just listing them like a buffet menu!",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "MRNIU/cpu_io"
+        }
+      }
+    },
+    {
       "id": "commit-8bf684ae50519738dadee17c82a890d070089440",
       "type": "commit",
       "ts": "2026-01-22T17:09:24Z",
@@ -90,6 +105,21 @@
         "message": "feat: ICC_SGI1R_EL1Info\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 134,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2026-01-12",
+      "type": "ai_roast",
+      "ts": "2026-01-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-01-12 ~ 2026-01-18",
+        "content": "Ah, the classic case of \"I swear I did something\" commits! You’ve not only managed to turn a single file into a trilogy, but you've also gifted us the world’s first and only “Initial commit” on a project that’s already been abandoned. If your commits were a movie, they’d be “The Fast and the Curious: Context.hpp Edition.”",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/cpu_io"
+        }
       }
     },
     {
@@ -207,6 +237,21 @@
         "message": "Initial commit",
         "additions": 41,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2026-01-05",
+      "type": "ai_roast",
+      "ts": "2026-01-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-01-05 ~ 2026-01-11",
+        "content": "Congratulations on your impressive collection of \"test: update\" commit messages; clearly, you were doing some serious testing—like testing the limits of how many times you can say the same thing! I love how your PRs are on vacation while you're cranking out \"initial commit\" and \"feat: context\" like it's a write-up for a high school essay. Keep up the good work, and next week maybe let the code breathe a little instead of suffocating it with tiny changes!",
+        "stats": {
+          "totalCommits": 15,
+          "topRepo": "MRNIU/cpu_io"
+        }
       }
     },
     {
@@ -349,6 +394,21 @@
         "message": "feat: GetTableEntryPermissions\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 20,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2025-12-29",
+      "type": "ai_roast",
+      "ts": "2026-01-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-12-29 ~ 2026-01-04",
+        "content": "Wow, 18 commits and not a single PR or review—are you coding in a bubble? And can we talk about those commit messages? \"feat: v1.0.2\" might as well be the motto for your week, it’s like you’re writing a very repetitive novel. Also, I commend your ability to turn \"feat\" into an Olympic event, but maybe toss in a \"fix\" or a \"docs\" for variety—your future self will thank you!",
+        "stats": {
+          "totalCommits": 18,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        }
       }
     },
     {

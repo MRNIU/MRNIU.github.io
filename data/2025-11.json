@@ -15,6 +15,21 @@
       }
     },
     {
+      "id": "ai-roast-2025-11-17",
+      "type": "ai_roast",
+      "ts": "2025-11-23T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-11-17 ~ 2025-11-23",
+        "content": "Ah, nothing screams \"I’m totally on top of my game\" like two identical \"fix\" commits for what I can only assume is an epic typo in \"premission.\" Also, \"bump\" as a commit message? Truly a masterclass in ambiguity—did you bump your head or just the version? And remember, \"feat\" commits are supposed to imply joy and excitement, not just another mediocre version of buddy_alloc.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/cpu_io"
+        }
+      }
+    },
+    {
       "id": "commit-4f7443c544adb3f1a806be93916d0e36b2bf52b3",
       "type": "commit",
       "ts": "2025-11-19T09:03:05Z",
@@ -64,6 +79,21 @@
         "message": "feat: new buddy_alloc version\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 1,
         "deletions": 1
+      }
+    },
+    {
+      "id": "ai-roast-2025-10-27",
+      "type": "ai_roast",
+      "ts": "2025-11-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-10-27 ~ 2025-11-02",
+        "content": "Wow, three commits and yet somehow we managed to write two identical messages about adding SCTLR_EL1 bits. It’s a bold strategy to put \"feat\" in front of a commit that could’ve been a single line in a README, but hey, who doesn’t love a good bit of repetition? Maybe next week, we can try branching out from the bits and adding some actual features, or at least some variety in our commit messages!",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/cpu_io"
+        }
       }
     }
   ]

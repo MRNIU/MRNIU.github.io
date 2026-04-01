@@ -2,6 +2,21 @@
   "month": "2025-09",
   "events": [
     {
+      "id": "ai-roast-2025-09-15",
+      "type": "ai_roast",
+      "ts": "2025-09-21T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-09-15 ~ 2025-09-21",
+        "content": "Wow, who knew \"update mem*\" could be such a riveting saga? At this rate, you might want to consider a career in creative writing, because those commit messages could use some serious flair. Also, adding a log? Bold move—next week, maybe aim for “feat: breathe” for that extra edge!",
+        "stats": {
+          "totalCommits": 7,
+          "topRepo": "MRNIU/bmalloc"
+        }
+      }
+    },
+    {
       "id": "commit-e65197faa6836efcc1751be40116af3c8adb418e",
       "type": "commit",
       "ts": "2025-09-16T08:32:36Z",
@@ -154,6 +169,21 @@
         "message": "feat: add log\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 0,
         "deletions": 14
+      }
+    },
+    {
+      "id": "ai-roast-2025-09-01",
+      "type": "ai_roast",
+      "ts": "2025-09-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-09-01 ~ 2025-09-07",
+        "content": "Ah, the classic \"add log\" commit saga — I see you’re trying to set a world record for the most redundant commit messages in a week. It’s impressive that you managed to squeeze 34 commits without a single PR; I can only assume you’re treating this repo like your personal diary. And honestly, if I had a nickel for every time you added a 4k aligned malloc or removed used_count_/free_count_ like it’s a seasonal hobby, I’d be funding your next refactor!",
+        "stats": {
+          "totalCommits": 34,
+          "topRepo": "MRNIU/bmalloc"
+        }
       }
     },
     {

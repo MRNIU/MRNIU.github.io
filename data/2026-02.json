@@ -28,6 +28,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-02-09",
+      "type": "ai_roast",
+      "ts": "2026-02-15T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-02-09 ~ 2026-02-15",
+        "content": "Wow, \"feat: add mb, rmb, wmb\" — did you run out of creative energy after that? I mean, those commit messages are less informative than a fortune cookie. And “面向 AI 的重构”? If only your PRs were as ambitious as your commit messages, we'd all be living in a utopia of flawless code.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-d7be3e392921ff4500d96c5b4f5120e4bfa56ffd",
       "type": "commit",
       "ts": "2026-02-12T06:21:43Z",

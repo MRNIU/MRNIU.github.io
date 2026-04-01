@@ -128,6 +128,20 @@
       }
     },
     {
+      "id": "review-EugeneLiu/translationCSAPP-107-2022-05-22T07:10:47Z",
+      "type": "review",
+      "ts": "2022-05-22T07:10:47Z",
+      "repo": "EugeneLiu/translationCSAPP",
+      "semantic": null,
+      "data": {
+        "prNumber": 107,
+        "prTitle": "fix translation error ",
+        "state": "COMMENTED",
+        "body": "Ready to merge",
+        "inlineComments": []
+      }
+    },
+    {
       "id": "pr-112-gsoc-cn/gsoc-cn",
       "type": "pull_request",
       "ts": "2022-05-22T06:52:31Z",

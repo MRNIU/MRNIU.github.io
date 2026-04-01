@@ -2,6 +2,34 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "ai-roast-2026-03-30",
+      "type": "ai_roast",
+      "ts": "2026-04-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-03-30 ~ 2026-04-05",
+        "content": "Ah, the classic \"fix\" commit extravaganza—24 out of 48 commits, like a soap opera where every episode needs a \"fix\" title. It seems you’ve discovered a golden age of refactoring, but maybe next time, you could aim for some actual *new* features instead of just reskinning the same old cat. And just a friendly suggestion: if your PRs get any smaller, I might mistakingly think they’re just very confused commit messages trying to hide in plain sight.",
+        "stats": {
+          "totalCommits": 48,
+          "topRepo": "MRNIU/MRNIU.github.io"
+        }
+      }
+    },
+    {
+      "id": "commit-1ce1cbb0d2ed33209e36fad4c02cad6002183da7",
+      "type": "commit",
+      "ts": "2026-04-01T00:29:06Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "1ce1cbb0d2ed33209e36fad4c02cad6002183da7",
+        "message": "fix: correct GitHub Models base URL (no /v1 prefix)\n\nGitHub Models endpoint is https://models.inference.ai.azure.com,\nnot /v1. The code appends /chat/completions, so /v1 caused 404.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
       "id": "commit-eebfff5ba5f0eb977c3cd7427f5235e57d99ac78",
       "type": "commit",
       "ts": "2026-04-01T00:20:01Z",

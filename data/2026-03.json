@@ -1358,6 +1358,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-03-09",
+      "type": "ai_roast",
+      "ts": "2026-03-15T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-03-09 ~ 2026-03-15",
+        "content": "Ah, the classic \"look, Ma, no PRs!\" approach—bold strategy, cotton candy for code quality. I see you’ve mastered the art of the \"huge\" commit message; let’s just hope the actual changes are equally monumental and not just a clean-up of your last week’s mess. And hey, splitting early init into platform-specific stubs sounds fancy, but did you copy-paste that from the last ten commits?",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "nicklnick/pinux"
+        }
+      }
+    },
+    {
       "id": "commit-0314-001",
       "type": "commit",
       "ts": "2026-03-14T22:30:00Z",

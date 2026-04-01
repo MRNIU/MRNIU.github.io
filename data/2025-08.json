@@ -2,6 +2,21 @@
   "month": "2025-08",
   "events": [
     {
+      "id": "ai-roast-2025-08-18",
+      "type": "ai_roast",
+      "ts": "2025-08-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-08-18 ~ 2025-08-24",
+        "content": "Wow, 12 commits and not a single PR or review? I'm guessing \"linked list\" is the new black, considering you’ve committed it five times—are we building a collection? And don’t even get me started on your refactoring spree; seems like \"refactor\" is just your fancy way of saying \"I can't decide what I’m doing.\" ",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "MRNIU/bmalloc"
+        }
+      }
+    },
+    {
       "id": "commit-2469d094794b09ad5f87e12a28cfdb0222d4a72d",
       "type": "commit",
       "ts": "2025-08-23T15:21:50Z",
@@ -207,6 +222,21 @@
         "message": "refactor: slab\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 12,
         "deletions": 35
+      }
+    },
+    {
+      "id": "ai-roast-2025-08-11",
+      "type": "ai_roast",
+      "ts": "2025-08-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-08-11 ~ 2025-08-17",
+        "content": "Ah, the classic \"refactor: slab\" symphony, a beautiful opus performed 20 times without so much as a solo. Did you think the commit messages were like Pokémon — gotta catch 'em all? And while we're on the topic of ambitious refactors, maybe next week you can try tackling the \"refactor: anything else\" challenge for a change.",
+        "stats": {
+          "totalCommits": 89,
+          "topRepo": "MRNIU/bmalloc"
+        }
       }
     },
     {
@@ -1354,6 +1384,21 @@
       }
     },
     {
+      "id": "ai-roast-2025-08-04",
+      "type": "ai_roast",
+      "ts": "2025-08-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-08-04 ~ 2025-08-10",
+        "content": "Ah, the \"refactor: buddy\" symphony—33 commits of pure, repetitive poetry that would make even the most patient code reviewer weep. Did you accidentally pull a \"boomerang\" commit where you throw code out and it just keeps coming back? Maybe next week we can aim for a little more variety in your messages and, I don't know, an actual PR?",
+        "stats": {
+          "totalCommits": 33,
+          "topRepo": "MRNIU/bmalloc"
+        }
+      }
+    },
+    {
       "id": "commit-6c843bf44ffc9cdec49dbb2c66517ab2fce8368a",
       "type": "commit",
       "ts": "2025-08-09T15:55:37Z",
@@ -1910,6 +1955,21 @@
         "message": "refactor: Update commit message for recent changes\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 502,
         "deletions": 450
+      }
+    },
+    {
+      "id": "ai-roast-2025-07-28",
+      "type": "ai_roast",
+      "ts": "2025-08-03T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-07-28 ~ 2025-08-03",
+        "content": "Ah, the classic “Update” commit message, a true masterpiece! It’s like you’re trying to win the gold medal in the “Most Vague Commit Messages” Olympics. And with 15 commits but zero PRs, I can only assume you’re working on an award-winning solo project – too bad it’s just your own private showcase of refactoring for the sake of refactoring!",
+        "stats": {
+          "totalCommits": 15,
+          "topRepo": "MRNIU/cpu_io"
+        }
       }
     }
   ]
