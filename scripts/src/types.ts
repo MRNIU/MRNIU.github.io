@@ -115,6 +115,7 @@ export interface MonthSummary {
   eventCount: number;
   repos: string[];
   breakdown: Record<EventType, number>;
+  repoBreakdown: Record<string, number>;
 }
 
 export interface IndexData {

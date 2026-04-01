@@ -24,8 +24,12 @@ function readMonthlyFile(filePath: string): MonthlyData | null {
 function buildMonthSummary(month: string, events: GitPulseEvent[]): MonthSummary {
   const repos = new Set<string>();
   const breakdown: Record<string, number> = {};
+  const repoBreakdown: Record<string, number> = {};
   for (const e of events) {
-    if (e.repo) repos.add(e.repo);
+    if (e.repo) {
+      repos.add(e.repo);
+      repoBreakdown[e.repo] = (repoBreakdown[e.repo] || 0) + 1;
+    }
     breakdown[e.type] = (breakdown[e.type] || 0) + 1;
   }
   return {
@@ -34,6 +38,7 @@ function buildMonthSummary(month: string, events: GitPulseEvent[]): MonthSummary
     eventCount: events.length,
     repos: [...repos].sort(),
     breakdown: breakdown as Record<EventType, number>,
+    repoBreakdown,
   };
 }
 

@@ -22,6 +22,9 @@
       "breakdown": {
         "ai_roast": 1,
         "commit": 3
+      },
+      "repoBreakdown": {
+        "MRNIU/MRNIU.github.io": 3
       }
     },
     {
@@ -51,6 +54,22 @@
         "review": 4,
         "ai_roast": 5,
         "issue": 3
+      },
+      "repoBreakdown": {
+        "MRNIU/MRNIU.github.io": 42,
+        "rust-embedded/aarch64-cpu": 8,
+        "MRNIU/SimpleKernel": 19,
+        "rcore-os/rCore": 4,
+        "nicklnick/pinux": 5,
+        "rust-embedded/rust-raspberrypi-OS-tutorials": 2,
+        "Simple-XX/SimpleKernel": 18,
+        "royal12646/Chinese-offensive-language-detect": 1,
+        "MRNIU/cpu_io": 7,
+        "MRNIU/bmalloc": 2,
+        "zephyrproject-rtos/zephyr": 1,
+        "Simple-XX/SimpleCompiler": 1,
+        "ETLCPP/etl": 1,
+        "MRNIU/etl": 1
       }
     },
     {
@@ -72,6 +91,15 @@
         "issue": 3,
         "pull_request": 1,
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 3,
+        "MRNIU/MPMCQueue": 1,
+        "GitHubDaily/GitHubDaily": 1,
+        "Wechat-ggGitHub/Awesome-GitHub-Repo": 1,
+        "521xueweihan/HelloGitHub": 1,
+        "Simple-XX/SimpleKernel": 2,
+        "MRNIU/FreeRTOS-PortentaH7": 2
       }
     },
     {
@@ -92,6 +120,16 @@
         "commit": 37,
         "ai_roast": 4,
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 15,
+        "MRNIU/bmalloc": 3,
+        "MRNIU/siyuan-note-ai": 1,
+        "MRNIU/MPMCQueue": 5,
+        "zephyrproject-rtos/zephyr": 3,
+        "MRNIU/factorio_LegendaryShipStart": 3,
+        "MRNIU/factorio_BestLanding": 5,
+        "MRNIU/factorio_LegendaryMechStart": 3
       }
     },
     {
@@ -107,6 +145,12 @@
       "breakdown": {
         "commit": 9,
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "MRNIU/factorio_BestLanding": 4,
+        "MRNIU/factorio_LegendaryShipStart": 2,
+        "MRNIU/factorio_LegendaryMechStart": 3,
+        "zephyrproject-rtos/zephyr": 1
       }
     },
     {
@@ -120,6 +164,10 @@
       "breakdown": {
         "commit": 5,
         "ai_roast": 2
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 3,
+        "MRNIU/bmalloc": 2
       }
     },
     {
@@ -131,6 +179,9 @@
       ],
       "breakdown": {
         "commit": 5
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 5
       }
     },
     {
@@ -146,6 +197,10 @@
         "commit": 41,
         "issue_comment": 1,
         "pull_request": 4
+      },
+      "repoBreakdown": {
+        "MRNIU/bmalloc": 40,
+        "zephyrproject-rtos/zephyr": 6
       }
     },
     {
@@ -160,6 +215,11 @@
       "breakdown": {
         "ai_roast": 4,
         "commit": 147
+      },
+      "repoBreakdown": {
+        "MRNIU/bmalloc": 132,
+        "MRNIU/cpu_io": 14,
+        "MRNIU/opensbi_interface": 1
       }
     },
     {
@@ -176,6 +236,12 @@
         "commit": 6,
         "pull_request": 14,
         "issue_comment": 11
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 3,
+        "MRNIU/resume": 2,
+        "zephyrproject-rtos/zephyr": 25,
+        "MRNIU/misc": 1
       }
     },
     {
@@ -190,6 +256,10 @@
         "commit": 27,
         "issue_comment": 1,
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "MRNIU/nzh_factorio_mod": 27,
+        "factoriotools/factorio-docker": 2
       }
     },
     {
@@ -203,6 +273,10 @@
       "breakdown": {
         "pull_request": 1,
         "commit": 3
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 1,
+        "Simple-XX/OSPP": 3
       }
     },
     {
@@ -214,6 +288,9 @@
       ],
       "breakdown": {
         "commit": 5
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 5
       }
     },
     {
@@ -225,6 +302,9 @@
       ],
       "breakdown": {
         "commit": 3
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 3
       }
     },
     {
@@ -236,6 +316,9 @@
       ],
       "breakdown": {
         "commit": 71
+      },
+      "repoBreakdown": {
+        "MRNIU/cpu_io": 71
       }
     },
     {
@@ -247,6 +330,9 @@
       ],
       "breakdown": {
         "commit": 1
+      },
+      "repoBreakdown": {
+        "MRNIU/resume": 1
       }
     },
     {
@@ -260,6 +346,10 @@
       "breakdown": {
         "pull_request": 2,
         "commit": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 2,
+        "MRNIU/nzh_factorio_mod": 1
       }
     },
     {
@@ -274,6 +364,11 @@
       "breakdown": {
         "commit": 2,
         "issue_comment": 2
+      },
+      "repoBreakdown": {
+        "MRNIU/nzh_factorio_mod": 2,
+        "ST-Robot/bulletin": 1,
+        "Simple-XX/SimpleGameEngine": 1
       }
     },
     {
@@ -285,6 +380,9 @@
       ],
       "breakdown": {
         "commit": 18
+      },
+      "repoBreakdown": {
+        "MRNIU/nzh_factorio_mod": 18
       }
     },
     {
@@ -303,6 +401,13 @@
         "commit": 1,
         "issue_comment": 2,
         "issue": 2
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleGameEngine": 1,
+        "Simple-XX/OSPP": 1,
+        "Simple-XX/SimpleKernel": 2,
+        "riscv-software-src/opensbi": 1,
+        "libunwind/libunwind": 2
       }
     },
     {
@@ -314,6 +419,9 @@
       ],
       "breakdown": {
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleGameEngine": 1
       }
     },
     {
@@ -326,6 +434,10 @@
       ],
       "breakdown": {
         "commit": 7
+      },
+      "repoBreakdown": {
+        "Simple-XX/OSPP": 1,
+        "MRNIU/opensbi_interface": 6
       }
     },
     {
@@ -338,6 +450,10 @@
       ],
       "breakdown": {
         "commit": 18
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 1,
+        "MRNIU/opensbi_interface": 17
       }
     },
     {
@@ -349,6 +465,9 @@
       ],
       "breakdown": {
         "issue": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 1
       }
     },
     {
@@ -365,6 +484,12 @@
         "commit": 4,
         "pull_request": 1,
         "issue_comment": 2
+      },
+      "repoBreakdown": {
+        "MRNIU/resume": 4,
+        "Simple-XX/SimpleGameEngine": 1,
+        "Simple-XX/SimplePhysicsEngine": 1,
+        "bkaradzic/bgfx.cmake-archived": 1
       }
     },
     {
@@ -380,6 +505,11 @@
         "issue_comment": 7,
         "pull_request": 4,
         "issue": 8
+      },
+      "repoBreakdown": {
+        "bkaradzic/bgfx.cmake-archived": 2,
+        "Simple-XX/SimplePhysicsEngine": 13,
+        "Simple-XX/SimpleGameEngine": 4
       }
     },
     {
@@ -395,6 +525,11 @@
         "pull_request": 3,
         "issue": 1,
         "commit": 33
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimplePhysicsEngine": 3,
+        "Simple-XX/SimpleCompiler": 33,
+        "Simple-XX/SimpleGameEngine": 1
       }
     },
     {
@@ -411,6 +546,13 @@
       "breakdown": {
         "commit": 3,
         "issue_comment": 8
+      },
+      "repoBreakdown": {
+        "Simple-XX/OSPP": 1,
+        "Simple-XX/SimpleKernel": 2,
+        "MRNIU/nzh_factorio_mod": 1,
+        "MRNIU/SimpleKernel": 6,
+        "MRNIU/MRNIU.github.io": 1
       }
     },
     {
@@ -422,6 +564,9 @@
       ],
       "breakdown": {
         "issue_comment": 3
+      },
+      "repoBreakdown": {
+        "MRNIU/SimpleKernel": 3
       }
     },
     {
@@ -435,6 +580,10 @@
       "breakdown": {
         "issue_comment": 2,
         "issue": 26
+      },
+      "repoBreakdown": {
+        "MRNIU/SimpleKernel": 15,
+        "Simple-XX/SimpleKernel": 13
       }
     },
     {
@@ -448,6 +597,9 @@
         "issue_comment": 2,
         "issue": 6,
         "pull_request": 3
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 11
       }
     },
     {
@@ -462,6 +614,10 @@
         "issue_comment": 1,
         "commit": 34,
         "pull_request": 11
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 30,
+        "MRNIU/nzh_factorio_mod": 16
       }
     },
     {
@@ -477,6 +633,11 @@
         "commit": 75,
         "pull_request": 18,
         "issue_comment": 9
+      },
+      "repoBreakdown": {
+        "MRNIU/nzh_factorio_mod": 4,
+        "Simple-XX/OSPP": 3,
+        "Simple-XX/SimpleKernel": 95
       }
     },
     {
@@ -492,6 +653,11 @@
         "commit": 32,
         "issue_comment": 1,
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 29,
+        "Simple-XX/OSPP": 3,
+        "Simple-XX/SimpleGameEngine": 2
       }
     },
     {
@@ -503,6 +669,9 @@
       ],
       "breakdown": {
         "issue": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 1
       }
     },
     {
@@ -515,6 +684,9 @@
       "breakdown": {
         "issue_comment": 2,
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleGameEngine": 3
       }
     },
     {
@@ -526,6 +698,9 @@
       ],
       "breakdown": {
         "commit": 2
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 2
       }
     },
     {
@@ -537,6 +712,9 @@
       ],
       "breakdown": {
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "haiku/website": 1
       }
     },
     {
@@ -554,6 +732,12 @@
         "issue": 2,
         "commit": 11,
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "haiku/website": 3,
+        "MRNIU/libcxxrt": 1,
+        "MRNIU/FreeRTOS-PortentaH7": 1,
+        "Simple-XX/SimpleKernel": 11
       }
     },
     {
@@ -574,6 +758,15 @@
         "pull_request": 2,
         "commit": 6,
         "review": 1
+      },
+      "repoBreakdown": {
+        "haiku/website": 3,
+        "MRNIU/resume": 1,
+        "Simple-XX/SimpleKernel": 4,
+        "hzcx998/XBook": 1,
+        "EugeneLiu/translationCSAPP": 2,
+        "gsoc-cn/gsoc-cn": 1,
+        "Simple-XX/OSPP": 1
       }
     },
     {
@@ -587,6 +780,10 @@
       "breakdown": {
         "commit": 13,
         "pull_request": 9
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 18,
+        "MRNIU/resume": 4
       }
     },
     {
@@ -598,6 +795,9 @@
       ],
       "breakdown": {
         "commit": 11
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 11
       }
     },
     {
@@ -609,6 +809,9 @@
       ],
       "breakdown": {
         "commit": 5
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 5
       }
     },
     {
@@ -622,6 +825,9 @@
         "commit": 103,
         "issue_comment": 2,
         "pull_request": 9
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 114
       }
     },
     {
@@ -635,6 +841,10 @@
       "breakdown": {
         "issue_comment": 1,
         "commit": 18
+      },
+      "repoBreakdown": {
+        "MRNIU/SimpleKernel": 1,
+        "Simple-XX/SimpleKernel": 18
       }
     },
     {
@@ -649,6 +859,10 @@
         "commit": 68,
         "pull_request": 13,
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 81,
+        "MRNIU/SimpleKernel": 1
       }
     },
     {
@@ -662,6 +876,10 @@
       "breakdown": {
         "commit": 21,
         "issue": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 18,
+        "Simple-XX/SimpleCompiler": 4
       }
     },
     {
@@ -674,6 +892,9 @@
       "breakdown": {
         "commit": 164,
         "pull_request": 3
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 167
       }
     },
     {
@@ -687,6 +908,10 @@
       "breakdown": {
         "commit": 64,
         "pull_request": 7
+      },
+      "repoBreakdown": {
+        "Simple-XX/OSPP": 1,
+        "Simple-XX/SimpleKernel": 70
       }
     },
     {
@@ -703,6 +928,12 @@
         "issue_comment": 4,
         "commit": 33,
         "issue": 1
+      },
+      "repoBreakdown": {
+        "HUST-OS/xv6-k210": 4,
+        "Simple-XX/SimpleKernel": 32,
+        "Alinshans/MyTinySTL": 1,
+        "Simple-XX/OSPP": 1
       }
     },
     {
@@ -716,6 +947,10 @@
       "breakdown": {
         "commit": 173,
         "pull_request": 15
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 185,
+        "Simple-XX/OSPP": 3
       }
     },
     {
@@ -728,6 +963,10 @@
       ],
       "breakdown": {
         "issue": 2
+      },
+      "repoBreakdown": {
+        "GrowingGit/GitHub-Chinese-Top-Charts": 1,
+        "GitHubDaily/GitHubDaily": 1
       }
     },
     {
@@ -742,6 +981,10 @@
         "issue_comment": 1,
         "commit": 41,
         "pull_request": 10
+      },
+      "repoBreakdown": {
+        "MRNIU/libcxxrt": 1,
+        "Simple-XX/SimpleKernel": 51
       }
     },
     {
@@ -754,6 +997,9 @@
       "breakdown": {
         "commit": 46,
         "issue_comment": 3
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 49
       }
     },
     {
@@ -767,6 +1013,9 @@
         "pull_request": 7,
         "commit": 15,
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 23
       }
     },
     {
@@ -781,6 +1030,11 @@
       "breakdown": {
         "commit": 12,
         "pull_request": 4
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 14,
+        "Simple-XX/SimpleGameEngine": 1,
+        "Simple-XX/tools": 1
       }
     },
     {
@@ -795,6 +1049,11 @@
       "breakdown": {
         "commit": 104,
         "pull_request": 19
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 121,
+        "SynestiaOS/SynestiaOS": 1,
+        "Homebrew/homebrew-core": 1
       }
     },
     {
@@ -808,6 +1067,10 @@
       "breakdown": {
         "commit": 24,
         "pull_request": 2
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 24,
+        "SynestiaOS/SynestiaOS": 2
       }
     },
     {
@@ -822,6 +1085,10 @@
         "issue": 1,
         "commit": 7,
         "issue_comment": 4
+      },
+      "repoBreakdown": {
+        "MRNIU/FreeRTOS-PortentaH7": 4,
+        "Simple-XX/SimpleKernel": 8
       }
     },
     {
@@ -838,6 +1105,13 @@
       "breakdown": {
         "issue_comment": 1,
         "commit": 10
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleCompiler": 1,
+        "MRNIU/MRNIU": 1,
+        "MRNIU/FreeRTOS-PortentaH7": 7,
+        "Simple-XX/OSPP": 1,
+        "Simple-XX/SimpleKernel": 1
       }
     },
     {
@@ -850,6 +1124,10 @@
       ],
       "breakdown": {
         "commit": 10
+      },
+      "repoBreakdown": {
+        "MRNIU/FreeRTOS-PortentaH7": 8,
+        "Simple-XX/OSPP": 2
       }
     },
     {
@@ -869,6 +1147,14 @@
         "commit": 7,
         "pull_request": 2,
         "issue": 2
+      },
+      "repoBreakdown": {
+        "arduino/summer-of-code": 3,
+        "Simple-XX/OSPP": 5,
+        "Simple-XX/SimpleCompiler": 1,
+        "MRNIU/FreeRTOS-PortentaH7": 1,
+        "arduino-libraries/Keyboard": 1,
+        "gsoc-cn/gsoc-cn": 10
       }
     },
     {
@@ -884,6 +1170,11 @@
         "issue_comment": 4,
         "issue": 1,
         "commit": 11
+      },
+      "repoBreakdown": {
+        "arduino-libraries/Keyboard": 4,
+        "NicoHood/HID": 1,
+        "Simple-XX/SimpleKernel": 11
       }
     },
     {
@@ -901,6 +1192,12 @@
         "pull_request": 1,
         "commit": 12,
         "issue": 1
+      },
+      "repoBreakdown": {
+        "arduino/summer-of-code": 3,
+        "arduino-libraries/Keyboard": 3,
+        "Simple-XX/SimpleKernel": 12,
+        "hzcx998/XBook": 1
       }
     },
     {
@@ -917,6 +1214,11 @@
         "pull_request": 5,
         "issue_comment": 1,
         "issue": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 46,
+        "Simple-XX/SimpleCompiler": 1,
+        "hzcx998/XBook": 2
       }
     },
     {
@@ -930,6 +1232,10 @@
       "breakdown": {
         "commit": 27,
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 18,
+        "Simple-XX/SimpleCompiler": 10
       }
     },
     {
@@ -944,6 +1250,10 @@
         "commit": 42,
         "issue_comment": 11,
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 42,
+        "Homebrew/homebrew-core": 12
       }
     },
     {
@@ -957,6 +1267,10 @@
       "breakdown": {
         "commit": 7,
         "issue_comment": 2
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 7,
+        "Homebrew/homebrew-core": 2
       }
     },
     {
@@ -971,6 +1285,10 @@
         "commit": 10,
         "issue_comment": 1,
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 10,
+        "Homebrew/homebrew-core": 2
       }
     },
     {
@@ -982,6 +1300,9 @@
       ],
       "breakdown": {
         "commit": 9
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 9
       }
     },
     {
@@ -993,6 +1314,9 @@
       ],
       "breakdown": {
         "pull_request": 2
+      },
+      "repoBreakdown": {
+        "alibaba/AliOS-Things": 2
       }
     },
     {
@@ -1004,6 +1328,9 @@
       ],
       "breakdown": {
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "alibaba/AliOS-Things": 1
       }
     },
     {
@@ -1015,6 +1342,9 @@
       ],
       "breakdown": {
         "issue_comment": 4
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 4
       }
     },
     {
@@ -1028,6 +1358,10 @@
       "breakdown": {
         "issue_comment": 9,
         "commit": 2
+      },
+      "repoBreakdown": {
+        "alibaba/AliOS-Things": 9,
+        "Simple-XX/SimpleKernel": 2
       }
     },
     {
@@ -1041,6 +1375,10 @@
       "breakdown": {
         "commit": 4,
         "pull_request": 2
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 4,
+        "996icu/996.ICU": 2
       }
     },
     {
@@ -1056,6 +1394,11 @@
         "commit": 17,
         "issue_comment": 2,
         "pull_request": 2
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 17,
+        "EugeneLiu/translationCSAPP": 2,
+        "haiku/website": 2
       }
     },
     {
@@ -1070,6 +1413,11 @@
       "breakdown": {
         "commit": 2,
         "issue_comment": 3
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 2,
+        "Homebrew/homebrew-core": 2,
+        "EugeneLiu/translationCSAPP": 1
       }
     },
     {
@@ -1087,6 +1435,12 @@
         "issue_comment": 2,
         "pull_request": 2,
         "issue": 4
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 31,
+        "Homebrew/homebrew-core": 3,
+        "Simple-XX/SimpleCompiler": 2,
+        "ruanyf/weekly": 1
       }
     },
     {
@@ -1104,6 +1458,12 @@
         "issue_comment": 1,
         "pull_request": 2,
         "issue": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 45,
+        "Homebrew/homebrew-core": 1,
+        "CasterWx/AntzOS": 1,
+        "521xueweihan/HelloGitHub": 1
       }
     },
     {
@@ -1121,6 +1481,13 @@
         "issue_comment": 6,
         "pull_request": 5,
         "commit": 2
+      },
+      "repoBreakdown": {
+        "EugeneLiu/translationCSAPP": 5,
+        "Homebrew/homebrew-core": 4,
+        "haiku/website": 1,
+        "Simple-XX/SimpleKernel": 2,
+        "ApolloZhu/Dynamic-Dark-Mode": 1
       }
     },
     {
@@ -1138,6 +1505,12 @@
         "commit": 15,
         "pull_request": 2,
         "issue_comment": 5
+      },
+      "repoBreakdown": {
+        "ApolloZhu/Dynamic-Dark-Mode": 1,
+        "Simple-XX/SimpleKernel": 13,
+        "Simple-XX/SimpleCompiler": 2,
+        "Homebrew/homebrew-core": 7
       }
     },
     {
@@ -1149,6 +1522,9 @@
       ],
       "breakdown": {
         "commit": 7
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 7
       }
     },
     {
@@ -1161,6 +1537,9 @@
       "breakdown": {
         "commit": 7,
         "issue": 2
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 9
       }
     },
     {
@@ -1172,6 +1551,9 @@
       ],
       "breakdown": {
         "commit": 11
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 11
       }
     },
     {
@@ -1187,6 +1569,10 @@
         "issue": 4,
         "commit": 30,
         "pull_request": 5
+      },
+      "repoBreakdown": {
+        "atom/atom": 3,
+        "Simple-XX/SimpleKernel": 39
       }
     },
     {
@@ -1198,6 +1584,9 @@
       ],
       "breakdown": {
         "commit": 12
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 12
       }
     },
     {
@@ -1211,6 +1600,10 @@
       "breakdown": {
         "commit": 1,
         "issue_comment": 1
+      },
+      "repoBreakdown": {
+        "Simple-XX/SimpleKernel": 1,
+        "falvaro/pme_parser": 1
       }
     },
     {
@@ -1229,6 +1622,13 @@
         "pull_request": 1,
         "commit": 5,
         "issue": 1
+      },
+      "repoBreakdown": {
+        "haiku/website": 2,
+        "xitu/tensorflow-docs": 2,
+        "falvaro/seshat": 1,
+        "Simple-XX/SimpleKernel": 5,
+        "TeamStuQ/skill-map": 1
       }
     },
     {
@@ -1244,6 +1644,11 @@
         "issue_comment": 3,
         "issue": 2,
         "pull_request": 1
+      },
+      "repoBreakdown": {
+        "racket/string-constants": 3,
+        "tyrchen/racket-book": 1,
+        "racket/racket": 2
       }
     },
     {
@@ -1255,6 +1660,9 @@
       ],
       "breakdown": {
         "issue": 1
+      },
+      "repoBreakdown": {
+        "xitu/gold-miner": 1
       }
     },
     {
@@ -1267,6 +1675,9 @@
       "breakdown": {
         "issue_comment": 2,
         "issue": 1
+      },
+      "repoBreakdown": {
+        "xitu/gold-miner": 3
       }
     }
   ]

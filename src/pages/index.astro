@@ -11,11 +11,10 @@ import "../styles/timeline.css";
 import { getMessages, t } from "../i18n/index.ts";
 
 import indexData from "../../data/index.json";
-import marchData from "../../data/2026-03.json";
 
 import { createRequire } from "node:module";
+import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 const configPath = path.resolve(process.cwd(), "devlog.config.cjs");
 const require = createRequire(import.meta.url);
 const config = require(configPath);
@@ -23,6 +22,8 @@ const locale = config.locale || "en";
 const m = getMessages(locale);
 
 const activeMonth = indexData.months[0]?.key || "2026-03";
+const firstMonthFile = path.resolve(process.cwd(), "data", `${activeMonth}.json`);
+const firstMonthData = JSON.parse(fs.readFileSync(firstMonthFile, "utf-8"));
 const noDataMsg = t(m, "empty.noData");
 const allMonthKeys = indexData.months.map((m: any) => m.key);
 ---
@@ -72,7 +73,7 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
         <!-- First month rendered at build time -->
         <div class="month-section" data-month-section={activeMonth} id={`month-${activeMonth}`}>
           <h3 class="month-divider">{new Date(activeMonth + '-01').toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</h3>
-          {marchData.events.map((event: any) => (
+          {firstMonthData.events.map((event: any) => (
             <div class="event-wrapper" data-event-type={event.type}>
               <EventCard event={event} />
             </div>

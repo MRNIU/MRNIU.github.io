@@ -15,9 +15,14 @@ const { months } = Astro.props;
 
 const repoCounts = new Map<string, number>();
 for (const month of months) {
-  const perRepo = month.eventCount / (month.repos.length || 1);
-  for (const repo of month.repos) {
-    repoCounts.set(repo, (repoCounts.get(repo) || 0) + Math.round(perRepo));
+  if (month.repoBreakdown) {
+    for (const [repo, count] of Object.entries(month.repoBreakdown)) {
+      repoCounts.set(repo, (repoCounts.get(repo) || 0) + (count as number));
+    }
+  } else {
+    for (const repo of month.repos) {
+      repoCounts.set(repo, (repoCounts.get(repo) || 0) + 1);
+    }
   }
 }
 
