@@ -17,6 +17,18 @@
       }
     },
     {
+      "id": "comment-rust-embedded/aarch64-cpu-77-0",
+      "type": "issue_comment",
+      "ts": "2026-04-02T01:59:45Z",
+      "repo": "rust-embedded/aarch64-cpu",
+      "semantic": null,
+      "data": {
+        "issueNumber": 77,
+        "issueTitle": "Add TLBI (TLB Invalidate) instruction wrappers with typed operands",
+        "body": "> As per https://github.com/rust-embedded/wg/blob/master/CODE_OF_CONDUCT.md#ai-tool-use-policy, please can you confirm that as the author you have reviewed and tested this contribution before submission and that you understand the contents of your submission?\r\n\r\nI confirm that I have reviewed the content. AI participated in the design discussions, but I made the final decisions and manually verified the code.\r\n\r\nVerified assembly output on [godbolt](https://godbolt.org/z/sa996Wz3d)\r\nQEMU tests via [SimpleKernel](https://github.com/MRNIU/SimpleKernel/commit/a9cc61632)"
+      }
+    },
+    {
       "id": "commit-bde064cbb4c0c1159767bce8c9ea90ede16f6ddc",
       "type": "commit",
       "ts": "2026-04-01T01:08:42Z",
