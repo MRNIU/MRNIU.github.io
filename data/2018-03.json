@@ -39,6 +39,61 @@
       }
     },
     {
+      "id": "review-xitu/tensorflow-docs-21-2018-03-22T07:08:10Z",
+      "type": "review",
+      "ts": "2018-03-22T07:08:10Z",
+      "repo": "xitu/tensorflow-docs",
+      "semantic": null,
+      "data": {
+        "prNumber": 21,
+        "prTitle": "translate tutorials/wide_and_deep.md",
+        "state": "COMMENTED",
+        "body": "只有一点小问题,麻烦核对下.",
+        "inlineComments": [
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 23,
+            "body": "‘它对于具有稀疏输入特征的通用大规模回归和分类问题’, `通用` 换成 `一般` 或者 `普通`,感觉更通顺."
+          },
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 32,
+            "body": "`Wide&Deep` 是不是换成中文?否则感觉前后不一致."
+          },
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 66,
+            "body": "`训练一个教程中描述的线性模型` , 这里突然换成 `线性` 有点突兀."
+          },
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 110,
+            "body": "`宽模型是一个线性模型` 这里是不是用 `广度模型` ?  统一一下."
+          },
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 161,
+            "body": "`一些类别列的multi-hot表示。` 请在英文部分前后添加空格."
+          },
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 197,
+            "body": "`维数为8` 数字前面需要一个空格."
+          },
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 255,
+            "body": "`Wide&Deep Learning` 这里需要翻译一下?"
+          },
+          {
+            "path": "tutorials/wide_and_deep.md",
+            "line": 23,
+            "body": "`Wide＆Deep Learning` 这里不需要翻译吗?"
+          }
+        ]
+      }
+    },
+    {
       "id": "comment-xitu/tensorflow-docs-21-161",
       "type": "issue_comment",
       "ts": "2018-03-22T05:31:44Z",
@@ -60,6 +115,21 @@
         "issueNumber": 15,
         "issueTitle": "Build error: 'values.h' file not found",
         "body": "me too,is there anyone can fix?"
+      }
+    },
+    {
+      "id": "ai-roast-2018-03-05",
+      "type": "ai_roast",
+      "ts": "2018-03-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-03-05 ~ 2018-03-11",
+        "content": "5次提交里有2次叫\"Update\"——SimpleKernel的诞生始于一个bootsect.s和两条毫无信息量的commit message。好消息是你编译通过了，坏消息是你的commit message没通过code review。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -138,21 +208,6 @@
         "title": "怎么没有操作系统、编译原理这些底层的东西?",
         "state": "closed",
         "body": ""
-      }
-    },
-    {
-      "id": "ai-roast-2018-03-05",
-      "type": "ai_roast",
-      "ts": "2018-03-11T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-03-05 ~ 2018-03-11",
-        "content": "5次提交里有2次叫\"Update\"——SimpleKernel的诞生始于一个bootsect.s和两条毫无信息量的commit message。好消息是你编译通过了，坏消息是你的commit message没通过code review。",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]
