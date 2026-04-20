@@ -2,6 +2,201 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "commit-4c0fcf66307cb794985cd27103318f211e686270",
+      "type": "commit",
+      "ts": "2026-04-20T01:17:48Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "4c0fcf66307cb794985cd27103318f211e686270",
+        "message": "Refactor into stage pipeline, fix blueprint insert plan + Gleba trees (1.2.0)\n\nRestructure into a clean_area -> place_resources -> apply_blueprint -> spawn_spider\npipeline driven by a single planets.lua config table. Rename area_cleaner,\ngenerate_resources, legendary_spider, blueprint modules to verb-first names.\n\nBugs fixed:\n- Fluid source amount overflowed uint32 (8192*1024*512 = 2^32); clamped to\n  0xFFFFFFFF so oil wells / geysers / vents / brines no longer seed empty.\n- Blueprint module / filter / ammo requests did not land in revived entities\n  on Factorio 2.0. The old code iterated LuaEntity::item_requests (flat\n  {name, quality, count} view) but parsed it as BlueprintInsertPlan, so\n  plan.id was always nil and nothing was inserted. apply_blueprint now reads\n  LuaEntity::insert_plan (the per-slot BlueprintInsertPlan array) and calls\n  revive with return_item_request_proxy = true. Productivity modules inside\n  recycler blueprints now correctly land in the module slot.\n- AABB in apply_blueprint now transforms blueprint-local coordinates to\n  surface coordinates via anchor + direction.\n- Redundant manual set_tiles and resource/cliff second-pass removed.\n- Vulcanus Demolisher scan switched to ring chunk generation (~70% cheaper).\n- Spider spawn retries find_non_colliding_position at radii 128, 256, 512\n  before falling back to origin.\n- Locale key mismatch between info.json name and locale cfg fixed.\n\nFeatures added:\n- Nauvis and Gleba enemy cleanup (256-tile expand ring) sweeps spawners,\n  worms, and pentapod nests beyond the landing zone.\n- Gleba overgrowth soil bands are pre-planted with mature yumako trees and\n  jellystem trees (~50% density). tick_grown = game.tick makes them\n  immediately harvestable.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 873,
+        "deletions": 943
+      }
+    },
+    {
+      "id": "commit-0134afd9b10d07282ee3b829c32bd0058f1b332b",
+      "type": "commit",
+      "ts": "2026-04-19T14:41:03Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "0134afd9b10d07282ee3b829c32bd0058f1b332b",
+        "message": "Rewrite starter flow with auto-packer, personal/team split, and map-spawn chest cache (1.2.0)\n\nReplaces the hand-coded equipment-grid coordinates with a first-fit\npacker driven by a prioritised (name, count) wishlist, splits the\nstarter inventory into a per-player personal pack and a one-time team\nresource cache that is deposited into legendary steel chests anchored\nto LuaForce::get_spawn_position (so BestLanding's landing blueprint\ncannot push the chests out of view), and refreshes README, CLAUDE.md,\nlocale, and changelog to match.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 548,
+        "deletions": 431
+      }
+    },
+    {
+      "id": "commit-1c0b09f7a7fc1ac3065a6a63ab4d8bcf5bd19e8e",
+      "type": "commit",
+      "ts": "2026-04-19T13:16:43Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "1c0b09f7a7fc1ac3065a6a63ab4d8bcf5bd19e8e",
+        "message": "Add sibling-mod cross-references and .gitattributes\n\n- CLAUDE.md: new \"兄弟 Mod\" section pointing at the other NZH startup\n  mods and the nzh_factorio_mod meta-pack; flags feature-overlap as a\n  \"stop and ask\" case for per-mod Claude Code sessions.\n- .gitattributes: normalize line endings to LF via `* text=auto eol=lf`;\n  explicit binary for .png/.zip. Eliminates the CRLF warnings on commit.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 15,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-cd1e739be00110aefef36d3d8960c0372b8c06b2",
+      "type": "commit",
+      "ts": "2026-04-19T13:16:42Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "cd1e739be00110aefef36d3d8960c0372b8c06b2",
+        "message": "Add sibling-mod cross-references and .gitattributes\n\n- CLAUDE.md: new \"兄弟 Mod\" section pointing at the other NZH startup\n  mods and the nzh_factorio_mod meta-pack; flags feature-overlap as a\n  \"stop and ask\" case for per-mod Claude Code sessions.\n- .gitattributes: normalize line endings to LF via `* text=auto eol=lf`;\n  explicit binary for .png/.zip. Eliminates the CRLF warnings on commit.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 13,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-9092ee1807d4d0b0a23f595237b1992f02e5a097",
+      "type": "commit",
+      "ts": "2026-04-19T13:16:42Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "9092ee1807d4d0b0a23f595237b1992f02e5a097",
+        "message": "Add sibling-mod cross-references and .gitattributes\n\n- CLAUDE.md: new \"兄弟 Mod\" section pointing at the other NZH startup\n  mods and the nzh_factorio_mod meta-pack; flags feature-overlap as a\n  \"stop and ask\" case for per-mod Claude Code sessions.\n- .gitattributes: normalize line endings to LF via `* text=auto eol=lf`;\n  explicit binary for .png/.zip. Eliminates the CRLF warnings on commit.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 15,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-79708966e7942914e1fbc5c083a4c5ef81b91a7a",
+      "type": "commit",
+      "ts": "2026-04-19T13:16:42Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": null,
+      "data": {
+        "sha": "79708966e7942914e1fbc5c083a4c5ef81b91a7a",
+        "message": "Add sibling-mod cross-references and .gitattributes\n\n- CLAUDE.md: new \"兄弟 Mod\" section pointing at the other NZH startup\n  mods and the nzh_factorio_mod meta-pack; flags feature-overlap as a\n  \"stop and ask\" case for per-mod Claude Code sessions.\n- .gitattributes: normalize line endings to LF via `* text=auto eol=lf`;\n  explicit binary for .png/.zip. Eliminates the CRLF warnings on commit.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 15,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-d89fe54c99e8a4acd7f826b1a2aaebc26154f771",
+      "type": "commit",
+      "ts": "2026-04-19T13:11:30Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "d89fe54c99e8a4acd7f826b1a2aaebc26154f771",
+        "message": "Bump base requirement to 2.0.76 (1.1.5)\n\n- info.json: base >= 2.0.55 -> base >= 2.0.76.\n- README, CLAUDE.md: reflect new minimum Factorio version.\n- Added WSL/Windows environment note and Lua syntax-check hint to CLAUDE.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 12,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-7f7376e3a900eab2a10bf34df26b3de4e6303553",
+      "type": "commit",
+      "ts": "2026-04-19T13:11:25Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": null,
+      "data": {
+        "sha": "7f7376e3a900eab2a10bf34df26b3de4e6303553",
+        "message": "Bump base requirement to 2.0.76 (1.2.1)\n\n- info.json: base >= 2.0.55 -> base >= 2.0.76.\n- README, CLAUDE.md: reflect new minimum Factorio version.\n- Added WSL/Windows environment note and Lua syntax-check hint to CLAUDE.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 12,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-d35b0433500d405dcf80a4bd162fe092707bfec6",
+      "type": "commit",
+      "ts": "2026-04-19T13:11:18Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "d35b0433500d405dcf80a4bd162fe092707bfec6",
+        "message": "Bump base requirement to 2.0.76 (1.1.3)\n\n- info.json: base >= 2.0.55 -> base >= 2.0.76.\n- README, CLAUDE.md: reflect new minimum Factorio version.\n- Added WSL/Windows environment note and Lua syntax-check hint to CLAUDE.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 12,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-c6f1a712f4ade0eacb118f8aeeeccba3d9137733",
+      "type": "commit",
+      "ts": "2026-04-19T13:11:16Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "c6f1a712f4ade0eacb118f8aeeeccba3d9137733",
+        "message": "Bump base requirement to 2.0.76 (2.0.1)\n\n- info.json: base >= 2.0.55 -> base >= 2.0.76.\n- README, CLAUDE.md: reflect new minimum Factorio version.\n- Added WSL/Windows environment note and Lua syntax-check hint to CLAUDE.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 11,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-cce6f3e0635ff2f58e93b03d6aba80097ffe7d44",
+      "type": "commit",
+      "ts": "2026-04-19T13:01:51Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "cce6f3e0635ff2f58e93b03d6aba80097ffe7d44",
+        "message": "Ignore .vscode/settings.json\n\nFactorioModDebug writes user-specific absolute paths into this file, so\nit should not be tracked. Matches the existing pattern in LegendaryShipStart\nand BestLanding.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 1,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-23c158e7133f9f3613a7ee961557ea928edd813c",
+      "type": "commit",
+      "ts": "2026-04-19T13:00:18Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "23c158e7133f9f3613a7ee961557ea928edd813c",
+        "message": "Add per-planet blueprints, fix chunk-gen batching, clean up (1.1.4)\n\nFeature:\n- Added starter blueprints for Nauvis, Vulcanus, Fulgora, Gleba, and Aquilo.\n  Blueprints are matched to the surface by case-insensitive name.\n- Added Vulcanus Demolisher (segmented-unit) purge in a 300-tile ring\n  around the landing area; their territories reach beyond the cleared\n  square so body-inside-area filtering alone is not enough.\n\nBug fixes:\n- force_generate_chunk_requests() was called inside the chunk-request loop,\n  turning a single batched generation into O(n*m) synchronous waits (roughly\n  196 blocking calls for the 448x448 landing square). Moved the synchronous\n  wait to after the full request batch.\n\nCleanup:\n- Removed unused added_items debug list in legendary_spider's\n  add_items_to_inventory; it was built but never read.\n- Dropped .x-or-[1] dual-access fallback in area_cleaner; no caller ever\n  used index-style tables and operator precedence made the -1 adjustment\n  in the fallback path never fire anyway.\n- Replaced the dead ((i-1) % #resources) + 1 in generate_resources_pattern\n  with plain ipairs.\n\nDocs:\n- Rewrote README in English only.\n- Added CLAUDE.md with the four-step landing pipeline, Vulcanus caveat,\n  blueprint-apply details, and Factorio API references.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 268,
+        "deletions": 75
+      }
+    },
+    {
+      "id": "commit-82de5aec029b8e97c0be5e8d523e8ca189477221",
+      "type": "commit",
+      "ts": "2026-04-19T12:59:39Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": null,
+      "data": {
+        "sha": "82de5aec029b8e97c0be5e8d523e8ca189477221",
+        "message": "Add biter_egg ship, clean up dead code and docs (1.2.0)\n\n- Added biter_egg as a new entry in the starter fleet.\n- Removed dead storage.pending_platforms branch in CreateSingleShip; there\n  was no on_surface_created consumer, so stored platform indices were\n  never drained. Missing surface now just logs and skips.\n- Rewrote README in English only.\n- Added CLAUDE.md documenting the blueprint-apply pipeline (import_stack,\n  force_generate_chunks, set_tiles, build_blueprint + revive with\n  item_request_proxy), state model, and Factorio API references.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 116,
+        "deletions": 24
+      }
+    },
+    {
+      "id": "commit-066d2accd6df66b82f26d83ce55a465194efaea8",
+      "type": "commit",
+      "ts": "2026-04-19T12:58:59Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "066d2accd6df66b82f26d83ce55a465194efaea8",
+        "message": "Clean up dead code and docs (1.1.2)\n\n- Removed unused added_items debug list from give_legendary_items; the\n  string list was built but never read.\n- Rewrote README in English only (bilingual entries dropped).\n- Added CLAUDE.md with architecture notes, equipment-grid layout caveats,\n  Factorio API references, and the project's code/doc language conventions.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 191,
+        "deletions": 124
+      }
+    },
+    {
+      "id": "commit-59df352b82c45551c5098d85d9c47fb75555d344",
+      "type": "commit",
+      "ts": "2026-04-19T12:58:31Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "59df352b82c45551c5098d85d9c47fb75555d344",
+        "message": "Refactor into dependency-only meta-pack (2.0.0)\n\nRemoved all Lua code and README asset images. The mod now exists purely\nas a dependency container that pulls in LegendaryMechStart, LegendaryShipStart,\nand BestLanding, plus a curated set of optional community mods.\n\n- Deleted control.lua, data*.lua, settings.lua, utils.lua, chunk_utils.lua,\n  area_cleaner.lua, generate_resources.lua, legendary_items.lua.\n- info.json: added hard deps on the three startup mods; English-only description.\n- Rewrote README in English; added CLAUDE.md (Chinese) describing the\n  meta-pack role and language conventions.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 148,
+        "deletions": 1060
+      }
+    },
+    {
       "id": "ai-roast-2026-03-30",
       "type": "ai_roast",
       "ts": "2026-04-05T00:00:00Z",

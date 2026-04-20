@@ -1,31 +1,39 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-04-04T04:13:54.651Z",
+  "generatedAt": "2026-04-20T03:05:34.609Z",
   "stats": {
-    "totalCommits": 1984,
+    "totalCommits": 1999,
     "totalPRs": 223,
     "totalReviews": 6,
     "totalIssues": 80,
     "totalComments": 168,
     "activeRepos": 63,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-04-05T00:00:00Z"
+    "latestEvent": "2026-04-20T01:17:48Z"
   },
   "months": [
     {
       "key": "2026-04",
       "file": "2026-04.json",
-      "eventCount": 12,
+      "eventCount": 27,
       "repos": [
         "MRNIU/MRNIU.github.io",
+        "MRNIU/factorio_BestLanding",
+        "MRNIU/factorio_LegendaryMechStart",
+        "MRNIU/factorio_LegendaryShipStart",
+        "MRNIU/nzh_factorio_mod",
         "rust-embedded/aarch64-cpu"
       ],
       "breakdown": {
+        "commit": 25,
         "ai_roast": 1,
-        "issue_comment": 1,
-        "commit": 10
+        "issue_comment": 1
       },
       "repoBreakdown": {
+        "MRNIU/factorio_BestLanding": 4,
+        "MRNIU/factorio_LegendaryMechStart": 5,
+        "MRNIU/nzh_factorio_mod": 3,
+        "MRNIU/factorio_LegendaryShipStart": 3,
         "rust-embedded/aarch64-cpu": 1,
         "MRNIU/MRNIU.github.io": 10
       }
