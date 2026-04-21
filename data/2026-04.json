@@ -2,6 +2,32 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "commit-0387699723f9facb6c811ca11ff9f6dc47522e26",
+      "type": "commit",
+      "ts": "2026-04-20T13:59:58Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": null,
+      "data": {
+        "sha": "0387699723f9facb6c811ca11ff9f6dc47522e26",
+        "message": "Fix item_request_proxy handling and split apply pipeline (1.2.3)\n\n- Read proxy.insert_plan (per-slot) instead of proxy.item_requests (flat)\n  and pass return_item_request_proxy=true so the proxy is actually\n  returned — modules/ammo/fuel/filters now land in the correct\n  inventory slot on multi-inventory entities (assemblers, recyclers).\n- Wrap blueprint application in pcall so the temp inventory always gets\n  destroyed.\n- Extract the pipeline into apply_blueprint.lua; add blueprint-book\n  support via collect_pages.\n- Prefix generated platform names with \"LSS \" and migrate existing\n  saves on_configuration_changed.\n- Collapse per-ship success prints into a single summary line; keep\n  per-ship failure prints tagged with the ship name.\n- Refresh shop-ship, white-science and calcite-cruiser blueprints to\n  SA蓝图合集-undertow-26.4.9 versions.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 356,
+        "deletions": 166
+      }
+    },
+    {
+      "id": "commit-0dbf75d749bf6ea1eb4abee05e0363645f75305a",
+      "type": "commit",
+      "ts": "2026-04-20T13:58:28Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "0dbf75d749bf6ea1eb4abee05e0363645f75305a",
+        "message": "Optimize seeding hot loops, harden pipeline, dict-based blueprints (1.2.1)\n\n- Wrap each pipeline stage in pcall so a failure no longer aborts on_init.\n- Disable build smoke + event raise on bulk ore/tree/fluid create_entity.\n- Skip tile correction and entity collision pass in the 448x448 repaint.\n- Cache Gleba tree prototype lookup once instead of per planted tile.\n- Switch blueprints to dict keyed by lowercase surface name (O(1) lookup).\n- Unify clean_area interval convention to half-open.\n- Drop dead prototype guards in spawn_spider and tree maturity helpers.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 103,
+        "deletions": 71
+      }
+    },
+    {
       "id": "commit-4c0fcf66307cb794985cd27103318f211e686270",
       "type": "commit",
       "ts": "2026-04-20T01:17:48Z",
