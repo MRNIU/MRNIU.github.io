@@ -2,6 +2,45 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "commit-c8ec9d3974eb32e5e453fcc17fbfe275b803a05b",
+      "type": "commit",
+      "ts": "2026-04-25T09:57:49Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "c8ec9d3974eb32e5e453fcc17fbfe275b803a05b",
+        "message": "Fix night-vision and belt-immunity silently dropped from mech grid (1.3.1)\n\nTrim laser-defense 4->3 and battery-mk3 8->7 to bring wishlist from 260 to 255\ncells so first-fit places night-vision, belt-immunity, and one solar filler.\nDocument the wishlist <= 255 invariant in CLAUDE.md.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 21,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-298f8f5ccdb5525d5cebcd730797de3ffd416ccf",
+      "type": "commit",
+      "ts": "2026-04-25T08:40:36Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "298f8f5ccdb5525d5cebcd730797de3ffd416ccf",
+        "message": "Trim and rebalance team cache: drop boiler/steam-engine/lab, split substation, normalize pump quality (1.3.0)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 20,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-fc37dfb9f087fc78c6dcbfb1aecef5c2c3ffda0f",
+      "type": "commit",
+      "ts": "2026-04-25T08:40:20Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "fc37dfb9f087fc78c6dcbfb1aecef5c2c3ffda0f",
+        "message": "Add runtime-global setting to toggle starter blueprint application (1.3.0)\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+        "additions": 47,
+        "deletions": 2
+      }
+    },
+    {
       "id": "commit-0387699723f9facb6c811ca11ff9f6dc47522e26",
       "type": "commit",
       "ts": "2026-04-20T13:59:58Z",
