@@ -2,6 +2,357 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "commit-8021174877f64a2978e4def4bd9331d311375214",
+      "type": "commit",
+      "ts": "2026-04-28T10:03:15Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "8021174877f64a2978e4def4bd9331d311375214",
+        "message": "docs(review): 2026-04-28 架构 review plan 落地 + AGENTS.md FREEZE 段\n\nADR sprint (ADR-0014 全 Phase → Phase 6 EventBus → ADR-0015/0016 → loop 升级)\n→ 接口/数据结构 review + 模块拆分 + 规范扫描（按 crate 切片可并行）→ findings 整合。\n退出标准 5 项全勾才解冻；freeze 期不接受新 ADR / public type 变更 / 新模块。\n预计 ~2026-05-08 解冻。\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 213,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-e66ea95c8dd09c0c58e37e62f480b69d1d141d9e",
+      "type": "commit",
+      "ts": "2026-04-28T09:35:12Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "e66ea95c8dd09c0c58e37e62f480b69d1d141d9e",
+        "message": "docs(adr-0014): Phase 3b / 4 / 5 plan 全部写完，ADR-0014 路线图落地\n\n三个 plan 互相独立、可乱序实施，覆盖 ADR-0014 spec 第九章剩余全部范围 +\n第十一章 5 项 spec-pending 决策的拍板理由。\n\n- Phase 3b（1183 行 / 9 task）：补完 Phase 3 spec 范围内 deferred 的 2 项——\n  `lookup` 节点（pure-form 配置驱动表查找，3 标量 key stringify + default\n  fallback）+ 混合输入 payload 合并语义正式拍板（Exec Object → Data 键插入；\n  Exec 标量/数组 → 包装到 \"in\" 键；Data 键冲突时覆盖 Exec）+ 部署期校验\n  Data 输入 pin id ≠ \"in\"。跨语言 fixture mixed_input_merge.jsonc 6 case 穷尽。\n\n- Phase 4（1077 行 / 10 task）：缓存生命周期与用例 4 旁路 fan-out。\n  PinDefinition 加 empty_policy（BlockUntilReady 默认 / DefaultValue / Skip）+\n  ttl_ms + block_timeout_ms。OutputCache 加 Arc<Notify> 唤醒等待者。\n  EngineError::DataPinPullTimeout 覆盖等不到值场景。PureMemo per-trace 输入哈希\n  记忆。集成测试覆盖 BlockUntilReady 超时 / TTL 过期 / DefaultValue 立即 /\n  fan-out 上游单调用 / PURE memo 命中五场景。spec 决策 1 拍板 BlockUntilReady、\n  决策 2 拍板引入 TTL。\n\n- Phase 5（779 行 / 8 task）：视觉打磨 + AI prompt PinKind 感知，标 ADR 完结。\n  节点头部色按 capability 自动着色（trigger 红 / branching 蓝 / pure 绿 /\n  默认灰蓝）+ CSS 变量主题（theme.css）+ light/dark ThemeToggle。引脚 tooltip\n  行序重组（求值语义→数据形状→描述→空槽策略→TTL）+ 中文标签函数。minimap\n  同步节点头色。AI prompt builder 在节点 inline 描述里携带 PinKind / 空槽策略 /\n  TTL。spec 决策 3/4/5 全部回写，ADR-0014 完结边界明确（后续 polish 作为\n  独立 plan，不再排进 ADR-0014 phase 编号）。\n\n实施前置：Phase 3 必须已落地（pull 路径 + is_pure_form + crates/nodes-pure/）；\nPhase 3b / 4 / 5 之间无强依赖，建议 3 → 3b → 4 → 5 顺序铺开 spec 用例覆盖度。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 3039,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-af4bd436d9f49f28dd5a8d7e8bdb12cdef3ca5d7",
+      "type": "commit",
+      "ts": "2026-04-28T09:19:12Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "af4bd436d9f49f28dd5a8d7e8bdb12cdef3ca5d7",
+        "message": "docs(adr-0014): Phase 3 plan 落地 + AGENTS.md 同步本地 memory 非派生事实\n\nPhase 3 plan：`docs/superpowers/plans/2026-04-28-adr-0014-phase-3-pure-nodes.md`\n（14 task，~14 commits 预期）。范围：新 crate `crates/nodes-pure/` 容纳零协议\n依赖纯计算节点；c2f / minutesSince 仅声明 Data 引脚 + 部署期跳过 spawn；\nRunner 首次激活 pull 路径（`src/graph/pull.rs`，含 pure-form 上游递归求值\n+ 非 pure-form 上游读 OutputCache 槽）；前端 `isPureForm` helper + 节点 DOM\n`data-pure-form` attribute + 绿头/圆角胶囊视觉（UE5 Blueprint Pure Node 风格）；\n跨语言 fixture `pure_form_matrix.jsonc` 4 配对穷尽 Rust + Vitest 共享。\n明确 out-of-scope：lookup 节点 / 4 处 PinKind ↔ 子图交叉点 / formatJson 混合\n输入 payload 合并语义 / Phase 4 缓存策略 / 节点头部色按 capability 着色 /\nAI prompt 携带 pure-form 信息——各自后续独立 plan。\n\nAGENTS.md 同步本地 memory 中\"非派生\"约定（跨机器可继续工作）：\n- `### Memory System` 索引补齐 2 个新 memory 文件并新增\"跨机器协作\"段，\n  显式声明 AGENTS.md 是真值源、memory 仅 point-in-time 副本\n- 新增 `### 测试基建注意事项`（在 Testing 章节）：\n  - Vitest navigator polyfill 删除守护（`web/vitest.setup.ts`，FlowGram SDK\n    模块加载期硬依赖 `navigator.userAgent` / `language`）\n  - E2E Playwright 跑在 Chromium 而非 Tauri webview（`hasTauriRuntime() = false`，\n    IPC 不可用，断言\"wiring presence\"而非 IPC 真值）\n- ADR-0014 状态行 + ADR Execution Order #8 加 Phase 3 plan 路径 + 待执行标记\n\n未搬入的 memory：`user_nazh_owner.md`（Claude 行为调优，不属于项目协作上下文）；\n`project_system_architecture.md` / `project_architecture_review_2026_04.md`\n的派生信息（与 AGENTS.md 现有章节重合，搬入会噪音化）。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2279,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-92acc6b0e032f2ab81ce415d6ab97f4d1fa15b45",
+      "type": "commit",
+      "ts": "2026-04-28T08:49:30Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "92acc6b0e032f2ab81ce415d6ab97f4d1fa15b45",
+        "message": "feat(adr-0013): 恢复子图核心实施 + /simplify 清理\n\nmerge 68ab709 解决冲突时丢失的 ADR-0013 改动重写恢复，三件套全绿。\nflattenSubgraphs / 子图容器渲染 / 桥接节点 SVG / passthrough 注册全部到位。\n\n实施恢复：\n- crates/nodes-flow/src/lib.rs: 加 mod passthrough + subgraphInput / subgraphOutput\n  通过 NodeCapabilities::empty() 注册（PassthroughNode::from_definition 工厂）\n- crates/nodes-flow/Cargo.toml: dev-dep tokio macros + rt 给 passthrough.rs 内测试\n- src/registry.rs: 节点能力契约 14→16 节点 + 子图桥接 PURE 能力 expectation\n- tests/workflow.rs: passthrough_nodes_forward_payload 集成测试覆盖\n  native → subgraphInput → subgraphOutput 三段链路\n- web/src/lib/flowgram.ts: flattenSubgraphs 递归展平 + applyParameterBindings\n  {{name}} 替换 + 8 层深度上限 + 循环引用检测 + isFlattenedNode '/' 前缀过滤\n- web/src/components/flowgram/nodes/shared.ts: NazhNodeKind 加 3 kinds +\n  normalizeNodeKind / getFallbackNodeLabel / normalizeNodeConfig 分支 +\n  NodeDefinition.buildRegistryMeta 扩 isContainer / padding / selectable 等\n- web/src/components/flowgram/nodes/catalog.ts: '子图封装' 分类\n- web/src/components/flowgram/flowgram-node-library.ts: 三个 def import +\n  ALL_DEFS 入栈 + getAllNodeDefinitions export +\n  buildSubgraphPaletteJson（拖入自带 sg-in / sg-out 桥接）+ 调色板分类\n- web/src/components/FlowgramCanvas.tsx: SubCanvasRender import +\n  isBusinessFlowNode / resolveNodePortColor 子图扩展 +\n  FlowgramNodeCard 子图容器分支 + 桥接节点 SVG 渲染\n- web/src/components/flowgram/FlowgramNodeSettingsPanel.tsx: SubgraphNodeSettings\n  接入 + readNodeDraft 加 parameterBindings + buildNodeConfig 子图分支\n- web/src/components/flowgram/FlowgramNodeGlyph.tsx: 三 kind glyph fallback\n- web/src/components/flowgram/nodes/settings-shared.ts: SelectedNodeDraft 扩\n  parameterBindings: Record<string, string | number | boolean>\n- web/src/styles/flowgram.css: 子图容器 + 桥接节点 + sr-only 样式\n- web/vitest.setup.ts (新): polyfill globalThis.navigator 让 FlowGram SDK 在\n  environment: 'node' 下 import 期不崩溃；顺手修了 pre-existing 的\n  flowgram-shortcuts.test.ts 失败\n- web/vitest.config.ts: setupFiles 引入 polyfill\n- web/tsconfig.json: exclude __tests__ 屏蔽 _fixture-helpers.ts 的 node:fs /\n  __dirname 类型噪音（pre-existing 债，独立 tsconfig.test.json 留作 polish）\n\n/simplify 清理：\n- web/src/lib/flowgram.ts: SUBGRAPH_CONTAINER_TYPE / SUBGRAPH_INPUT_TYPE /\n  SUBGRAPH_OUTPUT_TYPE / SUBGRAPH_ID_SEPARATOR 4 个 const 替换裸字面量\n- extractSubgraphParameterBindings: 砍掉 data.parameterBindings 防御性\n  fallback——settings panel 唯一写路径是 config.parameterBindings，单源读\n- web/src/components/flowgram/nodes/settings-shared.ts: parameterBindings 类型\n  由 Record<string, string> 拓宽至 string | number | boolean 与 flowgram.ts\n  ParameterBindingValue 对齐（防 JSON 表单数字 / 布尔被静默 coerce）\n- tests/workflow.rs: 删 4 处 narrative WHAT 注释（function name / JSON literal\n  已自述）；nodes-flow/lib.rs 子图桥接注释精简\n\n文档同步：\n- docs/adr/0013-子图与宏系统.md: 状态 → 已实施（子图核心，2026-04-28）\n- docs/adr/README.md: 索引行 → 已实施\n- docs/superpowers/plans/2026-04-28-subgraph-implementation.md: Status 行回填\n  origin commits 3c04016..7b5ae43 → merge 68ab709 部分丢失 → 同日重写恢复\n- AGENTS.md: ADR-0013 状态升级 + 之前的 deployment 断链 tech debt 标记为已偿还\n\n未带回（独立 polish 工作）：\n- e35cb43 loop 升级为容器（与 ADR-0013 子图核心无关）\n\n验证：\n- cargo test --workspace 全 ok（含 nodes-flow 11 内部测试 + workflow.rs\n  passthrough_nodes_forward_payload 集成测试）\n- cargo clippy --workspace --all-targets -- -D warnings 干净\n- cargo fmt --all -- --check exit 0\n- npm run test 25 files / 224 cases 全绿\n- npm run build (tsc + vite) 编译干净\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 618,
+        "deletions": 16
+      }
+    },
+    {
+      "id": "commit-0b4a8f9375c65884eff015bd0ec13fda037a2fb9",
+      "type": "commit",
+      "ts": "2026-04-28T08:09:32Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "0b4a8f9375c65884eff015bd0ec13fda037a2fb9",
+        "message": "docs(adr-0013): 标注子图实施 deployment 断链 + 与 PinKind 交叉点未规划\n\nADR-0014 Phase 2 merge 后做 ADR-0013 ↔ PinKind 交叉审视时发现 origin/main\n的子图实施有 3 处部署断链——前端拖入可见但实际部署不可能：\n\n1. web/src/lib/__tests__/flowgram-subgraph.test.ts 引用 flattenSubgraphs\n   函数全仓库未定义。远端 commit 5784cd7 只 add 了 304 行 test 文件，无 impl。\n2. crates/nodes-flow/src/passthrough.rs 存在但 lib.rs 既未 mod 声明也未在\n   FlowPlugin::register 中注册——孤儿源文件，部署时 NodeRegistry 找不到\n   passthrough 类型。\n3. web/src/lib/flowgram.ts 的 toNazhWorkflowGraph 直接过滤掉 subgraph 类型\n   节点（FLOWGRAM_BUSINESS_NODE_TYPES 白名单不含 subgraph），其内部 blocks\n   也跟着被丢。原设计意图是先调 flattenSubgraphs 把内部节点提到顶层再过\n   isBusinessNode，但 flatten 缺失。\n\n变更范围：仅 AGENTS.md 文档警示，不修代码——ssXue 是 ADR-0013 实施 owner，\n应由其修通三处断链后再标\"已实施\"。同步把 ADR-0013 与 PinKind 4 处未来交叉点\n（subgraphInput/Output 无 PinKind 配置 / passthrough 默认 Any/Exec / flatten\n保留 PinKind 义务 / 容器节点 cache 槽语义 spec gap）固化到新 memory 文件\nproject_subgraph_deployment_broken.md，让接续 Phase 3 PURE 节点的 session\n不踩同样的雷。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 3,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-68ab709ccb32ee121f19331001f09eeb9e9cafc2",
+      "type": "commit",
+      "ts": "2026-04-28T07:55:41Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "sha": "68ab709ccb32ee121f19331001f09eeb9e9cafc2",
+        "message": "merge: integrate origin/main (ADR-0013 子图实施) into ADR-0014 Phase 2\n\n本地 14 commit (ADR-0014 Phase 1 simplify + Phase 2 全量) 与远端 14 commit\n(ADR-0013 子图与宏系统 + AI 编排器扩展 + CI/lock 修复) diverged，merge 而非\nrebase 保留 SHA 稳定性（plan/ADR/memory 多处文档以字符串形式引用了 commit\nSHA 范围）。\n\n冲突点 4 处，全部精修：\n\n1. AGENTS.md \"Current batch of ADRs\" 列表：保留我的 ADR-0014 P1+P2 升级 +\n   远端新加的 ADR-0013 已实施条目；索引行从 \"ADR-0013~0016/0020 proposed\"\n   改为 \"ADR-0015/0016/0020 proposed\"（0013 已不再 proposed）。\n\n2. web/src/lib/__tests__/pin-validator.test.ts pin() helper：远端给 fixture\n   补 kind: 'exec' as const（hardcode），HEAD 改成 extra?.pinKind ?? 'exec'\n   （可被 PinKind 测试 override）。HEAD 是远端的严格超集，保留 HEAD——远端\n   版本无法支撑 Phase 2 Task 6 新加的 4 个跨 Kind 拒连接用例。\n\n3. web/src/lib/__tests__/pin-schema-cache.test.ts 4 处 PinDefinition 字面量：\n   远端单行追加 kind: 'exec'，HEAD 多行格式（Phase 2 Task 6 顺手清债时重排）。\n   语义完全等价，保留 HEAD 多行格式与文件其余部分一致。\n\n4. web/src/lib/pin-schema-cache.ts 被 git 误判为 binary（高密度中文 UTF-8）。\n   HEAD 是远端的严格超集——FALLBACK_SCHEMA 的 kind: 'exec' 修复两边独立做了\n   相同的事，HEAD 还多了 resolvePinKind 函数 + getPortTooltip 的\"求值语义\"\n   行 + Phase 1 fallback 注释。保留 HEAD。\n\n验证：cargo test --workspace 217 tests 全绿、cargo clippy 全绿、cargo fmt\nclean、pin-* 4 套前端 vitest 共 74 tests 全绿。pre-existing 失败的 4 个\n前端 test files 是 origin/main 自身的 jsdom 环境问题，本 merge 未引入新失败。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2400,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-c325f29699d313058e9516b818a28c4b1642d9d6",
+      "type": "commit",
+      "ts": "2026-04-28T07:38:26Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "c325f29699d313058e9516b818a28c4b1642d9d6",
+        "message": "refactor: ADR-0014 Phase 2 /simplify reviewer fixes\n\n3 个 reviewer agent（reuse / quality / efficiency）并行审 Phase 2 全量\n12 commit 后给出的 actionable findings：\n\nquality I-1：web/e2e/pin-kind-modbus.spec.ts PinType allowlist 含\n  'number' / 'bytes' 这两个 PinType 中根本不存在的变体（实际是\n  integer / float / binary）。今天侥幸通过因 modbusRead 永远 emit\n  'json'；但 regression 输出 integer 会假阴性，重构改回 'number' 会\n  假阳性。改成与 web/src/generated/PinType.ts 对齐的真实枚举集。\n\nquality I-2：WorkflowDeployment::output_cache(node_id) 之前返回\n  Option<&Arc<OutputCache>> 强迫调用方写 cache.clone() 或不能 outlive\n  借用范围（未来 IPC handler 必踩）。改返回 Option<Arc<OutputCache>>，\n  内部 .map(Arc::clone)——一次 refcount bump 比强迫调用方写 clone 划算。\n  doc 加段说明 \"返回 owned Arc\"。tests/pin_kind_phase2.rs 调用 .read\n  通过 Arc deref 自动适配，无需改测试。\n\nquality I-3：facade src/lib.rs 没重导出 OutputCache / CachedOutput /\n  PinKind，强迫 src-tauri / 集成测试 / 第三方插件直接 import nazh_core\n  访问这些 Ring 0 类型，破坏 facade 单一入口约定。补到 pub use 块。\n\nreuse R-1：pin-compat.test.ts 与 pin-kind-compat.test.ts 共享 ~25 行\n  fs/path/parseJsonc 加载逻辑（fixture 路径 4 层向上 + 非空守卫）。\n  抽 web/src/lib/__tests__/_fixture-helpers.ts，两 spec 各精简到\n  `loadJsoncFixture(fixturePath(__dirname, '*.jsonc'))` 一行。文件名前\n  下划线遵循\"测试 helper 不是公开 API\"的命名约定。\n\nefficiency 全清，无修复——hot path 都是 O(1) 或 deploy-time once-shot。\n\n不修：reviewer 的 Minor 包括 --accent-cool CSS 变量未在 theme tokens\n中定义（Phase 5 视觉打磨自然处理）、resolvePinTypeKind 与 resolvePinKind\n名字易混（同 Phase 5）、getLogicNodeBranchDefinitions 已不止 logic\n节点用（rename 同 Phase 5）。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 63,
+        "deletions": 54
+      }
+    },
+    {
+      "id": "commit-1b62327724896ef7652e3cdd5eccd5793ab9f974",
+      "type": "commit",
+      "ts": "2026-04-28T07:26:23Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "1b62327724896ef7652e3cdd5eccd5793ab9f974",
+        "message": "docs(adr-0014): Phase 2 落地后状态同步 + AGENTS / memory 更新\n\nADR-0014 Phase 2 Task 9 收尾。Phase 2 共 11 个 commit（a799469..4419f65）\n完成\"第一个真实 Data 引脚 + 前端跨 Kind 闸门 + 画布双端口渲染\"全链路：\n\n- ADR-0014 实施进度：状态升 Phase 1 + Phase 2，加 Phase 2 详细变更项（后端\n  / 跨语言契约 / 前端 / 画布 / 顺手清债 五块）。\n- crates/nodes-io/AGENTS.md：modbusRead 节点表更新为 out (Json/Exec) +\n  latest (Json/Data) 双输出；pin 声明同步纪律加一条\"声明 PinKind::Data 输出\n  时需同步前端 useDynamicPort 配置 + getLogicNodeBranchDefinitions 分支\"。\n- 根 AGENTS.md（CLAUDE.md 软链）：\"Current batch of ADRs\" 中 ADR-0014 升 P1+P2，\n  \"ADR Execution Order\" 第 8 项同步。\n- Phase 2 plan 加 merged status 标头。\n\nmemory 文件由 session 同步更新：\n- MEMORY.md：ADR-0014 状态升 P1+P2，加 E2E IPC 限制条目。\n- project_system_architecture.md：Phase 2 完整变更列表入档。\n- project_architecture_review_2026_04.md：提案-07 状态升 P1+P2。\n- 新增 project_e2e_tauri_browser_mode.md：记录 Playwright 跑在 Chromium\n  而非 Tauri webview 的项目级限制（Task 8 实施时发现），影响未来需 IPC\n  真值的 E2E 设计选型。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1149,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-4419f65cbed0b91d6ffe17312965aa2b87e28835",
+      "type": "commit",
+      "ts": "2026-04-28T07:19:47Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "test",
+      "data": {
+        "sha": "4419f65cbed0b91d6ffe17312965aa2b87e28835",
+        "message": "test(e2e): ADR-0014 Phase 2 Task 8 modbusRead 双引脚 DOM 烟雾测试\n\nTask 7 把 modbusRead 加入 useDynamicPort 族后，端口 DOM 应该写出\ndata-port-id=\"out\" / data-port-id=\"latest\" + data-port-pin-kind /\ndata-port-pin-type 属性。本 spec 在真实运行环境断言这套 wiring 真的\n渲染到 DOM——证明 JSX 中 resolvePinKind / resolvePinTypeKind 的\n返回值确实写到了 React 渲染树。\n\n实现路径：Path A（UI flow，无侵入）。\n  - `board-create` 创建的新工程默认模板（projects.ts:717\n    buildStarterWorkflow）只含 timer + debugConsole，没有 modbusRead。\n  - 改用 FlowgramNodeAddPanel 的\"Modbus Read\"卡片双击路径\n    （onDoubleClick → handleInsertNode → createWorkflowNodeByType）\n    插入节点，绕开 FlowGram 画布拖拽。\n  - 面板 is-hover-reveal 类只有鼠标进入左侧触发区才挂载，未挂载时\n    被画布遮盖，物理 dblclick 会落到画布。改用 dispatchEvent('dblclick')\n    直接对按钮派发合成事件，React onDoubleClick 经事件委托捕获。\n\n属性取值断言放宽到\"存在 + 在合法枚举集合内\"：\n  - Playwright `webServer` 启动 Tauri dev，但 Playwright 仍以 HTTP\n    浏览器方式连 1420 端口——hasTauriRuntime() 为 false，IPC\n    describe_node_pins 不可达，pin-schema-cache 一律走 fallback\n    Any/Any/exec。\n  - 具体值（latest=data、out=exec）由 Vitest（pin-schema-cache.test.ts）\n    + Rust 集成测试（Phase 2 Task 4）两层守住。E2E 这里仅证明\n    attribute 真写到 DOM 上、port id 正确。\n\n范围限定：\n- 仅断言 DOM presence + attribute 取值（值在合法枚举内）\n- 不做 Playwright 画布拖拽（SVG + portal 的画布拖拽脆弱性已知；跨\n  Kind 拒连接的逻辑断言由 Vitest pin-validator.test.ts 守护）\n- 视觉外观由用户手动验证 + Phase 5 视觉打磨阶段统一收口\n\n测试运行：本地 `npm --prefix web run test:e2e -- pin-kind-modbus`\n全部通过（5.8s 单测 + 15.3s 含 webServer 启动）。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 102,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-1f7fad1d82fc236ecec52d169dc6b16255967ae2",
+      "type": "commit",
+      "ts": "2026-04-28T06:57:48Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "1f7fad1d82fc236ecec52d169dc6b16255967ae2",
+        "message": "feat(web): FlowGram 引脚 PinKind 视觉区分 + modbusRead 双端口渲染\n\nADR-0014 Phase 2 Task 7。modbusRead 之前只渲染单输出端口（FlowGram\n默认），latest Data 引脚对用户不可见、Task 6 的连接期校验也无从触发。\n\n变更：\n\n- nodes/shared.ts: getLogicNodeBranchDefinitions 加 modbusRead 分支，\n  返回 out + latest 两端口（portId 受控，匹配 Rust 端 pin id）。函数\n  doc 同步更新——历史名 logic / branch 仍保留以避免大改名爆 diff，\n  Phase 5 视觉打磨再统一收口。\n- nodes/modbusRead/index.ts: buildRegistryMeta 加 useDynamicPort: true\n  + defaultPorts: [{ type: 'input' }]，让 modbusRead 加入 if/switch\n  /loop/tryCatch 既有的\"动态端口\"族。\n- pin-schema-cache.ts: 新增 resolvePinKind(nodeId, portId, direction)\n  与 resolvePinTypeKind 平级，回退 \"exec\"（与存量节点 Exec 分布一致）；\n  getPortTooltip 加\"求值语义\"行。\n- FlowgramCanvas.tsx: branch 端口 DOM 加 data-port-pin-kind attribute\n  喂给 CSS 选择器；import 同步加 resolvePinKind。\n- styles/flowgram.css: data-port-pin-kind='data' 选择器加空心 + 冷色\n  边框，与 Exec 实心外观区分。Kind 与 Type 正交，选择器单独成块不与\n  data-port-pin-type 组合。视觉细节 Phase 5 视觉打磨再统一收口。\n- __tests__/pin-schema-cache.test.ts: 新增 resolvePinKind /\n  resolvePinTypeKind / getPortTooltip 求值语义共 8 个 case。\n\n实质性效果：\n1. modbusRead 节点显示两个输出端口（out 实心 / latest 空心冷色）。\n2. 用户尝试把 latest（Data）拖到普通 Exec 输入引脚时，pin-validator\n   立即报\"连接不兼容（求值语义不同）\"——Task 6 拦截真正生效。\n3. 端口 hover tooltip 多一行\"求值语义：Data（拉取式）\"/\"Exec（推送式）\"。\n\n不变：现有 if/switch/loop/tryCatch 节点 PinKind 全为 Exec，加新 attribute\n不影响视觉（CSS 默认即 Exec 既有外观）。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 169,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-7820932e3d7a248d8746dfff3d8db6157bd3508b",
+      "type": "commit",
+      "ts": "2026-04-28T05:36:06Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "7820932e3d7a248d8746dfff3d8db6157bd3508b",
+        "message": "feat(web): pin-validator 加跨 PinKind 连接拦截 + PinDefinition fixture 收尾\n\nADR-0014 Phase 2 Task 6 前端连接期校验：\n\n- pin-validator.ts: ConnectionRejection 扩展为判别联合（incompatible-types\n  + incompatible-kinds 两个 variant）；checkConnection 在 PinType 校验之前\n  先做 PinKind 闸门（Exec ↔ Exec / Data ↔ Data），跨 Kind 立即拒。\n  formatRejection 新增中文文案「连接不兼容（求值语义不同）...」。\n- pin-validator.test.ts: pin() 工厂加 pinKind 可选参数（默认 'exec'）；\n  第二参从 kind 改名 pinTypeKind 避免与 PinKind 混淆；新增 4 个 PinKind\n  跨 Kind 拒绝用例 + formatRejection 文案断言。\n- pin-schema-cache.ts: FALLBACK_SCHEMA 各 PinDefinition 字面量补 kind:'exec'\n  （Phase 1 加字段后未回填的 prod fallback 路径）。\n- pin-schema-cache.test.ts: 8 处测试 fixture 同步补 kind:'exec'。\n\n后两项是 Phase 1 PinDefinition::kind 必填字段后未清的 TS 类型债，\n本 commit 顺手清掉避免阻塞 Task 7（FlowGram 引脚视觉）的 typecheck。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 178,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-72678c315446d57c332b09fbdb72c0aed21221d2",
+      "type": "commit",
+      "ts": "2026-04-28T05:29:48Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "72678c315446d57c332b09fbdb72c0aed21221d2",
+        "message": "feat(web): isKindCompatible + Vitest 合约测试\n\nADR-0014 Phase 2 Task 5。前端引脚 Kind 兼容判断 + 合约测试，与 Rust\nPinKind::is_compatible_with 共享 tests/fixtures/pin_kind_matrix.jsonc。\n\n- web/src/generated/index.ts: 重导出生成的 PinKind 类型（Phase 1 已生成\n  PinKind.ts 但 index 未挂出）\n- web/src/types.ts: 在公共类型再导出块加 PinKind（按字母序）\n- web/src/lib/pin-compat.ts: 加 isKindCompatible(from, to) = from === to\n- web/src/lib/__tests__/pin-kind-compat.test.ts: 表驱动断言全 4 配对\n  + 笛卡儿积穷尽校验，镜像 pin-compat.test.ts 模式\n\nTask 6 将在 pin-validator 中接入 isKindCompatible 做连接期跨 Kind 拦截。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 87,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-3a74812146da47091d63c71774c2a4cd0680a375",
+      "type": "commit",
+      "ts": "2026-04-28T05:24:51Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "test",
+      "data": {
+        "sha": "3a74812146da47091d63c71774c2a4cd0680a375",
+        "message": "test(core): PinKind 兼容矩阵 fixture + Rust contract 测试\n\nADR-0014 Phase 2 Task 4。PinKind 矩阵（4 条配对穷尽 2×2 笛卡儿积）独立\nfixture 与 PinType 矩阵平级——同一份 jsonc 将被 Rust + TS 各自合约测试\n消费（TS 在 Phase 2 Task 5 接入），杜绝单边漂移。\n\n镜像 pin_compat_contract.rs 模式：json_comments::StripComments 解析 jsonc，\n两测试覆盖（a）每条配对与 PinKind::is_compatible_with 一致；\n（b）2×2 全笛卡儿积都被列出。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 119,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-f1771a687a37917cd14b54fe4fbe5322ea435fe0",
+      "type": "commit",
+      "ts": "2026-04-28T05:17:39Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "f1771a687a37917cd14b54fe4fbe5322ea435fe0",
+        "message": "docs(graph): output_cache 字段与访问器的 None 语义说明收紧\n\n代码 reviewer 在 Task 3 后补审验时发现两处文档缺陷：\n\n1. WorkflowDeployment.output_caches 字段注释 + output_cache(node_id) 访问器\n   doc 都说\"仅声明 PinKind::Data 输出引脚的节点会有非空缓存槽\"。\n   表述本身正确（slots 维度），但易被读为\"HashMap 条目只在 Data 节点存在\"\n   ——deploy.rs:172-187 实际上为图中每个节点都插入了 OutputCache 条目，\n   只是 Exec-only 节点的 slots 为空。访问器返回 None 仅意味着节点 id\n   不在该工作流中，不是\"节点无 Data 引脚\"。tighten 文案让 None 语义\n   与\"节点不存在\"唯一对应，避免未来 IPC 误解。\n\n2. src-tauri 的 output_caches: _ 占位注释引用了 \"Phase 5 IPC\"，但 spec §九\n   定义 Phase 5 = 视觉打磨（不涉 IPC）。改为 phase-agnostic：\"后续 IPC\n   待立项\"。1dc9d3b commit 信息体的相同误称无法在历史中改写，本 commit\n   作为口径更正。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 17,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-1fb8a024b629dec2d10dfef45247e198e73fb8d4",
+      "type": "commit",
+      "ts": "2026-04-28T05:10:28Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "test",
+      "data": {
+        "sha": "1fb8a024b629dec2d10dfef45247e198e73fb8d4",
+        "message": "test: modbusRead latest Data 引脚双路径集成测试\n\nADR-0014 Phase 2 端到端验证。单节点 modbusRead 工作流（模拟模式）触发\n一次 transform 后断言：\n\n1. OutputCache.latest 槽被写入 JSON object（Phase 1 双路径骨架在生产\n   节点首次激活）\n2. Exec out 路径仍推 result 通道，与 latest 缓存同源 payload\n\n与 phase1 stub 节点测试构成 stub→真实节点的覆盖梯度。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 107,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-1dc9d3b5eee07b2b32b21ad199ce724234fb81d4",
+      "type": "commit",
+      "ts": "2026-04-28T05:07:44Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "1dc9d3b5eee07b2b32b21ad199ce724234fb81d4",
+        "message": "refactor(graph): WorkflowDeployment 暴露 output_cache(node_id) 访问器\n\nADR-0014 Phase 2 准备。Phase 1 把 output_caches HashMap 构造在 deploy.rs\n局部，注入 runner 后即丢——集成测试与未来 IPC 没有入口读取拉取式槽位的\n最近态。\n\n抬到 WorkflowDeployment 字段（pub(crate)）+ 公开访问器，存量行为零变化：\n- 仅声明 PinKind::Data 引脚的节点有非空槽\n- 14 类生产节点（Phase 1 + 截至本 commit）只有 modbusRead 在 Task 2 后\n  声明了 Data 引脚（latest），其他节点访问器返回的 cache.slot_ids 为空\n- WorkflowDeploymentParts 同步暴露字段供 IPC 拆分场景使用\n\nsrc-tauri 同步对 WorkflowDeploymentParts 解构模式补 output_caches: _ —\n新增 pub 字段会让 exhaustive 模式失配，本期壳层未消费缓存，待 Phase 5\nIPC 时改为持有句柄并暴露 query_output_cache 命令。\n\n后续 Task 3 集成测试 + 未来 ADR-0014 Phase 5 IPC 都从此入口读。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 28,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-1d815b886d9dfd200c79b8f6c3367a442c06b23d",
+      "type": "commit",
+      "ts": "2026-04-28T04:53:14Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "test",
+      "data": {
+        "sha": "1d815b886d9dfd200c79b8f6c3367a442c06b23d",
+        "message": "test(nodes-io): modbusRead 测试名同步双端口现实\n\n`output_pin_是_json_单端口` 在 Task 2 后已经断言双端口（out + latest），\n名字仍含\"单端口\"措辞造成误导。重命名为 `output_pins_声明_out_exec_与_latest_data`\n让名字与断言内容一致。\n\nAGENTS.md \"Lying comments are worse than missing comments\" 同样适用于测试名。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-a12534739e13c3bd6139625d235702aa32cabcc9",
+      "type": "commit",
+      "ts": "2026-04-28T04:50:38Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "a12534739e13c3bd6139625d235702aa32cabcc9",
+        "message": "feat(nodes-io): modbusRead 新增 latest Data 输出引脚\n\nADR-0014 Phase 2 第一个真实 Data 引脚用例。原 out (Json/Exec)\n保留语义不变（每次 transform 向下游 Exec 推送）；新 latest (Json/Data)\n让下游以拉取式拿最近一次读数，不需要重新执行 modbusRead。\n\nPhase 1 已实现的 runner 双路径骨架（data_output_pin_ids 非空时\n分裂 Exec 推送 vs Data 缓存写入）此处首次在生产节点激活。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 38,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-a79946908cab640bce6b441499c8f84057df4e66",
+      "type": "commit",
+      "ts": "2026-04-28T04:41:40Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "a79946908cab640bce6b441499c8f84057df4e66",
+        "message": "feat(core): PinDefinition::output_named_data 工厂方法\n\nADR-0014 Phase 2 准备。多输出节点声明 Data 引脚的 DRY 工厂，\nrequired=false / kind=PinKind::Data 默认值，避免业务节点字面量\n铺写 PinDefinition。modbusRead latest 引脚是首个使用方。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 42,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-f9e6cd808f0bd4c0d2d19da9920ed83682398b19",
+      "type": "commit",
+      "ts": "2026-04-28T04:21:45Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "f9e6cd808f0bd4c0d2d19da9920ed83682398b19",
+        "message": "refactor: ADR-0014 Phase 1 /simplify reviewer fixes\n\n3 个 review subagent 收敛出的 6 项 actionable findings 全部修复：\n\n1. deploy.rs：合并 output_caches 与 data_output_pin_ids_by_node 双循环为单遍历，\n   消除每节点 2 次 output_pins() 重复 clone 分配\n2. deploy.rs：删除 data_targets_by_source 整段（含 DataDownstreamTarget 类型）——\n   Phase 2 才消费的 scaffolding 不应在 Phase 1 引入\"let _ = ...\"噪声占位\n3. error.rs：IncompatiblePinKinds 字段 from_kind/to_kind 由 String 改为 PinKind 枚举\n   ——消除 stringly-typed，结构化错误诊断更类型安全；测试断言同步改为枚举比较\n4. cache.rs：新增 OutputCache::write_now(pin_id, value, trace_id) 便利方法，把\n   chrono::Utc::now() 调用封装到 Ring 0；runner.rs 改用此 helper 不再直接构造\n   CachedOutput；facade Cargo.toml 移除不再需要的 chrono workspace dep\n5. graph.rs：把 DEFAULT_INPUT_PIN_ID / DEFAULT_OUTPUT_PIN_ID 提升到 graph mod 顶层\n   pub(crate) 常量；pin_validator.rs / topology.rs 删除本地重复定义改用 super::\n6. runner.rs：模块 doc 删除 Phase 1 过渡性描述（\"Phase 1 仅写不读\" 等），保留永久\n   语义（双路径 + 元数据通道）；inline 注释保留性能不变量说明\n\n净效果：-44 行（含删除 DataDownstreamTarget 整个类型 + data_targets_by_source 块）。\n14 类生产节点行为不变。209 tests pass / 0 fail，fmt + clippy --workspace -D warnings 全绿。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 56,
+        "deletions": 101
+      }
+    },
+    {
+      "id": "commit-4ac2e48a05e48c82ebd2ea5ef7558128702a66eb",
+      "type": "commit",
+      "ts": "2026-04-28T03:42:29Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "4ac2e48a05e48c82ebd2ea5ef7558128702a66eb",
+        "message": "docs: ADR-0014 重写为引脚二分 + 标注 Phase 1 已实施 + AGENTS.md 同步\n\n- docs/adr/0014-执行边与数据边分离.md：整体重写——标题改为\"引脚求值语义二分\n  （PinKind: Exec / Data）\"，状态改为\"已实施 Phase 1\"，决策改为\"语义放在引脚而非边\n  上\"（取代原 EdgeKind 方案），加\"实施进度\"章节记录 Phase 1 骨架落地情况\n- AGENTS.md：在\"Current batch of ADRs\"列表里加 ADR-0014 Phase 1 条目；在\"ADR\n  Execution Order\"列表里把 ADR-0014 条目更新为 ✅ Phase 1 已实施\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 58,
+        "deletions": 132
+      }
+    },
+    {
+      "id": "commit-818389ec3466a0ac5e0ccfdb1f677ba2224edee8",
+      "type": "commit",
+      "ts": "2026-04-28T03:36:54Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "test",
+      "data": {
+        "sha": "818389ec3466a0ac5e0ccfdb1f677ba2224edee8",
+        "message": "test: ADR-0014 Phase 1 端到端 stub 节点验证 deploy + Data 输出引脚不 panic\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 129,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-135d5ecad1aeae9c828da747444d69d753c18fec",
+      "type": "commit",
+      "ts": "2026-04-28T03:29:36Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "135d5ecad1aeae9c828da747444d69d753c18fec",
+        "message": "feat(graph): Runner 双路径骨架——deploy 边分类 + OutputCache 注入 + runner Data 写槽（ADR-0014 Phase 1）\n\n把 Tasks 11+12 合为一 commit 让中间状态可编译——避免 cargo bisect 跨过 broken intermediate。\n\ndeploy.rs：阶段 0.5 后调用 classify_edges（按上游 PinKind 分边）+ detect_data_edge_cycle；\n给每节点构造 OutputCache（仅声明 Data 输出 pin 的节点 prepare_slot）；spawn 时把\noutput_cache + data_output_pin_ids 传给 run_node。\n\nrunner.rs：run_node 签名加 output_cache + data_output_pin_ids 参数；transform 完成后\n按 dispatch 与 data_output_pin_ids 求交集决定写 cache 或 Exec push。Phase 1 写不读。\n\ntopology.rs：移除 Task 9/10 临时 #[allow(dead_code)]——classify_edges/detect_data_edge_cycle\n现已被消费。exec_edges 字段 Phase 2 起消费，保留字段级 allow(dead_code) 注解。\n\nCargo.toml：nazh-engine 加 chrono workspace dep（runner.rs CachedOutput::produced_at 需要）。\n\n现有 14 类生产节点全部默认 Kind=Exec → data_output_pin_ids 始终空 → 双路径分支退化为\n单路径 Exec push，行为不变。全量 cargo test --workspace 通过。\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 153,
+        "deletions": 14
+      }
+    },
+    {
+      "id": "commit-093a1bfb94306789cb02268d40483510a7bc548d",
+      "type": "commit",
+      "ts": "2026-04-28T03:18:53Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "093a1bfb94306789cb02268d40483510a7bc548d",
+        "message": "feat(graph): detect_data_edge_cycle Data 边独立环检测（ADR-0014 Phase 1）\n\n在 Data 边子图上跑 Kahn 算法，若 Data 边形成环则在部署期提前返回\nEngineError::InvalidGraph，阻止 Phase 2/3 下游 transform 缓存拉取\n陷入无定义循环依赖。新增 3 个单测（无 data 边通过、双向环报错、自环报错）。\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 129,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-027c3f09d9ceff6293e6063430ab05bdd1ca30a9",
+      "type": "commit",
+      "ts": "2026-04-28T03:15:56Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "027c3f09d9ceff6293e6063430ab05bdd1ca30a9",
+        "message": "feat(graph): topology::classify_edges 按 PinKind 分类边（ADR-0014 Phase 1）\n\n新增 ClassifiedEdges 结构体与 classify_edges 辅助函数，将图中的边按\n上游 source pin 的 PinKind 分类为 exec_edges / data_edges；\nsource_port_id 缺省时回退到 \"out\"（默认输出引脚），port id 不存在时返回\nEngineError::UnknownPin。新增 #[cfg(test)] mod tests 块，含 3 个 TDD\n测试验证分类正确性与未知 port 报错行为。\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 218,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-364d0c3e200a72ce9d74378663ba8b878056f5b5",
+      "type": "commit",
+      "ts": "2026-04-28T03:11:37Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "364d0c3e200a72ce9d74378663ba8b878056f5b5",
+        "message": "feat(graph): pin_validator 加 PinKind 一致性校验（ADR-0014 Phase 1）\n\n在 validate_pin_compatibility 中，对每条边在 PinType 兼容性检查通过后\n追加 PinKind 一致性检查：Exec 只能连 Exec，Data 只能连 Data；\n违反时返回 EngineError::IncompatiblePinKinds。\n新增 pin_with_kind 测试 helper + 2 个 TDD 测试（跨 Kind 拒绝、Data-Data 通过）。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 101,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-731e9f852d7483c1f9ddd9ebf2d8739469f5f5ba",
+      "type": "commit",
+      "ts": "2026-04-28T03:08:09Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "feat",
+      "data": {
+        "sha": "731e9f852d7483c1f9ddd9ebf2d8739469f5f5ba",
+        "message": "feat(core): EngineError 加 IncompatiblePinKinds 变体（ADR-0014 Phase 1）\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 12,
+        "deletions": 0
+      }
+    },
+    {
       "id": "commit-c8ec9d3974eb32e5e453fcc17fbfe275b803a05b",
       "type": "commit",
       "ts": "2026-04-25T09:57:49Z",
