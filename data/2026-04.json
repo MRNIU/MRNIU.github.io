@@ -2,6 +2,136 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "commit-f0021e16c0e3d0c3c7cc8e3b695ced515eb97649",
+      "type": "commit",
+      "ts": "2026-04-30T03:00:18Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "f0021e16c0e3d0c3c7cc8e3b695ced515eb97649",
+        "message": "docs(template): 引入 SAD 和 SDD 模板\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 271,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-0b5b0487dfbbc40f2669f1951956b5739776b06a",
+      "type": "commit",
+      "ts": "2026-04-30T02:13:43Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "0b5b0487dfbbc40f2669f1951956b5739776b06a",
+        "message": "docs(template): 完善协作模板\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 474,
+        "deletions": 19
+      }
+    },
+    {
+      "id": "commit-067b48c0a78418933293fdba5c2694599c6adc1e",
+      "type": "commit",
+      "ts": "2026-04-30T00:56:22Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "067b48c0a78418933293fdba5c2694599c6adc1e",
+        "message": "docs: 调整语言与依赖策略位置\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 38,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-3cef7ecdba3cf837914e1b495e9c2ab8e9a9c956",
+      "type": "commit",
+      "ts": "2026-04-30T00:52:39Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "3cef7ecdba3cf837914e1b495e9c2ab8e9a9c956",
+        "message": "docs: 添加文件版权头\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 44,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "commit-0f65a128bff12d55fa51d343095c22819c500cfa",
+      "type": "commit",
+      "ts": "2026-04-30T00:46:39Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "0f65a128bff12d55fa51d343095c22819c500cfa",
+        "message": "docs: 拆分贡献与项目约定文档\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 432,
+        "deletions": 274
+      }
+    },
+    {
+      "id": "commit-bc1c179105471c91c30aafec6af16c323a8f9dfc",
+      "type": "commit",
+      "ts": "2026-04-30T00:40:45Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "bc1c179105471c91c30aafec6af16c323a8f9dfc",
+        "message": "docs: 添加 commit 规范\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 71,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-2a8aa17dcabafc2da272de6a2396fc4a50df9a41",
+      "type": "commit",
+      "ts": "2026-04-30T00:38:53Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "2a8aa17dcabafc2da272de6a2396fc4a50df9a41",
+        "message": "docs: 明确中文优先语言策略\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 9,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-a42aa2a40ea19154a5879ae12aa151076fc4c122",
+      "type": "commit",
+      "ts": "2026-04-30T00:37:41Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "docs",
+      "data": {
+        "sha": "a42aa2a40ea19154a5879ae12aa151076fc4c122",
+        "message": "docs: 说明 AGENTS 模板使用要求\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 8,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-76d16a94aadd6e22e22dabe1423d5df27e13a9a2",
+      "type": "commit",
+      "ts": "2026-04-30T00:32:49Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "chore",
+      "data": {
+        "sha": "76d16a94aadd6e22e22dabe1423d5df27e13a9a2",
+        "message": "chore: 更新 Dev Container 基础环境\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 109,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "commit-115d94e134eaecef60b05e88f46df60861d9e3c1",
+      "type": "commit",
+      "ts": "2026-04-30T00:21:06Z",
+      "repo": "libodynamics/project-template",
+      "semantic": "chore",
+      "data": {
+        "sha": "115d94e134eaecef60b05e88f46df60861d9e3c1",
+        "message": "chore: 初始化项目模板\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 727,
+        "deletions": 0
+      }
+    },
+    {
       "id": "commit-8021174877f64a2978e4def4bd9331d311375214",
       "type": "commit",
       "ts": "2026-04-28T10:03:15Z",
