@@ -1,21 +1,21 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-04-30T03:06:41.037Z",
+  "generatedAt": "2026-05-01T03:06:30.835Z",
   "stats": {
-    "totalCommits": 2041,
+    "totalCommits": 2049,
     "totalPRs": 223,
     "totalReviews": 6,
     "totalIssues": 80,
     "totalComments": 168,
-    "activeRepos": 65,
+    "activeRepos": 66,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-04-30T03:00:18Z"
+    "latestEvent": "2026-04-30T07:40:09Z"
   },
   "months": [
     {
       "key": "2026-04",
       "file": "2026-04.json",
-      "eventCount": 69,
+      "eventCount": 77,
       "repos": [
         "MRNIU/MRNIU.github.io",
         "MRNIU/factorio_BestLanding",
@@ -23,17 +23,19 @@
         "MRNIU/factorio_LegendaryShipStart",
         "MRNIU/nzh_factorio_mod",
         "libodynamics/project-template",
+        "libodynamics/project_template",
         "rust-embedded/aarch64-cpu",
         "ssXue/Nazh"
       ],
       "breakdown": {
-        "commit": 67,
+        "commit": 75,
         "ai_roast": 1,
         "issue_comment": 1
       },
       "repoBreakdown": {
+        "libodynamics/project_template": 4,
+        "ssXue/Nazh": 31,
         "libodynamics/project-template": 10,
-        "ssXue/Nazh": 27,
         "MRNIU/factorio_LegendaryMechStart": 7,
         "MRNIU/factorio_BestLanding": 6,
         "MRNIU/factorio_LegendaryShipStart": 4,

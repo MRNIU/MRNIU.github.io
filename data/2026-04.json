@@ -2,6 +2,110 @@
   "month": "2026-04",
   "events": [
     {
+      "id": "commit-bc1bd11fd0d820e71eff8a6048f93a17cde982c5",
+      "type": "commit",
+      "ts": "2026-04-30T07:40:09Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "bc1bd11fd0d820e71eff8a6048f93a17cde982c5",
+        "message": "docs(template): 同步 project_template 命名与 agent 规则\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 12,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-b94be9f13aaa156a7f6773be257872f492506673",
+      "type": "commit",
+      "ts": "2026-04-30T07:27:48Z",
+      "repo": "libodynamics/project_template",
+      "semantic": null,
+      "data": {
+        "sha": "b94be9f13aaa156a7f6773be257872f492506673",
+        "message": "build(devcontainer): 在容器内初始化 pre-commit\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 32,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-f03ce4b0d57c8e0b124146e03c2c3dabbddab288",
+      "type": "commit",
+      "ts": "2026-04-30T06:04:03Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "f03ce4b0d57c8e0b124146e03c2c3dabbddab288",
+        "message": "fix: 修复 ADR review 中的事件与观测问题\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 134,
+        "deletions": 79
+      }
+    },
+    {
+      "id": "commit-bfa99f5cec68eca5a873ed7679dbd434ccbfde14",
+      "type": "commit",
+      "ts": "2026-04-30T04:23:17Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "chore",
+      "data": {
+        "sha": "bfa99f5cec68eca5a873ed7679dbd434ccbfde14",
+        "message": "chore: 清理 PR 模板尾随空白\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-e6d6a6cfddeb27f03b20873e493c0b3d7621762e",
+      "type": "commit",
+      "ts": "2026-04-30T04:22:31Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "chore",
+      "data": {
+        "sha": "e6d6a6cfddeb27f03b20873e493c0b3d7621762e",
+        "message": "chore: 将依赖维护工具移入开发容器\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 9,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-6d902bd72974802b509f6af190d8fcfd71f7727a",
+      "type": "commit",
+      "ts": "2026-04-30T04:22:31Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "chore",
+      "data": {
+        "sha": "6d902bd72974802b509f6af190d8fcfd71f7727a",
+        "message": "chore: 升级依赖并完善项目模板结构\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2861,
+        "deletions": 4135
+      }
+    },
+    {
+      "id": "commit-1e4bfe64364d0d554874378a4d5006647e0b28c1",
+      "type": "commit",
+      "ts": "2026-04-30T03:53:23Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "1e4bfe64364d0d554874378a4d5006647e0b28c1",
+        "message": "docs(agents): 明确开发工具安装边界\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 3,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-a38690b979e45714714d12a7ffa2095e00ac5a32",
+      "type": "commit",
+      "ts": "2026-04-30T03:16:49Z",
+      "repo": "libodynamics/project_template",
+      "semantic": null,
+      "data": {
+        "sha": "a38690b979e45714714d12a7ffa2095e00ac5a32",
+        "message": "update\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2,
+        "deletions": 0
+      }
+    },
+    {
       "id": "commit-f0021e16c0e3d0c3c7cc8e3b695ced515eb97649",
       "type": "commit",
       "ts": "2026-04-30T03:00:18Z",
