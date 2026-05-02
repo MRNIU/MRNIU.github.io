@@ -1,0 +1,96 @@
+{
+  "month": "2026-05",
+  "events": [
+    {
+      "id": "commit-00a2c8887174d2ec8a958215e0e0bef3dd1b28e8",
+      "type": "commit",
+      "ts": "2026-05-02T00:06:04Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "00a2c8887174d2ec8a958215e0e0bef3dd1b28e8",
+        "message": "docs(agents): 明确模板反馈规则\n\n将派生项目的模板反馈要求移出初始化提示，作为长期保留的项目级协作规则。\n\n- 要求可复用的模板缺口通过 issue 或 PR 回传模板仓库。\n\n- 明确项目特有需求应保留在派生项目本地文档或局部 AGENTS.md。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-eeead99c17982da36566fa39e44758365065bf7e",
+      "type": "commit",
+      "ts": "2026-05-01T23:11:01Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "eeead99c17982da36566fa39e44758365065bf7e",
+        "message": "docs(git): 对齐提交模板规则\n\n更新 .gitmessage，使提交模板和仓库 commit 规范、smart-commit 的正文规则保持一致。\n\n- 补充 breaking change 的 ! 写法提示，但不把它作为默认提交形态。\n\n- 区分机械变更和实质性变更的 body 要求，要求只记录真实验证。\n\n- 明确 DCO 默认通过 git commit -s 生成 sign-off。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-4993f2ffa2d0f11967d6ca44f6f14dac85ee6e38",
+      "type": "commit",
+      "ts": "2026-05-01T22:51:06Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "4993f2ffa2d0f11967d6ca44f6f14dac85ee6e38",
+        "message": "docs(agents): require explicit runtime configuration\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 13,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-bb1b397bda3f52a5da77d960547e188a8eb76ff5",
+      "type": "commit",
+      "ts": "2026-05-01T11:06:36Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "bb1b397bda3f52a5da77d960547e188a8eb76ff5",
+        "message": "docs: 明确源代码文件规模约束\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 12,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-35b529e335f2576f6eaeb5e24b4d30d96b1f6d61",
+      "type": "commit",
+      "ts": "2026-05-01T09:51:30Z",
+      "repo": "libodynamics/project_template",
+      "semantic": null,
+      "data": {
+        "sha": "35b529e335f2576f6eaeb5e24b4d30d96b1f6d61",
+        "message": "build(devcontainer): 统一 Docker 命名和产物路径约定\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 101,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-0597c67b2482ad94e36d26b741b19ba9b9845f20",
+      "type": "commit",
+      "ts": "2026-05-01T07:12:33Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "0597c67b2482ad94e36d26b741b19ba9b9845f20",
+        "message": "docs: clarify docker artifact output paths\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-72096304eb00154ef4de9bb066db3568134529a2",
+      "type": "commit",
+      "ts": "2026-05-01T06:35:10Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "chore",
+      "data": {
+        "sha": "72096304eb00154ef4de9bb066db3568134529a2",
+        "message": "chore: harden project template defaults\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 411,
+        "deletions": 109
+      }
+    }
+  ]
+}
