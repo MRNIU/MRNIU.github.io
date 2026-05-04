@@ -2,6 +2,45 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-059226b82a4e6cff094324e9dd4ea036593fbc3d",
+      "type": "commit",
+      "ts": "2026-05-03T10:04:21Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "059226b82a4e6cff094324e9dd4ea036593fbc3d",
+        "message": "docs(devcontainer): 修正容器规则残留表述\n\n统一分支名归一化示例和规则文本，确保特殊字符按文档要求替换为连字符，而不是被删除。\n\n- 同步 README、.devcontainer 文档和 CI workflow 的分支名处理命令。\n\n- 将产物路径规则改为宿主机编排触发容器内执行，避免暗示宿主机直接运行项目命令。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 7,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-6ec88b0a242f5ca63a8bdb103163ece18209e8b9",
+      "type": "commit",
+      "ts": "2026-05-03T09:55:02Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "6ec88b0a242f5ca63a8bdb103163ece18209e8b9",
+        "message": "docs(devcontainer): 改用分支名固定容器入口\n\n将 Dev Container 规则从提交 hash 后缀改为具名分支后缀，避免频繁提交时重复创建和重建常驻容器。\n\n- 同步 README、.devcontainer 文档、CI workflow 和模板表格中的运行位置。\n\n- 明确宿主机只做 Docker 编排，项目命令通过 exec 进入已启动容器。\n\n- 保留 detached HEAD 禁止启动规则，并要求分支名归一化为 Docker 容器名可用字符。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 81,
+        "deletions": 47
+      }
+    },
+    {
+      "id": "commit-5053b86982d526a37580c9eec9e8da1f006b1c41",
+      "type": "commit",
+      "ts": "2026-05-03T09:40:27Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "docs",
+      "data": {
+        "sha": "5053b86982d526a37580c9eec9e8da1f006b1c41",
+        "message": "docs(devcontainer): 固化 Docker 容器运行规则\n\n将模板默认开发路径收紧为常驻 Dev Container，不再维护宿主机本地运行路径。\n\n- 要求安装、编译、运行、测试、打包和发布都在常驻容器或 CI 中执行。\n\n- 固定 Dev Container 和项目运行时容器命名，统一使用 username 与 HEAD commit 前 4 位。\n\n- 同步 README、项目约定、Git 规则和计划/SOP/硬件模板中的运行位置表述。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 70,
+        "deletions": 33
+      }
+    },
+    {
       "id": "commit-00a2c8887174d2ec8a958215e0e0bef3dd1b28e8",
       "type": "commit",
       "ts": "2026-05-02T00:06:04Z",
