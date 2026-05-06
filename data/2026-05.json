@@ -2,6 +2,97 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-da0c78588d39ea2cb06f2d2f9449dca13f8125e7",
+      "type": "commit",
+      "ts": "2026-05-05T13:47:51Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "da0c78588d39ea2cb06f2d2f9449dca13f8125e7",
+        "message": "Load team resources into planet spidertrons",
+        "additions": 327,
+        "deletions": 220
+      }
+    },
+    {
+      "id": "commit-188e78c8de86e730bc9ab00b05b4bad20bdf4ae3",
+      "type": "commit",
+      "ts": "2026-05-05T12:21:24Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "188e78c8de86e730bc9ab00b05b4bad20bdf4ae3",
+        "message": "Add configurable legendary spidertrons",
+        "additions": 358,
+        "deletions": 62
+      }
+    },
+    {
+      "id": "commit-8e11746877350e16c14aa3c42a017f21f6af3d46",
+      "type": "commit",
+      "ts": "2026-05-05T12:21:24Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "8e11746877350e16c14aa3c42a017f21f6af3d46",
+        "message": "Move spidertron spawning to LegendaryMechStart",
+        "additions": 17,
+        "deletions": 168
+      }
+    },
+    {
+      "id": "commit-4f421cb284ba2a7c4e418ef0986e0730582a6980",
+      "type": "commit",
+      "ts": "2026-05-05T11:32:57Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "4f421cb284ba2a7c4e418ef0986e0730582a6980",
+        "message": "Rename CLAUDE.md to AGENTS.md",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-37b46a2e64d9d77563cb9a31d77664106dd81b18",
+      "type": "commit",
+      "ts": "2026-05-05T11:32:57Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "37b46a2e64d9d77563cb9a31d77664106dd81b18",
+        "message": "Rename CLAUDE.md to AGENTS.md",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-a17dd5820810de487479369378bda5b671e9822c",
+      "type": "commit",
+      "ts": "2026-05-05T11:32:57Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": null,
+      "data": {
+        "sha": "a17dd5820810de487479369378bda5b671e9822c",
+        "message": "Rename CLAUDE.md to AGENTS.md",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-0662fe08c502e5726cfc53e1c306252db40e3850",
+      "type": "commit",
+      "ts": "2026-05-05T11:32:56Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "0662fe08c502e5726cfc53e1c306252db40e3850",
+        "message": "Rename CLAUDE.md to AGENTS.md",
+        "additions": 3,
+        "deletions": 3
+      }
+    },
+    {
       "id": "commit-059226b82a4e6cff094324e9dd4ea036593fbc3d",
       "type": "commit",
       "ts": "2026-05-03T10:04:21Z",

@@ -1,28 +1,36 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-05-04T03:06:57.889Z",
+  "generatedAt": "2026-05-06T03:06:37.250Z",
   "stats": {
-    "totalCommits": 2059,
+    "totalCommits": 2066,
     "totalPRs": 223,
     "totalReviews": 6,
     "totalIssues": 80,
     "totalComments": 168,
     "activeRepos": 66,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-05-03T10:04:21Z"
+    "latestEvent": "2026-05-05T13:47:51Z"
   },
   "months": [
     {
       "key": "2026-05",
       "file": "2026-05.json",
-      "eventCount": 10,
+      "eventCount": 17,
       "repos": [
+        "MRNIU/factorio_BestLanding",
+        "MRNIU/factorio_LegendaryMechStart",
+        "MRNIU/factorio_LegendaryShipStart",
+        "MRNIU/nzh_factorio_mod",
         "libodynamics/project_template"
       ],
       "breakdown": {
-        "commit": 10
+        "commit": 17
       },
       "repoBreakdown": {
+        "MRNIU/factorio_LegendaryMechStart": 3,
+        "MRNIU/factorio_BestLanding": 2,
+        "MRNIU/factorio_LegendaryShipStart": 1,
+        "MRNIU/nzh_factorio_mod": 1,
         "libodynamics/project_template": 10
       }
     },
