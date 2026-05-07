@@ -2,6 +2,108 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "pr-97-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-06T12:51:23Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 97,
+        "title": "feat(ostool): 添加 Cargo 二进制目标选择",
+        "state": "open",
+        "body": "## 概要\n- 增加可选的 `system.Cargo.bin` 配置，让 OSTool 在同一个 package 暴露多个二进制时可以明确选择目标 artifact。\n- 为 `ostool build`、`ostool run qemu`、`ostool run uboot` 和 `ostool board run` 增加 `--package` / `--bin` 临时覆盖参数。\n- Cargo JSON artifact 解析改为显式匹配，多个二进制但未指定目标时返回明确错误，并同步更新中英文 README 用法说明。\n- 补充 SimpleKernel 迁移计划，说明 PR-02 为什么只做 binary artifact 选择，并把 command selector、语义检查和多 binary 配置策略拆清楚。\n\n## 验证\n- `cargo fmt --all -- --check`\n- `cargo check -p ostool`\n- `git diff --staged --check`\n\n## 兼容性\n- 基于 `main` 修改。\n- 已检查与当前上游打开的 PR #95、#96 的合并兼容性，未发现合并冲突。"
+      }
+    },
+    {
+      "id": "comment-MRNIU/ostool-1-0",
+      "type": "issue_comment",
+      "ts": "2026-05-06T12:49:40Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 1,
+        "issueTitle": "feat(ostool): add Cargo binary target selector",
+        "body": "Closing this because the pull request should target the upstream repository instead."
+      }
+    },
+    {
+      "id": "pr-1-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-06T12:46:51Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 1,
+        "title": "feat(ostool): add Cargo binary target selector",
+        "state": "closed",
+        "body": "## Summary\n\n- Add an optional `system.Cargo.bin` field for selecting a concrete Cargo binary target.\n- Add `--package` and `--bin` overrides to `ostool build`, `ostool run qemu`, `ostool run uboot`, and `ostool board run`.\n- Resolve Cargo artifacts using explicit binary matching and report ambiguous multi-binary packages instead of falling back to an arbitrary binary.\n- Update Chinese and English README examples for the new selector behavior.\n\n## Validation\n\n- `cargo fmt --all -- --check`\n- `cargo check -p ostool`\n\n## Compatibility\n\n- Based on `main`.\n- Checked against `feature/cargo-build-profile`; the changes merge cleanly and keep both `system.Cargo.bin` and the build profile configuration.\n"
+      }
+    },
+    {
+      "id": "pr-96-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-06T11:45:55Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 96,
+        "title": "feat(ostool): 支持显式配置 Cargo 构建 profile",
+        "state": "open",
+        "body": "## 摘要\n\n- 在 `system.Cargo` 中增加可选 `profile` 字段，支持显式选择 `Debug` 或 `Release`。\n- 将 Cargo profile 选择从 QEMU `--debug` 中解耦；未配置 `profile` 时保持旧行为。\n- 让 log level feature 跟随实际 Cargo profile，并同步更新中英文 README 示例。\n\n## 原因\n\nCargo 的 Debug/Release 会影响优化级别、debug assertions 和最终代码形态；QEMU debug 只应该控制 GDB 等运行时调试参数。此前 OSTool 通过 QEMU `--debug` 隐式推导 Cargo profile，导致这两个维度无法独立表达。\n\n这个 PR 增加最小配置面：只允许 `Debug` 和 `Release` 两个 Cargo profile 标签，不引入自定义 named profile 或新的 CLI 覆盖参数。\n\n## 验证\n\n- `cargo fmt --all -- --check`\n- `git diff --check`\n- `cargo check -p ostool`"
+      }
+    },
+    {
+      "id": "comment-drivercraft/ostool-94-1",
+      "type": "issue_comment",
+      "ts": "2026-05-06T10:03:33Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 94,
+        "issueTitle": "docs: add agent guidance",
+        "body": "这个 draft PR 已由 #95 取代：新 PR 使用 README 示例中的 feature 分支风格，并将 4 个提交合并为 1 个中文提交。"
+      }
+    },
+    {
+      "id": "pr-95-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-06T10:03:22Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "docs",
+      "data": {
+        "number": 95,
+        "title": "docs: 添加 AGENTS 指南",
+        "state": "open",
+        "body": "## 摘要\n\n- 新增仓库根目录 `AGENTS.md`，记录 AI 辅助改动时需要遵循的项目边界。\n- 为各 workspace crate 和 `ostool-server/webui` 增加局部 `AGENTS.md`。\n- 指南聚焦仓库已有事实：CI 证据、package 边界、生成产物、硬件敏感路径和验证入口。\n\n## 社区问题\n\n这个 PR 提议通过 `AGENTS.md` 记录 AI 辅助开发时的协作约定。社区是否接受这种 AI 驱动的开发模式，以及把相关约定放在 `AGENTS.md` 中？\n\n如果社区更倾向于其他位置、措辞、语言或范围，这个 draft PR 先作为讨论入口；确认方向后再标记为 ready。\n\n## Review 说明\n\n- 文档主体使用中文，以匹配当前默认根 README。\n- 指南避免引入仓库未声明的额外环境假设，例如 Docker-first 或本地安装工具链之类的规则。\n- `ostool-server` 指南明确说明 `cargo test -p ostool-server` 可能会通过 `build.rs` 调用 pnpm；工具不可用时应说明跳过，而不是改变工具来源或提交生成产物来掩盖差异。\n- 分支名使用 README 贡献指南中的 `feature/...` 风格。\n- 当前分支相对上游只有一个提交，提交信息为中文。\n\n## 验证\n\n- 未运行 Cargo/pnpm 测试：本 PR 只新增文档文件。\n"
+      }
+    },
+    {
+      "id": "pr-94-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-06T09:59:59Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "docs",
+      "data": {
+        "number": 94,
+        "title": "docs: add agent guidance",
+        "state": "closed",
+        "body": "## Summary\n\n- Add a repository-level `AGENTS.md` with scoped guidance for future AI-assisted changes.\n- Add local `AGENTS.md` files for each workspace crate and the `ostool-server/webui` frontend.\n- Keep the guidance focused on repository-declared tools, CI evidence, package boundaries, generated artifacts, and hardware-sensitive workflows.\n\n## Community question\n\nThis PR proposes documenting an AI-assisted development workflow through `AGENTS.md` files. Is this style of AI-driven contribution guidance acceptable for this project/community?\n\nIf the community prefers a different location, wording, language, or scope for these instructions, this draft is intended as a place to discuss that before marking it ready.\n\n## Review notes\n\n- The documents are written in Chinese to match the default root README.\n- The guidance intentionally avoids introducing extra local environment assumptions such as Docker-first development or host-level tool installation rules.\n- The `ostool-server` guidance calls out that `cargo test -p ostool-server` may invoke pnpm through `build.rs`, so missing tools should be reported rather than hidden by committing generated artifacts or changing tool sources.\n\n## Tests\n\n- `git diff --check upstream/main...HEAD`\n- Searched the new AGENTS files for unrelated local-environment assumptions (`Docker`, `Dev Container`, `brew`, `npm -g`, `rustup`, `pyenv`, etc.).\n- Not run: Cargo/pnpm tests, because this PR only adds documentation files.\n"
+      }
+    },
+    {
+      "id": "commit-44c86c4d62de0e5f35d9c2d87854ed76c90e2a31",
+      "type": "commit",
+      "ts": "2026-05-06T05:58:22Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "44c86c4d62de0e5f35d9c2d87854ed76c90e2a31",
+        "message": "docs: 同步项目模板治理规则\n\n对齐 project_template 的长期协作约定，明确 Dev Container\n作为默认执行环境，并把 plans/specs/blueprints 迁到模板路径。\n\n- 将 docs/superpowers 下的计划、设计和蓝图迁到 docs/plans、\n  docs/specs、docs/blueprints，并更新仓库内引用\n- 补充运行时配置 fail fast、第三方交付物、文件规模和容器产物边界规则\n- 固定 Dev Container 命名入口，并在 CI/PR/commit 模板中启用 DCO 检查\n\n验证：\n- jq empty .devcontainer/devcontainer.json\n- ruby YAML 解析 .github/workflows/ci.yml 和 .github/dependabot.yml\n- 检查旧 docs/superpowers 路径引用已清空\n- 检查迁移后的 docs/plans、docs/specs、docs/blueprints 引用存在\n- git diff --check\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 272,
+        "deletions": 104
+      }
+    },
+    {
       "id": "commit-da0c78588d39ea2cb06f2d2f9449dca13f8125e7",
       "type": "commit",
       "ts": "2026-05-05T13:47:51Z",
