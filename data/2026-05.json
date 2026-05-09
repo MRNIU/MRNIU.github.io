@@ -2,6 +2,162 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-540265b841a191524f875a27ec0fad8aa813f495",
+      "type": "commit",
+      "ts": "2026-05-09T02:53:57Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "540265b841a191524f875a27ec0fad8aa813f495",
+        "message": "refactor: 拆分 crates 大文件首轮结构\n\n将 connections 的连接契约类型与回归测试移出 lib.rs，并将 dsl-compiler safety 的诊断结构和模板 helper 移入子模块，降低后续审查噪声。\n\n新增 crates 大文件拆分计划，记录已完成切片、下一步拆分顺序、暂缓项与验证命令，并同步 remediation 与 crate AGENTS。\n\n验证：cargo test -p connections；cargo test -p dsl-compiler；cargo test -p tauri-bindings --features ts-export export_bindings；cargo fmt --all -- --check；cargo clippy -p connections -p dsl-compiler --all-targets -- -D warnings；git diff --exit-code -- web/src/generated；git diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 721,
+        "deletions": 560
+      }
+    },
+    {
+      "id": "commit-4a2330a5ac7f33c3c2022d8125f80177f09a696b",
+      "type": "commit",
+      "ts": "2026-05-09T02:40:29Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "4a2330a5ac7f33c3c2022d8125f80177f09a696b",
+        "message": "fix: 收口 crates 审阅剩余问题\n\n补齐 2026-05-08 crates 审阅记录中剩余的运行时可靠性、\nDSL 编译闭环、显式配置和文档治理问题。\n\n- 收紧 DSL/core/compiler 校验，重复 action args、裸变量条件、\n  timeout/system action、重复 ID 与 sanitize 碰撞都在编译期 fail-fast。\n- 补齐 connections、nodes-io、store、scripting、AI 和 graph 的运行时\n  边界，避免静默默认、阻塞 async worker、连接健康漂移和 Data 边污染主拓扑。\n- 更新 crate-local AGENTS 与 remediation 跟踪文档，保留大文件拆分为持续治理项。\n- 增加覆盖上述边界的回归测试，并确认 TS 生成物无漂移。\n\n验证：cargo test --workspace；cargo fmt --all -- --check；\ncargo clippy --workspace --all-targets -- -D warnings；\ncargo test -p tauri-bindings --features ts-export export_bindings；\nnpm --prefix web run build；git diff --exit-code -- web/src/generated；\ngit diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2506,
+        "deletions": 549
+      }
+    },
+    {
+      "id": "commit-37ccaa4f26033700802629dc42f7d3675dbafd40",
+      "type": "commit",
+      "ts": "2026-05-09T01:53:52Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "37ccaa4f26033700802629dc42f7d3675dbafd40",
+        "message": "fix: 移除脚本分支节点 PURE 能力\n\nif/switch 共用默认 Rhai 环境，可读时间、随机数并写工作流变量，不能继续声明 PURE。\n\n- 将 if/switch 能力标签收紧为 BRANCHING。\n\n- 更新标准 registry 契约测试。\n\n- 修正 scripting 与 nodes-flow AGENTS 中的 helper、PURE 和 stateMachine action-port 文档。\n\n- 更新 crates remediation 状态。\n\n验证：cargo test -p nazh-engine registry；cargo test -p nodes-flow；cargo test -p scripting；cargo fmt -p nodes-flow -p scripting -p nazh-engine -- --check；cargo clippy -p nodes-flow -p scripting -p nazh-engine --all-targets -- -D warnings；git diff --check。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 38,
+        "deletions": 43
+      }
+    },
+    {
+      "id": "commit-6e77a46773cc129e1aa94697e56c5839d40d7044",
+      "type": "commit",
+      "ts": "2026-05-09T01:50:56Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "6e77a46773cc129e1aa94697e56c5839d40d7044",
+        "message": "docs: 补齐 graph crate 协作规则\n\n为 graph 编排层补 crate-local AGENTS.md，满足每个 crates/* 都有局部真值源的文档约定。\n\n- 记录 DAG 部署、Exec/Data/Reactive 边语义、DataStore 引用计数和 pull path 约束。\n\n- 写明依赖边界、修改同步项和测试清单。\n\n- 更新 crates 审阅 remediation 状态。\n\n验证：find crates -maxdepth 2 -name AGENTS.md | sort；git diff --check。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 106,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-dc4daa9a39ffc604dbc53f50d7cda62b93f8f78c",
+      "type": "commit",
+      "ts": "2026-05-09T01:49:56Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "chore",
+      "data": {
+        "sha": "dc4daa9a39ffc604dbc53f50d7cda62b93f8f78c",
+        "message": "chore: 移除 AI 侧向生成物\n\n删除已经漂移的 crates/ai 侧 TypeScript 生成目录，保留 root web/src/generated 作为唯一提交与 CI 校验源。\n\n- 删除 crates/ai/bindings 与 crates/ai/web/src/generated 两套旧输出。\n\n- 将这两个路径加入 .gitignore，避免后续误提交。\n\n- 更新 crates/ai/AGENTS.md 与 remediation 状态，明确 tauri-bindings::export_all 是契约导出入口。\n\n验证：cargo test -p tauri-bindings --features ts-export export_bindings；git diff -- web/src/generated；git ls-files 'crates/ai/bindings/*' 'crates/ai/web/src/generated/*'；git diff --check。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 240
+      }
+    },
+    {
+      "id": "commit-88991c5b5e885876adce79ac4002307eb8683a64",
+      "type": "commit",
+      "ts": "2026-05-09T01:48:30Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "88991c5b5e885876adce79ac4002307eb8683a64",
+        "message": "fix: 收紧 AI provider 与流式错误边界\n\n按 ai crate 约定修复 DeepSeek 扩展字段和 streaming 错误传播。\n\n- 根据 provider base_url 或 model 判定是否允许 DeepSeek thinking/reasoning 字段。\n\n- 非 DeepSeek provider 完全省略 DeepSeek 私有字段，DeepSeek 且全局 thinking 开启时才注入。\n\n- 移除 stream_complete 内部伪断点续传，SSE 读取错误和 JSON 解析错误直接回传 AiError。\n\n- 给坏 JSON stream 增加回归测试，并同步 remediation 状态。\n\n验证：cargo test -p ai；cargo fmt -p ai -- --check；cargo clippy -p ai --all-targets -- -D warnings；git diff --check。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 223,
+        "deletions": 116
+      }
+    },
+    {
+      "id": "commit-0ab0041e59c66bb5092ee4e986b8c512ba1a1079",
+      "type": "commit",
+      "ts": "2026-05-09T01:43:47Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "0ab0041e59c66bb5092ee4e986b8c512ba1a1079",
+        "message": "fix: 对齐运行时策略输入 TS 契约\n\nWorkflowRuntimePolicyInput 的 Option 字段此前导出为必填 T | null，迫使前端维护手写镜像类型。\n\n- 为所有可缺省字段补 ts(optional)，并把毫秒字段显式导出为 number。\n\n- 重新生成 WorkflowRuntimePolicyInput.ts。\n\n- deployWorkflow 删除本地手写接口，改用生成类型。\n\n- 更新 crates 审阅 remediation 状态。\n\n验证：cargo test -p tauri-bindings --features ts-export export_bindings；npm --prefix web ci；npm --prefix web run build；cargo fmt -p tauri-bindings -- --check；cargo clippy -p tauri-bindings --all-targets --no-deps -- -D warnings；git diff --check。普通 cargo clippy -p tauri-bindings --all-targets -- -D warnings 触发既有 crates/ai/src/client.rs lint，未在本提交处理。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 13,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-0c542b5b9e6dcc4b07b9a14b69d03b9a6764bc61",
+      "type": "commit",
+      "ts": "2026-05-09T01:40:10Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "0c542b5b9e6dcc4b07b9a14b69d03b9a6764bc61",
+        "message": "fix: 收紧 crates 审阅遗留闭环\n\n补齐 2026-05-08 crates 审阅记录中仍未闭环的几项运行时问题。\n\n- 让 capabilityCall 继承 connection_id，并接入 Modbus/MQTT/Serial/CAN 真实执行入口；script implementation 未接入执行器时 fail-fast。\n\n- 修复 switch 未知分支路由到未声明端口的问题，统一落到 default。\n\n- 变量事件发送失败改为 error 级别记录，并累计 channel full/closed 的丢弃计数。\n\n- 同步 remediation 计划、project status 和节点边界评审文档。\n\n验证：cargo test -p nodes-io；cargo test -p nodes-flow switch；cargo test -p nazh-core variables；cargo test -p dsl-compiler；cargo clippy -p nazh-core -p nodes-flow -p nodes-io --all-targets -- -D warnings；cargo fmt -p nazh-core -p nodes-flow -p nodes-io -- --check；git diff --check。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 942,
+        "deletions": 103
+      }
+    },
+    {
+      "id": "commit-ec2106b305376b50a60926d981411fd893895cf4",
+      "type": "commit",
+      "ts": "2026-05-08T13:45:20Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "ec2106b305376b50a60926d981411fd893895cf4",
+        "message": "fix: 修复 DataStore 引用释放闭环\n\n补齐 DAG 数据通道在发送失败和 Data-only 输出场景下的生命周期语义。\n\n- NodeHandle::emit 在无下游或下游关闭时释放 payload 引用\n\n- WorkflowIngress submit_to / blocking_submit_to 发送失败时补偿释放\n\n- runner 对 downstream channel closed 释放未消费引用\n\n- 纯 Data 输出只写 OutputCache，不再进入 result stream\n\n- 更新 crates 审阅修复跟踪文档的完成状态\n\n验证：cargo test -p nazh-core；cargo test -p nazh-graph；cargo clippy 相关 crate\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 301,
+        "deletions": 33
+      }
+    },
+    {
+      "id": "commit-59bbbf18c8a0cf5e253cecfc946ae2cd7307aab6",
+      "type": "commit",
+      "ts": "2026-05-08T13:45:07Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "59bbbf18c8a0cf5e253cecfc946ae2cd7307aab6",
+        "message": "fix: 收紧连接共享会话治理\n\n修复连接共享会话和运行中配置替换的竞态风险。\n\n- 为 ensure_shared_session 增加按 connection_id 合流的初始化锁\n\n- 运行中 record 或共享会话存在时避免静默替换连接定义\n\n- mark_failure 推进失败计数与熔断，并避免同一 lease 重复计数\n\n- CAN 无 connection_id 时显式走内部 mock-can 会话\n\n- Dev Container 补齐 libudev-dev，支持 nodes-io 默认 feature 编译\n\n验证：cargo test -p connections；cargo test -p nodes-io；cargo clippy 相关 crate\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 368,
+        "deletions": 36
+      }
+    },
+    {
+      "id": "commit-839fcdb89dedccc207bbaa34100946a1e433de97",
+      "type": "commit",
+      "ts": "2026-05-08T13:44:53Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "fix",
+      "data": {
+        "sha": "839fcdb89dedccc207bbaa34100946a1e433de97",
+        "message": "fix: 收紧 Workflow DSL 编译闭环\n\n修复 Workflow DSL 编译后进入运行时才暴露的语义断裂。\n\n- 按 action 实例保留 capability 参数，避免同一 target 多次调用串参\n\n- 对未实现的 timeout / system action 先编译期拒绝\n\n- 限定 transition 条件作用域为 payload.*，同步 DSL 示例和 crate 约定\n\n验证：cargo test -p dsl-compiler；cargo test -p nazh-dsl-core workflow\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 381,
+        "deletions": 141
+      }
+    },
+    {
+      "id": "commit-00be23e7c8258d663fb2598600a9eb609694a505",
+      "type": "commit",
+      "ts": "2026-05-08T07:56:11Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "00be23e7c8258d663fb2598600a9eb609694a505",
+        "message": "docs: 记录 crates 审阅修复跟踪\n\n新增 crates 审阅问题修复计划，按 DSL 闭环、连接可靠性、DAG 生命周期、脚本节点语义、AI/IPC 契约和文档治理分组。\n\n- 为每个问题记录错误场景、触发路径、修复方案和验证方式。\n- 补充建议实施顺序和全量验证清单，便于后续按批次修复。\n\n验证：未运行（文档新增）。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1437,
+        "deletions": 0
+      }
+    },
+    {
       "id": "pr-97-drivercraft/ostool",
       "type": "pull_request",
       "ts": "2026-05-06T12:51:23Z",
