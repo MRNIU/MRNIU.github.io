@@ -2,6 +2,218 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-f0ad37482545e9af22d416e335d3e0f81cbca6e8",
+      "type": "commit",
+      "ts": "2026-05-09T08:19:24Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "f0ad37482545e9af22d416e335d3e0f81cbca6e8",
+        "message": "refactor: 拆分 crates 剩余大文件\n\n继续收口 crates 目录下的大文件职责边界，保持对外 API 和运行时语义不变。\n\n- 将 core 变量、tauri-bindings IPC、dsl-compiler output、connections manager、MQTT、Bark 等模块拆为按职责组织的子模块。\n- 将大块内联测试外移，并按 basic/events/watch、safety 规则域等主题继续拆分。\n- 同步 crate 级 AGENTS.md 与 crates 大文件拆分计划，记录当前 crates 下已无超过 500 行的 Rust 源文件。\n\n验证：\n- cargo test --workspace\n- cargo test -p tauri-bindings --features ts-export export_bindings\n- git diff --exit-code -- web/src/generated\n- cargo fmt --all -- --check\n- cargo clippy --workspace --all-targets -- -D warnings\n- git diff --check\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 9294,
+        "deletions": 8977
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-15-0",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:27:18Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 15,
+        "issueTitle": "chore(deps): bump tokio from 1.52.1 to 1.52.3",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-14-1",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:27:14Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 14,
+        "issueTitle": "chore(deps): bump quick-xml from 0.39.2 to 0.39.3",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-13-2",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:27:10Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 13,
+        "issueTitle": "chore(deps): bump tauri from 2.10.3 to 2.11.1",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-12-3",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:27:06Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 12,
+        "issueTitle": "chore(deps): bump tauri-build from 2.5.6 to 2.6.1",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-11-4",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:27:02Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 11,
+        "issueTitle": "chore(deps-dev): bump @tauri-apps/cli from 2.11.0 to 2.11.1 in /web",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-10-5",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:26:58Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 10,
+        "issueTitle": "chore(deps): bump pdf-extract from 0.7.12 to 0.10.0",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-9-6",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:26:54Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 9,
+        "issueTitle": "chore(deps): bump react from 19.2.5 to 19.2.6 in /web",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-8-7",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:26:50Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 8,
+        "issueTitle": "chore(deps): bump react-dom from 19.2.5 to 19.2.6 in /web",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "comment-ssXue/Nazh-7-8",
+      "type": "issue_comment",
+      "ts": "2026-05-09T05:26:46Z",
+      "repo": "ssXue/Nazh",
+      "semantic": null,
+      "data": {
+        "issueNumber": 7,
+        "issueTitle": "chore(deps-dev): bump vite from 8.0.10 to 8.0.11 in /web",
+        "body": "已在 d8101a8 集中合并本次依赖升级；关闭此 Dependabot PR 并删除对应分支。"
+      }
+    },
+    {
+      "id": "commit-d8101a824a9ce49a37d11ea1b10ab539129e0542",
+      "type": "commit",
+      "ts": "2026-05-09T05:25:57Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "chore",
+      "data": {
+        "sha": "d8101a824a9ce49a37d11ea1b10ab539129e0542",
+        "message": "chore: 合并依赖升级\n\n集中落地打开的 Dependabot 升级，避免多个并行 PR 继续在 lockfile 上漂移。\n\n- 更新 Rust 侧 pdf-extract 0.10.0、quick-xml 0.39.3，并刷新 Tauri、tauri-build、tokio lockfile 到 Dependabot 目标版本。\n\n- 更新前端 React/React DOM 19.2.6、@tauri-apps/cli 2.11.1、Vite 8.0.11，并保留新版 Tauri 生成的权限 schema。\n\n- 验证：npm --prefix web ci；npm --prefix web run test；npm --prefix web run build；cargo fmt --all -- --check；cargo clippy --workspace --all-targets -- -D warnings；cargo test --workspace；cargo test -p tauri-bindings --features ts-export export_bindings；git diff --exit-code -- web/src/generated/；cargo deny check；git diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 609,
+        "deletions": 738
+      }
+    },
+    {
+      "id": "commit-a5b105669561de8c8597eeee833783a1a2f25b8c",
+      "type": "commit",
+      "ts": "2026-05-09T04:26:51Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "test",
+      "data": {
+        "sha": "a5b105669561de8c8597eeee833783a1a2f25b8c",
+        "message": "test: 对齐 AI 编排测试的 UUID 节点 ID\n\nAI 编排真实 node id 已改由 crypto.randomUUID 分配，旧测试仍断言 timer_node_1/code_1 等历史规则，导致前端单测稳定失败。\n\n- 通过 nodeRefs 读取真实节点 ID，再验证节点、边、label 和编辑上下文。\n\n- 保留对已有节点 ref 映射的断言，覆盖 edit/update/stream resume 场景。\n\n- 避免测试重新绑定到 prefix_N 分配实现。\n\n验证：npm --prefix web run test -- workflow-orchestrator；npm --prefix web run test；npm --prefix web run build；git diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 53,
+        "deletions": 22
+      }
+    },
+    {
+      "id": "commit-4ca4075faf1603eff99df21e617ca533f717faec",
+      "type": "commit",
+      "ts": "2026-05-09T04:10:07Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "4ca4075faf1603eff99df21e617ca533f717faec",
+        "message": "refactor: 继续拆分连接治理职责\n\n延续 crates 大文件拆分计划，把 connections 的 RAII 守卫和健康状态机从 lib.rs 拆到独立模块，保持 ConnectionManager 与 ConnectionGuard 的外部 API 不变。\n\n- guard.rs 承接 ConnectionGuard getter、mark_success/mark_failure 与 Drop 归还入口。\n\n- health.rs 承接释放状态机、配置诊断、限流/熔断/退避、心跳超时与失败计数 helper。\n\n- 同步 connections AGENTS 与拆分计划，记录 Slice 5/6 验证结果。\n\n验证：cargo test -p connections；cargo clippy -p connections --all-targets -- -D warnings；cargo fmt --all -- --check；git diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 382,
+        "deletions": 307
+      }
+    },
+    {
+      "id": "commit-dfe760650d3e435225cd7977bccfcdea616735ee",
+      "type": "commit",
+      "ts": "2026-05-09T03:54:59Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "docs",
+      "data": {
+        "sha": "dfe760650d3e435225cd7977bccfcdea616735ee",
+        "message": "docs: 清理过期工作文档\n\n删除已合入的一次性计划、bugfix 跟踪、旧 review findings 和蓝图草稿，保留仍承担当前契约的 ADR/RFC、少量 spec、当前拆分计划与模板。\n\n- 将 AGENTS/docs README/conventions 的保留规则改为 working docs 临时制，历史追溯交给 git。\n\n- 收敛 project-status、ADR 和 rustdoc 中指向已删 plan/spec 的引用。\n\n- 更新 IPC 数量、事件通道和项目结构说明，保留当前可继续执行的文档入口。\n\n验证：git diff --staged --check；文档路径引用存在性检查。未运行 cargo/npm；本次只清理文档和注释。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 35,
+        "deletions": 33886
+      }
+    },
+    {
+      "id": "commit-e4e0b4856b59860e94c932be5d48a9d9f64d85d2",
+      "type": "commit",
+      "ts": "2026-05-09T03:31:19Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "e4e0b4856b59860e94c932be5d48a9d9f64d85d2",
+        "message": "refactor: 拆分串口触发节点帧与循环逻辑\n\n延续 crates 大文件拆分计划，将 serialTrigger 从单文件改为 serial_trigger/ 模块目录，保持节点 re-export、transform/on_deploy 行为和现有测试语义不变。\n\n- mod.rs 保留 SerialTriggerNode 配置、metadata 构造和生命周期编排。\n\n- frame.rs 承接串口帧字段读取、ASCII/HEX 规范化与 payload 构造。\n\n- loop.rs 承接阻塞串口读循环、delimiter 解析、serialport 参数映射、健康反馈与重连逻辑。\n\n- tests.rs 保留原有 serialTrigger 回归测试，并同步 nodes-io AGENTS 与拆分计划。\n\n验证：cargo test -p nodes-io serial；cargo test -p nazh-engine --test workflow serial_trigger_node_normalizes_ascii_and_hex_frames；cargo clippy -p nodes-io --all-targets -- -D warnings；cargo fmt --all -- --check；git diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 889,
+        "deletions": 864
+      }
+    },
+    {
+      "id": "commit-4dc8e6d801dda98544da5cfa0ceaa8cd3bf7dde4",
+      "type": "commit",
+      "ts": "2026-05-09T03:24:06Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "4dc8e6d801dda98544da5cfa0ceaa8cd3bf7dde4",
+        "message": "refactor: 拆分 AI 客户端协议与流式解析\n\n延续 crates 大文件拆分计划，将 OpenAI-compatible 客户端从单个 client.rs 拆成按职责分组的 client/ 模块目录，保持 OpenAiCompatibleService 的外部 re-export 与运行时语义不变。\n\n- mod.rs 保留服务结构、配置快照解析以及 complete/stream/test_connection 编排入口。\n\n- protocol/provider_policy/response/stream/types/tests 分别承接 DTO、DeepSeek 策略、响应解析、SSE 转发、请求快照和回归测试。\n\n- 同步 crates/ai/AGENTS.md 与拆分计划，记录 Slice 3 验证结果。\n\n验证：cargo test -p ai；cargo test -p tauri-bindings --features ts-export export_bindings；cargo clippy -p ai --all-targets -- -D warnings；cargo fmt --all -- --check；git diff --exit-code -- web/src/generated；git diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1009,
+        "deletions": 926
+      }
+    },
+    {
+      "id": "commit-0588d844e7e50e76e6cdfa6fa17ab6c722ffc9d9",
+      "type": "commit",
+      "ts": "2026-05-09T03:11:58Z",
+      "repo": "ssXue/Nazh",
+      "semantic": "refactor",
+      "data": {
+        "sha": "0588d844e7e50e76e6cdfa6fa17ab6c722ffc9d9",
+        "message": "refactor: 继续拆分 crates 大文件职责\n\n延续 crates 大文件拆分计划，将仍混在单文件中的治理和安全规则按职责域外移，保持外部 API 与安全校验入口不变。\n\n- connections 抽出 policy/validation，lib.rs 保留 manager/guard 状态机。\n- dsl-compiler safety 抽出 action_rules/preconditions/state_graph/interlock，run_safety_checks 只负责编排。\n- 同步 crate AGENTS、remediation 和拆分计划，记录本轮验证。\n\n验证：cargo test -p connections；cargo clippy -p connections --all-targets -- -D warnings；cargo test -p dsl-compiler safety；cargo test -p dsl-compiler；cargo clippy -p dsl-compiler --all-targets -- -D warnings；cargo fmt --all -- --check；git diff --check。\n\nCo-authored-by: Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1109,
+        "deletions": 1028
+      }
+    },
+    {
       "id": "commit-540265b841a191524f875a27ec0fad8aa813f495",
       "type": "commit",
       "ts": "2026-05-09T02:53:57Z",
