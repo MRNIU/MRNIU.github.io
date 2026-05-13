@@ -2,6 +2,57 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-45dc8ba384664e8391a002f0c0be95e16eeec986",
+      "type": "commit",
+      "ts": "2026-05-12T14:56:42Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "sha": "45dc8ba384664e8391a002f0c0be95e16eeec986",
+        "message": "feat(ostool): 添加 Cargo 二进制目标选择 (#97)\n\n* feat(ostool): 添加 Cargo 二进制目标选择\n\nOSTool 需要在同一个 Cargo package 暴露多个二进制时，能够明确选择本次构建和运行使用的目标，而不是复制多份配置或依赖 artifact 猜测。\n\n- 为 `system.Cargo` 增加可选的 `bin` 字段，并在 `build`、`run qemu`、`run uboot`、`board run` 中支持 `--package` / `--bin` 临时覆盖。\n- Cargo 构建器按 package 和 bin 精确匹配 executable artifact；多二进制未指定时返回明确的歧义错误。\n- 更新中文和英文 README，说明配置项、命令行参数和多二进制项目的用法。\n- 补充 SimpleKernel 迁移计划中的 PR-02 实现取舍，明确 command selector、语义检查和多 binary 配置的边界。\n\n* fix(ostool): 同步 Cargo selector 上下文\n\n--package/--bin 覆盖原本只更新局部 build config，导致后续加载 .board.toml 时，${package} 仍可能按旧 Tool context 解析。\n\n- 将 selector 应用后的 build config 写回 Tool 上下文。\n\n- 更新 SimpleKernel 迁移计划，记录 board run 对 package-local 路径的要求。\n\n验证：git diff --check",
+        "additions": 177,
+        "deletions": 36
+      }
+    },
+    {
+      "id": "commit-6ace2d6989692479502e252ea31364dd7c02a6f8",
+      "type": "commit",
+      "ts": "2026-05-12T14:55:43Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "sha": "6ace2d6989692479502e252ea31364dd7c02a6f8",
+        "message": "feat(ostool): 支持显式配置 Cargo 构建 profile (#96)\n\nCargo 的 Debug/Release 会影响优化级别、debug assertions 和最终代码形态，而 QEMU debug 只应该控制 GDB 等运行时调试参数。此前 ostool 通过 QEMU --debug 隐式推导 Cargo profile，导致这两个维度无法独立表达。\n\n- 在 system.Cargo 中增加可选 profile 字段，支持 Debug 和 Release。\n\n- 未配置 profile 时保留旧行为，避免影响现有 .build.toml。\n\n- 让 log feature 的 release/debug 选择跟随 Cargo profile。\n\n- 更新中英文 README，建议用 profile 表达 release 构建。",
+        "additions": 50,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "comment-drivercraft/ostool-96-0",
+      "type": "issue_comment",
+      "ts": "2026-05-12T09:34:11Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 96,
+        "issueTitle": "feat(ostool): 支持显式配置 Cargo 构建 profile",
+        "body": "@ZR233 hello，请问可以 review 一下这几笔 pr 吗"
+      }
+    },
+    {
+      "id": "commit-c2e12fe76150638f7875fda161a1943a6a855292",
+      "type": "commit",
+      "ts": "2026-05-12T05:54:03Z",
+      "repo": "libodynamics/project_template",
+      "semantic": "ci",
+      "data": {
+        "sha": "c2e12fe76150638f7875fda161a1943a6a855292",
+        "message": "ci(devcontainer): 补充 GHCR 拉取鉴权\n\n模板基础镜像保持 private 时，派生项目 CI 需要先获得 package Actions access，并在构建 Dev Container 前登录 GHCR。\n\n- 在 CI job 中声明 packages: read，并通过 docker/login-action 使用 GITHUB_TOKEN 登录 ghcr.io。\n- 在 README、.devcontainer/README.md 和 docs/conventions.md 记录授权前置条件、token 边界和非 GitHub CI 的处理方式。\n- 验证：docker exec project-template-devcontainer-nzh-main bash -lc 'cd /workspace && pre-commit run --all-files'\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 31,
+        "deletions": 0
+      }
+    },
+    {
       "id": "commit-f0ad37482545e9af22d416e335d3e0f81cbca6e8",
       "type": "commit",
       "ts": "2026-05-09T08:19:24Z",
