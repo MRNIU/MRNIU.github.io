@@ -2,6 +2,133 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "comment-drivercraft/ostool-95-0",
+      "type": "issue_comment",
+      "ts": "2026-05-15T01:57:11Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 95,
+        "issueTitle": "docs: 添加 AGENTS 指南",
+        "body": "@ZR233  hi，请问可以 review 一下吗"
+      }
+    },
+    {
+      "id": "comment-drivercraft/ostool-103-1",
+      "type": "issue_comment",
+      "ts": "2026-05-15T01:56:55Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 103,
+        "issueTitle": "补充 build/run 调用契约测试",
+        "body": "@ZR233 hi，请问可以 review 一下吗"
+      }
+    },
+    {
+      "id": "pr-103-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-14T09:34:39Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "number": 103,
+        "title": "补充 build/run 调用契约测试",
+        "state": "open",
+        "body": "## 摘要\n\n- 补充 CLI、cargo-osrun、CargoBuilder 和 runtime artifact 相关 build/run 调用契约测试。\n- 稳定 QEMU byte stream、WebSocket session lifecycle 和 uboot-shell QEMU smoke 测试。\n- 补齐本层测试改动涉及的注释。\n\n## 范围说明\n\n本 PR 补齐 build/run 路径上的契约护栏，覆盖 CLI 参数入口、Cargo artifact 选择与状态记录、runtime 关闭/释放流程，以及 QEMU/U-Boot 相关集成测试稳定性。\n\n## 验证\n\n```bash\ncargo fmt --all -- --check\ncargo clippy --target x86_64-unknown-linux-gnu --all-features\ncargo build --target x86_64-unknown-linux-gnu --all-features\ncargo test --target x86_64-unknown-linux-gnu -- --nocapture\n```"
+      }
+    },
+    {
+      "id": "comment-MRNIU/ostool-2-2",
+      "type": "issue_comment",
+      "ts": "2026-05-14T09:03:56Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 2,
+        "issueTitle": "重构 ostool 调用流程",
+        "body": "这个大 PR 已拆分为 5 个更小的草稿 PR，后续请按顺序 review：#3、#4、#5、#6、#7。"
+      }
+    },
+    {
+      "id": "pr-7-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-14T09:03:45Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "number": 7,
+        "title": "移除旧 Tool 中心化入口",
+        "state": "open",
+        "body": "## 摘要\n\n- 将 CLI、构建、QEMU、U-Boot 和 board 运行路径切到 invocation 入口。\n- 移除旧的 `Tool`/`ctx` 中心化 API 面。\n- 更新 public API 测试，并补齐本层入口和运行路径注释。\n\n## 验证\n\n在 `devbox` Docker 容器内运行：\n\n```bash\ncargo fmt --all -- --check\ncargo clippy --target x86_64-unknown-linux-gnu --all-features\ncargo build --target x86_64-unknown-linux-gnu --all-features\ncargo test --target x86_64-unknown-linux-gnu -- --nocapture\n```"
+      }
+    },
+    {
+      "id": "pr-6-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-14T09:03:26Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "number": 6,
+        "title": "稳定 board session 生命周期",
+        "state": "open",
+        "body": "## 摘要\n\n- 提取 board session 释放逻辑，确保运行失败后仍会释放 session。\n- 为 heartbeat loop 增加可测试入口，覆盖租约更新和停止信号路径。\n- 补齐本层 board session 相关注释。\n\n## 验证\n\n在 `devbox` Docker 容器内运行：\n\n```bash\ncargo fmt --all -- --check\ncargo clippy --target x86_64-unknown-linux-gnu --all-features\ncargo build --target x86_64-unknown-linux-gnu --all-features\ncargo test --target x86_64-unknown-linux-gnu -- --nocapture\n```"
+      }
+    },
+    {
+      "id": "pr-5-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-14T09:03:15Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "number": 5,
+        "title": "拆分构建产物处理模块",
+        "state": "open",
+        "body": "## 摘要\n\n- 将 Cargo artifact 选择和 runtime artifact 准备逻辑拆到独立模块。\n- 将构建配置加载和 UI hooks 从 legacy facade 中拆出。\n- 补齐本层新增 build/artifact 模块注释。\n\n## 验证\n\n在 `devbox` Docker 容器内运行：\n\n```bash\ncargo fmt --all -- --check\ncargo clippy --target x86_64-unknown-linux-gnu --all-features\ncargo build --target x86_64-unknown-linux-gnu --all-features\ncargo test --target x86_64-unknown-linux-gnu -- --nocapture\n```"
+      }
+    },
+    {
+      "id": "pr-4-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-14T09:03:04Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "number": 4,
+        "title": "抽出 invocation 上下文",
+        "state": "open",
+        "body": "## 摘要\n\n- 新增 invocation、project 和 process 上下文模块。\n- 让 CLI 和 legacy facade 共享同一组项目路径与进程执行上下文。\n- 补齐本层新增模块和函数注释。\n\n## 验证\n\n在 `devbox` Docker 容器内运行：\n\n```bash\ncargo fmt --all -- --check\ncargo clippy --target x86_64-unknown-linux-gnu --all-features\ncargo build --target x86_64-unknown-linux-gnu --all-features\ncargo test --target x86_64-unknown-linux-gnu -- --nocapture\n```"
+      }
+    },
+    {
+      "id": "pr-3-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-14T09:02:53Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "number": 3,
+        "title": "补充 build/run 调用契约测试",
+        "state": "closed",
+        "body": "## 摘要\n\n- 补充 CLI、cargo-osrun、CargoBuilder 和 runtime artifact 相关 build/run 调用契约测试。\n- 稳定 QEMU byte stream、WebSocket session lifecycle 和 uboot-shell QEMU smoke 测试。\n- 补齐本层测试改动涉及的注释。\n\n## 范围说明\n\n本 PR 补齐 build/run 路径上的契约护栏，覆盖 CLI 参数入口、Cargo artifact 选择与状态记录、runtime 关闭/释放流程，以及 QEMU/U-Boot 相关集成测试稳定性。\n\n## 验证\n\n```bash\ncargo fmt --all -- --check\ncargo clippy --target x86_64-unknown-linux-gnu --all-features\ncargo build --target x86_64-unknown-linux-gnu --all-features\ncargo test --target x86_64-unknown-linux-gnu -- --nocapture\n```"
+      }
+    },
+    {
+      "id": "pr-2-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-14T07:35:40Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "number": 2,
+        "title": "重构 ostool 调用流程",
+        "state": "closed",
+        "body": "## 摘要\n\n- 重构 `ostool` 调用流程，明确构建、运行、项目路径和产物管理的职责边界。\n- 将 QEMU、U-Boot、board、artifact、process、project 等逻辑拆分到对应模块。\n- 补充相关测试，并为本次改动涉及的代码补齐文件级和函数级注释。\n\n## 验证\n\n在 `devbox` Docker 容器内运行：\n\n```bash\ncargo fmt --all -- --check\ncargo clippy --target x86_64-unknown-linux-gnu --all-features\ncargo build --target x86_64-unknown-linux-gnu --all-features\ncargo test --target x86_64-unknown-linux-gnu -- --nocapture\n```"
+      }
+    },
+    {
       "id": "commit-45dc8ba384664e8391a002f0c0be95e16eeec986",
       "type": "commit",
       "ts": "2026-05-12T14:56:42Z",
