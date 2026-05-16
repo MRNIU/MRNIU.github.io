@@ -2,6 +2,19 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-925f9ea9027240f01f85302533f80e3dd78776e6",
+      "type": "commit",
+      "ts": "2026-05-15T15:18:07Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "docs",
+      "data": {
+        "sha": "925f9ea9027240f01f85302533f80e3dd78776e6",
+        "message": "docs: 添加 AGENTS 指南 (#95)\n\n为仓库和各 workspace 成员补充 AGENTS.md，明确 AI 辅助改动时应遵循的项目边界。\n\n- 根目录记录项目结构、依赖与工具、提交、验证和文档约定。\n\n- 子项目记录各 crate 与 web UI 的局部规则和验证入口。\n\n- 避免引入仓库未声明的环境假设，缺少工具时要求如实说明。",
+        "additions": 180,
+        "deletions": 0
+      }
+    },
+    {
       "id": "comment-drivercraft/ostool-95-0",
       "type": "issue_comment",
       "ts": "2026-05-15T01:57:11Z",
