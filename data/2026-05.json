@@ -2,6 +2,45 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "pr-108-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-22T02:29:40Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 108,
+        "title": "refactor(tool): 拆分调用、项目与进程上下文",
+        "state": "open",
+        "body": "## Summary\n- 抽出 `Invocation` 和 `ProjectLayout`，统一 CLI 与 `cargo-osrun` 的 manifest、workspace、debug/bin/build-dir 输入。\n- 抽出 `VariableScope` 和 `ProcessContext`，让配置变量展开与 shell/process 命令构造使用显式上下文。\n- 保留现有 `Tool` 兼容门面，build、QEMU、U-Boot 和 board runtime 的用户可见行为保持不变。\n\n## Overall Approach\n这个 PR 是一次保持行为不变的边界抽取。核心思路是把一次 ostool 调用中的静态输入、项目定位、变量替换和子进程执行上下文先拆成显式对象，再让现有 `Tool` 继续作为兼容门面承接 build/run 流程。\n\n具体来说：\n- `Invocation` / `ProjectLayout` 负责把 CLI 或 library caller 传入的 manifest、build/bin 目录和 debug 标志解析成稳定的项目上下文。\n- `VariableScope` 负责 `${workspace}`、`${workspaceFolder}`、`${package}`、`${tmpDir}` 和 `${env:*}` 的替换输入。\n- `ProcessContext` 负责命令工作目录、`WORKSPACE_FOLDER`、`KERNEL_ELF` 和参数/环境变量展开。\n- QEMU、U-Boot、board 和 Cargo hook 路径改用这些更窄的上下文，但仍通过 `Tool` 保存 legacy runtime artifact state，避免在本 PR 中改变外部行为。\n\n## File Details\n- `ostool/src/invocation.rs`: 新增 `InvocationOptions` 和 `Invocation`，把 CLI/library 输入与解析后的 project layout 绑定起来。\n- `ostool/src/project/layout.rs`: 新增 manifest 和 workspace 解析逻辑，承接原先 `Tool` 中的 manifest path resolution。\n- `ostool/src/project/metadata.rs`: 新增 Cargo metadata helper，用于读取 workspace metadata 和按 package 查找 manifest directory。\n- `ostool/src/project/variables.rs`: 新增 `VariableScope` 与变量展开函数，集中处理 workspace/package/tmp/env 占位符。\n- `ostool/src/project/mod.rs`: 汇总 project layout、metadata 和 variables 模块，并仅暴露 crate 内部需要的 project API。\n- `ostool/src/process/mod.rs`: 新增 `ProcessContext`、command builder 和 shell hook runner，统一子进程工作目录、环境变量和占位符展开。\n- `ostool/src/tool.rs`: 将 manifest/project/metadata/variable/process 逻辑委托给新模块，同时保留 `Tool` 作为 build/run 的兼容门面和 runtime artifact state owner。\n- `ostool/src/main.rs`: CLI 初始化改为先构造 `Invocation`，再创建 `Tool`；补充 build/run/board 参数解析护栏测试。\n- `ostool/src/bin/cargo-osrun.rs`: `cargo-osrun` 改为通过 `Invocation` 初始化 manifest context 和 `Tool`；补充 QEMU 默认路径和 U-Boot subcommand 的解析测试。\n- `ostool/src/build/cargo_builder.rs`: Cargo build 过程改为显式返回 resolved artifact，并通过 `ProcessContext` 执行 pre/post build hook 和构造 cargo command。\n- `ostool/src/build/mod.rs`: custom build hook 改用 `ProcessContext` 执行 shell command。\n- `ostool/src/board/config.rs`: board 配置和 CLI override 的字符串替换改为接收 `VariableScope`，不再直接依赖完整 `Tool`。\n- `ostool/src/board/mod.rs`: board config 路径展开、配置加载和 runtime override 改用显式 variable scope。\n- `ostool/src/run/qemu.rs`: QEMU 配置读取、默认配置创建、运行时配置替换和 command 构造改用 `VariableScope` / `ProcessContext`。\n- `ostool/src/run/uboot.rs`: U-Boot/local/net 配置替换和 reset/power-off hook 执行改用 `VariableScope` / `ProcessContext`。\n- `ostool/src/lib.rs`: 对外暴露 invocation 入口，同时将 project/process 保持为 crate-internal 模块。\n\n## Compatibility\n- CLI 参数、配置文件格式、build 行为、QEMU/U-Boot/board runtime 语义保持不变。\n- `Tool` 仍然是现有 library caller 的主要入口。\n- 缺失 Cargo package 时，`${package}` 相关变量展开会继续返回错误，而不是静默回退到 manifest directory。\n\n## Tests\n- `cargo fmt --all -- --check`\n- `cargo clippy -p ostool --all-targets --all-features`\n- `cargo test -p ostool -- --nocapture`"
+      }
+    },
+    {
+      "id": "pr-8-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-21T09:06:20Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "number": 8,
+        "title": "抽出 invocation 上下文与进程调用边界",
+        "state": "open",
+        "body": "## Summary\n- 这个 PR 做一次保持行为不变的边界抽取：把 invocation、project 和 process 相关职责从 `Tool` 中拆出来。\n- CLI 和 `cargo-osrun` 先构造 `Invocation`，再通过现有 `Tool` 兼容门面进入原有 build/run 流程。\n- `project` 内部模块负责 workspace、package、manifest 等项目定位；`VariableScope` 负责配置变量替换；`ProcessContext` 负责 hook/runtime 命令的工作目录和环境变量准备。\n- 现有 CLI、配置替换、build、QEMU、U-Boot 和 board runtime 行为保持不变。\n\n## Refactor Plan\n长期目标是降低 `Tool` 对一次调用中所有职责的集中承载。目前 `Tool` 仍然是 build 和 run 流程的主要门面，但 CLI 输入解析、项目元数据定位、配置变量展开、子进程环境准备这些职责可以拆成更清晰、也更容易单独维护的边界。\n\n这个 PR 是这项工作的第一步。它先引入 invocation/project/process 这些边界，并让现有 CLI 和 `cargo-osrun` 路径开始通过这些边界进入原有流程，同时有意保留 `Tool` 作为兼容门面。这样这个 PR 可以专注于结构调整，不改变用户可见的 CLI 行为、配置格式、build 行为或 runtime 语义。\n\n后续计划：\n- 逐步收窄 build、QEMU、U-Boot 和 board 等调用点的输入，让它们在足够时依赖 `VariableScope`、`ProcessContext`、路径或字符串，而不是依赖完整的 `Tool`。\n- 在职责归属清楚后，继续把剩余的项目元数据查询和进程命令准备逻辑从 `Tool` 中迁出。\n- 等调用方迁到更窄的接口后，再清理仅为兼容过渡保留的 wrapper。\n\n## Tests\n- `cargo fmt --all -- --check`\n- `cargo clippy -p ostool --all-targets --all-features`\n- `cargo test -p ostool`"
+      }
+    },
+    {
+      "id": "commit-ba080f75162a0e10d8d54c460caf100293097bd6",
+      "type": "commit",
+      "ts": "2026-05-21T07:04:47Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "test",
+      "data": {
+        "sha": "ba080f75162a0e10d8d54c460caf100293097bd6",
+        "message": "test(ostool): 补充 build/run 调用契约测试 (#103)\n\n补齐 build/run 路径上的测试护栏，并根据 review 收敛测试边界。\n\n- 使用显式 virtio-net QEMU fixture 稳定 byte-stream 集成测试，避免默认 NIC ROM 依赖导致串口不可用。\n\n- 使用测试主动输出的 U-Boot marker 验证真实 TCP serial 字节流匹配，避免依赖 arch、FDT 或 bootflow 日志。\n\n- 用 apply_cargo_selector 行为测试替换低价值 clap 字段映射断言。\n\n- 澄清 CargoBuilder 测试覆盖 resolved artifact 写入 runtime state，而非 serde 配置解析。",
+        "additions": 491,
+        "deletions": 27
+      }
+    },
+    {
       "id": "commit-925f9ea9027240f01f85302533f80e3dd78776e6",
       "type": "commit",
       "ts": "2026-05-15T15:18:07Z",
