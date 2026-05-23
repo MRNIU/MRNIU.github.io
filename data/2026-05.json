@@ -2,6 +2,57 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "comment-MRNIU/ostool-9-0",
+      "type": "issue_comment",
+      "ts": "2026-05-23T02:41:06Z",
+      "repo": "MRNIU/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 9,
+        "issueTitle": "refactor(tool): 拆分 build 与 runtime artifact 边界",
+        "body": "Superseded by #10. The new PR uses a clean upstream-main base and a single squashed commit, without `docs/fork-only` content in the review diff."
+      }
+    },
+    {
+      "id": "pr-10-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-23T02:40:59Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 10,
+        "title": "refactor(tool): 拆分构建与运行产物边界",
+        "state": "open",
+        "body": "## 摘要\n\n- 将 Cargo 可执行产物选择逻辑从 Cargo 构建流程中拆出。\n- 将运行时 ELF/BIN 准备逻辑移动到独立的内部 artifact 模块。\n- 保留现有 `Tool` artifact 状态作为兼容桥接，避免影响当前 runner 行为。\n- 补充常见 AI/agent 本地状态目录的 `.gitignore` 规则，降低生成目录误入 review diff 的概率。\n\n## 整体思路\n\n构建路径现在拆成两个更清晰的内部职责：Cargo JSON message 解析负责选择最终可执行产物；运行时产物准备负责 ELF canonicalize、架构识别、生成 stripped ELF，以及按需生成 BIN。\n\n`Tool` 仍然持有现有运行时状态。新 helper 返回准备好的 artifact 数据，再由 `Tool` 写回既有 context 字段，因此外部 CLI、配置和 runner 语义保持不变。\n\n这次也直接维护当前 PR 分支本身，而不是把不希望 review 的内容留给后续解释。PR diff 里只保留上游可 review 的代码、测试和 ignore 规则更新。\n\n## 文件说明\n\n- `.gitignore`：新增 `.claude/`、`.codex/`、`.cursor/`、`.continue/`、`.windsurf/`、`.aider/`、`.cline/`、`.roo/`、`.gemini/`、`.serena/` 等常见 AI/agent 本地状态目录。\n- `ostool/src/build/artifact_selector.rs`：新增 Cargo executable artifact 选择器，覆盖 explicit `bin`、package-name fallback、`default_run`、single-binary fallback 和 ambiguity error。\n- `ostool/src/build/cargo_pipeline.rs`：将原 `CargoBuilder` 调整为更明确的 Cargo 构建流水线，并在解析 Cargo JSON 输出后返回 `CargoBuildOutcome`。\n- `ostool/src/artifact/runtime.rs`：集中处理 ELF canonicalization、架构识别、stripped ELF 生成、可选 BIN 转换，以及 runtime artifact 目录记录。\n- `ostool/src/tool.rs`：将 artifact 准备委托给新的 runtime artifact helper，同时保留现有 `ctx::OutputArtifacts` 写回路径。\n- `ostool/tests/public_api.rs` 和 trybuild fixtures：更新内部类型名相关的 compile-fail 覆盖。\n\n## 兼容性\n\n- 不改变 CLI 行为。\n- 不改变配置格式。\n- 不改变 runner contract。\n- 新增模块仍然是内部实现细节。\n\n## 验证\n\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool -- --nocapture`\n- `cargo check -p ostool`\n- `cargo clippy -p ostool --all-targets --all-features`\n- `git diff --check`"
+      }
+    },
+    {
+      "id": "pr-9-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-23T02:17:28Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 9,
+        "title": "refactor(tool): 拆分 build 与 runtime artifact 边界",
+        "state": "closed",
+        "body": "## Summary\n- 在 #108 的 invocation/project/process 边界之后，继续抽出 Cargo build outcome 与 runtime artifact preparation 两个内部 seam。\n- 将 Cargo executable artifact selection 移到独立模块，让 `CargoBuildPipeline::execute()` 返回 `CargoBuildOutcome`。\n- 新增 `artifact/runtime.rs`，把 runtime `.elf` / `.bin` 准备从 legacy `Tool` 方法体中抽出，同时保留 `Tool` 兼容门面。\n\n## Review Scope\n这个 fork PR 基于已同步上游主干的 fork `main`。相对 `origin/main`，本 PR 包含 3 个本地提交：\n\n- `2eb55d8 docs: 拆分 R1d 后续候选项`\n- `ee5f8ee refactor(ostool): 完成 R1d build outcome seam`\n- `a52ab94 refactor(ostool): 完成 R1e runtime artifact seam`\n\n## Overall Approach\n这个 PR 延续 upstream-friendly incremental mode：不做一次性 public API reset，不改变 CLI、配置格式或 runner runtime 行为，而是把原先集中在 `Tool` 里的 build artifact 与 runtime artifact 责任拆成更窄的内部模块。\n\n具体来说：\n- `artifact_selector.rs` 负责从 Cargo JSON message 中选择 executable artifact，覆盖 explicit bin、package-name binary、`default-run`、single binary 和 ambiguity error。\n- `CargoBuildPipeline` 仍承接 Cargo command、pre/post build hook 和 legacy runtime state bridge，但 build 执行结果现在通过 `CargoBuildOutcome` 显式返回 resolved artifact facts。\n- `artifact/runtime.rs` 负责 ELF canonicalization、architecture detection、stripped `.elf` 生成和 optional `.bin` 生成。\n- `Tool` 继续作为兼容门面保存旧的 `ctx::OutputArtifacts`，但 `prepare_elf_artifact()` / `objcopy_output_bin()` 已委托给 runtime artifact helper。\n\n## File Details\n- `ostool/src/build/artifact_selector.rs`: 新增 Cargo executable artifact selection 规则和独立单元测试。\n- `ostool/src/build/cargo_pipeline.rs`: 从 `cargo_builder.rs` 重命名/拆分而来，新增 `CargoBuildOutcome`，并通过 runtime artifact helper 写回 legacy state。\n- `ostool/src/build/mod.rs`: 更新 Cargo build/run 调用点以使用 `CargoBuildPipeline`。\n- `ostool/src/artifact/runtime.rs`: 新增 `RuntimeArtifactOptions`、`PreparedRuntimeArtifacts` 和 `prepare_runtime_artifacts()`，集中 runtime `.elf` / `.bin` 准备逻辑。\n- `ostool/src/artifact/mod.rs`: 新增 crate-internal artifact 模块入口。\n- `ostool/src/tool.rs`: 删除旧的 `set_elf_artifact_path()`、`objcopy_elf()` 和 `command()` helper；保留兼容 wrapper，并集中 legacy state 写回。\n- `ostool/src/lib.rs`: 挂入 crate-internal `artifact` 模块。\n- `ostool/tests/public_api.rs` / `ostool/tests/ui/*`: 更新 trybuild 护栏，保持新 build pipeline 模块仍为 private API。\n- `docs/fork-only/2026-05-14-ostool-r1-invocation-architecture-plan.md`: 记录 R1d/R1e 的实际完成边界和后续未完成项。\n\n## Compatibility\n- CLI 参数、配置文件格式、Cargo build 行为、QEMU/U-Boot/board runtime 语义保持不变。\n- `Tool`、`ToolConfig`、`ManifestContext` 和 `ctx::OutputArtifacts` 仍作为兼容 API 保留。\n- R1e 没有移动 public `ctx::OutputArtifacts`，也没有引入无真实消费者的 `InvocationState`。\n- someboot 注入责任收敛、artifact lifecycle 升级和 debug artifact pipeline 仍留给 R2 及后续工作。\n\n## Tests\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool -- --nocapture`\n- `cargo check -p ostool`\n- `cargo clippy -p ostool --all-targets --all-features`\n- `git diff --check`"
+      }
+    },
+    {
+      "id": "commit-bed5315620b97176918c1d323c7090124771f67e",
+      "type": "commit",
+      "ts": "2026-05-22T14:03:41Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "bed5315620b97176918c1d323c7090124771f67e",
+        "message": "refactor(tool): 拆分调用、项目与进程上下文 (#108)\n\n将 CLI 输入、项目路径解析、变量展开和 shell/process 调用准备从 legacy Tool 门面中拆出，便于后续继续收窄 build/run orchestration 的输入边界。\n\n- 新增 Invocation/ProjectLayout，统一 ostool CLI 与 cargo-osrun 的 manifest、workspace 和 debug/bin/build-dir 输入。\n\n- 新增 VariableScope 与 ProcessContext，让 QEMU、U-Boot、board 和 Cargo hook 通过显式上下文完成变量替换和命令构造。\n\n- 保留 Tool 作为兼容门面，并继续同步现有 Cargo resolved artifact 到 runtime artifact state。\n\n- 补充 CLI 参数解析、配置变量替换、缺失 package 错误传播和 runtime artifact state 的行为测试。\n\n验证：\n\n- docker run --rm -v \"/Users/nzh/Documents/GitHub/MRNIU/ostool\":/workspace -w /workspace devbox:latest sh -lc 'cargo fmt --all -- --check && cargo clippy -p ostool --all-targets --all-features && cargo test -p ostool -- --nocapture'\n\nAI-assisted-by: OpenAI Codex",
+        "additions": 1030,
+        "deletions": 344
+      }
+    },
+    {
       "id": "pr-108-drivercraft/ostool",
       "type": "pull_request",
       "ts": "2026-05-22T02:29:40Z",
