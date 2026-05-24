@@ -2,6 +2,32 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "pr-111-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-23T05:30:37Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 111,
+        "title": "refactor(tool): 拆分构建与运行产物边界",
+        "state": "open",
+        "body": "## 摘要\n\n- 将 Cargo 可执行产物选择逻辑从 Cargo 构建流程中拆出。\n- 将运行时 ELF/BIN 准备逻辑移动到独立的内部 artifact 模块。\n- 保留现有 `Tool` artifact 状态作为兼容桥接，避免影响当前 runner 行为。\n- 补充常见 AI/agent 本地状态目录的 `.gitignore` 规则，包含 `.Codex/`，降低生成目录误入 review diff 的概率。\n\n## 整体思路\n\n构建路径现在拆成两个更清晰的内部职责：Cargo JSON message 解析负责选择最终可执行产物；运行时产物准备负责 ELF canonicalize、架构识别、生成 stripped ELF，以及按需生成 BIN。\n\n`Tool` 仍然持有现有运行时状态。新 helper 返回准备好的 artifact 数据，再由 `Tool` 写回既有 context 字段，因此外部 CLI、配置和 runner 语义保持不变。\n\nPR diff 只包含代码、测试和通用 ignore 规则更新，不包含 fork-only 计划资料。\n\n## 文件说明\n\n- `.gitignore`：新增 `.Codex/`、`.claude/`、`.codex/`、`.cursor/`、`.continue/`、`.windsurf/`、`.aider/`、`.cline/`、`.roo/`、`.gemini/`、`.serena/` 等常见 AI/agent 本地状态目录。\n- `ostool/src/build/artifact_selector.rs`：新增 Cargo executable artifact 选择器，覆盖 explicit `bin`、package-name fallback、`default_run`、single-binary fallback 和 ambiguity error。\n- `ostool/src/build/cargo_pipeline.rs`：将原 `CargoBuilder` 调整为更明确的 Cargo 构建流水线，并在解析 Cargo JSON 输出后返回 `CargoBuildOutcome`。\n- `ostool/src/artifact/runtime.rs`：集中处理 ELF canonicalization、架构识别、stripped ELF 生成、可选 BIN 转换，以及 runtime artifact 目录记录。\n- `ostool/src/tool.rs`：将 artifact 准备委托给新的 runtime artifact helper，同时保留现有 `ctx::OutputArtifacts` 写回路径。\n- `ostool/tests/public_api.rs` 和 trybuild fixtures：更新内部类型名相关的 compile-fail 覆盖。\n\n## 兼容性\n\n- 不改变 CLI 行为。\n- 不改变配置格式。\n- 不改变 runner contract。\n- 新增模块仍然是内部实现细节。\n\n## 验证\n\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool -- --nocapture`\n- `cargo check -p ostool`\n- `cargo clippy -p ostool --all-targets --all-features`\n- `git diff --check`"
+      }
+    },
+    {
+      "id": "pr-11-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-23T05:27:46Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "chore",
+      "data": {
+        "number": 11,
+        "title": "chore: 将 fork-only 资料移出 Git 跟踪",
+        "state": "merged",
+        "body": "## 摘要\n\n- 从 Git 跟踪中移除 `docs/fork-only` 下的本地计划资料。\n- 将这些资料保留在本地 `.Codex/fork-only`，避免后续 upstream-facing PR 再夹带它们。\n- 在 `.gitignore` 中补充常见 AI/agent 本地状态目录。\n\n## 说明\n\n`.Codex/fork-only` 是本地 ignored 目录，因此不会出现在 PR diff 中。当前 PR 的 Git 侧改动只包含删除旧 tracked 目录和更新 ignore 规则。\n\n这能让 fork 里的本地规划资料继续保留在工作树中，同时不再污染未来对上游主干创建的分支或 PR。\n\n## 验证\n\n- `git diff --check`"
+      }
+    },
+    {
       "id": "comment-MRNIU/ostool-9-0",
       "type": "issue_comment",
       "ts": "2026-05-23T02:41:06Z",
