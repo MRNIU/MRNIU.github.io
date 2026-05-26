@@ -2,6 +2,44 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "pr-70-mcbridejc/zencan",
+      "type": "pull_request",
+      "ts": "2026-05-26T02:22:03Z",
+      "repo": "mcbridejc/zencan",
+      "semantic": null,
+      "data": {
+        "number": 70,
+        "title": "Add scoped AI guidance",
+        "state": "open",
+        "body": "## Summary\n\n- Add upstream-facing AGENTS.md guidance at the repository root and in scoped crate, integration test, and example directories.\n- Document project structure, crate-specific API/protocol boundaries, and the verification commands that cover each area.\n- Add .gitignore entries for common AI assistant local state directories and cache files.\n\n## Verification\n\n- Ran git diff --check.\n- Ran git diff --staged --check before the clean commit.\n- Ran a simple staged diff secret scan; no matches.\n- Scanned AGENTS.md files for local workflow terms such as macOS, devbox, fork, and user-specific response rules; no matches.\n- Confirmed the branch contains one clean commit against origin/main.\n\n## Notes\n\n- Documentation/ignore-only change; Rust build/test commands were not run.\n- No runtime behavior change."
+      }
+    },
+    {
+      "id": "pr-1-MRNIU/zencan",
+      "type": "pull_request",
+      "ts": "2026-05-26T01:51:09Z",
+      "repo": "MRNIU/zencan",
+      "semantic": null,
+      "data": {
+        "number": 1,
+        "title": "Add scoped AI guidance",
+        "state": "open",
+        "body": "## Summary\n\n- Add upstream-facing AGENTS.md guidance at the repository root and in scoped crate, integration test, and example directories.\n- Document project structure, crate-specific API/protocol boundaries, and the verification commands that cover each area.\n- Add .gitignore entries for common AI assistant local state directories and cache files.\n\n## Verification\n\n- Ran git diff --check.\n- Ran git diff --staged --check before the clean commit.\n- Ran a simple staged diff secret scan; no matches.\n- Scanned AGENTS.md files for local workflow terms such as macOS, devbox, fork, and user-specific response rules; no matches.\n- Confirmed the branch now contains one clean commit against origin/main.\n\n## Notes\n\n- Documentation/ignore-only change; Rust build/test commands were not run.\n- No runtime behavior change."
+      }
+    },
+    {
+      "id": "comment-drivercraft/ostool-111-0",
+      "type": "issue_comment",
+      "ts": "2026-05-25T15:57:50Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 111,
+        "issueTitle": "refactor(tool): 拆分构建与运行产物边界",
+        "body": "@ZR233 hi，麻烦 review"
+      }
+    },
+    {
       "id": "pr-111-drivercraft/ostool",
       "type": "pull_request",
       "ts": "2026-05-23T05:30:37Z",

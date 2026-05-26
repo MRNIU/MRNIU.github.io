@@ -1,38 +1,42 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-05-24T03:07:20.736Z",
+  "generatedAt": "2026-05-26T03:07:47.293Z",
   "stats": {
     "totalCommits": 2093,
-    "totalPRs": 241,
+    "totalPRs": 243,
     "totalReviews": 6,
     "totalIssues": 80,
-    "totalComments": 184,
-    "activeRepos": 68,
+    "totalComments": 185,
+    "activeRepos": 70,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-05-23T05:30:37Z"
+    "latestEvent": "2026-05-26T02:22:03Z"
   },
   "months": [
     {
       "key": "2026-05",
       "file": "2026-05.json",
-      "eventCount": 78,
+      "eventCount": 81,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
         "MRNIU/factorio_LegendaryShipStart",
         "MRNIU/nzh_factorio_mod",
         "MRNIU/ostool",
+        "MRNIU/zencan",
         "drivercraft/ostool",
         "libodynamics/project_template",
+        "mcbridejc/zencan",
         "ssXue/Nazh"
       ],
       "breakdown": {
-        "pull_request": 18,
-        "issue_comment": 16,
+        "pull_request": 20,
+        "issue_comment": 17,
         "commit": 44
       },
       "repoBreakdown": {
-        "drivercraft/ostool": 16,
+        "mcbridejc/zencan": 1,
+        "MRNIU/zencan": 1,
+        "drivercraft/ostool": 17,
         "MRNIU/ostool": 14,
         "libodynamics/project_template": 11,
         "ssXue/Nazh": 30,
