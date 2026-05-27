@@ -2,6 +2,84 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "pr-14-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-27T02:59:37Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 14,
+        "title": "refactor(tool): 接入 invocation 构建状态",
+        "state": "open",
+        "body": "## Summary\n\n- 将 build config 激活后的运行时状态接入 `InvocationState`，让 active build、变量作用域和 runtime artifacts 有明确的生产路径。\n- 将 `CargoBuildPipeline` 从 `&mut Tool` 中解耦，改为接收显式 `CargoBuildInput`。\n- 让 Cargo/custom build orchestration 负责消费 build outcome、准备 runtime artifacts，并同步旧 `AppContext` 兼容层。\n- 保持 QEMU、U-Boot 和 board 入口通过现有 `Tool` facade 调用，CLI/config/runtime 行为不变。\n\n## Approach\n\n这次变更继续保留 `Tool` 作为 public compatibility facade，但把可变运行状态的源头迁移到 invocation 边界。`ActiveBuildContext` 表示 CLI selector 之后的最终 build config 和 package scope；`InvocationState` 持有 active build、runtime artifacts 和 detected architecture；旧 `AppContext` 只作为兼容镜像同步。\n\nCargo build pipeline 只负责构造/执行 Cargo 命令并返回 build facts。runtime artifact preparation 仍在 build orchestration 层完成，避免 pipeline 重新获得全局状态写权限。\n\n## Changed Modules\n\n- `ostool/src/invocation.rs`: 增加 `InvocationState`、`ActiveBuildContext`、`ActiveCargoBuild` 和 `ActiveCustomBuild`。\n- `ostool/src/build/mod.rs`: 增加 build config activation、Cargo selector 应用和 `CargoBuildInput` 构造路径。\n- `ostool/src/build/cargo_pipeline.rs`: 让 pipeline 接收显式 build input，不再持有可变 `Tool`。\n- `ostool/src/tool.rs`: 将 `Tool` 收缩为状态同步和兼容 facade，优先从 `InvocationState` 读取 active build / artifact state。\n- `ostool/src/artifact/state.rs`: 增加 runtime artifact state 的空状态判断。\n- `ostool/src/run/qemu.rs`, `ostool/src/run/uboot.rs`, `ostool/src/board/mod.rs`: 在读取 Cargo-scoped config 前传播 active build 同步错误。\n\n## Compatibility\n\n- CLI、配置格式和 runtime 行为保持不变。\n- `Tool`、`ToolConfig`、`ManifestContext` 和 `ctx::OutputArtifacts` 继续保留为兼容 API。\n- QEMU、U-Boot 和 board 运行入口没有改成新的公开调用模型。\n\n## Verification\n\n- `cargo fmt --all -- --check`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n\n## Risks / Follow-up\n\n- `Tool` 仍是兼容 facade；runner/board entrypoint 的显式输入迁移可以作为后续切片继续做。\n- 本 PR 保留现有 someboot build config 注入语义，不处理后续 cleanup。\n"
+      }
+    },
+    {
+      "id": "commit-b06de0951c7f1e942bc9c318071fa5bc80e1cfc8",
+      "type": "commit",
+      "ts": "2026-05-27T01:28:59Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "b06de0951c7f1e942bc9c318071fa5bc80e1cfc8",
+        "message": "refactor(tool): 收敛构建配置与运行产物边界 (#114)\n\nMove build configuration loading and menuconfig hooks out of the legacy Tool facade while keeping CLI and runtime behavior routed through existing public APIs.\n\nKeep runtime artifact preparation behind build orchestration, make runtime artifact state private, and let QEMU/U-Boot runners read Tool state directly instead of storing copied snapshots.\n\nTrim helper APIs, unused hook parameters, and tests that only asserted implementation details.\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 910,
+        "deletions": 743
+      }
+    },
+    {
+      "id": "pr-114-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-26T14:30:59Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 114,
+        "title": "refactor(tool): 收敛构建配置与运行产物边界",
+        "state": "merged",
+        "body": "## Summary\n\n- 将 build config loader 和 menuconfig hooks 从 legacy `Tool` facade 中拆出，减少 `tool.rs` 的业务逻辑聚集。\n- 将 runtime artifact state 移到 `artifact::state::OutputArtifacts`，并通过 getter / crate-private 方法访问，避免公开可变字段继续扩散。\n- 保持 QEMU/U-Boot runner 从当前 `Tool` state 读取 runtime artifact 和 architecture，不再维护第二份快照状态。\n- 收窄新增 helper API，删除只锁实现细节的低信号测试和未使用的预留参数。\n\n## Approach\n\n这次变更保留现有 `Tool` 作为兼容 facade，但把无状态的配置加载、UI hook 构造和运行产物状态处理移到更窄的模块里。CLI、`cargo-osrun`、QEMU、U-Boot 和 board run 仍然通过已有公开入口运行，内部新增 helper 只保留 crate-private 可见性。\n\n## Changed Modules\n\n- `ostool/src/build/config_loader.rs`: 集中处理 build config 路径解析、加载和 someboot build config 注入。\n- `ostool/src/build/config_hooks.rs`: 承载 menuconfig 的 package / feature / target hook 逻辑。\n- `ostool/src/artifact/state.rs`: 承载 runtime artifact state，并收紧字段访问。\n- `ostool/src/run/qemu.rs`, `ostool/src/run/uboot.rs`: runner 直接读取 `Tool` 当前运行产物状态，避免复制 artifact / arch 快照。\n- `ostool/src/tool.rs`: 收缩为兼容 facade，保留现有调用入口。\n\n## Compatibility\n\n- CLI/config/runtime 行为保持不变。\n- Public API 没有新增面；新拆出的 helper 模块保持 crate-private。\n- `Tool::prepare_elf_artifact` 仍作为公开兼容入口保留。\n\n## Verification\n\n在 devbox 容器中运行通过：\n\n- `cargo fmt --all -- --check`\n- `CARGO_BUILD_JOBS=1 cargo test -p ostool -- --nocapture`\n- `CARGO_BUILD_JOBS=1 cargo clippy --target x86_64-unknown-linux-gnu --all-features -- -D warnings`\n- `CARGO_BUILD_JOBS=1 cargo build -p ostool --target x86_64-unknown-linux-gnu --all-features`\n- `git diff --check`\n\n未限制并发的 `cargo test -p ostool -- --nocapture` 曾在链接阶段因容器内存峰值报 `Cannot allocate memory`；低并发重跑已完整通过。\n\n## Risks / Follow-up\n\n- 本 PR 保留既有 someboot 注入顺序，不处理 selector 覆盖顺序的后续 R2 债务。\n- `Tool` 仍是兼容 facade，后续切片可以继续把 runner/build orchestration 迁往更窄的输入结构。"
+      }
+    },
+    {
+      "id": "pr-13-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-26T13:42:48Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 13,
+        "title": "refactor(tool): 收敛运行产物与构建配置边界",
+        "state": "open",
+        "body": "## 摘要\n\n- 削薄 legacy `Tool` 中心对象，把运行产物准备和构建配置加载移到更窄的模块边界。\n- 将 runtime artifact state / preparation 从 `Tool` 主体迁出，保留现有 `ctx` 导出作为兼容桥接。\n- 将 build config loading、CLI selector 和 menu hooks 拆到 `build` 模块 helper 中。\n- 保持 CLI、配置格式和 runner contract 不变，降低后续内部重构的耦合面。\n\n## 整体思路\n\n本 PR 保持当前兼容路径：`Tool` 仍作为既有 API 和 orchestration 门面存在，但不继续承载运行产物、构建配置加载和菜单 hook 的业务细节。\n\n运行产物路径现在由 `artifact` 模块集中处理：runtime helper 负责 ELF canonicalize、架构识别、stripped ELF 和可选 BIN；state 类型通过 `ctx` re-export 继续兼容现有 QEMU、U-Boot、board 和 TFTP 调用点。\n\n构建配置路径拆成普通加载和交互 hook 两个职责：`config_loader` 负责 `.build.toml` 路径解析、`jkconfig::run` 普通加载、someboot disable 语义和 `--package` / `--bin` override；`config_hooks` 负责 package/features/target 菜单 hook、docs.rs target 读取和 rustup fallback。\n\n## 文件说明\n\n- `ostool/src/artifact/state.rs`：承载 `OutputArtifacts` runtime artifact state，并通过 `ctx` re-export 保持兼容。\n- `ostool/src/artifact/runtime.rs`：集中处理 runtime ELF/BIN 准备，包括 canonicalize、架构识别、stripped ELF 和可选 BIN。\n- `ostool/src/build/mod.rs`：消费 Cargo build outcome 和 prepared runtime artifacts，保持 post-build hook 的执行位置。\n- `ostool/src/build/config_loader.rs`：新增 build config path resolution、普通 config load、someboot disable 语义和 Cargo selector override helper。\n- `ostool/src/build/config_hooks.rs`：新增 build config menu hooks，保留 package/features/target 交互行为、docs.rs target 读取和 rustup fallback。\n- `ostool/src/main.rs`：CLI build config load 和 `--package` / `--bin` override 改用新 helper，selector 后仍写回最终 `BuildConfig`。\n- `ostool/src/menuconfig.rs`：默认 build config menu 使用新 hooks，同时保留取消时只提示“未更改构建配置”的行为。\n- `ostool/src/tool.rs`：删除已迁出的 hook / loader 业务逻辑，只保留兼容 wrapper 和状态桥接。\n\n## 兼容性\n\n- 不改变 CLI 行为。\n- 不改变 `.build.toml`、`.qemu.toml`、`.uboot.toml` 或 `.board.toml` 配置格式。\n- 不改变 runner contract。\n- 保留 `Tool`、`ctx::OutputArtifacts` 和相关兼容 wrapper。\n- `menuconfig` 取消 build config 编辑时仍按“未更改构建配置”处理，不沿用普通 load 的取消即报错语义。\n- QEMU、U-Boot、board、TFTP、serial、电源/session 副作用不在本 PR 中重写。\n\n## 验证\n\n- `cargo fmt --all -- --check`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n"
+      }
+    },
+    {
+      "id": "pr-12-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-26T13:26:19Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 12,
+        "title": "refactor(tool): 收敛运行产物与构建配置边界",
+        "state": "closed",
+        "body": "## 摘要\n\n- 削薄 legacy `Tool` 中心对象，把运行产物准备和构建配置加载移到更窄的模块边界。\n- 将 runtime artifact state / preparation 从 `Tool` 主体迁出，保留现有 `ctx` 导出作为兼容桥接。\n- 将 build config loading、CLI selector 和 menu hooks 拆到 `build` 模块 helper 中。\n- 保持 CLI、配置格式和 runner contract 不变，降低后续内部重构的耦合面。\n\n## 整体思路\n\n本 PR 保持当前兼容路径：`Tool` 仍作为既有 API 和 orchestration 门面存在，但不继续承载运行产物、构建配置加载和菜单 hook 的业务细节。\n\n运行产物路径现在由 `artifact` 模块集中处理：runtime helper 负责 ELF canonicalize、架构识别、stripped ELF 和可选 BIN；state 类型通过 `ctx` re-export 继续兼容现有 QEMU、U-Boot、board 和 TFTP 调用点。\n\n构建配置路径拆成普通加载和交互 hook 两个职责：`config_loader` 负责 `.build.toml` 路径解析、`jkconfig::run` 普通加载、someboot disable 语义和 `--package` / `--bin` override；`config_hooks` 负责 package/features/target 菜单 hook、docs.rs target 读取和 rustup fallback。\n\n## 文件说明\n\n- `ostool/src/artifact/state.rs`：承载 `OutputArtifacts` runtime artifact state，并通过 `ctx` re-export 保持兼容。\n- `ostool/src/artifact/runtime.rs`：集中处理 runtime ELF/BIN 准备，包括 canonicalize、架构识别、stripped ELF 和可选 BIN。\n- `ostool/src/build/mod.rs`：消费 Cargo build outcome 和 prepared runtime artifacts，保持 post-build hook 的执行位置。\n- `ostool/src/build/config_loader.rs`：新增 build config path resolution、普通 config load、someboot disable 语义和 Cargo selector override helper。\n- `ostool/src/build/config_hooks.rs`：新增 build config menu hooks，保留 package/features/target 交互行为、docs.rs target 读取和 rustup fallback。\n- `ostool/src/main.rs`：CLI build config load 和 `--package` / `--bin` override 改用新 helper，selector 后仍写回最终 `BuildConfig`。\n- `ostool/src/menuconfig.rs`：默认 build config menu 使用新 hooks，同时保留取消时只提示“未更改构建配置”的行为。\n- `ostool/src/tool.rs`：删除已迁出的 hook / loader 业务逻辑，只保留兼容 wrapper 和状态桥接。\n\n## 兼容性\n\n- 不改变 CLI 行为。\n- 不改变 `.build.toml`、`.qemu.toml`、`.uboot.toml` 或 `.board.toml` 配置格式。\n- 不改变 runner contract。\n- 保留 `Tool`、`ctx::OutputArtifacts` 和相关兼容 wrapper。\n- `menuconfig` 取消 build config 编辑时仍按“未更改构建配置”处理，不沿用普通 load 的取消即报错语义。\n- QEMU、U-Boot、board、TFTP、serial、电源/session 副作用不在本 PR 中重写。\n\n## 验证\n\n- `docker exec -w /workspace/GitHub/MRNIU/ostool devbox cargo fmt --all -- --check`\n- `docker exec -w /workspace/GitHub/MRNIU/ostool devbox cargo clippy --target x86_64-unknown-linux-gnu --all-features`\n- `docker exec -w /workspace/GitHub/MRNIU/ostool devbox cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `docker exec -w /workspace/GitHub/MRNIU/ostool devbox cargo test --target x86_64-unknown-linux-gnu -- --nocapture`"
+      }
+    },
+    {
+      "id": "commit-9f61aacbcd52b48c48e7b272e6c0b98265691920",
+      "type": "commit",
+      "ts": "2026-05-26T07:15:51Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "9f61aacbcd52b48c48e7b272e6c0b98265691920",
+        "message": "refactor(tool): 拆分构建与运行产物边界 (#111)\n\n* refactor(tool): 拆分 Cargo 与运行产物边界\n\nSplit Cargo artifact selection from runtime artifact preparation so build output resolution, ELF stripping, and optional BIN conversion each live behind focused internal helpers.\n\nThe Cargo pipeline now resolves executable artifacts from JSON messages before handing them to runtime artifact preparation, while Tool keeps the existing public artifact state as a compatibility bridge.\n\nAlso ignore common local AI/agent tool state directories so generated workspace metadata is less likely to enter review diffs.\n\nValidation: cargo fmt --all -- --check; cargo test -p ostool -- --nocapture; cargo check -p ostool; cargo clippy -p ostool --all-targets --all-features; git diff --check.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n* refactor(tool): 收紧 Cargo build outcome 边界\n\n让 CargoBuildPipeline::execute() 只返回 CargoBuildOutcome，不再直接准备 runtime artifact 或写回 Tool runtime state。\n\nruntime artifact 写回和 post-build hook 调用移动到 build orchestration 层，保持现有 cargo build/run 行为，同时让 R1d 的 build facts seam 与 R1e runtime helper 解耦。\n\n验证：\n\n- docker exec devbox sh -lc 'cd /workspace/GitHub/MRNIU/ostool && cargo fmt --all -- --check && cargo test -p ostool --lib -- --nocapture && cargo test -p ostool --test public_api -- --nocapture && cargo check -p ostool'\n\n- docker exec devbox sh -lc 'cd /workspace/GitHub/MRNIU/ostool && cargo clippy -p ostool --lib --all-features'\n\n- docker exec devbox sh -lc 'cd /workspace/GitHub/MRNIU/ostool && cargo check -p ostool --target x86_64-unknown-linux-gnu'\n\n- git diff --check\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n---------\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 812,
+        "deletions": 432
+      }
+    },
+    {
       "id": "pr-70-mcbridejc/zencan",
       "type": "pull_request",
       "ts": "2026-05-26T02:22:03Z",
