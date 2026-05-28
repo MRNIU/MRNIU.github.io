@@ -2,6 +2,31 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "comment-drivercraft/ostool-115-0",
+      "type": "issue_comment",
+      "ts": "2026-05-28T02:50:04Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 115,
+        "issueTitle": "refactor(tool): 接入 invocation 构建状态",
+        "body": "@ZR233 hi，麻烦 review"
+      }
+    },
+    {
+      "id": "pr-115-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-27T05:05:47Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 115,
+        "title": "refactor(tool): 接入 invocation 构建状态",
+        "state": "open",
+        "body": "## Summary\n\n- 将 build config 激活后的运行时状态接入 `InvocationState`，让 active build、变量作用域和 runtime artifacts 有明确的内部 source of truth。\n- 保持 `InvocationState`、`ActiveBuildContext`、`ActiveCargoBuild` 和 `ActiveCustomBuild` 为 crate-private 实现细节，避免把可变运行状态扩成公共 API。\n- 增加临时 `legacy_context` 胶水层，把 `InvocationState` 镜像到旧 `AppContext`，集中 `Tool::ctx*` 过渡期同步逻辑。\n- 将 `CargoBuildPipeline` 从 `&mut Tool` 中解耦，改为接收显式 `CargoBuildInput`，由 orchestration 层消费 build outcome 并写回 runtime artifacts。\n- 保留 `menuconfig` 的编辑语义：默认 build config 编辑完成后只记录配置，不提前校验或激活 Cargo package，避免配置修复流程被 stale/missing package 阻断。\n- 将 CLI `--package/--bin` selector 处理留在二进制入口私有逻辑中，内部 selector / activation helper 不作为 public API 暴露。\n\n## Approach\n\n这次变更继续保留 `Tool` 作为 public compatibility facade，但把可变运行状态的源头迁移到 invocation 边界。build pipeline 只负责构造/执行 Cargo 命令并返回 build facts；build orchestration 负责消费 outcome、准备 runtime artifacts，并写回 `InvocationState`。\n\n`InvocationState` 和 active build context 现在只在 crate 内部可见。对外仍保留 `Invocation` / `InvocationOptions` / `Tool` 这类入口，但不暴露可变状态容器本身，避免形成新的长期 public API 负担。\n\n`legacy_context` 是临时兼容层：`InvocationState` 是 source of truth，`AppContext` 只服务现有 `Tool::ctx`、`Tool::ctx_mut` 和 `Tool::into_context` 调用。后续删除旧兼容 API 时，应优先删除这个模块。\n\n配置加载和配置编辑不再默认 eager 激活 build state。真正需要变量作用域、Cargo package 目录或 runtime artifact 的 build/run/runner config 路径会在消费具体 build config 时同步 active build。CLI selector 则保持在 `ostool` 二进制内私有应用，并在读取 `.board.toml` 前更新 legacy context，确保 `${package}` 仍按选中 package 展开。\n\n## Changed Modules\n\n- `ostool/src/invocation.rs`: 增加 invocation runtime state 和 active build context，并将这些状态类型收窄为 crate-private。\n- `ostool/src/legacy_context.rs`: 增加临时 `InvocationState` <-> `AppContext` 兼容桥接层。\n- `ostool/src/build/mod.rs`: 增加 build context activation 和 `CargoBuildInput` 构造路径；将 selector 辅助类型保持为内部实现细节。\n- `ostool/src/build/cargo_pipeline.rs`: 让 pipeline 接收显式 build input，不再持有可变 `Tool`。\n- `ostool/src/tool.rs`: 将 `Tool` 收缩为状态同步和兼容 facade；加载 build config 时只记录 legacy config，实际消费时再同步 active build。\n- `ostool/src/main.rs`: CLI selector 改为二进制内私有处理，并补充 board config scope 回归测试。\n- `ostool/src/menuconfig.rs`: 默认 build config 编辑后只记录配置，不提前验证选中的 Cargo package。\n- `ostool/tests/public_api.rs`, `ostool/tests/ui/fail_invocation_state.rs`, `ostool/tests/ui/fail_build_activation_api.rs`: 增加 public API 边界回归测试。\n\n## Compatibility\n\n- CLI、配置格式和 runner 调用模型保持不变。\n- `Tool`、`ToolConfig`、`ManifestContext` 和 `ctx::OutputArtifacts` 继续保留为兼容 API。\n- `InvocationState` / `ActiveBuildContext` / active build structs 不作为 public API 暴露。\n- `CargoSelector`、selector 应用函数和 build activation helper 也不作为 public API 暴露。\n- `Tool::ctx_mut()` 仍保留，但新代码应优先使用 state-aware `Tool` 方法；直接修改旧 `AppContext` 不会反向更新 `InvocationState`。\n- `ostool menuconfig` 仍允许用户打开并修复默认 build config，不会因为配置中的 Cargo package 暂时不存在而在编辑后立即失败。\n\n## Verification\n\n已运行并通过：\n\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool --test public_api --target x86_64-unknown-linux-gnu -- --nocapture`\n- `cargo test -p ostool --target x86_64-unknown-linux-gnu -- --nocapture`\n- `cargo clippy -p ostool --target x86_64-unknown-linux-gnu --all-features`\n- `cargo build -p ostool --target x86_64-unknown-linux-gnu --all-features`\n- `git diff --check`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n\n## Risks / Follow-up\n\n- `Tool` 仍是兼容 facade；runner/board entrypoint 的显式输入迁移可以作为后续切片继续做。\n- `legacy_context` 是临时过渡层，应在 `Tool::ctx` / `ctx_mut` / `into_context` 兼容面退休后删除。\n- 本 PR 保留现有 someboot build config 注入语义，不处理后续 cleanup。"
+      }
+    },
+    {
       "id": "pr-14-MRNIU/ostool",
       "type": "pull_request",
       "ts": "2026-05-27T02:59:37Z",
