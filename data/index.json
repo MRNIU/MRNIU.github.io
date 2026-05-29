@@ -1,21 +1,21 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-05-28T03:09:27.358Z",
+  "generatedAt": "2026-05-29T03:08:22.644Z",
   "stats": {
-    "totalCommits": 2095,
+    "totalCommits": 2096,
     "totalPRs": 248,
     "totalReviews": 6,
     "totalIssues": 80,
     "totalComments": 186,
     "activeRepos": 70,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-05-28T02:50:04Z"
+    "latestEvent": "2026-05-29T02:29:32Z"
   },
   "months": [
     {
       "key": "2026-05",
       "file": "2026-05.json",
-      "eventCount": 89,
+      "eventCount": 90,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
@@ -29,12 +29,12 @@
         "ssXue/Nazh"
       ],
       "breakdown": {
+        "commit": 47,
         "issue_comment": 18,
-        "pull_request": 25,
-        "commit": 46
+        "pull_request": 25
       },
       "repoBreakdown": {
-        "drivercraft/ostool": 22,
+        "drivercraft/ostool": 23,
         "MRNIU/ostool": 17,
         "mcbridejc/zencan": 1,
         "MRNIU/zencan": 1,

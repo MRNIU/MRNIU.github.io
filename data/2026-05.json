@@ -2,6 +2,19 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-09a1297c72271bbab6f8d4121a7eddc9e9b9defe",
+      "type": "commit",
+      "ts": "2026-05-29T02:29:32Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "09a1297c72271bbab6f8d4121a7eddc9e9b9defe",
+        "message": "refactor(tool): 接入 invocation 构建状态 (#115)\n\n让 Tool 继续作为兼容 facade，同时把 build config 激活、Cargo 构建输入和 runtime artifact 写回迁移到 invocation state 边界。CargoBuildPipeline 不再持有可变 Tool 引用，build orchestration 负责消费明确的 build outcome，并通过临时 legacy_context 胶水层把 InvocationState 镜像到旧 AppContext。\n\nInvocationState 是 active build、变量作用域和 runtime artifacts 的 source of truth；AppContext 仅作为 Tool::ctx/ctx_mut/into_context 的兼容镜像保留。加载或编辑 build config 只记录 legacy build_config，不再在 menuconfig 或纯加载路径 eager 激活 state，真正 build/run 和 runner config 读取路径再同步 active build。\n\nCLI 的 --package/--bin selector 保持在二进制入口私有处理，并在读取 .board.toml 前更新 legacy ctx 作用域，保持 ${package} 按选中 package 展开。内部 CargoSelector、selector helper 和 build activation helper 不作为 public API 暴露，避免 R1 重构辅助面变成长期外部契约。\n\n补充 menuconfig 回归测试，覆盖默认 build config 编辑不会验证暂时缺失的 Cargo package；补充 trybuild public API 负向用例，防止 build activation API 从内部边界泄漏。CLI、配置格式和 runner 入口保持通过 Tool facade 调用。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 908,
+        "deletions": 102
+      }
+    },
+    {
       "id": "comment-drivercraft/ostool-115-0",
       "type": "issue_comment",
       "ts": "2026-05-28T02:50:04Z",
