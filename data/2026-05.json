@@ -2,6 +2,55 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "comment-drivercraft/ostool-117-0",
+      "type": "issue_comment",
+      "ts": "2026-05-29T08:53:00Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 117,
+        "issueTitle": "refactor(tool): 拆分运行入口与 Tool facade",
+        "body": "@ZR233 hi，麻烦 review"
+      }
+    },
+    {
+      "id": "comment-drivercraft/ostool-117-1",
+      "type": "issue_comment",
+      "ts": "2026-05-29T07:42:50Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 117,
+        "issueTitle": "refactor(tool): 拆分运行入口与 Tool facade",
+        "body": "> ## Code Review: refactor(tool) - 拆分运行入口与 Tool facade\r\n> ### 总体评价\r\n> 这是一个结构清晰的重构 PR。将 QEMU、U-Boot、board 和 TFTP 的 runner 逻辑从 `impl Tool` 提取为模块级函数，引入 `QemuRunInput` / `UbootRunInput` 等窄输入结构，显著降低了 runner 模块对完整 `Tool` 的耦合度。兼容 wrapper 保留完整且标注了移除时机，方便后续逐步迁移。\r\n> \r\n> ### 设计亮点\r\n> * **输入边界清晰**: `QemuRunInput` 和 `UbootRunInput` 只封装 runner 实际需要的字段（`process_context`、`artifacts`、`arch`、`debug`），字段私有 + `new()` 构造函数，控制组装入口。\r\n> * **向后兼容完整**: `Tool` 上的旧 public 方法全部保留为 compatibility wrapper，现有调用方无需立即修改。\r\n> * **U-Boot 运行镜像语义改进**: 从 `ensure_runtime_bin()` + `require_bin()` 改为 `runtime_image()`，允许 ELF-only artifact 直接进入 U-Boot 运行路径，缺失镜像时错误信息也更明确（`\"U-Boot runner requires a prepared runtime image\"`）。\r\n> * **QEMU `to_bin` 检查前置**: `run_qemu_with_config` 在模块级入口检查 BIN artifact 存在性，而 `Tool::run_qemu` wrapper 仍调用 `ensure_runtime_bin()` 保持兼容。\r\n> * **`Runner` / `QemuRunner` 去生命周期**: 原先 `QemuRunner<'a>` 和 `Runner<'a, B>` 持有 `&'a mut Tool`，重构后分别持有 `QemuRunInput` / `UbootRunInput`（owned），不再引入生命周期约束。\r\n> \r\n> ### 行为变更确认\r\n> * `Tool::run_uboot()` 不再自动调用 `ensure_runtime_bin()`，BIN 准备责任推到调用方。对于通过 board 路径进入的场景，`prepare_runtime_artifacts()` 已覆盖该步骤；直接调用 `run_uboot()` 时 ELF 也可作为 runtime image 使用。变更合理。\r\n> * `manifest_dir()` accessor 移除后，TFTP 通过 `input.process_context.workdir()` 获取同等路径（`ProcessContext::workdir()` 来源于 `Tool::manifest_dir`），语义一致。\r\n> * `resolve_qemu_config_path` wrapper 删除，只保留 `resolve_qemu_config_path_in_dir`，减少不必要的间接层。\r\n> \r\n> ### 测试覆盖\r\n> 新增三个针对性测试：\r\n> \r\n> 1. `run_qemu_with_to_bin_rejects_elf_only_artifacts` — 验证 QEMU `to_bin=true` 在缺少 BIN 时的错误路径\r\n> 2. `uboot_run_input_accepts_elf_only_artifacts` — 验证 U-Boot 输入结构接受 ELF-only artifact\r\n> 3. `run_uboot_rejects_missing_runtime_image` — 验证 U-Boot 缺失 runtime image 时的错误信息\r\n> \r\n> 既有测试也已同步更新（`QemuRunner` 使用 `qemu_input()` helper 构造输入，`resolve_qemu_config_path` 调用改为 `resolve_qemu_config_path_in_dir`）。\r\n> \r\n> ### 小建议（非阻塞）\r\n> * `legacy_context.rs` 文档注释风格：`///` 和 `//` 混用在同一类 helper 上。建议统一为 `///`（doc comment）以保持 rustdoc 一致性。\r\n> * 未来移除兼容 wrapper 时，建议同时清理 `run_board_with_build_config` 这个 private 中间方法。\r\n> \r\n> ### 结论\r\n> 重构方向正确，兼容性处理得当，测试覆盖充分，代码质量好。Approve。\r\n> \r\n> Powered by mimo-v2.5-pro\r\n\r\n`legacy_context.rs` 文档后面会删掉，注释风格问题暂不修改"
+      }
+    },
+    {
+      "id": "comment-drivercraft/ostool-117-2",
+      "type": "issue_comment",
+      "ts": "2026-05-29T07:25:17Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 117,
+        "issueTitle": "refactor(tool): 拆分运行入口与 Tool facade",
+        "body": "UbootRunInput 和 QemuRunInput 一致性问题已修复"
+      }
+    },
+    {
+      "id": "pr-117-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-05-29T04:22:54Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 117,
+        "title": "refactor(tool): 拆分运行入口与 Tool facade",
+        "state": "open",
+        "body": "## Summary\n\n- 将 QEMU、U-Boot 和 board runner 从直接挂在 `Tool` 上的实现拆到模块级函数，运行入口改为接收显式的 process context、artifacts、arch/debug 等输入。\n- 保留现有 `Tool` runner/config 方法作为兼容 wrapper，并逐函数标注这些旧入口会在调用方迁移后移除。\n- 将 TFTP 和 menuconfig 相关路径解析改为使用显式项目布局、变量作用域和运行产物状态，减少 runner 模块对完整 `Tool` 的依赖。\n- `legacy_context` 继续只负责 `InvocationState` 与旧 `AppContext` 的状态桥接，并标注这些桥接 helper 的临时性质。\n\n## Approach\n\n这次变更保留 `Tool` 作为现有 public API 的兼容 facade，但让 QEMU、U-Boot、board 和 TFTP 的核心流程依赖更窄的输入结构。`Tool` 负责把当前 invocation/build/runtime state 组装成 runner input，然后委托给对应模块函数；新代码可以直接调用模块级 API，旧调用方仍可通过 `Tool` 方法工作。\n\n## Changed Modules\n\n- `ostool/src/run/qemu.rs`: 提供显式 `QemuRunInput` 和模块级 QEMU config/run helper。\n- `ostool/src/run/uboot.rs`: 提供显式 `UbootRunInput`，并让本地/远程 U-Boot runner 消费该输入。\n- `ostool/src/run/tftp.rs`: TFTP server helper 改为接收 manifest dir 和 runtime artifacts，而不是完整 `Tool`。\n- `ostool/src/board/mod.rs`: board run config 与 prepared board flow 改为使用显式 scope/input。\n- `ostool/src/menuconfig.rs`: QEMU config path 查询改为走显式 workspace/runtime arch。\n- `ostool/src/tool.rs`: 收敛为兼容 facade，保留旧 public runner/config 入口并委托到模块函数。\n- `ostool/src/legacy_context.rs`: 标注旧 `AppContext` 桥接 helper 的兼容层性质。\n\n## Compatibility\n\n- CLI、配置文件格式和 runtime 行为预期保持不变。\n- 既有 `Tool` public runner/config 方法仍保留，调用方不需要立即迁移。\n- 新增的 runner input/helper 主要用于缩小内部模块依赖面，不新增用户可见配置项。\n\n## Verification\n\n已运行通过：\n\n- `cargo fmt --all -- --check`\n- `CARGO_BUILD_JOBS=1 cargo check -p ostool --target x86_64-unknown-linux-gnu --all-features`\n- `CARGO_BUILD_JOBS=1 cargo test -p ostool -- --nocapture`\n- `CARGO_BUILD_JOBS=1 cargo clippy -p ostool --all-targets --all-features -- -D warnings`\n- `CARGO_BUILD_JOBS=1 cargo build -p ostool --target x86_64-unknown-linux-gnu --all-features`\n- `git diff --check`\n\n## Risks / Follow-up\n\n- 本 PR 只做 host-side Rust 验证，没有实际启动 QEMU、U-Boot 或远程开发板 session。\n- `Tool` 兼容 facade 仍然存在；后续调用方迁移完成后，可以删除这些旧入口和对应桥接 helper。"
+      }
+    },
+    {
       "id": "commit-09a1297c72271bbab6f8d4121a7eddc9e9b9defe",
       "type": "commit",
       "ts": "2026-05-29T02:29:32Z",
