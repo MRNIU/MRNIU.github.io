@@ -2,6 +2,45 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-0a89232439651e59922568706b53c0ce5197debb",
+      "type": "commit",
+      "ts": "2026-05-31T03:07:50Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "0a89232439651e59922568706b53c0ce5197debb",
+        "message": "Initial release",
+        "additions": 787,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-d7a4871d71d97579d1473dac2193681d5e746f59",
+      "type": "commit",
+      "ts": "2026-05-31T01:55:29Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "d7a4871d71d97579d1473dac2193681d5e746f59",
+        "message": "Expand Nauvis cargo and logistic chests",
+        "additions": 23,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-cdd9a42530a906bfd35a1538cd2a95b66243ab31",
+      "type": "commit",
+      "ts": "2026-05-30T15:15:54Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "cdd9a42530a906bfd35a1538cd2a95b66243ab31",
+        "message": "Expand Nauvis spidertron cargo",
+        "additions": 22,
+        "deletions": 9
+      }
+    },
+    {
       "id": "comment-drivercraft/ostool-117-0",
       "type": "issue_comment",
       "ts": "2026-05-29T08:53:00Z",
