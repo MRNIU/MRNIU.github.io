@@ -1,0 +1,18 @@
+{
+  "month": "2026-06",
+  "events": [
+    {
+      "id": "commit-663ee7000b817e0188a61d397fc0bd3284a81cdb",
+      "type": "commit",
+      "ts": "2026-06-01T02:30:46Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "663ee7000b817e0188a61d397fc0bd3284a81cdb",
+        "message": "refactor(tool): 拆分运行入口与 Tool facade (#117)\n\n* refactor(tool): 拆分运行入口与 Tool facade\n\nMove QEMU, U-Boot, and board runner orchestration out of direct Tool implementations and into module-level functions that consume explicit runtime inputs.\n\nKeep the existing Tool runner and config methods as documented compatibility wrappers so current public callers continue to work while new code can depend on narrower module APIs.\n\nRoute TFTP and menuconfig helpers through explicit project/config state instead of requiring runner modules to borrow Tool.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n* refactor(tool): 收紧运行镜像输入边界\n\n让 U-Boot runner 消费已准备的 runtime image，而不是在 Tool facade 里无条件补 raw BIN。这样 ELF-only U-Boot artifacts 可以进入运行路径，缺失 runtime image 时在 runner 入口返回明确错误。\n\n保留 QEMU 的 to_bin 语义：crate 内部 run_qemu_with_config 在 config.to_bin=true 时要求调用方已准备 BIN，避免未来绕过 Tool::run_qemu 后静默回退到 ELF。\n\n同步 runtime artifact 和 cargo-osrun 文案，避免把 Cargo ELF、runtime image 和 raw BIN 混为一类。补充回归测试覆盖 U-Boot ELF-only 输入和 QEMU to_bin=true 的 BIN 要求。\n\nValidation: cargo fmt --all -- --check; cargo test -p ostool -- --nocapture; cargo clippy -p ostool --all-targets --all-features -- -D warnings; git diff --check.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n* refactor(tool): 统一 QEMU runner input 封装\n\nMake QemuRunInput match the U-Boot runner input shape by keeping its fields private and routing construction through a crate-internal constructor.\n\nTool::run_qemu and QEMU tests now use QemuRunInput::new(), so runner modules expose the input type without exposing mutable field-level assembly details.\n\nValidation: cargo fmt --all -- --check; cargo test -p ostool run_qemu_with_to_bin_rejects_elf_only_artifacts -- --nocapture; cargo clippy -p ostool --all-targets --all-features -- -D warnings; git diff --check.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n---------\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 744,
+        "deletions": 382
+      }
+    }
+  ]
+}

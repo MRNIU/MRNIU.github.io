@@ -2,6 +2,149 @@
   "month": "2026-05",
   "events": [
     {
+      "id": "commit-63bdb4303514fabf8f74adc748528ff76f00a630",
+      "type": "commit",
+      "ts": "2026-05-31T16:20:49Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "63bdb4303514fabf8f74adc748528ff76f00a630",
+        "message": "Simplify starter overflow handling",
+        "additions": 83,
+        "deletions": 93
+      }
+    },
+    {
+      "id": "commit-9ae0462f50dc59e7ff0a4030b8eb6c6bb905cf1f",
+      "type": "commit",
+      "ts": "2026-05-31T16:02:05Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "9ae0462f50dc59e7ff0a4030b8eb6c6bb905cf1f",
+        "message": "Defer toolbelt cargo insertion",
+        "additions": 397,
+        "deletions": 146
+      }
+    },
+    {
+      "id": "commit-0fa5df5b8af8de7f4e9c3e6f20cfb687b5d09808",
+      "type": "commit",
+      "ts": "2026-05-31T10:17:39Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "0fa5df5b8af8de7f4e9c3e6f20cfb687b5d09808",
+        "message": "Use placement proxy for empty-ground drills",
+        "additions": 222,
+        "deletions": 193
+      }
+    },
+    {
+      "id": "commit-ef94686e772239071b6858fda3de4c0e38f5a562",
+      "type": "commit",
+      "ts": "2026-05-31T05:30:23Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "ef94686e772239071b6858fda3de4c0e38f5a562",
+        "message": "Make hidden resources mineable by drills",
+        "additions": 15,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-2bf4a16630dafb4ca5e3bcbc810bd4b423fff3ff",
+      "type": "commit",
+      "ts": "2026-05-31T05:21:06Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "2bf4a16630dafb4ca5e3bcbc810bd4b423fff3ff",
+        "message": "Maintain bounded anchor field for placement",
+        "additions": 182,
+        "deletions": 16
+      }
+    },
+    {
+      "id": "commit-b5e0c3d09592aea9dd875443ef0c80b1fd3b772a",
+      "type": "commit",
+      "ts": "2026-05-31T05:18:45Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "b5e0c3d09592aea9dd875443ef0c80b1fd3b772a",
+        "message": "Gate Nauvis science packs behind setting",
+        "additions": 41,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-d401799146c14048751f43d3b172a5c90885339f",
+      "type": "commit",
+      "ts": "2026-05-31T05:06:54Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "d401799146c14048751f43d3b172a5c90885339f",
+        "message": "Add Nauvis science packs",
+        "additions": 15,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-c00a0032dfc9fe5ab22dedce01151dec7c75d69c",
+      "type": "commit",
+      "ts": "2026-05-31T04:18:48Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "c00a0032dfc9fe5ab22dedce01151dec7c75d69c",
+        "message": "Use hidden resource anchor for placement",
+        "additions": 68,
+        "deletions": 195
+      }
+    },
+    {
+      "id": "commit-1aced52cffce92f015af28327194a3c8f9f910c2",
+      "type": "commit",
+      "ts": "2026-05-31T04:05:43Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "1aced52cffce92f015af28327194a3c8f9f910c2",
+        "message": "Fix final placement override and quality detection",
+        "additions": 69,
+        "deletions": 32
+      }
+    },
+    {
+      "id": "commit-1d9a60177aba5dc4083e28d52ccc0abbb3f04c50",
+      "type": "commit",
+      "ts": "2026-05-31T03:51:40Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "1d9a60177aba5dc4083e28d52ccc0abbb3f04c50",
+        "message": "Fix proxy quality and preview",
+        "additions": 78,
+        "deletions": 22
+      }
+    },
+    {
+      "id": "commit-9c678c3dbf1b7cccc21507911ae381a4eea35e32",
+      "type": "commit",
+      "ts": "2026-05-31T03:30:50Z",
+      "repo": "MRNIU/factorio_LegendaryResourceMining",
+      "semantic": null,
+      "data": {
+        "sha": "9c678c3dbf1b7cccc21507911ae381a4eea35e32",
+        "message": "Fix planet scope and empty placement",
+        "additions": 257,
+        "deletions": 36
+      }
+    },
+    {
       "id": "commit-0a89232439651e59922568706b53c0ce5197debb",
       "type": "commit",
       "ts": "2026-05-31T03:07:50Z",
