@@ -2,6 +2,87 @@
   "month": "2024-09",
   "events": [
     {
+      "id": "ai-summary-quarter-2024-Q3",
+      "type": "ai_summary",
+      "ts": "2024-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2024-07-01",
+          "end": "2024-09-30",
+          "label": "2024-Q3"
+        },
+        "content": "Q3 focused heavily on rapid iteration of the Factorio mod `MRNIU/nzh_factorio_mod`, with 21 commits delivering a series of version bumps from 1.2.0 to 1.4.7 and repeated refactor passes. Major themes included the introduction of a new mining drill entity (`nzh_mining_drill`) and progression work on `level4`, supported by multiple restructuring cycles. Collaboration remained sparse: 2 PRs opened and 2 comments left, but still zero code reviews, continuing the solo-development pattern from the previous quarter. Compared to Q2, which saw 8 commits across 6 repos and a dominant `fix` tag, Q3 shifted from distributed fixes (e.g. `MRNIU/opensbi_interface`) to concentrated feature evolution on a single mod, driving a roughly 2.5× increase in commit volume.",
+        "highlights": [
+          "21 commits, 2 PRs, 0 reviews, 0 issues, 2 comments, 4 active repos",
+          "Top repo: MRNIU/nzh_factorio_mod"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 21,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 4,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/opensbi_interface to MRNIU/nzh_factorio_mod",
+            "Dominant semantic tag changed from fix to mixed",
+            "Commit volume increased by 13"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2024-09",
+      "type": "ai_summary",
+      "ts": "2024-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2024-09-01",
+          "end": "2024-09-30",
+          "label": "2024-09"
+        },
+        "content": "2024 年 9 月工程活动较上月明显转向内核开发，主要精力集中在 Simple-XX/SimpleKernel 仓库，提交了 2 个 PR 并围绕 “working on level4” 持续推进功能迭代。相比 8 月参与 3 个仓库并留有评论，本月仅活跃于 2 个仓库且无 review 或交流记录，显示出更专注的个人开发节奏。上月主导的 MRNIU/nzh_factorio_mod 仓库仅在第一周有 1 个 commit，后续未再跟进，工作主线已切换至 SimpleKernel 的代码合并。",
+        "highlights": [
+          "1 commits, 2 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 1,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/nzh_factorio_mod to Simple-XX/SimpleKernel"
+          ]
+        }
+      }
+    },
+    {
       "id": "pr-190-Simple-XX/SimpleKernel",
       "type": "pull_request",
       "ts": "2024-09-18T02:07:03Z",

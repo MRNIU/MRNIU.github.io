@@ -28,6 +28,48 @@
       }
     },
     {
+      "id": "ai-summary-month-2024-08",
+      "type": "ai_summary",
+      "ts": "2024-08-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2024-08-01",
+          "end": "2024-08-31",
+          "label": "2024-08"
+        },
+        "content": "八月工程活动明显放缓，仅产出 2 个 commit，均集中在月底对 MRNIU/nzh_factorio_mod 仓库的维护，提交内容围绕 “nzh_mining_drill” 功能与 “fix long” 修复。与七月密集提交 18 个 commit 相比，本月转向低频率的小范围迭代，并短暂关注了 Simple-XX/SimpleGameEngine 仓库，以评论形式参与讨论。整体延续了以 Factorio 模组为核心的主线，但活跃度大幅回落，从功能开发过渡到了零星修复与观察阶段。",
+        "highlights": [
+          "2 commits, 0 PRs, 0 reviews, 0 issues, 2 comments, 3 active repos",
+          "Top repo: MRNIU/nzh_factorio_mod"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 2,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 3,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/nzh_factorio_mod"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 16"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-ST-Robot/bulletin-1-18",
       "type": "issue_comment",
       "ts": "2024-08-29T03:27:26Z",

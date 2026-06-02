@@ -2,6 +2,64 @@
   "month": "2024-04",
   "events": [
     {
+      "id": "ai-summary-month-2024-04",
+      "type": "ai_summary",
+      "ts": "2024-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2024-04-01",
+          "end": "2024-04-30",
+          "label": "2024-04"
+        },
+        "content": "4 月的工程活动集中在 MRNIU/opensbi_interface 仓库，共完成 7 个 commit，全部属于维护和修复性质。主要工作是反复调整 CI 配置并上传 fw_jump.elf 以恢复测试环境，同时补充了 2024 OSPP 相关文档。相比上月密集的 feat 开发，本月明显转为以 fix 为主的稳定期，提交量减少过半，但焦点仓库保持不变，仍无 PR 或跨仓库协作。",
+        "highlights": [
+          "7 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: MRNIU/opensbi_interface"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 7,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/opensbi_interface"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/opensbi_interface"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to fix",
+            "Commit volume decreased by 11"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2024-04-22",
+      "type": "ai_roast",
+      "ts": "2024-04-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-04-22 ~ 2024-04-28",
+        "content": "7 个 commit，其中 3 个是 “fix: upload fw_jump.elf for test”—— 因为如果 ELF 第一次没上传成功，那就把完全相同的操作再试上两次。还有一个 commit 只有 “add 2024 OSPP”，夹在 CI 修复之间，散发出强烈的 “我加了一个功能，然后把剩下的一整周都花在让这个功能真正编译通过上” 的气息。",
+        "stats": {
+          "totalCommits": 7,
+          "topRepo": "MRNIU/opensbi_interface"
+        }
+      }
+    },
+    {
       "id": "commit-88098c3f96fce5cce8a32941842540b356763f53",
       "type": "commit",
       "ts": "2024-04-26T03:22:44Z",
@@ -90,21 +148,6 @@
         "message": "fix: upload fw_jump.elf for test\npref: update toolchain\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 92,
         "deletions": 54
-      }
-    },
-    {
-      "id": "ai-roast-2024-04-22",
-      "type": "ai_roast",
-      "ts": "2024-04-28T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2024-04-22 ~ 2024-04-28",
-        "content": "7 个 commit，其中 3 个是 “fix: upload fw_jump.elf for test”—— 因为如果 ELF 第一次没上传成功，那就把完全相同的操作再试上两次。还有一个 commit 只有 “add 2024 OSPP”，夹在 CI 修复之间，散发出强烈的 “我加了一个功能，然后把剩下的一整周都花在让这个功能真正编译通过上” 的气息。",
-        "stats": {
-          "totalCommits": 7,
-          "topRepo": "MRNIU/opensbi_interface"
-        }
       }
     }
   ]

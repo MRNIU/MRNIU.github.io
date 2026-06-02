@@ -2,6 +2,64 @@
   "month": "2025-02",
   "events": [
     {
+      "id": "ai-summary-month-2025-02",
+      "type": "ai_summary",
+      "ts": "2025-02-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-02-01",
+          "end": "2025-02-28",
+          "label": "2025-02"
+        },
+        "content": "2025 年 2 月的工程活动依然集中在 MRNIU/cpu_io 仓库，延续了 1 月以来的功能特性开发方向， 3 次提交全部为 feat 类型，主要增加了 ICC_IGRPEN1_EL1Info 与 ICC_SRE_EL1Info 等中断控制器寄存器信息的描述。与上月 71 次提交的密集推进相比，本月节奏明显放缓，但仓库与 feature 标签的高度聚焦并未改变，仍是单仓库、纯提交的个人开发模式。未出现任何 Pull Request、Code Review 或 Issue 互动，保持了自 1 月以来零协作的习惯。",
+        "highlights": [
+          "3 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 3,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/cpu_io",
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 68"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2025-02-03",
+      "type": "ai_roast",
+      "ts": "2025-02-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-02-03 ~ 2025-02-09",
+        "content": "Three commits, two of which are the exact same \"feat: add ICC_IGRPEN1_EL1Info\" — because one ICC_IGRPEN1_EL1Info is clearly not enough, you need a spare. You've been adding a single ARM register per week for a month straight; at this decelerating pace, you'll finish the ISA sometime around 2030.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/cpu_io"
+        }
+      }
+    },
+    {
       "id": "commit-f2477fe35bf01cbcdece2188f4657dc2cdeee34a",
       "type": "commit",
       "ts": "2025-02-07T05:39:42Z",
@@ -38,21 +96,6 @@
         "message": "feat: add ICC_SRE_EL1Info\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 7,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2025-02-03",
-      "type": "ai_roast",
-      "ts": "2025-02-09T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-02-03 ~ 2025-02-09",
-        "content": "Three commits, two of which are the exact same \"feat: add ICC_IGRPEN1_EL1Info\" — because one ICC_IGRPEN1_EL1Info is clearly not enough, you need a spare. You've been adding a single ARM register per week for a month straight; at this decelerating pace, you'll finish the ISA sometime around 2030.",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "MRNIU/cpu_io"
-        }
       }
     }
   ]

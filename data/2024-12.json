@@ -2,6 +2,50 @@
   "month": "2024-12",
   "events": [
     {
+      "id": "ai-summary-year-2024",
+      "type": "ai_summary",
+      "ts": "2024-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "label": "2024"
+        },
+        "content": "2024 年，开发重心从 SimpleKernel 转向了 MRNIU/opensbi_interface，全年生成 48 个 commit 与 4 个 PR，语义主导标签由 2023 年的 style 变为 fix，体现出从代码风格整理到持续功能修复的转变。活动呈现脉冲式节奏，集中在 3 月和 7 月完成项目初始化、功能实现和 CI 配置，其余月份仅穿插零星的 issue 与 comment，互动极为有限。技术轨迹从整体初始化开始，逐步添加枚举、函数实现和 QEMU 运行支持，并通过大量修复构建警告和测试上传问题将版本快速迭代至 1.0.6 系列。协作上几乎为单人独立推进，全年无代码评审， PR 也主要服务于自建仓库的合并与 CI 修复。最突出的工程习惯是严格的约定式提交和版本号驱动管理，多数 commit 遵循 fix/feat 前缀并伴随显式递增版本，使得发布流程清晰有序。年中曾短暂参与 OSPP 2024 提案，但未形成持续性社区贡献，整体呈现重个人产出、轻协作的状态。",
+        "highlights": [
+          "48 commits, 4 PRs, 0 reviews, 3 issues, 5 comments, 9 active repos",
+          "Top repo: MRNIU/opensbi_interface"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 48,
+          "totalPRs": 4,
+          "totalReviews": 0,
+          "totalIssues": 3,
+          "totalComments": 5,
+          "activeRepos": 9,
+          "topRepo": "MRNIU/opensbi_interface"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to MRNIU/opensbi_interface",
+            "Dominant semantic tag changed from style to fix",
+            "Commit volume decreased by 133"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-bee098949e99980ffe4e47eed9f3362f629b928d",
       "type": "commit",
       "ts": "2024-12-13T06:03:31Z",

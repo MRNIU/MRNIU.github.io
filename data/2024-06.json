@@ -2,6 +2,89 @@
   "month": "2024-06",
   "events": [
     {
+      "id": "ai-summary-quarter-2024-Q2",
+      "type": "ai_summary",
+      "ts": "2024-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2024-04-01",
+          "end": "2024-06-30",
+          "label": "2024-Q2"
+        },
+        "content": "2024 年 Q2，开发重心从功能开发转向维护修复，主导语义标签由 feat 变为 fix。主要工作集中于 OpenSBI 接口仓库的 CI 修复与固件上传问题，同时提交了 OSPP 计划相关材料，活跃仓库从 Q1 的 2 个扩展至 6 个。协作模式初步变化，开始出现 2 个 PR 和 2 个 issue，但仍无代码审查参与。整体活动强度较 Q1 明显下降，提交量从 18 个降至 8 个，体现从新功能快速开发向稳定性维护和跨仓库探索的转变。",
+        "highlights": [
+          "8 commits, 2 PRs, 0 reviews, 2 issues, 3 comments, 6 active repos",
+          "Top repo: MRNIU/opensbi_interface"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 8,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 3,
+          "activeRepos": 6,
+          "topRepo": "MRNIU/opensbi_interface"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/opensbi_interface"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to fix",
+            "Commit volume decreased by 10"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2024-06",
+      "type": "ai_summary",
+      "ts": "2024-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2024-06-01",
+          "end": "2024-06-30",
+          "label": "2024-06"
+        },
+        "content": "June 2024 moved away from April's concentrated fix work (7 commits on opensbi_interface) toward a broader, proposal-oriented cycle across 5 repos, topped by Simple-XX/SimpleKernel. The single commit (\"add 2024 proposal\") and 2 pull requests point to design discussions rather than heavy coding. This mixed activity contrasts with the previous period's focused fixes, marking a shift to upstream planning and multi-repo exploration.",
+        "highlights": [
+          "1 commits, 2 PRs, 0 reviews, 2 issues, 2 comments, 5 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 1,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 2,
+          "activeRepos": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/opensbi_interface to Simple-XX/SimpleKernel",
+            "Dominant semantic tag changed from fix to mixed"
+          ]
+        }
+      }
+    },
+    {
       "id": "pr-9-Simple-XX/SimpleGameEngine",
       "type": "pull_request",
       "ts": "2024-06-28T03:25:15Z",
@@ -25,6 +108,21 @@
         "message": "add 2024 proposal\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 0,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2024-06-10",
+      "type": "ai_roast",
+      "ts": "2024-06-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-06-10 ~ 2024-06-16",
+        "content": "0 commits, 1 PR, 2 issues, and 2 comments on SimpleKernel — you're keeping the project alive the way a nightlight left on keeps a house \"occupied.\" It's your routine quarterly check-in, touching the kernel just enough to remember it exists.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -88,21 +186,6 @@
         "title": "CMake support for RISCV",
         "state": "open",
         "body": "Hi,\r\n\r\nI am looking into how to add RISC-V CMake support for libunwind.\r\n\r\nhttps://github.com/libunwind/libunwind/blob/master/CMakeLists.txt\r\nhttps://github.com/libunwind/libunwind/blob/master/src/CMakeLists.txt\r\n\r\nExcept for these two files, are there any other files that need to be modified?\r\n\r\nThank you!"
-      }
-    },
-    {
-      "id": "ai-roast-2024-06-10",
-      "type": "ai_roast",
-      "ts": "2024-06-16T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2024-06-10 ~ 2024-06-16",
-        "content": "0 commits, 1 PR, 2 issues, and 2 comments on SimpleKernel — you're keeping the project alive the way a nightlight left on keeps a house \"occupied.\" It's your routine quarterly check-in, touching the kernel just enough to remember it exists.",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

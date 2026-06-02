@@ -2,6 +2,65 @@
   "month": "2025-01",
   "events": [
     {
+      "id": "ai-summary-month-2025-01",
+      "type": "ai_summary",
+      "ts": "2025-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-01-01",
+          "end": "2025-01-31",
+          "label": "2025-01"
+        },
+        "content": "2025 年 1 月开发活动大幅回升，从上一个活跃期（2024 年 9 月仅 1 个 commit）转为密集输出，全月累计 71 个 commit，全部集中在 MRNIU/cpu_io 仓库。主要工作流延续了独立编码习惯，没有创建 PR 或参与 review，提交以 feat 为主导，系统性地为 aarch64 架构添加了 GIC 中断控制器、系统寄存器（如 CNTVCT_EL0、SPSR_EL1、DAIF 等）以及内存属性等底层基础设施，后期也引入了 riscv64 的虚拟内存管理支持。整体节奏呈现前半月高强度冲刺（前两周 67 个 commit），后半月放缓，体现了对 CPU 接口抽象层的持续深入建设。",
+        "highlights": [
+          "71 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 71,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to MRNIU/cpu_io",
+            "Dominant semantic tag changed from mixed to feat",
+            "Commit volume increased by 70"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2025-01-13",
+      "type": "ai_roast",
+      "ts": "2025-01-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-01-13 ~ 2025-01-19",
+        "content": "从上周的 24 次掉到只剩 4 次 commit —— 看来 ARM 寄存器转录项目的气快泄光了。你的 commit message 现在读起来就跟 GIC 中断控制器文档一模一样，说明你已经从无聊的寄存器毕业，迈进 *令人振奋* 的寄存器了。ICC_PMR_EL1 和 ICC_IGRPEN1_EL1 —— 这俩 commit message 真是让人怦然心动。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/cpu_io"
+        }
+      }
+    },
+    {
       "id": "commit-cd2c13bef5693f69c001f4d7b27f2e7c1907229a",
       "type": "commit",
       "ts": "2025-01-17T02:53:44Z",
@@ -51,6 +110,21 @@
         "message": "feat: add ICC_PMR_EL1 ICC_IGRPEN1_EL1 ICC_SRE_EL1\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 157,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2025-01-06",
+      "type": "ai_roast",
+      "ts": "2025-01-12T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-01-06 ~ 2025-01-12",
+        "content": "24 commits and every single one is a “feat: add [SOME_REGISTER_NAME]” — you’re basically a human OCR for the ARM Architecture Reference Manual, one system register at a time. Three identical “feat: add sys regs” in a row means you’ve discovered copy-paste works for commit messages too. At this rate the entire ARMv8 spec will be committed to git by Q2.",
+        "stats": {
+          "totalCommits": 24,
+          "topRepo": "MRNIU/cpu_io"
+        }
       }
     },
     {
@@ -415,6 +489,21 @@
         "message": "style: fix clang-tidy\n\nSigned-off-by: Zone.NiuZH <zone.niuzh@hotmail.com>",
         "additions": 12,
         "deletions": 12
+      }
+    },
+    {
+      "id": "ai-roast-2024-12-30",
+      "type": "ai_roast",
+      "ts": "2025-01-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-12-30 ~ 2025-01-05",
+        "content": "43 commits on cpu_io over New Year’s — while everyone else was celebrating, you were adding aarch64 set/clr bits three separate times like a very dedicated, very lonely systems programmer. The commit messages read like a CPU register manual’s table of contents, and “commit: update” sneaking in there is your brain’s garbage collection kicking in.",
+        "stats": {
+          "totalCommits": 43,
+          "topRepo": "MRNIU/cpu_io"
+        }
       }
     },
     {
@@ -922,51 +1011,6 @@
         "message": "Initial commit",
         "additions": 75,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2024-12-30",
-      "type": "ai_roast",
-      "ts": "2025-01-05T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2024-12-30 ~ 2025-01-05",
-        "content": "43 commits on cpu_io over New Year’s — while everyone else was celebrating, you were adding aarch64 set/clr bits three separate times like a very dedicated, very lonely systems programmer. The commit messages read like a CPU register manual’s table of contents, and “commit: update” sneaking in there is your brain’s garbage collection kicking in.",
-        "stats": {
-          "totalCommits": 43,
-          "topRepo": "MRNIU/cpu_io"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2025-01-06",
-      "type": "ai_roast",
-      "ts": "2025-01-12T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-01-06 ~ 2025-01-12",
-        "content": "24 commits and every single one is a “feat: add [SOME_REGISTER_NAME]” — you’re basically a human OCR for the ARM Architecture Reference Manual, one system register at a time. Three identical “feat: add sys regs” in a row means you’ve discovered copy-paste works for commit messages too. At this rate the entire ARMv8 spec will be committed to git by Q2.",
-        "stats": {
-          "totalCommits": 24,
-          "topRepo": "MRNIU/cpu_io"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2025-01-13",
-      "type": "ai_roast",
-      "ts": "2025-01-19T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-01-13 ~ 2025-01-19",
-        "content": "从上周的 24 次掉到只剩 4 次 commit —— 看来 ARM 寄存器转录项目的气快泄光了。你的 commit message 现在读起来就跟 GIC 中断控制器文档一模一样，说明你已经从无聊的寄存器毕业，迈进 *令人振奋* 的寄存器了。ICC_PMR_EL1 和 ICC_IGRPEN1_EL1 —— 这俩 commit message 真是让人怦然心动。",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "MRNIU/cpu_io"
-        }
       }
     }
   ]

@@ -2,6 +2,47 @@
   "month": "2024-07",
   "events": [
     {
+      "id": "ai-summary-month-2024-07",
+      "type": "ai_summary",
+      "ts": "2024-07-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2024-07-01",
+          "end": "2024-07-31",
+          "label": "2024-07"
+        },
+        "content": "In July 2024, engineering activity focused solely on MRNIU/nzh_factorio_mod, with all 18 commits concentrated in a single week. The commit history shows a pattern of sequential version bumps from 1.3.0 through 1.4.7, alternating with 5 \"refactor\" commits, suggesting a cycle of incremental feature work and code cleanup. This represents a marked shift from June's multi-repo involvement with pull requests, issues, and comments across projects like Simple-XX/SimpleKernel, to a solitary, high-velocity development sprint with no collaborative interactions.",
+        "highlights": [
+          "18 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: MRNIU/nzh_factorio_mod"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 18,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to MRNIU/nzh_factorio_mod",
+            "Commit volume increased by 17"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-939e6f4742cfba18839ff1d3563ff79fb833f18a",
       "type": "commit",
       "ts": "2024-07-21T07:35:38Z",
@@ -25,6 +66,21 @@
         "message": "1.4.6\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 82,
         "deletions": 2
+      }
+    },
+    {
+      "id": "ai-roast-2024-07-15",
+      "type": "ai_roast",
+      "ts": "2024-07-21T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-07-15 ~ 2024-07-21",
+        "content": "一星期内 18 个 commit，一半全是在改版本号——从 1.2.0、 1.3.0 一路飙到 1.4.0 再飙到 1.4.7，这发版速度连多数创业公司看了都眼红。你一周内 bump 了 3 次主版本号，要么是做了天翻地覆的 breaking change，要么你根本不懂 semver 是什么。仅有的 “update” 和 “refactor” 提交就像给乱糟糟的礼物系上的蝴蝶结，勉强把这一切拢在一起。",
+        "stats": {
+          "totalCommits": 18,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
       }
     },
     {
@@ -233,21 +289,6 @@
         "message": "refactor\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 186,
         "deletions": 686
-      }
-    },
-    {
-      "id": "ai-roast-2024-07-15",
-      "type": "ai_roast",
-      "ts": "2024-07-21T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2024-07-15 ~ 2024-07-21",
-        "content": "一星期内 18 个 commit，一半全是在改版本号——从 1.2.0、 1.3.0 一路飙到 1.4.0 再飙到 1.4.7，这发版速度连多数创业公司看了都眼红。你一周内 bump 了 3 次主版本号，要么是做了天翻地覆的 breaking change，要么你根本不懂 semver 是什么。仅有的 “update” 和 “refactor” 提交就像给乱糟糟的礼物系上的蝴蝶结，勉强把这一切拢在一起。",
-        "stats": {
-          "totalCommits": 18,
-          "topRepo": "MRNIU/nzh_factorio_mod"
-        }
       }
     }
   ]
