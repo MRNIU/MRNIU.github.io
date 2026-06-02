@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:06:54.955Z",
+  "generatedAt": "2026-06-02T08:12:14.008Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -840,6 +840,16 @@
       }
     },
     {
+      "key": "2022-09",
+      "file": "2022-09.json",
+      "eventCount": 1,
+      "repos": [],
+      "breakdown": {
+        "ai_summary": 1
+      },
+      "repoBreakdown": {}
+    },
+    {
       "key": "2022-08",
       "file": "2022-08.json",
       "eventCount": 2,
@@ -870,7 +880,7 @@
     {
       "key": "2022-06",
       "file": "2022-06.json",
-      "eventCount": 17,
+      "eventCount": 19,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "MRNIU/libcxxrt",
@@ -878,11 +888,12 @@
         "haiku/website"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "pull_request": 2,
         "issue": 2,
         "commit": 11,
-        "issue_comment": 1,
-        "ai_roast": 1
+        "ai_roast": 1,
+        "issue_comment": 1
       },
       "repoBreakdown": {
         "haiku/website": 3,
@@ -894,7 +905,7 @@
     {
       "key": "2022-05",
       "file": "2022-05.json",
-      "eventCount": 15,
+      "eventCount": 16,
       "repos": [
         "EugeneLiu/translationCSAPP",
         "MRNIU/resume",
@@ -905,11 +916,12 @@
         "hzcx998/XBook"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 4,
         "pull_request": 2,
         "commit": 6,
-        "review": 1,
-        "ai_roast": 2
+        "ai_roast": 2,
+        "review": 1
       },
       "repoBreakdown": {
         "haiku/website": 3,
@@ -924,15 +936,16 @@
     {
       "key": "2022-04",
       "file": "2022-04.json",
-      "eventCount": 24,
+      "eventCount": 25,
       "repos": [
         "MRNIU/resume",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 2,
         "commit": 13,
-        "pull_request": 9,
-        "ai_roast": 2
+        "pull_request": 9
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 18,
@@ -942,11 +955,12 @@
     {
       "key": "2022-03",
       "file": "2022-03.json",
-      "eventCount": 12,
+      "eventCount": 14,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "commit": 11,
         "ai_roast": 1
       },
@@ -957,11 +971,12 @@
     {
       "key": "2022-02",
       "file": "2022-02.json",
-      "eventCount": 7,
+      "eventCount": 8,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 5,
         "ai_roast": 2
       },
@@ -972,15 +987,16 @@
     {
       "key": "2022-01",
       "file": "2022-01.json",
-      "eventCount": 119,
+      "eventCount": 120,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 103,
+        "ai_summary": 1,
+        "ai_roast": 5,
         "issue_comment": 2,
-        "pull_request": 9,
-        "ai_roast": 5
+        "pull_request": 9
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 114
@@ -989,15 +1005,16 @@
     {
       "key": "2021-12",
       "file": "2021-12.json",
-      "eventCount": 22,
+      "eventCount": 23,
       "repos": [
         "MRNIU/SimpleKernel",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 1,
-        "commit": 18,
-        "ai_roast": 3
+        "ai_roast": 3,
+        "commit": 18
       },
       "repoBreakdown": {
         "MRNIU/SimpleKernel": 1,

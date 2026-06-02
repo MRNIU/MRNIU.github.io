@@ -54,6 +54,66 @@
       }
     },
     {
+      "id": "ai-summary-month-2022-01",
+      "type": "ai_summary",
+      "ts": "2022-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2022-01-01",
+          "end": "2022-01-31",
+          "label": "2022-01"
+        },
+        "content": "1 月继续聚焦 Simple-XX/SimpleKernel，开发强度较上月大幅提升（103 个 commit vs 18 个 commit），并首次出现了 9 个 PR。主要工作流围绕中断、虚拟内存和堆分配器展开，反复进行修复和性能优化， commit 标签以 fix 为主导，延续了上个月的 bug 修复习惯。高频的 “pref(intr): update context” 等提交表明上下文切换与中断处理是持续迭代的核心区域。整体从纯提交推进，开始引入更结构化的协作流程。",
+        "highlights": [
+          "103 commits, 9 PRs, 0 reviews, 0 issues, 2 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 103,
+          "totalPRs": 9,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed fix"
+          ],
+          "changedSincePrevious": [
+            "Commit volume increased by 85"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-01-24",
+      "type": "ai_roast",
+      "ts": "2022-01-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-24 ~ 2022-01-30",
+        "content": "12 commits, five of them \"pref(intr): update context\" — that interrupt context gets refreshed more often than most people update their résumés. \"pref(test): finit\" shows up twice, so you finished finishing. The word \"context\" in your commit messages is ironic, because they provide absolutely none.",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-b90eb7c78e8c095c7e3ceb0d5879af5bdeeb7c27",
       "type": "commit",
       "ts": "2022-01-29T16:19:59Z",
@@ -509,6 +569,21 @@
       }
     },
     {
+      "id": "ai-roast-2022-01-17",
+      "type": "ai_roast",
+      "ts": "2022-01-23T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-17 ~ 2022-01-23",
+        "content": "48 个 commit，其中一个叫 “bug(vmm): flush”——真欣赏这种拿 “bug” 当 commit 类型的耿直，换别人至少还会假装在修东西。“fix(heap): find bug on unmmap” 后面紧跟着 “fix(HEAP): update”，堪称经典的两阶段悲伤：发现与否认。你把 malloc 替换成 kmalloc，又把 free 替换成 kfree，还分成了两个 commit，意味着在某个短暂的瞬间，你的内核处于半用户态半内核态——薛定谔的分配器。",
+        "stats": {
+          "totalCommits": 48,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-cc478eb308837fba0cb8b558e66a0d7dcdb38fe3",
       "type": "commit",
       "ts": "2022-01-22T12:23:28Z",
@@ -885,6 +960,21 @@
       }
     },
     {
+      "id": "ai-roast-2022-01-10",
+      "type": "ai_roast",
+      "ts": "2022-01-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-10 ~ 2022-01-16",
+        "content": "16 个 commit 里 9 个都是“build(cmake): update”——现在不是你管 cmake，是 cmake 在管你。这周你提了 9 个 PR，这到底是高产还是可疑，全看里面有没有哪个改过一行以上的代码。光给 CLion 配个环境就花了 3 个提交，这 IDE 简直比你写的内核还难伺候。",
+        "stats": {
+          "totalCommits": 16,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-e11569578ddb173adcd3be126af8a18a332600f5",
       "type": "commit",
       "ts": "2022-01-14T09:39:14Z",
@@ -1222,6 +1312,21 @@
       }
     },
     {
+      "id": "ai-roast-2022-01-03",
+      "type": "ai_roast",
+      "ts": "2022-01-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-01-03 ~ 2022-01-09",
+        "content": "19 个 commit，连着 4 条 “fix(CI): update”——你这不是在修 CI，是在跟它一句一句唠嗑，一个 commit 一句。“build(cmake): audo gen”——连自动纠错都救不了不动手打字的你，但好歹 cmake 是替你自动生成点什么了，尽管拼写依然我行我素。“update” 这词几乎每条消息都在刷存在感，现在它已经不是 commit 信息，更像是你每天默念的咒语。",
+        "stats": {
+          "totalCommits": 19,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-2246eb0f1a63d284e489477c2cf0ad5cb1140ef0",
       "type": "commit",
       "ts": "2022-01-06T11:20:33Z",
@@ -1456,6 +1561,21 @@
       }
     },
     {
+      "id": "ai-roast-2021-12-27",
+      "type": "ai_roast",
+      "ts": "2022-01-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-12-27 ~ 2022-01-02",
+        "content": "4 个 commit 来庆祝新年，其中有一个 \"comment(intr): update\" —— 2022 年的开场方式跟 2021 年一模一样：更新那些没人读的注释。\"fix(CPU, VMM): GET_PGD\" 这个 commit 消息真的承担了太多，我猜修复内容就跟消息一样“详细”。不过，你在这个周期里总算在 issue 上留了第一条评论 —— 社交技能加载中，进度 1%。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-81793096c9db22bfbfdae07d0561157927c7bf5e",
       "type": "commit",
       "ts": "2022-01-01T15:39:23Z",
@@ -1479,81 +1599,6 @@
         "message": "pref(opensbi): update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 127,
         "deletions": 41
-      }
-    },
-    {
-      "id": "ai-roast-2021-12-27",
-      "type": "ai_roast",
-      "ts": "2022-01-02T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-12-27 ~ 2022-01-02",
-        "content": "4 个 commit 来庆祝新年，其中有一个 \"comment(intr): update\" —— 2022 年的开场方式跟 2021 年一模一样：更新那些没人读的注释。\"fix(CPU, VMM): GET_PGD\" 这个 commit 消息真的承担了太多，我猜修复内容就跟消息一样“详细”。不过，你在这个周期里总算在 issue 上留了第一条评论 —— 社交技能加载中，进度 1%。",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2022-01-03",
-      "type": "ai_roast",
-      "ts": "2022-01-09T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-01-03 ~ 2022-01-09",
-        "content": "19 个 commit，连着 4 条 “fix(CI): update”——你这不是在修 CI，是在跟它一句一句唠嗑，一个 commit 一句。“build(cmake): audo gen”——连自动纠错都救不了不动手打字的你，但好歹 cmake 是替你自动生成点什么了，尽管拼写依然我行我素。“update” 这词几乎每条消息都在刷存在感，现在它已经不是 commit 信息，更像是你每天默念的咒语。",
-        "stats": {
-          "totalCommits": 19,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2022-01-10",
-      "type": "ai_roast",
-      "ts": "2022-01-16T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-01-10 ~ 2022-01-16",
-        "content": "16 个 commit 里 9 个都是“build(cmake): update”——现在不是你管 cmake，是 cmake 在管你。这周你提了 9 个 PR，这到底是高产还是可疑，全看里面有没有哪个改过一行以上的代码。光给 CLion 配个环境就花了 3 个提交，这 IDE 简直比你写的内核还难伺候。",
-        "stats": {
-          "totalCommits": 16,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2022-01-17",
-      "type": "ai_roast",
-      "ts": "2022-01-23T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-01-17 ~ 2022-01-23",
-        "content": "48 个 commit，其中一个叫 “bug(vmm): flush”——真欣赏这种拿 “bug” 当 commit 类型的耿直，换别人至少还会假装在修东西。“fix(heap): find bug on unmmap” 后面紧跟着 “fix(HEAP): update”，堪称经典的两阶段悲伤：发现与否认。你把 malloc 替换成 kmalloc，又把 free 替换成 kfree，还分成了两个 commit，意味着在某个短暂的瞬间，你的内核处于半用户态半内核态——薛定谔的分配器。",
-        "stats": {
-          "totalCommits": 48,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2022-01-24",
-      "type": "ai_roast",
-      "ts": "2022-01-30T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-01-24 ~ 2022-01-30",
-        "content": "12 commits, five of them \"pref(intr): update context\" — that interrupt context gets refreshed more often than most people update their résumés. \"pref(test): finit\" shows up twice, so you finished finishing. The word \"context\" in your commit messages is ironic, because they provide absolutely none.",
-        "stats": {
-          "totalCommits": 12,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

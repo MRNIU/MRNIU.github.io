@@ -2,6 +2,49 @@
   "month": "2022-05",
   "events": [
     {
+      "id": "ai-summary-month-2022-05",
+      "type": "ai_summary",
+      "ts": "2022-05-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2022-05-01",
+          "end": "2022-05-31",
+          "label": "2022-05"
+        },
+        "content": "5 月的主要工作集中在 Simple-XX/SimpleKernel 仓库，以 feat 类型的提交为主，推进了 PLIC 初始化和 VMM 内存管理相关特性，这与 4 月的混合提交风格相比更加聚焦功能开发。整体活动量从 13 个 commit 降至 6 个，仍保持多仓库轻度参与的习惯，涉及 OSPP、translationCSAPP 和 haiku/website 等项目。从提审节奏看，当月仅有 1 次 review，并给出了“Ready to merge”的明确意见，延续了注重代码合入效率的协作方式。",
+        "highlights": [
+          "6 commits, 2 PRs, 1 reviews, 0 issues, 4 comments, 7 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 6,
+          "totalPRs": 2,
+          "totalReviews": 1,
+          "totalIssues": 0,
+          "totalComments": 4,
+          "activeRepos": 7,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from mixed to feat"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-haiku/website-593-62",
       "type": "issue_comment",
       "ts": "2022-05-30T09:33:57Z",
@@ -49,6 +92,21 @@
         "message": "update\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 18,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2022-05-23",
+      "type": "ai_roast",
+      "ts": "2022-05-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-05-23 ~ 2022-05-29",
+        "content": "4 commits and you call \"fix(CPU): vmm update\" — labeling a VMM change as a CPU fix is the kind of architectural confusion that explains why you're still wrestling with this kernel. You vanished for a one-week reading retreat and came back only to start breaking things again. At least \"feat(plic): add PLIC_M*\" hints at forward progress, assuming that asterisk isn't just covering up tears.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -155,19 +213,6 @@
       }
     },
     {
-      "id": "commit-3b091c15fa75b6663a1d87fcf7a5be3a5573d402",
-      "type": "commit",
-      "ts": "2022-05-06T07:17:00Z",
-      "repo": "Simple-XX/OSPP",
-      "semantic": null,
-      "data": {
-        "sha": "3b091c15fa75b6663a1d87fcf7a5be3a5573d402",
-        "message": "add 2022\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
-        "additions": 123,
-        "deletions": 0
-      }
-    },
-    {
       "id": "ai-roast-2022-05-16",
       "type": "ai_roast",
       "ts": "2022-05-22T00:00:00Z",
@@ -183,18 +228,16 @@
       }
     },
     {
-      "id": "ai-roast-2022-05-23",
-      "type": "ai_roast",
-      "ts": "2022-05-29T00:00:00Z",
-      "repo": null,
+      "id": "commit-3b091c15fa75b6663a1d87fcf7a5be3a5573d402",
+      "type": "commit",
+      "ts": "2022-05-06T07:17:00Z",
+      "repo": "Simple-XX/OSPP",
       "semantic": null,
       "data": {
-        "weekRange": "2022-05-23 ~ 2022-05-29",
-        "content": "4 commits and you call \"fix(CPU): vmm update\" — labeling a VMM change as a CPU fix is the kind of architectural confusion that explains why you're still wrestling with this kernel. You vanished for a one-week reading retreat and came back only to start breaking things again. At least \"feat(plic): add PLIC_M*\" hints at forward progress, assuming that asterisk isn't just covering up tears.",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
+        "sha": "3b091c15fa75b6663a1d87fcf7a5be3a5573d402",
+        "message": "add 2022\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
+        "additions": 123,
+        "deletions": 0
       }
     }
   ]

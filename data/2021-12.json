@@ -2,6 +2,49 @@
   "month": "2021-12",
   "events": [
     {
+      "id": "ai-summary-year-2021",
+      "type": "ai_summary",
+      "ts": "2021-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2021-01-01",
+          "end": "2021-12-31",
+          "label": "2021"
+        },
+        "content": "2021 年，他深耕 Simple-XX/SimpleKernel 项目，以 628 次提交和 48 个 PR 将活动量推至上年的两倍以上，技术标签从上一年的 merge 转向 feat，说明重心从合并维护切换到了主动功能开发。核心轨迹是驱动内核从 C 向 C++ 全面转型，通过引入类、命名空间、libcxx 支持并反复清理旧的汇编引导代码，逐步建立起完整的 C++ 运行环境。开发节奏呈现强烈的脉冲形态， 4 月与 7 月分别贡献了 173 和 164 次提交，而 3 月与 9-10 月几乎完全沉寂，体现了深度专注与阶段性停歇交替的习惯。协作上仍为纯单人模式，全年无代码审查，但严格通过 PR 来组织分支和功能合并，保持了清晰的开发记录。最强的工程习惯是持续重构与规范化治理，高频出现 pref、refactor 及 style 类提交，主动制定提交规范与 clang-format 规则，并反复修复 CI 和大小写敏感等构建问题，显示出对代码整洁度与可维护性的执着追求。",
+        "highlights": [
+          "628 commits, 48 PRs, 0 reviews, 4 issues, 10 comments, 9 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 628,
+          "totalPRs": 48,
+          "totalReviews": 0,
+          "totalIssues": 4,
+          "totalComments": 10,
+          "activeRepos": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to feat",
+            "Commit volume increased by 347"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-MRNIU/SimpleKernel-10-69",
       "type": "issue_comment",
       "ts": "2021-12-29T14:37:00Z",
@@ -11,6 +54,21 @@
         "issueNumber": 10,
         "issueTitle": "合并代码",
         "body": "此分支只支持 riscv64，其它架构 ci 跑不过，合入后进行修改"
+      }
+    },
+    {
+      "id": "ai-roast-2021-12-20",
+      "type": "ai_roast",
+      "ts": "2021-12-26T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-12-20 ~ 2021-12-26",
+        "content": "3 次 commit 在圣诞周——一份人类应得的安静 git log 礼物。一个 feat、一个 pref 和一个 refactor：神圣的三位一体，“我以三种不同的方式碰了同一个子系统。”来自一位显然靠写 RISC-V 中断处理程序来庆祝的人，节日快乐。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -102,6 +160,36 @@
         "message": "fix(boot): change x86_64 link file\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 23,
         "deletions": 19
+      }
+    },
+    {
+      "id": "ai-roast-2021-12-13",
+      "type": "ai_roast",
+      "ts": "2021-12-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-12-13 ~ 2021-12-19",
+        "content": "4 commits this week, and two of them repeat the exact same \"fix(vmm): remap flag\" — even your fixes apparently need fixes. With only 4 commits you’ve either finally grasped the concept of batching your work, or maybe finals just got the best of you.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-11-29",
+      "type": "ai_roast",
+      "ts": "2021-12-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-11-29 ~ 2021-12-05",
+        "content": "6 out of 11 commits are \"pref(IO): change to singleton\" — you didn't change IO to a singleton, you changed your commit history to a skipping CD. Two identical \"fix(multiboot2): remove header file\" commits suggest the header file fought back the first time and needed a second round. The singleton pattern: if something has to be wrong, it should at least only be wrong once.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -245,51 +333,6 @@
         "message": "pref(aarch64): remove redundant file\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 0,
         "deletions": 16
-      }
-    },
-    {
-      "id": "ai-roast-2021-11-29",
-      "type": "ai_roast",
-      "ts": "2021-12-05T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-11-29 ~ 2021-12-05",
-        "content": "6 out of 11 commits are \"pref(IO): change to singleton\" — you didn't change IO to a singleton, you changed your commit history to a skipping CD. Two identical \"fix(multiboot2): remove header file\" commits suggest the header file fought back the first time and needed a second round. The singleton pattern: if something has to be wrong, it should at least only be wrong once.",
-        "stats": {
-          "totalCommits": 11,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-12-13",
-      "type": "ai_roast",
-      "ts": "2021-12-19T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-12-13 ~ 2021-12-19",
-        "content": "4 commits this week, and two of them repeat the exact same \"fix(vmm): remap flag\" — even your fixes apparently need fixes. With only 4 commits you’ve either finally grasped the concept of batching your work, or maybe finals just got the best of you.",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-12-20",
-      "type": "ai_roast",
-      "ts": "2021-12-26T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-12-20 ~ 2021-12-26",
-        "content": "3 次 commit 在圣诞周——一份人类应得的安静 git log 礼物。一个 feat、一个 pref 和一个 refactor：神圣的三位一体，“我以三种不同的方式碰了同一个子系统。”来自一位显然靠写 RISC-V 中断处理程序来庆祝的人，节日快乐。",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

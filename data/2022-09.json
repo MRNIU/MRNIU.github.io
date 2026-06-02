@@ -1,0 +1,48 @@
+{
+  "month": "2022-09",
+  "events": [
+    {
+      "id": "ai-summary-quarter-2022-Q3",
+      "type": "ai_summary",
+      "ts": "2022-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2022-07-01",
+          "end": "2022-09-30",
+          "label": "2022-Q3"
+        },
+        "content": "2022-Q3 的技术工作依旧围绕 Simple-XX/SimpleKernel 展开，重点通过 feat 类型提交引入了 install.sh 安装脚本，并以 perf 类型清理移除了不再需要的 run.py。相比 2022-Q2 的 30 个 commit 与 13 个 PR，本季度骤减至仅 2 个 commit 和 1 个 PR，且完全没有任何代码审查、issue 或评论互动，协作模式从之前的多人讨论回归为单人维护。项目主题保持了内核对辅助工具链的打磨，但整体开发节奏明显放缓，活跃仓库数也从 9 个收缩到 2 个。整体上，季度活动呈现出高度聚焦且低交互的清理型开发特征，与前一周期形成陡峭的落差。",
+        "highlights": [
+          "2 commits, 1 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 2,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 28"
+          ]
+        }
+      }
+    }
+  ]
+}

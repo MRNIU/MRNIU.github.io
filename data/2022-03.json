@@ -2,6 +2,93 @@
   "month": "2022-03",
   "events": [
     {
+      "id": "ai-summary-quarter-2022-Q1",
+      "type": "ai_summary",
+      "ts": "2022-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2022-01-01",
+          "end": "2022-03-31",
+          "label": "2022-Q1"
+        },
+        "content": "In 2022-Q1, development converged on the Simple-XX/SimpleKernel repository, shifting the dominant activity from merge (as in Q4) to a sustained fix and refinement cycle. The main technical direction centered on interrupt handling (intr) and memory management, with extensive work on context switching, default trap handlers, argument passing, and the introduction of kmalloc/kfree, accompanied by numerous bug fixes across VMM, heap, and test code. Commits spiked in January (103 out of 119 quarterly commits) then dropped sharply, indicating an initial burst of correction and optimization followed by stabilization. Collaboration patterns remained unchanged: 0 reviews, 0 issues, and minimal comments across the period, consistent with a solo maintainer workflow. Compared to the previous quarter, which saw 13 PRs across 2 active repos, this period narrowed to a single repo with 9 PRs, reflecting a more focused, maintenance-driven cadence rather than feature integration.",
+        "highlights": [
+          "119 commits, 9 PRs, 0 reviews, 0 issues, 2 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 119,
+          "totalPRs": 9,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to fix",
+            "Commit volume increased by 33"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2022-03",
+      "type": "ai_summary",
+      "ts": "2022-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2022-03-01",
+          "end": "2022-03-31",
+          "label": "2022-03"
+        },
+        "content": "3 月主要在 Simple-XX/SimpleKernel 仓库上进行，活动量从 2 月的 5 个 commit 提升至 11 个 commit，工作重心由上月的修复类转向代码风格整理与轻量级重构。提交以 pref 类型主导，包含移除 volatile 关键字、为 CPU 和 VMM 引入如 satp_a 与状态结构体的类型定义，以及将页面错误处理从中断上下文抽取到独立文件。本月延续了对该项目的持续投入，未涉及新的仓库或代码审查协作。",
+        "highlights": [
+          "11 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: style",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 11,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to style"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-fc5fef6b7bfbd19dcb3197e1261410e21df82b08",
       "type": "commit",
       "ts": "2022-03-27T14:19:27Z",
@@ -51,6 +138,21 @@
         "message": "pref(intr): move addi from context to intr_s\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 4,
         "deletions": 6
+      }
+    },
+    {
+      "id": "ai-roast-2022-03-21",
+      "type": "ai_roast",
+      "ts": "2022-03-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-03-21 ~ 2022-03-27",
+        "content": "11 commits and 4 of them are \"remove volatile\" — congratulations on discovering that volatile doesn't mean what you thought it meant. \"pref(cmake): use -O0\" is the compiler optimization equivalent of giving up. At least you're adding proper type definitions now; the kernel is slowly maturing even if the commit messages aren't.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -142,21 +244,6 @@
         "message": "pref(cpu): add mstatus_t and sstatus_t\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 93,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2022-03-21",
-      "type": "ai_roast",
-      "ts": "2022-03-27T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-03-21 ~ 2022-03-27",
-        "content": "11 commits and 4 of them are \"remove volatile\" — congratulations on discovering that volatile doesn't mean what you thought it meant. \"pref(cmake): use -O0\" is the compiler optimization equivalent of giving up. At least you're adding proper type definitions now; the kernel is slowly maturing even if the commit messages aren't.",
-        "stats": {
-          "totalCommits": 11,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

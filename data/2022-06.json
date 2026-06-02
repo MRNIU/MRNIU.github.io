@@ -2,6 +2,92 @@
   "month": "2022-06",
   "events": [
     {
+      "id": "ai-summary-quarter-2022-Q2",
+      "type": "ai_summary",
+      "ts": "2022-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2022-04-01",
+          "end": "2022-06-30",
+          "label": "2022-Q2"
+        },
+        "content": "In 2022-Q2, development shifted from the previous quarter’s fix-heavy work to feature-driven enhancements, with 30 commits and 13 PRs across 9 active repositories, led by the Simple-XX/SimpleKernel project. Technical efforts concentrated on RISC-V CPU support, interrupt handling, and virtual memory management, introducing structures like `satp`, `pte_t`, `sstatus_t`, and PLIC constants while systematically applying `constexpr` and internal clean-ups. A new documentation series (doc/01 through doc/8) was added, reflecting a broader focus beyond core kernel code. Collaboration patterns evolved from solo work to include one code review with a merge approval comment, and issue tracking began with 2 issues and 5 comments, indicating an emerging review culture. Compared to Q1’s single-repo, fix-dominated activity with 119 commits and 0 reviews, this quarter saw a deliberate shift toward feature delivery, multi-repo involvement, and initial peer review, trading raw commit volume for a more structured and collaborative approach.",
+        "highlights": [
+          "30 commits, 13 PRs, 1 reviews, 2 issues, 5 comments, 9 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 30,
+          "totalPRs": 13,
+          "totalReviews": 1,
+          "totalIssues": 2,
+          "totalComments": 5,
+          "activeRepos": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to feat",
+            "Commit volume decreased by 89"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2022-06",
+      "type": "ai_summary",
+      "ts": "2022-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2022-06-01",
+          "end": "2022-06-30",
+          "label": "2022-06"
+        },
+        "content": "6 月开发重心完全转向文档完善，在 Simple-XX/SimpleKernel 仓库密集提交了 11 个 doc 型 commit，系统性地更新了内核文档结构。与 5 月以 feat 功能开发为主的节奏形成明显对比，本月无任何功能代码变更，仅通过 2 个 issue 和少量评论维持轻量协作。同期在 haiku/website 仓库提交了 2 个 PR，体现出对外部网站的零星贡献，整体活跃度较上月更为聚焦但代码产出类型单一。",
+        "highlights": [
+          "11 commits, 2 PRs, 0 reviews, 2 issues, 1 comments, 4 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 11,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 1,
+          "activeRepos": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to mixed"
+          ]
+        }
+      }
+    },
+    {
       "id": "pr-596-haiku/website",
       "type": "pull_request",
       "ts": "2022-06-29T01:29:23Z",
@@ -197,18 +283,6 @@
       }
     },
     {
-      "id": "comment-haiku/website-593-61",
-      "type": "issue_comment",
-      "ts": "2022-06-02T02:56:28Z",
-      "repo": "haiku/website",
-      "semantic": null,
-      "data": {
-        "issueNumber": 593,
-        "issueTitle": "gsoc2022 introduction blog",
-        "body": "@pulkomandy maybe we can merge this?"
-      }
-    },
-    {
       "id": "ai-roast-2022-05-30",
       "type": "ai_roast",
       "ts": "2022-06-05T00:00:00Z",
@@ -221,6 +295,18 @@
           "totalCommits": 12,
           "topRepo": "Simple-XX/SimpleKernel"
         }
+      }
+    },
+    {
+      "id": "comment-haiku/website-593-61",
+      "type": "issue_comment",
+      "ts": "2022-06-02T02:56:28Z",
+      "repo": "haiku/website",
+      "semantic": null,
+      "data": {
+        "issueNumber": 593,
+        "issueTitle": "gsoc2022 introduction blog",
+        "body": "@pulkomandy maybe we can merge this?"
       }
     }
   ]

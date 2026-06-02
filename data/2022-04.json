@@ -2,6 +2,63 @@
   "month": "2022-04",
   "events": [
     {
+      "id": "ai-summary-month-2022-04",
+      "type": "ai_summary",
+      "ts": "2022-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2022-04-01",
+          "end": "2022-04-30",
+          "label": "2022-04"
+        },
+        "content": "四月工作集中在 Simple-XX/SimpleKernel 仓库，通过对 CPU、中断、虚拟内存等模块的持续性能优化与注释梳理，共提交了 9 个 PR，并为 CMake 构建添加了 tap 测试目标；同期 MRNIU/resume 仓库完成了初始内容提交。与上月仅侧重代码风格调整不同，本月改进类型更混合，且 PR 数量明显上升，协作节奏有所加强。",
+        "highlights": [
+          "13 commits, 9 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 13,
+          "totalPRs": 9,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from style to mixed"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-04-18",
+      "type": "ai_roast",
+      "ts": "2022-04-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-04-18 ~ 2022-04-24",
+        "content": "9 commits, 9 PRs — a perfect 1:1 ratio that screams \"I open a PR for every single commit.\" Back to SimpleKernel after your brief resume adventure, still updating interrupt handlers and CPU structures like a part-time job that never ends. \"(cmake, CI): add tap target\" — you even forgot the commit type prefix, the convention is breaking down faster than the kernel.",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-f3efa179ff28957ddfc833828e10160d8e928d25",
       "type": "commit",
       "ts": "2022-04-23T07:34:58Z",
@@ -299,21 +356,6 @@
         "stats": {
           "totalCommits": 4,
           "topRepo": "MRNIU/resume"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2022-04-18",
-      "type": "ai_roast",
-      "ts": "2022-04-24T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-04-18 ~ 2022-04-24",
-        "content": "9 commits, 9 PRs — a perfect 1:1 ratio that screams \"I open a PR for every single commit.\" Back to SimpleKernel after your brief resume adventure, still updating interrupt handlers and CPU structures like a part-time job that never ends. \"(cmake, CI): add tap target\" — you even forgot the commit type prefix, the convention is breaking down faster than the kernel.",
-        "stats": {
-          "totalCommits": 9,
-          "topRepo": "Simple-XX/SimpleKernel"
         }
       }
     }

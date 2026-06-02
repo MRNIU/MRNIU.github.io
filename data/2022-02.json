@@ -2,6 +2,49 @@
   "month": "2022-02",
   "events": [
     {
+      "id": "ai-summary-month-2022-02",
+      "type": "ai_summary",
+      "ts": "2022-02-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2022-02-01",
+          "end": "2022-02-28",
+          "label": "2022-02"
+        },
+        "content": "In February 2022, development on Simple-XX/SimpleKernel slowed dramatically to just 5 commits in a single week, compared to 103 commits and 9 PRs in January. All activity remained concentrated in the same repository, with no PRs, reviews, issues, or comments. The commits continued the fix-oriented pattern, addressing stack pointer and buffer size issues, alongside small performance and style tweaks like adding a CMake optimization flag and updating the `all_regs_t` definition. This represents a sharp decline in output while the maintenance-focused habits from the previous month persisted.",
+        "highlights": [
+          "5 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 5,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed fix"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 98"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-07108b91560ae85128e154a9e5a3c9ccca91119f",
       "type": "commit",
       "ts": "2022-02-20T10:22:14Z",
@@ -41,6 +84,21 @@
       }
     },
     {
+      "id": "ai-roast-2022-02-14",
+      "type": "ai_roast",
+      "ts": "2022-02-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-02-14 ~ 2022-02-20",
+        "content": "情人节那周你提交了 5 个 commit，全都献给了你唯一的真爱：SimpleKernel 的中断处理程序。“fix(intr_s): fix sp value”——修了一个补丁再修它自己，真是一段古老如时间的浪漫。情人节整周都在调栈指针，要么是极致的专注，要么是令人担忧的状况。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-04bc62e57a5ba63ef89d02b5284d701c4a398f78",
       "type": "commit",
       "ts": "2022-02-18T16:37:43Z",
@@ -77,21 +135,6 @@
         "content": "4 commits — a personal record for restraint! Your most loyal commit message, \"comment(intr): update\", is back, punctual as ever, showing up like clockwork every few weeks. At least \"feat(intr): pass arg to intr handler\" hints that something actually happened, even if the other three are aggressively vague.",
         "stats": {
           "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2022-02-14",
-      "type": "ai_roast",
-      "ts": "2022-02-20T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-02-14 ~ 2022-02-20",
-        "content": "情人节那周你提交了 5 个 commit，全都献给了你唯一的真爱：SimpleKernel 的中断处理程序。“fix(intr_s): fix sp value”——修了一个补丁再修它自己，真是一段古老如时间的浪漫。情人节整周都在调栈指针，要么是极致的专注，要么是令人担忧的状况。",
-        "stats": {
-          "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"
         }
       }
