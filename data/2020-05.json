@@ -272,7 +272,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-05-04 ~ 2020-05-10",
-        "content": "Zero commits, two PRs, two issues, and eight comments on gsoc-cn — you're applying to Google Summer of Code with all the energy of someone who writes \"update\" as commit messages. The comment-to-code ratio this week is literally infinity.",
+        "content": "Zero commits, two PRs, two issues, and eight comments all on gsoc-cn — you’re applying to Google Summer of Code with the same enthusiasm as someone who writes “update” for every commit message. The comment‑to‑code ratio this week is literally infinity.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "gsoc-cn/gsoc-cn"
@@ -287,7 +287,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-05-11 ~ 2020-05-17",
-        "content": "Five commits across two repos and three of them are variations of \"Initial commit\" and \"init\" — you initialized more projects than you finished this week. The OSPP repo got a proposal template, which is just a document about the code you plan to eventually write someday.",
+        "content": "Five commits across two repos, and three of them are variations of “Initial commit” and “init” — you initialized more projects this week than you finished. The OSPP repo got a proposal template, which is just a document about the code you plan to write someday.",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/OSPP"
@@ -302,7 +302,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-05-18 ~ 2020-05-24",
-        "content": "Two commits: \"Add email\" and \"Update\" on arduino/summer-of-code — so your entire week's contribution to open source was adding your contact info and then updating something unspecified. The bar was on the floor and you managed to limbo under it.",
+        "content": "Two commits on arduino/summer-of-code: \"Add email\" and \"Update\". That's your entire week of open source — adding your contact info and then vaguely updating something. The bar was lying flat on the floor, and you still managed to limbo under it.",
         "stats": {
           "totalCommits": 2,
           "topRepo": "arduino/summer-of-code"

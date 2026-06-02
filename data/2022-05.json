@@ -175,7 +175,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-05-16 ~ 2022-05-22",
-        "content": "Zero commits, one PR review, two comments — this is your most productive week because you finally stopped committing and started reading other people's code. Contributing to a CSAPP translation project is the developer equivalent of going back to school after burning down the lab. A week of reflection; the git log thanks you.",
+        "content": "0 commits, 1 PR review, 2 comments — this is your most productive week yet, because you finally stopped committing and started actually reading other people's code. Contributing to a CSAPP translation project is the developer equivalent of going back to school after you've accidentally set the lab on fire. A reflective week; the git log is deeply grateful.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "EugeneLiu/translationCSAPP"
@@ -190,7 +190,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-05-23 ~ 2022-05-29",
-        "content": "4 commits and \"fix(CPU): vmm update\" — calling a VMM change a CPU fix is the kind of architectural confusion that explains why you're still working on this kernel. Back from your one-week reading retreat and immediately back to breaking things. At least \"feat(plic): add PLIC_M*\" suggests forward progress, assuming the asterisk isn't hiding tears.",
+        "content": "4 commits and you call \"fix(CPU): vmm update\" — labeling a VMM change as a CPU fix is the kind of architectural confusion that explains why you're still wrestling with this kernel. You vanished for a one-week reading retreat and came back only to start breaking things again. At least \"feat(plic): add PLIC_M*\" hints at forward progress, assuming that asterisk isn't just covering up tears.",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleKernel"

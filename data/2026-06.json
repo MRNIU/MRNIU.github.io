@@ -9,7 +9,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-06-01 ~ 2026-06-07",
-        "content": "这周日志像极了游戏mod更新日志——先调下热管和变电站，再把蜘蛛机器人货物改成栈式，最后突然祭出一整套Tool facade拆分，全靠OpenAI Codex替你写commit body。下次至少让AI顺便把前两条的commit message也润色一下，别这么像修游戏bug。",
+        "content": "这周日志像极了游戏 mod 更新日志——先调下热管和变电站，再把蜘蛛机器人货物改成栈式，最后突然祭出一整套 Tool facade 拆分，全靠 OpenAI Codex 替你写 commit body。下次至少让 AI 顺便把前两条的 commit message 也润色一下，别这么像修游戏 bug。",
         "status": "draft",
         "stats": {
           "totalCommits": 3,

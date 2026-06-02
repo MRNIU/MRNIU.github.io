@@ -303,7 +303,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-10-22 ~ 2018-10-28",
-        "content": "12 commits: 4x \"update\", 3x \"init\", 3x \"Update travis config\" — your git log reads like a broken record stuck on the world's least informative words. At this point Travis CI knows more about your project than your commit history does.",
+        "content": "12 commits: 4x 'update', 3x 'init', 3x 'Update travis config' — your git log sounds like a broken record looping the least informative words known to humanity. At this point, Travis CI has a deeper understanding of your project than your commit history does.",
         "stats": {
           "totalCommits": 12,
           "topRepo": "Simple-XX/SimpleKernel"

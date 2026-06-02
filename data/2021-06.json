@@ -932,7 +932,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-05-31 ~ 2021-06-06",
-        "content": "32个commit，7个PR全merge了——从intr到lib到heap到pmm到printf，这周简直是SimpleKernel的\"清仓大甩卖\"，积压了多少feature branch一口气全合了。\"pref(PMM): instead static with extren\"里extern都拼错了，但至少代码能跑。",
+        "content": "32 个 commit，7 个 PR 全 merge 了——从 intr 到 lib、heap、pmm、printf，这周简直是 SimpleKernel 的“清仓大甩卖”，积压多少 feature branch 一口气全合进去了。那个 'pref(PMM): instead static with extren'，连 extern 都拼错了，但至少代码能跑。",
         "stats": {
           "totalCommits": 32,
           "topRepo": "Simple-XX/SimpleKernel"

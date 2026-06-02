@@ -932,7 +932,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2024-12-30 ~ 2025-01-05",
-        "content": "43 commits on cpu_io over New Year's — while everyone else was celebrating, you were adding aarch64 set/clr bits three separate times like a very dedicated, very lonely systems programmer. The commit messages read like a CPU register manual's table of contents, and \"commit: update\" sneaking in there is your brain's garbage collection kicking in.",
+        "content": "43 commits on cpu_io over New Year’s — while everyone else was celebrating, you were adding aarch64 set/clr bits three separate times like a very dedicated, very lonely systems programmer. The commit messages read like a CPU register manual’s table of contents, and “commit: update” sneaking in there is your brain’s garbage collection kicking in.",
         "stats": {
           "totalCommits": 43,
           "topRepo": "MRNIU/cpu_io"
@@ -947,7 +947,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-01-06 ~ 2025-01-12",
-        "content": "24 commits and every single one is \"feat: add [SOME_REGISTER_NAME]\" — you're basically transcribing the ARM Architecture Reference Manual one system register at a time. Three identical \"feat: add sys regs\" in a row suggests you discovered copy-paste for commit messages too. At this rate you'll have the entire ARMv8 spec in git by Q2.",
+        "content": "24 commits and every single one is a “feat: add [SOME_REGISTER_NAME]” — you’re basically a human OCR for the ARM Architecture Reference Manual, one system register at a time. Three identical “feat: add sys regs” in a row means you’ve discovered copy-paste works for commit messages too. At this rate the entire ARMv8 spec will be committed to git by Q2.",
         "stats": {
           "totalCommits": 24,
           "topRepo": "MRNIU/cpu_io"
@@ -962,7 +962,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-01-13 ~ 2025-01-19",
-        "content": "Down to 4 commits from last week's 24 — the ARM register transcription project is losing steam. Your commit messages now read like GIC interrupt controller documentation, which means you've graduated from boring registers to *exciting* registers. ICC_PMR_EL1 and ICC_IGRPEN1_EL1 — truly the commit messages that spark joy.",
+        "content": "从上周的 24 次掉到只剩 4 次 commit —— 看来 ARM 寄存器转录项目的气快泄光了。你的 commit message 现在读起来就跟 GIC 中断控制器文档一模一样，说明你已经从无聊的寄存器毕业，迈进 *令人振奋* 的寄存器了。ICC_PMR_EL1 和 ICC_IGRPEN1_EL1 —— 这俩 commit message 真是让人怦然心动。",
         "stats": {
           "totalCommits": 4,
           "topRepo": "MRNIU/cpu_io"

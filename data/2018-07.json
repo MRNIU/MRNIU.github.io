@@ -152,7 +152,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-06-25 ~ 2018-07-01",
-        "content": "Zero commits, but you found time to file an issue on atom/atom. When your own kernel has unfixed interrupts and messy code, naturally the priority is to go complain about someone else's text editor.",
+        "content": "Zero commits, yet you still managed to open an issue on atom/atom. When your own kernel is full of unresolved interrupts and spaghetti code, naturally your top priority is complaining about someone else’s text editor.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "atom/atom"
@@ -167,7 +167,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-07-16 ~ 2018-07-22",
-        "content": "\"顺利显示内存情况，不过没有验证准确性\"——Schrödinger的内存管理：既显示了又没显示。9次提交全在debug相关功能上打转，\"未完成\"出现的频率比你的函数返回值还高。",
+        "content": "“顺利显示内存情况，不过没有验证准确性”——这分明是 Schrödinger 式的内存管理：显示了，又没真正显示。9 次提交全在 debug 相关功能上打转，“未完成”出现的频率比你的函数返回值还高。",
         "stats": {
           "totalCommits": 9,
           "topRepo": "Simple-XX/SimpleKernel"

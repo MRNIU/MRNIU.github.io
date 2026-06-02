@@ -151,7 +151,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-06-29 ~ 2020-07-05",
-        "content": "8 commits across two repos with gems like \"small change\" and \"update shell script, unavailable\" — so you updated it and it still doesn't work, and you committed that? Two \"small change\" commits in a week means either you're allergic to descriptive messages or you're sneaking in war crimes one line at a time.",
+        "content": "8 commits across two repos, and the standout messages are “small change” and “update shell script, unavailable” — so you updated it, it still doesn’t work, and you went ahead and committed that? 2 “small change” commits in a single week means you’re either allergic to writing descriptive messages or you’re sneaking war crimes into the codebase one line at a time.",
         "stats": {
           "totalCommits": 8,
           "topRepo": "MRNIU/FreeRTOS-PortentaH7"

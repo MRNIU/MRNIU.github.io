@@ -48,7 +48,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2024-08-26 ~ 2024-09-01",
-        "content": "Two commits on the Factorio mod: \"nzh_mining_drill\" and \"fix long\" — truly the Hemingway of commit messages, every word counts because there are barely any. \"fix long\" is the kind of message that will haunt you in six months when you're trying to figure out what was too long and why it needed fixing.",
+        "content": "Two commits on the Factorio mod: \"nzh_mining_drill\" and \"fix long\" — truly the Hemingway of commit messages, where every word packs a punch because there are barely any. \"fix long\" is exactly the kind of message that will haunt you six months from now, when you’re staring at it trying to remember what was too long and why it desperately needed fixing.",
         "stats": {
           "totalCommits": 2,
           "topRepo": "MRNIU/nzh_factorio_mod"

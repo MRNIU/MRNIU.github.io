@@ -48,7 +48,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-02-03 ~ 2025-02-09",
-        "content": "Three commits, two of which are identical \"feat: add ICC_IGRPEN1_EL1Info\" — because one ICC_IGRPEN1_EL1Info is never enough, you need a backup. You've been adding ARM registers one per week for a month now; at this deceleration curve you'll finish the ISA sometime around 2030.",
+        "content": "Three commits, two of which are the exact same \"feat: add ICC_IGRPEN1_EL1Info\" — because one ICC_IGRPEN1_EL1Info is clearly not enough, you need a spare. You've been adding a single ARM register per week for a month straight; at this decelerating pace, you'll finish the ISA sometime around 2030.",
         "stats": {
           "totalCommits": 3,
           "topRepo": "MRNIU/cpu_io"

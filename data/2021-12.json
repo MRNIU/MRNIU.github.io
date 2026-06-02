@@ -255,7 +255,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-11-29 ~ 2021-12-05",
-        "content": "6 out of 11 commits are \"pref(IO): change to singleton\" — you didn't change IO to a singleton, you changed your commit history to a broken record. Two identical \"fix(multiboot2): remove header file\" commits suggest the header file fought back the first time. The singleton pattern: because if something is going to be wrong, it should at least only be wrong once.",
+        "content": "6 out of 11 commits are \"pref(IO): change to singleton\" — you didn't change IO to a singleton, you changed your commit history to a skipping CD. Two identical \"fix(multiboot2): remove header file\" commits suggest the header file fought back the first time and needed a second round. The singleton pattern: if something has to be wrong, it should at least only be wrong once.",
         "stats": {
           "totalCommits": 11,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -270,7 +270,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-12-13 ~ 2021-12-19",
-        "content": "4 commits this week, and two of them are the same \"fix(vmm): remap flag\" — even your fixes need fixes. At least with only 4 commits you've finally discovered the concept of batching your work, or maybe you just had finals.",
+        "content": "4 commits this week, and two of them repeat the exact same \"fix(vmm): remap flag\" — even your fixes apparently need fixes. With only 4 commits you’ve either finally grasped the concept of batching your work, or maybe finals just got the best of you.",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -285,7 +285,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-12-20 ~ 2021-12-26",
-        "content": "3 commits during Christmas week — the gift of a quiet git log that humanity deserves. A feat, a pref, and a refactor: the holy trinity of \"I touched one subsystem three different ways.\" Happy holidays from someone who clearly celebrates by writing RISC-V interrupt handlers.",
+        "content": "3 次 commit 在圣诞周——一份人类应得的安静 git log 礼物。一个 feat、一个 pref 和一个 refactor：神圣的三位一体，“我以三种不同的方式碰了同一个子系统。”来自一位显然靠写 RISC-V 中断处理程序来庆祝的人，节日快乐。",
         "stats": {
           "totalCommits": 3,
           "topRepo": "Simple-XX/SimpleKernel"

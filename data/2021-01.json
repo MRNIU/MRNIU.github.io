@@ -643,7 +643,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-12-28 ~ 2021-01-03",
-        "content": "\"重命名 ptr_t\"出现了三次，\"addr_t 修改为 void*\"出现了两次——一个类型重命名需要五个commit来完成，这是在写代码还是在玩回合制游戏？6个PR配8个commit，merge commit比实际代码commit还多，真正的merge驱动开发。",
+        "content": "“重命名 ptr_t” 出现了 3 次，“addr_t 修改为 void*” 出现了 2 次——光改个类型名就耗掉 5 个 commit，这到底是在写代码还是打回合制游戏？6 个 PR 配 8 个 commit，merge commit 比正经的代码 commit 还多，活脱脱的 merge 驱动开发。",
         "stats": {
           "totalCommits": 8,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -658,7 +658,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-01-04 ~ 2021-01-10",
-        "content": "20 commits with THREE \"Delete boot.s\", THREE \"fix(build): github action error\", and TWO \"fix(case): Case sensitive on osx\" — you deleted the same file three times and fixed the same CI error three times, which means you broke it, fixed it, broke it again, and acted surprised each time. At least \"feat(c++): Now we have c++ support\" landed, so the week wasn't a total loop of git archaeology.",
+        "content": "20 commits with three \"Delete boot.s\", three \"fix(build): github action error\", and two \"fix(case): Case sensitive on osx\" — you nuked the same file three times and patched the same CI failure three times, which screams \"broke it, fixed it, broke it again, and acted surprised every single time.\" The one saving grace: \"feat(c++): Now we have c++ support\" finally shipped, so the week wasn't a full-blown git archaeology disaster.",
         "stats": {
           "totalCommits": 20,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -673,7 +673,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-01-18 ~ 2021-01-24",
-        "content": "22 commits: \"pref(NULL): replace with nullptr\" appears twice and \"pref(firstfit): change type name\" also appears twice — apparently find-and-replace is a multi-commit operation now. You went from removing raspi2 code to adding raspi2 code in the same week, which is the git equivalent of putting your shoes on and then taking them off. \"style(commit): update commit style\" is peak irony given the message quality this week.",
+        "content": "22 个 commit：同一周里，\"pref(NULL): replace with nullptr\" 出现了两次，\"pref(firstfit): change type name\" 也出现了两次——看样子查找替换已经进化成需要多次提交的高端操作了。你先是把 raspi2 的代码删掉，回头又加回来，堪称 Git 界的“穿上鞋再脱掉”。“style(commit): update commit style” 这条消息简直是本周提交质量的绝佳自嘲。",
         "stats": {
           "totalCommits": 22,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -688,7 +688,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-01-25 ~ 2021-01-31",
-        "content": "3 commits, one of which is just \"refactor\" with zero additional context — the commit message equivalent of shrugging at a code review. \"no global objects now\" is either a major architectural win or you just deleted everything; with only 3 commits this week, I'm leaning toward the latter.",
+        "content": "3 commits, and one is just \"refactor\" with absolutely no context — the commit-message equivalent of a code-review shrug. \"no global objects now\" is either a serious architectural win or you deleted the entire codebase; given only 3 commits this week, I'm going with the second one.",
         "stats": {
           "totalCommits": 3,
           "topRepo": "Simple-XX/SimpleKernel"

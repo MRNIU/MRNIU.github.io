@@ -490,7 +490,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-10-23 ~ 2023-10-29",
-        "content": "33 commits on SimpleCompiler and roughly 30 of them are some variation of \"refactor: token rename\" — you renamed tokens so many times I'm starting to think even the tokens don't know what they're called anymore. The ratio of \"refactor\" and \"comment\" commits to actual \"feat\" commits suggests you spent the week reorganizing furniture in a house that has one room.",
+        "content": "在 SimpleCompiler 上提交了 33 个 commit，其中差不多 30 个都是各种花样的「refactor: token rename」——你给 token 改名的次数多到连 token 自己都不知道自己叫什么了。\"refactor\" 和 \"comment\" 类 commit 与实际 \"feat\" commit 的比例，一看就是你整个星期都在一间只有一间房的屋子里挪家具。",
         "stats": {
           "totalCommits": 33,
           "topRepo": "Simple-XX/SimpleCompiler"

@@ -373,7 +373,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-12-30 ~ 2020-01-05",
-        "content": "\"Hello 2020!\" as a commit message — nothing like ringing in the new year with a commit that tells future-you absolutely nothing about what changed. Four commits, two of which are \"update\", so at least you're consistent across calendar years.",
+        "content": "A `Hello 2020!` commit message — nothing says “new year, same terrible documentation” like a change log entry that tells future-you absolutely nothing. Four commits total, and two of them simply say `update`, so your cross-year commitment to vagueness is admirably consistent.",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -388,7 +388,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-01-13 ~ 2020-01-19",
-        "content": "Ten commits, four \"Update devlog\" entries — you're spending more time documenting the journey than actually making progress on it. \"vmm_init finished!\" with an exclamation mark suggests this was a surprise to you too. \"Update macor in vmm\" — macro, it's called a macro.",
+        "content": "10 个 commit 里，4 个是 “Update devlog” 条目——你在记录旅程上花的时间，比实际赶路还多。“vmm_init finished!” 还特意加了感叹号，看来你自己都挺意外的。“Update macor in vmm”——是 macro，那叫 macro。",
         "stats": {
           "totalCommits": 10,
           "topRepo": "Simple-XX/SimpleKernel"

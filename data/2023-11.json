@@ -249,7 +249,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-10-30 ~ 2023-11-05",
-        "content": "After last week's 33-commit token-renaming marathon, you've crashed to zero commits and pivoted to SimplePhysicsEngine — because why finish one Simple-XX project when you can start another? Two PRs and one issue with no code is the physics engine equivalent of drawing free body diagrams and calling it research.",
+        "content": "After last week's 33-commit token-renaming marathon, you've plummeted to zero commits and pivoted to SimplePhysicsEngine — because why finish one Simple-XX project when you can start another? Two PRs and one issue with no code is the physics-engine equivalent of drawing free-body diagrams and calling it research.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "Simple-XX/SimplePhysicsEngine"
@@ -264,7 +264,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-11-06 ~ 2023-11-12",
-        "content": "Week two of the SimplePhysicsEngine era and still zero commits — just 2 PRs, 2 issues, and 4 comments, which means you're now a full-time physics engine commenter rather than a physics engine developer. At this velocity, gravity will have reversed before you ship a feature.",
+        "content": "SimplePhysicsEngine 纪元第二周，依旧 0 个 commit，只有 2 个 PR、2 个 issue 和 4 条评论，这意味着你已经从物理引擎开发者全职转型为物理引擎评论员了。按这个速度，重力都反转了你还没交付一个特性。",
         "stats": {
           "totalCommits": 0,
           "topRepo": "Simple-XX/SimplePhysicsEngine"
@@ -279,7 +279,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-11-13 ~ 2023-11-19",
-        "content": "Third consecutive week on SimplePhysicsEngine with zero commits — you've opened 6 more issues though, so at least the issue count is experiencing acceleration even if the codebase isn't. Newton's First Law applies here: a project at rest stays at rest unless acted upon by an actual commit.",
+        "content": "Third consecutive week with zero commits on SimplePhysicsEngine — but you did open 6 more issues, so at least the issue tally is picking up speed while the codebase idles. Newton’s First Law sums it up: a project at rest stays at rest unless an actual commit applies force.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "Simple-XX/SimplePhysicsEngine"

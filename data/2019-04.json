@@ -87,7 +87,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-04-01 ~ 2019-04-07",
-        "content": "One commit, two PRs, and both on 996.ICU — so your biggest open-source contribution this week was literally protesting having to work too much. The commit message \"Update LICENSE\" really captures the revolutionary energy. At least your keyboard got a rest.",
+        "content": "一个 commit，两个 PR，全在 996.ICU——你本周最大的开源贡献，简直就是字面意义上地抗议自己工作太多。那条 “Update LICENSE” 的 commit 信息，真真切切地抓住了革命激情。至少你键盘歇了个透。",
         "stats": {
           "totalCommits": 1,
           "topRepo": "996icu/996.ICU"
@@ -102,7 +102,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-04-22 ~ 2019-04-28",
-        "content": "三个 commit，一个叫「修 bug」，一个叫「调整目录」——这描述能力跟内核的虚拟内存一样，初步完成但仍然有问题。虚拟内存放在 0xC0000000，commit message 的信息量放在 0x00000000。",
+        "content": "3 个 commit，1 个叫「修 bug」，1 个叫「调整目录」——这描述能力跟内核的虚拟内存一样，初步完成但仍然有问题。虚拟内存放在 0xC0000000，commit message 的信息量放在 0x00000000。",
         "stats": {
           "totalCommits": 3,
           "topRepo": "Simple-XX/SimpleKernel"

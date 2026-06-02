@@ -216,7 +216,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-05-30 ~ 2022-06-05",
-        "content": "12 commits and 10 of them are \"doc(N): update\" counting up from 1 to 8 — you're not writing documentation, you're playing a number game with git. \"doc(01): update\" appears twice because apparently chapter 1 needed a director's cut. One lonely \"update\" commit with no prefix at all, a cry for help lost in a sea of numbered docs.",
+        "content": "12 次 commit 里有 10 次都是“doc(N): update”，从 1 数到 8——你这哪是在写文档，分明是在 git 里玩数字游戏。“doc(01): update”出现了两次，看来第一章需要导演剪辑版。还有一个孤零零的“update” commit，连前缀都没带，活像淹没在编号文档海洋里的一声求救。",
         "stats": {
           "totalCommits": 12,
           "topRepo": "Simple-XX/SimpleKernel"

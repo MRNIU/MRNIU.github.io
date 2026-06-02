@@ -2180,7 +2180,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-06-28 ~ 2021-07-04",
-        "content": "38 commits with \"fear(plic): add plic to riscv\" appearing twice — yes, \"fear\" is right, that's exactly the emotion PLIC configuration should evoke. You also have \"pref(OPENSBI): change to static\" duplicated, suggesting you committed the same thing twice, which for a kernel developer is basically a double-free bug in your git workflow. The typo escalation from \"docs\" to \"dovs\" to \"fear\" suggests your keyboard is slowly giving up on you.",
+        "content": "38 commits, and you somehow committed “fear(plic): add plic to riscv” twice. Yes, “fear” — precisely the emotion PLIC configuration should evoke. You also managed to ship “pref(OPENSBI): change to static” in duplicate, which for a kernel developer is basically a double-free bug in your Git workflow. The typo progression from “docs” to “dovs” to “fear” suggests your keyboard is slowly giving up on you.",
         "stats": {
           "totalCommits": 38,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -2195,7 +2195,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-07-05 ~ 2021-07-11",
-        "content": "22 commits all about PMM, firstfit, and VMM — you replaced a linked list with a bitmap, then immediately started fixing bitmap bugs, which is the classic \"the grass is greener on the other data structure\" arc. \"pref(SLAB): working on slab\" at the top means you've already moved on to the next allocator before finishing the current one. Your memory management code has more rewrites than a Hollywood screenplay.",
+        "content": "22 个 commit 全围着 PMM、firstfit 和 VMM 打转 —— 才把链表换成位图，转头就开始修位图 bug，完美复刻了“那边的数据结构更绿”经典桥段。顶上挂着的那个 “pref(SLAB): working on slab” 更说明上一个分配器还没收拾利索，魂已经飘到下一个身上去了。你这内存管理代码重写的次数，比好莱坞剧本的改稿还夸张。",
         "stats": {
           "totalCommits": 22,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -2210,7 +2210,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-07-12 ~ 2021-07-18",
-        "content": "31 commits on slab allocator and half of them are \"fix: overflow\" — at this point the slab isn't overflowing, your commit history is. \"pref(slab): add printf for debug\" followed by \"pref(slab): add assert\" followed by more fixes is just rubber-duck debugging with git as the duck. Maybe try reading the code before committing it?",
+        "content": "31 个 commit 全堆在 slab 分配器上，其中一半的标题都是 “fix: overflow” —— 这下出问题的不是 slab，是你的提交记录在溢出。“pref(slab): add printf for debug”，紧接着又是 “pref(slab): add assert”，然后又是一连串修复，活脱脱是小黄鸭调试法，只不过鸭子换成了 git。下次提交之前，就不能先读一遍代码？",
         "stats": {
           "totalCommits": 31,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -2225,7 +2225,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-07-19 ~ 2021-07-25",
-        "content": "70 commits in one week — are you speedrunning git history? Four consecutive \"pref(intr): change to static class\" commits suggest you discovered the compile button exists but the \"think before committing\" button does not. At least you opened 3 PRs, so someone else might get to witness this beautiful chaos.",
+        "content": "一周 70 个提交——你这是在速通 Git 历史吗？连续四个 “pref(intr): change to static class” 提交，说明你找到了编译按钮，但那个“提交前先想想”的按钮还完全不见踪影。好歹你还提了 3 个 PR，至少能让别人也围观一下这场美丽的混乱。",
         "stats": {
           "totalCommits": 70,
           "topRepo": "Simple-XX/SimpleKernel"

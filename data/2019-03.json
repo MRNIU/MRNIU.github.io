@@ -280,7 +280,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-02-25 ~ 2019-03-03",
-        "content": "\"linked list finished, no test yet\" — the four most dangerous words in software: \"it works, trust me.\" 8 commits and one of them is literally just \"fix\" with no context — fix what? Fix how? The world may never know.",
+        "content": "“linked list finished, no test yet”——软件界最危险的四个字：“it works, trust me.” 8 个 commit，其中一个就只是光秃秃的 \"fix\"，上下文全无——修了啥？怎么修的？这世界可能永远无法得知。",
         "stats": {
           "totalCommits": 8,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -295,7 +295,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-03-11 ~ 2019-03-17",
-        "content": "\"Skip the previous bug\" is not a debugging strategy, it's denial. 5 commits working on vmm, heap, libc, AND multiboot2 all at once — you're writing a kernel the way someone plays whack-a-mole, just swinging at whatever pops up.",
+        "content": "\"Skipping the previous bug\" isn't a debugging technique—it's raw denial. Five commits hacking on vmm, heap, libc, AND multiboot2 all at once: you're building a kernel like a game of whack-a-mole, just swinging at whatever pops up.",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -310,7 +310,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-03-25 ~ 2019-03-31",
-        "content": "2 commits: \"update 996 license\" and \"update\" — so instead of actually coding your kernel, you added the anti-996 license? Solidarity with overworked developers is great, but maybe finish the memory management first before worrying about labor rights.",
+        "content": "Two commits: \"update 996 license\" and \"update\" — so instead of writing kernel code, you added an anti-996 license? Big respect for standing with overworked devs, but maybe get memory management working before you start fighting for labor rights.",
         "stats": {
           "totalCommits": 2,
           "topRepo": "Simple-XX/SimpleKernel"

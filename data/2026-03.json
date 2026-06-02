@@ -681,7 +681,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-03-23 ~ 2026-03-29",
-        "content": "哟，零提交三评审，合着这周您的开发工作全是对别人的代码指指点点？尤其那个 “CoW 路径和 swap-in 共用一把锁” 的点评相当精准，建议下次自己写 COW 时千万别重蹈覆辙，不然我们会笑得更开心。",
+        "content": "哟，0 提交却评审了 3 个 PR，敢情这周你专攻代码裁判啊？尤其是那句“CoW 路径和 swap-in 共用一把锁”的点评一针见血，建议将来你自己动手写 COW 的时候可别掉进同一个坑里，不然我们可要笑得更欢了。",
         "stats": {
           "totalCommits": 0,
           "topRepo": "rcore-os/rCore"
@@ -856,7 +856,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-03-16 ~ 2026-03-22",
-        "content": "15 commits, 10 PRs, and only 1 review — confident much?  \nThe twin \"fix: add memory clobber\" commits triggered my déjà vu harder than your repeated \"style: update\" marathons.  \nAnd that PR named \"tmp (#201)\" is less a feature branch and more a digital landfill — maybe some of those 100+ \"style\" commits could've stayed in your editor.",
+        "content": "15 commits, 10 PRs, and only 1 review — confident much?  \nThe twin “fix: add memory clobber” commits hit my déjà vu harder than your never‑ending “style: update” marathons.  \nAnd that PR called “tmp (#201)” is less a feature branch and more a digital landfill — maybe some of those 100+ “style” commits could’ve stayed in your editor.",
         "stats": {
           "totalCommits": 15,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1209,7 +1209,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-03-09 ~ 2026-03-15",
-        "content": "Ah, the classic \"look, Ma, no PRs!\" approach—bold strategy, cotton candy for code quality. I see you’ve mastered the art of the \"huge\" commit message; let’s just hope the actual changes are equally monumental and not just a clean-up of your last week’s mess. And hey, splitting early init into platform-specific stubs sounds fancy, but did you copy-paste that from the last ten commits?",
+        "content": "啊，经典的“瞧，妈，零 PR！”套路——勇气可嘉，简直是代码质量里的棉花糖。我看你已经把“巨大”级提交信息这门艺术修炼得炉火纯青了，但愿实际改动也同样宏伟，而不是在清理上星期的烂摊子。还有，把早期初始化拆成各个平台的桩代码听起来是挺花哨，但这是不是从你前面十个提交里直接复制粘贴的？",
         "stats": {
           "totalCommits": 3,
           "topRepo": "nicklnick/pinux"
@@ -1314,7 +1314,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-02-23 ~ 2026-03-01",
-        "content": "Five commits, zero PRs, zero reviews—truly a masterclass in solo velocity. \"fix: x86 io\" and \"style: update\" are so descriptive I can already hear the sound of a senior dev spontaneously combusting, and breaking the same public-alias shuffle into three separate commits screams \"I'm pad-thumbing my commit count.\"",
+        "content": "5 个 commit，0 个 PR，0 次 review——真是单人开发速度的教科书级表演。“fix: x86 io”和“style: update”这种描述清晰得让我已经听到了资深开发者当场自燃的爆裂声，而把同一个 public-alias 的调整拆成三个 commit，简直就是在喊“我在凑 commit 数”。",
         "stats": {
           "totalCommits": 5,
           "topRepo": "MRNIU/cpu_io"

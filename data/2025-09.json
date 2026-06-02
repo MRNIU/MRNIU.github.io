@@ -9,7 +9,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-09-15 ~ 2025-09-21",
-        "content": "Wow, who knew \"update mem*\" could be such a riveting saga? At this rate, you might want to consider a career in creative writing, because those commit messages could use some serious flair. Also, adding a log? Bold move—next week, maybe aim for “feat: breathe” for that extra edge!",
+        "content": "Wow, who knew “update mem*” could be such a riveting saga? At this rate, maybe you should consider a career in creative writing, because those commit messages could use some serious flair. And adding a log? Bold move—next week, maybe aim for “feat: breathe” for that extra edge!",
         "stats": {
           "totalCommits": 7,
           "topRepo": "MRNIU/bmalloc"
@@ -179,7 +179,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-09-01 ~ 2025-09-07",
-        "content": "Ah, the classic \"add log\" commit saga — I see you’re trying to set a world record for the most redundant commit messages in a week. It’s impressive that you managed to squeeze 34 commits without a single PR; I can only assume you’re treating this repo like your personal diary. And honestly, if I had a nickel for every time you added a 4k aligned malloc or removed used_count_/free_count_ like it’s a seasonal hobby, I’d be funding your next refactor!",
+        "content": "Ah, the timeless \"add log\" commit saga — looks like you’re going for a world record in redundant commit messages this week. Truly impressive how you crammed in 34 commits without a single PR; one can only assume you’ve adopted this repo as your personal diary. And honestly, if I had a nickel for every time you trotted out a 4k-aligned malloc or cleared away used_count_/free_count_ like it’s a seasonal hobby, I’d have enough to bankroll your next refactor!",
         "stats": {
           "totalCommits": 34,
           "topRepo": "MRNIU/bmalloc"

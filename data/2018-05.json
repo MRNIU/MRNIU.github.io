@@ -165,7 +165,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-05-21 ~ 2018-05-27",
-        "content": "5次提交，5个\"update\"——你是在写内核还是在刷屏？git log看起来像是一台坏掉的打印机，反复打印同一个词。",
+        "content": "5 次提交， 5 个 \"update\"——你是在写内核还是在刷屏？ git log 看起来像是一台坏掉的打印机，反复打印同一个词。",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"

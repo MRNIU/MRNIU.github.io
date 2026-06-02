@@ -371,7 +371,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-07-10 ~ 2023-07-16",
-        "content": "26 issues opened with zero commits — you've essentially spent the week writing yourself a very detailed TODO list while doing absolutely none of the TODOs. This is the GitHub equivalent of rearranging your desk instead of studying for the exam. SimpleKernel's issue tracker is now your personal journal.",
+        "content": "26 issues opened and zero commits — you essentially turned the week into writing an obsessively detailed to-do list, then proudly ignored every single item. It’s the GitHub version of tidying your desk instead of studying for the exam. SimpleKernel’s issue tracker has become your personal journal.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "MRNIU/SimpleKernel"

@@ -243,7 +243,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2024-07-15 ~ 2024-07-21",
-        "content": "18 commits on your Factorio mod and half of them are just version numbers — 1.2.0, 1.3.0, 1.4.0 through 1.4.7 in a single week, that's a release velocity that would make most startups jealous. You bumped the major version three times which either means massive breaking changes or you don't know what semver means. The lone \"update\" and \"refactor\" commits tie it all together like a bow on a chaotic present.",
+        "content": "一星期内 18 个 commit，一半全是在改版本号——从 1.2.0、 1.3.0 一路飙到 1.4.0 再飙到 1.4.7，这发版速度连多数创业公司看了都眼红。你一周内 bump 了 3 次主版本号，要么是做了天翻地覆的 breaking change，要么你根本不懂 semver 是什么。仅有的 “update” 和 “refactor” 提交就像给乱糟糟的礼物系上的蝴蝶结，勉强把这一切拢在一起。",
         "stats": {
           "totalCommits": 18,
           "topRepo": "MRNIU/nzh_factorio_mod"

@@ -1489,7 +1489,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-12-27 ~ 2022-01-02",
-        "content": "4 commits to ring in the new year, including \"comment(intr): update\" — starting 2022 the same way you ended 2021, by updating comments nobody reads. \"fix(CPU, VMM): GET_PGD\" is doing a lot of heavy lifting in that commit message; I'm sure the fix was as descriptive as the message. Your first comment on an issue this period though — social skills loading at 1%.",
+        "content": "4 个 commit 来庆祝新年，其中有一个 \"comment(intr): update\" —— 2022 年的开场方式跟 2021 年一模一样：更新那些没人读的注释。\"fix(CPU, VMM): GET_PGD\" 这个 commit 消息真的承担了太多，我猜修复内容就跟消息一样“详细”。不过，你在这个周期里总算在 issue 上留了第一条评论 —— 社交技能加载中，进度 1%。",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1504,7 +1504,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-01-03 ~ 2022-01-09",
-        "content": "19 commits and 4 consecutive \"fix(CI): update\" — you're not fixing CI, you're having a conversation with it one commit at a time. \"build(cmake): audo gen\" — autocorrect can't save you if you don't use it, but at least cmake is auto-generating something even if your spelling isn't. The word \"update\" appears in almost every message; at this point it's less a commit message and more a mantra.",
+        "content": "19 个 commit，连着 4 条 “fix(CI): update”——你这不是在修 CI，是在跟它一句一句唠嗑，一个 commit 一句。“build(cmake): audo gen”——连自动纠错都救不了不动手打字的你，但好歹 cmake 是替你自动生成点什么了，尽管拼写依然我行我素。“update” 这词几乎每条消息都在刷存在感，现在它已经不是 commit 信息，更像是你每天默念的咒语。",
         "stats": {
           "totalCommits": 19,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1519,7 +1519,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-01-10 ~ 2022-01-16",
-        "content": "9 out of 16 commits are \"build(cmake): update\" — at this point cmake owns you, not the other way around. You opened 9 PRs this week which is either very productive or very concerning depending on whether any of them had more than one line changed. Three commits just to set up CLion: the IDE is literally harder to configure than the kernel you're writing.",
+        "content": "16 个 commit 里 9 个都是“build(cmake): update”——现在不是你管 cmake，是 cmake 在管你。这周你提了 9 个 PR，这到底是高产还是可疑，全看里面有没有哪个改过一行以上的代码。光给 CLion 配个环境就花了 3 个提交，这 IDE 简直比你写的内核还难伺候。",
         "stats": {
           "totalCommits": 16,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1534,7 +1534,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-01-17 ~ 2022-01-23",
-        "content": "48 commits including \"bug(vmm): flush\" — love the honesty of using \"bug\" as a commit type, most people at least pretend they're fixing something. \"fix(heap): find bug on unmmap\" followed by \"fix(HEAP): update\" is the classic two-stage grief: discovery and denial. You replaced malloc with kmalloc and free with kfree in separate commits, which means for a brief moment your kernel was half-userspace, half-kernel — Schrödinger's allocator.",
+        "content": "48 个 commit，其中一个叫 “bug(vmm): flush”——真欣赏这种拿 “bug” 当 commit 类型的耿直，换别人至少还会假装在修东西。“fix(heap): find bug on unmmap” 后面紧跟着 “fix(HEAP): update”，堪称经典的两阶段悲伤：发现与否认。你把 malloc 替换成 kmalloc，又把 free 替换成 kfree，还分成了两个 commit，意味着在某个短暂的瞬间，你的内核处于半用户态半内核态——薛定谔的分配器。",
         "stats": {
           "totalCommits": 48,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1549,7 +1549,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-01-24 ~ 2022-01-30",
-        "content": "12 commits and 5 of them are \"pref(intr): update context\" — the interrupt context has been updated more times than most people update their resumes. \"pref(test): finit\" appears twice, so you finished finishing. The word \"context\" in your commits is ironic because these messages provide absolutely none.",
+        "content": "12 commits, five of them \"pref(intr): update context\" — that interrupt context gets refreshed more often than most people update their résumés. \"pref(test): finit\" shows up twice, so you finished finishing. The word \"context\" in your commit messages is ironic, because they provide absolutely none.",
         "stats": {
           "totalCommits": 12,
           "topRepo": "Simple-XX/SimpleKernel"

@@ -307,7 +307,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-11-30 ~ 2020-12-06",
-        "content": "A grand total of 2 commits in a week: one README update and one merge PR. At this rate, your annual commit count will fit on a Post-it note. The ratio of merge commits to actual code is giving \"project manager who accidentally has repo access\" vibes.",
+        "content": "A whopping two commits in a whole week: a README tweak and a merge PR. At this pace, your yearly output could be written on a sticky note. That merge-to-code ratio radiates serious \"project manager who accidentally has repo access\" energy.",
         "stats": {
           "totalCommits": 2,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -322,7 +322,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-12-21 ~ 2020-12-27",
-        "content": "5个commit里有一个直接叫\"rewrite\"——重写了什么？整个项目？人生？slab优化、堆管理、pmm测试都在一周里搞，然后还顺手\"暂时移除zone机制\"，这个\"暂时\"我赌它到现在还没加回来。",
+        "content": "5 个 commit 里有一个就叫 “rewrite”——重写了啥？整个项目？人生？ slab 优化、堆管理和 pmm 测试全挤在这一周里搞定，末了还顺手 “暂时移除 zone 机制”，这个 “暂时” 我赌它到现在都还没加回来。",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"

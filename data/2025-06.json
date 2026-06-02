@@ -385,7 +385,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-06-16 ~ 2025-06-22",
-        "content": "26 commits on the Factorio mod: 8 just say \"fix\" and 7 say \"refactor: clean code\" — you wrote 15 commits with essentially two unique messages between them. This is what happens when you let your commit history double as a meditation mantra. The one PR you opened was presumably titled \"fix and clean things, trust me.\"",
+        "content": "26 commits to the Factorio mod: eight of them are bare \"fix\" and seven say \"refactor: clean code\" — that’s 15 commits powered by essentially two unique messages. This is what happens when your commit history starts moonlighting as a meditation mantra. The one PR you opened was presumably titled \"fix and clean things, trust me.\"",
         "stats": {
           "totalCommits": 26,
           "topRepo": "MRNIU/nzh_factorio_mod"

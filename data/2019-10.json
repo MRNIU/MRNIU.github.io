@@ -164,7 +164,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-10-21 ~ 2019-10-27",
-        "content": "Ten commits and you wrote \"multiboot2 nit support x86_64, I should separated kernel.kernek\" — discovering architectural flaws mid-commit-message is a bold strategy. Between \"Improve makefile\" and \"improve makefile\" I see capitalization is the only thing you refactored. \"Preliminary completion of XXX support\" sounds like a placeholder you forgot to fill in.",
+        "content": "Ten commits, and one of them declares \"multiboot2 nit support x86_64, I should separated kernel.kernek\" — spotting architectural overhauls mid-commit-message is a power move. Between \"Improve makefile\" and \"improve makefile\", I see the only thing you refactored was your shift key. And \"Preliminary completion of XXX support\" sounds exactly like a placeholder you forgot to actually fill in.",
         "stats": {
           "totalCommits": 10,
           "topRepo": "Simple-XX/SimpleKernel"

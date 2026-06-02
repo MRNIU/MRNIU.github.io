@@ -217,7 +217,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-10-26 ~ 2020-11-01",
-        "content": "\"dosc(README)\"——连docs都能拼错，说明这个commit是凌晨三点写的。6个PR里有三个\"删除不必要的文件\"和一个\"Delete kernel.bin\"，这周的主要产出就是意识到上周不该提交那些东西。树莓派2支持加上了，但commit message的质量还停留在树莓派1时代。",
+        "content": "“dosc(README)”——连 docs 都能拼错，说明这个 commit 是凌晨三点写的。6 个 PR 里有 3 个“删除不必要的文件”和 1 个“Delete kernel.bin”，这周的主要产出就是意识到上周不该提交那些东西。树莓派 2 支持加上了，但 commit message 的质量还停留在树莓派 1 时代。",
         "stats": {
           "totalCommits": 19,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -232,7 +232,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-11-02 ~ 2020-11-08",
-        "content": "\"fix(PR): 按 review 修改\" 和 \"pref(cmake): 撤销修改\"出现在同一周——先按review改，然后又撤销，这是在跟reviewer玩你追我赶吗？\"docs(READMD): update\"里README又拼错了，建议先review一下自己的拼写。",
+        "content": "“fix(PR): 按 review 修改”和“pref(cmake): 撤销修改”出现在同一周——先按 review 改，然后又撤销，这是在跟 reviewer 玩你追我赶吗？“docs(READMD): update”里 README 又拼错了，建议先 review 一下自己的拼写。",
         "stats": {
           "totalCommits": 12,
           "topRepo": "Simple-XX/SimpleKernel"

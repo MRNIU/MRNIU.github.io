@@ -98,7 +98,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-11-27 ~ 2023-12-03",
-        "content": "Zero commits and one PR to someone else's archived bgfx.cmake repo — you're literally submitting pull requests to dead projects now. Two comments on an archived repository is the open-source equivalent of talking to a wall. At least the wall won't reject your PR... wait, it might.",
+        "content": "Zero commits and a single PR to someone else’s archived bgfx.cmake repo — you’re literally firing pull requests into a dead project now. Two comments on an archived repository? That’s the open-source equivalent of talking to a wall. At least a wall won’t reject your PR… wait, it might.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "bkaradzic/bgfx.cmake-archived"
@@ -113,7 +113,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-12-18 ~ 2023-12-24",
-        "content": "Four commits on your resume, three of which are just \"update\" — either your career changed dramatically three times in one week or you're using git like a save button in Microsoft Word. The one meaningful commit message is literally a link to someone else's resume template, so even your resume is a fork.",
+        "content": "一周 4 个 commit 全在简历仓库，其中 3 个消息就写了个 “update”——要么你的职业生涯在一周里戏剧性地变了三次，要么你根本就是把 git 当成了 Word 的保存键。唯一一条像点样的 commit 信息干脆是别人简历模板的链接，所以连你的简历都是个 fork。",
         "stats": {
           "totalCommits": 4,
           "topRepo": "MRNIU/resume"

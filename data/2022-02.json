@@ -74,7 +74,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-01-31 ~ 2022-02-06",
-        "content": "4 commits — a personal record for restraint! \"comment(intr): update\" is back, your most loyal commit message, appearing like clockwork every few weeks. At least \"feat(intr): pass arg to intr handler\" tells me something actually happened, even if the other three messages are aggressively vague.",
+        "content": "4 commits — a personal record for restraint! Your most loyal commit message, \"comment(intr): update\", is back, punctual as ever, showing up like clockwork every few weeks. At least \"feat(intr): pass arg to intr handler\" hints that something actually happened, even if the other three are aggressively vague.",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -89,7 +89,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2022-02-14 ~ 2022-02-20",
-        "content": "5 commits on Valentine's Day week, all dedicated to your one true love: SimpleKernel's interrupt handler. \"fix(intr_s): fix sp value\" — fixing the fix, a romance as old as time. Spending Valentine's week adjusting stack pointers is either deeply dedicated or deeply concerning.",
+        "content": "情人节那周你提交了 5 个 commit，全都献给了你唯一的真爱：SimpleKernel 的中断处理程序。“fix(intr_s): fix sp value”——修了一个补丁再修它自己，真是一段古老如时间的浪漫。情人节整周都在调栈指针，要么是极致的专注，要么是令人担忧的状况。",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"

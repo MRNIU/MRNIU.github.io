@@ -126,7 +126,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-09-02 ~ 2019-09-08",
-        "content": "Four commits: \"testing pmm\", \"pmm ready\", \"clean coding style\", \"rollback\" — the classic arc of hubris. You declared it ready, cleaned up the code to celebrate, then immediately rolled it all back. Chef's kiss.",
+        "content": "Four commits: \"testing pmm\", \"pmm ready\", \"clean coding style\", \"rollback\" — the quintessential hubris narrative. You announced it was ready, tidied the code in celebration, and then immediately undid the whole thing. Chef's kiss.",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -141,7 +141,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-09-23 ~ 2019-09-29",
-        "content": "\"working on x86_64\", \"almost there\" — the two most dangerous words in kernel development. Five commits mixing English and Chinese like your code mixes architectures. \"Almost there\" in OS dev means you're about 6 months away.",
+        "content": "\"working on x86_64\"、\"almost there\" —— 内核开发中最危险的两个词。5 个 commit 里中英混杂，就像你的代码混合了多种架构。在 OS 开发中说 \"almost there\"，意思是你大概还要 6 个月。",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"

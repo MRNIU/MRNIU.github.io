@@ -594,7 +594,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-04-20 ~ 2026-04-26",
-        "content": "Six commits, all proudly co-authored by Claude Opus 4.7, zero PRs, zero reviews — you’ve achieved a flawless 100% “I copy-pasted AI output directly into main” ratio.  \nThe only thing you personally fixed this week was the *absence* of your own contribution, and even that required an AI’s help.  \nAt this pace, factorio_BestLanding will soon include a `refactor_junior_out_of_team.lua` and you’ll be the one left in the trash slot.",
+        "content": "这周 6 个 commit，全部由 Claude Opus 4.7 联名荣誉出品，零 PR、零 review——你成功把“AI 输出直接粘贴进 main 分支”的比例刷到了完美的 100%。  \n整周你唯一亲手修掉的东西是自己贡献的空缺，而且就连这个补丁也离了 AI 走不动。  \n照这个节奏，factorio_BestLanding 很快会多出一份 `refactor_junior_out_of_team.lua`，而你本人会留在垃圾桶槽位里。",
         "stats": {
           "totalCommits": 6,
           "topRepo": "MRNIU/factorio_BestLanding"
@@ -869,7 +869,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-04-13 ~ 2026-04-19",
-        "content": "Four identical \"Add sibling-mod\" commits and four version bumps that all change the exact same line but each carry a different orphan semver tag—squash is clearly a four-letter word in your workflow. With zero PRs and zero reviews, Claude Opus 4.7 is your entire engineering org, and from the commit duplicates it looks like even the AI is asleep at the wheel.",
+        "content": "Four identical “Add sibling-mod” commits and four version bumps that touch the exact same line yet each carry a different orphan semver tag—squash is obviously a four-letter word in your workflow. With zero PRs and zero reviews, Claude Opus 4.7 is your entire engineering org, and judging by the commit duplicates, even the AI seems to be asleep at the wheel.",
         "stats": {
           "totalCommits": 14,
           "topRepo": "MRNIU/factorio_LegendaryMechStart"
@@ -884,7 +884,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-03-30 ~ 2026-04-05",
-        "content": "Ah, the classic \"fix\" commit extravaganza—24 out of 48 commits, like a soap opera where every episode needs a \"fix\" title. It seems you’ve discovered a golden age of refactoring, but maybe next time, you could aim for some actual *new* features instead of just reskinning the same old cat. And just a friendly suggestion: if your PRs get any smaller, I might mistakingly think they’re just very confused commit messages trying to hide in plain sight.",
+        "content": "啊，经典的“fix”提交盛宴——48 个 commit 里有 24 个是 fix，活像一部每集标题都得带“修复”的肥皂剧。看起来你发掘了重构的黄金时代，但下次不如整点真正*新*功能吧，别老给同一只旧猫换个皮肤。再友好地提一句：你的 PR 要是再缩下去，我可能会误以为它们只是些极其迷茫的 commit 消息，正试图大摇大摆地躲过法眼。",
         "stats": {
           "totalCommits": 48,
           "topRepo": "MRNIU/MRNIU.github.io"

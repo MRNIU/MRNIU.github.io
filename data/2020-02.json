@@ -645,7 +645,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-01-27 ~ 2020-02-02",
-        "content": "You jumped from SimpleKernel to SimpleCompiler — because why finish one ambitious project when you can start another? Thirteen commits including \"Lexer all most there\" and \"Rewrite into c++\" in the same week tells me you rewrote the whole thing before the first version even worked. \"Delete old code\" on day one of a new project is a bold speedrun.",
+        "content": "You abandoned SimpleKernel and jumped straight to SimpleCompiler — because finishing one overly ambitious project is overrated when you can just start another. Thirteen commits in a week, featuring messages like \"Lexer all most there\" and \"Rewrite into c++\", tell me you nuked everything and rebuilt it before the first version even came close to working. And deleting old code on day one of a brand-new project? That’s a speedrun move right there.",
         "stats": {
           "totalCommits": 13,
           "topRepo": "Simple-XX/SimpleCompiler"
@@ -660,7 +660,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-02-03 ~ 2020-02-09",
-        "content": "Nineteen commits and five PRs across SimpleKernel — you merged four of your own PRs in one week, which is just talking to yourself with extra steps. \"ff management almost there\" is a commit message so truncated it could mean anything. The slab allocator bug description got cut off mid-sentence, much like your attention span.",
+        "content": "Nineteen commits and five PRs across SimpleKernel — you merged four of your own in one week, which is just having a conversation with yourself through pull requests. The commit message \"ff management almost there\" is so cut short it could mean literally anything. The slab allocator bug description cuts off mid-sentence, much like your attention span.",
         "stats": {
           "totalCommits": 19,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -675,7 +675,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-02-10 ~ 2020-02-16",
-        "content": "\"Barely run\" is the most honest commit message I've ever seen — finally, truth in version control. Fourteen commits including \"fix bug\" and \"Bug fixing\" as separate entries, because apparently one round of bug fixing wasn't enough. Four \"Update\" commits to maintain your brand consistency.",
+        "content": "\"Barely run\" is the most honest commit message I've ever seen—at last, some truth in version control. You delivered 14 commits, including \"fix bug\" and \"Bug fixing\" as distinct entries, because clearly one round of bug fixing wasn't enough. Four \"Update\" commits to preserve your brand consistency.",
         "stats": {
           "totalCommits": 14,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -690,7 +690,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-02-17 ~ 2020-02-23",
-        "content": "Five commits: three \"Update\"s, one devlog update, and \"Recover the previous kernel_stack\" — so you spent the week undoing last week's work. The kernel_stack had to be recovered like a deleted file from the recycle bin. Progress!",
+        "content": "5 个 commit：三个 \"Update\"，一个 devlog 更新，外加一个 \"Recover the previous kernel_stack\" —— 所以你这周基本在撤销上周的成果。内核栈得从回收站里抢救回来，跟恢复被误删的文件一样。进步啊！",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"

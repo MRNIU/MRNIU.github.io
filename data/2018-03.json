@@ -125,7 +125,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-03-05 ~ 2018-03-11",
-        "content": "5次提交里有2次叫\"Update\"——SimpleKernel的诞生始于一个bootsect.s和两条毫无信息量的commit message。好消息是你编译通过了，坏消息是你的commit message没通过code review。",
+        "content": "5 个 commit 里有两个叫“Update”——SimpleKernel 的诞生始于一个 bootsect.s 和两条毫无信息量的提交信息。好消息：你编译通过了。坏消息：你的 commit message 没通过 code review。",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"

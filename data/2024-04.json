@@ -100,7 +100,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2024-04-22 ~ 2024-04-28",
-        "content": "7 commits and 3 of them are \"fix: upload fw_jump.elf for test\" — because if at first the ELF doesn't upload, try the exact same thing two more times. One commit just says \"add 2024 OSPP\" sandwiched between CI fixes, giving off strong \"I added one feature then spent the rest of the week making it actually build\" energy.",
+        "content": "7 个 commit，其中 3 个是 “fix: upload fw_jump.elf for test”—— 因为如果 ELF 第一次没上传成功，那就把完全相同的操作再试上两次。还有一个 commit 只有 “add 2024 OSPP”，夹在 CI 修复之间，散发出强烈的 “我加了一个功能，然后把剩下的一整周都花在让这个功能真正编译通过上” 的气息。",
         "stats": {
           "totalCommits": 7,
           "topRepo": "MRNIU/opensbi_interface"

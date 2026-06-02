@@ -347,7 +347,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-09-14 ~ 2020-09-20",
-        "content": "Two commits, both saying \"build: try to cmake\" — the word \"try\" in a commit message is basically a cry for help. One PR with two identical attempts at CMake gives off strong \"I'll just push and see if CI passes\" energy.",
+        "content": "就两个 commit，还都写着 “build: try to cmake”——提交信息里带个 “try”，这明摆着是求救。一个 PR 里两次一模一样的 CMake 尝试，扑面而来的就是那种“我先推上去看看 CI 过不过”的气息。",
         "stats": {
           "totalCommits": 2,
           "topRepo": "Simple-XX/SimpleKernel"

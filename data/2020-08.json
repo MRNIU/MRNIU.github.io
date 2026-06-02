@@ -161,7 +161,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-08-10 ~ 2020-08-16",
-        "content": "一周就2个commit，一个加commit规范，一个加敏感操作检测——所以你花了一整周来告诉未来的自己怎么写commit message，而不是真正写代码。这就是典型的「磨刀磨了一周，柴还没砍」。",
+        "content": "整整一周就 2 个 commit，一个加 commit 规范，一个加敏感操作检测——所以你基本上花了一整周在教未来的自己怎么写 commit message，而不是真正动手写代码。简直是把「磨刀磨了一周，柴还没砍」演绎到了极致。",
         "stats": {
           "totalCommits": 2,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -176,7 +176,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-08-24 ~ 2020-08-30",
-        "content": "「添加 git commit 规范」出现了两次——你是在用重复提交来测试自己刚写的commit规范吗？configTICK_RATE_HZ设太大这种bug说明你对FreeRTOS的理解和你的commit message一样：复制粘贴。",
+        "content": "「添加 git commit 规范」这句你愣是提交了两遍——敢情是在用重复提交来验收刚拍板的 commit 规范？拿 configTICK_RATE_HZ 设太大这种 bug 来看，你对 FreeRTOS 的理解跟你的 commit message 一个模子：纯靠复制粘贴。",
         "stats": {
           "totalCommits": 4,
           "topRepo": "MRNIU/FreeRTOS-PortentaH7"

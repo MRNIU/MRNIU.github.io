@@ -2453,7 +2453,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-03-29 ~ 2021-04-04",
-        "content": "31 commits almost entirely \"pref(FIRST FIT)\" — you spent the whole week optimizing a first-fit allocator one tiny commit at a time, like refactoring via acupuncture. Two commits end with \"not finish\" which is both honest and a little heartbreaking. At least you opened 2 issues, so there's written evidence of the pain.",
+        "content": "31 个 commit 几乎全是 pref(FIRST FIT) ——你花了一整周时间，像做针灸一样，每次只提交一丁点来优化一个首次适应分配器。有两个 commit 结尾写着 “not finish”，诚实得让人有点心碎。至少你还开了 2 个 issue，等于给这份痛苦留下了书面证据。",
         "stats": {
           "totalCommits": 31,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -2468,7 +2468,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-04-05 ~ 2021-04-11",
-        "content": "46 commits with FIVE that just say \"merge(*)\" — at this point you're not merging branches, you're merging your will to write proper commit messages into the void. Four \"docs(README): update\" in one week means you're either perfecting a README or using it as a diary. 7 PRs is impressive until you notice half the commits are merge conflict resolution.",
+        "content": "46 个 commit 里有 5 个只写了“merge(*)” —— 这时候你合并的不是分支，而是把好好写 commit message 的意愿合并进了虚空。一周四个“docs(README): update”意味着你要么在打磨 README，要么把它当日记用。7 个 PR 很亮眼，直到你发现一半的 commit 都是在解决合并冲突。",
         "stats": {
           "totalCommits": 46,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -2483,7 +2483,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-04-12 ~ 2021-04-18",
-        "content": "31 commits and \"working on riscv vmm\" appears FIVE times — we get it, you're working on it, you don't need to narrate your journey like it's a hiking vlog. You also reverted your own \"change to uppercase\" commit in the same week, which is the git equivalent of loudly changing your mind at a restaurant. At least the i386 VMM actually got done between all the riscv soul-searching.",
+        "content": "31 个 commit，“working on riscv vmm”出现了 5 次——好了，我们懂了，你在干活，没必要像徒步 vlog 那样直播进度。同一周你还把自己那个“改成大写”的 commit 给 revert 了，这堪称 Git 版的在餐厅里大声反悔。至少 i386 VMM 总算在折腾 riscv 灵魂的间隙搞定了。",
         "stats": {
           "totalCommits": 31,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -2498,7 +2498,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-04-19 ~ 2021-04-25",
-        "content": "31 commits and you're simultaneously building a kernel AND reimplementing the C++ standard library — vector, list, type_traits, iostream, bitmap, string — because why use an existing libcxx when you can spend a week recreating 40 years of C++ in a hobby OS? \"feat(LIBCXX): new\" appearing twice tells me you started the standard library, forgot, and started it again.",
+        "content": "31 commits, and you’re building a kernel while reimplementing the entire C++ standard library — vector, list, type_traits, iostream, bitmap, string — because who needs an existing libcxx when you can spend a week re-creating 40 years of C++ inside a hobby OS? “feat(LIBCXX): new” shows up twice, so clearly you kicked off the standard library, forgot, and started it all over again.",
         "stats": {
           "totalCommits": 31,
           "topRepo": "Simple-XX/SimpleKernel"

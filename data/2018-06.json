@@ -552,7 +552,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-05-28 ~ 2018-06-03",
-        "content": "15次提交，\"重新架构完成\"出现了3次——架构重构这件事，做一次是重构，做三次就是在原地打转了。不过至少你终于学会了光标同步，恭喜你的内核进入了1980年代。",
+        "content": "15 次提交，“重新架构完成”出现了 3 次——架构重构这件事，做一次是重构，做三次就是在原地打转了。不过至少你终于学会了光标同步，恭喜你的内核进入了 1980 年代。",
         "stats": {
           "totalCommits": 15,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -567,7 +567,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-06-04 ~ 2018-06-10",
-        "content": "\"尝试添加IDT，遇到困难，先查资料\"——这是本周最诚实的commit message了。10次提交从GDT一路肝到屏幕滚动，这不是开发内核，这是在speedrun整个x86架构。",
+        "content": "“尝试添加 IDT，遇到困难，先查资料”——这是本周最诚实的 commit message 了。10 次提交从 GDT 一路肝到屏幕滚动，这不是开发内核，这是在 speedrun 整个 x86 架构。",
         "stats": {
           "totalCommits": 10,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -582,7 +582,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-06-18 ~ 2018-06-24",
-        "content": "\"中断完成，未测试。还没完全理解\"——这句话的含义是：它能跑，但我不知道为什么。commit message里自己都承认\"代码有点乱，后面需要整理\"，经典flag，后面大概率不会整理。",
+        "content": "“中断完成，未测试。还没完全理解”——翻译成人话：它能跑，但我不知道为什么能跑。commit message 里自己都招了“代码有点乱，后面需要整理”，经典 flag，后面大概率不会整理。",
         "stats": {
           "totalCommits": 8,
           "topRepo": "Simple-XX/SimpleKernel"

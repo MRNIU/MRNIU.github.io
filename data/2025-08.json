@@ -9,7 +9,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-08-18 ~ 2025-08-24",
-        "content": "Wow, 12 commits and not a single PR or review? I'm guessing \"linked list\" is the new black, considering you’ve committed it five times—are we building a collection? And don’t even get me started on your refactoring spree; seems like \"refactor\" is just your fancy way of saying \"I can't decide what I’m doing.\" ",
+        "content": "Wow, 12 commits and not one PR or review? I suppose \"linked list\" must be the new black, considering you've committed it five times—what is this, a collection drive? And let's not even skip over your refactoring binge; it looks like \"refactor\" is just your posh way of saying \"I can't decide what I'm doing.\"",
         "stats": {
           "totalCommits": 12,
           "topRepo": "MRNIU/bmalloc"
@@ -232,7 +232,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-08-11 ~ 2025-08-17",
-        "content": "Ah, the classic \"refactor: slab\" symphony, a beautiful opus performed 20 times without so much as a solo. Did you think the commit messages were like Pokémon — gotta catch 'em all? And while we're on the topic of ambitious refactors, maybe next week you can try tackling the \"refactor: anything else\" challenge for a change.",
+        "content": "Ah, the classic \"refactor: slab\" symphony — a magnificent opus performed 20 times without a single solo. Did you think commit messages were like Pokémon — gotta catch 'em all? And while we're on the topic of ambitious refactors, maybe next week you could tackle the \"refactor: anything else\" challenge for a change.",
         "stats": {
           "totalCommits": 89,
           "topRepo": "MRNIU/bmalloc"
@@ -1391,7 +1391,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-08-04 ~ 2025-08-10",
-        "content": "Ah, the \"refactor: buddy\" symphony—33 commits of pure, repetitive poetry that would make even the most patient code reviewer weep. Did you accidentally pull a \"boomerang\" commit where you throw code out and it just keeps coming back? Maybe next week we can aim for a little more variety in your messages and, I don't know, an actual PR?",
+        "content": "Ah, the \"refactor: buddy\" symphony—33 commits of pure, repetitive verse that could make even the most patient code reviewer weep. Did you accidentally craft a boomerang commit where you toss code out and it just keeps flying back? Maybe next week we can shoot for a little more variety in those messages and, I don't know, an actual PR?",
         "stats": {
           "totalCommits": 33,
           "topRepo": "MRNIU/bmalloc"
@@ -1965,7 +1965,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-07-28 ~ 2025-08-03",
-        "content": "Ah, the classic “Update” commit message, a true masterpiece! It’s like you’re trying to win the gold medal in the “Most Vague Commit Messages” Olympics. And with 15 commits but zero PRs, I can only assume you’re working on an award-winning solo project – too bad it’s just your own private showcase of refactoring for the sake of refactoring!",
+        "content": "Ah, the timeless \"Update\" commit message — a veritable gem! You must be gunning for gold in the \"Most Cryptic Commit Message\" Olympics. Fifteen commits and not a single PR? Clearly, this is your magnum opus, a one-person masterpiece that's really just a personal gallery of refactoring for the sheer joy of refactoring.",
         "stats": {
           "totalCommits": 15,
           "topRepo": "MRNIU/cpu_io"

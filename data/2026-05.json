@@ -178,7 +178,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-05-25 ~ 2026-05-31",
-        "content": "你这周的提交记录简直是三人麻将——16个英文杂务提交配合三个连续的中文重构大作，唯独 review 栏空荡荡，搞得我怀疑你是在练就“一个人的开源”。用 OpenAI Codex 做 co-author 写重构诗，“收敛边界”“拆分边界”念得飞起，结果转头三个 Fix 提交告诉我们边界其实就是自家墙，哪里没补哪里就是洞。下次先别急着把 invocation 变成真理之源，抽空给自己那堵墙也审查两下，省得用 placement proxy 遮羞布反复擦屁股。",
+        "content": "你这周的提交记录堪比三人麻将局——16 个英文杂务提交搭上接连三个中文重构大作，唯独 review 栏空荡荡，我都要怀疑你是在修炼“一个人的开源”了。拉上 OpenAI Codex 当 co-author 写重构诗，“收敛边界”“拆分边界”念得天花乱坠，结果转手三个 Fix 提交就告诉我们：边界其实就是自家那堵墙，哪里没补哪里就是个洞。下次先别忙着把 invocation 捧成真理之源，花点工夫给自己的墙也审查两下，省得总拿 placement proxy 当遮羞布反复擦屁股。",
         "stats": {
           "totalCommits": 17,
           "topRepo": "drivercraft/ostool"
@@ -409,7 +409,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-05-18 ~ 2026-05-24",
-        "content": "6个PR，0个review——完美诠释了什么叫“独狼式开发”，你写代码，天经地义，别人写代码，关你 peace。那个`AI-assisted-by: OpenAI Codex`挂在那么长的commit message里，简直像在说“请AI帮我吹，反正没人帮我审”。把调用拆成 Invocation、ProjectLayout、VariableScope 再包回 Tool 门面，这架构演进感觉就像在给披萨重新分类，切开再拼回去，并坚信这次命名能撑过下一次重构。",
+        "content": "6 个 PR，0 个 review——完美诠释了什么叫“独狼式开发”：你写代码天经地义，别人写代码？关你 peace。超长 commit message 里挂个 `AI-assisted-by: OpenAI Codex`，活像在说“反正没人审，不如让 AI 替我吹吹牛”。把调用拆成 Invocation、ProjectLayout、VariableScope 再套回 Tool 门面，这番架构演进活脱脱是给披萨重新分类，切开了又拼回去，还坚信这次命名绝对能撑到下一次重构。",
         "stats": {
           "totalCommits": 2,
           "topRepo": "MRNIU/ostool"
@@ -540,7 +540,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-05-11 ~ 2026-05-17",
-        "content": "一周 7 个 PR 零 review，这孤胆英雄的路子走到黑，你教的 AI 都知道要遵守边界，可你自己连 Cargo 上下文的边界都要 feat 完秒交 fix。下次麻烦把「自爆式开发」的 debug 环节挪到 push 之前，省得别人以为你在表演行为艺术。",
+        "content": "一周 7 个 PR，review 数挂零，孤胆英雄这条路你是铁了心走到黑。你调教出来的 AI 都知道要遵守边界，可你自己的 Cargo 上下文边界倒是 feat 刚完就秒交 fix。下次麻烦把「自爆式开发」的 debug 环节挪到 push 之前，省得别人以为你在表演行为艺术。",
         "stats": {
           "totalCommits": 4,
           "topRepo": "drivercraft/ostool"
@@ -746,7 +746,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-05-04 ~ 2026-05-10",
-        "content": "28个提交，0次review——你这是在用 Codex 的“收口”能力掩盖自己对 review 的“不收口”吧？同一个 CLAUDE.md 改名四遍，递归深度够写个分治算法了，下次再加个 AGENTS.md-to-AGENTS.md 转换是不是能凑够六次？",
+        "content": "28 个提交，0 次 review——你这是在拿 Codex 的“收口”来掩盖自己对 review 的“不收口”吧？同一个 CLAUDE.md 改四次名，递归深度都够写个分治算法了，下次再搞个 AGENTS.md-to-AGENTS.md 的转换是不是就凑齐六次了？",
         "stats": {
           "totalCommits": 28,
           "topRepo": "ssXue/Nazh"
@@ -1361,7 +1361,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-04-27 ~ 2026-05-03",
-        "content": "一星期55个commit愣是整出0个PR，你这是把Git当日记本使了吧？“update”这种commit message都能上，下一步是不是准备提交个“fix: 改了点东西”？看着天花乱坠的ADR文档，代码呢，该不会全藏在合并冲突里了吧——毕竟你连容器的pre-commit都顺手配上，就是不让人review。",
+        "content": "一周 55 个 commit，愣是没冒出一个 PR，你这是把 Git 当日记本了吧？“update” 这种 commit message 都能推上去，下一步是不是打算提交个 “fix: 改了点东西”？天花乱坠的 ADR 文档看着热闹，代码呢，怕不是全窝在合并冲突里了——毕竟你连容器的 pre-commit 都顺手配好，就是不给 review 的机会。",
         "stats": {
           "totalCommits": 55,
           "topRepo": "ssXue/Nazh"

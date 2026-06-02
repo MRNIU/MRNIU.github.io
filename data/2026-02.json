@@ -35,7 +35,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-02-09 ~ 2026-02-15",
-        "content": "Wow, \"feat: add mb, rmb, wmb\" — did you run out of creative energy after that? I mean, those commit messages are less informative than a fortune cookie. And “面向 AI 的重构”? If only your PRs were as ambitious as your commit messages, we'd all be living in a utopia of flawless code.",
+        "content": "哇哦，“feat: add mb, rmb, wmb”——你写完这个是不是创造力瞬间归零了？我是说，这些提交信息比幸运饼干里的签条还空洞。再看那个“面向 AI 的重构”？要是你的 PR 能像提交信息这样志向远大，我们早就在完美代码的乌托邦里蹦迪了。",
         "stats": {
           "totalCommits": 2,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -166,7 +166,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-02-02 ~ 2026-02-08",
-        "content": "Two commits on FreeRTOS-PortentaH7 — one fix removing a static lib and one feat adding a new method for CalleeSavedContext. A real-time operating system port with two commits a week has the same energy as training for a marathon by walking to the fridge. At least the commit messages are actually descriptive for once, so personal growth is happening.",
+        "content": "Two commits on FreeRTOS-PortentaH7: one fix that drops a static lib, one feat that introduces a new method for CalleeSavedContext. Maintaining a real-time OS port at two commits a week has the same vibe as marathon training by walking to the fridge. At least the commit messages are actually descriptive this time, so personal growth is real.",
         "stats": {
           "totalCommits": 2,
           "topRepo": "MRNIU/FreeRTOS-PortentaH7"

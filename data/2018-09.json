@@ -100,7 +100,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-09-24 ~ 2018-09-30",
-        "content": "\"脑壳疼\"作为commit message的一部分，是对GP错误调试过程最真实的描述。把IRQ1错写成IRQ0——恭喜你用一个字符的typo浪费了自己不知道多少小时。",
+        "content": "“脑壳疼”作为 commit message 的一部分，堪称 GP 错误调试过程最诚实的写照。把 IRQ1 错写成 IRQ0——恭喜，你用一个字符的 typo 就轻轻松松浪费了自己不知多少小时。",
         "stats": {
           "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"

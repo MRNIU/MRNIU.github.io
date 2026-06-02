@@ -700,7 +700,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-12-02 ~ 2019-12-08",
-        "content": "\"Paging finished.\" followed by three consecutive \"update\" commits — if paging was truly finished, what exactly are these mysterious updates updating? The period after \"Paging finished.\" radiates a confidence that the subsequent commits immediately betray.",
+        "content": "“Paging finished.” 之后连着 3 个 \"update\" commit——既然分页已经搞完，那这几个神秘的更新到底在更新啥？“Paging finished.” 句末那个句号散发的笃定，转眼就被后面一串 commit 无情拆穿。",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -715,7 +715,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-12-09 ~ 2019-12-15",
-        "content": "Nineteen commits: six saying \"fix up CI\", five saying \"update\", and one \"remove trashy file\" — your git log reads like a man slowly losing a fight with a YAML file. The CI fixes alone tell a story of someone who pushes to see if it works, and spoiler alert: it didn't, six times.",
+        "content": "Nineteen commits: six labeled “fix up CI”, five just “update”, and one “remove trashy file” — reading your git log is like watching someone slowly lose a staring contest with a YAML file. The CI fixes alone are a master class in the “push and hope” workflow, and here’s the spoiler: it didn't work, six times in a row.",
         "stats": {
           "totalCommits": 19,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -730,7 +730,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-12-16 ~ 2019-12-22",
-        "content": "Six commits and four of them are just \"update\" — at this point you should alias `git commit -m 'update'` to a single keystroke. You also created and then immediately updated FUNDING.yml, because nothing says \"sponsor my work\" like commit messages with zero information.",
+        "content": "Six commits, four of them just the word \"update\" — at this point you should really bind `git commit -m 'update'` to a single keystroke. You also created FUNDING.yml and immediately updated it, because nothing declares \"sponsor my work\" quite like commit messages that convey precisely nothing.",
         "stats": {
           "totalCommits": 6,
           "topRepo": "Homebrew/homebrew-core"
@@ -745,7 +745,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-12-23 ~ 2019-12-29",
-        "content": "Thirteen commits and EIGHT of them say \"update\" — you've achieved a 62% \"update\" commit rate, which I believe is a personal record. There's also \"updatre CI configuration\" proving that even spell-check has given up on you. Happy holidays, your git log is a lump of coal.",
+        "content": "13 commits and a solid 8 of them breathe “update” — you’ve hit a personal-best 62% update commit rate. There’s also “updatre CI configuration,” proving that even spell-check has abandoned hope. Happy holidays. Your git log is a lump of coal.",
         "stats": {
           "totalCommits": 13,
           "topRepo": "Simple-XX/SimpleKernel"

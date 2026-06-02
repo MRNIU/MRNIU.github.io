@@ -401,7 +401,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-07-14 ~ 2025-07-20",
-        "content": "Three commits across two repos — one \"update\" on your resume, one \"Initial commit\" on something new, and a lone C++ optimization on cpu_io. The resume \"update\" is back, which means either job hunting season has begun or you just remembered you have a GitHub profile. Starting a new repo while your other 5 projects collect dust is peak developer ADHD.",
+        "content": "Three commits across two repos: a resume “update”, an “Initial commit” on something new, and a lone C++ optimization in cpu_io. The resume “update” is back, which means either job hunting season has started or you just remembered your GitHub profile exists. Starting a new repo while five other projects gather dust is peak developer ADHD.",
         "stats": {
           "totalCommits": 3,
           "topRepo": "MRNIU/resume"
@@ -416,7 +416,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-07-21 ~ 2025-07-27",
-        "content": "1 commit saying \"update\" but 14 PRs on zephyrproject-rtos/zephyr — either you've become a prolific open-source contributor overnight or you're spam-opening PRs on a major RTOS project. 11 comments and 14 PRs with a single commit is the ratio of someone who talks a LOT in code review but barely writes code themselves.",
+        "content": "只有 1 个 commit，内容还只是“update”，却在 zephyrproject-rtos/zephyr 上开了 14 个 PR —— 要么你一夜之间成了开源高产大佬，要么就是在给一个主流 RTOS 项目 spam PR。11 条评论、14 个 PR 配上 1 个 commit，这个比例像极了那种在代码审查里话超多、自己却几乎不写代码的人。",
         "stats": {
           "totalCommits": 1,
           "topRepo": "zephyrproject-rtos/zephyr"

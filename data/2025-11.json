@@ -22,7 +22,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-11-17 ~ 2025-11-23",
-        "content": "Ah, nothing screams \"I’m totally on top of my game\" like two identical \"fix\" commits for what I can only assume is an epic typo in \"premission.\" Also, \"bump\" as a commit message? Truly a masterclass in ambiguity—did you bump your head or just the version? And remember, \"feat\" commits are supposed to imply joy and excitement, not just another mediocre version of buddy_alloc.",
+        "content": "Ah, nothing says \"I'm crushing it\" like a pair of identical \"fix\" commits—presumably patching the legendary typo \"premission.\" And \"bump\" as a commit message? A true masterclass in ambiguity: did you bump a version, or just bump your head? Let's not forget \"feat\" commits are supposed to radiate joy and triumph, not deliver yet another middling iteration of buddy_alloc.",
         "stats": {
           "totalCommits": 4,
           "topRepo": "MRNIU/cpu_io"
@@ -89,7 +89,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-10-27 ~ 2025-11-02",
-        "content": "Wow, three commits and yet somehow we managed to write two identical messages about adding SCTLR_EL1 bits. It’s a bold strategy to put \"feat\" in front of a commit that could’ve been a single line in a README, but hey, who doesn’t love a good bit of repetition? Maybe next week, we can try branching out from the bits and adding some actual features, or at least some variety in our commit messages!",
+        "content": "哇，3 个 commit，竟然还能写出两条一模一样的消息，都是关于添加 SCTLR_EL1 位的。在一个本可以写成 README 里一行字的 commit 前面加上“feat”，这策略够勇的，不过话说回来，谁不爱反复横跳呢？也许下周咱们能试着别光盯着位操作，要么加点真正的功能，要么好歹让提交信息换个花样吧！",
         "stats": {
           "totalCommits": 3,
           "topRepo": "MRNIU/cpu_io"

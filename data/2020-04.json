@@ -213,7 +213,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-04-06 ~ 2020-04-12",
-        "content": "Eleven commits with messages like \"Add\", \"Add\", \"Update\", \"Update\" — you've stripped commit messages down to their most primal, caveman form. \"task_test finished\" is the weekly victory declaration, nestled between commits that communicate absolutely nothing.",
+        "content": "11 commits with messages like \"Add\", \"Add\", \"Update\", \"Update\" — you've boiled commit messages down to their most primeval, caveman-level grunts. \"task_test finished\" serves as the week's triumphant declaration, sitting quietly in a crowd of commits that say nothing at all.",
         "stats": {
           "totalCommits": 11,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -228,7 +228,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2020-04-20 ~ 2020-04-26",
-        "content": "Zero commits, zero PRs, one issue, and 4 comments on an Arduino Keyboard library — you're now a full-time Arduino keyboard consultant apparently. Your kernel is gathering dust while you debate HID protocols. Priorities.",
+        "content": "0 commits, 0 PRs, 1 issue, and 4 comments on an Arduino Keyboard library — apparently you’ve become a full-time Arduino keyboard consultant now. Your kernel is gathering dust while you debate HID protocols. Priorities.",
         "stats": {
           "totalCommits": 0,
           "topRepo": "arduino-libraries/Keyboard"

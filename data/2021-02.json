@@ -684,7 +684,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2021-02-01 ~ 2021-02-07",
-        "content": "41 commits, 10 PRs, and commit messages including \"dovs\", \"docs\", \"pref\", \"update\", and \"re init\" — did you fall asleep on the keyboard halfway through? Half your commits are merges and single-word messages with no context. \"dovs\" is my personal favorite: not quite docs, not quite anything.",
+        "content": "41 个 commit，10 个 PR，commit 消息里混着 “dovs”、“docs”、“pref”、“update”、“re init”——你这是敲键盘敲一半直接趴上面睡着了吧？一大半提交全是合并和单蹦词，没任何上下文。我个人最爱 “dovs”：既不是 docs，也什么都不是。",
         "stats": {
           "totalCommits": 41,
           "topRepo": "Simple-XX/SimpleKernel"

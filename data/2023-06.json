@@ -150,7 +150,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-06-12 ~ 2023-06-18",
-        "content": "Zero commits, 3 PRs, and 6 issues — congratulations, you've achieved the dream of every project manager: all planning, no coding. Opening issues on SimpleKernel without writing a single line is just filing bug reports against yourself. The one comment you left was presumably \"I'll get to this later.\"",
+        "content": "0 commit，3 个 PR，6 个 issue——恭喜，你轻松达成了每个项目经理的梦想：全是规划，零编码。在 SimpleKernel 上开着 issue 却一行代码没写，就只是给自己提交 bug 报告罢了。你留下的唯一一条评论，大概是“我稍后再搞”。",
         "stats": {
           "totalCommits": 0,
           "topRepo": "Simple-XX/SimpleKernel"

@@ -71,7 +71,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-01-28 ~ 2019-02-03",
-        "content": "2 commits: \"update reaadme\" and \"update\" — you can't even spell \"readme\" right in a commit about updating the readme. At this rate your commit messages have more typos than your kernel has features.",
+        "content": "2 个 commit：“update reaadme”和“update”——连在更新 readme 的提交里都能把“readme”拼错。照这个势头，你 commit 消息里的错别字比内核的功能都多。",
         "stats": {
           "totalCommits": 2,
           "topRepo": "Simple-XX/SimpleKernel"

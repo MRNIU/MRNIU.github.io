@@ -606,7 +606,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-05-01 ~ 2023-05-07",
-        "content": "16 commits on a Factorio mod — three of them are identical \"perf(startup): more item\" like you were hoping the compiler would eventually take the hint. Mixing English commits with 手搓 and 雷达 is giving bilingual chaos energy. At least you're optimizing your game mods with the same intensity most people reserve for, you know, actual work.",
+        "content": "在 Factorio 模组上怒提 16 个 commit，其中三个一模一样地写着 \"perf(startup): more item\"，仿佛盼着编译器哪天能自己悟出点什么。英文提交里混着手搓和雷达，一股双语混沌能量迎面扑来。至少你在优化游戏模组这件事上投入的劲头，别人通常都留给——嗯，正儿八经的活儿。",
         "stats": {
           "totalCommits": 16,
           "topRepo": "MRNIU/nzh_factorio_mod"
@@ -621,7 +621,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-05-08 ~ 2023-05-14",
-        "content": "8 out of 18 commits are literally \"style(*): update\" — at this point you could write a cron job to commit that message every hour and nobody would notice the difference. 11 PRs opened but zero reviews received, which tracks because who's going to review a diff that says \"update\" 8 times? SimpleKernel is earning its name because the commit messages sure aren't complex.",
+        "content": "8 of the 18 commits are literally \"style(*): update\" — at this point you could have a cron job push that exact message every hour and nobody would spot the difference. You opened 11 PRs and received zero reviews, which makes perfect sense, because who's going to look at a diff where the message just says \"update\" eight times? SimpleKernel is earning its name: the commit messages sure aren't getting complex.",
         "stats": {
           "totalCommits": 18,
           "topRepo": "Simple-XX/SimpleKernel"

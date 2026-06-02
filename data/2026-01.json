@@ -35,7 +35,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-01-19 ~ 2026-01-25",
-        "content": "Ah, the classic \"let's refactor the same thing twice in one week\" strategy, very avant-garde! And those commit messages? I'm still trying to decipher what \"UserStackPointer ThreadPointer ReturnValue\" actually means—sounds like an overambitious novel title. Don't worry, I'm sure the future will be filled with PRs where you can actually show off these \"features\" instead of just listing them like a buffet menu!",
+        "content": "Ah, the time-honored \"let's refactor the same thing twice in a single week\" maneuver—truly avant-garde. And those commit messages? I'm still trying to decode what \"UserStackPointer ThreadPointer ReturnValue\" even means; it sounds like an overly ambitious novel premise. But don't worry, I'm sure future PRs will let you actually show off these \"features\" instead of just plating them up like a buffet menu.",
         "stats": {
           "totalCommits": 5,
           "topRepo": "MRNIU/cpu_io"
@@ -115,7 +115,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-01-12 ~ 2026-01-18",
-        "content": "Ah, the classic case of \"I swear I did something\" commits! You’ve not only managed to turn a single file into a trilogy, but you've also gifted us the world’s first and only “Initial commit” on a project that’s already been abandoned. If your commits were a movie, they’d be “The Fast and the Curious: Context.hpp Edition.”",
+        "content": "Ah, the classic case of \"I swear I did something\" commits! You've not only turned a single file into a trilogy, but you've also given us the world's first and only \"Initial commit\" on a project that's already been abandoned. If your commits were a movie, they'd be \"The Fast and the Curious: Context.hpp Edition.\"",
         "stats": {
           "totalCommits": 4,
           "topRepo": "MRNIU/cpu_io"
@@ -247,7 +247,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-01-05 ~ 2026-01-11",
-        "content": "Congratulations on your impressive collection of \"test: update\" commit messages; clearly, you were doing some serious testing—like testing the limits of how many times you can say the same thing! I love how your PRs are on vacation while you're cranking out \"initial commit\" and \"feat: context\" like it's a write-up for a high school essay. Keep up the good work, and next week maybe let the code breathe a little instead of suffocating it with tiny changes!",
+        "content": "恭喜你收集了这么多 \"test: update\" commit 消息，显然你正在进行一些严肃的测试——比如测试你到底能把同一句话重复多少次！我很欣赏你的 PR 在度假，而你却在疯狂输出 \"initial commit\" 和 \"feat: context\"，就像在赶一篇高中作文一样。继续保持，下周也许可以让代码喘口气，而不是被这些微小改动闷死！",
         "stats": {
           "totalCommits": 15,
           "topRepo": "MRNIU/cpu_io"
@@ -404,7 +404,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2025-12-29 ~ 2026-01-04",
-        "content": "Wow, 18 commits and not a single PR or review—are you coding in a bubble? And can we talk about those commit messages? \"feat: v1.0.2\" might as well be the motto for your week, it’s like you’re writing a very repetitive novel. Also, I commend your ability to turn \"feat\" into an Olympic event, but maybe toss in a \"fix\" or a \"docs\" for variety—your future self will thank you!",
+        "content": "Eighteen commits and zero PRs or reviews — are you living in a code bubble? And let’s address those commit messages: \"feat: v1.0.2\" pretty much sums up your week; you’re drafting a very repetitive novel there. I admire the way you’ve turned \"feat\" into an Olympic sport, but mixing in a \"fix\" or \"docs\" now and then wouldn’t hurt — your future self will thank you!",
         "stats": {
           "totalCommits": 18,
           "topRepo": "MRNIU/factorio_BestLanding"

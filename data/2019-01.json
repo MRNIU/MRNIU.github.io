@@ -488,7 +488,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-12-31 ~ 2019-01-06",
-        "content": "2 commits to ring in the new year: \"Still wirking on multiboot2... Maybe I have a stuck here\" and \"uodate.\" You can't spell \"working\" or \"update\" but you're writing an OS kernel — priorities are clearly in order.",
+        "content": "2 commits to ring in the new year: \"Still wirking on multiboot2... Maybe I have a stuck here\" and \"uodate.\" Can't spell \"working\" or \"update,\" but you're writing an OS kernel — priorities are clearly in order.",
         "stats": {
           "totalCommits": 2,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -503,7 +503,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-01-07 ~ 2019-01-13",
-        "content": "11 commits, 3 issues opened, and you're simultaneously working on kernel debug, linked lists in C, and multiboot2 — pick a lane! The same commit message \"Working on debug by multiboot2: Show function call stack\" appears twice, because apparently copy-pasting extends to your git workflow too.",
+        "content": "11 commits, 3 issues opened, and you’re simultaneously hacking on kernel debug, linked lists in C, and multiboot2 — pick a lane! The exact same commit message “Working on debug by multiboot2: Show function call stack” appears twice, so apparently copy‑pasting isn’t just your go‑to coding move, it’s your git workflow too.",
         "stats": {
           "totalCommits": 11,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -518,7 +518,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-01-14 ~ 2019-01-20",
-        "content": "\"Update .travis.yml\" three times in a row — the CI config is getting more attention than the actual kernel. \"It is confused to get elf symbol from grub2\" — I think you mean YOU are confused, but at this point the code probably is too.",
+        "content": "\"Update .travis.yml\" three times in a row — the CI config is clearly the star of this kernel project, while the kernel itself is just a supporting actor. \"It is confused to get elf symbol from grub2\" — I'd say you're the one who's confused, though at this point the code probably shares the feeling.",
         "stats": {
           "totalCommits": 10,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -533,7 +533,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2019-01-21 ~ 2019-01-27",
-        "content": "从SimpleKernel跳到SimpleCompiler，一周之内完成了\"王垠的解释器\"——你是在集邮还是在做项目？内存管理还没搞定就去写编译器了，经典程序员ADHD。",
+        "content": "从 SimpleKernel 跳到 SimpleCompiler，一周之内就把「王垠的解释器」给写完了——你这是在集邮还是做项目？内存管理还没搞定就去碰编译器了，经典程序员 ADHD。",
         "stats": {
           "totalCommits": 4,
           "topRepo": "Simple-XX/SimpleCompiler"

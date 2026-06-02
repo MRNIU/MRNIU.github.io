@@ -1326,7 +1326,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-03-27 ~ 2023-04-02",
-        "content": "29 commits and the dominant verb is \"merge\" — you're not developing, you're playing git Tetris trying to fit pieces back together after a 4-month hiatus. Three \"style(*): update\" commits suggest the code looked ugly enough to need cosmetic surgery before you could bear to work on it again. Welcome back; the kernel didn't miss you but clearly you missed it.",
+        "content": "29 个 commit，最多的动词是 “merge”——你这哪是开发，分明是在玩 git 俄罗斯方块，把断档 4 个月后散落一地的碎片重新拼起来。那三个 “style(*): update” 提交，像是代码丑得实在看不下去，不先做一番整容手术就没法接着碰它。欢迎回来，内核并没有想你，但显然你想它了。",
         "stats": {
           "totalCommits": 29,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1341,7 +1341,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-04-03 ~ 2023-04-09",
-        "content": "55 commits — the merge marathon continues with another week of shoving subsystems together like IKEA furniture without the manual. Five consecutive \"perf(boot): update\" commits prove that boot performance improves one vague commit at a time. You went from merge(printf) to merge(heap) to merge(vmm) — basically reassembling the entire kernel commit by commit, which is an interesting alternative to just using branches.",
+        "content": "55 commits: the merge marathon rolls on with another week of wedging subsystems together like IKEA furniture missing the instructions. Five consecutive \"perf(boot): update\" commits prove that boot performance improves one vague commit at a time. You went from merge(printf) to merge(heap) to merge(vmm) — essentially reassembling the entire kernel commit by commit, which is a creative alternative to just using branches.",
         "stats": {
           "totalCommits": 55,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1356,7 +1356,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-04-10 ~ 2023-04-16",
-        "content": "15 commits, 18 PRs — more PRs than commits is an achievement that defies the laws of git. Four identical \"perf(build): not support bochs any more\" commits: bochs died four times this week, each death more dramatic than the last. The Chinese commit \"更新要求\" mixed with English ones suggests a bilingual developer who can't decide which language to be vague in.",
+        "content": "15 commits, 18 PRs — having more PRs than commits is a git-defying accomplishment. Four identical “perf(build): not support bochs any more” commits: bochs got killed off four times this week, each death more theatrical than the last. The Chinese commit “更新要求” tossed in among the English ones gives off bilingual energy, like a developer who can’t decide which language to be vague in.",
         "stats": {
           "totalCommits": 15,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -1371,7 +1371,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2023-04-24 ~ 2023-04-30",
-        "content": "5 commits split between a Factorio mod and kernel docs — the duality of man: one moment you're optimizing interrupt handlers, the next you're optimizing factory throughput. \"refactor(time): time done\" is the most ominously philosophical commit message I've ever seen. Starting yet another repo (nzh_factorio_mod) because SimpleKernel, SimpleCompiler, SimpleGameEngine, and a resume weren't enough unfinished projects.",
+        "content": "With 5 commits split between a Factorio mod and kernel docs, you embody the duality of man: optimizing interrupt handlers one moment and factory throughput the next. \"refactor(time): time done\" has to be the most ominously philosophical commit message I’ve ever encountered. And now you’re starting yet another repo, nzh_factorio_mod, because apparently SimpleKernel, SimpleCompiler, SimpleGameEngine, and a resume just aren’t enough unfinished projects.",
         "stats": {
           "totalCommits": 5,
           "topRepo": "MRNIU/nzh_factorio_mod"

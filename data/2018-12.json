@@ -632,7 +632,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-12-03 ~ 2018-12-09",
-        "content": "\"尝试加入C++支持，没有完成\"——写C的内核还没稳定就想上C++，这叫还没学会走就想跑。好在你终于找到了键盘中断GP的原因，虽然那个bug已经困扰了你好几个月。",
+        "content": "“尝试加入 C++ 支持，没有完成”——拿 C 写的内核还没稳定呢，就琢磨着上 C++，这不就是还没学会走就想跑。好在你总算揪出了键盘中断 GP 的原因，虽然那个 bug 已经折腾你好几个月了。",
         "stats": {
           "totalCommits": 3,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -647,7 +647,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-12-10 ~ 2018-12-16",
-        "content": "20 commits in one week — your most productive week ever! Unfortunately, 7 of them are just \"Update\" and one literally says \"backspace is not available\" as if git commit messages are a bug tracker. At least you're consistent in your inconsistency.",
+        "content": "20 commits in a single week — your most productive week ever! Too bad 7 of them just say “Update”, and one literally says “backspace is not available” as if commit messages were your personal bug tracker. At least you’re consistently inconsistent.",
         "stats": {
           "totalCommits": 20,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -662,7 +662,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-12-17 ~ 2018-12-23",
-        "content": "\"Still bugs:\" as a complete commit message is a mood, not a changelog entry. \"iit\" — I assume that was supposed to be \"init\" but even your typos have typos now. 9 commits of trying things and nothing quite working: the multiboot saga continues.",
+        "content": "\"Still bugs:\" as an entire commit message is less a changelog entry and more a whole mood. \"iit\" — I guess you meant \"init,\" but now even your typos have typos. Nine commits of attempting things that stubbornly refuse to work: the multiboot saga grinds on.",
         "stats": {
           "totalCommits": 9,
           "topRepo": "Simple-XX/SimpleKernel"
@@ -677,7 +677,7 @@
       "semantic": null,
       "data": {
         "weekRange": "2018-12-24 ~ 2018-12-30",
-        "content": "\"If I have enough time, I will finish it\" — committing existential dread to git on Christmas week, bold move. 12 commits wrestling with multiboot2, half saying \"working on\" and the other half saying \"not successful,\" your repo is basically a public therapy journal.",
+        "content": "\"If I have enough time, I will finish it\" — committing existential dread straight to git on Christmas week, a bold move. 12 commits tussling with multiboot2, half them \"working on\" and the other half \"not successful,\" your repo is essentially a public therapy journal.",
         "stats": {
           "totalCommits": 12,
           "topRepo": "Simple-XX/SimpleKernel"
