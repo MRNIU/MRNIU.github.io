@@ -28,6 +28,104 @@
       }
     },
     {
+      "id": "ai-summary-quarter-2020-Q2",
+      "type": "ai_summary",
+      "ts": "2020-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2020-04-01",
+          "end": "2020-06-30",
+          "label": "2020-Q2"
+        },
+        "content": "During Q2, SimpleKernel development continued with a focus on integrating FreeRTOS, implementing task testing, and adding debug functions, while newly initialized repos introduced proposal templates and communication channels. Build system refinements like Makefile upload targets, alongside initial startup code (still buggy), signaled a phase of foundational setup across multiple projects. Collaboration shifted toward issue discussions, as comments rose to 14 despite only 2 merged PRs and no code reviews, indicating more design conversation than completed contributions. Compared to Q1’s 81 commits and 7 PRs, overall code output dropped sharply, but activity spread from 5 to 8 repos, suggesting broader exploration. The merge tag remained dominant, and Simple-XX/SimpleKernel stayed the top repo, preserving continuity in the core project’s workflow.",
+        "highlights": [
+          "28 commits, 2 PRs, 0 reviews, 3 issues, 14 comments, 8 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 28,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 3,
+          "totalComments": 14,
+          "activeRepos": 8,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed merge"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 53"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2020-06",
+      "type": "ai_summary",
+      "ts": "2020-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-06-01",
+          "end": "2020-06-30",
+          "label": "2020-06"
+        },
+        "content": "June 2020 shifted from May’s broad community involvement to focused, solitary embedded work. All 10 commits landed in MRNIU/FreeRTOS-PortentaH7, with a short early detour into Simple-XX/OSPP. The main effort bootstrapped a FreeRTOS port for the Portenta H7: setting up the Makefile build, adding startup code, and updating library versions, though the port remained theoretical and untested. Unlike May’s 6 active repos, PRs, and issue discussions, this month had zero collaboration—no reviews, issues, or comments. The steady weekly cadence shows a disciplined push from coordination into hands-on, low-level firmware bringup.",
+        "highlights": [
+          "10 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: MRNIU/FreeRTOS-PortentaH7"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 10,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from gsoc-cn/gsoc-cn to MRNIU/FreeRTOS-PortentaH7"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-06-22",
+      "type": "ai_roast",
+      "ts": "2020-06-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-06-22 ~ 2020-06-28",
+        "content": "把未经测试的代码发出来，还在 commit message 里自豪地写上 “FreeRTOS now available on Portenta theoretical, not test” —— 这种级别的坦率，多数工程师通常要等到第三次事故之后才能练成。而当 “small change” 出现在 commit 信息里时，它表达的要么是改动真的小到不值一提，要么是大到让人不敢追问。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        }
+      }
+    },
+    {
       "id": "commit-e91b36faab2223ffa93d189985de1ad816972314",
       "type": "commit",
       "ts": "2020-06-24T16:04:38Z",
@@ -93,6 +191,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-06-01",
+      "type": "ai_roast",
+      "ts": "2020-06-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-06-01 ~ 2020-06-07",
+        "content": "3 commits, no PRs, no reviews — that classic \"First commit!\" energy of someone who just discovered GitHub has a green contribution chart. Adding a Slack invite link and a licence in the same week as that first commit is like furnishing a house before you've even poured the foundation.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/OSPP"
+        }
+      }
+    },
+    {
       "id": "commit-28a4cdb66f035dd684d909487079e7ca5e407c8a",
       "type": "commit",
       "ts": "2020-06-05T00:44:19Z",
@@ -129,36 +242,6 @@
         "message": "First commit!\nCode generated by STM32CubeMX",
         "additions": 1067300,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2020-06-01",
-      "type": "ai_roast",
-      "ts": "2020-06-07T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-06-01 ~ 2020-06-07",
-        "content": "3 commits, no PRs, no reviews — that classic \"First commit!\" energy of someone who just discovered GitHub has a green contribution chart. Adding a Slack invite link and a licence in the same week as that first commit is like furnishing a house before you've even poured the foundation.",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "Simple-XX/OSPP"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-06-22",
-      "type": "ai_roast",
-      "ts": "2020-06-28T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-06-22 ~ 2020-06-28",
-        "content": "把未经测试的代码发出来，还在 commit message 里自豪地写上 “FreeRTOS now available on Portenta theoretical, not test” —— 这种级别的坦率，多数工程师通常要等到第三次事故之后才能练成。而当 “small change” 出现在 commit 信息里时，它表达的要么是改动真的小到不值一提，要么是大到让人不敢追问。",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
-        }
       }
     }
   ]

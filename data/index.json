@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:25:32.723Z",
+  "generatedAt": "2026-06-02T08:31:28.194Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -1285,16 +1285,17 @@
     {
       "key": "2020-08",
       "file": "2020-08.json",
-      "eventCount": 14,
+      "eventCount": 15,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue": 1,
         "commit": 7,
-        "issue_comment": 4,
-        "ai_roast": 2
+        "ai_roast": 2,
+        "issue_comment": 4
       },
       "repoBreakdown": {
         "MRNIU/FreeRTOS-PortentaH7": 4,
@@ -1304,7 +1305,7 @@
     {
       "key": "2020-07",
       "file": "2020-07.json",
-      "eventCount": 12,
+      "eventCount": 13,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "MRNIU/MRNIU",
@@ -1313,6 +1314,7 @@
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 1,
         "commit": 10,
         "ai_roast": 1
@@ -1328,13 +1330,14 @@
     {
       "key": "2020-06",
       "file": "2020-06.json",
-      "eventCount": 12,
+      "eventCount": 14,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "Simple-XX/OSPP"
       ],
       "breakdown": {
         "commit": 10,
+        "ai_summary": 2,
         "ai_roast": 2
       },
       "repoBreakdown": {
@@ -1345,7 +1348,7 @@
     {
       "key": "2020-05",
       "file": "2020-05.json",
-      "eventCount": 24,
+      "eventCount": 25,
       "repos": [
         "MRNIU/FreeRTOS-PortentaH7",
         "Simple-XX/OSPP",
@@ -1355,11 +1358,12 @@
         "gsoc-cn/gsoc-cn"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 3,
         "issue_comment": 10,
         "commit": 7,
         "pull_request": 2,
-        "issue": 2,
-        "ai_roast": 3
+        "issue": 2
       },
       "repoBreakdown": {
         "arduino/summer-of-code": 3,
@@ -1373,17 +1377,18 @@
     {
       "key": "2020-04",
       "file": "2020-04.json",
-      "eventCount": 18,
+      "eventCount": 19,
       "repos": [
         "NicoHood/HID",
         "Simple-XX/SimpleKernel",
         "arduino-libraries/Keyboard"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 2,
         "issue_comment": 4,
         "issue": 1,
-        "commit": 11,
-        "ai_roast": 2
+        "commit": 11
       },
       "repoBreakdown": {
         "arduino-libraries/Keyboard": 4,
@@ -1394,7 +1399,7 @@
     {
       "key": "2020-03",
       "file": "2020-03.json",
-      "eventCount": 22,
+      "eventCount": 24,
       "repos": [
         "Simple-XX/SimpleKernel",
         "arduino-libraries/Keyboard",
@@ -1402,11 +1407,12 @@
         "hzcx998/XBook"
       ],
       "breakdown": {
+        "ai_summary": 2,
+        "ai_roast": 3,
         "issue_comment": 5,
         "pull_request": 1,
         "commit": 12,
-        "issue": 1,
-        "ai_roast": 3
+        "issue": 1
       },
       "repoBreakdown": {
         "arduino/summer-of-code": 3,
@@ -1418,18 +1424,19 @@
     {
       "key": "2020-02",
       "file": "2020-02.json",
-      "eventCount": 53,
+      "eventCount": 54,
       "repos": [
         "Simple-XX/SimpleCompiler",
         "Simple-XX/SimpleKernel",
         "hzcx998/XBook"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 42,
+        "ai_roast": 4,
         "pull_request": 5,
         "issue_comment": 1,
-        "issue": 1,
-        "ai_roast": 4
+        "issue": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 46,
@@ -1440,15 +1447,16 @@
     {
       "key": "2020-01",
       "file": "2020-01.json",
-      "eventCount": 30,
+      "eventCount": 31,
       "repos": [
         "Simple-XX/SimpleCompiler",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 27,
-        "pull_request": 1,
-        "ai_roast": 2
+        "ai_summary": 1,
+        "ai_roast": 2,
+        "pull_request": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 18,

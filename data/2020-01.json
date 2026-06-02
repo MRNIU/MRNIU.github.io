@@ -80,6 +80,49 @@
       }
     },
     {
+      "id": "ai-summary-month-2020-01",
+      "type": "ai_summary",
+      "ts": "2020-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-01-01",
+          "end": "2020-01-31",
+          "label": "2020-01"
+        },
+        "content": "In January, development continued on SimpleKernel with work on virtual memory management (vmm_init) and low-level CPU register functions, leading to a merged PR. The final week shifted focus to SimpleCompiler, where a lexer was built and parser work began. Code style updates and error handling improvements appeared consistently across both repositories. Compared to December, overall commit volume dropped, but the effort broadened from a single kernel focus to include compiler tooling.",
+        "highlights": [
+          "27 commits, 1 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 27,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from mixed to merge",
+            "Commit volume decreased by 15"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-198e1a90d059bd4ef48e72159c9172a6b459c435",
       "type": "commit",
       "ts": "2020-01-30T15:48:38Z",
@@ -142,6 +185,21 @@
         "message": "- Update codestyle file\n- Scanner works very well\n- Add two test file",
         "additions": 232,
         "deletions": 121
+      }
+    },
+    {
+      "id": "ai-roast-2020-01-13",
+      "type": "ai_roast",
+      "ts": "2020-01-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-01-13 ~ 2020-01-19",
+        "content": "10 个 commit 里，4 个是 “Update devlog” 条目——你在记录旅程上花的时间，比实际赶路还多。“vmm_init finished!” 还特意加了感叹号，看来你自己都挺意外的。“Update macor in vmm”——是 macro，那叫 macro。",
+        "stats": {
+          "totalCommits": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -340,6 +398,21 @@
       }
     },
     {
+      "id": "ai-roast-2019-12-30",
+      "type": "ai_roast",
+      "ts": "2020-01-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-12-30 ~ 2020-01-05",
+        "content": "A `Hello 2020!` commit message — nothing says “new year, same terrible documentation” like a change log entry that tells future-you absolutely nothing. Four commits total, and two of them simply say `update`, so your cross-year commitment to vagueness is admirably consistent.",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-91edee378108c5dbb6949d730c969d22f183c611",
       "type": "commit",
       "ts": "2020-01-04T15:54:09Z",
@@ -363,36 +436,6 @@
         "message": "Hello 2020!\n- Add Heap's test case\n- fix bug for `kfree`\nTODO: improve heap, rewrite vmm.c",
         "additions": 45,
         "deletions": 5
-      }
-    },
-    {
-      "id": "ai-roast-2019-12-30",
-      "type": "ai_roast",
-      "ts": "2020-01-05T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-12-30 ~ 2020-01-05",
-        "content": "A `Hello 2020!` commit message — nothing says “new year, same terrible documentation” like a change log entry that tells future-you absolutely nothing. Four commits total, and two of them simply say `update`, so your cross-year commitment to vagueness is admirably consistent.",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-01-13",
-      "type": "ai_roast",
-      "ts": "2020-01-19T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-01-13 ~ 2020-01-19",
-        "content": "10 个 commit 里，4 个是 “Update devlog” 条目——你在记录旅程上花的时间，比实际赶路还多。“vmm_init finished!” 还特意加了感叹号，看来你自己都挺意外的。“Update macor in vmm”——是 macro，那叫 macro。",
-        "stats": {
-          "totalCommits": 10,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

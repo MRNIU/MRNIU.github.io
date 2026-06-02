@@ -2,6 +2,46 @@
   "month": "2020-07",
   "events": [
     {
+      "id": "ai-summary-month-2020-07",
+      "type": "ai_summary",
+      "ts": "2020-07-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-07-01",
+          "end": "2020-07-31",
+          "label": "2020-07"
+        },
+        "content": "7 月的工程活动延续了 6 月在 MRNIU/FreeRTOS-PortentaH7 上的主线开发，提交量持平（均为 10 个 commit），主要聚焦 FreeRTOS 在 PortentaH7 上的任务创建 bug 修复、振荡器初始化与目录结构调整。与上月不同的是，活跃仓库从 2 个扩展至 5 个，并出现 MRNIU/MRNIU 等个人配置仓库的更新（如添加中选学生信息）以及 Simple-XX/SimpleCompiler 下的 1 条评论，显示出对周边项目与社区的少量参与。整体节奏仍以单人代码提交为主，缺少 PR 与代码审查动作，但低频的社交互动开始复苏。",
+        "highlights": [
+          "10 commits, 0 PRs, 0 reviews, 0 issues, 1 comments, 5 active repos",
+          "Top repo: MRNIU/FreeRTOS-PortentaH7"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 10,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 5,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/FreeRTOS-PortentaH7"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
       "id": "comment-Simple-XX/SimpleCompiler-1-87",
       "type": "issue_comment",
       "ts": "2020-07-20T07:01:14Z",
@@ -79,6 +119,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-06-29",
+      "type": "ai_roast",
+      "ts": "2020-07-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-06-29 ~ 2020-07-05",
+        "content": "8 commits across two repos, and the standout messages are “small change” and “update shell script, unavailable” — so you updated it, it still doesn’t work, and you went ahead and committed that? 2 “small change” commits in a single week means you’re either allergic to writing descriptive messages or you’re sneaking war crimes into the codebase one line at a time.",
+        "stats": {
+          "totalCommits": 8,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        }
+      }
+    },
+    {
       "id": "commit-7c8f0ac922aa49281eac4629b7bea28e28ccf996",
       "type": "commit",
       "ts": "2020-07-02T08:11:50Z",
@@ -141,21 +196,6 @@
         "message": "update shell script, unavailable",
         "additions": 252,
         "deletions": 228
-      }
-    },
-    {
-      "id": "ai-roast-2020-06-29",
-      "type": "ai_roast",
-      "ts": "2020-07-05T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-06-29 ~ 2020-07-05",
-        "content": "8 commits across two repos, and the standout messages are “small change” and “update shell script, unavailable” — so you updated it, it still doesn’t work, and you went ahead and committed that? 2 “small change” commits in a single week means you’re either allergic to writing descriptive messages or you’re sneaking war crimes into the codebase one line at a time.",
-        "stats": {
-          "totalCommits": 8,
-          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
-        }
       }
     }
   ]

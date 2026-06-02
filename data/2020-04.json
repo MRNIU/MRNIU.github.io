@@ -2,6 +2,63 @@
   "month": "2020-04",
   "events": [
     {
+      "id": "ai-summary-month-2020-04",
+      "type": "ai_summary",
+      "ts": "2020-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-04-01",
+          "end": "2020-04-30",
+          "label": "2020-04"
+        },
+        "content": "In April 2020, development was concentrated on Simple-XX/SimpleKernel, where 11 commits included finishing `task_test`, adding debug functions, and performing merges, with `merge` as the dominant commit type. Compared to March, commit volume remained similar but PR creation and review activity disappeared, and the sole issue plus comments shifted to arduino-libraries/Keyboard in the latter half of the month. The week of April 6–12 captured all coding output, while the rest of the month was quiet except for that external issue discussion. Overall, the period continued the focus on SimpleKernel but with a narrower, more self-contained workflow and less collaboration than the previous month.",
+        "highlights": [
+          "11 commits, 0 PRs, 0 reviews, 1 issues, 4 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 11,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 4,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from mixed to merge"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-04-20",
+      "type": "ai_roast",
+      "ts": "2020-04-26T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-04-20 ~ 2020-04-26",
+        "content": "0 commits, 0 PRs, 1 issue, and 4 comments on an Arduino Keyboard library — apparently you’ve become a full-time Arduino keyboard consultant now. Your kernel is gathering dust while you debate HID protocols. Priorities.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "arduino-libraries/Keyboard"
+        }
+      }
+    },
+    {
       "id": "comment-arduino-libraries/Keyboard-35-98",
       "type": "issue_comment",
       "ts": "2020-04-24T06:56:45Z",
@@ -60,6 +117,21 @@
         "issueNumber": 35,
         "issueTitle": "Refer to HID to improve the code",
         "body": "I do not currently have an Arduino Leonardo available, and I will solve this problem in the next few days."
+      }
+    },
+    {
+      "id": "ai-roast-2020-04-06",
+      "type": "ai_roast",
+      "ts": "2020-04-12T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-04-06 ~ 2020-04-12",
+        "content": "11 commits with messages like \"Add\", \"Add\", \"Update\", \"Update\" — you've boiled commit messages down to their most primeval, caveman-level grunts. \"task_test finished\" serves as the week's triumphant declaration, sitting quietly in a crowd of commits that say nothing at all.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -203,36 +275,6 @@
         "message": "Update",
         "additions": 17,
         "deletions": 13
-      }
-    },
-    {
-      "id": "ai-roast-2020-04-06",
-      "type": "ai_roast",
-      "ts": "2020-04-12T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-04-06 ~ 2020-04-12",
-        "content": "11 commits with messages like \"Add\", \"Add\", \"Update\", \"Update\" — you've boiled commit messages down to their most primeval, caveman-level grunts. \"task_test finished\" serves as the week's triumphant declaration, sitting quietly in a crowd of commits that say nothing at all.",
-        "stats": {
-          "totalCommits": 11,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-04-20",
-      "type": "ai_roast",
-      "ts": "2020-04-26T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-04-20 ~ 2020-04-26",
-        "content": "0 commits, 0 PRs, 1 issue, and 4 comments on an Arduino Keyboard library — apparently you’ve become a full-time Arduino keyboard consultant now. Your kernel is gathering dust while you debate HID protocols. Priorities.",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "arduino-libraries/Keyboard"
-        }
       }
     }
   ]

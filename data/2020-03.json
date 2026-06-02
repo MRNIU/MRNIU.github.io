@@ -2,6 +2,107 @@
   "month": "2020-03",
   "events": [
     {
+      "id": "ai-summary-quarter-2020-Q1",
+      "type": "ai_summary",
+      "ts": "2020-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2020-01-01",
+          "end": "2020-03-31",
+          "label": "2020-Q1"
+        },
+        "content": "本季度工程活动集中于 SimpleKernel 项目的内核基础功能构建，技术方向转向 C++ 重写，并同步推进代码风格规范化与错误处理机制的完善。主要项目主题围绕虚拟内存管理（vmm）和物理内存管理（pmm）的集成，以及一个用于解析的词法分析器雏形开发。相较于 2019-Q4，活跃仓库数从 2 个增至 5 个，提交量增长明显，工作模式从混合探索转向以 PR 合并为主。协作上仍以作者为主，通过合并外部 PR 引入内存管理模块，但持续缺少代码审查环节。社区互动评论数下降，而 PR 数量从 2 个增至 7 个，表明合并节奏加快、开发更强调产出物交付。",
+        "highlights": [
+          "81 commits, 7 PRs, 0 reviews, 2 issues, 6 comments, 5 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 81,
+          "totalPRs": 7,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 6,
+          "activeRepos": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from mixed to merge",
+            "Commit volume increased by 22"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2020-03",
+      "type": "ai_summary",
+      "ts": "2020-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-03-01",
+          "end": "2020-03-31",
+          "label": "2020-03"
+        },
+        "content": "2020 年 3 月开发节奏明显放缓，共产生 12 个 commit、1 个 PR 和 1 个 issue，主力仓库仍为 Simple-XX/SimpleKernel。相比上月的大规模 merge 动作，本月提交多为碎片化的 Update 与 backup，并完成了 alloc_page 的内存分配逻辑。下旬在 arduino-libraries/Keyboard 仓库发起 1 个 PR 并进行 4 条评论，显示出向其他硬件交互项目的轻量探索。整体活动从密集集成转向断续维护与多项目间的小范围互动。",
+        "highlights": [
+          "12 commits, 1 PRs, 0 reviews, 1 issues, 5 comments, 4 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 12,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 5,
+          "activeRepos": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to mixed",
+            "Commit volume decreased by 30"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-03-23",
+      "type": "ai_roast",
+      "ts": "2020-03-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-03-23 ~ 2020-03-29",
+        "content": "Zero commits, one PR, and 4 comments on arduino-libraries/Keyboard — you’ve gone from building a kernel to leaving remarks on an Arduino keyboard library. Your attention span truly spans an ocean in breadth and a puddle in depth.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "arduino-libraries/Keyboard"
+        }
+      }
+    },
+    {
       "id": "comment-arduino/summer-of-code-76-102",
       "type": "issue_comment",
       "ts": "2020-03-27T00:11:37Z",
@@ -60,6 +161,21 @@
         "title": "Refer to HID to improve the code",
         "state": "closed",
         "body": "Hey guys, I tried replace current code with HID's keyboard control code.\r\nNow we support more keys, and US/DE layout.\r\nPlease point out any mistakes.\r\nThanks!"
+      }
+    },
+    {
+      "id": "ai-roast-2020-03-09",
+      "type": "ai_roast",
+      "ts": "2020-03-15T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-03-09 ~ 2020-03-15",
+        "content": "九个 commit：七个是 “Update”，一个是 “alloc_page finished”——你的 Git 日志简直就是一个写满 “Update” 的静态网页，偶尔弹出一条突发新闻。现在跑 git log --oneline 干脆给你渲染一个加载界面。",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -205,6 +321,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-03-02",
+      "type": "ai_roast",
+      "ts": "2020-03-08T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-03-02 ~ 2020-03-08",
+        "content": "Three commits: \"Update\", \"Update kernel stack\", and \"backup\" — the word \"backup\" as a commit message radiates the energy of someone about to do something very dangerous to their codebase. This is the git equivalent of saying \"hold my beer.\"",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-bbab14455b26227e1e55958b1e0258b93f34a57f",
       "type": "commit",
       "ts": "2020-03-07T08:10:22Z",
@@ -241,51 +372,6 @@
         "message": "backup",
         "additions": 53,
         "deletions": 17
-      }
-    },
-    {
-      "id": "ai-roast-2020-03-02",
-      "type": "ai_roast",
-      "ts": "2020-03-08T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-03-02 ~ 2020-03-08",
-        "content": "Three commits: \"Update\", \"Update kernel stack\", and \"backup\" — the word \"backup\" as a commit message radiates the energy of someone about to do something very dangerous to their codebase. This is the git equivalent of saying \"hold my beer.\"",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-03-09",
-      "type": "ai_roast",
-      "ts": "2020-03-15T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-03-09 ~ 2020-03-15",
-        "content": "九个 commit：七个是 “Update”，一个是 “alloc_page finished”——你的 Git 日志简直就是一个写满 “Update” 的静态网页，偶尔弹出一条突发新闻。现在跑 git log --oneline 干脆给你渲染一个加载界面。",
-        "stats": {
-          "totalCommits": 9,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-03-23",
-      "type": "ai_roast",
-      "ts": "2020-03-29T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-03-23 ~ 2020-03-29",
-        "content": "Zero commits, one PR, and 4 comments on arduino-libraries/Keyboard — you’ve gone from building a kernel to leaving remarks on an Arduino keyboard library. Your attention span truly spans an ocean in breadth and a puddle in depth.",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "arduino-libraries/Keyboard"
-        }
       }
     }
   ]

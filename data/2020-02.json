@@ -2,6 +2,49 @@
   "month": "2020-02",
   "events": [
     {
+      "id": "ai-summary-month-2020-02",
+      "type": "ai_summary",
+      "ts": "2020-02-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-02-01",
+          "end": "2020-02-29",
+          "label": "2020-02"
+        },
+        "content": "In February 2020, kernel development in Simple-XX/SimpleKernel accelerated to 42 commits and 5 merged PRs, up from 27 commits in the previous month. The primary work streams centered on memory management, with feature branches for heap allocation, virtual paging, and physical memory manager being merged (PRs #19, #20, #22, #23). Task switching improvements and bug fixes in slab allocation and pmm also appeared. Recurring habits included frequent small \"update\" commits and regular devlog entries, continuing the merge-driven, incremental workflow established in January.",
+        "highlights": [
+          "42 commits, 5 PRs, 0 reviews, 1 issues, 1 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 42,
+          "totalPRs": 5,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 1,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed merge"
+          ],
+          "changedSincePrevious": [
+            "Commit volume increased by 15"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-7f17cbf6fe7f3c7a66860b5d2b00ac1541125e8f",
       "type": "commit",
       "ts": "2020-02-26T01:06:45Z",
@@ -25,6 +68,21 @@
         "message": "update",
         "additions": 187,
         "deletions": 139
+      }
+    },
+    {
+      "id": "ai-roast-2020-02-17",
+      "type": "ai_roast",
+      "ts": "2020-02-23T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-02-17 ~ 2020-02-23",
+        "content": "5 个 commit：三个 \"Update\"，一个 devlog 更新，外加一个 \"Recover the previous kernel_stack\" —— 所以你这周基本在撤销上周的成果。内核栈得从回收站里抢救回来，跟恢复被误删的文件一样。进步啊！",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -158,6 +216,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-02-10",
+      "type": "ai_roast",
+      "ts": "2020-02-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-02-10 ~ 2020-02-16",
+        "content": "\"Barely run\" is the most honest commit message I've ever seen—at last, some truth in version control. You delivered 14 commits, including \"fix bug\" and \"Bug fixing\" as distinct entries, because clearly one round of bug fixing wasn't enough. Four \"Update\" commits to preserve your brand consistency.",
+        "stats": {
+          "totalCommits": 14,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-a07f1c9ee2d18ba5ba5a840ac07f34cf1c783b5d",
       "type": "commit",
       "ts": "2020-02-15T13:25:01Z",
@@ -272,6 +345,21 @@
         "message": "update",
         "additions": 5,
         "deletions": 5
+      }
+    },
+    {
+      "id": "ai-roast-2020-02-03",
+      "type": "ai_roast",
+      "ts": "2020-02-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-02-03 ~ 2020-02-09",
+        "content": "Nineteen commits and five PRs across SimpleKernel — you merged four of your own in one week, which is just having a conversation with yourself through pull requests. The commit message \"ff management almost there\" is so cut short it could mean literally anything. The slab allocator bug description cuts off mid-sentence, much like your attention span.",
+        "stats": {
+          "totalCommits": 19,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -649,51 +737,6 @@
         "stats": {
           "totalCommits": 13,
           "topRepo": "Simple-XX/SimpleCompiler"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-02-03",
-      "type": "ai_roast",
-      "ts": "2020-02-09T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-02-03 ~ 2020-02-09",
-        "content": "Nineteen commits and five PRs across SimpleKernel — you merged four of your own in one week, which is just having a conversation with yourself through pull requests. The commit message \"ff management almost there\" is so cut short it could mean literally anything. The slab allocator bug description cuts off mid-sentence, much like your attention span.",
-        "stats": {
-          "totalCommits": 19,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-02-10",
-      "type": "ai_roast",
-      "ts": "2020-02-16T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-02-10 ~ 2020-02-16",
-        "content": "\"Barely run\" is the most honest commit message I've ever seen—at last, some truth in version control. You delivered 14 commits, including \"fix bug\" and \"Bug fixing\" as distinct entries, because clearly one round of bug fixing wasn't enough. Four \"Update\" commits to preserve your brand consistency.",
-        "stats": {
-          "totalCommits": 14,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-02-17",
-      "type": "ai_roast",
-      "ts": "2020-02-23T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-02-17 ~ 2020-02-23",
-        "content": "5 个 commit：三个 \"Update\"，一个 devlog 更新，外加一个 \"Recover the previous kernel_stack\" —— 所以你这周基本在撤销上周的成果。内核栈得从回收站里抢救回来，跟恢复被误删的文件一样。进步啊！",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "Simple-XX/SimpleKernel"
         }
       }
     }
