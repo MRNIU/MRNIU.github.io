@@ -2,6 +2,49 @@
   "month": "2023-05",
   "events": [
     {
+      "id": "ai-summary-month-2023-05",
+      "type": "ai_summary",
+      "ts": "2023-05-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-05-01",
+          "end": "2023-05-31",
+          "label": "2023-05"
+        },
+        "content": "本月 34 个 commit 中大量为 style 提交，通过 11 个 PR 对 SimpleKernel 进行格式清理，同时合入了堆内存、libcxx 的 clibs 及栈溢出保护等少量功能改进。 5 月初短暂活跃于 MRNIU/nzh_factorio_mod，引入了夜视、手搓配方、雷达启动等 mod 特性。与上月侧重性能优化相比， 5 月整体节奏放缓，产出以维护性重构和代码整洁为主，外带一次游戏模组的探索性工作。",
+        "highlights": [
+          "34 commits, 11 PRs, 0 reviews, 0 issues, 1 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: style",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 34,
+          "totalPRs": 11,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from perf to style",
+            "Commit volume decreased by 41"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-Simple-XX/SimpleKernel-156-48",
       "type": "issue_comment",
       "ts": "2023-05-22T00:09:07Z",
@@ -11,6 +54,21 @@
         "issueNumber": 156,
         "issueTitle": "想知道这个运行的结果是什么意思？",
         "body": "这里输出的是 riscv 寄存器的一些信息，你可以在 https://riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf 的 chapter4 找到它们的描述。\r\n打印这些内容是为了方便追踪内核的状态。"
+      }
+    },
+    {
+      "id": "ai-roast-2023-05-08",
+      "type": "ai_roast",
+      "ts": "2023-05-14T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-05-08 ~ 2023-05-14",
+        "content": "8 of the 18 commits are literally \"style(*): update\" — at this point you could have a cron job push that exact message every hour and nobody would spot the difference. You opened 11 PRs and received zero reviews, which makes perfect sense, because who's going to look at a diff where the message just says \"update\" eight times? SimpleKernel is earning its name: the commit messages sure aren't getting complex.",
+        "stats": {
+          "totalCommits": 18,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -391,6 +449,21 @@
       }
     },
     {
+      "id": "ai-roast-2023-05-01",
+      "type": "ai_roast",
+      "ts": "2023-05-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-05-01 ~ 2023-05-07",
+        "content": "在 Factorio 模组上怒提 16 个 commit，其中三个一模一样地写着 \"perf(startup): more item\"，仿佛盼着编译器哪天能自己悟出点什么。英文提交里混着手搓和雷达，一股双语混沌能量迎面扑来。至少你在优化游戏模组这件事上投入的劲头，别人通常都留给——嗯，正儿八经的活儿。",
+        "stats": {
+          "totalCommits": 16,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
+      }
+    },
+    {
       "id": "commit-0d5561a542446d2f9f75a072fe6bb1d0f761a7fd",
       "type": "commit",
       "ts": "2023-05-04T16:50:49Z",
@@ -596,36 +669,6 @@
         "message": "refactor(tinyequ): Tiny_Equipment\n\nSigned-off-by: Zone.N <Zone.NiuZH@hotmail.com>",
         "additions": 44,
         "deletions": 1
-      }
-    },
-    {
-      "id": "ai-roast-2023-05-01",
-      "type": "ai_roast",
-      "ts": "2023-05-07T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-05-01 ~ 2023-05-07",
-        "content": "在 Factorio 模组上怒提 16 个 commit，其中三个一模一样地写着 \"perf(startup): more item\"，仿佛盼着编译器哪天能自己悟出点什么。英文提交里混着手搓和雷达，一股双语混沌能量迎面扑来。至少你在优化游戏模组这件事上投入的劲头，别人通常都留给——嗯，正儿八经的活儿。",
-        "stats": {
-          "totalCommits": 16,
-          "topRepo": "MRNIU/nzh_factorio_mod"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2023-05-08",
-      "type": "ai_roast",
-      "ts": "2023-05-14T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-05-08 ~ 2023-05-14",
-        "content": "8 of the 18 commits are literally \"style(*): update\" — at this point you could have a cron job push that exact message every hour and nobody would spot the difference. You opened 11 PRs and received zero reviews, which makes perfect sense, because who's going to look at a diff where the message just says \"update\" eight times? SimpleKernel is earning its name: the commit messages sure aren't getting complex.",
-        "stats": {
-          "totalCommits": 18,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

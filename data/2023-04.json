@@ -2,6 +2,64 @@
   "month": "2023-04",
   "events": [
     {
+      "id": "ai-roast-2023-04-24",
+      "type": "ai_roast",
+      "ts": "2023-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-04-24 ~ 2023-04-30",
+        "content": "With 5 commits split between a Factorio mod and kernel docs, you embody the duality of man: optimizing interrupt handlers one moment and factory throughput the next. \"refactor(time): time done\" has to be the most ominously philosophical commit message I’ve ever encountered. And now you’re starting yet another repo, nzh_factorio_mod, because apparently SimpleKernel, SimpleCompiler, SimpleGameEngine, and a resume just aren’t enough unfinished projects.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2023-04",
+      "type": "ai_summary",
+      "ts": "2023-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-04-01",
+          "end": "2023-04-30",
+          "label": "2023-04"
+        },
+        "content": "2023 年 4 月，工程活动显著提速，总提交量从 3 月的 32 个跃升至 75 个， PR 从 1 个增至 18 个，活跃仓库仍以 Simple-XX/SimpleKernel 为核心。工作重心由上月的 style 转向 perf，大量提交围绕取消 Bochs 支持、优化链接脚本、重构 time 模块以及合并 lib、heap、vmm 等子模块。 4 月上旬集中进行了 55 次提交，中旬通过 18 个 PR 完成合并与代码审查，月底另有少量提交发生在 MRNIU/nzh_factorio_mod 仓库。整体上，本月从代码风格微调转为构建性能优化和子系统整合，延续了对 SimpleKernel 的持续投入。",
+        "highlights": [
+          "75 commits, 18 PRs, 0 reviews, 0 issues, 9 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: perf",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 75,
+          "totalPRs": 18,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 9,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from style to perf",
+            "Commit volume increased by 43"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-b69fd00c7097df0972ae6db6a0bc8bcdd89708dd",
       "type": "commit",
       "ts": "2023-04-25T09:59:45Z",
@@ -64,6 +122,21 @@
         "message": "doc(2023): O3Sim\n\nSigned-off-by: Zone.N <Zone.NiuZH@hotmail.com>",
         "additions": 46,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2023-04-10",
+      "type": "ai_roast",
+      "ts": "2023-04-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-04-10 ~ 2023-04-16",
+        "content": "15 commits, 18 PRs — having more PRs than commits is a git-defying accomplishment. Four identical “perf(build): not support bochs any more” commits: bochs got killed off four times this week, each death more theatrical than the last. The Chinese commit “更新要求” tossed in among the English ones gives off bilingual energy, like a developer who can’t decide which language to be vague in.",
+        "stats": {
+          "totalCommits": 15,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -601,6 +674,21 @@
         "message": "style(clangformat): update\n\nSigned-off-by: Zone.N <Zone.NiuZH@hotmail.com>",
         "additions": 343,
         "deletions": 84
+      }
+    },
+    {
+      "id": "ai-roast-2023-04-03",
+      "type": "ai_roast",
+      "ts": "2023-04-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-04-03 ~ 2023-04-09",
+        "content": "55 commits: the merge marathon rolls on with another week of wedging subsystems together like IKEA furniture missing the instructions. Five consecutive \"perf(boot): update\" commits prove that boot performance improves one vague commit at a time. You went from merge(printf) to merge(heap) to merge(vmm) — essentially reassembling the entire kernel commit by commit, which is a creative alternative to just using branches.",
+        "stats": {
+          "totalCommits": 55,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -1330,51 +1418,6 @@
         "stats": {
           "totalCommits": 29,
           "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2023-04-03",
-      "type": "ai_roast",
-      "ts": "2023-04-09T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-04-03 ~ 2023-04-09",
-        "content": "55 commits: the merge marathon rolls on with another week of wedging subsystems together like IKEA furniture missing the instructions. Five consecutive \"perf(boot): update\" commits prove that boot performance improves one vague commit at a time. You went from merge(printf) to merge(heap) to merge(vmm) — essentially reassembling the entire kernel commit by commit, which is a creative alternative to just using branches.",
-        "stats": {
-          "totalCommits": 55,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2023-04-10",
-      "type": "ai_roast",
-      "ts": "2023-04-16T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-04-10 ~ 2023-04-16",
-        "content": "15 commits, 18 PRs — having more PRs than commits is a git-defying accomplishment. Four identical “perf(build): not support bochs any more” commits: bochs got killed off four times this week, each death more theatrical than the last. The Chinese commit “更新要求” tossed in among the English ones gives off bilingual energy, like a developer who can’t decide which language to be vague in.",
-        "stats": {
-          "totalCommits": 15,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2023-04-24",
-      "type": "ai_roast",
-      "ts": "2023-04-30T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-04-24 ~ 2023-04-30",
-        "content": "With 5 commits split between a Factorio mod and kernel docs, you embody the duality of man: optimizing interrupt handlers one moment and factory throughput the next. \"refactor(time): time done\" has to be the most ominously philosophical commit message I’ve ever encountered. And now you’re starting yet another repo, nzh_factorio_mod, because apparently SimpleKernel, SimpleCompiler, SimpleGameEngine, and a resume just aren’t enough unfinished projects.",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "MRNIU/nzh_factorio_mod"
         }
       }
     }

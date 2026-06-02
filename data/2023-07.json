@@ -2,6 +2,45 @@
   "month": "2023-07",
   "events": [
     {
+      "id": "ai-summary-month-2023-07",
+      "type": "ai_summary",
+      "ts": "2023-07-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-07-01",
+          "end": "2023-07-31",
+          "label": "2023-07"
+        },
+        "content": "2023 年 7 月的工作重心从代码实现转向了 issue 梳理，全月未产生 commit、PR 或 review，但在 MRNIU/SimpleKernel 仓库集中创建了 26 个 issue 和 2 条评论，表明活动以问题跟踪与规划为主。相比 6 月在 Simple-XX/SimpleKernel 提交了 3 个 PR 和 6 个 issue，本月明显从提交代码转向了需求或缺陷的记录，且工作仓库发生了迁移。所有活动集中出现在 7 月 10 日至 16 日这一周，体现出短期内批量整理问题的习惯。整体上，本月延续了上个月的低强度交互（评论数均为 2 条），但改变了主要贡献类型和仓库位置。",
+        "highlights": [
+          "0 commits, 0 PRs, 0 reviews, 26 issues, 2 comments, 2 active repos",
+          "Top repo: MRNIU/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 26,
+          "totalComments": 2,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to MRNIU/SimpleKernel"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-MRNIU/SimpleKernel-14-44",
       "type": "issue_comment",
       "ts": "2023-07-16T15:48:06Z",
@@ -11,6 +50,21 @@
         "issueNumber": 14,
         "issueTitle": "内核构建",
         "body": "目前发现与链接顺序有关，reloc_${TARGET_ARCH}.o 需要在 text 段最开始"
+      }
+    },
+    {
+      "id": "ai-roast-2023-07-10",
+      "type": "ai_roast",
+      "ts": "2023-07-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-07-10 ~ 2023-07-16",
+        "content": "26 issues opened and zero commits — you essentially turned the week into writing an obsessively detailed to-do list, then proudly ignored every single item. It’s the GitHub version of tidying your desk instead of studying for the exam. SimpleKernel’s issue tracker has become your personal journal.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
       }
     },
     {
@@ -361,21 +415,6 @@
         "title": "跨平台支持",
         "state": "closed",
         "body": "在不同的 host 上编译不同的 target，支持以下组合\n\n|      host     | target  | gcc | clang |\n|:-------------:|:-------:|:-------------:|:-------------:|\n| x86_64-osx    | x86_64  | x86_64_elf-gcc | TEST |\n| x86_64-osx    | aarch64 | aarch64-unknown-linux-gnu-gcc | TEST |\n| x86_64-osx    | riscv64 | riscv64-unknown-elf-gcc | TEST |\n| aarch64-osx   | x86_64  | TODO | TODO |\n| aarch64-osx   | aarch64 | TODO | TODO |\n| aarch64-osx   | riscv64 | TODO | TODO |\n| x86_64-ubuntu | x86_64  | gcc | TEST |\n| x86_64-ubuntu | aarch64 | aarch64-linux-gnu-gcc | TEST |\n| x86_64-ubuntu | riscv64 | riscv64-linux-gnu-gcc | TEST |\n| aarch64-ubuntu | x86_64  | TODO | TEST |\n| aarch64-ubuntu | aarch64 | TODO | TEST |\n| aarch64-ubuntu | riscv64 | TODO | TEST |\n| riscv64-ubuntu | x86_64  | TODO | TODO |\n| riscv64-ubuntu | aarch64 | TODO | TODO |\n| riscv64-ubuntu | riscv64 | TODO | TODO |\n\nhost:    编译平台\ntarget: 内核要运行的平台\ngcc:     使用的 gcc 名称\nclang:  使用的 clang 参数\nTODO: 暂无测试条件\nTEST:   需要进一步验证。"
-      }
-    },
-    {
-      "id": "ai-roast-2023-07-10",
-      "type": "ai_roast",
-      "ts": "2023-07-16T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-07-10 ~ 2023-07-16",
-        "content": "26 issues opened and zero commits — you essentially turned the week into writing an obsessively detailed to-do list, then proudly ignored every single item. It’s the GitHub version of tidying your desk instead of studying for the exam. SimpleKernel’s issue tracker has become your personal journal.",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "MRNIU/SimpleKernel"
-        }
       }
     }
   ]

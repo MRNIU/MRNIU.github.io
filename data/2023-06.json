@@ -2,6 +2,91 @@
   "month": "2023-06",
   "events": [
     {
+      "id": "ai-summary-quarter-2023-Q2",
+      "type": "ai_summary",
+      "ts": "2023-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2023-04-01",
+          "end": "2023-06-30",
+          "label": "2023-Q2"
+        },
+        "content": "2023-Q2 技术重心从上一季度的代码风格调整全面转向性能工程，围绕 Simple-XX/SimpleKernel 开展了大量构建系统、启动流程与内存管理的优化工作。主要项目主题包括反复消除 bochs 支持以提升编译性能、重构 time 子系统、统一链接脚本以及合并 lib、heap、vmm 等核心模块，同时补充了 uefi 规范等文档。协作上仍以独立提交 PR 为主，整个季度没有出现代码 Review，交互集中在 6 个 Issue 和少量评论中。相比 Q1 仅 32 次 commit 的平稳节奏，本季度 commit 数增至 109 个、PR 数由 1 个跃升至 32 个，活跃度显著提高且呈现出前高后低的分布， 4 月为最高峰。",
+        "highlights": [
+          "109 commits, 32 PRs, 0 reviews, 6 issues, 12 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: perf",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 109,
+          "totalPRs": 32,
+          "totalReviews": 0,
+          "totalIssues": 6,
+          "totalComments": 12,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from style to perf",
+            "Commit volume increased by 77"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2023-06",
+      "type": "ai_summary",
+      "ts": "2023-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-06-01",
+          "end": "2023-06-30",
+          "label": "2023-06"
+        },
+        "content": "6 月活动重心从 5 月密集的代码风格调整（34 个 commit）明显转向以 Issue 和 PR 为主的审查讨论模式。在 Simple-XX/SimpleKernel 仓库提交了 0 个 commit、3 个 PR 并创建了 6 个 Issue，同时产生 2 条评论，显示开发节奏由直接编码切换为设计评审与问题追踪。整体活跃度较上月下降，但围绕内核项目持续推动。",
+        "highlights": [
+          "0 commits, 3 PRs, 0 reviews, 6 issues, 2 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 3,
+          "totalReviews": 0,
+          "totalIssues": 6,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from style to mixed",
+            "Commit volume decreased by 34"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-Simple-XX/SimpleKernel-169-46",
       "type": "issue_comment",
       "ts": "2023-06-29T02:44:52Z",
@@ -11,6 +96,21 @@
         "issueNumber": 169,
         "issueTitle": "[HELP]无法生成iso文件",
         "body": "@Exbilar \r\nhi，可以把你的解决方式贴上来，帮助其他同学。"
+      }
+    },
+    {
+      "id": "ai-roast-2023-06-12",
+      "type": "ai_roast",
+      "ts": "2023-06-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-06-12 ~ 2023-06-18",
+        "content": "0 commit，3 个 PR，6 个 issue——恭喜，你轻松达成了每个项目经理的梦想：全是规划，零编码。在 SimpleKernel 上开着 issue 却一行代码没写，就只是给自己提交 bug 报告罢了。你留下的唯一一条评论，大概是“我稍后再搞”。",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -140,21 +240,6 @@
         "title": "Boot",
         "state": "merged",
         "body": ""
-      }
-    },
-    {
-      "id": "ai-roast-2023-06-12",
-      "type": "ai_roast",
-      "ts": "2023-06-18T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-06-12 ~ 2023-06-18",
-        "content": "0 commit，3 个 PR，6 个 issue——恭喜，你轻松达成了每个项目经理的梦想：全是规划，零编码。在 SimpleKernel 上开着 issue 却一行代码没写，就只是给自己提交 bug 报告罢了。你留下的唯一一条评论，大概是“我稍后再搞”。",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

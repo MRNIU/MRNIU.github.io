@@ -288,6 +288,90 @@
       }
     },
     {
+      "id": "ai-summary-quarter-2023-Q1",
+      "type": "ai_summary",
+      "ts": "2023-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2023-01-01",
+          "end": "2023-03-31",
+          "label": "2023-Q1"
+        },
+        "content": "2023-Q1 活动从上一季度的沉寂中显著恢复，提交量从 0 跃升至 32 个 commit，工作重心也由 Simple-XX/SimpleGameEngine 彻底转向 Simple-XX/SimpleKernel。本季度主要围绕内核基础模块的合并展开，通过大量 merge 将虚拟内存、物理内存、启动信息解析和格式化输出等子系统逐步集成到主分支。开发过程以个人独立推进为主，仅有 1 个 PR 且无代码审查记录，协作模式仍属轻量级。同时，整体技术方向明显侧重代码规范化，大量提交为 style 和 comment 类型，旨在统一风格、消除编译警告和适配新版 OpenSBI 与工具链。此外，仓库活跃数从 1 个增至 3 个，并在 3 月集中爆发，反映出工程活动的复苏和专注领域的切换。",
+        "highlights": [
+          "32 commits, 1 PRs, 0 reviews, 1 issues, 1 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: style",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 32,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 1,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleGameEngine to Simple-XX/SimpleKernel",
+            "Dominant semantic tag changed from mixed to style",
+            "Commit volume increased by 32"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2023-03",
+      "type": "ai_summary",
+      "ts": "2023-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-03-01",
+          "end": "2023-03-31",
+          "label": "2023-03"
+        },
+        "content": "2023 年 3 月的工程活动集中爆发在月底，共产生 32 个 commit，绝大部分落在 Simple-XX/SimpleKernel 仓库，整体以 `style(*): update` 和 `merge(...)` 为主，通过一系列合并将 vmm、pmm、printf、boot 等模块整合进主线，并伴随大量代码风格统一、注释更新及编译警告修复。相较 2022 年 11 月活跃仓库从 SimpleGameEngine 完全转向 SimpleKernel，且活动量从 0 次提交跃升到 32 次，反映出项目在暂停后重新聚焦于内核开发，并补全了 boot 流程与内存管理的基础设施。重复出现的 `style(*): update` 和 `fix` 类提交表明开发者习惯在合并功能后立即进行风格整理与工具链适配。",
+        "highlights": [
+          "32 commits, 1 PRs, 0 reviews, 0 issues, 1 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: style",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 32,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleGameEngine to Simple-XX/SimpleKernel",
+            "Dominant semantic tag changed from mixed to style",
+            "Commit volume increased by 32"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-bc97c6061ff5749e81f5eb3f38b81ff1c48e8319",
       "type": "commit",
       "ts": "2023-03-30T10:11:13Z",

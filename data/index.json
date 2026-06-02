@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:01:44.020Z",
+  "generatedAt": "2026-06-02T08:06:54.955Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -701,15 +701,16 @@
     {
       "key": "2023-07",
       "file": "2023-07.json",
-      "eventCount": 29,
+      "eventCount": 30,
       "repos": [
         "MRNIU/SimpleKernel",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 2,
-        "issue": 26,
-        "ai_roast": 1
+        "ai_roast": 1,
+        "issue": 26
       },
       "repoBreakdown": {
         "MRNIU/SimpleKernel": 15,
@@ -719,15 +720,16 @@
     {
       "key": "2023-06",
       "file": "2023-06.json",
-      "eventCount": 12,
+      "eventCount": 14,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "issue_comment": 2,
+        "ai_roast": 1,
         "issue": 6,
-        "pull_request": 3,
-        "ai_roast": 1
+        "pull_request": 3
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 11
@@ -736,16 +738,17 @@
     {
       "key": "2023-05",
       "file": "2023-05.json",
-      "eventCount": 48,
+      "eventCount": 49,
       "repos": [
         "MRNIU/nzh_factorio_mod",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 1,
+        "ai_roast": 2,
         "commit": 34,
-        "pull_request": 11,
-        "ai_roast": 2
+        "pull_request": 11
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 30,
@@ -755,17 +758,18 @@
     {
       "key": "2023-04",
       "file": "2023-04.json",
-      "eventCount": 106,
+      "eventCount": 107,
       "repos": [
         "MRNIU/nzh_factorio_mod",
         "Simple-XX/OSPP",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_roast": 4,
+        "ai_summary": 1,
         "commit": 75,
         "pull_request": 18,
-        "issue_comment": 9,
-        "ai_roast": 4
+        "issue_comment": 9
       },
       "repoBreakdown": {
         "MRNIU/nzh_factorio_mod": 4,
@@ -776,7 +780,7 @@
     {
       "key": "2023-03",
       "file": "2023-03.json",
-      "eventCount": 34,
+      "eventCount": 36,
       "repos": [
         "Simple-XX/OSPP",
         "Simple-XX/SimpleGameEngine",
@@ -784,6 +788,7 @@
       ],
       "breakdown": {
         "commit": 32,
+        "ai_summary": 2,
         "issue_comment": 1,
         "pull_request": 1
       },
@@ -808,16 +813,27 @@
       }
     },
     {
+      "key": "2022-12",
+      "file": "2022-12.json",
+      "eventCount": 2,
+      "repos": [],
+      "breakdown": {
+        "ai_summary": 2
+      },
+      "repoBreakdown": {}
+    },
+    {
       "key": "2022-11",
       "file": "2022-11.json",
-      "eventCount": 4,
+      "eventCount": 5,
       "repos": [
         "Simple-XX/SimpleGameEngine"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 1,
         "issue_comment": 2,
-        "pull_request": 1,
-        "ai_roast": 1
+        "pull_request": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleGameEngine": 3

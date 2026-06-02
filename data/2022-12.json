@@ -1,0 +1,91 @@
+{
+  "month": "2022-12",
+  "events": [
+    {
+      "id": "ai-summary-year-2022",
+      "type": "ai_summary",
+      "ts": "2022-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2022-01-01",
+          "end": "2022-12-31",
+          "label": "2022"
+        },
+        "content": "Development on Simple-XX/SimpleKernel continued in 2022 but at a significantly slower pace than the prior year, recording 151 commits and 24 PRs with a shift from feature work toward stability and polish. The dominant semantic tag flipped from “feat” to “fix,” reflecting a year spent resolving bugs and refining existing code rather than introducing new capabilities. Core subsystems like interrupt handling, virtual memory, and heap allocation received intense attention, with commits that added kmalloc/kfree, fixed page-table flags, restructured context switching, and removed debug scaffolding after validation. Activity was heavily front-loaded into January (103 commits) with only small pulses in April and June, suggesting deep, concentrated work sessions separated by long quiet periods. Collaboration remained nearly absent, with just one code review across the entire year, underscoring the project’s solo nature. The strongest engineering habits visible are consistent, semantically tagged commit messages (pref, fix, feat, test, style) and a disciplined cycle of implementing features, testing, fixing, and then optimizing—demonstrating a methodical approach to kernel maintenance even amid low overall output.",
+        "highlights": [
+          "151 commits, 24 PRs, 1 reviews, 2 issues, 9 comments, 10 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 151,
+          "totalPRs": 24,
+          "totalReviews": 1,
+          "totalIssues": 2,
+          "totalComments": 9,
+          "activeRepos": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to fix",
+            "Commit volume decreased by 477"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2022-Q4",
+      "type": "ai_summary",
+      "ts": "2022-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2022-10-01",
+          "end": "2022-12-31",
+          "label": "2022-Q4"
+        },
+        "content": "In Q4 2022, the only active repository shifted from Simple-XX/SimpleKernel to Simple-XX/SimpleGameEngine, with development entirely focused on the game engine project. No commits were made, but 1 PR and 2 comments suggest a review-oriented or design-discussion phase rather than active coding. Compared to the previous quarter, which had 2 commits tagged as \"feat\" and centered on kernel work, this period shows a deliberate pivot in technical direction toward game engine experimentation. Collaboration patterns remained lightweight, with no formal reviews, though the presence of comments on the single PR indicates peer discussion. Overall, the change from 2 active repos and concrete feature commits to 1 repo with no commits and only conversational contributions marks a clear handoff from feature development to early-stage exploration or planning.",
+        "highlights": [
+          "0 commits, 1 PRs, 0 reviews, 0 issues, 2 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleGameEngine"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleGameEngine"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to Simple-XX/SimpleGameEngine",
+            "Dominant semantic tag changed from feat to mixed"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -2,6 +2,61 @@
   "month": "2022-11",
   "events": [
     {
+      "id": "ai-summary-month-2022-11",
+      "type": "ai_summary",
+      "ts": "2022-11-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2022-11-01",
+          "end": "2022-11-30",
+          "label": "2022-11"
+        },
+        "content": "2022 年 11 月仅有 0 个 commit、1 个 PR 和 2 条评论，活跃仓库仅剩 Simple-XX/SimpleGameEngine，整体产出量大幅下降。与 6 月围绕 SimpleKernel 的 11 个 commit 与多仓库活跃相比，本月的工作重心转移至 SimpleGameEngine，但实际只停留在 Pull Request 讨论阶段，没有任何编码提交。该月的活动模式从高频开发转变为零星维护，未展现出固定的开发习惯或延续性节奏。",
+        "highlights": [
+          "0 commits, 1 PRs, 0 reviews, 0 issues, 2 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleGameEngine"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleGameEngine"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to Simple-XX/SimpleGameEngine",
+            "Commit volume decreased by 11"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2022-11-07",
+      "type": "ai_roast",
+      "ts": "2022-11-13T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2022-11-07 ~ 2022-11-13",
+        "content": "Zero commits, one PR, and two comments on SimpleGameEngine — after five months of silence, a game engine breaks through, because a pile of unfinished kernels apparently wasn't enough unfinished projects. It's the GitHub equivalent of window shopping: open a PR, leave some comments, and disappear for another season.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "Simple-XX/SimpleGameEngine"
+        }
+      }
+    },
+    {
       "id": "comment-Simple-XX/SimpleGameEngine-2-59",
       "type": "issue_comment",
       "ts": "2022-11-09T15:21:58Z",
@@ -36,21 +91,6 @@
         "title": "Ref 1",
         "state": "merged",
         "body": ""
-      }
-    },
-    {
-      "id": "ai-roast-2022-11-07",
-      "type": "ai_roast",
-      "ts": "2022-11-13T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2022-11-07 ~ 2022-11-13",
-        "content": "Zero commits, one PR, and two comments on SimpleGameEngine — after five months of silence, a game engine breaks through, because a pile of unfinished kernels apparently wasn't enough unfinished projects. It's the GitHub equivalent of window shopping: open a PR, leave some comments, and disappear for another season.",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "Simple-XX/SimpleGameEngine"
-        }
       }
     }
   ]
