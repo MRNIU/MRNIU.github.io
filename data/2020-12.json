@@ -2,6 +2,134 @@
   "month": "2020-12",
   "events": [
     {
+      "id": "ai-summary-year-2020",
+      "type": "ai_summary",
+      "ts": "2020-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2020-01-01",
+          "end": "2020-12-31",
+          "label": "2020"
+        },
+        "content": "2020 年延续了 Simple-XX/SimpleKernel 内核项目的深度开发，全年共提交 281 个 commit 和 41 个 PR，活动量是上一年的两倍以上。工作重心从年初的代码风格统一和错误处理，逐渐转向用 C++ 重写内核，并着手实现词法分析器与虚拟内存管理器。开发节奏呈现明显的脉冲特征，尤其在 2 月和 10 月出现提交高峰，后者伴随 19 个 PR 的密集合并，推动了关键功能落地。协作上几乎完全依赖个人自主完成，通过自合并的 Pull Request 管理特性分支，全年未进行代码审查。持续更新 devlog、系统性地通过 PR 合并功能与修复，以及频繁清理代码风格，是贯穿全年的最强工程习惯。技术轨迹从基础的系统调用支持演进到更结构化的内存管理与并发任务框架，体现了从学习型项目向实用内核的稳步过渡。",
+        "highlights": [
+          "281 commits, 41 PRs, 0 reviews, 6 issues, 26 comments, 14 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 281,
+          "totalPRs": 41,
+          "totalReviews": 0,
+          "totalIssues": 6,
+          "totalComments": 26,
+          "activeRepos": 14,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed merge"
+          ],
+          "changedSincePrevious": [
+            "Commit volume increased by 159"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2020-Q4",
+      "type": "ai_summary",
+      "ts": "2020-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2020-10-01",
+          "end": "2020-12-31",
+          "label": "2020-Q4"
+        },
+        "content": "2020-Q4 的工程活动相比上季度急剧加速，提交从 41 跃升至 131， PR 从 2 个增至 30 个，核心仓库 Simple-XX/SimpleKernel 主导了全部主线。技术方向集中在物理与虚拟内存管理的实现，接连集成了 pmm、vmm 以及树莓派 2 Framebuffer 支持，同时补齐了 ARM 工具链与 cmake 构建优化。协作模式仍为单人自主合并， review 与 issue 均为零， PR 全部通过 merge 提交整合，延续了无外部评审的工作流。项目在清理方面也做了大量工作，删除了遗留二进制文件和冗余代码，并调整了文档与注释风格。与上季度的 fix 主调相比，本季度的语义标签从修复切换到 merge，呈现出明显的功能集成和爆发式成长特征，尤其在 10 月达到峰值。",
+        "highlights": [
+          "131 commits, 30 PRs, 0 reviews, 0 issues, 1 comments, 5 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 131,
+          "totalPRs": 30,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to merge",
+            "Commit volume increased by 90"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2020-12",
+      "type": "ai_summary",
+      "ts": "2020-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-12-01",
+          "end": "2020-12-31",
+          "label": "2020-12"
+        },
+        "content": "12 月继续聚焦 Simple-XX/SimpleKernel，核心工作流围绕合并物理内存管理、堆管理和打印优化等多个特性分支，同时进行了 addr_t 到 void*、stdint 重命名等代码优化。相比 11 月的文档更新，本月从维护文档转向功能整合与重构， commit 和 PR 数量明显增加，活动高度集中在月末。合并操作成为本月主导习惯，所有改动均通过 PR 合入主分支，没有产生新 issue 或代码审查。",
+        "highlights": [
+          "15 commits, 7 PRs, 0 reviews, 0 issues, 1 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 15,
+          "totalPRs": 7,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from docs to merge"
+          ]
+        }
+      }
+    },
+    {
       "id": "pr-55-Simple-XX/SimpleKernel",
       "type": "pull_request",
       "ts": "2020-12-28T17:55:11Z",
@@ -210,6 +338,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-12-21",
+      "type": "ai_roast",
+      "ts": "2020-12-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-12-21 ~ 2020-12-27",
+        "content": "5 个 commit 里有一个就叫 “rewrite”——重写了啥？整个项目？人生？ slab 优化、堆管理和 pmm 测试全挤在这一周里搞定，末了还顺手 “暂时移除 zone 机制”，这个 “暂时” 我赌它到现在都还没加回来。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-e45a8c913df6a050a27ef599ae28c5681a62567f",
       "type": "commit",
       "ts": "2020-12-26T11:42:00Z",
@@ -261,6 +404,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-11-30",
+      "type": "ai_roast",
+      "ts": "2020-12-06T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-11-30 ~ 2020-12-06",
+        "content": "A whopping two commits in a whole week: a README tweak and a merge PR. At this pace, your yearly output could be written on a sticky note. That merge-to-code ratio radiates serious \"project manager who accidentally has repo access\" energy.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-968a844448981cd899e6882b25bf494cb74879fe",
       "type": "commit",
       "ts": "2020-12-03T10:10:43Z",
@@ -297,36 +455,6 @@
         "title": "Print only",
         "state": "merged",
         "body": ""
-      }
-    },
-    {
-      "id": "ai-roast-2020-11-30",
-      "type": "ai_roast",
-      "ts": "2020-12-06T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-11-30 ~ 2020-12-06",
-        "content": "A whopping two commits in a whole week: a README tweak and a merge PR. At this pace, your yearly output could be written on a sticky note. That merge-to-code ratio radiates serious \"project manager who accidentally has repo access\" energy.",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-12-21",
-      "type": "ai_roast",
-      "ts": "2020-12-27T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-12-21 ~ 2020-12-27",
-        "content": "5 个 commit 里有一个就叫 “rewrite”——重写了啥？整个项目？人生？ slab 优化、堆管理和 pmm 测试全挤在这一周里搞定，末了还顺手 “暂时移除 zone 机制”，这个 “暂时” 我赌它到现在都还没加回来。",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

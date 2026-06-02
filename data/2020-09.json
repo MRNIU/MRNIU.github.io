@@ -119,6 +119,96 @@
       }
     },
     {
+      "id": "ai-summary-quarter-2020-Q3",
+      "type": "ai_summary",
+      "ts": "2020-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2020-07-01",
+          "end": "2020-09-30",
+          "label": "2020-Q3"
+        },
+        "content": "2020 年 Q3 工程活动集中在 Simple-XX/SimpleKernel 项目上，共产生 41 个 commit 和 2 个 PR，活跃仓库数从 Q2 的 8 个缩减到 6 个，工作进一步聚焦。本期主导标签为 fix，技术重心明显从上一季度的合并转向缺陷修复与工程规范化，大量提交用于清理 .DS_Store 冗余文件、修复 FreeRTOS 配置错误、完善构建脚本以及引入 CMake 构建支持。开发协作上依然以个人推进为主，没有代码审查记录，评论数也从 14 条减少到 5 条，交互相对克制。与 Q2 相比，项目从密集合入新功能进入稳定性和可维护性提升阶段，同时补充了 Git commit 规范与 clang-format 代码样式配置，构建系统的跨平台适配（Linux 和 x86_64 macOS）也得到升级。整体而言， Q3 为内核构建基础设施的健壮性打下了更扎实的基础，并推动了文档与开发规约的落地。",
+        "highlights": [
+          "41 commits, 2 PRs, 0 reviews, 1 issues, 5 comments, 6 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 41,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 5,
+          "activeRepos": 6,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to fix",
+            "Commit volume increased by 13"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2020-09",
+      "type": "ai_summary",
+      "ts": "2020-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-09-01",
+          "end": "2020-09-30",
+          "label": "2020-09"
+        },
+        "content": "2020 年 9 月工程活动明显回升，提交数从上个月的 7 个增至 24 个，主导标签从 docs 切换为 fix。核心仓库依然是 Simple-XX/SimpleKernel，本月集中处理了大量 fix 类工作，如反复清理 .DS_Store 文件、修复 include 重复定义和 cmake 缺失部分，同时引入了 CMake 构建支持与 Linux 及 macOS 工具链脚本，构建能力得到系统性补全。此外还有 2 个 PR，其中 1 个跨至 SynestiaOS/SynestiaOS，但总体评审与讨论活跃度仍较低。整体而言，工作重心从 8 月的内容文档整理转向了代码质量与构建基础设施的修复完善。",
+        "highlights": [
+          "24 commits, 2 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 24,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from docs to fix",
+            "Commit volume increased by 17"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-2aeccfdcba66e513a0b4721fc60525ac0badc1f3",
       "type": "commit",
       "ts": "2020-09-29T19:31:24Z",
@@ -288,6 +378,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-09-14",
+      "type": "ai_roast",
+      "ts": "2020-09-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-09-14 ~ 2020-09-20",
+        "content": "就两个 commit，还都写着 “build: try to cmake”——提交信息里带个 “try”，这明摆着是求救。一个 PR 里两次一模一样的 CMake 尝试，扑面而来的就是那种“我先推上去看看 CI 过不过”的气息。",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-854530ed341bfac5440c5fe12ba6dd543c57bcda",
       "type": "commit",
       "ts": "2020-09-17T11:14:23Z",
@@ -337,21 +442,6 @@
         "message": "docs: add commit standard",
         "additions": 4,
         "deletions": 6
-      }
-    },
-    {
-      "id": "ai-roast-2020-09-14",
-      "type": "ai_roast",
-      "ts": "2020-09-20T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-09-14 ~ 2020-09-20",
-        "content": "就两个 commit，还都写着 “build: try to cmake”——提交信息里带个 “try”，这明摆着是求救。一个 PR 里两次一模一样的 CMake 尝试，扑面而来的就是那种“我先推上去看看 CI 过不过”的气息。",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

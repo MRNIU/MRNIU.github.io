@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:18:45.704Z",
+  "generatedAt": "2026-06-02T08:25:32.723Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -1152,12 +1152,13 @@
     {
       "key": "2021-03",
       "file": "2021-03.json",
-      "eventCount": 2,
+      "eventCount": 3,
       "repos": [
         "GitHubDaily/GitHubDaily",
         "GrowingGit/GitHub-Chinese-Top-Charts"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue": 2
       },
       "repoBreakdown": {
@@ -1168,16 +1169,17 @@
     {
       "key": "2021-02",
       "file": "2021-02.json",
-      "eventCount": 53,
+      "eventCount": 54,
       "repos": [
         "MRNIU/libcxxrt",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 1,
         "commit": 41,
-        "pull_request": 10,
-        "ai_roast": 1
+        "ai_roast": 1,
+        "pull_request": 10
       },
       "repoBreakdown": {
         "MRNIU/libcxxrt": 1,
@@ -1187,14 +1189,15 @@
     {
       "key": "2021-01",
       "file": "2021-01.json",
-      "eventCount": 53,
+      "eventCount": 54,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_roast": 4,
+        "ai_summary": 1,
         "commit": 46,
-        "issue_comment": 3,
-        "ai_roast": 4
+        "issue_comment": 3
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 49
@@ -1203,15 +1206,16 @@
     {
       "key": "2020-12",
       "file": "2020-12.json",
-      "eventCount": 25,
+      "eventCount": 28,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 3,
         "pull_request": 7,
         "commit": 15,
-        "issue_comment": 1,
-        "ai_roast": 2
+        "ai_roast": 2,
+        "issue_comment": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 23
@@ -1220,16 +1224,17 @@
     {
       "key": "2020-11",
       "file": "2020-11.json",
-      "eventCount": 18,
+      "eventCount": 19,
       "repos": [
         "Simple-XX/SimpleGameEngine",
         "Simple-XX/SimpleKernel",
         "Simple-XX/tools"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 2,
         "commit": 12,
-        "pull_request": 4,
-        "ai_roast": 2
+        "pull_request": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 14,
@@ -1240,13 +1245,14 @@
     {
       "key": "2020-10",
       "file": "2020-10.json",
-      "eventCount": 125,
+      "eventCount": 126,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel",
         "SynestiaOS/SynestiaOS"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 104,
         "pull_request": 19,
         "ai_roast": 2
@@ -1260,13 +1266,14 @@
     {
       "key": "2020-09",
       "file": "2020-09.json",
-      "eventCount": 27,
+      "eventCount": 29,
       "repos": [
         "Simple-XX/SimpleKernel",
         "SynestiaOS/SynestiaOS"
       ],
       "breakdown": {
         "commit": 24,
+        "ai_summary": 2,
         "pull_request": 2,
         "ai_roast": 1
       },

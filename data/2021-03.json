@@ -2,6 +2,49 @@
   "month": "2021-03",
   "events": [
     {
+      "id": "ai-summary-quarter-2021-Q1",
+      "type": "ai_summary",
+      "ts": "2021-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2021-01-01",
+          "end": "2021-03-31",
+          "label": "2021-Q1"
+        },
+        "content": "2021 年 Q1 的开发活动以 SimpleKernel 为核心，技术方向从纯 C 内核逐步向 C++ 支持迁移，主要主题包括引入 nullptr、将端口和 libcxx 封装为类与命名空间、重构控制台与内存管理器，并穿插了对 Raspi2 板级代码的增删和构建修复。本季度共计 87 个 commit，主导语义标签从上一季度的 merge 转变为 feat，体现出从合并代码到功能开发的清晰转向，但整体活动量较 2020-Q4 明显下降，尤其是 3 月无任何提交、仅有 2 个 Issue，呈现停滞状态。协作模式上依旧缺少代码审查，沟通主要通过 4 条评论进行， PR 数量从 30 个缩减至 10 个，表明团队协作或贡献者参与度较弱，更像是个人独立推进的迭代。总体而言，本季度尝试奠定内核的 C++ 基础设施，但在持续性和协作上仍显不足。",
+        "highlights": [
+          "87 commits, 10 PRs, 0 reviews, 2 issues, 4 comments, 4 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 87,
+          "totalPRs": 10,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 4,
+          "activeRepos": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to feat",
+            "Commit volume decreased by 44"
+          ]
+        }
+      }
+    },
+    {
       "id": "issue-153-GrowingGit/GitHub-Chinese-Top-Charts",
       "type": "issue",
       "ts": "2021-03-30T08:21:37Z",

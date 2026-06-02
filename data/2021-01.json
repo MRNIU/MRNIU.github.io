@@ -2,6 +2,67 @@
   "month": "2021-01",
   "events": [
     {
+      "id": "ai-roast-2021-01-25",
+      "type": "ai_roast",
+      "ts": "2021-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-01-25 ~ 2021-01-31",
+        "content": "3 commits, and one is just \"refactor\" with absolutely no context — the commit-message equivalent of a code-review shrug. \"no global objects now\" is either a serious architectural win or you deleted the entire codebase; given only 3 commits this week, I'm going with the second one.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2021-01",
+      "type": "ai_summary",
+      "ts": "2021-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-01-01",
+          "end": "2021-01-31",
+          "label": "2021-01"
+        },
+        "content": "2021 年 1 月，在 Simple-XX/SimpleKernel 仓库进行了 46 次提交，主导标签为 fix，没有 PR 或代码审查记录。相比上月 15 次提交、7 个 PR 且以 merge 为主的节奏，本月提交量翻倍，重心从合并特性转向密集的 debug 与重构，协作模式明显淡化。主要工作线围绕内核 C++ 化改造：多次 feat(c++) 与 pref(c++) 提交推进 C++ 启动和环境支持，同时统一用 nullptr 替换 NULL，为 port 等模块引入命名空间，并修复了 firstfit 分配错误、多平台编译失败及文件大小写敏感等问题。反复的 Delete boot.s 提交进一步印证启动代码正从汇编向 C++ 架构迁移。",
+        "highlights": [
+          "46 commits, 0 PRs, 0 reviews, 0 issues, 3 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn",
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 46,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 3,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to fix",
+            "Commit volume increased by 31"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-e82ae45f67745b42889cd3832d728fb1c31c8196",
       "type": "commit",
       "ts": "2021-01-26T03:04:32Z",
@@ -155,6 +216,21 @@
         "message": "feat(c++)\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
         "additions": 357,
         "deletions": 419
+      }
+    },
+    {
+      "id": "ai-roast-2021-01-18",
+      "type": "ai_roast",
+      "ts": "2021-01-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-01-18 ~ 2021-01-24",
+        "content": "22 个 commit：同一周里，\"pref(NULL): replace with nullptr\" 出现了两次，\"pref(firstfit): change type name\" 也出现了两次——看样子查找替换已经进化成需要多次提交的高端操作了。你先是把 raspi2 的代码删掉，回头又加回来，堪称 Git 界的“穿上鞋再脱掉”。“style(commit): update commit style” 这条消息简直是本周提交质量的绝佳自嘲。",
+        "stats": {
+          "totalCommits": 22,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -349,6 +425,21 @@
         "issueNumber": 57,
         "issueTitle": "是不是先来个架构图，来个全景视角",
         "body": "@zhang14725804 开个玩笑😁，目前正在用 c++ 重构，完成后会清晰很多。感谢支持。"
+      }
+    },
+    {
+      "id": "ai-roast-2021-01-04",
+      "type": "ai_roast",
+      "ts": "2021-01-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-01-04 ~ 2021-01-10",
+        "content": "20 commits with three \"Delete boot.s\", three \"fix(build): github action error\", and two \"fix(case): Case sensitive on osx\" — you nuked the same file three times and patched the same CI failure three times, which screams \"broke it, fixed it, broke it again, and acted surprised every single time.\" The one saving grace: \"feat(c++): Now we have c++ support\" finally shipped, so the week wasn't a full-blown git archaeology disaster.",
+        "stats": {
+          "totalCommits": 20,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -646,51 +737,6 @@
         "content": "“重命名 ptr_t” 出现了 3 次，“addr_t 修改为 void*” 出现了 2 次——光改个类型名就耗掉 5 个 commit，这到底是在写代码还是打回合制游戏？6 个 PR 配 8 个 commit，merge commit 比正经的代码 commit 还多，活脱脱的 merge 驱动开发。",
         "stats": {
           "totalCommits": 8,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-01-04",
-      "type": "ai_roast",
-      "ts": "2021-01-10T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-01-04 ~ 2021-01-10",
-        "content": "20 commits with three \"Delete boot.s\", three \"fix(build): github action error\", and two \"fix(case): Case sensitive on osx\" — you nuked the same file three times and patched the same CI failure three times, which screams \"broke it, fixed it, broke it again, and acted surprised every single time.\" The one saving grace: \"feat(c++): Now we have c++ support\" finally shipped, so the week wasn't a full-blown git archaeology disaster.",
-        "stats": {
-          "totalCommits": 20,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-01-18",
-      "type": "ai_roast",
-      "ts": "2021-01-24T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-01-18 ~ 2021-01-24",
-        "content": "22 个 commit：同一周里，\"pref(NULL): replace with nullptr\" 出现了两次，\"pref(firstfit): change type name\" 也出现了两次——看样子查找替换已经进化成需要多次提交的高端操作了。你先是把 raspi2 的代码删掉，回头又加回来，堪称 Git 界的“穿上鞋再脱掉”。“style(commit): update commit style” 这条消息简直是本周提交质量的绝佳自嘲。",
-        "stats": {
-          "totalCommits": 22,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-01-25",
-      "type": "ai_roast",
-      "ts": "2021-01-31T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-01-25 ~ 2021-01-31",
-        "content": "3 commits, and one is just \"refactor\" with absolutely no context — the commit-message equivalent of a code-review shrug. \"no global objects now\" is either a serious architectural win or you deleted the entire codebase; given only 3 commits this week, I'm going with the second one.",
-        "stats": {
-          "totalCommits": 3,
           "topRepo": "Simple-XX/SimpleKernel"
         }
       }

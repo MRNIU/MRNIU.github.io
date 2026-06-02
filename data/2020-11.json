@@ -2,6 +2,64 @@
   "month": "2020-11",
   "events": [
     {
+      "id": "ai-summary-month-2020-11",
+      "type": "ai_summary",
+      "ts": "2020-11-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-11-01",
+          "end": "2020-11-30",
+          "label": "2020-11"
+        },
+        "content": "11 月工程活动大幅收缩，总计 12 个 commit 与 4 个 PR，远低于 10 月的 104 个 commit 和 19 个 PR，主导语义标签也从 merge 转为 docs。所有工作依然集中在 Simple-XX/SimpleKernel 仓库，重点围绕文档建设展开，例如多次更新 README 和添加相关文档。同时也穿插了 mailbox 数据结构分类、arm 除法修复和 cmake 选项优化等零星改进。整体节奏从上月的功能合并转向沉淀整理，开发频次明显放缓。",
+        "highlights": [
+          "12 commits, 4 PRs, 0 reviews, 0 issues, 0 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: docs",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 12,
+          "totalPRs": 4,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to docs",
+            "Commit volume decreased by 92"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2020-11-02",
+      "type": "ai_roast",
+      "ts": "2020-11-08T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-11-02 ~ 2020-11-08",
+        "content": "“fix(PR): 按 review 修改”和“pref(cmake): 撤销修改”出现在同一周——先按 review 改，然后又撤销，这是在跟 reviewer 玩你追我赶吗？“docs(READMD): update”里 README 又拼错了，建议先 review 一下自己的拼写。",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-c5ebb96f5660d3554af6c01c5c2a9f807b13aec7",
       "type": "commit",
       "ts": "2020-11-06T21:52:37Z",
@@ -220,21 +278,6 @@
         "content": "“dosc(README)”——连 docs 都能拼错，说明这个 commit 是凌晨三点写的。6 个 PR 里有 3 个“删除不必要的文件”和 1 个“Delete kernel.bin”，这周的主要产出就是意识到上周不该提交那些东西。树莓派 2 支持加上了，但 commit message 的质量还停留在树莓派 1 时代。",
         "stats": {
           "totalCommits": 19,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-11-02",
-      "type": "ai_roast",
-      "ts": "2020-11-08T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-11-02 ~ 2020-11-08",
-        "content": "“fix(PR): 按 review 修改”和“pref(cmake): 撤销修改”出现在同一周——先按 review 改，然后又撤销，这是在跟 reviewer 玩你追我赶吗？“docs(READMD): update”里 README 又拼错了，建议先 review 一下自己的拼写。",
-        "stats": {
-          "totalCommits": 12,
           "topRepo": "Simple-XX/SimpleKernel"
         }
       }

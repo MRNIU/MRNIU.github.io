@@ -2,6 +2,49 @@
   "month": "2020-10",
   "events": [
     {
+      "id": "ai-summary-month-2020-10",
+      "type": "ai_summary",
+      "ts": "2020-10-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2020-10-01",
+          "end": "2020-10-31",
+          "label": "2020-10"
+        },
+        "content": "2020 年 10 月工程活跃度相比 9 月大幅提升，提交从 24 次增长到 104 次， PR 从 2 个增长到 19 个。核心仓库 Simple-XX/SimpleKernel 以 merge 为主导标签，主要工作流围绕内存管理（pmm、vmm）和树莓派 2 适配（framebuffer、ARM toolchain），并通过持续合并 PR 迭代功能。上个月以 fix 为主，本月明显转向功能性合并与代码整理，同时多次清理不必要的文件、调整代码风格和文档，体现出对仓库质量和结构优化的重视。",
+        "highlights": [
+          "104 commits, 19 PRs, 0 reviews, 0 issues, 0 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 104,
+          "totalPRs": 19,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to merge",
+            "Commit volume increased by 80"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-fbb2ff552108f1e2606e4486ec0c31ceef1ecf95",
       "type": "commit",
       "ts": "2020-10-27T20:02:43Z",
@@ -324,6 +367,21 @@
         "message": "pref(cmake): 优化变量名",
         "additions": 9,
         "deletions": 11
+      }
+    },
+    {
+      "id": "ai-roast-2020-10-19",
+      "type": "ai_roast",
+      "ts": "2020-10-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-10-19 ~ 2020-10-25",
+        "content": "44 个 commit，11 个 PR，三次“docs(README): update”—— README 到底有多难写需要更新三次？commit message 里出现了孤零零的 \"test\"，没有任何上下文，这种信息量约等于对着深渊喊了一声。好在 pmm 和 vmm 都 merge 了，至少内存管理比 commit message 管理做得好。",
+        "stats": {
+          "totalCommits": 44,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -1055,6 +1113,21 @@
       }
     },
     {
+      "id": "ai-roast-2020-09-28",
+      "type": "ai_roast",
+      "ts": "2020-10-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2020-09-28 ~ 2020-10-04",
+        "content": "62 个 commit，四次 “Delete .DS_Store”——兄弟，.gitignore 了解一下？一边往 .gitignore 里加忽略规则，一边亲手把 .DS_Store 推上来，这就是传说中的左手加规范右手破规范。从 “small change” 到 “删除多余文件”，这周的主题基本就是在给上周的自己擦屁股。",
+        "stats": {
+          "totalCommits": 62,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "pr-61954-Homebrew/homebrew-core",
       "type": "pull_request",
       "ts": "2020-10-02T18:02:45Z",
@@ -1598,36 +1671,6 @@
         "message": "feat(build): 构建好的 grub for mac",
         "additions": 0,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2020-09-28",
-      "type": "ai_roast",
-      "ts": "2020-10-04T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-09-28 ~ 2020-10-04",
-        "content": "62 个 commit，四次 “Delete .DS_Store”——兄弟，.gitignore 了解一下？一边往 .gitignore 里加忽略规则，一边亲手把 .DS_Store 推上来，这就是传说中的左手加规范右手破规范。从 “small change” 到 “删除多余文件”，这周的主题基本就是在给上周的自己擦屁股。",
-        "stats": {
-          "totalCommits": 62,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2020-10-19",
-      "type": "ai_roast",
-      "ts": "2020-10-25T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2020-10-19 ~ 2020-10-25",
-        "content": "44 个 commit，11 个 PR，三次“docs(README): update”—— README 到底有多难写需要更新三次？commit message 里出现了孤零零的 \"test\"，没有任何上下文，这种信息量约等于对着深渊喊了一声。好在 pmm 和 vmm 都 merge 了，至少内存管理比 commit message 管理做得好。",
-        "stats": {
-          "totalCommits": 44,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

@@ -2,6 +2,48 @@
   "month": "2021-02",
   "events": [
     {
+      "id": "ai-summary-month-2021-02",
+      "type": "ai_summary",
+      "ts": "2021-02-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-02-01",
+          "end": "2021-02-28",
+          "label": "2021-02"
+        },
+        "content": "2021 年 2 月的工作集中在 Simple-XX/SimpleKernel 仓库，以 merge 为主要活动模式，通过 10 个 PR 将 pmm、print_only、boot 等功能分支合并进主分支，与 1 月侧重 fix 的节奏形成明显变化。月初第一周密集提交 41 次，重点推进了 raspi2 适配、内核代码优化（pref）与跨平台重构，并完善了文档与 GitHub Actions 配置。相比 1 月，协作性增强，出现了来自 MRNIU 的贡献，活跃仓库从 1 个增至 2 个，整体延续了内核基础能力的建设方向。",
+        "highlights": [
+          "41 commits, 10 PRs, 0 reviews, 0 issues, 1 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 41,
+          "totalPRs": 10,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to merge"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-MRNIU/libcxxrt-1-78",
       "type": "issue_comment",
       "ts": "2021-02-07T18:43:23Z",
@@ -24,6 +66,21 @@
         "message": "docs(README)\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
         "additions": 1,
         "deletions": 28
+      }
+    },
+    {
+      "id": "ai-roast-2021-02-01",
+      "type": "ai_roast",
+      "ts": "2021-02-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-02-01 ~ 2021-02-07",
+        "content": "41 个 commit，10 个 PR，commit 消息里混着 “dovs”、“docs”、“pref”、“update”、“re init”——你这是敲键盘敲一半直接趴上面睡着了吧？一大半提交全是合并和单蹦词，没任何上下文。我个人最爱 “dovs”：既不是 docs，也什么都不是。",
+        "stats": {
+          "totalCommits": 41,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -674,21 +731,6 @@
         "message": "refactor\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
         "additions": 402,
         "deletions": 585
-      }
-    },
-    {
-      "id": "ai-roast-2021-02-01",
-      "type": "ai_roast",
-      "ts": "2021-02-07T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-02-01 ~ 2021-02-07",
-        "content": "41 个 commit，10 个 PR，commit 消息里混着 “dovs”、“docs”、“pref”、“update”、“re init”——你这是敲键盘敲一半直接趴上面睡着了吧？一大半提交全是合并和单蹦词，没任何上下文。我个人最爱 “dovs”：既不是 docs，也什么都不是。",
-        "stats": {
-          "totalCommits": 41,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]
