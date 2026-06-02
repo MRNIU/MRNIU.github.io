@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:45:22.343Z",
+  "generatedAt": "2026-06-02T08:52:19.491Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -1768,13 +1768,14 @@
     {
       "key": "2018-09",
       "file": "2018-09.json",
-      "eventCount": 8,
+      "eventCount": 10,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 7,
-        "ai_roast": 1
+        "ai_roast": 1,
+        "ai_summary": 2,
+        "commit": 7
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 7
@@ -1783,14 +1784,15 @@
     {
       "key": "2018-08",
       "file": "2018-08.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 7,
-        "issue": 2,
-        "ai_roast": 2
+        "ai_summary": 1,
+        "ai_roast": 2,
+        "issue": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 9
@@ -1799,12 +1801,13 @@
     {
       "key": "2018-07",
       "file": "2018-07.json",
-      "eventCount": 13,
+      "eventCount": 14,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 11,
+        "ai_summary": 1,
         "ai_roast": 2
       },
       "repoBreakdown": {
@@ -1814,17 +1817,18 @@
     {
       "key": "2018-06",
       "file": "2018-06.json",
-      "eventCount": 45,
+      "eventCount": 47,
       "repos": [
         "Simple-XX/SimpleKernel",
         "atom/atom"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "issue_comment": 3,
         "issue": 4,
+        "ai_roast": 3,
         "commit": 30,
-        "pull_request": 5,
-        "ai_roast": 3
+        "pull_request": 5
       },
       "repoBreakdown": {
         "atom/atom": 3,
@@ -1834,12 +1838,13 @@
     {
       "key": "2018-05",
       "file": "2018-05.json",
-      "eventCount": 13,
+      "eventCount": 14,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 12,
+        "ai_summary": 1,
         "ai_roast": 1
       },
       "repoBreakdown": {
@@ -1866,7 +1871,7 @@
     {
       "key": "2018-03",
       "file": "2018-03.json",
-      "eventCount": 13,
+      "eventCount": 15,
       "repos": [
         "Simple-XX/SimpleKernel",
         "TeamStuQ/skill-map",
@@ -1875,6 +1880,7 @@
         "xitu/tensorflow-docs"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "issue_comment": 4,
         "pull_request": 1,
         "review": 1,
@@ -1893,17 +1899,18 @@
     {
       "key": "2018-02",
       "file": "2018-02.json",
-      "eventCount": 7,
+      "eventCount": 8,
       "repos": [
         "racket/racket",
         "racket/string-constants",
         "tyrchen/racket-book"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 1,
         "issue_comment": 3,
         "issue": 2,
-        "pull_request": 1,
-        "ai_roast": 1
+        "pull_request": 1
       },
       "repoBreakdown": {
         "racket/string-constants": 3,

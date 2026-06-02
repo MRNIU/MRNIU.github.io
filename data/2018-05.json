@@ -41,6 +41,46 @@
       }
     },
     {
+      "id": "ai-summary-month-2018-05",
+      "type": "ai_summary",
+      "ts": "2018-05-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2018-05-01",
+          "end": "2018-05-31",
+          "label": "2018-05"
+        },
+        "content": "5 月开发活动完全集中于 Simple-XX/SimpleKernel 项目，共完成 12 个 commit，较 3 月的 5 个 commit 与多仓库模式显著转向单点深入。提交内容主要围绕目录结构重组和内核启动流程实现，过程中包含多次撤销再调整并添加 TODO，最终完成了启动部分。本月没有任何 PR 或代码评审交流，与 3 月存在少量协作互动（1 个 PR、1 次评审）对比，体现出从分散协作转向独立梳理基础架构的习惯变化。",
+        "highlights": [
+          "12 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 12,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
       "id": "commit-1a55be43df0013ded291cd5b3f9be60c9ddae018",
       "type": "commit",
       "ts": "2018-05-30T09:28:46Z",
@@ -64,6 +104,21 @@
         "message": "update",
         "additions": 14,
         "deletions": 9
+      }
+    },
+    {
+      "id": "ai-roast-2018-05-21",
+      "type": "ai_roast",
+      "ts": "2018-05-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-05-21 ~ 2018-05-27",
+        "content": "5 次提交， 5 个 \"update\"——你是在写内核还是在刷屏？ git log 看起来像是一台坏掉的打印机，反复打印同一个词。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -155,21 +210,6 @@
         "message": "完成启动部分",
         "additions": 613,
         "deletions": 142
-      }
-    },
-    {
-      "id": "ai-roast-2018-05-21",
-      "type": "ai_roast",
-      "ts": "2018-05-27T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-05-21 ~ 2018-05-27",
-        "content": "5 次提交， 5 个 \"update\"——你是在写内核还是在刷屏？ git log 看起来像是一台坏掉的打印机，反复打印同一个词。",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

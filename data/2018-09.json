@@ -2,6 +2,106 @@
   "month": "2018-09",
   "events": [
     {
+      "id": "ai-roast-2018-09-24",
+      "type": "ai_roast",
+      "ts": "2018-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-09-24 ~ 2018-09-30",
+        "content": "“脑壳疼”作为 commit message 的一部分，堪称 GP 错误调试过程最诚实的写照。把 IRQ1 错写成 IRQ0——恭喜，你用一个字符的 typo 就轻轻松松浪费了自己不知多少小时。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2018-Q3",
+      "type": "ai_summary",
+      "ts": "2018-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2018-07-01",
+          "end": "2018-09-30",
+          "label": "2018-Q3"
+        },
+        "content": "2018 年第三季度，开发活动全部集中在 Simple-XX/SimpleKernel 项目上，共产生 25 个 commit，但没有发起任何 PR 或代码评审，与上一季度有 5 个 PR 和多个活跃仓库的协作模式形成明显变化。本季度的技术方向延续了操作系统内核的构建，重点围绕内存管理（物理内存映射与显示）和中断系统（时钟、键盘、异常处理）的调试与驱动开发。开发者通过多次迭代，尝试解决 GP 错误、中断响应、调试信息输出等问题，并逐步建立了 printk_color、 die() 及寄存器读取等基础调试工具。整体工作模式为个人独立探索和调试， commit 记录显示出反复试验和局部回退的特征，例如搁置问题、修正错误的中断向量。上一季度出现的合并与多仓库尝试消失，本季度转向在单一仓库上进行深度且专注的底层调试，为后续内核稳定打下基础。",
+        "highlights": [
+          "25 commits, 0 PRs, 0 reviews, 2 issues, 0 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 25,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to mixed",
+            "Commit volume decreased by 18"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2018-09",
+      "type": "ai_summary",
+      "ts": "2018-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2018-09-01",
+          "end": "2018-09-30",
+          "label": "2018-09"
+        },
+        "content": "2018 年 9 月继续在 Simple-XX/SimpleKernel 仓库上进行内核开发，提交了 7 个 commit，与上月持平。本月工作重点转向解决键盘中断触发的 General Protection 故障，定位到 IRQ 编号误写为 IRQ0 的问题，并新增了 eflags 寄存器状态判断函数以完善 debug 和 die 调试框架。相比上月，开发节奏后移到下半月，且更聚焦于中断处理的底层调试细节。",
+        "highlights": [
+          "7 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 7,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
       "id": "commit-61b1290a382192572b1b04328a40879a010ae5a7",
       "type": "commit",
       "ts": "2018-09-26T05:43:15Z",
@@ -90,21 +190,6 @@
         "message": "目前可以响应键盘中断，但出现 GP，尝试修复 die()，方便调试",
         "additions": 81,
         "deletions": 152
-      }
-    },
-    {
-      "id": "ai-roast-2018-09-24",
-      "type": "ai_roast",
-      "ts": "2018-09-30T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-09-24 ~ 2018-09-30",
-        "content": "“脑壳疼”作为 commit message 的一部分，堪称 GP 错误调试过程最诚实的写照。把 IRQ1 错写成 IRQ0——恭喜，你用一个字符的 typo 就轻轻松松浪费了自己不知多少小时。",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

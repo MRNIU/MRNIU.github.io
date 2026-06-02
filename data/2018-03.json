@@ -2,6 +2,88 @@
   "month": "2018-03",
   "events": [
     {
+      "id": "ai-summary-quarter-2018-Q1",
+      "type": "ai_summary",
+      "ts": "2018-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2018-01-01",
+          "end": "2018-03-31",
+          "label": "2018-Q1"
+        },
+        "content": "本季度技术活动突然从上一季度的纯内容翻译与阅读（ xitu/gold-miner ）转向了操作系统内核开发，核心工作集中在 Simple-XX/SimpleKernel 仓库。主要技术方向是 x86 引导程序，提交“ bootsect.s ATT 版编译通过”和“ Bochs 配置”表明项目完成了启动代码编写和开发环境搭建。协作上出现了首次代码审查，审查者仅留下一条友好提醒：“只有一点小问题，麻烦核对下”，协作模式初步建立。与 2017-Q4 零代码提交相比，本季度产生了 5 个 commit、2 个 PR，活跃仓库从 1 个跃升至 8 个，整体开发动力和探索范围大幅提升。",
+        "highlights": [
+          "5 commits, 2 PRs, 1 reviews, 3 issues, 7 comments, 8 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 5,
+          "totalPRs": 2,
+          "totalReviews": 1,
+          "totalIssues": 3,
+          "totalComments": 7,
+          "activeRepos": 8,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from xitu/gold-miner to Simple-XX/SimpleKernel"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2018-03",
+      "type": "ai_summary",
+      "ts": "2018-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2018-03-01",
+          "end": "2018-03-31",
+          "label": "2018-03"
+        },
+        "content": "本月活动明显集中于 Simple-XX/SimpleKernel 仓库，提交了 5 个 commit，完成了 bootsect.s 的 AT&T 语法编译和 Bochs 环境配置等内核基础搭建工作。相比二月零代码提交的沉寂状态，这标志着一个从文档参与转向底层系统开发的启动阶段。同时，在 xitu/tensorflow-docs 上进行了 1 次审校并给出少量修改意见，依然延续了对技术翻译的零星关注。整体上，这个月从之前以 racket/string-constants 为主的维护模式切换到了 SimpleKernel 的主动构建。",
+        "highlights": [
+          "5 commits, 1 PRs, 1 reviews, 1 issues, 4 comments, 5 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 5,
+          "totalPRs": 1,
+          "totalReviews": 1,
+          "totalIssues": 1,
+          "totalComments": 4,
+          "activeRepos": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from racket/string-constants to Simple-XX/SimpleKernel"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-haiku/website-179-159",
       "type": "issue_comment",
       "ts": "2018-03-30T08:30:47Z",

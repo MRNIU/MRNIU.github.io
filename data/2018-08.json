@@ -15,6 +15,61 @@
       }
     },
     {
+      "id": "ai-summary-month-2018-08",
+      "type": "ai_summary",
+      "ts": "2018-08-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2018-08-01",
+          "end": "2018-08-31",
+          "label": "2018-08"
+        },
+        "content": "8 月的工作重心依然集中在 Simple-XX/SimpleKernel 项目，延续了 7 月对内核底层基础设施的改进。本月主要围绕中断处理展开，包括尝试添加键盘、鼠标和时钟中断，但多数 commit 记录了调试未果的情况，如中断地址读取错误或与 bochs 显示不一致等问题。相比上月仅有提交记录，本月新增了 2 个 issue 用于跟踪这些调试难题，体现出更结构化的记录习惯；同时穿插了 Makefile 优化、CPU 操作解耦及消除编译警告等持续性代码整理工作。开发节奏从 7 月的集中推进转变为 8 月的分步调试与问题捕获，整体仍以动手实验和查错为主。",
+        "highlights": [
+          "7 commits, 0 PRs, 0 reviews, 2 issues, 0 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 7,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2018-08-13",
+      "type": "ai_roast",
+      "ts": "2018-08-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-08-13 ~ 2018-08-19",
+        "content": "3 次提交的精华：“尝试解决，未果”和“之前的问题先搁置，以后解决”。这就是传说中的 TODO 驱动开发——遇到 bug 不修，标记一下然后假装它不存在。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "issue-10-Simple-XX/SimpleKernel",
       "type": "issue",
       "ts": "2018-08-16T17:25:08Z",
@@ -67,6 +122,21 @@
       }
     },
     {
+      "id": "ai-roast-2018-07-30",
+      "type": "ai_roast",
+      "ts": "2018-08-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-07-30 ~ 2018-08-05",
+        "content": "“正确性未验证，这里解决方案是取巧了”——至少你挺诚实。5 次提交里一半在说“出现问题”“好像有问题”，你的 commit message 读起来更像是一本调试日记，而不是代码变更记录。",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-00c7898670864103184921f666635e45a785919b",
       "type": "commit",
       "ts": "2018-08-04T04:28:58Z",
@@ -116,36 +186,6 @@
         "message": "将 cpu 操作移到独立的文件中。改进 makefile。消除编译警告。",
         "additions": 128,
         "deletions": 109
-      }
-    },
-    {
-      "id": "ai-roast-2018-07-30",
-      "type": "ai_roast",
-      "ts": "2018-08-05T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-07-30 ~ 2018-08-05",
-        "content": "“正确性未验证，这里解决方案是取巧了”——至少你挺诚实。5 次提交里一半在说“出现问题”“好像有问题”，你的 commit message 读起来更像是一本调试日记，而不是代码变更记录。",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2018-08-13",
-      "type": "ai_roast",
-      "ts": "2018-08-19T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-08-13 ~ 2018-08-19",
-        "content": "3 次提交的精华：“尝试解决，未果”和“之前的问题先搁置，以后解决”。这就是传说中的 TODO 驱动开发——遇到 bug 不修，标记一下然后假装它不存在。",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]
