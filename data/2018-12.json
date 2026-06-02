@@ -2,6 +2,134 @@
   "month": "2018-12",
   "events": [
     {
+      "id": "ai-summary-year-2018",
+      "type": "ai_summary",
+      "ts": "2018-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2018-01-01",
+          "end": "2018-12-31",
+          "label": "2018"
+        },
+        "content": "2018 年，你从几乎零活动跃迁到在 Simple-XX/SimpleKernel 上高强度构建一个 x86 操作系统内核，全年产出 134 个 commit 和 16 个 PR，技术轨迹从 bootsect.s、Bochs 配置逐步深入到 GDT、IDT、中断控制器和显示驱动等模块。节奏上，上半年仅在 5 月埋下种子， 6 月随 30 个 commit 和 5 个 PR 进入密集开发，经夏季平稳迭代后于 12 月达到 44 个 commit 的年度高峰。协作以 Pull Request 为主，接收 MRNIU 的贡献并通过 merge 合并，自己也留下了仅有一次的代码评审，形成“自驱动为主、接受外部补丁”的模式。这一年最突出的工程习惯是将开发过程深度绑定 Issue 和 PR：用“fix #6”“fixes #4”闭环问题， commit message 里直接记录“没有搞清楚段式管理的原理”“代码有点乱，后面需要整理”等真实思考，并在完成 GDT 等功能后及时补上文档，体现了一种边调试边反省、持续重构的可追溯风格。",
+        "highlights": [
+          "134 commits, 16 PRs, 1 reviews, 11 issues, 23 comments, 16 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 134,
+          "totalPRs": 16,
+          "totalReviews": 1,
+          "totalIssues": 11,
+          "totalComments": 23,
+          "activeRepos": 16,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from xitu/gold-miner to Simple-XX/SimpleKernel",
+            "Dominant semantic tag changed from mixed to merge",
+            "Commit volume increased by 134"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2018-Q4",
+      "type": "ai_summary",
+      "ts": "2018-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2018-10-01",
+          "end": "2018-12-31",
+          "label": "2018-Q4"
+        },
+        "content": "2018-Q4 开发重心仍围绕 Simple-XX/SimpleKernel，提交量从 Q3 的 25 个升至 61 个，并通过 9 个 PR 引入了初步的合并协作。技术主线聚焦内核引导流程升级，完成了从 multiboot 到 multiboot2 的迁移，并配套实现了函数调用栈追踪输出、CR 寄存器宏与中断开关等调试基础设施。这一时期还引入了 Travis CI 自动化构建，持续迭代配置，同时开始尝试物理内存管理初始化。与 Q3 的零 PR、零评论完全单人开发模式相比，本季度活动从 1 个仓库扩展到 8 个，出现了 Issue 模板和少量合并式协作，但依然未有正式的代码审查记录。",
+        "highlights": [
+          "61 commits, 9 PRs, 0 reviews, 2 issues, 12 comments, 8 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 61,
+          "totalPRs": 9,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 12,
+          "activeRepos": 8,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from mixed to merge",
+            "Commit volume increased by 36"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2018-12",
+      "type": "ai_summary",
+      "ts": "2018-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2018-12-01",
+          "end": "2018-12-31",
+          "label": "2018-12"
+        },
+        "content": "12 月开发重心完全转向 Simple-XX/SimpleKernel 内核项目，提交量从前月的 2 个激增至 44 个，主导操作是 merge，反映出频繁的分支合并节奏。主要工作流围绕多引导协议升级（从 multiboot 到 multiboot2）、函数调用栈打印、键盘 bug 修复和中断控制等底层功能展开，消息多为简短的迭代记录如 “update”。相比 11 月集中在 EugeneLiu/translationCSAPP 翻译仓库的低活跃状态，本月呈现出明显的嵌入式系统开发提速和持续调试习惯。",
+        "highlights": [
+          "44 commits, 2 PRs, 0 reviews, 1 issues, 1 comments, 4 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 44,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 1,
+          "activeRepos": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from EugeneLiu/translationCSAPP to Simple-XX/SimpleKernel",
+            "Dominant semantic tag changed from mixed to merge",
+            "Commit volume increased by 42"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-94579dbf73bd7f9daf29b5278c8764ee8b985dfa",
       "type": "commit",
       "ts": "2018-12-30T15:17:05Z",
@@ -51,6 +179,21 @@
         "message": "update",
         "additions": 0,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2018-12-24",
+      "type": "ai_roast",
+      "ts": "2018-12-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-24 ~ 2018-12-30",
+        "content": "\"If I have enough time, I will finish it\" — committing existential dread straight to git on Christmas week, a bold move. 12 commits tussling with multiboot2, half them \"working on\" and the other half \"not successful,\" your repo is essentially a public therapy journal.",
+        "stats": {
+          "totalCommits": 12,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -155,6 +298,21 @@
         "message": "Working on output function call stack support.\nAdded elf.h",
         "additions": 149,
         "deletions": 11
+      }
+    },
+    {
+      "id": "ai-roast-2018-12-17",
+      "type": "ai_roast",
+      "ts": "2018-12-23T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-17 ~ 2018-12-23",
+        "content": "\"Still bugs:\" as an entire commit message is less a changelog entry and more a whole mood. \"iit\" — I guess you meant \"init,\" but now even your typos have typos. Nine commits of attempting things that stubbornly refuse to work: the multiboot saga grinds on.",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -284,6 +442,21 @@
         "issueNumber": 34288,
         "issueTitle": "The GNU Project debugger for i386-elf cross development",
         "body": "I'm afraid not. It does not work correctly without i386-elf target."
+      }
+    },
+    {
+      "id": "ai-roast-2018-12-10",
+      "type": "ai_roast",
+      "ts": "2018-12-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-10 ~ 2018-12-16",
+        "content": "20 commits in a single week — your most productive week ever! Too bad 7 of them just say “Update”, and one literally says “backspace is not available” as if commit messages were your personal bug tracker. At least you’re consistently inconsistent.",
+        "stats": {
+          "totalCommits": 20,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -586,6 +759,21 @@
       }
     },
     {
+      "id": "ai-roast-2018-12-03",
+      "type": "ai_roast",
+      "ts": "2018-12-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-03 ~ 2018-12-09",
+        "content": "“尝试加入 C++ 支持，没有完成”——拿 C 写的内核还没稳定呢，就琢磨着上 C++，这不就是还没学会走就想跑。好在你总算揪出了键盘中断 GP 的原因，虽然那个 bug 已经折腾你好几个月了。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-ffd0c195158a524919a7329abbde487d7c02063c",
       "type": "commit",
       "ts": "2018-12-05T17:14:40Z",
@@ -622,66 +810,6 @@
         "message": "Update",
         "additions": 4,
         "deletions": 4
-      }
-    },
-    {
-      "id": "ai-roast-2018-12-03",
-      "type": "ai_roast",
-      "ts": "2018-12-09T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-12-03 ~ 2018-12-09",
-        "content": "“尝试加入 C++ 支持，没有完成”——拿 C 写的内核还没稳定呢，就琢磨着上 C++，这不就是还没学会走就想跑。好在你总算揪出了键盘中断 GP 的原因，虽然那个 bug 已经折腾你好几个月了。",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2018-12-10",
-      "type": "ai_roast",
-      "ts": "2018-12-16T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-12-10 ~ 2018-12-16",
-        "content": "20 commits in a single week — your most productive week ever! Too bad 7 of them just say “Update”, and one literally says “backspace is not available” as if commit messages were your personal bug tracker. At least you’re consistently inconsistent.",
-        "stats": {
-          "totalCommits": 20,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2018-12-17",
-      "type": "ai_roast",
-      "ts": "2018-12-23T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-12-17 ~ 2018-12-23",
-        "content": "\"Still bugs:\" as an entire commit message is less a changelog entry and more a whole mood. \"iit\" — I guess you meant \"init,\" but now even your typos have typos. Nine commits of attempting things that stubbornly refuse to work: the multiboot saga grinds on.",
-        "stats": {
-          "totalCommits": 9,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2018-12-24",
-      "type": "ai_roast",
-      "ts": "2018-12-30T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-12-24 ~ 2018-12-30",
-        "content": "\"If I have enough time, I will finish it\" — committing existential dread straight to git on Christmas week, a bold move. 12 commits tussling with multiboot2, half them \"working on\" and the other half \"not successful,\" your repo is essentially a public therapy journal.",
-        "stats": {
-          "totalCommits": 12,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

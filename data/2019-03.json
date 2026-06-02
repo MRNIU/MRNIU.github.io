@@ -28,6 +28,107 @@
       }
     },
     {
+      "id": "ai-roast-2019-03-25",
+      "type": "ai_roast",
+      "ts": "2019-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-03-25 ~ 2019-03-31",
+        "content": "Two commits: \"update 996 license\" and \"update\" — so instead of writing kernel code, you added an anti-996 license? Big respect for standing with overworked devs, but maybe get memory management working before you start fighting for labor rights.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2019-Q1",
+      "type": "ai_summary",
+      "ts": "2019-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2019-01-01",
+          "end": "2019-03-31",
+          "label": "2019-Q1"
+        },
+        "content": "2019 年第一季度， Simple-XX/SimpleKernel 项目的技术重心在于深化 Multiboot2 引导协议支持与物理内存管理，并同步完善调试信息获取和 C 语言链表实现；同时，“完成了王垠的解释器”这一任务的出现，显示出对编程语言工具的实验性探索。协作模式上，所有变更均通过 merge 方式合入，但 review 活动持续为零，延续了以个人独立推进、缺少代码审查的风格。相比 2018 年第四季度，整体活跃度有所下降， commit 数从 61 降至 48，活跃仓库从 8 个缩减至 6 个，不过 issues 数量由 2 个增至 4 个，反映出问题发现和记录变得更加主动。季度内节奏严重不均， 2 月受假期影响仅有 2 次 commit，而 3 月快速回升至 17 次，构成了明显的前低后高态势。",
+        "highlights": [
+          "48 commits, 4 PRs, 0 reviews, 4 issues, 7 comments, 6 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 48,
+          "totalPRs": 4,
+          "totalReviews": 0,
+          "totalIssues": 4,
+          "totalComments": 7,
+          "activeRepos": 6,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed merge"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 13"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2019-03",
+      "type": "ai_summary",
+      "ts": "2019-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2019-03-01",
+          "end": "2019-03-31",
+          "label": "2019-03"
+        },
+        "content": "3 月重点仍在 Simple-XX/SimpleKernel 仓库，提交数从上月的 2 次跃升至 17 次，开发节奏明显加快。工作主线集中于物理内存管理（pmm）、虚拟内存管理（vmm）、堆分配器及链表等数据结构实现，并频繁通过 merge 合并 PR 与分支。提交消息中多次出现“update”和“fix bug”，体现出小步迭代、持续修复的习惯。此外，中旬向 haiku/website 仓库提交了 1 个 PR，尝试了跨项目协作。与 2 月的低活跃期相比，本月从零星维护全面转向核心功能建设。",
+        "highlights": [
+          "17 commits, 2 PRs, 0 reviews, 0 issues, 2 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 17,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from mixed to merge",
+            "Commit volume increased by 15"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-EugeneLiu/translationCSAPP-14-135",
       "type": "issue_comment",
       "ts": "2019-03-28T02:54:42Z",
@@ -88,6 +189,21 @@
         "message": "update",
         "additions": 139,
         "deletions": 89
+      }
+    },
+    {
+      "id": "ai-roast-2019-03-11",
+      "type": "ai_roast",
+      "ts": "2019-03-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-03-11 ~ 2019-03-17",
+        "content": "\"Skipping the previous bug\" isn't a debugging technique—it's raw denial. Five commits hacking on vmm, heap, libc, AND multiboot2 all at once: you're building a kernel like a game of whack-a-mole, just swinging at whatever pops up.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -182,6 +298,21 @@
       }
     },
     {
+      "id": "ai-roast-2019-02-25",
+      "type": "ai_roast",
+      "ts": "2019-03-03T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-02-25 ~ 2019-03-03",
+        "content": "“linked list finished, no test yet”——软件界最危险的四个字：“it works, trust me.” 8 个 commit，其中一个就只是光秃秃的 \"fix\"，上下文全无——修了啥？怎么修的？这世界可能永远无法得知。",
+        "stats": {
+          "totalCommits": 8,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-e011eb35e974b10ffc23bb76078d2468ae1bf30e",
       "type": "commit",
       "ts": "2019-03-02T12:04:29Z",
@@ -270,51 +401,6 @@
         "message": "Merge pull request #16 from ysrotciv/update_readme\n\n纠正README中i386-elf-grub.rb文件路径的错误",
         "additions": 1,
         "deletions": 1
-      }
-    },
-    {
-      "id": "ai-roast-2019-02-25",
-      "type": "ai_roast",
-      "ts": "2019-03-03T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-02-25 ~ 2019-03-03",
-        "content": "“linked list finished, no test yet”——软件界最危险的四个字：“it works, trust me.” 8 个 commit，其中一个就只是光秃秃的 \"fix\"，上下文全无——修了啥？怎么修的？这世界可能永远无法得知。",
-        "stats": {
-          "totalCommits": 8,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-03-11",
-      "type": "ai_roast",
-      "ts": "2019-03-17T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-03-11 ~ 2019-03-17",
-        "content": "\"Skipping the previous bug\" isn't a debugging technique—it's raw denial. Five commits hacking on vmm, heap, libc, AND multiboot2 all at once: you're building a kernel like a game of whack-a-mole, just swinging at whatever pops up.",
-        "stats": {
-          "totalCommits": 5,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-03-25",
-      "type": "ai_roast",
-      "ts": "2019-03-31T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-03-25 ~ 2019-03-31",
-        "content": "Two commits: \"update 996 license\" and \"update\" — so instead of writing kernel code, you added an anti-996 license? Big respect for standing with overworked devs, but maybe get memory management working before you start fighting for labor rights.",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

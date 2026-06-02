@@ -28,6 +28,49 @@
       }
     },
     {
+      "id": "ai-summary-month-2019-01",
+      "type": "ai_summary",
+      "ts": "2019-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2019-01-01",
+          "end": "2019-01-31",
+          "label": "2019-01"
+        },
+        "content": "2019 年 1 月的工作仍集中在 Simple-XX/SimpleKernel，但提交量从上月的 44 次降至 29 次， issue 和评论数略有增加。主要精力投入在 Multiboot2 引导升级、内存管理以及内核调试上，还尝试了 C 语言链表实现，并通过合并 PR #15 等方式集成了功能修复。同时，在 Simple-XX/SimpleCompiler 中完成了王垠的解释器实现，扩展了编译器方向的探索。整体延续了 12 月的底层系统开发方向，节奏放缓，以功能合并和问题修复为主。",
+        "highlights": [
+          "29 commits, 2 PRs, 0 reviews, 4 issues, 2 comments, 4 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 29,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 4,
+          "totalComments": 2,
+          "activeRepos": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed merge"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 15"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-Homebrew/homebrew-core-35821-141",
       "type": "issue_comment",
       "ts": "2019-01-30T18:23:11Z",
@@ -37,6 +80,21 @@
         "issueNumber": 35821,
         "issueTitle": "GNU GRUB 2 for i386-elf",
         "body": "@Varriount Yes, but you can use it by `brew install i386-elf-grub.rb`."
+      }
+    },
+    {
+      "id": "ai-roast-2019-01-21",
+      "type": "ai_roast",
+      "ts": "2019-01-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-01-21 ~ 2019-01-27",
+        "content": "从 SimpleKernel 跳到 SimpleCompiler，一周之内就把「王垠的解释器」给写完了——你这是在集邮还是做项目？内存管理还没搞定就去碰编译器了，经典程序员 ADHD。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        }
       }
     },
     {
@@ -101,6 +159,21 @@
         "message": "Merge pull request #15 from MRNIU/TODO\n\nUpdate to multiboot2",
         "additions": 46123,
         "deletions": 685
+      }
+    },
+    {
+      "id": "ai-roast-2019-01-14",
+      "type": "ai_roast",
+      "ts": "2019-01-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-01-14 ~ 2019-01-20",
+        "content": "\"Update .travis.yml\" three times in a row — the CI config is clearly the star of this kernel project, while the kernel itself is just a supporting actor. \"It is confused to get elf symbol from grub2\" — I'd say you're the one who's confused, though at this point the code probably shares the feeling.",
+        "stats": {
+          "totalCommits": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -244,6 +317,21 @@
         "message": "update to grub2",
         "additions": 1152,
         "deletions": 662
+      }
+    },
+    {
+      "id": "ai-roast-2019-01-07",
+      "type": "ai_roast",
+      "ts": "2019-01-13T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-01-07 ~ 2019-01-13",
+        "content": "11 commits, 3 issues opened, and you’re simultaneously hacking on kernel debug, linked lists in C, and multiboot2 — pick a lane! The exact same commit message “Working on debug by multiboot2: Show function call stack” appears twice, so apparently copy‑pasting isn’t just your go‑to coding move, it’s your git workflow too.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -442,6 +530,21 @@
       }
     },
     {
+      "id": "ai-roast-2018-12-31",
+      "type": "ai_roast",
+      "ts": "2019-01-06T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-12-31 ~ 2019-01-06",
+        "content": "2 commits to ring in the new year: \"Still wirking on multiboot2... Maybe I have a stuck here\" and \"uodate.\" Can't spell \"working\" or \"update,\" but you're writing an OS kernel — priorities are clearly in order.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-77e5f44e2f87edb9c8a8f913ef7008d8e79e47f9",
       "type": "commit",
       "ts": "2019-01-05T23:23:54Z",
@@ -478,66 +581,6 @@
         "title": "自荐项目：SimpleKernel",
         "state": "closed",
         "body": "## 项目推荐\r\n- 项目名称：\r\nSimpleKernel\r\n- 项目地址：\r\nhttps://github.com/MRNIU/SimpleKernel\r\n- 项目描述：\r\n用于学习操作系统内核的项目。\r\n这里有实现一个内核过程中，各个阶段的源码，你可以从自己感兴趣的地方开始。\r\n目前已经完成了启动、gdt、idt 的初始化，系统中断（isr）以及键盘输入。\r\n\r\n项目中需要了解的知识我会整理成文档放到一块，免去了到处找资料的麻烦，参考项目我也有列出，你可以对比不同内核的实现思路有什么不一样。\r\n"
-      }
-    },
-    {
-      "id": "ai-roast-2018-12-31",
-      "type": "ai_roast",
-      "ts": "2019-01-06T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-12-31 ~ 2019-01-06",
-        "content": "2 commits to ring in the new year: \"Still wirking on multiboot2... Maybe I have a stuck here\" and \"uodate.\" Can't spell \"working\" or \"update,\" but you're writing an OS kernel — priorities are clearly in order.",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-01-07",
-      "type": "ai_roast",
-      "ts": "2019-01-13T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-01-07 ~ 2019-01-13",
-        "content": "11 commits, 3 issues opened, and you’re simultaneously hacking on kernel debug, linked lists in C, and multiboot2 — pick a lane! The exact same commit message “Working on debug by multiboot2: Show function call stack” appears twice, so apparently copy‑pasting isn’t just your go‑to coding move, it’s your git workflow too.",
-        "stats": {
-          "totalCommits": 11,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-01-14",
-      "type": "ai_roast",
-      "ts": "2019-01-20T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-01-14 ~ 2019-01-20",
-        "content": "\"Update .travis.yml\" three times in a row — the CI config is clearly the star of this kernel project, while the kernel itself is just a supporting actor. \"It is confused to get elf symbol from grub2\" — I'd say you're the one who's confused, though at this point the code probably shares the feeling.",
-        "stats": {
-          "totalCommits": 10,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-01-21",
-      "type": "ai_roast",
-      "ts": "2019-01-27T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-01-21 ~ 2019-01-27",
-        "content": "从 SimpleKernel 跳到 SimpleCompiler，一周之内就把「王垠的解释器」给写完了——你这是在集邮还是做项目？内存管理还没搞定就去碰编译器了，经典程序员 ADHD。",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleCompiler"
-        }
       }
     }
   ]

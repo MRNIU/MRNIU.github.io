@@ -2,6 +2,46 @@
   "month": "2018-11",
   "events": [
     {
+      "id": "ai-summary-month-2018-11",
+      "type": "ai_summary",
+      "ts": "2018-11-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2018-11-01",
+          "end": "2018-11-30",
+          "label": "2018-11"
+        },
+        "content": "本月主要参与了 CSAPP 翻译项目，在 EugeneLiu/translationCSAPP 仓库通过 5 个 PR 提交翻译内容，并更新了编译方法相关的文档。同时为 Homebrew/homebrew-core 维护了交叉编译器的安装配方，延续了从代码工作转向内容协作的趋势。相较上月以 Simple-XX/SimpleKernel 内核开发为主， commit 数量从 15 次降至 2 次，而 PR 数量从 2 次增至 5 次，协作方式明显变化。整体活动集中在中下旬，并伴有少量评论交流。",
+        "highlights": [
+          "2 commits, 5 PRs, 0 reviews, 0 issues, 6 comments, 5 active repos",
+          "Top repo: EugeneLiu/translationCSAPP"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 2,
+          "totalPRs": 5,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 6,
+          "activeRepos": 5,
+          "topRepo": "EugeneLiu/translationCSAPP"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to EugeneLiu/translationCSAPP",
+            "Commit volume decreased by 13"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-EugeneLiu/translationCSAPP-25-144",
       "type": "issue_comment",
       "ts": "2018-11-28T11:23:58Z",
@@ -23,6 +63,21 @@
         "issueNumber": 34288,
         "issueTitle": "The GNU Project debugger for i386-elf cross development",
         "body": "Sorry, is this not allowed? I executed the inappropriate git commands, there is a redundant commit to come in, so just reopen one."
+      }
+    },
+    {
+      "id": "ai-roast-2018-11-19",
+      "type": "ai_roast",
+      "ts": "2018-11-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-11-19 ~ 2018-11-25",
+        "content": "0 commits, but 3 PRs to a CSAPP translation repo — so you basically declared a kernel-free week to go translate a textbook? I've gotta respect the pivot from \"I don't understand interrupts\" to \"let me help translate the book that explains interrupts.\"",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "EugeneLiu/translationCSAPP"
+        }
       }
     },
     {
@@ -101,6 +156,21 @@
       }
     },
     {
+      "id": "ai-roast-2018-11-12",
+      "type": "ai_roast",
+      "ts": "2018-11-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2018-11-12 ~ 2018-11-18",
+        "content": "2 commits, 2 PRs to Homebrew — “change CFLAGS” and “update cross compiler install method” are actually descriptive commit messages, something unheard of from you. I’m genuinely proud; the bar was underground and you still cleared it.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "Homebrew/homebrew-core"
+        }
+      }
+    },
+    {
       "id": "pr-34059-Homebrew/homebrew-core",
       "type": "pull_request",
       "ts": "2018-11-14T16:23:17Z",
@@ -153,18 +223,6 @@
       }
     },
     {
-      "id": "comment-ApolloZhu/Dynamic-Dark-Mode-36-149",
-      "type": "issue_comment",
-      "ts": "2018-11-01T03:50:57Z",
-      "repo": "ApolloZhu/Dynamic-Dark-Mode",
-      "semantic": null,
-      "data": {
-        "issueNumber": 36,
-        "issueTitle": "[Simplified Chinese Translation] toggle 的翻译",
-        "body": "我觉得还是明确一些比较好。\r\n\r\n比如 `切换至深色模式` `切换至浅色模式`，或者干脆用 `深色模式` `浅色模式`，这样不会引起误会，你觉得咋样？\r\n\r\n另外这个小插件挺好用的，非常感谢。"
-      }
-    },
-    {
       "id": "ai-roast-2018-10-29",
       "type": "ai_roast",
       "ts": "2018-11-04T00:00:00Z",
@@ -180,33 +238,15 @@
       }
     },
     {
-      "id": "ai-roast-2018-11-12",
-      "type": "ai_roast",
-      "ts": "2018-11-18T00:00:00Z",
-      "repo": null,
+      "id": "comment-ApolloZhu/Dynamic-Dark-Mode-36-149",
+      "type": "issue_comment",
+      "ts": "2018-11-01T03:50:57Z",
+      "repo": "ApolloZhu/Dynamic-Dark-Mode",
       "semantic": null,
       "data": {
-        "weekRange": "2018-11-12 ~ 2018-11-18",
-        "content": "2 commits, 2 PRs to Homebrew — “change CFLAGS” and “update cross compiler install method” are actually descriptive commit messages, something unheard of from you. I’m genuinely proud; the bar was underground and you still cleared it.",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "Homebrew/homebrew-core"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2018-11-19",
-      "type": "ai_roast",
-      "ts": "2018-11-25T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2018-11-19 ~ 2018-11-25",
-        "content": "0 commits, but 3 PRs to a CSAPP translation repo — so you basically declared a kernel-free week to go translate a textbook? I've gotta respect the pivot from \"I don't understand interrupts\" to \"let me help translate the book that explains interrupts.\"",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "EugeneLiu/translationCSAPP"
-        }
+        "issueNumber": 36,
+        "issueTitle": "[Simplified Chinese Translation] toggle 的翻译",
+        "body": "我觉得还是明确一些比较好。\r\n\r\n比如 `切换至深色模式` `切换至浅色模式`，或者干脆用 `深色模式` `浅色模式`，这样不会引起误会，你觉得咋样？\r\n\r\n另外这个小插件挺好用的，非常感谢。"
       }
     }
   ]

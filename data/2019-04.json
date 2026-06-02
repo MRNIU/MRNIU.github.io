@@ -2,6 +2,49 @@
   "month": "2019-04",
   "events": [
     {
+      "id": "ai-summary-month-2019-04",
+      "type": "ai_summary",
+      "ts": "2019-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2019-04-01",
+          "end": "2019-04-30",
+          "label": "2019-04"
+        },
+        "content": "4 月活动量相较 3 月（17 个 commit）明显回落，仅有 4 个 commit 和 2 个 PR，但核心进展扎实。本月重心仍在 Simple-XX/SimpleKernel，初步完成了虚拟内存管理，将内核映射到 3 GiB 位置，并调整了目录结构。月初曾向 996icu/996.ICU 提交 2 个 PR，随后专注内核功能实现与修复。整体节奏从上月密集的合并操作转向底层功能开发，提交记录覆盖了“修 bug”到“初步完成虚拟内存管理”的演进。",
+        "highlights": [
+          "4 commits, 2 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 4,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to mixed",
+            "Commit volume decreased by 13"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-ed95a4d87fb2e130333d823d49ebf303552a5291",
       "type": "commit",
       "ts": "2019-04-28T06:58:52Z",
@@ -12,6 +55,21 @@
         "message": "修 bug",
         "additions": 320,
         "deletions": 174
+      }
+    },
+    {
+      "id": "ai-roast-2019-04-22",
+      "type": "ai_roast",
+      "ts": "2019-04-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-04-22 ~ 2019-04-28",
+        "content": "3 个 commit，1 个叫「修 bug」，1 个叫「调整目录」——这描述能力跟内核的虚拟内存一样，初步完成但仍然有问题。虚拟内存放在 0xC0000000，commit message 的信息量放在 0x00000000。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -91,21 +149,6 @@
         "stats": {
           "totalCommits": 1,
           "topRepo": "996icu/996.ICU"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-04-22",
-      "type": "ai_roast",
-      "ts": "2019-04-28T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-04-22 ~ 2019-04-28",
-        "content": "3 个 commit，1 个叫「修 bug」，1 个叫「调整目录」——这描述能力跟内核的虚拟内存一样，初步完成但仍然有问题。虚拟内存放在 0xC0000000，commit message 的信息量放在 0x00000000。",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "Simple-XX/SimpleKernel"
         }
       }
     }

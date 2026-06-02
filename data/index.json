@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:39:27.442Z",
+  "generatedAt": "2026-06-02T08:45:22.343Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -1605,15 +1605,16 @@
     {
       "key": "2019-04",
       "file": "2019-04.json",
-      "eventCount": 8,
+      "eventCount": 9,
       "repos": [
         "996icu/996.ICU",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 4,
-        "pull_request": 2,
-        "ai_roast": 2
+        "ai_roast": 2,
+        "pull_request": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 4,
@@ -1623,7 +1624,7 @@
     {
       "key": "2019-03",
       "file": "2019-03.json",
-      "eventCount": 24,
+      "eventCount": 26,
       "repos": [
         "EugeneLiu/translationCSAPP",
         "Simple-XX/SimpleKernel",
@@ -1631,9 +1632,10 @@
       ],
       "breakdown": {
         "commit": 17,
+        "ai_roast": 3,
+        "ai_summary": 2,
         "issue_comment": 2,
-        "pull_request": 2,
-        "ai_roast": 3
+        "pull_request": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 17,
@@ -1644,13 +1646,14 @@
     {
       "key": "2019-02",
       "file": "2019-02.json",
-      "eventCount": 6,
+      "eventCount": 7,
       "repos": [
         "EugeneLiu/translationCSAPP",
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 2,
         "issue_comment": 3,
         "ai_roast": 1
@@ -1664,7 +1667,7 @@
     {
       "key": "2019-01",
       "file": "2019-01.json",
-      "eventCount": 41,
+      "eventCount": 42,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleCompiler",
@@ -1673,10 +1676,11 @@
       ],
       "breakdown": {
         "commit": 29,
+        "ai_summary": 1,
         "issue_comment": 2,
+        "ai_roast": 4,
         "pull_request": 2,
-        "issue": 4,
-        "ai_roast": 4
+        "issue": 4
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 31,
@@ -1688,7 +1692,7 @@
     {
       "key": "2018-12",
       "file": "2018-12.json",
-      "eventCount": 52,
+      "eventCount": 55,
       "repos": [
         "521xueweihan/HelloGitHub",
         "CasterWx/AntzOS",
@@ -1696,11 +1700,12 @@
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 3,
         "commit": 44,
+        "ai_roast": 4,
         "issue_comment": 1,
         "pull_request": 2,
-        "issue": 1,
-        "ai_roast": 4
+        "issue": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 45,
@@ -1712,7 +1717,7 @@
     {
       "key": "2018-11",
       "file": "2018-11.json",
-      "eventCount": 16,
+      "eventCount": 17,
       "repos": [
         "ApolloZhu/Dynamic-Dark-Mode",
         "EugeneLiu/translationCSAPP",
@@ -1721,10 +1726,11 @@
         "haiku/website"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 6,
+        "ai_roast": 3,
         "pull_request": 5,
-        "commit": 2,
-        "ai_roast": 3
+        "commit": 2
       },
       "repoBreakdown": {
         "EugeneLiu/translationCSAPP": 5,
@@ -1737,7 +1743,7 @@
     {
       "key": "2018-10",
       "file": "2018-10.json",
-      "eventCount": 24,
+      "eventCount": 25,
       "repos": [
         "ApolloZhu/Dynamic-Dark-Mode",
         "Homebrew/homebrew-core",
@@ -1746,6 +1752,7 @@
       ],
       "breakdown": {
         "issue": 1,
+        "ai_summary": 1,
         "commit": 15,
         "pull_request": 2,
         "issue_comment": 5,
