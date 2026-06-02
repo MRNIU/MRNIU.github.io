@@ -14,6 +14,18 @@ Give one gentle suggestion for improvement. Keep it under 3 sentences.
 Write in the same language as the commit messages.`,
 };
 
+const OUTPUT_STYLE_GUIDE = `Output style rules:
+- For Chinese output, follow common Chinese technical writing style: insert spaces between Chinese characters and Latin letters, English words, Arabic numerals, and technical abbreviations. Example: "写了 3 个 PR", not "写了3个PR".
+- Use Chinese full-width punctuation in Chinese sentences, such as ，。！？；：（）. Do not put spaces before or after Chinese punctuation.
+- Use English half-width punctuation in English sentences. Do not mix full-width Chinese punctuation into pure English output.
+- Keep repository names, commit types, API names, model names, code identifiers, and URLs exactly as written, using ASCII punctuation when they are code-like tokens.
+- Use Arabic numerals for counts, dates, versions, percentages, and measurements. Do not spell counts out as words unless the original technical term requires it.
+- Keep the answer under 3 sentences and avoid markdown lists, headings, code blocks, and emoji.`;
+
+function withOutputStyleGuide(prompt: string): string {
+  return `${prompt}\n\n${OUTPUT_STYLE_GUIDE}`;
+}
+
 interface WeekSummary {
   weekStart: string;
   weekEnd: string;
@@ -172,9 +184,10 @@ export async function generateAIRoasts(
     return [];
   }
 
-  const systemPrompt = config.aiRoast.promptMode === "custom"
+  const basePrompt = config.aiRoast.promptMode === "custom"
     ? config.aiRoast.customPrompt
     : SYSTEM_PROMPTS[config.aiRoast.promptMode] || SYSTEM_PROMPTS.toxic_senior_dev;
+  const systemPrompt = withOutputStyleGuide(basePrompt);
 
   const weeks = groupEventsByWeek(events);
   const roasts: AIRoastEvent[] = [];

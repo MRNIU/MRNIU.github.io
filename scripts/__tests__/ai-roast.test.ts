@@ -52,7 +52,12 @@ describe("generateAIRoasts", () => {
     const [url, opts] = mockFetch.mock.calls[0];
     expect(url).toBe("https://api.openai.com/v1/chat/completions");
     expect(opts.headers.Authorization).toBe("Bearer test-key");
-    expect(JSON.parse(opts.body).max_tokens).toBe(384000);
+    const body = JSON.parse(opts.body);
+    expect(body.max_tokens).toBe(384000);
+    expect(body.messages[0].content).toContain("insert spaces between Chinese characters and Latin letters");
+    expect(body.messages[0].content).toContain("Chinese full-width punctuation");
+    expect(body.messages[0].content).toContain("English half-width punctuation");
+    expect(body.messages[0].content).toContain("Use Arabic numerals");
   });
 
   it("returns empty array when AI is disabled", async () => {
@@ -116,5 +121,27 @@ describe("generateAIRoasts", () => {
     expect(url).toBe("https://custom.api/v1/chat/completions");
     const body = JSON.parse(opts.body);
     expect(body.model).toBe("custom-model");
+  });
+
+  it("applies output style rules to custom prompts", async () => {
+    const config: GitPulseConfig = {
+      ...baseConfig,
+      aiRoast: {
+        ...baseConfig.aiRoast,
+        promptMode: "custom",
+        customPrompt: "Use a dry engineering tone.",
+      },
+    };
+
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ choices: [{ message: { content: "roast" } }] }),
+    });
+
+    await generateAIRoasts(config, sampleEvents, new Set());
+
+    const body = JSON.parse(mockFetch.mock.calls[0][1].body);
+    expect(body.messages[0].content).toContain("Use a dry engineering tone.");
+    expect(body.messages[0].content).toContain("Output style rules:");
   });
 });
