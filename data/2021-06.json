@@ -15,6 +15,92 @@
       }
     },
     {
+      "id": "ai-summary-quarter-2021-Q2",
+      "type": "ai_summary",
+      "ts": "2021-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2021-04-01",
+          "end": "2021-06-30",
+          "label": "2021-Q2"
+        },
+        "content": "本季度在 Simple-XX/SimpleKernel 上继续聚焦特性开发，总提交量达到 270 个 commit 和 22 个 PR，较上季度增长约 3 倍，其中 4 月的活动最为密集。技术方向以内存管理（VMM、PMM）、APIC 和 IO 子系统的初始化优先级优化为主线，同时大量引入 C++ 标准库支持，包括 iostream、string ctor、new 和 vector 等特性，为内核上层 C++ 环境打下了基础。协作方式依然通过 PR 合并推动，多数代码由 MRNIU 提交后直接合入，没有进行显式 Review，但提交记录中出现了如“test(vmm): uncomment”等与测试或反馈相关的动作。与上季度相比，最大的变化是 C++ 库从无到有的跨越式加入，以及 boot 代码的清理重组，删除了 boot.s 等早期文件，简化了启动路径。整体开发节奏仍以个人贡献为主， Review 环节未建立，代码质量依赖提交者自检与自动化未体现出来的测试。",
+        "highlights": [
+          "270 commits, 22 PRs, 0 reviews, 1 issues, 4 comments, 4 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 270,
+          "totalPRs": 22,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 4,
+          "activeRepos": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": [
+            "Commit volume increased by 183"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2021-06",
+      "type": "ai_summary",
+      "ts": "2021-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-06-01",
+          "end": "2021-06-30",
+          "label": "2021-06"
+        },
+        "content": "6 月继续聚焦于 Simple-XX/SimpleKernel 仓库，提交量较 5 月翻倍至 64 个 commit，并合并了 7 个 PR，工作重心从上月的 feat 转换为 merge 主导的集成与清理。大量 pref、fix 和 comment 提交围绕 RISC-V 中断与 PLIC 引入、链接脚本精简、全局构造函数修复以及 MMIO 支持展开，同时补充了被选学生提案文档。相比前月，活动更集中且重构节奏明显加速，以静态替换 extern、代码去冗余和内联添加等微优化为重复习惯。",
+        "highlights": [
+          "64 commits, 7 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 64,
+          "totalPRs": 7,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to merge",
+            "Commit volume increased by 31"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-e3ef50f0391e123c3fe4fb3038cba068b60b1c14",
       "type": "commit",
       "ts": "2021-06-29T18:49:42Z",
@@ -454,6 +540,21 @@
         "message": "pref(build): add submodel\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 21,
         "deletions": 5
+      }
+    },
+    {
+      "id": "ai-roast-2021-05-31",
+      "type": "ai_roast",
+      "ts": "2021-06-06T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-31 ~ 2021-06-06",
+        "content": "32 个 commit，7 个 PR 全 merge 了——从 intr 到 lib、heap、pmm、printf，这周简直是 SimpleKernel 的“清仓大甩卖”，积压多少 feature branch 一口气全合进去了。那个 'pref(PMM): instead static with extren'，连 extern 都拼错了，但至少代码能跑。",
+        "stats": {
+          "totalCommits": 32,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -922,21 +1023,6 @@
         "message": "feat(build): try using python instead of shell\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 75,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2021-05-31",
-      "type": "ai_roast",
-      "ts": "2021-06-06T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-05-31 ~ 2021-06-06",
-        "content": "32 个 commit，7 个 PR 全 merge 了——从 intr 到 lib、heap、pmm、printf，这周简直是 SimpleKernel 的“清仓大甩卖”，积压多少 feature branch 一口气全合进去了。那个 'pref(PMM): instead static with extren'，连 extern 都拼错了，但至少代码能跑。",
-        "stats": {
-          "totalCommits": 32,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

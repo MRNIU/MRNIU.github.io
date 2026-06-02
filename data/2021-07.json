@@ -2,6 +2,51 @@
   "month": "2021-07",
   "events": [
     {
+      "id": "ai-summary-month-2021-07",
+      "type": "ai_summary",
+      "ts": "2021-07-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-07-01",
+          "end": "2021-07-31",
+          "label": "2021-07"
+        },
+        "content": "七月在 Simple-XX/SimpleKernel 仓库集中开发，共完成 164 个 commit 和 3 个 PR，较六月的 64 个 commit 与 7 个 PR 在提交量上明显翻倍，但合并类工作减少。主导语义标签从“merge”转为“fix”，大量提交围绕代码重构与性能优化展开，例如将 void* 统一替换为 uintptr_t、合并 i386 和 x86_64 架构为 ia32，以及移除冗余代码。同时新增了设备树（dtb）内存解析、RISC-V 颜色设置等特性支持，整体工程向更干净的模块化推进。第三周（7 月 19 至 25 日）为最活跃时段，贡献了 70 个 commit 和全部 3 个 PR，后续周仍保持高频率优化提交。",
+        "highlights": [
+          "164 commits, 3 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 164,
+          "totalPRs": 3,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to fix",
+            "Commit volume increased by 100"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-1603bd8161501ae07dbbb18eb9ec9c33f03c61d2",
       "type": "commit",
       "ts": "2021-07-30T08:42:07Z",
@@ -506,6 +551,21 @@
         "message": "refactor(multiboot): add iter\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 204,
         "deletions": 414
+      }
+    },
+    {
+      "id": "ai-roast-2021-07-19",
+      "type": "ai_roast",
+      "ts": "2021-07-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-07-19 ~ 2021-07-25",
+        "content": "一周 70 个提交——你这是在速通 Git 历史吗？连续四个 “pref(intr): change to static class” 提交，说明你找到了编译按钮，但那个“提交前先想想”的按钮还完全不见踪影。好歹你还提了 3 个 PR，至少能让别人也围观一下这场美丽的混乱。",
+        "stats": {
+          "totalCommits": 70,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -1510,6 +1570,21 @@
       }
     },
     {
+      "id": "ai-roast-2021-07-12",
+      "type": "ai_roast",
+      "ts": "2021-07-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-07-12 ~ 2021-07-18",
+        "content": "31 个 commit 全堆在 slab 分配器上，其中一半的标题都是 “fix: overflow” —— 这下出问题的不是 slab，是你的提交记录在溢出。“pref(slab): add printf for debug”，紧接着又是 “pref(slab): add assert”，然后又是一连串修复，活脱脱是小黄鸭调试法，只不过鸭子换成了 git。下次提交之前，就不能先读一遍代码？",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-117e0ca660457cde62dc281831ed0d97ad11bb5c",
       "type": "commit",
       "ts": "2021-07-17T18:35:32Z",
@@ -1822,6 +1897,21 @@
       }
     },
     {
+      "id": "ai-roast-2021-07-05",
+      "type": "ai_roast",
+      "ts": "2021-07-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-07-05 ~ 2021-07-11",
+        "content": "22 个 commit 全围着 PMM、firstfit 和 VMM 打转 —— 才把链表换成位图，转头就开始修位图 bug，完美复刻了“那边的数据结构更绿”经典桥段。顶上挂着的那个 “pref(SLAB): working on slab” 更说明上一个分配器还没收拾利索，魂已经飘到下一个身上去了。你这内存管理代码重写的次数，比好莱坞剧本的改稿还夸张。",
+        "stats": {
+          "totalCommits": 22,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-471ede21571162fc633936f7a14ef028beac7c94",
       "type": "commit",
       "ts": "2021-07-10T17:30:23Z",
@@ -2095,6 +2185,21 @@
       }
     },
     {
+      "id": "ai-roast-2021-06-28",
+      "type": "ai_roast",
+      "ts": "2021-07-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-06-28 ~ 2021-07-04",
+        "content": "38 commits, and you somehow committed “fear(plic): add plic to riscv” twice. Yes, “fear” — precisely the emotion PLIC configuration should evoke. You also managed to ship “pref(OPENSBI): change to static” in duplicate, which for a kernel developer is basically a double-free bug in your Git workflow. The typo progression from “docs” to “dovs” to “fear” suggests your keyboard is slowly giving up on you.",
+        "stats": {
+          "totalCommits": 38,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-27f1d6a0c9ca609e698d52466cf0b1c1a13d1dd4",
       "type": "commit",
       "ts": "2021-07-01T02:25:36Z",
@@ -2170,66 +2275,6 @@
         "message": "fix(VMM): mistake for KERNEL_BASE\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 22,
         "deletions": 17
-      }
-    },
-    {
-      "id": "ai-roast-2021-06-28",
-      "type": "ai_roast",
-      "ts": "2021-07-04T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-06-28 ~ 2021-07-04",
-        "content": "38 commits, and you somehow committed “fear(plic): add plic to riscv” twice. Yes, “fear” — precisely the emotion PLIC configuration should evoke. You also managed to ship “pref(OPENSBI): change to static” in duplicate, which for a kernel developer is basically a double-free bug in your Git workflow. The typo progression from “docs” to “dovs” to “fear” suggests your keyboard is slowly giving up on you.",
-        "stats": {
-          "totalCommits": 38,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-07-05",
-      "type": "ai_roast",
-      "ts": "2021-07-11T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-07-05 ~ 2021-07-11",
-        "content": "22 个 commit 全围着 PMM、firstfit 和 VMM 打转 —— 才把链表换成位图，转头就开始修位图 bug，完美复刻了“那边的数据结构更绿”经典桥段。顶上挂着的那个 “pref(SLAB): working on slab” 更说明上一个分配器还没收拾利索，魂已经飘到下一个身上去了。你这内存管理代码重写的次数，比好莱坞剧本的改稿还夸张。",
-        "stats": {
-          "totalCommits": 22,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-07-12",
-      "type": "ai_roast",
-      "ts": "2021-07-18T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-07-12 ~ 2021-07-18",
-        "content": "31 个 commit 全堆在 slab 分配器上，其中一半的标题都是 “fix: overflow” —— 这下出问题的不是 slab，是你的提交记录在溢出。“pref(slab): add printf for debug”，紧接着又是 “pref(slab): add assert”，然后又是一连串修复，活脱脱是小黄鸭调试法，只不过鸭子换成了 git。下次提交之前，就不能先读一遍代码？",
-        "stats": {
-          "totalCommits": 31,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-07-19",
-      "type": "ai_roast",
-      "ts": "2021-07-25T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-07-19 ~ 2021-07-25",
-        "content": "一周 70 个提交——你这是在速通 Git 历史吗？连续四个 “pref(intr): change to static class” 提交，说明你找到了编译按钮，但那个“提交前先想想”的按钮还完全不见踪影。好歹你还提了 3 个 PR，至少能让别人也围观一下这场美丽的混乱。",
-        "stats": {
-          "totalCommits": 70,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

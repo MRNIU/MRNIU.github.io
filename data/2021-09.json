@@ -1,0 +1,50 @@
+{
+  "month": "2021-09",
+  "events": [
+    {
+      "id": "ai-summary-quarter-2021-Q3",
+      "type": "ai_summary",
+      "ts": "2021-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2021-07-01",
+          "end": "2021-09-30",
+          "label": "2021-Q3"
+        },
+        "content": "2021-Q3 的技术主线围绕 SimpleKernel 的内存管理重构与架构收敛展开，大量提交聚焦于堆分配器、物理及虚拟内存的 pref 与 refactor，同时将 i386 和 x86_64 合并为 ia32，并扩展了 RISC-V 的设备树与颜色输出支持。相较于 Q2 以 feat 为主、涌现 22 个 PR 的快速特性迭代，本季度主导语义变为 fix， Commit 数降至 185， PR 仅 3 个且无代码 review，活动明显转向补缺和代码质量打磨。协作模式上仍以单人推进为主，缺少评审互动，项目节奏从扩张期进入稳定完善期。",
+        "highlights": [
+          "185 commits, 3 PRs, 0 reviews, 1 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 185,
+          "totalPRs": 3,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to fix",
+            "Commit volume decreased by 85"
+          ]
+        }
+      }
+    }
+  ]
+}

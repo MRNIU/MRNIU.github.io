@@ -2,6 +2,49 @@
   "month": "2021-11",
   "events": [
     {
+      "id": "ai-summary-month-2021-11",
+      "type": "ai_summary",
+      "ts": "2021-11-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-11-01",
+          "end": "2021-11-30",
+          "label": "2021-11"
+        },
+        "content": "本月活动集中在 Simple-XX/SimpleKernel 仓库，共产生 68 次提交和 13 个 PR，主导标签为 merge，大部分贡献发生在 11 月 22 至 28 日。不同于 8 月以修复（fix）为主，本月转向大规模分支合并与构建系统迭代，例如新增 aarch64 特性初始化并频繁调整 CI 配置。提交记录中反复出现 build.yml 和 CMake 相关更新，显示出对持续集成和跨平台编译环境的持续打磨。整体节奏从前期的沉寂转向月底高密度合入，反映了阶段性冲刺的协作习惯。",
+        "highlights": [
+          "68 commits, 13 PRs, 0 reviews, 0 issues, 1 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 68,
+          "totalPRs": 13,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to merge",
+            "Commit volume increased by 47"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-593fdb3dd8b4e6e4013ba164f4757005b8919375",
       "type": "commit",
       "ts": "2021-11-28T04:05:23Z",
@@ -12,6 +55,21 @@
         "message": "feature(aarch64): init\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 120,
         "deletions": 151
+      }
+    },
+    {
+      "id": "ai-roast-2021-11-22",
+      "type": "ai_roast",
+      "ts": "2021-11-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-11-22 ~ 2021-11-28",
+        "content": "68 commits, 13 PRs, and at least 8 of your commit messages are literally \"Update build.yml\" or \"Update CMakeLists.txt\" — the default GitHub commit message is doing more writing than you do. That's CI/CD when you treat the pipeline like a personal build script. You started aarch64 support though, so congrats on adding a third architecture to the ever-growing collection of half-finished ports.",
+        "stats": {
+          "totalCommits": 68,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -1064,21 +1122,6 @@
         "issueNumber": 93,
         "issueTitle": "build error",
         "body": "hi NukeWilliams, you can install grub via /tools/grub4mac.sh\r\n\r\n```shell\r\ncd tools/\r\nsh ./grub4mac.sh\r\n```\r\n"
-      }
-    },
-    {
-      "id": "ai-roast-2021-11-22",
-      "type": "ai_roast",
-      "ts": "2021-11-28T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-11-22 ~ 2021-11-28",
-        "content": "68 commits, 13 PRs, and at least 8 of your commit messages are literally \"Update build.yml\" or \"Update CMakeLists.txt\" — the default GitHub commit message is doing more writing than you do. That's CI/CD when you treat the pipeline like a personal build script. You started aarch64 support though, so congrats on adding a third architecture to the ever-growing collection of half-finished ports.",
-        "stats": {
-          "totalCommits": 68,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

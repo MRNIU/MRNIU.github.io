@@ -2,6 +2,51 @@
   "month": "2021-05",
   "events": [
     {
+      "id": "ai-summary-month-2021-05",
+      "type": "ai_summary",
+      "ts": "2021-05-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-05-01",
+          "end": "2021-05-31",
+          "label": "2021-05"
+        },
+        "content": "In May 2021, kernel development on Simple-XX/SimpleKernel centered on RISC-V interrupt handling and virtual memory management, with supporting features like x86_64 build fixes and constructor refactoring (15 of 33 commits carried a feat tag). The commit pace fell sharply from 173 in April to 33, but the pattern of incremental feature work and cleanup (removing __init_priority__, renaming symbols, adding init()) remained consistent. Late in the month, a brief shift appeared with 1 commit and an issue on HUST-OS/xv6-k210, suggesting experimentation with xv6 on the K210 RISC-V board. Comments and issue activity (4 comments, 1 issue) contrasted with the prior month’s zero, while PR and review counts dropped to zero. Overall, the period maintained a single-developer, multi-architecture kernel hacking rhythm, with a notable slowdown and a small side exploration.",
+        "highlights": [
+          "33 commits, 0 PRs, 0 reviews, 1 issues, 4 comments, 4 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 33,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 4,
+          "activeRepos": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 140"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-HUST-OS/xv6-k210-30-71",
       "type": "issue_comment",
       "ts": "2021-05-30T17:47:27Z",
@@ -36,6 +81,21 @@
         "issueNumber": 30,
         "issueTitle": "K210 无法进行 SD 卡读取",
         "body": "不是哦，在 `intr init` 中只是填充了一下中断表，没有开启中断。\r\n代码在 `https://gitlab.eduxiji.net/PTRNULL/simplekernel_oscomp_2021/-/blob/master/src/arch/riscv64/intr/intr.cpp`"
+      }
+    },
+    {
+      "id": "ai-roast-2021-05-24",
+      "type": "ai_roast",
+      "ts": "2021-05-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-24 ~ 2021-05-30",
+        "content": "1 个 commit 写着“git: update .gitignore”，却在别人仓库留了 4 条评论和 1 个 issue —— 所以你本周最大的贡献就是告诉 Git 该忽略什么，紧接着又去教别人他们错在哪里。单 commit 周硬是散发出了满级资深开发者的气场。",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "HUST-OS/xv6-k210"
+        }
       }
     },
     {
@@ -102,6 +162,21 @@
       }
     },
     {
+      "id": "ai-roast-2021-05-10",
+      "type": "ai_roast",
+      "ts": "2021-05-16T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-10 ~ 2021-05-16",
+        "content": "4 个提交，全是关于 INTR 的，其中两个写着 “working on riscv intr”——这是上周 “working on riscv vmm” 连续剧的续集，同样的能量，同样的悬念结尾。至少 “riscv timer intr done” 落地了，总算有一个中断被中断了，从无休止的进行中逃了出来。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-e9fdace8e230ba3505216d4c3ad242b42f761a86",
       "type": "commit",
       "ts": "2021-05-15T17:54:11Z",
@@ -125,6 +200,21 @@
         "message": "pref(INTR): working on riscv intr\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 208,
         "deletions": 79
+      }
+    },
+    {
+      "id": "ai-roast-2021-05-03",
+      "type": "ai_roast",
+      "ts": "2021-05-09T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-05-03 ~ 2021-05-09",
+        "content": "15 commits, with messages like \"bug(cxxabi): global ctor err at x64\" and \"working on riscv vmm\" popping up multiple times — you're tackling x86_64 constructor bugs while also wrestling with riscv VMM, which is like trying to put out fires in two separate buildings at once. And \"pref(VMM): riscv vmm almost there\" is the developer equivalent of \"just five more minutes\" that inevitably stretches into three more weeks.",
+        "stats": {
+          "totalCommits": 15,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -427,6 +517,21 @@
       }
     },
     {
+      "id": "ai-roast-2021-04-26",
+      "type": "ai_roast",
+      "ts": "2021-05-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-26 ~ 2021-05-02",
+        "content": "47 个 commit，其中 \"__init_priority__\" 至少被敲了六遍——你这周的核心乐趣就是和 C++ 的全局构造顺序持续肉搏，而且看起来打了六个回合依然没赢。那条 \"pref(IO): change __init_priority__\" 连着出现两次，赤裸裸地宣告第一次改错了，这放在 init priority 领域，妥妥是教科书级的递归翻车。",
+        "stats": {
+          "totalCommits": 47,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-7fcb9ef255d22981a502cd82d249509909e58644",
       "type": "commit",
       "ts": "2021-05-01T15:22:13Z",
@@ -489,66 +594,6 @@
         "message": "pref(PMM, MULTIBOOT2): add get_e820()\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 224,
         "deletions": 239
-      }
-    },
-    {
-      "id": "ai-roast-2021-04-26",
-      "type": "ai_roast",
-      "ts": "2021-05-02T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-04-26 ~ 2021-05-02",
-        "content": "47 个 commit，其中 \"__init_priority__\" 至少被敲了六遍——你这周的核心乐趣就是和 C++ 的全局构造顺序持续肉搏，而且看起来打了六个回合依然没赢。那条 \"pref(IO): change __init_priority__\" 连着出现两次，赤裸裸地宣告第一次改错了，这放在 init priority 领域，妥妥是教科书级的递归翻车。",
-        "stats": {
-          "totalCommits": 47,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-05-03",
-      "type": "ai_roast",
-      "ts": "2021-05-09T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-05-03 ~ 2021-05-09",
-        "content": "15 commits, with messages like \"bug(cxxabi): global ctor err at x64\" and \"working on riscv vmm\" popping up multiple times — you're tackling x86_64 constructor bugs while also wrestling with riscv VMM, which is like trying to put out fires in two separate buildings at once. And \"pref(VMM): riscv vmm almost there\" is the developer equivalent of \"just five more minutes\" that inevitably stretches into three more weeks.",
-        "stats": {
-          "totalCommits": 15,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-05-10",
-      "type": "ai_roast",
-      "ts": "2021-05-16T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-05-10 ~ 2021-05-16",
-        "content": "4 个提交，全是关于 INTR 的，其中两个写着 “working on riscv intr”——这是上周 “working on riscv vmm” 连续剧的续集，同样的能量，同样的悬念结尾。至少 “riscv timer intr done” 落地了，总算有一个中断被中断了，从无休止的进行中逃了出来。",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-05-24",
-      "type": "ai_roast",
-      "ts": "2021-05-30T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-05-24 ~ 2021-05-30",
-        "content": "1 个 commit 写着“git: update .gitignore”，却在别人仓库留了 4 条评论和 1 个 issue —— 所以你本周最大的贡献就是告诉 Git 该忽略什么，紧接着又去教别人他们错在哪里。单 commit 周硬是散发出了满级资深开发者的气场。",
-        "stats": {
-          "totalCommits": 1,
-          "topRepo": "HUST-OS/xv6-k210"
-        }
       }
     }
   ]

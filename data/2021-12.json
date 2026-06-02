@@ -45,6 +45,94 @@
       }
     },
     {
+      "id": "ai-summary-quarter-2021-Q4",
+      "type": "ai_summary",
+      "ts": "2021-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2021-10-01",
+          "end": "2021-12-31",
+          "label": "2021-Q4"
+        },
+        "content": "2021-Q4 的技术活动主要围绕功能分支集成展开，核心仓库 Simple-XX/SimpleKernel 的提交语义标签从上一季度的修复（fix）明显转向合并（merge）。代表性子系统如 aarch64、中断（intr）、内存管理（vmm/pmm/heap）和库（lib）通过 13 个 PR 以 merge 方式合入主线，体现了模块化集成的方向。构建与 CI 环境持续优化，包括默认架构设置、bochs 适配和 cmake 脚本更新，相关 commit 频繁出现。协作模式上，审查活动为零，所有 PR 均由作者自行合入，延续了项目单人或小团队直接集成的特点。相较 2021-Q3 的 185 个提交和密集修复，本季度提交量降至 86 个，活动重心从分散的缺陷修补转移到有计划的特性引入，整体节奏放缓但合并意图更明确。",
+        "highlights": [
+          "86 commits, 13 PRs, 0 reviews, 0 issues, 2 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 86,
+          "totalPRs": 13,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to merge",
+            "Commit volume decreased by 99"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2021-12",
+      "type": "ai_summary",
+      "ts": "2021-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-12-01",
+          "end": "2021-12-31",
+          "label": "2021-12"
+        },
+        "content": "12 月活动集中于 Simple-XX/SimpleKernel 仓库，提交量从前月的 68 次骤降至 18 次，且没有创建或合并任何 PR，主导语义标签从 merge 转为 fix。本月主要对设备树解析、RISC-V 中断处理、虚拟内存映射及多引导协议等进行修复与重构，并持续优化 IO 单例模式及代码风格。相较 11 月的频繁集成，开发节奏明显放缓，转向稳定维护与质量打磨。同期在 MRNIU/SimpleKernel 有少量评论互动，保持对项目的必要关注。",
+        "highlights": [
+          "18 commits, 0 PRs, 0 reviews, 0 issues, 1 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn"
+        ],
+        "stats": {
+          "totalCommits": 18,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to fix",
+            "Commit volume decreased by 50"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-MRNIU/SimpleKernel-10-69",
       "type": "issue_comment",
       "ts": "2021-12-29T14:37:00Z",

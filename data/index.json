@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:12:14.008Z",
+  "generatedAt": "2026-06-02T08:18:45.704Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -1005,13 +1005,13 @@
     {
       "key": "2021-12",
       "file": "2021-12.json",
-      "eventCount": 23,
+      "eventCount": 25,
       "repos": [
         "MRNIU/SimpleKernel",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "ai_summary": 1,
+        "ai_summary": 3,
         "issue_comment": 1,
         "ai_roast": 3,
         "commit": 18
@@ -1024,16 +1024,17 @@
     {
       "key": "2021-11",
       "file": "2021-11.json",
-      "eventCount": 83,
+      "eventCount": 84,
       "repos": [
         "MRNIU/SimpleKernel",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 68,
+        "ai_roast": 1,
         "pull_request": 13,
-        "issue_comment": 1,
-        "ai_roast": 1
+        "issue_comment": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 81,
@@ -1041,17 +1042,28 @@
       }
     },
     {
+      "key": "2021-09",
+      "file": "2021-09.json",
+      "eventCount": 1,
+      "repos": [],
+      "breakdown": {
+        "ai_summary": 1
+      },
+      "repoBreakdown": {}
+    },
+    {
       "key": "2021-08",
       "file": "2021-08.json",
-      "eventCount": 26,
+      "eventCount": 27,
       "repos": [
         "Simple-XX/SimpleCompiler",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 4,
         "commit": 21,
-        "issue": 1,
-        "ai_roast": 4
+        "issue": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 18,
@@ -1061,14 +1073,15 @@
     {
       "key": "2021-07",
       "file": "2021-07.json",
-      "eventCount": 171,
+      "eventCount": 172,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 164,
-        "pull_request": 3,
-        "ai_roast": 4
+        "ai_roast": 4,
+        "pull_request": 3
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 167
@@ -1077,15 +1090,16 @@
     {
       "key": "2021-06",
       "file": "2021-06.json",
-      "eventCount": 72,
+      "eventCount": 74,
       "repos": [
         "Simple-XX/OSPP",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 64,
-        "pull_request": 7,
-        "ai_roast": 1
+        "ai_summary": 2,
+        "ai_roast": 1,
+        "pull_request": 7
       },
       "repoBreakdown": {
         "Simple-XX/OSPP": 1,
@@ -1095,7 +1109,7 @@
     {
       "key": "2021-05",
       "file": "2021-05.json",
-      "eventCount": 42,
+      "eventCount": 43,
       "repos": [
         "Alinshans/MyTinySTL",
         "HUST-OS/xv6-k210",
@@ -1103,10 +1117,11 @@
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 4,
         "commit": 33,
-        "issue": 1,
-        "ai_roast": 4
+        "ai_roast": 4,
+        "issue": 1
       },
       "repoBreakdown": {
         "HUST-OS/xv6-k210": 4,
@@ -1118,13 +1133,14 @@
     {
       "key": "2021-04",
       "file": "2021-04.json",
-      "eventCount": 192,
+      "eventCount": 193,
       "repos": [
         "Simple-XX/OSPP",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
         "commit": 173,
+        "ai_summary": 1,
         "pull_request": 15,
         "ai_roast": 4
       },

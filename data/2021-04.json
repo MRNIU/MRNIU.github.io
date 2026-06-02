@@ -197,6 +197,49 @@
       }
     },
     {
+      "id": "ai-summary-month-2021-04",
+      "type": "ai_summary",
+      "ts": "2021-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-04-01",
+          "end": "2021-04-30",
+          "label": "2021-04"
+        },
+        "content": "本月的工程活动集中爆发，共产生 173 个 commit 与 15 个 PR，主战场仍是 Simple-XX/SimpleKernel 仓库，活跃程度远超上期的 41 个 commit。主导标签从前期的 merge 变为 feat，工作重心从分支合并转向功能开发与性能优化，大量提交集中在为 APIC、VMM、PMM、IO 等模块添加 __init_priority__ 以精细控制初始化顺序，并引入了 iostream、string、vector 及 new/delete 等 C++ 标准库特性。 MRNIU 的多轮分支合并（merge: MRNIU）延续了协作整合的节奏，与功能投递交错进行。整体上， 4 月在延续内核主线开发的同时，显著提升了代码结构化和 C++ 特性支持。",
+        "highlights": [
+          "173 commits, 15 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 173,
+          "totalPRs": 15,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to feat",
+            "Commit volume increased by 132"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-493cd6345fd594140200b195a283a8dcc1dc7cc6",
       "type": "commit",
       "ts": "2021-04-29T11:21:52Z",
@@ -571,6 +614,21 @@
         "message": "docs: add kernel idea\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
         "additions": 160,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2021-04-19",
+      "type": "ai_roast",
+      "ts": "2021-04-25T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-19 ~ 2021-04-25",
+        "content": "31 commits, and you’re building a kernel while reimplementing the entire C++ standard library — vector, list, type_traits, iostream, bitmap, string — because who needs an existing libcxx when you can spend a week re-creating 40 years of C++ inside a hobby OS? “feat(LIBCXX): new” shows up twice, so clearly you kicked off the standard library, forgot, and started it all over again.",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -1000,6 +1058,21 @@
         "message": "pref(VMM): use mmap init vmm for i386\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
         "additions": 111,
         "deletions": 121
+      }
+    },
+    {
+      "id": "ai-roast-2021-04-12",
+      "type": "ai_roast",
+      "ts": "2021-04-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-12 ~ 2021-04-18",
+        "content": "31 个 commit，“working on riscv vmm”出现了 5 次——好了，我们懂了，你在干活，没必要像徒步 vlog 那样直播进度。同一周你还把自己那个“改成大写”的 commit 给 revert 了，这堪称 Git 版的在餐厅里大声反悔。至少 i386 VMM 总算在折腾 riscv 灵魂的间隙搞定了。",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -1585,6 +1658,21 @@
         "message": "feat(PMM): update\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
         "additions": 1736,
         "deletions": 100
+      }
+    },
+    {
+      "id": "ai-roast-2021-04-05",
+      "type": "ai_roast",
+      "ts": "2021-04-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-04-05 ~ 2021-04-11",
+        "content": "46 个 commit 里有 5 个只写了“merge(*)” —— 这时候你合并的不是分支，而是把好好写 commit message 的意愿合并进了虚空。一周四个“docs(README): update”意味着你要么在打磨 README，要么把它当日记用。7 个 PR 很亮眼，直到你发现一半的 commit 都是在解决合并冲突。",
+        "stats": {
+          "totalCommits": 46,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -2199,6 +2287,21 @@
       }
     },
     {
+      "id": "ai-roast-2021-03-29",
+      "type": "ai_roast",
+      "ts": "2021-04-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-03-29 ~ 2021-04-04",
+        "content": "31 个 commit 几乎全是 pref(FIRST FIT) ——你花了一整周时间，像做针灸一样，每次只提交一丁点来优化一个首次适应分配器。有两个 commit 结尾写着 “not finish”，诚实得让人有点心碎。至少你还开了 2 个 issue，等于给这份痛苦留下了书面证据。",
+        "stats": {
+          "totalCommits": 31,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-56205113b1cf4f3fabe936c61fa2d32e22689cb4",
       "type": "commit",
       "ts": "2021-04-03T17:25:24Z",
@@ -2443,66 +2546,6 @@
         "message": "fix(PMM): skip 0x00\n\nSigned-off-by: MRNIU <a6813140@hotmail.com>",
         "additions": 4,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2021-03-29",
-      "type": "ai_roast",
-      "ts": "2021-04-04T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-03-29 ~ 2021-04-04",
-        "content": "31 个 commit 几乎全是 pref(FIRST FIT) ——你花了一整周时间，像做针灸一样，每次只提交一丁点来优化一个首次适应分配器。有两个 commit 结尾写着 “not finish”，诚实得让人有点心碎。至少你还开了 2 个 issue，等于给这份痛苦留下了书面证据。",
-        "stats": {
-          "totalCommits": 31,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-04-05",
-      "type": "ai_roast",
-      "ts": "2021-04-11T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-04-05 ~ 2021-04-11",
-        "content": "46 个 commit 里有 5 个只写了“merge(*)” —— 这时候你合并的不是分支，而是把好好写 commit message 的意愿合并进了虚空。一周四个“docs(README): update”意味着你要么在打磨 README，要么把它当日记用。7 个 PR 很亮眼，直到你发现一半的 commit 都是在解决合并冲突。",
-        "stats": {
-          "totalCommits": 46,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-04-12",
-      "type": "ai_roast",
-      "ts": "2021-04-18T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-04-12 ~ 2021-04-18",
-        "content": "31 个 commit，“working on riscv vmm”出现了 5 次——好了，我们懂了，你在干活，没必要像徒步 vlog 那样直播进度。同一周你还把自己那个“改成大写”的 commit 给 revert 了，这堪称 Git 版的在餐厅里大声反悔。至少 i386 VMM 总算在折腾 riscv 灵魂的间隙搞定了。",
-        "stats": {
-          "totalCommits": 31,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-04-19",
-      "type": "ai_roast",
-      "ts": "2021-04-25T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-04-19 ~ 2021-04-25",
-        "content": "31 commits, and you’re building a kernel while reimplementing the entire C++ standard library — vector, list, type_traits, iostream, bitmap, string — because who needs an existing libcxx when you can spend a week re-creating 40 years of C++ inside a hobby OS? “feat(LIBCXX): new” shows up twice, so clearly you kicked off the standard library, forgot, and started it all over again.",
-        "stats": {
-          "totalCommits": 31,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

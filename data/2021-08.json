@@ -2,6 +2,67 @@
   "month": "2021-08",
   "events": [
     {
+      "id": "ai-summary-month-2021-08",
+      "type": "ai_summary",
+      "ts": "2021-08-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2021-08-01",
+          "end": "2021-08-31",
+          "label": "2021-08"
+        },
+        "content": "8 月工程活动明显放缓，仅产生 21 个 commit，但仍有 2 个活跃仓库（SimpleKernel 与 SimpleCompiler）。主要工作在 SimpleKernel 上围绕设备树（dtb）模块展开，包括添加 find 和 find_via_prefix 功能、修复初始化与父节点获取逻辑，并完成了构建系统迁移至 cmake。此外，通过 fix 类提交持续调整 printf 颜色输出、移除冗余文件，延续了上月的修复基调。本月从 7 月的高强度提交转向精简与基础设施打磨。",
+        "highlights": [
+          "21 commits, 0 PRs, 0 reviews, 1 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "Fix-heavy activity may indicate stabilization or repeated churn",
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 21,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed fix"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 143"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-08-23",
+      "type": "ai_roast",
+      "ts": "2021-08-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-08-23 ~ 2021-08-29",
+        "content": "5 commits, two being identical \"pref(resource): update cout\" entries — committing via copy-paste really is a daring move. \"pref(gdt): prinrf->info\" shows you fix typos in code but let them live in commit messages, a truly odd hierarchy of concerns. A quiet week by your standards; the kernel can finally breathe.",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-a6c58e2b78a72b1a37f1073a9aaf07f30b39cd1d",
       "type": "commit",
       "ts": "2021-08-27T09:21:06Z",
@@ -103,6 +164,36 @@
         "message": "update",
         "additions": 310,
         "deletions": 51
+      }
+    },
+    {
+      "id": "ai-roast-2021-08-09",
+      "type": "ai_roast",
+      "ts": "2021-08-15T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-08-09 ~ 2021-08-15",
+        "content": "Three commits, and one of them is literally just \"update\" — the commit message equivalent of a shrug. You jumped from SimpleKernel to SimpleCompiler, which is like saying, \"I got bored breaking one project, so let me start fresh with another.\" At least that refactor to CMake shows a shred of sophistication tucked between the existential void of non-messages.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2021-08-02",
+      "type": "ai_roast",
+      "ts": "2021-08-08T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2021-08-02 ~ 2021-08-08",
+        "content": "Three separate commits all titled “pref(*): change printf color” — apparently nailing the right terminal color shade demands a three-act saga. Then there’s “preff(dtb)” with a doubled f, because when you’re committing at light speed you can’t be bothered to spell your own convention correctly. At least you dropped from 70 commits to 11 this week; maybe you’ve learned restraint, or maybe you just ran out of things to break.",
+        "stats": {
+          "totalCommits": 11,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -298,51 +389,6 @@
         "content": "37 commits, featuring both \"feat(heap): show allocator_used_count\" and its quick follow-up \"fix(heap): show allocator_used_count\" — the classic ship-it-then-immediately-regret-it workflow. Two reverts in one week turn your git history into a choose-your-own-adventure book where every path is wrong. At least you're branching out to RISC-V, because clearly one architecture wasn't enough to contain all your bugs.",
         "stats": {
           "totalCommits": 37,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-08-02",
-      "type": "ai_roast",
-      "ts": "2021-08-08T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-08-02 ~ 2021-08-08",
-        "content": "Three separate commits all titled “pref(*): change printf color” — apparently nailing the right terminal color shade demands a three-act saga. Then there’s “preff(dtb)” with a doubled f, because when you’re committing at light speed you can’t be bothered to spell your own convention correctly. At least you dropped from 70 commits to 11 this week; maybe you’ve learned restraint, or maybe you just ran out of things to break.",
-        "stats": {
-          "totalCommits": 11,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-08-09",
-      "type": "ai_roast",
-      "ts": "2021-08-15T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-08-09 ~ 2021-08-15",
-        "content": "Three commits, and one of them is literally just \"update\" — the commit message equivalent of a shrug. You jumped from SimpleKernel to SimpleCompiler, which is like saying, \"I got bored breaking one project, so let me start fresh with another.\" At least that refactor to CMake shows a shred of sophistication tucked between the existential void of non-messages.",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "Simple-XX/SimpleCompiler"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2021-08-23",
-      "type": "ai_roast",
-      "ts": "2021-08-29T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2021-08-23 ~ 2021-08-29",
-        "content": "5 commits, two being identical \"pref(resource): update cout\" entries — committing via copy-paste really is a daring move. \"pref(gdt): prinrf->info\" shows you fix typos in code but let them live in commit messages, a truly odd hierarchy of concerns. A quiet week by your standards; the kernel can finally breathe.",
-        "stats": {
-          "totalCommits": 5,
           "topRepo": "Simple-XX/SimpleKernel"
         }
       }
