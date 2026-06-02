@@ -1,29 +1,35 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-01T03:09:55.163Z",
+  "generatedAt": "2026-06-02T03:10:25.405Z",
   "stats": {
-    "totalCommits": 2111,
-    "totalPRs": 249,
+    "totalCommits": 2113,
+    "totalPRs": 251,
     "totalReviews": 6,
     "totalIssues": 80,
-    "totalComments": 189,
+    "totalComments": 190,
     "activeRepos": 71,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-06-01T02:30:46Z"
+    "latestEvent": "2026-06-01T15:06:43Z"
   },
   "months": [
     {
       "key": "2026-06",
       "file": "2026-06.json",
-      "eventCount": 1,
+      "eventCount": 6,
       "repos": [
+        "MRNIU/factorio_LegendaryMechStart",
+        "MRNIU/ostool",
         "drivercraft/ostool"
       ],
       "breakdown": {
-        "commit": 1
+        "commit": 3,
+        "issue_comment": 1,
+        "pull_request": 2
       },
       "repoBreakdown": {
-        "drivercraft/ostool": 1
+        "MRNIU/factorio_LegendaryMechStart": 2,
+        "drivercraft/ostool": 3,
+        "MRNIU/ostool": 1
       }
     },
     {
