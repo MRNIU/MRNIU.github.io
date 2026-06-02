@@ -2,6 +2,45 @@
   "month": "2023-08",
   "events": [
     {
+      "id": "ai-summary-month-2023-08",
+      "type": "ai_summary",
+      "ts": "2023-08-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-08-01",
+          "end": "2023-08-31",
+          "label": "2023-08"
+        },
+        "content": "8 月工程活动完全集中在 MRNIU/SimpleKernel 仓库，未产生代码提交或 PR，仅通过 3 条评论进行轻量交流。相比 7 月创建 26 个 issue 的活跃度，本月转为零 issue 的讨论模式，持续对该仓库保持低强度关注。整体产出以文字互动为主，延续了围绕 SimpleKernel 的混合内容参与习惯。",
+        "highlights": [
+          "0 commits, 0 PRs, 0 reviews, 0 issues, 3 comments, 1 active repos",
+          "Top repo: MRNIU/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 3,
+          "activeRepos": 1,
+          "topRepo": "MRNIU/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/SimpleKernel"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
       "id": "comment-MRNIU/SimpleKernel-22-40",
       "type": "issue_comment",
       "ts": "2023-08-20T05:49:52Z",

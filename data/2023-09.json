@@ -2,6 +2,88 @@
   "month": "2023-09",
   "events": [
     {
+      "id": "ai-summary-quarter-2023-Q3",
+      "type": "ai_summary",
+      "ts": "2023-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2023-07-01",
+          "end": "2023-09-30",
+          "label": "2023-Q3"
+        },
+        "content": "2023 年第三季度工程活跃度相较 Q2 急剧下降， commit 数量从 109 降至 3， PR 与 review 均为 0，开发节奏转入低维护状态。技术方向由先前季度的性能优化（perf）转向混合任务，代表性提交涉及项目提案、新仓库初始化以及游戏机制描述（如“电力采矿机速度 45，满蓝带”），且主力仓库从 Simple-XX/SimpleKernel 迁移至 MRNIU/SimpleKernel。协作模式延续独立开发习惯，并未出现代码审查或协同合并，但 issue 数量从 6 激增至 26，集中爆发于 7 月，表明开发者一度转向问题收集而暂缓编码实现。整个季度活动高度集中于月初的 issue 讨论， 8 月几乎无提交，至 9 月才以 3 个 commit 和少量评论收尾，反映出重心可能转向规划与轻量实验。",
+        "highlights": [
+          "3 commits, 0 PRs, 0 reviews, 26 issues, 13 comments, 5 active repos",
+          "Top repo: MRNIU/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 3,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 26,
+          "totalComments": 13,
+          "activeRepos": 5,
+          "topRepo": "MRNIU/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleKernel to MRNIU/SimpleKernel",
+            "Dominant semantic tag changed from perf to mixed",
+            "Commit volume decreased by 106"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2023-09",
+      "type": "ai_summary",
+      "ts": "2023-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-09-01",
+          "end": "2023-09-30",
+          "label": "2023-09"
+        },
+        "content": "本月工程活动较上月明显回升，共完成 3 个 commit 和 8 次评论，分布在 5 个仓库，焦点仍集中在 MRNIU/SimpleKernel。提交内容涉及新增 2023 proposal 文档和调整采矿机参数，反映出项目在文档维护与配置优化上的少量推进。与 8 月的零提交和少量评论相比， 9 月不仅恢复了代码贡献，讨论密度也成倍提升，整体状态从冷清转向温和活跃。",
+        "highlights": [
+          "3 commits, 0 PRs, 0 reviews, 0 issues, 8 comments, 5 active repos",
+          "Top repo: MRNIU/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 3,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 8,
+          "activeRepos": 5,
+          "topRepo": "MRNIU/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/SimpleKernel"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
       "id": "commit-43ffce1f95ff4cf7c4f1374874192138d1ae321d",
       "type": "commit",
       "ts": "2023-09-22T00:42:49Z",
@@ -49,6 +131,21 @@
         "message": "电力采矿机速度45，满蓝带\n\nSigned-off-by: Zone.N <Zone.NiuZH@hotmail.com>",
         "additions": 15,
         "deletions": 11
+      }
+    },
+    {
+      "id": "ai-roast-2023-09-04",
+      "type": "ai_roast",
+      "ts": "2023-09-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-09-04 ~ 2023-09-10",
+        "content": "两个 commit，一个是「电力采矿机速度 45，满蓝带」，另一个是 \"Initial commit\"——所以你这周的产出是：开了个新仓库，然后又跑去调 Factorio 了。内核开发的优先级显然排在异星工厂的传送带优化之后。",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/SimpleKernel"
+        }
       }
     },
     {
@@ -134,21 +231,6 @@
         "issueNumber": 18,
         "issueTitle": "CI",
         "body": "github ci done"
-      }
-    },
-    {
-      "id": "ai-roast-2023-09-04",
-      "type": "ai_roast",
-      "ts": "2023-09-10T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-09-04 ~ 2023-09-10",
-        "content": "两个 commit，一个是「电力采矿机速度 45，满蓝带」，另一个是 \"Initial commit\"——所以你这周的产出是：开了个新仓库，然后又跑去调 Factorio 了。内核开发的优先级显然排在异星工厂的传送带优化之后。",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "MRNIU/SimpleKernel"
-        }
       }
     }
   ]

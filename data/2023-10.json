@@ -2,6 +2,48 @@
   "month": "2023-10",
   "events": [
     {
+      "id": "ai-summary-month-2023-10",
+      "type": "ai_summary",
+      "ts": "2023-10-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-10-01",
+          "end": "2023-10-31",
+          "label": "2023-10"
+        },
+        "content": "In October, activity surged to 33 commits concentrated in Simple-XX/SimpleCompiler, a sharp contrast to the previous month’s 3 scattered commits. The work was overwhelmingly driven by style refactoring—bulk renaming token enums and identifiers, adding comments, stripping `using namespace std`, and prepending `_` to parameters for consistency—alongside build system updates and spdlog integration. This represented a deliberate housekeeping sprint, replacing September’s sporadic comments and mixed-activity pattern with a disciplined, repetitive cleanup cadence. Late-month effort briefly shifted toward Simple-XX/SimplePhysicsEngine via 2 PRs and an issue, hinting at a new focus area to conclude the cycle.",
+        "highlights": [
+          "33 commits, 3 PRs, 0 reviews, 1 issues, 0 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleCompiler"
+        ],
+        "patterns": [
+          "Primary activity type: style",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 33,
+          "totalPRs": 3,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 0,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/SimpleKernel to Simple-XX/SimpleCompiler",
+            "Dominant semantic tag changed from mixed to style",
+            "Commit volume increased by 30"
+          ]
+        }
+      }
+    },
+    {
       "id": "pr-20-Simple-XX/SimplePhysicsEngine",
       "type": "pull_request",
       "ts": "2023-10-30T14:31:09Z",
@@ -38,6 +80,21 @@
         "title": "重构构建系统",
         "state": "closed",
         "body": "1. 支持跨平台\n2. 第三方资源自动处理\n3. 测试支持\n4. CI 支持\n5. 文档生成\n6. 代码格式\n7. 静态检查"
+      }
+    },
+    {
+      "id": "ai-roast-2023-10-23",
+      "type": "ai_roast",
+      "ts": "2023-10-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-10-23 ~ 2023-10-29",
+        "content": "在 SimpleCompiler 上提交了 33 个 commit，其中差不多 30 个都是各种花样的「refactor: token rename」——你给 token 改名的次数多到连 token 自己都不知道自己叫什么了。\"refactor\" 和 \"comment\" 类 commit 与实际 \"feat\" commit 的比例，一看就是你整个星期都在一间只有一间房的屋子里挪家具。",
+        "stats": {
+          "totalCommits": 33,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        }
       }
     },
     {
@@ -480,21 +537,6 @@
         "title": "Build",
         "state": "merged",
         "body": "1. 删除了 clion、vscode 文件夹\r\n2. 重写构建系统\r\n3. 第三方资源管理\r\n4. renderer 独立为库，只负责渲染数据"
-      }
-    },
-    {
-      "id": "ai-roast-2023-10-23",
-      "type": "ai_roast",
-      "ts": "2023-10-29T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2023-10-23 ~ 2023-10-29",
-        "content": "在 SimpleCompiler 上提交了 33 个 commit，其中差不多 30 个都是各种花样的「refactor: token rename」——你给 token 改名的次数多到连 token 自己都不知道自己叫什么了。\"refactor\" 和 \"comment\" 类 commit 与实际 \"feat\" commit 的比例，一看就是你整个星期都在一间只有一间房的屋子里挪家具。",
-        "stats": {
-          "totalCommits": 33,
-          "topRepo": "Simple-XX/SimpleCompiler"
-        }
       }
     }
   ]

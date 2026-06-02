@@ -2,6 +2,90 @@
   "month": "2024-03",
   "events": [
     {
+      "id": "ai-summary-quarter-2024-Q1",
+      "type": "ai_summary",
+      "ts": "2024-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2024-01-01",
+          "end": "2024-03-31",
+          "label": "2024-Q1"
+        },
+        "content": "2024-Q1 开发重心从上一季度的多仓库协同重构（ Simple-XX/SimpleCompiler 主导）完全转移到对 MRNIU/opensbi_interface 的独立功能建设，整体活动量减半，且无 PR、代码审查或评论，体现从协作式风格优化到单人静默提交的模式变化。本季度 18 个 commit 全部围绕该库展开，语义以 feat 为主，技术路线沿着 OpenSBI 规范逐步实现函数定义、枚举、宏和 CMake 构建，并通过 QEMU 运行验证，后期伴随版本号及警告修复。项目主题清晰聚焦于规范驱动的底层接口铺设，与上季度以 style 重构为主的工程方向形成鲜明对比。协作模式从 2023-Q4 的 8 个 PR、9 个 issue 和 9 条评论骤变为零互动，仅产生 1 个 issue，显示开发转为高度自闭环。整体看，团队或个人的投入从多项目共享向单点深度开发收敛，交付节奏由快节奏迭代转向有明确里程碑的逐步实现。",
+        "highlights": [
+          "18 commits, 0 PRs, 0 reviews, 1 issues, 0 comments, 2 active repos",
+          "Top repo: MRNIU/opensbi_interface"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 18,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/opensbi_interface"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimpleCompiler to MRNIU/opensbi_interface",
+            "Dominant semantic tag changed from style to feat",
+            "Commit volume decreased by 19"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2024-03",
+      "type": "ai_summary",
+      "ts": "2024-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2024-03-01",
+          "end": "2024-03-31",
+          "label": "2024-03"
+        },
+        "content": "In March 2024, development focused almost entirely on MRNIU/opensbi_interface with 18 commits, dominated by feature work and zero pull requests or reviews. The first week accounted for 17 of those commits, introducing C++ macros, cmake install support, QEMU test scaffolding, and function definitions derived from the OpenSBI spec, with subsequent fixes addressing compiler warnings and CMAKE variables. This represents a significant acceleration from the prior period’s 4 commits spread across 4 repos, and a clear shift from the resume-oriented December activity to a concentrated systems‑programming effort. One late‑month commit landed in Simple-XX/SimpleKernel, but the month’s theme remained the structured construction of the OpenSBI interface.",
+        "highlights": [
+          "18 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: MRNIU/opensbi_interface"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 18,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/opensbi_interface"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/resume to MRNIU/opensbi_interface",
+            "Dominant semantic tag changed from mixed to feat",
+            "Commit volume increased by 14"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-4c86b9db36e32c799eca21ecda7b67731aa18d1d",
       "type": "commit",
       "ts": "2024-03-26T01:36:29Z",
@@ -12,6 +96,21 @@
         "message": "Update LICENSE\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 1,
         "deletions": 48
+      }
+    },
+    {
+      "id": "ai-roast-2024-03-04",
+      "type": "ai_roast",
+      "ts": "2024-03-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2024-03-04 ~ 2024-03-10",
+        "content": "在 opensbi_interface 里 17 个 commit 全堆上去，用一波“fix”提交把版本从 1.0.5 干到 1.0.6 —— 你修版本号的速度比大多数人灌晨间咖啡还急。一周六个“fix” commit，要么说明你细致到家，要么就是你刚修完的东西又被你亲手搞坏。那份经典的“fix: fix warning”双重修复劲儿，真是 *chef's kiss*。",
+        "stats": {
+          "totalCommits": 17,
+          "topRepo": "MRNIU/opensbi_interface"
+        }
       }
     },
     {
@@ -233,21 +332,6 @@
         "message": "feat(*): init\n\nSigned-off-by: Zone.N <Zone.Niuzh@hotmail.com>",
         "additions": 1104,
         "deletions": 0
-      }
-    },
-    {
-      "id": "ai-roast-2024-03-04",
-      "type": "ai_roast",
-      "ts": "2024-03-10T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2024-03-04 ~ 2024-03-10",
-        "content": "在 opensbi_interface 里 17 个 commit 全堆上去，用一波“fix”提交把版本从 1.0.5 干到 1.0.6 —— 你修版本号的速度比大多数人灌晨间咖啡还急。一周六个“fix” commit，要么说明你细致到家，要么就是你刚修完的东西又被你亲手搞坏。那份经典的“fix: fix warning”双重修复劲儿，真是 *chef's kiss*。",
-        "stats": {
-          "totalCommits": 17,
-          "topRepo": "MRNIU/opensbi_interface"
-        }
       }
     }
   ]

@@ -2,6 +2,147 @@
   "month": "2023-12",
   "events": [
     {
+      "id": "ai-summary-year-2023",
+      "type": "ai_summary",
+      "ts": "2023-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "label": "2023"
+        },
+        "content": "2023 年继续围绕 Simple-XX/SimpleKernel 展开，全年提交 181 次、创建 41 个 PR，但未参与代码审查。与 2022 年以修复（fix）为主导不同，今年的核心工作是风格统一和代码整理（style 标签最多），大量提交为合并分支（merge）、注释更新和头文件宏调整。活动节奏高度集中在 3 至 5 月， 4 月达到峰值（75 次提交、18 个 PR），随后进入夏季沉寂期， 7 月虽无提交却记录了 26 个 issue，可能在做设计讨论。第四季度重新活跃， 10 月提交 33 次，而 11 月主要通过 PR 和 issue 交互（4 个 PR， 8 个 issue），反映了更审慎的协作模式。这一年也出现了新的探索方向，如 O3Sim 文档和 SimpleKernel 概念备注，表明在维护内核的同时为下一阶段构思。工程技术习惯方面，突出表现为持续的代码风格维护、系统化的分支合并流程、以及利用 issue 追踪进行分布式交流，但仍缺乏对外部代码评审的参与。",
+        "highlights": [
+          "181 commits, 41 PRs, 0 reviews, 42 issues, 35 comments, 10 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: style",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 181,
+          "totalPRs": 41,
+          "totalReviews": 0,
+          "totalIssues": 42,
+          "totalComments": 35,
+          "activeRepos": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from fix to style",
+            "Commit volume increased by 30"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2023-Q4",
+      "type": "ai_summary",
+      "ts": "2023-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2023-10-01",
+          "end": "2023-12-31",
+          "label": "2023-Q4"
+        },
+        "content": "In Q4 2023, engineering activity shifted decisively from the multi-repo issue tracking of Q3 to an intensive, style-focused overhaul of the SimpleCompiler codebase. The dominant theme was a systematic refactoring campaign that enforced consistent naming conventions, removed `using namespace std`, added file header comments, and introduced underscores for function parameters across the entire compiler frontend. The collaboration pattern remained largely individual, with 8 PRs but 0 reviews, suggesting a solo merge model; the bulk of the 37 commits landed in October, followed by a quieter November and December. Compared to the previous quarter, which revolved around open issues and comments in SimpleKernel, this period concentrated heavily on code hygiene and structural improvement in Simple-XX/SimpleCompiler, driving a clear transition from discussion to hands-on refactoring.",
+        "highlights": [
+          "37 commits, 8 PRs, 0 reviews, 9 issues, 9 comments, 5 active repos",
+          "Top repo: Simple-XX/SimpleCompiler"
+        ],
+        "patterns": [
+          "Primary activity type: style",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 37,
+          "totalPRs": 8,
+          "totalReviews": 0,
+          "totalIssues": 9,
+          "totalComments": 9,
+          "activeRepos": 5,
+          "topRepo": "Simple-XX/SimpleCompiler"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/SimpleKernel to Simple-XX/SimpleCompiler",
+            "Dominant semantic tag changed from mixed to style",
+            "Commit volume increased by 34"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2023-12",
+      "type": "ai_summary",
+      "ts": "2023-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2023-12-01",
+          "end": "2023-12-31",
+          "label": "2023-12"
+        },
+        "content": "This month’s focus shifted to personal development on MRNIU/resume, with 4 direct commits updating and adding resume references, marking a change from November’s issue-driven refactoring of SimplePhysicsEngine. A single PR was submitted to Simple-XX/SimpleGameEngine, maintaining a connection to the Simple-XX ecosystem, though overall collaboration (0 reviews, 0 issues) dropped significantly. Activity remained mixed, with sparse comments on bkaradzic/bgfx.cmake-archived but concentrated code output in the latter half of the month.",
+        "highlights": [
+          "4 commits, 1 PRs, 0 reviews, 0 issues, 2 comments, 4 active repos",
+          "Top repo: MRNIU/resume"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 4,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 4,
+          "topRepo": "MRNIU/resume"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/SimplePhysicsEngine to MRNIU/resume",
+            "Dominant semantic tag changed from refactor to mixed"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2023-12-18",
+      "type": "ai_roast",
+      "ts": "2023-12-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2023-12-18 ~ 2023-12-24",
+        "content": "一周 4 个 commit 全在简历仓库，其中 3 个消息就写了个 “update”——要么你的职业生涯在一周里戏剧性地变了三次，要么你根本就是把 git 当成了 Word 的保存键。唯一一条像点样的 commit 信息干脆是别人简历模板的链接，所以连你的简历都是个 fork。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/resume"
+        }
+      }
+    },
+    {
       "id": "commit-14b0a67dc01f8c629af43b9bc5aab8386623f0ce",
       "type": "commit",
       "ts": "2023-12-21T09:51:31Z",
@@ -79,18 +220,6 @@
       }
     },
     {
-      "id": "comment-bkaradzic/bgfx.cmake-archived-218-24",
-      "type": "issue_comment",
-      "ts": "2023-12-02T10:14:35Z",
-      "repo": "bkaradzic/bgfx.cmake-archived",
-      "semantic": null,
-      "data": {
-        "issueNumber": 218,
-        "issueTitle": "Add direct3d shaderc support on linux",
-        "body": "It seems that shaderc where not support d3d on linux yet(`SHADERC_CONFIG_HLSL` is false, shaderc.h#L15). Maybe we should take up this issue?"
-      }
-    },
-    {
       "id": "ai-roast-2023-11-27",
       "type": "ai_roast",
       "ts": "2023-12-03T00:00:00Z",
@@ -106,18 +235,15 @@
       }
     },
     {
-      "id": "ai-roast-2023-12-18",
-      "type": "ai_roast",
-      "ts": "2023-12-24T00:00:00Z",
-      "repo": null,
+      "id": "comment-bkaradzic/bgfx.cmake-archived-218-24",
+      "type": "issue_comment",
+      "ts": "2023-12-02T10:14:35Z",
+      "repo": "bkaradzic/bgfx.cmake-archived",
       "semantic": null,
       "data": {
-        "weekRange": "2023-12-18 ~ 2023-12-24",
-        "content": "一周 4 个 commit 全在简历仓库，其中 3 个消息就写了个 “update”——要么你的职业生涯在一周里戏剧性地变了三次，要么你根本就是把 git 当成了 Word 的保存键。唯一一条像点样的 commit 信息干脆是别人简历模板的链接，所以连你的简历都是个 fork。",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "MRNIU/resume"
-        }
+        "issueNumber": 218,
+        "issueTitle": "Add direct3d shaderc support on linux",
+        "body": "It seems that shaderc where not support d3d on linux yet(`SHADERC_CONFIG_HLSL` is false, shaderc.h#L15). Maybe we should take up this issue?"
       }
     }
   ]
