@@ -6,6 +6,7 @@ import type { AIRoastEvent, MonthlyData } from "./types.js";
 
 const DATA_DIR = path.resolve(process.cwd(), "data");
 const RATE_LIMIT_DELAY_MS = Number(process.env.AI_ROAST_REWRITE_DELAY_MS ?? "5000");
+const REQUEST_TIMEOUT_MS = Number(process.env.AI_ROAST_REWRITE_TIMEOUT_MS ?? "120000");
 const maxRoasts = process.env.AI_ROAST_REWRITE_LIMIT
   ? Number(process.env.AI_ROAST_REWRITE_LIMIT)
   : Number.POSITIVE_INFINITY;
@@ -46,34 +47,48 @@ async function rewriteRoast(event: AIRoastEvent): Promise<string> {
     throw new Error("LLM_API_KEY not set");
   }
 
-  const response = await fetch(`${baseUrl.replace(/\/+$/, "")}/chat/completions`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      messages: [
-        {
-          role: "system",
-          content: `${OUTPUT_STYLE_GUIDE}
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+  let response: Response;
+  try {
+    response = await fetch(`${baseUrl.replace(/\/+$/, "")}/chat/completions`, {
+      method: "POST",
+      signal: controller.signal,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        messages: [
+          {
+            role: "system",
+            content: `${OUTPUT_STYLE_GUIDE}
 
 You rewrite existing AI roast text. Preserve the original meaning, language, tone, jokes, and factual claims. Do not add new activity facts or extra commentary. Return only the rewritten roast text.`,
-        },
-        {
-          role: "user",
-          content: `Week: ${event.data.weekRange}
+          },
+          {
+            role: "user",
+            content: `Week: ${event.data.weekRange}
 Stats: ${event.data.stats.totalCommits} commits, top repo ${event.data.stats.topRepo}
 
 Original roast:
 ${event.data.content}`,
-        },
-      ],
-      max_tokens: 384000,
-      temperature: 0.2,
-    }),
-  });
+          },
+        ],
+        max_tokens: 384000,
+        temperature: 0.2,
+      }),
+    });
+  } catch (err) {
+    if (err instanceof Error && err.name === "AbortError") {
+      throw new Error(`LLM API request timed out after ${REQUEST_TIMEOUT_MS}ms`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+  }
 
   if (!response.ok) {
     const text = await response.text();
@@ -110,27 +125,37 @@ function writeUpdatedFiles(updatedFiles: Map<string, MonthlyData>): void {
 async function main() {
   const roasts = collectRoasts().slice(0, maxRoasts);
   const updatedFiles = new Map<string, MonthlyData>();
-  let rewritten = 0;
+  let processed = 0;
+  let updatedCount = 0;
+  let failed = 0;
 
   console.log(`[ai-roast] Rewriting ${roasts.length} existing roast(s)`);
 
   for (const { filePath, data, event } of roasts) {
-    if (rewritten > 0) {
+    if (processed > 0) {
       await new Promise((resolve) => setTimeout(resolve, RATE_LIMIT_DELAY_MS));
     }
 
-    const updated = await rewriteRoast(event);
-    if (updated !== event.data.content) {
-      event.data.content = updated;
-      updatedFiles.set(filePath, data);
+    try {
+      const updated = await rewriteRoast(event);
+      if (updated !== event.data.content) {
+        event.data.content = updated;
+        updatedFiles.set(filePath, data);
+        updatedCount++;
+      }
+
+      console.log(`  [ai-roast] Rewritten ${event.data.weekRange}`);
+    } catch (err) {
+      failed++;
+      const message = err instanceof Error ? err.message : String(err);
+      console.warn(`  [ai-roast] Skipped ${event.data.weekRange}: ${message}`);
     }
 
-    rewritten++;
-    console.log(`  [ai-roast] Rewritten ${event.data.weekRange}`);
+    processed++;
   }
 
   writeUpdatedFiles(updatedFiles);
-  console.log(`[ai-roast] Updated ${updatedFiles.size} monthly data file(s)`);
+  console.log(`[ai-roast] Updated ${updatedCount} roast(s) in ${updatedFiles.size} monthly data file(s); skipped ${failed}`);
 }
 
 main().catch((err) => {
