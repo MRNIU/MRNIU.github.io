@@ -171,6 +171,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-05-25",
+      "type": "ai_roast",
+      "ts": "2026-05-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-05-25 ~ 2026-05-31",
+        "content": "你这周的提交记录简直是三人麻将——16个英文杂务提交配合三个连续的中文重构大作，唯独 review 栏空荡荡，搞得我怀疑你是在练就“一个人的开源”。用 OpenAI Codex 做 co-author 写重构诗，“收敛边界”“拆分边界”念得飞起，结果转头三个 Fix 提交告诉我们边界其实就是自家墙，哪里没补哪里就是洞。下次先别急着把 invocation 变成真理之源，抽空给自己那堵墙也审查两下，省得用 placement proxy 遮羞布反复擦屁股。",
+        "stats": {
+          "totalCommits": 17,
+          "topRepo": "drivercraft/ostool"
+        }
+      }
+    },
+    {
       "id": "commit-cdd9a42530a906bfd35a1538cd2a95b66243ab31",
       "type": "commit",
       "ts": "2026-05-30T15:15:54Z",
@@ -387,6 +402,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-05-18",
+      "type": "ai_roast",
+      "ts": "2026-05-24T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-05-18 ~ 2026-05-24",
+        "content": "6个PR，0个review——完美诠释了什么叫“独狼式开发”，你写代码，天经地义，别人写代码，关你 peace。那个`AI-assisted-by: OpenAI Codex`挂在那么长的commit message里，简直像在说“请AI帮我吹，反正没人帮我审”。把调用拆成 Invocation、ProjectLayout、VariableScope 再包回 Tool 门面，这架构演进感觉就像在给披萨重新分类，切开再拼回去，并坚信这次命名能撑过下一次重构。",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/ostool"
+        }
+      }
+    },
+    {
       "id": "pr-111-drivercraft/ostool",
       "type": "pull_request",
       "ts": "2026-05-23T05:30:37Z",
@@ -500,6 +530,21 @@
         "message": "test(ostool): 补充 build/run 调用契约测试 (#103)\n\n补齐 build/run 路径上的测试护栏，并根据 review 收敛测试边界。\n\n- 使用显式 virtio-net QEMU fixture 稳定 byte-stream 集成测试，避免默认 NIC ROM 依赖导致串口不可用。\n\n- 使用测试主动输出的 U-Boot marker 验证真实 TCP serial 字节流匹配，避免依赖 arch、FDT 或 bootflow 日志。\n\n- 用 apply_cargo_selector 行为测试替换低价值 clap 字段映射断言。\n\n- 澄清 CargoBuilder 测试覆盖 resolved artifact 写入 runtime state，而非 serde 配置解析。",
         "additions": 491,
         "deletions": 27
+      }
+    },
+    {
+      "id": "ai-roast-2026-05-11",
+      "type": "ai_roast",
+      "ts": "2026-05-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-05-11 ~ 2026-05-17",
+        "content": "一周 7 个 PR 零 review，这孤胆英雄的路子走到黑，你教的 AI 都知道要遵守边界，可你自己连 Cargo 上下文的边界都要 feat 完秒交 fix。下次麻烦把「自爆式开发」的 debug 环节挪到 push 之前，省得别人以为你在表演行为艺术。",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "drivercraft/ostool"
+        }
       }
     },
     {
@@ -691,6 +736,21 @@
         "message": "ci(devcontainer): 补充 GHCR 拉取鉴权\n\n模板基础镜像保持 private 时，派生项目 CI 需要先获得 package Actions access，并在构建 Dev Container 前登录 GHCR。\n\n- 在 CI job 中声明 packages: read，并通过 docker/login-action 使用 GITHUB_TOKEN 登录 ghcr.io。\n- 在 README、.devcontainer/README.md 和 docs/conventions.md 记录授权前置条件、token 边界和非 GitHub CI 的处理方式。\n- 验证：docker exec project-template-devcontainer-nzh-main bash -lc 'cd /workspace && pre-commit run --all-files'\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 31,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2026-05-04",
+      "type": "ai_roast",
+      "ts": "2026-05-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-05-04 ~ 2026-05-10",
+        "content": "28个提交，0次review——你这是在用 Codex 的“收口”能力掩盖自己对 review 的“不收口”吧？同一个 CLAUDE.md 改名四遍，递归深度够写个分治算法了，下次再加个 AGENTS.md-to-AGENTS.md 转换是不是能凑够六次？",
+        "stats": {
+          "totalCommits": 28,
+          "topRepo": "ssXue/Nazh"
+        }
       }
     },
     {

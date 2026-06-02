@@ -587,6 +587,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-04-20",
+      "type": "ai_roast",
+      "ts": "2026-04-26T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-04-20 ~ 2026-04-26",
+        "content": "Six commits, all proudly co-authored by Claude Opus 4.7, zero PRs, zero reviews — you’ve achieved a flawless 100% “I copy-pasted AI output directly into main” ratio.  \nThe only thing you personally fixed this week was the *absence* of your own contribution, and even that required an AI’s help.  \nAt this pace, factorio_BestLanding will soon include a `refactor_junior_out_of_team.lua` and you’ll be the one left in the trash slot.",
+        "stats": {
+          "totalCommits": 6,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        }
+      }
+    },
+    {
       "id": "commit-c8ec9d3974eb32e5e453fcc17fbfe275b803a05b",
       "type": "commit",
       "ts": "2026-04-25T09:57:49Z",
@@ -844,6 +859,21 @@
         "message": "Refactor into dependency-only meta-pack (2.0.0)\n\nRemoved all Lua code and README asset images. The mod now exists purely\nas a dependency container that pulls in LegendaryMechStart, LegendaryShipStart,\nand BestLanding, plus a curated set of optional community mods.\n\n- Deleted control.lua, data*.lua, settings.lua, utils.lua, chunk_utils.lua,\n  area_cleaner.lua, generate_resources.lua, legendary_items.lua.\n- info.json: added hard deps on the three startup mods; English-only description.\n- Rewrote README in English; added CLAUDE.md (Chinese) describing the\n  meta-pack role and language conventions.\n\nCo-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
         "additions": 148,
         "deletions": 1060
+      }
+    },
+    {
+      "id": "ai-roast-2026-04-13",
+      "type": "ai_roast",
+      "ts": "2026-04-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-04-13 ~ 2026-04-19",
+        "content": "Four identical \"Add sibling-mod\" commits and four version bumps that all change the exact same line but each carry a different orphan semver tag—squash is clearly a four-letter word in your workflow. With zero PRs and zero reviews, Claude Opus 4.7 is your entire engineering org, and from the commit duplicates it looks like even the AI is asleep at the wheel.",
+        "stats": {
+          "totalCommits": 14,
+          "topRepo": "MRNIU/factorio_LegendaryMechStart"
+        }
       }
     },
     {

@@ -31,10 +31,10 @@ function groupEventsByWeek(events: GitPulseEvent[]): WeekSummary[] {
   for (const event of events) {
     if (event.type === "ai_roast") continue;
     const date = new Date(event.ts);
-    // Get Monday of the week
-    const day = date.getDay();
+    // Get Monday of the UTC week so local runs match GitHub Actions.
+    const day = date.getUTCDay();
     const monday = new Date(date);
-    monday.setDate(date.getDate() - (day === 0 ? 6 : day - 1));
+    monday.setUTCDate(date.getUTCDate() - (day === 0 ? 6 : day - 1));
     const weekKey = monday.toISOString().slice(0, 10);
 
     if (!weeks.has(weekKey)) weeks.set(weekKey, []);
@@ -44,7 +44,7 @@ function groupEventsByWeek(events: GitPulseEvent[]): WeekSummary[] {
   const summaries: WeekSummary[] = [];
   for (const [weekStart, weekEvents] of weeks) {
     const endDate = new Date(weekStart);
-    endDate.setDate(endDate.getDate() + 6);
+    endDate.setUTCDate(endDate.getUTCDate() + 6);
     const weekEnd = endDate.toISOString().slice(0, 10);
 
     const commits = weekEvents.filter(e => e.type === "commit");
@@ -127,7 +127,7 @@ async function callLLM(
         { role: "system", content: systemPrompt },
         { role: "user", content: userMessage },
       ],
-      max_tokens: 300,
+      max_tokens: 384000,
       temperature: 0.8,
     }),
   });
@@ -138,10 +138,25 @@ async function callLLM(
   }
 
   const json = await response.json() as {
-    choices: Array<{ message: { content: string } }>;
+    choices?: Array<{
+      finish_reason?: string;
+      message?: {
+        content?: string | null;
+        reasoning_content?: string | null;
+      };
+    }>;
   };
 
-  return json.choices[0]?.message?.content || "";
+  const choice = json.choices?.[0];
+  const content = choice?.message?.content?.trim();
+  if (!content) {
+    const reasoningLength = choice?.message?.reasoning_content?.length ?? 0;
+    throw new Error(
+      `LLM returned empty content (finish_reason: ${choice?.finish_reason ?? "unknown"}, reasoning_content length: ${reasoningLength})`
+    );
+  }
+
+  return content;
 }
 
 export async function generateAIRoasts(
@@ -187,25 +202,23 @@ export async function generateAIRoasts(
       const userMessage = buildUserMessage(summary);
       const content = await callLLM(config, systemPrompt, userMessage);
 
-      if (content) {
-        roasts.push({
-          id: `ai-roast-${summary.weekStart}`,
-          type: "ai_roast",
-          ts: `${summary.weekEnd}T00:00:00Z`,
-          repo: null,
-          semantic: null,
-          data: {
-            weekRange,
-            content,
-            stats: {
-              totalCommits: summary.totalCommits,
-              topRepo: summary.topRepo,
-            },
+      roasts.push({
+        id: `ai-roast-${summary.weekStart}`,
+        type: "ai_roast",
+        ts: `${summary.weekEnd}T00:00:00Z`,
+        repo: null,
+        semantic: null,
+        data: {
+          weekRange,
+          content,
+          stats: {
+            totalCommits: summary.totalCommits,
+            topRepo: summary.topRepo,
           },
-        });
-        console.log(`  [ai-roast] Generated for ${weekRange}`);
-        consecutiveFailures = 0;
-      }
+        },
+      });
+      console.log(`  [ai-roast] Generated for ${weekRange}`);
+      consecutiveFailures = 0;
     } catch (err) {
       const msg = (err as Error).message;
       console.warn(`  [ai-roast] Failed for ${weekRange}:`, msg);

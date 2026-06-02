@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T05:55:31.664Z",
+  "generatedAt": "2026-06-02T06:18:30.436Z",
   "stats": {
     "totalCommits": 2113,
     "totalPRs": 251,
@@ -9,19 +9,20 @@
     "totalComments": 190,
     "activeRepos": 71,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-06-01T15:06:43Z"
+    "latestEvent": "2026-06-07T00:00:00Z"
   },
   "months": [
     {
       "key": "2026-06",
       "file": "2026-06.json",
-      "eventCount": 6,
+      "eventCount": 7,
       "repos": [
         "MRNIU/factorio_LegendaryMechStart",
         "MRNIU/ostool",
         "drivercraft/ostool"
       ],
       "breakdown": {
+        "ai_roast": 1,
         "commit": 3,
         "issue_comment": 1,
         "pull_request": 2
@@ -35,7 +36,7 @@
     {
       "key": "2026-05",
       "file": "2026-05.json",
-      "eventCount": 109,
+      "eventCount": 113,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
@@ -51,9 +52,9 @@
       ],
       "breakdown": {
         "commit": 61,
+        "ai_roast": 5,
         "issue_comment": 21,
-        "pull_request": 26,
-        "ai_roast": 1
+        "pull_request": 26
       },
       "repoBreakdown": {
         "MRNIU/factorio_LegendaryMechStart": 9,
@@ -72,7 +73,7 @@
     {
       "key": "2026-04",
       "file": "2026-04.json",
-      "eventCount": 77,
+      "eventCount": 79,
       "repos": [
         "MRNIU/MRNIU.github.io",
         "MRNIU/factorio_BestLanding",
@@ -86,7 +87,7 @@
       ],
       "breakdown": {
         "commit": 75,
-        "ai_roast": 1,
+        "ai_roast": 3,
         "issue_comment": 1
       },
       "repoBreakdown": {
@@ -104,7 +105,7 @@
     {
       "key": "2026-03",
       "file": "2026-03.json",
-      "eventCount": 96,
+      "eventCount": 99,
       "repos": [
         "ETLCPP/etl",
         "MRNIU/MRNIU.github.io",
@@ -125,8 +126,8 @@
         "issue_comment": 7,
         "pull_request": 17,
         "review": 4,
-        "issue": 3,
-        "ai_roast": 1
+        "ai_roast": 4,
+        "issue": 3
       },
       "repoBreakdown": {
         "MRNIU/MRNIU.github.io": 42,

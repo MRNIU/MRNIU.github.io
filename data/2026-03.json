@@ -674,6 +674,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-03-23",
+      "type": "ai_roast",
+      "ts": "2026-03-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-03-23 ~ 2026-03-29",
+        "content": "哟，零提交三评审，合着这周您的开发工作全是对别人的代码指指点点？尤其那个 “CoW 路径和 swap-in 共用一把锁” 的点评相当精准，建议下次自己写 COW 时千万别重蹈覆辙，不然我们会笑得更开心。",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "rcore-os/rCore"
+        }
+      }
+    },
+    {
       "id": "pr-0328-001",
       "type": "pull_request",
       "ts": "2026-03-28T16:20:00Z",
@@ -831,6 +846,21 @@
         "message": "fix: add memory clobber\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 90,
         "deletions": 36
+      }
+    },
+    {
+      "id": "ai-roast-2026-03-16",
+      "type": "ai_roast",
+      "ts": "2026-03-22T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-03-16 ~ 2026-03-22",
+        "content": "15 commits, 10 PRs, and only 1 review — confident much?  \nThe twin \"fix: add memory clobber\" commits triggered my déjà vu harder than your repeated \"style: update\" marathons.  \nAnd that PR named \"tmp (#201)\" is less a feature branch and more a digital landfill — maybe some of those 100+ \"style\" commits could've stayed in your editor.",
+        "stats": {
+          "totalCommits": 15,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -1274,6 +1304,21 @@
         "message": "feat(riscv64): expose register_info types as public cpu_io aliases\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 7,
         "deletions": 0
+      }
+    },
+    {
+      "id": "ai-roast-2026-02-23",
+      "type": "ai_roast",
+      "ts": "2026-03-01T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-02-23 ~ 2026-03-01",
+        "content": "Five commits, zero PRs, zero reviews—truly a masterclass in solo velocity. \"fix: x86 io\" and \"style: update\" are so descriptive I can already hear the sound of a senior dev spontaneously combusting, and breaking the same public-alias shuffle into three separate commits screams \"I'm pad-thumbing my commit count.\"",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "MRNIU/cpu_io"
+        }
       }
     }
   ]

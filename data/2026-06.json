@@ -2,6 +2,21 @@
   "month": "2026-06",
   "events": [
     {
+      "id": "ai-roast-2026-06-01",
+      "type": "ai_roast",
+      "ts": "2026-06-07T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-06-01 ~ 2026-06-07",
+        "content": "这周日志像极了游戏mod更新日志——先调下热管和变电站，再把蜘蛛机器人货物改成栈式，最后突然祭出一整套Tool facade拆分，全靠OpenAI Codex替你写commit body。下次至少让AI顺便把前两条的commit message也润色一下，别这么像修游戏bug。",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "drivercraft/ostool"
+        }
+      }
+    },
+    {
       "id": "commit-9fb1437d78876a55fc69e0aa89519b4dde74c43b",
       "type": "commit",
       "ts": "2026-06-01T15:06:43Z",

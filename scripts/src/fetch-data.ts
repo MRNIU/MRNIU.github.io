@@ -233,7 +233,7 @@ async function main() {
       writeEvents(DATA_DIR, config.username, roastEvents);
       console.log(`[ai-roast] Generated ${roastEvents.length} AI roast(s)`);
     } else {
-      console.log("[ai-roast] All weeks already have roasts, nothing to generate");
+      console.log("[ai-roast] No new AI roasts generated");
     }
   }
 

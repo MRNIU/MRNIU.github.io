@@ -52,6 +52,7 @@ describe("generateAIRoasts", () => {
     const [url, opts] = mockFetch.mock.calls[0];
     expect(url).toBe("https://api.openai.com/v1/chat/completions");
     expect(opts.headers.Authorization).toBe("Bearer test-key");
+    expect(JSON.parse(opts.body).max_tokens).toBe(384000);
   });
 
   it("returns empty array when AI is disabled", async () => {
@@ -83,6 +84,21 @@ describe("generateAIRoasts", () => {
 
     const roasts = await generateAIRoasts(baseConfig, sampleEvents, new Set());
     expect(roasts).toHaveLength(0); // Failed but didn't throw
+  });
+
+  it("treats empty LLM content as a failed generation", async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        choices: [{
+          finish_reason: "length",
+          message: { content: "", reasoning_content: "thinking only" },
+        }],
+      }),
+    });
+
+    const roasts = await generateAIRoasts(baseConfig, sampleEvents, new Set());
+    expect(roasts).toHaveLength(0);
   });
 
   it("uses env vars to override config", async () => {
