@@ -5,6 +5,7 @@ import ReviewNode from "./ReviewNode.astro";
 import IssueNode from "./IssueNode.astro";
 import CommentNode from "./CommentNode.astro";
 import AIRoastNode from "./AIRoastNode.astro";
+import AISummaryNode from "./AISummaryNode.astro";
 
 const { event } = Astro.props;
 ---
@@ -15,3 +16,4 @@ const { event } = Astro.props;
 {event.type === "issue" && <IssueNode event={event} />}
 {event.type === "issue_comment" && <CommentNode event={event} />}
 {event.type === "ai_roast" && <AIRoastNode event={event} />}
+{event.type === "ai_summary" && <AISummaryNode event={event} />}

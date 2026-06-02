@@ -39,7 +39,7 @@
 - **Full-spectrum activity tracking** — Commits, PRs, code reviews, issues, and comments across all public repos
 - **Infinite scroll timeline** — Months load seamlessly as you scroll, sidebar syncs to current position
 - **Progressive backfill** — Fetches complete history over multiple runs, respecting API rate limits
-- **AI Weekly Roast** — LLM-generated commentary on weekly patterns (auto-backfills historical weeks)
+- **AI Reviews** — LLM-generated weekly roasts plus completed monthly, quarterly, and yearly retrospectives
 - **Scalable heatmap** — SVG contribution graph that fills its container
 - **Cyber-Primer design** — Terminal-aesthetic dark theme, fluid `clamp()` typography from mobile to 4K
 - **Zero server cost** — GitHub Actions + GitHub Pages only
@@ -60,6 +60,7 @@ All options in `devlog.config.cjs`:
 | `filters.ignoreShortComments` | `true` | Filter "LGTM", "+1", etc. |
 | `aiRoast.enabled` | `true` | Enable AI commentary |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`, `"encouraging_mentor"`, or `"custom"` |
+| `aiRoast.summaries.periods` | `["month", "quarter", "year"]` | Periodic retrospective levels to generate |
 | `llm.baseUrl` | `"https://models.github.ai/inference"` | Any OpenAI-compatible endpoint (default: GitHub Models) |
 | `llm.model` | `"gpt-4o-mini"` | Model name |
 
@@ -71,13 +72,13 @@ All options in `devlog.config.cjs`:
 GitHub Actions (daily cron)
   │
   ├── Fetch: GitHub GraphQL API → data/*.json (monthly shards)
-  ├── AI: LLM API → ai_roast events (auto-backfills)
+  ├── AI: LLM API → ai_roast + ai_summary events (auto-backfills)
   ├── Commit: data/ pushed to repo
   └── Deploy: triggers Astro build → GitHub Pages
 ```
 
 - **Data** — Incremental + progressive backfill with checkpoint. Retries 5xx with exponential backoff. Auto-clears on username change (template usage).
-- **AI Roast** — Scans all history for weeks missing roasts. Safe to enable anytime.
+- **AI Reviews** — Scans all history for missing weekly roasts and completed period summaries. Safe to enable anytime.
 - **Frontend** — Astro SSG, Cyber-Primer design system, IntersectionObserver infinite scroll
 - **Storage** — JSON committed to repo, served as static assets
 

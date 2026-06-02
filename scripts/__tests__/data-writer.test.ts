@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
 import { writeEvents } from "../src/data-writer.js";
-import type { GitPulseEvent, IndexData, MonthlyData } from "../src/types.js";
+import type { AIRoastEvent, GitPulseEvent, IndexData, MonthlyData } from "../src/types.js";
 
 const TEST_DIR = path.resolve(process.cwd(), "data/__test_writer");
 
@@ -60,6 +60,42 @@ describe("writeEvents", () => {
     const ids = march.events.map((e) => e.id);
     expect(ids).toContain("commit-aaa");
     expect(ids).toContain("commit-ccc");
+  });
+
+  it("replaces generated AI events with the same id", () => {
+    const draft: AIRoastEvent = {
+      id: "ai-roast-2026-06-01",
+      type: "ai_roast",
+      ts: "2026-06-07T00:00:00Z",
+      repo: null,
+      semantic: null,
+      data: {
+        weekRange: "2026-06-01 ~ 2026-06-07",
+        content: "draft",
+        status: "draft",
+        stats: { totalCommits: 3, topRepo: "MRNIU/SimpleKernel" },
+      },
+    };
+    const final: AIRoastEvent = {
+      ...draft,
+      data: {
+        ...draft.data,
+        content: "final",
+        status: "final",
+      },
+    };
+
+    writeEvents(TEST_DIR, "MRNIU", [draft]);
+    writeEvents(TEST_DIR, "MRNIU", [final]);
+
+    const june = readJson<MonthlyData>("2026-06.json");
+    expect(june.events).toHaveLength(1);
+    const event = june.events[0];
+    expect(event.id).toBe("ai-roast-2026-06-01");
+    expect(event.type).toBe("ai_roast");
+    if (event.type !== "ai_roast") throw new Error("Expected ai_roast event");
+    expect(event.data.content).toBe("final");
+    expect(event.data.status).toBe("final");
   });
 
   it("sorts events by timestamp descending within each month", () => {

@@ -21,6 +21,10 @@ function readMonthlyFile(filePath: string): MonthlyData | null {
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as MonthlyData;
 }
 
+function canReplaceExisting(event: GitPulseEvent): boolean {
+  return event.type === "ai_roast" || event.type === "ai_summary";
+}
+
 function buildMonthSummary(month: string, events: GitPulseEvent[]): MonthSummary {
   const repos = new Set<string>();
   const breakdown: Record<string, number> = {};
@@ -85,8 +89,13 @@ export function writeEvents(dataDir: string, user: string, newEvents: GitPulseEv
     const filePath = path.join(dataDir, `${month}.json`);
     const existing = readMonthlyFile(filePath);
     const existingEvents = existing?.events || [];
-    const existingIds = new Set(existingEvents.map((e) => e.id));
-    const merged = [...existingEvents, ...events.filter((e) => !existingIds.has(e.id))];
+    const eventsById = new Map(existingEvents.map((event) => [event.id, event]));
+    for (const event of events) {
+      if (!eventsById.has(event.id) || canReplaceExisting(event)) {
+        eventsById.set(event.id, event);
+      }
+    }
+    const merged = [...eventsById.values()];
     merged.sort((a, b) => b.ts.localeCompare(a.ts));
     const monthData: MonthlyData = { month, events: merged };
     fs.writeFileSync(filePath, JSON.stringify(monthData, null, 2) + "\n");

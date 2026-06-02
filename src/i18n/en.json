@@ -31,7 +31,8 @@
     "review": "Reviews",
     "issue": "Issues",
     "issue_comment": "Comments",
-    "ai_roast": "AI Roasts"
+    "ai_roast": "AI Roasts",
+    "ai_summary": "AI Summaries"
   },
   "review": {
     "commentedOn": "Commented on",
@@ -41,6 +42,9 @@
     "title": "AI Weekly Roast",
     "commits": "commits",
     "topRepo": "Top repo"
+  },
+  "aiSummary": {
+    "title": "AI Summary"
   },
   "empty": {
     "noData": "No data available for this month yet. Still backfilling..."

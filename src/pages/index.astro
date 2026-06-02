@@ -64,6 +64,7 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
           issue: t(m, "eventTypes.issue"),
           issue_comment: t(m, "eventTypes.issue_comment"),
           ai_roast: t(m, "eventTypes.ai_roast"),
+          ai_summary: t(m, "eventTypes.ai_summary"),
         },
       }} />
 
@@ -349,6 +350,27 @@ const allMonthKeys = indexData.months.map((m: any) => m.key);
                 <span>${time}</span>
               </div>
             </div>`;
+
+        case 'ai_summary': {
+          const stats = event.data.stats;
+          const topRepo = stats.topRepo && stats.topRepo !== 'unknown'
+            ? `<a class="event-repo" href="${ghUrl(stats.topRepo)}" target="_blank" rel="noopener">${escapeHtml(stats.topRepo)}</a>`
+            : `<span>${escapeHtml(stats.topRepo || 'unknown')}</span>`;
+          return `<div class="ai-summary-card">
+              <div class="ai-summary-head">
+                <span class="summary-label">ai::summary/${escapeHtml(event.data.period)}</span>
+                <span class="summary-range">${escapeHtml(event.data.range.label)} &middot; ${escapeHtml(event.data.range.start)} ~ ${escapeHtml(event.data.range.end)}</span>
+              </div>
+              <p class="ai-summary-content">${escapeHtml(event.data.content)}</p>
+              <div class="ai-summary-meta">
+                <span>${stats.totalCommits} commits</span>
+                <span>${stats.totalPRs} PRs</span>
+                <span>${stats.activeRepos} repos</span>
+                ${topRepo}
+                <span>${time}</span>
+              </div>
+            </div>`;
+        }
 
         default:
           return '';

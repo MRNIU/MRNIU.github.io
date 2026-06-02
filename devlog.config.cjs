@@ -14,6 +14,10 @@ module.exports = {
     frequency: "weekly",
     promptMode: "toxic_senior_dev",
     customPrompt: "",
+    summaries: {
+      enabled: true,
+      periods: ["month", "quarter", "year"],
+    },
   },
   llm: {
     baseUrl: "https://models.github.ai/inference",

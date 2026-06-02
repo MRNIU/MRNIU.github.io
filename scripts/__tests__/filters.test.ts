@@ -68,4 +68,29 @@ describe("createEventFilter", () => {
     };
     expect(filter(event)).toBe(true);
   });
+
+  it("always keeps ai_summary events", () => {
+    const event = {
+      id: "ai-summary-month-2026-03", type: "ai_summary" as const, ts: "2026-03-31T00:00:00Z",
+      repo: null, semantic: null,
+      data: {
+        period: "month" as const,
+        range: { start: "2026-03-01", end: "2026-03-31", label: "2026-03" },
+        content: "",
+        highlights: [],
+        patterns: [],
+        risks: [],
+        stats: {
+          totalCommits: 0,
+          totalPRs: 0,
+          totalReviews: 0,
+          totalIssues: 0,
+          totalComments: 0,
+          activeRepos: 0,
+          topRepo: "",
+        },
+      },
+    };
+    expect(filter(event)).toBe(true);
+  });
 });

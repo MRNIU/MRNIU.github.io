@@ -8,6 +8,7 @@ describe("loadConfig", () => {
     expect(config.scope).toBe("all");
     expect(config.filters.ignoreKeywords).toContain("typo");
     expect(config.aiRoast.enabled).toBe(true);
+    expect(config.aiRoast.summaries?.periods).toEqual(["month", "quarter", "year"]);
     expect(config.llm.baseUrl).toBe("https://models.github.ai/inference");
   });
 

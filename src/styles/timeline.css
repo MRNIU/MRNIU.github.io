@@ -125,6 +125,51 @@
   color: var(--cp-anomaly);
 }
 
+/* ─── Periodic AI Summary ─── */
+.ai-summary-card {
+  padding: 12px 14px;
+  margin-bottom: 6px;
+  margin-left: 16px;
+  border-left: 2px solid var(--cp-blue);
+  background: color-mix(in srgb, var(--cp-blue) 8%, transparent);
+}
+
+.ai-summary-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.ai-summary-card .summary-label {
+  font-family: var(--cp-font-mono);
+  font-size: var(--cp-fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cp-blue);
+}
+
+.ai-summary-card .summary-range,
+.ai-summary-meta {
+  font-family: var(--cp-font-mono);
+  font-size: var(--cp-fs-xs);
+  color: var(--cp-fg-muted);
+}
+
+.ai-summary-content {
+  margin: 0 0 8px;
+  font-size: var(--cp-fs-base);
+  line-height: 1.6;
+  color: var(--cp-fg-bright);
+}
+
+.ai-summary-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 /* ─── Event body text (prose track) ─── */
 .event-body {
   color: var(--cp-fg-muted);

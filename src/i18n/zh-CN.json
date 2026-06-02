@@ -31,7 +31,8 @@
     "review": "代码审查",
     "issue": "议题",
     "issue_comment": "评论",
-    "ai_roast": "AI 点评"
+    "ai_roast": "AI 点评",
+    "ai_summary": "AI 总结"
   },
   "review": {
     "commentedOn": "评论了",
@@ -41,6 +42,9 @@
     "title": "AI 每周点评",
     "commits": "次提交",
     "topRepo": "最活跃仓库"
+  },
+  "aiSummary": {
+    "title": "AI 总结"
   },
   "empty": {
     "noData": "本月暂无数据，正在回填中..."

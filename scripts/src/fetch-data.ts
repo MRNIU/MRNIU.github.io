@@ -6,13 +6,13 @@ import { RateLimitTracker } from "./rate-limit.js";
 import { readCheckpoint, writeCheckpoint } from "./checkpoint.js";
 import { createEventFilter } from "./filters.js";
 import { writeEvents } from "./data-writer.js";
-import { generateAIRoasts } from "./ai-roast.js";
+import { generateAIRoasts, generateAISummaries } from "./ai-roast.js";
 import { fetchPullRequests } from "./fetchers/pull-requests.js";
 import { fetchIssues } from "./fetchers/issues.js";
 import { fetchComments } from "./fetchers/comments.js";
 import { fetchReviews } from "./fetchers/reviews.js";
 import { discoverRepos, fetchCommitsForRepo } from "./fetchers/commits.js";
-import type { GitPulseEvent, Checkpoint } from "./types.js";
+import type { AIRoastEvent, GitPulseEvent, Checkpoint } from "./types.js";
 
 const DATA_DIR = path.resolve(process.cwd(), "data");
 const CHECKPOINT_PATH = path.join(DATA_DIR, "checkpoint.json");
@@ -206,14 +206,17 @@ async function main() {
   if (config.aiRoast.enabled) {
     const dataFiles = fs.readdirSync(DATA_DIR).filter(f => /^\d{4}-\d{2}\.json$/.test(f));
 
-    // Collect all existing events + roast weeks from data files
-    const existingRoastWeeks = new Set<string>();
+    // Collect all existing activity events plus generated AI markers from data files.
+    const existingRoastsByWeek = new Map<string, AIRoastEvent>();
+    const existingSummaryIds = new Set<string>();
     const allHistoricalEvents: GitPulseEvent[] = [];
     for (const file of dataFiles) {
       const content = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf-8"));
       for (const event of content.events) {
         if (event.type === "ai_roast") {
-          existingRoastWeeks.add(event.data.weekRange);
+          existingRoastsByWeek.set(event.data.weekRange, event);
+        } else if (event.type === "ai_summary") {
+          existingSummaryIds.add(event.id);
         } else {
           allHistoricalEvents.push(event);
         }
@@ -228,12 +231,14 @@ async function main() {
       }
     }
 
-    const roastEvents = await generateAIRoasts(config, allHistoricalEvents, existingRoastWeeks);
-    if (roastEvents.length > 0) {
-      writeEvents(DATA_DIR, config.username, roastEvents);
-      console.log(`[ai-roast] Generated ${roastEvents.length} AI roast(s)`);
+    const roastEvents = await generateAIRoasts(config, allHistoricalEvents, existingRoastsByWeek);
+    const summaryEvents = await generateAISummaries(config, allHistoricalEvents, existingSummaryIds);
+    const aiEvents = [...roastEvents, ...summaryEvents];
+    if (aiEvents.length > 0) {
+      writeEvents(DATA_DIR, config.username, aiEvents);
+      console.log(`[ai-roast] Generated ${roastEvents.length} AI roast(s), ${summaryEvents.length} AI summary event(s)`);
     } else {
-      console.log("[ai-roast] No new AI roasts generated");
+      console.log("[ai-roast] No new AI events generated");
     }
   }
 

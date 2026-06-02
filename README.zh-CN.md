@@ -39,7 +39,7 @@
 - **全方位活动追踪** — 跨所有公开仓库的提交、PR、代码审查、Issue 和评论
 - **无限滚动时间线** — 滚动时自动加载所有月份，侧边栏随滚动位置同步高亮
 - **渐进式回填** — 多次运行自动抓取完整历史，遵守 API 速率限制
-- **AI 每周吐槽** — LLM 生成的每周开发模式点评（自动回补历史周数据）
+- **AI 复盘** — LLM 生成每周点评，并为已结束的月度、季度、年度生成完整复盘
 - **可缩放热力图** — SVG 贡献图自动填充容器宽度
 - **Cyber-Primer 设计** — 终端美学暗色主题，`clamp()` 流式字体适配手机到 4K
 - **零服务器成本** — 仅需 GitHub Actions + GitHub Pages
@@ -60,6 +60,7 @@
 | `filters.ignoreShortComments` | `true` | 过滤 "LGTM"、"+1" 等短评论 |
 | `aiRoast.enabled` | `true` | 启用 AI 点评 |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`、`"encouraging_mentor"` 或 `"custom"` |
+| `aiRoast.summaries.periods` | `["month", "quarter", "year"]` | 要生成的周期复盘层级 |
 | `llm.baseUrl` | `"https://models.github.ai/inference"` | 任意 OpenAI 兼容接口地址（默认：GitHub Models） |
 | `llm.model` | `"gpt-4o-mini"` | 模型名称 |
 
@@ -71,13 +72,13 @@
 GitHub Actions（每日定时任务）
   │
   ├── 数据抓取：GitHub GraphQL API → data/*.json（按月分片）
-  ├── AI 评论：LLM API → ai_roast 事件（自动回补历史）
+  ├── AI 评论：LLM API → ai_roast + ai_summary 事件（自动回补历史）
   ├── 提交：data/ 目录推送回仓库
   └── 部署：触发 Astro 构建 → GitHub Pages
 ```
 
 - **数据** — 增量更新 + 渐进式回填，带断点续传。5xx 错误自动指数退避重试。检测到用户名变更时自动清空旧数据（模板使用场景）。
-- **AI 吐槽** — 扫描所有历史数据，为缺少吐槽的周自动生成。随时启用都安全。
+- **AI 复盘** — 扫描所有历史数据，为缺少点评的周和已结束周期自动生成复盘。随时启用都安全。
 - **前端** — Astro 静态生成，Cyber-Primer 设计系统，IntersectionObserver 无限滚动
 - **存储** — JSON 文件提交到仓库，作为静态资源提供
 

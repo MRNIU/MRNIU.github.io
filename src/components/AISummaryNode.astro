@@ -1,0 +1,63 @@
+---
+import "../styles/timeline.css";
+
+interface Props {
+  event: {
+    type: "ai_summary";
+    ts: string;
+    repo: null;
+    semantic: null;
+    data: {
+      period: "month" | "quarter" | "year";
+      range: {
+        start: string;
+        end: string;
+        label: string;
+      };
+      content: string;
+      stats: {
+        totalCommits: number;
+        totalPRs: number;
+        totalReviews: number;
+        totalIssues: number;
+        totalComments: number;
+        activeRepos: number;
+        topRepo: string;
+      };
+    };
+  };
+}
+
+const { event } = Astro.props;
+const { data, ts } = event;
+
+const time = new Date(ts).toLocaleString("en-US", {
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+const topRepoUrl = data.stats.topRepo !== "unknown" ? `https://github.com/${data.stats.topRepo}` : null;
+---
+
+<div class="ai-summary-card">
+  <div class="ai-summary-head">
+    <span class="summary-label">ai::summary/{data.period}</span>
+    <span class="summary-range">{data.range.label} · {data.range.start} ~ {data.range.end}</span>
+  </div>
+  <p class="ai-summary-content">
+    {data.content}
+  </p>
+  <div class="ai-summary-meta">
+    <span>{data.stats.totalCommits} commits</span>
+    <span>{data.stats.totalPRs} PRs</span>
+    <span>{data.stats.activeRepos} repos</span>
+    {topRepoUrl ? (
+      <a class="event-repo" href={topRepoUrl} target="_blank" rel="noopener">{data.stats.topRepo}</a>
+    ) : (
+      <span>{data.stats.topRepo}</span>
+    )}
+    <span>{time}</span>
+  </div>
+</div>

@@ -6,7 +6,8 @@ export type EventType =
   | "review"
   | "issue"
   | "issue_comment"
-  | "ai_roast";
+  | "ai_roast"
+  | "ai_summary";
 
 export type SemanticTag =
   | "feat"
@@ -90,7 +91,43 @@ export interface AIRoastEvent extends BaseEvent {
   data: {
     weekRange: string;
     content: string;
+    status?: "draft" | "final";
     stats: { totalCommits: number; topRepo: string };
+  };
+}
+
+export type AISummaryPeriod = "month" | "quarter" | "year";
+
+export interface AISummaryStats {
+  totalCommits: number;
+  totalPRs: number;
+  totalReviews: number;
+  totalIssues: number;
+  totalComments: number;
+  activeRepos: number;
+  topRepo: string;
+}
+
+export interface AISummaryEvent extends BaseEvent {
+  type: "ai_summary";
+  repo: null;
+  semantic: null;
+  data: {
+    period: AISummaryPeriod;
+    range: {
+      start: string;
+      end: string;
+      label: string;
+    };
+    content: string;
+    highlights: string[];
+    patterns: string[];
+    risks: string[];
+    stats: AISummaryStats;
+    continuity?: {
+      carriedThemes: string[];
+      changedSincePrevious: string[];
+    };
   };
 }
 
@@ -100,7 +137,8 @@ export type GitPulseEvent =
   | ReviewEvent
   | IssueEvent
   | IssueCommentEvent
-  | AIRoastEvent;
+  | AIRoastEvent
+  | AISummaryEvent;
 
 // ─── Data Files ───
 

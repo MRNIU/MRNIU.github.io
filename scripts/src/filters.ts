@@ -10,7 +10,7 @@ export function createEventFilter(
   const keywords = config.filters.ignoreKeywords.map((k) => k.toLowerCase());
 
   return (event: GitPulseEvent): boolean => {
-    if (event.type === "ai_roast") return true;
+    if (event.type === "ai_roast" || event.type === "ai_summary") return true;
     if (event.repo && ignoredRepoSet.has(event.repo.toLowerCase())) return false;
     if (event.type === "commit") {
       const msg = event.data.message.toLowerCase();
