@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T03:10:25.405Z",
+  "generatedAt": "2026-06-02T05:55:31.664Z",
   "stats": {
     "totalCommits": 2113,
     "totalPRs": 251,
@@ -35,7 +35,7 @@
     {
       "key": "2026-05",
       "file": "2026-05.json",
-      "eventCount": 108,
+      "eventCount": 109,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
@@ -52,7 +52,8 @@
       "breakdown": {
         "commit": 61,
         "issue_comment": 21,
-        "pull_request": 26
+        "pull_request": 26,
+        "ai_roast": 1
       },
       "repoBreakdown": {
         "MRNIU/factorio_LegendaryMechStart": 9,

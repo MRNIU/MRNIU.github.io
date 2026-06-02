@@ -1294,6 +1294,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-04-27",
+      "type": "ai_roast",
+      "ts": "2026-05-03T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-04-27 ~ 2026-05-03",
+        "content": "一星期55个commit愣是整出0个PR，你这是把Git当日记本使了吧？“update”这种commit message都能上，下一步是不是准备提交个“fix: 改了点东西”？看着天花乱坠的ADR文档，代码呢，该不会全藏在合并冲突里了吧——毕竟你连容器的pre-commit都顺手配上，就是不让人review。",
+        "stats": {
+          "totalCommits": 55,
+          "topRepo": "ssXue/Nazh"
+        }
+      }
+    },
+    {
       "id": "commit-00a2c8887174d2ec8a958215e0e0bef3dd1b28e8",
       "type": "commit",
       "ts": "2026-05-02T00:06:04Z",
