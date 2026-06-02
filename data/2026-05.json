@@ -186,6 +186,49 @@
       }
     },
     {
+      "id": "ai-summary-month-2026-05",
+      "type": "ai_summary",
+      "ts": "2026-05-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-05-01",
+          "end": "2026-05-31",
+          "label": "2026-05"
+        },
+        "content": "5 月延续了在 ssXue/Nazh 的活跃开发，同时 ostool 系列仓库（drivercraft/ostool、MRNIU/ostool）成为新的焦点，整体提交数量略降但引入了规范的 PR 流程，共合并了 26 个 PR。主要工作集中在工具链重构（收敛构建与运行边界、拆分上下文）、Factorio mod 逻辑优化（如 proxy 放置、隐藏资源开采）以及 AI 编排系统的职责拆分与错误边界收紧。相比 4 月以文档和独立提交为主的模式，本月明显转向以重构为核心、通过 PR 进行代码审查的协作开发。",
+        "highlights": [
+          "61 commits, 26 PRs, 0 reviews, 0 issues, 21 comments, 11 active repos",
+          "Top repo: ssXue/Nazh"
+        ],
+        "patterns": [
+          "Primary activity type: refactor",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 61,
+          "totalPRs": 26,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 21,
+          "activeRepos": 11,
+          "topRepo": "ssXue/Nazh"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on ssXue/Nazh"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from docs to refactor",
+            "Commit volume decreased by 14"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-cdd9a42530a906bfd35a1538cd2a95b66243ab31",
       "type": "commit",
       "ts": "2026-05-30T15:15:54Z",

@@ -18,6 +18,123 @@
       }
     },
     {
+      "id": "commit-8ac05825dd6ba18b22f12a6b600a5cb5d5e282e2",
+      "type": "commit",
+      "ts": "2026-06-02T07:37:59Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "8ac05825dd6ba18b22f12a6b600a5cb5d5e282e2",
+        "message": "fix: batch AI summary backfills\n\nLimit generated period summaries per fetch run so long historical backfills can make progress across repeated runs instead of requiring the whole backlog to finish in one job.\n\nSort pending period summaries by latest completed range across yearly, quarterly, and monthly levels so the first backfill batches establish all configured summary layers. Document the limit and cover the behavior with a regression test.\n\nVerification:\n- npm test\n- npm run build\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 122,
+        "deletions": 48
+      }
+    },
+    {
+      "id": "commit-d99648993d6ae1ea3e78b2c45fa5b1d782a2e7d9",
+      "type": "commit",
+      "ts": "2026-06-02T07:33:33Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "docs",
+      "data": {
+        "sha": "d99648993d6ae1ea3e78b2c45fa5b1d782a2e7d9",
+        "message": "docs: add agent guidance and trim design notes\n\nAdd repository-specific agent instructions, condense the design notes to current architecture, and remove the obsolete phase-one implementation plan.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 109,
+        "deletions": 3868
+      }
+    },
+    {
+      "id": "commit-cf23f389dfcce2c6bb9bcb0739667ddee9472539",
+      "type": "commit",
+      "ts": "2026-06-02T07:29:54Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "chore",
+      "data": {
+        "sha": "cf23f389dfcce2c6bb9bcb0739667ddee9472539",
+        "message": "chore: rewrite existing AI roasts\n\nRefresh existing AI roast text through the configured LLM using the updated output style prompt.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 232,
+        "deletions": 232
+      }
+    },
+    {
+      "id": "commit-85cc2c01aeb95d7031cba1247a655a6e8b07ffdc",
+      "type": "commit",
+      "ts": "2026-06-02T07:21:13Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "85cc2c01aeb95d7031cba1247a655a6e8b07ffdc",
+        "message": "fix: allow concurrent AI roast rewrites\n\nAdd configurable concurrency to the existing AI roast rewrite script so local bulk rewrites can complete without changing the default scheduled workflow behavior.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 38,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-846b600be820397400e57548ac4639df1278ef22",
+      "type": "commit",
+      "ts": "2026-06-02T07:20:05Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "846b600be820397400e57548ac4639df1278ef22",
+        "message": "feat: add AI summaries and draft roast finalization\n\nAdd periodic AI summary generation for completed month, quarter, and year periods alongside weekly AI roasts. Render summary nodes in the timeline and expose the configuration in project docs and locale strings.\n\nTrack weekly roast status so in-progress weeks are stored as draft. Completed weeks can regenerate final roast content, and the data writer replaces generated AI events by id instead of leaving stale draft text.\n\nMark the current 2026-06-01 weekly roast as draft so the completed-week run can refresh it.\n\nValidation: npm test; npm run build.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 979,
+        "deletions": 94
+      }
+    },
+    {
+      "id": "commit-d9f2d8f3e4327996bf8caae38056f0383fc827dc",
+      "type": "commit",
+      "ts": "2026-06-02T07:10:35Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "d9f2d8f3e4327996bf8caae38056f0383fc827dc",
+        "message": "fix: bound AI roast rewrite requests\n\nAdd per-request timeout handling for existing AI roast rewrites so one slow LLM response cannot block the whole manual rewrite run.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 56,
+        "deletions": 31
+      }
+    },
+    {
+      "id": "commit-3d04db1bbe032c9eef786b7076a42b5948be7235",
+      "type": "commit",
+      "ts": "2026-06-02T06:49:42Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "3d04db1bbe032c9eef786b7076a42b5948be7235",
+        "message": "fix: rewrite AI roasts with model style prompt\n\nAdd explicit output style guidance for AI roasts and a manual workflow path that rewrites existing roast content through the configured LLM.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 159,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-3138c8acfd896adc4cabe0523ef50748740d4561",
+      "type": "commit",
+      "ts": "2026-06-02T06:25:23Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "3138c8acfd896adc4cabe0523ef50748740d4561",
+        "message": "fix: enforce AI roast output style\n\nAppend formatting rules to AI roast prompts so generated commentary follows Chinese technical writing conventions for spacing, punctuation, and numerals.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 42,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-148ad3b341530b7aadd148b6d730323d7a04134e",
+      "type": "commit",
+      "ts": "2026-06-02T06:20:51Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "fix",
+      "data": {
+        "sha": "148ad3b341530b7aadd148b6d730323d7a04134e",
+        "message": "fix: backfill missing AI roasts\n\nGenerate missing weekly AI roast entries and make DeepSeek responses robust by using UTC week grouping, a larger completion budget, and explicit empty-content failure handling.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 217,
+        "deletions": 37
+      }
+    },
+    {
       "id": "commit-9fb1437d78876a55fc69e0aa89519b4dde74c43b",
       "type": "commit",
       "ts": "2026-06-01T15:06:43Z",

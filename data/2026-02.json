@@ -15,6 +15,49 @@
       }
     },
     {
+      "id": "ai-summary-month-2026-02",
+      "type": "ai_summary",
+      "ts": "2026-02-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-02-01",
+          "end": "2026-02-28",
+          "label": "2026-02"
+        },
+        "content": "February saw a sharp drop in activity to just 6 commits across 7 repos, down from last month’s 37, with work heavily concentrated on MRNIU/cpu_io. The dominant semantic tag shifted from feat to fix, reflecting a turn toward stabilization – notable changes included fixing x86 I/O handling and removing STATIC_LIB from the build. Alongside these fixes, some new primitives (mb, rmb, wmb) were added for memory ordering, and a CalleeSavedContext refactor also landed. An isolated PR was merged into Simple-XX/SimpleKernel, but overall the month felt more like targeted maintenance than the previous period’s feature push.",
+        "highlights": [
+          "6 commits, 1 PRs, 0 reviews, 3 issues, 1 comments, 7 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 6,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 3,
+          "totalComments": 1,
+          "activeRepos": 7,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/cpu_io"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to fix",
+            "Commit volume decreased by 31"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-f9d46b4488ff8e3cc2db6d6d28891caa78e95148",
       "type": "commit",
       "ts": "2026-02-24T10:19:28Z",
@@ -121,6 +164,21 @@
       }
     },
     {
+      "id": "ai-roast-2026-02-02",
+      "type": "ai_roast",
+      "ts": "2026-02-08T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-02-02 ~ 2026-02-08",
+        "content": "Two commits on FreeRTOS-PortentaH7: one fix that drops a static lib, one feat that introduces a new method for CalleeSavedContext. Maintaining a real-time OS port at two commits a week has the same vibe as marathon training by walking to the fridge. At least the commit messages are actually descriptive this time, so personal growth is real.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
+        }
+      }
+    },
+    {
       "id": "comment-MRNIU/FreeRTOS-PortentaH7-3-2",
       "type": "issue_comment",
       "ts": "2026-02-05T09:56:42Z",
@@ -156,21 +214,6 @@
         "message": "feat: new method for CalleeSavedContext\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 28,
         "deletions": 1
-      }
-    },
-    {
-      "id": "ai-roast-2026-02-02",
-      "type": "ai_roast",
-      "ts": "2026-02-08T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2026-02-02 ~ 2026-02-08",
-        "content": "Two commits on FreeRTOS-PortentaH7: one fix that drops a static lib, one feat that introduces a new method for CalleeSavedContext. Maintaining a real-time OS port at two commits a week has the same vibe as marathon training by walking to the fridge. At least the commit messages are actually descriptive this time, so personal growth is real.",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "MRNIU/FreeRTOS-PortentaH7"
-        }
       }
     }
   ]

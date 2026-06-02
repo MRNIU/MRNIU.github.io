@@ -236,6 +236,50 @@
       }
     },
     {
+      "id": "ai-summary-month-2026-04",
+      "type": "ai_summary",
+      "ts": "2026-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-04-01",
+          "end": "2026-04-30",
+          "label": "2026-04"
+        },
+        "content": "2026 年 4 月工程重心从多仓库功能交付转向单仓库深度治理，提交量由 3 月的 64 增至 75，但 PR、review 与 issue 活动归零，活跃仓库从 13 个收敛至 9 个，标签也从 feat 切换为 docs，表明协作模式发生了变化。绝对主力仓库切换为 ssXue/Nazh，该仓库密集推动 ADR-0013 子图实施与 ADR-0014 引脚二分路线图的文档、重构及端到端测试， Phase 2 至 5 均已完成落地，并伴随大量 /simplify 清理。同时，项目模板体系得到全面建设，引入中文优先语言策略、commit 规范、SAD/SDD 模板，并通过开发容器初始化 pre-commit 与依赖维护工具链。上月活跃的 Factorio 启动脚本和 MRNIU 网站维护仍有少量延续，但力度明显减弱，整体呈现出从特性构建转入架构沉淀与工程规范固化的清晰转折。",
+        "highlights": [
+          "75 commits, 0 PRs, 0 reviews, 0 issues, 1 comments, 9 active repos",
+          "Top repo: ssXue/Nazh"
+        ],
+        "patterns": [
+          "Primary activity type: docs",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 75,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 9,
+          "topRepo": "ssXue/Nazh"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/MRNIU.github.io to ssXue/Nazh",
+            "Dominant semantic tag changed from feat to docs",
+            "Commit volume increased by 11"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-8021174877f64a2978e4def4bd9331d311375214",
       "type": "commit",
       "ts": "2026-04-28T10:03:15Z",

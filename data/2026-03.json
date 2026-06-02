@@ -534,6 +534,93 @@
       }
     },
     {
+      "id": "ai-summary-quarter-2026-Q1",
+      "type": "ai_summary",
+      "ts": "2026-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2026-01-01",
+          "end": "2026-03-31",
+          "label": "2026-Q1"
+        },
+        "content": "2026 年 Q1，技术重心落在操作系统核心基础设施的开发上，围绕 x86_64 和 aarch64 的上下文管理（context.hpp）、陷阱帧重构（TrapContext）、虚拟内存管理（VMM）以及 futex 等同步原语展开，并通过多个 v1.1.x 版本发布推动功能闭环。与上季度仅有 cpu_io 的单点开发相比，本季度活动在 22 个仓库中全面铺开，其中 MRNIU/MRNIU.github.io 成为最高频仓库，同时 rockchip 平台的中断和安全性配置也得到更新。协作模式从零 PR 零评审转换为 18 个 PR 和 4 次正式审查，审查意见覆盖了 SBI 封装通用性、锁粒度分离等设计细节，显示出团队对代码质量的严格要求。整体上， Q1 完成了从个人实验到多项目并行、引入协作流程的转变，且 3 月贡献集中爆发，占据季度大部分的工作量。",
+        "highlights": [
+          "107 commits, 18 PRs, 4 reviews, 6 issues, 9 comments, 22 active repos",
+          "Top repo: MRNIU/MRNIU.github.io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 107,
+          "totalPRs": 18,
+          "totalReviews": 4,
+          "totalIssues": 6,
+          "totalComments": 9,
+          "activeRepos": 22,
+          "topRepo": "MRNIU/MRNIU.github.io"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/cpu_io to MRNIU/MRNIU.github.io",
+            "Commit volume increased by 88"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2026-03",
+      "type": "ai_summary",
+      "ts": "2026-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-03-01",
+          "end": "2026-03-31",
+          "label": "2026-03"
+        },
+        "content": "2026 年 3 月活动量相比 2 月大幅跃升，共提交 64 个 commit 与 17 个 PR，并完成 4 次代码审查，主导仓库从 MRNIU/cpu_io 彻底转移到 MRNIU/MRNIU.github.io 个人网站重构上。本月语义标签由 fix 转变为 feat，工作重心从修复缺陷全面转向新功能开发，集中实现了 AI Roast 集成、仪表盘组件、响应式布局、双语 README 以及依赖升级等大量特性。期间还向 Simple-XX/SimpleKernel、rcore-os/rCore 等操作系统教学仓库提交了多个 PR，并在 rCore 的 SBI ecall、futex 封装、COW fork 等合并请求中给出了从参数类型到锁粒度的工程建议，保持了跨项目的技术参与度。",
+        "highlights": [
+          "64 commits, 17 PRs, 4 reviews, 3 issues, 7 comments, 13 active repos",
+          "Top repo: MRNIU/MRNIU.github.io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period",
+          "Review activity present"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 64,
+          "totalPRs": 17,
+          "totalReviews": 4,
+          "totalIssues": 3,
+          "totalComments": 7,
+          "activeRepos": 13,
+          "topRepo": "MRNIU/MRNIU.github.io"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/cpu_io to MRNIU/MRNIU.github.io",
+            "Dominant semantic tag changed from fix to feat",
+            "Commit volume increased by 58"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-9fd2ccd684ece2d500086ebacfd224bda4c5c787",
       "type": "commit",
       "ts": "2026-03-30T23:59:53Z",

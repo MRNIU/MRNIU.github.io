@@ -2,6 +2,48 @@
   "month": "2025-11",
   "events": [
     {
+      "id": "ai-summary-month-2025-11",
+      "type": "ai_summary",
+      "ts": "2025-11-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-11-01",
+          "end": "2025-11-30",
+          "label": "2025-11"
+        },
+        "content": "11 月工程活动集中于 MRNIU/cpu_io 仓库，并扩展至 2 个活跃库。相比 10 月的 feat 主导，本月工作重心明显转为 fix，代表提交包括针对 aarch64 虚拟内存管理和内核页权限的修复，以及 buddy_alloc 的新版本迭代。提交节奏集中在后半月，反映出下旬为修复与版本更新密集期。整体延续个人底层开发节奏，无协作评审交互。",
+        "highlights": [
+          "5 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: fix",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 5,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/cpu_io"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from feat to fix"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-debf249143729b530afed99d4f1c601dcd117420",
       "type": "commit",
       "ts": "2025-11-24T06:01:23Z",

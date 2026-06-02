@@ -1,8 +1,8 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T06:18:30.436Z",
+  "generatedAt": "2026-06-02T07:43:47.078Z",
   "stats": {
-    "totalCommits": 2113,
+    "totalCommits": 2122,
     "totalPRs": 251,
     "totalReviews": 6,
     "totalIssues": 80,
@@ -15,19 +15,21 @@
     {
       "key": "2026-06",
       "file": "2026-06.json",
-      "eventCount": 7,
+      "eventCount": 16,
       "repos": [
+        "MRNIU/MRNIU.github.io",
         "MRNIU/factorio_LegendaryMechStart",
         "MRNIU/ostool",
         "drivercraft/ostool"
       ],
       "breakdown": {
         "ai_roast": 1,
-        "commit": 3,
+        "commit": 12,
         "issue_comment": 1,
         "pull_request": 2
       },
       "repoBreakdown": {
+        "MRNIU/MRNIU.github.io": 9,
         "MRNIU/factorio_LegendaryMechStart": 2,
         "drivercraft/ostool": 3,
         "MRNIU/ostool": 1
@@ -36,7 +38,7 @@
     {
       "key": "2026-05",
       "file": "2026-05.json",
-      "eventCount": 113,
+      "eventCount": 114,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
@@ -53,6 +55,7 @@
       "breakdown": {
         "commit": 61,
         "ai_roast": 5,
+        "ai_summary": 1,
         "issue_comment": 21,
         "pull_request": 26
       },
@@ -73,7 +76,7 @@
     {
       "key": "2026-04",
       "file": "2026-04.json",
-      "eventCount": 79,
+      "eventCount": 80,
       "repos": [
         "MRNIU/MRNIU.github.io",
         "MRNIU/factorio_BestLanding",
@@ -87,6 +90,7 @@
       ],
       "breakdown": {
         "commit": 75,
+        "ai_summary": 1,
         "ai_roast": 3,
         "issue_comment": 1
       },
@@ -105,7 +109,7 @@
     {
       "key": "2026-03",
       "file": "2026-03.json",
-      "eventCount": 99,
+      "eventCount": 101,
       "repos": [
         "ETLCPP/etl",
         "MRNIU/MRNIU.github.io",
@@ -125,6 +129,7 @@
         "commit": 64,
         "issue_comment": 7,
         "pull_request": 17,
+        "ai_summary": 2,
         "review": 4,
         "ai_roast": 4,
         "issue": 3
@@ -148,7 +153,7 @@
     {
       "key": "2026-02",
       "file": "2026-02.json",
-      "eventCount": 13,
+      "eventCount": 14,
       "repos": [
         "521xueweihan/HelloGitHub",
         "GitHubDaily/GitHubDaily",
@@ -160,6 +165,7 @@
       ],
       "breakdown": {
         "commit": 6,
+        "ai_summary": 1,
         "ai_roast": 2,
         "issue": 3,
         "pull_request": 1,
@@ -178,7 +184,7 @@
     {
       "key": "2026-01",
       "file": "2026-01.json",
-      "eventCount": 42,
+      "eventCount": 43,
       "repos": [
         "MRNIU/MPMCQueue",
         "MRNIU/bmalloc",
@@ -190,6 +196,7 @@
         "zephyrproject-rtos/zephyr"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 37,
         "ai_roast": 4,
         "issue_comment": 1
@@ -208,7 +215,7 @@
     {
       "key": "2025-12",
       "file": "2025-12.json",
-      "eventCount": 11,
+      "eventCount": 14,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
@@ -217,8 +224,9 @@
       ],
       "breakdown": {
         "commit": 9,
-        "issue_comment": 1,
-        "ai_roast": 1
+        "ai_summary": 3,
+        "ai_roast": 1,
+        "issue_comment": 1
       },
       "repoBreakdown": {
         "MRNIU/factorio_BestLanding": 4,
@@ -230,12 +238,13 @@
     {
       "key": "2025-11",
       "file": "2025-11.json",
-      "eventCount": 7,
+      "eventCount": 8,
       "repos": [
         "MRNIU/bmalloc",
         "MRNIU/cpu_io"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 5,
         "ai_roast": 2
       },

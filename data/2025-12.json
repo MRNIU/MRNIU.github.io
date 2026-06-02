@@ -28,6 +28,131 @@
       }
     },
     {
+      "id": "ai-summary-year-2025",
+      "type": "ai_summary",
+      "ts": "2025-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "label": "2025"
+        },
+        "content": "In 2025, activity exploded from 48 commits in 2024 to 322 commits across 13 repositories, with the dominant refactor tag and top repo MRNIU/bmalloc reflecting a deep, sustained systems‑building effort. The technical trajectory shifted from patching OpenSBI interfaces to core architecture work—adding dozens of aarch64 system register definitions, implementing RISC‑V virtual memory, and rewriting a custom memory allocator, all moving well beyond the fix‑heavy 2024. The year’s rhythm was bursty: January and August absorbed the bulk of commits (71 and 147), with August’s spike tied entirely to bmalloc’s intensive refactoring, while many other months saw between 3 and 9 commits. Collaboration remained largely solo with no reviews across the year, though a concentrated burst in July (14 PRs and 11 comments) hints at a brief window of structured code sharing or integration work. Strong habits shine through the meticulously structured conventional commit messages (“feat:”, “refactor:”, “style:”) and the use of clang‑tidy fixes, reinforcing a disciplined, quality‑first approach even in a low‑review environment. Overall, 2025 marks a decisive move from fixing to building, with the engineer steadily deepening low‑level infrastructure capabilities.",
+        "highlights": [
+          "322 commits, 20 PRs, 0 reviews, 0 issues, 14 comments, 13 active repos",
+          "Top repo: MRNIU/bmalloc"
+        ],
+        "patterns": [
+          "Primary activity type: refactor",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 322,
+          "totalPRs": 20,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 14,
+          "activeRepos": 13,
+          "topRepo": "MRNIU/bmalloc"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/opensbi_interface to MRNIU/bmalloc",
+            "Dominant semantic tag changed from fix to refactor",
+            "Commit volume increased by 274"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2025-Q4",
+      "type": "ai_summary",
+      "ts": "2025-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2025-10-01",
+          "end": "2025-12-31",
+          "label": "2025-Q4"
+        },
+        "content": "In 2025-Q4, development activity dropped sharply to 19 commits with no pull requests or reviews, continuing a solo workflow but with much lower volume than the previous quarter. The focus pivoted from the Q3 refactor-heavy work on bmalloc to new feature implementation, dominated by the MRNIU/cpu_io repo. Technical highlights included adding aarch64 system register definitions (TCR_EL1, SCTLR_EL1), introducing virtual memory support, and a new buddy_alloc version, with the majority of commits concentrated in December. Other repos saw minor version bumps and initializations, but collaboration remained absent. This represents a clear shift from the Q3 pattern of 194 commits and 18 PRs centered on refactoring to a quiet, individual push into low-level architecture features without external feedback loops.",
+        "highlights": [
+          "19 commits, 0 PRs, 0 reviews, 0 issues, 1 comments, 6 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 19,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 6,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/bmalloc to MRNIU/cpu_io",
+            "Dominant semantic tag changed from refactor to feat",
+            "Commit volume decreased by 175"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2025-12",
+      "type": "ai_summary",
+      "ts": "2025-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-12-01",
+          "end": "2025-12-31",
+          "label": "2025-12"
+        },
+        "content": "In December 2025, activity doubled to 9 commits across 4 repos, shifting focus from the previous month's fix-heavy work on MRNIU/cpu_io to feature development on MRNIU/factorio_BestLanding. The month was dominated by rapid iterations on that project, with all commits tagged feat and including version bumps like v1.0.1 and v1.0.2. No pull requests, reviews, or issues were created, consistent with solo work, while a single comment marks the only interaction. A burst of 7 commits in the final week solidified the new project milestone.",
+        "highlights": [
+          "9 commits, 0 PRs, 0 reviews, 0 issues, 1 comments, 4 active repos",
+          "Top repo: MRNIU/factorio_BestLanding"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 9,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 4,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/cpu_io to MRNIU/factorio_BestLanding",
+            "Dominant semantic tag changed from fix to feat"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-d0462e29904cea5eba7263551ac55b659cd4b0a0",
       "type": "commit",
       "ts": "2025-12-30T17:43:53Z",
@@ -93,6 +218,21 @@
       }
     },
     {
+      "id": "ai-roast-2025-12-22",
+      "type": "ai_roast",
+      "ts": "2025-12-28T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-12-22 ~ 2025-12-28",
+        "content": "Two commits, both titled \"feat: init\", on factorio_BestLanding — Merry Christmas, you started yet another Factorio mod. Committing \"feat: init\" twice implies your first initialization wasn't good enough, which is concerning for a project whose entire purpose is landing. At least you're consistent: holidays are for Factorio, not family.",
+        "stats": {
+          "totalCommits": 2,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        }
+      }
+    },
+    {
       "id": "commit-9f417abad24317dafad12ea8312f7cbebf1ccdb0",
       "type": "commit",
       "ts": "2025-12-27T16:14:57Z",
@@ -128,21 +268,6 @@
         "issueNumber": 95979,
         "issueTitle": "boards: Add Xunlong Orange Pi 5 Ultra RK3588",
         "body": "Friendly ping @mbolivar "
-      }
-    },
-    {
-      "id": "ai-roast-2025-12-22",
-      "type": "ai_roast",
-      "ts": "2025-12-28T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-12-22 ~ 2025-12-28",
-        "content": "Two commits, both titled \"feat: init\", on factorio_BestLanding — Merry Christmas, you started yet another Factorio mod. Committing \"feat: init\" twice implies your first initialization wasn't good enough, which is concerning for a project whose entire purpose is landing. At least you're consistent: holidays are for Factorio, not family.",
-        "stats": {
-          "totalCommits": 2,
-          "topRepo": "MRNIU/factorio_BestLanding"
-        }
       }
     }
   ]

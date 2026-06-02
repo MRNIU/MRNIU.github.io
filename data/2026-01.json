@@ -2,6 +2,51 @@
   "month": "2026-01",
   "events": [
     {
+      "id": "ai-summary-month-2026-01",
+      "type": "ai_summary",
+      "ts": "2026-01-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-01-01",
+          "end": "2026-01-31",
+          "label": "2026-01"
+        },
+        "content": "January 2026 saw a sharp increase in activity, jumping to 37 commits across 8 repos from December's 9 commits on 4 repos, with the dominant theme remaining feat. The focus shifted almost entirely to MRNIU/cpu_io, where the bulk of work introduced CPU context architectures, VMM support, and refactored TrapContext and style patterns for x86_64 and aarch64. Tangential repos like MRNIU/factorio_BestLanding saw early-month style and test updates before development concentrated on the new system-level infrastructure. The period reflects a deliberate pivot from a game-mod project to a low-level CPU I/O framework, marked by frequent feature iteration and internal cleanups.",
+        "highlights": [
+          "37 commits, 0 PRs, 0 reviews, 0 issues, 1 comments, 8 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 37,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 8,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/factorio_BestLanding to MRNIU/cpu_io",
+            "Commit volume increased by 28"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-0573cc0801b362b573e814cf99f27bd80e081316",
       "type": "commit",
       "ts": "2026-01-30T06:39:24Z",
