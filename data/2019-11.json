@@ -2,6 +2,61 @@
   "month": "2019-11",
   "events": [
     {
+      "id": "ai-summary-month-2019-11",
+      "type": "ai_summary",
+      "ts": "2019-11-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2019-11-01",
+          "end": "2019-11-30",
+          "label": "2019-11"
+        },
+        "content": "2019 年 11 月的工程活动集中在 Simple-XX/SimpleKernel 的内核开发上，共计 7 个 commit，较上月的 10 个 commit 略有下降，但工作更聚焦于内存管理子系统。提交序列显示从多次“Try to paging”的探索到最终“Enable paging”的突破，并配合完成了 pmm_init() 的更新和内核初始化代码向 bootinit.c 的迁移，体现了分页机制的迭代演进。除内核主线外，在 Homebrew/homebrew-core 仓库也有 1 个 commit 与 2 条评论的轻度参与。整体延续了上月对 SimpleKernel 的专注维护，无 PR 产生，活动节奏保持平稳且深度。",
+        "highlights": [
+          "7 commits, 0 PRs, 0 reviews, 0 issues, 2 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 7,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 2,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-11-11",
+      "type": "ai_roast",
+      "ts": "2019-11-17T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-11-11 ~ 2019-11-17",
+        "content": "\"Try to paging\", \"Try to paging\" — your commit history staggers like a toddler learning to walk. Six commits, two identical messages, and it meshes flawlessly with that \"fix warnning\" typo energy.",
+        "stats": {
+          "totalCommits": 6,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-e1e5654bd64a80cb51097eb4303af3a735e01fb0",
       "type": "commit",
       "ts": "2019-11-15T05:29:38Z",
@@ -80,6 +135,21 @@
       }
     },
     {
+      "id": "ai-roast-2019-11-04",
+      "type": "ai_roast",
+      "ts": "2019-11-10T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-11-04 ~ 2019-11-10",
+        "content": "One commit to SimpleKernel but 2 comments on Homebrew — you basically paused OS development to debate package management. Priorities: kernel initialization can wait, but someone on the internet is wrong about their Homebrew formula.",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "Homebrew/homebrew-core"
+        }
+      }
+    },
+    {
       "id": "comment-Homebrew/homebrew-core-45718-119",
       "type": "issue_comment",
       "ts": "2019-11-06T15:08:08Z",
@@ -114,36 +184,6 @@
         "issueNumber": 45718,
         "issueTitle": "x86_64-elf cross-toolchain",
         "body": "Is there anyone here?"
-      }
-    },
-    {
-      "id": "ai-roast-2019-11-04",
-      "type": "ai_roast",
-      "ts": "2019-11-10T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-11-04 ~ 2019-11-10",
-        "content": "One commit to SimpleKernel but 2 comments on Homebrew — you basically paused OS development to debate package management. Priorities: kernel initialization can wait, but someone on the internet is wrong about their Homebrew formula.",
-        "stats": {
-          "totalCommits": 1,
-          "topRepo": "Homebrew/homebrew-core"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-11-11",
-      "type": "ai_roast",
-      "ts": "2019-11-17T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-11-11 ~ 2019-11-17",
-        "content": "\"Try to paging\", \"Try to paging\" — your commit history staggers like a toddler learning to walk. Six commits, two identical messages, and it meshes flawlessly with that \"fix warnning\" typo energy.",
-        "stats": {
-          "totalCommits": 6,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

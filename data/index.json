@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:31:28.194Z",
+  "generatedAt": "2026-06-02T08:39:27.442Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -1466,16 +1466,17 @@
     {
       "key": "2019-12",
       "file": "2019-12.json",
-      "eventCount": 58,
+      "eventCount": 61,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 3,
         "commit": 42,
+        "ai_roast": 4,
         "issue_comment": 11,
-        "pull_request": 1,
-        "ai_roast": 4
+        "pull_request": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 42,
@@ -1485,15 +1486,16 @@
     {
       "key": "2019-11",
       "file": "2019-11.json",
-      "eventCount": 11,
+      "eventCount": 12,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 2,
         "commit": 7,
-        "issue_comment": 2,
-        "ai_roast": 2
+        "issue_comment": 2
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 7,
@@ -1503,16 +1505,17 @@
     {
       "key": "2019-10",
       "file": "2019-10.json",
-      "eventCount": 13,
+      "eventCount": 14,
       "repos": [
         "Homebrew/homebrew-core",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 1,
         "commit": 10,
         "issue_comment": 1,
-        "pull_request": 1,
-        "ai_roast": 1
+        "pull_request": 1
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 10,
@@ -1522,13 +1525,14 @@
     {
       "key": "2019-09",
       "file": "2019-09.json",
-      "eventCount": 11,
+      "eventCount": 13,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
-        "commit": 9,
-        "ai_roast": 2
+        "ai_summary": 2,
+        "ai_roast": 2,
+        "commit": 9
       },
       "repoBreakdown": {
         "Simple-XX/SimpleKernel": 9
@@ -1566,11 +1570,12 @@
     {
       "key": "2019-06",
       "file": "2019-06.json",
-      "eventCount": 5,
+      "eventCount": 7,
       "repos": [
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "issue_comment": 4,
         "ai_roast": 1
       },
@@ -1581,15 +1586,16 @@
     {
       "key": "2019-05",
       "file": "2019-05.json",
-      "eventCount": 12,
+      "eventCount": 13,
       "repos": [
         "Simple-XX/SimpleKernel",
         "alibaba/AliOS-Things"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "issue_comment": 9,
-        "commit": 2,
-        "ai_roast": 1
+        "ai_roast": 1,
+        "commit": 2
       },
       "repoBreakdown": {
         "alibaba/AliOS-Things": 9,

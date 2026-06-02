@@ -2,6 +2,88 @@
   "month": "2019-06",
   "events": [
     {
+      "id": "ai-summary-quarter-2019-Q2",
+      "type": "ai_summary",
+      "ts": "2019-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2019-04-01",
+          "end": "2019-06-30",
+          "label": "2019-Q2"
+        },
+        "content": "2019-Q2 技术重心围绕 SimpleKernel 的虚拟内存管理初步实现，将内核加载至 3 GiB 高位（0xC0000000），并为后续用汇编重写 init 部分做准备，同时伴随目录调整与缺陷修复。开发活跃度较 Q1 大幅收缩，提交数从 48 骤降至 6，活跃仓库由 6 个收窄至 3 个，且所有提交集中在 4、5 月， 6 月已无新提交产生。主导语义标签从上一季度的 “merge” 转变为 “mixed”，反映合并驱动减少而杂项开发与重构并存的状态。协作仍以评论为主要沟通渠道，共 13 条，较 Q1 的 7 条有所增长，但始终未引入正式的代码审查机制，讨论围绕设计与实现细节展开。",
+        "highlights": [
+          "6 commits, 2 PRs, 0 reviews, 0 issues, 13 comments, 3 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 6,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 13,
+          "activeRepos": 3,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from merge to mixed",
+            "Commit volume decreased by 42"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2019-06",
+      "type": "ai_summary",
+      "ts": "2019-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2019-06-01",
+          "end": "2019-06-30",
+          "label": "2019-06"
+        },
+        "content": "本月活动完全集中在 Simple-XX/SimpleKernel 仓库，仅产生了 4 条评论，无任何 commit、PR 与代码 review，整体产出非常清淡。相比上月，工作重心从 alibaba/AliOS-Things 的 2 个 commit 与较多讨论明显转移，但代码贡献彻底中断，仅保留了少量的评论交流习惯。延续了技术讨论的互动方式，但整个月的贡献仅限于对 SimpleKernel 项目的关注与初步沟通，未见实质推进。",
+        "highlights": [
+          "0 commits, 0 PRs, 0 reviews, 0 issues, 4 comments, 1 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 4,
+          "activeRepos": 1,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from alibaba/AliOS-Things to Simple-XX/SimpleKernel"
+          ]
+        }
+      }
+    },
+    {
       "id": "comment-Simple-XX/SimpleKernel-17-122",
       "type": "issue_comment",
       "ts": "2019-06-02T11:46:46Z",
@@ -26,6 +108,21 @@
       }
     },
     {
+      "id": "ai-roast-2019-05-27",
+      "type": "ai_roast",
+      "ts": "2019-06-02T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-05-27 ~ 2019-06-02",
+        "content": "Zero commits, zero PRs, yet nine comments on AliOS-Things — you’ve truly mastered the art of being an open source backseat driver. All talk, no code. Somewhere, a JIRA ticket is weeping.",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "alibaba/AliOS-Things"
+        }
+      }
+    },
+    {
       "id": "comment-Simple-XX/SimpleKernel-17-124",
       "type": "issue_comment",
       "ts": "2019-06-01T13:31:59Z",
@@ -47,21 +144,6 @@
         "issueNumber": 17,
         "issueTitle": "运行不起来啊",
         "body": "请问可以提供详细的运行环境吗"
-      }
-    },
-    {
-      "id": "ai-roast-2019-05-27",
-      "type": "ai_roast",
-      "ts": "2019-06-02T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-05-27 ~ 2019-06-02",
-        "content": "Zero commits, zero PRs, yet nine comments on AliOS-Things — you’ve truly mastered the art of being an open source backseat driver. All talk, no code. Somewhere, a JIRA ticket is weeping.",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "alibaba/AliOS-Things"
-        }
       }
     }
   ]

@@ -2,6 +2,61 @@
   "month": "2019-10",
   "events": [
     {
+      "id": "ai-summary-month-2019-10",
+      "type": "ai_summary",
+      "ts": "2019-10-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2019-10-01",
+          "end": "2019-10-31",
+          "label": "2019-10"
+        },
+        "content": "In October, development on SimpleKernel drove a concentrated effort to achieve boot on i386 and x86_64, adding multiboot2 support and early C++ scaffolding. Makefile and compilation parameters were refined across multiple commits, reflecting a recurring habit of toolchain tweaking. Compared to September’s 9 commits in a single repository with 0 PRs or comments, this month’s 10 commits spanned 2 active repos and introduced a pull request and comment, signaling a move toward more collaborative code integration and multi-arch readiness.",
+        "highlights": [
+          "10 commits, 1 PRs, 0 reviews, 0 issues, 1 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 10,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2019-10-21",
+      "type": "ai_roast",
+      "ts": "2019-10-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-10-21 ~ 2019-10-27",
+        "content": "Ten commits, and one of them declares \"multiboot2 nit support x86_64, I should separated kernel.kernek\" — spotting architectural overhauls mid-commit-message is a power move. Between \"Improve makefile\" and \"improve makefile\", I see the only thing you refactored was your shift key. And \"Preliminary completion of XXX support\" sounds exactly like a placeholder you forgot to actually fill in.",
+        "stats": {
+          "totalCommits": 10,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-933b6cb215c4673f6335e9e1406edf4072fb875b",
       "type": "commit",
       "ts": "2019-10-26T18:54:16Z",
@@ -154,21 +209,6 @@
         "message": "Preliminary completion of XXX support",
         "additions": 1724,
         "deletions": 1450
-      }
-    },
-    {
-      "id": "ai-roast-2019-10-21",
-      "type": "ai_roast",
-      "ts": "2019-10-27T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-10-21 ~ 2019-10-27",
-        "content": "Ten commits, and one of them declares \"multiboot2 nit support x86_64, I should separated kernel.kernek\" — spotting architectural overhauls mid-commit-message is a power move. Between \"Improve makefile\" and \"improve makefile\", I see the only thing you refactored was your shift key. And \"Preliminary completion of XXX support\" sounds exactly like a placeholder you forgot to actually fill in.",
-        "stats": {
-          "totalCommits": 10,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
       }
     }
   ]

@@ -2,6 +2,133 @@
   "month": "2019-12",
   "events": [
     {
+      "id": "ai-summary-year-2019",
+      "type": "ai_summary",
+      "ts": "2019-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2019-01-01",
+          "end": "2019-12-31",
+          "label": "2019"
+        },
+        "content": "2019 年，开发重心完全落在 Simple-XX/SimpleKernel 内核项目上，全年 122 个 commit 和 11 个 PR，活跃仓库从 2018 年的 16 个收缩到 8 个，技术焦点更加集中。技术轨迹围绕底层环境逐步深入：从年初升级至 Multiboot2 引导、实现内存管理与堆分配，到内核调试期间解析函数调用栈，并穿插完成了“王垠的解释器”，形成了系统编程与语言实现的交叉探索。活动节奏呈明显的“U”形分布， 1 月密集更新文档和 CI 配置，年中几乎沉寂， 9 月后逐渐恢复，最终在 12 月爆发 42 次 commit，呈现间歇性高强度投入的特征。协作上全年没有代码审查记录，主要依赖社区零星合并 PR， 34 条评论更多用于方案讨论与记录，独立开发是主调。最强工程习惯体现为对持续集成配置的反复打磨（多次 Update .travis.yml），以及在面对 Multiboot2 调试卡点时，坚持用大量小提交与频繁 merge 逐步推进，形成了“增量演进、持续集成”的工作风格。",
+        "highlights": [
+          "122 commits, 11 PRs, 0 reviews, 4 issues, 34 comments, 8 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: merge",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 122,
+          "totalPRs": 11,
+          "totalReviews": 0,
+          "totalIssues": 4,
+          "totalComments": 34,
+          "activeRepos": 8,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel",
+            "Dominant semantic tag stayed merge"
+          ],
+          "changedSincePrevious": [
+            "Commit volume decreased by 12"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2019-Q4",
+      "type": "ai_summary",
+      "ts": "2019-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2019-10-01",
+          "end": "2019-12-31",
+          "label": "2019-Q4"
+        },
+        "content": "In 2019-Q4, development activity on Simple-XX/SimpleKernel surged from 9 commits in Q3 to 59, with the most intense work landing in December. The technical direction pivoted toward x86_64 architecture support, bringing up physical and virtual memory management (paging, pmm, vmm), C++ integration, and a restructured boot flow via bootinit. Build system improvements, CI fixes, and the addition of utility code like a LinkedList accompanied this push. Collaboration remained a solo effort with no code reviews, while comments grew to 14 as the developer documented progress through devlogs and pull requests. Compared to the low-volume Q3, this quarter shows a deliberate, concentrated sprint to move the kernel from minimal i386 booting to a more capable x86_64 and C++-ready foundation.",
+        "highlights": [
+          "59 commits, 2 PRs, 0 reviews, 0 issues, 14 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 59,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 14,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Commit volume increased by 50"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2019-12",
+      "type": "ai_summary",
+      "ts": "2019-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2019-12-01",
+          "end": "2019-12-31",
+          "label": "2019-12"
+        },
+        "content": "12 月的开发重心仍集中在 Simple-XX/SimpleKernel 仓库，活动强度相比 11 月显著提升，从 7 个 commit 增长到 42 个 commit。主线工作围绕代码风格清理、目录结构优化和向 C++ 迁移尝试展开，同时完成了分页、链表与 printk 日志函数等关键模块的接入。本月还修复了 CI 配置并创建了 FUNDING.yml，此外首次向 Homebrew/homebrew-core 提交了 1 个 PR，体现了少量跨项目参与。提交习惯延续了高频率增量更新的特点，但功能相关的 message 较上月更为明确。",
+        "highlights": [
+          "42 commits, 1 PRs, 0 reviews, 0 issues, 11 comments, 2 active repos",
+          "Top repo: Simple-XX/SimpleKernel"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 42,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 11,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/SimpleKernel"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on Simple-XX/SimpleKernel"
+          ],
+          "changedSincePrevious": [
+            "Commit volume increased by 35"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-b8ea3e29f7a9335e722882f77ca312bdf76120d2",
       "type": "commit",
       "ts": "2019-12-29T15:52:34Z",
@@ -119,6 +246,21 @@
       }
     },
     {
+      "id": "ai-roast-2019-12-23",
+      "type": "ai_roast",
+      "ts": "2019-12-29T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-12-23 ~ 2019-12-29",
+        "content": "13 commits and a solid 8 of them breathe “update” — you’ve hit a personal-best 62% update commit rate. There’s also “updatre CI configuration,” proving that even spell-check has abandoned hope. Happy holidays. Your git log is a lump of coal.",
+        "stats": {
+          "totalCommits": 13,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
+      }
+    },
+    {
       "id": "commit-4378605b1ca0f5adf206d374a1a365471b7732f7",
       "type": "commit",
       "ts": "2019-12-27T16:01:17Z",
@@ -192,6 +334,21 @@
         "issueNumber": 47935,
         "issueTitle": "i386-elf-binutils, i386-elf-gcc: add 64-bit support",
         "body": "@fxcoudert\r\nI have [raised this issue in the forum](https://discourse.brew.sh/t/error-non-file-alias-encountered-with-add-an-alias/6528), do you have any thought?"
+      }
+    },
+    {
+      "id": "ai-roast-2019-12-16",
+      "type": "ai_roast",
+      "ts": "2019-12-22T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-12-16 ~ 2019-12-22",
+        "content": "Six commits, four of them just the word \"update\" — at this point you should really bind `git commit -m 'update'` to a single keystroke. You also created FUNDING.yml and immediately updated it, because nothing declares \"sponsor my work\" quite like commit messages that convey precisely nothing.",
+        "stats": {
+          "totalCommits": 6,
+          "topRepo": "Homebrew/homebrew-core"
+        }
       }
     },
     {
@@ -392,6 +549,21 @@
         "message": "Working on vmm",
         "additions": 96,
         "deletions": 92
+      }
+    },
+    {
+      "id": "ai-roast-2019-12-09",
+      "type": "ai_roast",
+      "ts": "2019-12-15T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2019-12-09 ~ 2019-12-15",
+        "content": "Nineteen commits: six labeled “fix up CI”, five just “update”, and one “remove trashy file” — reading your git log is like watching someone slowly lose a staring contest with a YAML file. The CI fixes alone are a master class in the “push and hope” workflow, and here’s the spoiler: it didn't work, six times in a row.",
+        "stats": {
+          "totalCommits": 19,
+          "topRepo": "Simple-XX/SimpleKernel"
+        }
       }
     },
     {
@@ -703,51 +875,6 @@
         "content": "“Paging finished.” 之后连着 3 个 \"update\" commit——既然分页已经搞完，那这几个神秘的更新到底在更新啥？“Paging finished.” 句末那个句号散发的笃定，转眼就被后面一串 commit 无情拆穿。",
         "stats": {
           "totalCommits": 4,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-12-09",
-      "type": "ai_roast",
-      "ts": "2019-12-15T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-12-09 ~ 2019-12-15",
-        "content": "Nineteen commits: six labeled “fix up CI”, five just “update”, and one “remove trashy file” — reading your git log is like watching someone slowly lose a staring contest with a YAML file. The CI fixes alone are a master class in the “push and hope” workflow, and here’s the spoiler: it didn't work, six times in a row.",
-        "stats": {
-          "totalCommits": 19,
-          "topRepo": "Simple-XX/SimpleKernel"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-12-16",
-      "type": "ai_roast",
-      "ts": "2019-12-22T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-12-16 ~ 2019-12-22",
-        "content": "Six commits, four of them just the word \"update\" — at this point you should really bind `git commit -m 'update'` to a single keystroke. You also created FUNDING.yml and immediately updated it, because nothing declares \"sponsor my work\" quite like commit messages that convey precisely nothing.",
-        "stats": {
-          "totalCommits": 6,
-          "topRepo": "Homebrew/homebrew-core"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2019-12-23",
-      "type": "ai_roast",
-      "ts": "2019-12-29T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2019-12-23 ~ 2019-12-29",
-        "content": "13 commits and a solid 8 of them breathe “update” — you’ve hit a personal-best 62% update commit rate. There’s also “updatre CI configuration,” proving that even spell-check has abandoned hope. Happy holidays. Your git log is a lump of coal.",
-        "stats": {
-          "totalCommits": 13,
           "topRepo": "Simple-XX/SimpleKernel"
         }
       }
