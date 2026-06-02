@@ -2,6 +2,54 @@
   "month": "2017-11",
   "events": [
     {
+      "id": "ai-summary-month-2017-11",
+      "type": "ai_summary",
+      "ts": "2017-11-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2017-11-01",
+          "end": "2017-11-30",
+          "label": "2017-11"
+        },
+        "content": "2017 年 11 月，工程活动几乎全部集中在 xitu/gold-miner 仓库，仅产生了 1 个 issue 和 2 条评论，没有任何 commit 或 PR。当月唯一的活跃周出现在 11 月 13 日至 19 日，全部互动均为翻译选题相关的讨论。这种极低的活动量与此前可能的开发周期形成了明显反差，更像是一个以维护和零星沟通为主的静默阶段。",
+        "highlights": [
+          "0 commits, 0 PRs, 0 reviews, 1 issues, 2 comments, 1 active repos",
+          "Top repo: xitu/gold-miner"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "xitu/gold-miner"
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2017-11-13",
+      "type": "ai_roast",
+      "ts": "2017-11-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2017-11-13 ~ 2017-11-19",
+        "content": "0 个 commit，1 个 issue，2 条评论——你基本就是跑到别人的仓库（xitu/gold-miner），溜达了一圈，丢下一句“这地方不错”，然后人就没了。这堪称 GitHub 版的只看不买。",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "xitu/gold-miner"
+        }
+      }
+    },
+    {
       "id": "comment-xitu/gold-miner-2466-166",
       "type": "issue_comment",
       "ts": "2017-11-16T04:31:35Z",
@@ -36,21 +84,6 @@
         "title": "申请成为译者",
         "state": "closed",
         "body": "- 公司/学校：西安石油大学\r\n- 工作内容/专业：计算机科学，主要是C/C++,操作系统方面\r\n- 常浏览的国外网站：eBay;Stack Overflow;GitHub;WiKi;还有经常上英文Google算嘛\r\n- 英语水平：专业书籍读懂没问题\r\n- 有无翻译经验：并没有\r\n- 个人博客：https://mrniu.github.io\r\n- 个人介绍：正在着手写简单的OS。如果可以，我想从简单的OS类文章开始。\r\n"
-      }
-    },
-    {
-      "id": "ai-roast-2017-11-13",
-      "type": "ai_roast",
-      "ts": "2017-11-19T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2017-11-13 ~ 2017-11-19",
-        "content": "0 个 commit，1 个 issue，2 条评论——你基本就是跑到别人的仓库（xitu/gold-miner），溜达了一圈，丢下一句“这地方不错”，然后人就没了。这堪称 GitHub 版的只看不买。",
-        "stats": {
-          "totalCommits": 0,
-          "topRepo": "xitu/gold-miner"
-        }
       }
     }
   ]

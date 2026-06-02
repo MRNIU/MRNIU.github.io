@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T08:52:19.491Z",
+  "generatedAt": "2026-06-02T08:54:32.644Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -1921,11 +1921,12 @@
     {
       "key": "2017-12",
       "file": "2017-12.json",
-      "eventCount": 1,
+      "eventCount": 3,
       "repos": [
         "xitu/gold-miner"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "issue": 1
       },
       "repoBreakdown": {
@@ -1935,14 +1936,15 @@
     {
       "key": "2017-11",
       "file": "2017-11.json",
-      "eventCount": 4,
+      "eventCount": 5,
       "repos": [
         "xitu/gold-miner"
       ],
       "breakdown": {
+        "ai_summary": 1,
+        "ai_roast": 1,
         "issue_comment": 2,
-        "issue": 1,
-        "ai_roast": 1
+        "issue": 1
       },
       "repoBreakdown": {
         "xitu/gold-miner": 3

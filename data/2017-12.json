@@ -2,6 +2,72 @@
   "month": "2017-12",
   "events": [
     {
+      "id": "ai-summary-year-2017",
+      "type": "ai_summary",
+      "ts": "2017-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "year",
+        "range": {
+          "start": "2017-01-01",
+          "end": "2017-12-31",
+          "label": "2017"
+        },
+        "content": "2017 年的工程活动完全集中在 xitu/gold-miner 仓库，这是一段以内容协作而非代码提交为主的时期。全年没有产生任何 commit、PR 或代码审查记录，而是通过 2 个 issue 和 2 条评论参与社区讨论，其中 11 月最活跃， 12 月仅有 1 个 issue。活动节奏呈低强度的周期性参与，主要围绕翻译项目的文章选题或校对反馈展开。协作模式表现为轻量级的异步沟通，通过 issue 发起话题并与社区成员交流，但未深入到代码或文档的直接产出。最显著的工程习惯是对技术内容的持续关注和高质量的社群互动，尽管贡献形式偏向讨论，这也体现了掘金翻译计划特有的“翻译+校对”协作流程中不可或缺的一环。整体而言，这一年是技术视野的积累期，在非编码层面为开源翻译项目提供了输入。",
+        "highlights": [
+          "0 commits, 0 PRs, 0 reviews, 2 issues, 2 comments, 1 active repos",
+          "Top repo: xitu/gold-miner"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "xitu/gold-miner"
+        }
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2017-Q4",
+      "type": "ai_summary",
+      "ts": "2017-12-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2017-10-01",
+          "end": "2017-12-31",
+          "label": "2017-Q4"
+        },
+        "content": "2017 年第四季度，仅 xitu/gold-miner 仓库有活动记录，共产生 2 个 issue 与 2 条评论，无任何代码提交、PR 或审查行为。技术方向未见实质推进，重心落在文章翻译与社区维护的异步讨论上。协作以 issue 跟踪为主，缺乏结构化的代码评审流程，整体上属于低工程密度的内容管理周期。",
+        "highlights": [
+          "0 commits, 0 PRs, 0 reviews, 2 issues, 2 comments, 1 active repos",
+          "Top repo: xitu/gold-miner"
+        ],
+        "patterns": [
+          "Primary activity type: mixed"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 0,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 2,
+          "totalComments": 2,
+          "activeRepos": 1,
+          "topRepo": "xitu/gold-miner"
+        }
+      }
+    },
+    {
       "id": "issue-2735-xitu/gold-miner",
       "type": "issue",
       "ts": "2017-12-14T10:03:21Z",
