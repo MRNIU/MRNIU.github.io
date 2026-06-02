@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-02T07:43:47.078Z",
+  "generatedAt": "2026-06-02T07:50:47.918Z",
   "stats": {
     "totalCommits": 2122,
     "totalPRs": 251,
@@ -256,11 +256,12 @@
     {
       "key": "2025-10",
       "file": "2025-10.json",
-      "eventCount": 5,
+      "eventCount": 6,
       "repos": [
         "MRNIU/cpu_io"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 5
       },
       "repoBreakdown": {
@@ -270,12 +271,13 @@
     {
       "key": "2025-09",
       "file": "2025-09.json",
-      "eventCount": 48,
+      "eventCount": 50,
       "repos": [
         "MRNIU/bmalloc",
         "zephyrproject-rtos/zephyr"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "ai_roast": 2,
         "commit": 41,
         "issue_comment": 1,
@@ -289,13 +291,14 @@
     {
       "key": "2025-08",
       "file": "2025-08.json",
-      "eventCount": 151,
+      "eventCount": 152,
       "repos": [
         "MRNIU/bmalloc",
         "MRNIU/cpu_io",
         "MRNIU/opensbi_interface"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "ai_roast": 4,
         "commit": 147
       },
@@ -308,7 +311,7 @@
     {
       "key": "2025-07",
       "file": "2025-07.json",
-      "eventCount": 33,
+      "eventCount": 34,
       "repos": [
         "MRNIU/cpu_io",
         "MRNIU/misc",
@@ -316,10 +319,11 @@
         "zephyrproject-rtos/zephyr"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "commit": 6,
+        "ai_roast": 2,
         "pull_request": 14,
-        "issue_comment": 11,
-        "ai_roast": 2
+        "issue_comment": 11
       },
       "repoBreakdown": {
         "MRNIU/cpu_io": 3,
@@ -331,16 +335,17 @@
     {
       "key": "2025-06",
       "file": "2025-06.json",
-      "eventCount": 30,
+      "eventCount": 32,
       "repos": [
         "MRNIU/nzh_factorio_mod",
         "factoriotools/factorio-docker"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "commit": 27,
+        "ai_roast": 1,
         "issue_comment": 1,
-        "pull_request": 1,
-        "ai_roast": 1
+        "pull_request": 1
       },
       "repoBreakdown": {
         "MRNIU/nzh_factorio_mod": 27,
@@ -350,12 +355,13 @@
     {
       "key": "2025-05",
       "file": "2025-05.json",
-      "eventCount": 4,
+      "eventCount": 5,
       "repos": [
         "Simple-XX/OSPP",
         "Simple-XX/SimpleKernel"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "pull_request": 1,
         "commit": 3
       },
@@ -367,17 +373,28 @@
     {
       "key": "2025-04",
       "file": "2025-04.json",
-      "eventCount": 6,
+      "eventCount": 7,
       "repos": [
         "MRNIU/cpu_io"
       ],
       "breakdown": {
-        "commit": 5,
-        "ai_roast": 1
+        "ai_summary": 1,
+        "ai_roast": 1,
+        "commit": 5
       },
       "repoBreakdown": {
         "MRNIU/cpu_io": 5
       }
+    },
+    {
+      "key": "2025-03",
+      "file": "2025-03.json",
+      "eventCount": 1,
+      "repos": [],
+      "breakdown": {
+        "ai_summary": 1
+      },
+      "repoBreakdown": {}
     },
     {
       "key": "2025-02",

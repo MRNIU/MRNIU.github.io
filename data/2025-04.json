@@ -2,6 +2,62 @@
   "month": "2025-04",
   "events": [
     {
+      "id": "ai-summary-month-2025-04",
+      "type": "ai_summary",
+      "ts": "2025-04-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-04-01",
+          "end": "2025-04-30",
+          "label": "2025-04"
+        },
+        "content": "本月在 MRNIU/cpu_io 仓库上集中推进 aarch64 架构的 SMC PSCI 支持，共完成 5 个 feat 提交，主要围绕 smc psci 支持和添加 aarch64 x0 寄存器。相比 2 月份的 3 个提交，开发节奏有所加快，且全部工作仍聚焦于该仓库的 CPU 底层功能开发。所有提交均采用 feat 类型，体现出持续的新特性迭代模式。当月没有参与代码审查或 issue 讨论，保持着一贯的独立开发习惯。",
+        "highlights": [
+          "5 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 5,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/cpu_io",
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": []
+        }
+      }
+    },
+    {
+      "id": "ai-roast-2025-04-07",
+      "type": "ai_roast",
+      "ts": "2025-04-13T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-04-07 ~ 2025-04-13",
+        "content": "4 commits, all with the identical message: \"feat: aarch64 smc psci support\". At this point, just `--amend` like a normal person instead of shipping the same feature four separate times. Either PSCI support is agonizingly tricky, or your git mantra is \"commit early, commit often, commit identically.\"",
+        "stats": {
+          "totalCommits": 4,
+          "topRepo": "MRNIU/cpu_io"
+        }
+      }
+    },
+    {
       "id": "commit-47c3a1ac1cc64e429233cea6a81dea252c48bce8",
       "type": "commit",
       "ts": "2025-04-07T09:03:29Z",
@@ -64,21 +120,6 @@
         "message": "feat: add aarch64 x0\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 9,
         "deletions": 2
-      }
-    },
-    {
-      "id": "ai-roast-2025-04-07",
-      "type": "ai_roast",
-      "ts": "2025-04-13T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-04-07 ~ 2025-04-13",
-        "content": "4 commits, all with the identical message: \"feat: aarch64 smc psci support\". At this point, just `--amend` like a normal person instead of shipping the same feature four separate times. Either PSCI support is agonizingly tricky, or your git mantra is \"commit early, commit often, commit identically.\"",
-        "stats": {
-          "totalCommits": 4,
-          "topRepo": "MRNIU/cpu_io"
-        }
       }
     }
   ]

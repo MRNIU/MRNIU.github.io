@@ -2,6 +2,90 @@
   "month": "2025-06",
   "events": [
     {
+      "id": "ai-summary-quarter-2025-Q2",
+      "type": "ai_summary",
+      "ts": "2025-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2025-04-01",
+          "end": "2025-06-30",
+          "label": "2025-Q2"
+        },
+        "content": "Q2 2025 shifted from Q1's concentrated feature development on cpu_io to a broader set of five repos, led by MRNIU/nzh_factorio_mod with a dominant refactor theme focused on Lua utility cleanups and improvements to area clearing and resource generation. Alongside this, aarch64 smc/psci feature work and OSPP2025 documentation updates continued in other repositories, though the overall commit volume dropped from 74 to 35. Collaboration remained minimal—only two pull requests were opened and no code reviews occurred, preserving the solo‑developer pattern seen in Q1. The semantic pivot from feat to refactor, coupled with many fix commits, signals a phase of consolidation and code quality hardening across the expanded project portfolio.",
+        "highlights": [
+          "35 commits, 2 PRs, 0 reviews, 0 issues, 1 comments, 5 active repos",
+          "Top repo: MRNIU/nzh_factorio_mod"
+        ],
+        "patterns": [
+          "Primary activity type: refactor",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 35,
+          "totalPRs": 2,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 5,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/cpu_io to MRNIU/nzh_factorio_mod",
+            "Dominant semantic tag changed from feat to refactor",
+            "Commit volume decreased by 39"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2025-06",
+      "type": "ai_summary",
+      "ts": "2025-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-06-01",
+          "end": "2025-06-30",
+          "label": "2025-06"
+        },
+        "content": "2025 年 6 月的工作重心从 5 月的 Simple-XX/OSPP 项目转向 MRNIU/nzh_factorio_mod 仓库，提交量由 3 次激增至 27 次。本月以 refactor 为主要任务，频繁清理代码并穿插大量 fix 提交，中后期逐步加入 area_cleaner、chunk_utils 和 legendary_items 等新功能模块。开发节奏高度集中于 6 月 16 日至 22 日，最后一周仅 1 次提交，呈现出从混合任务向 Factorio 模组深度重构的明显转变。",
+        "highlights": [
+          "27 commits, 1 PRs, 0 reviews, 0 issues, 1 comments, 2 active repos",
+          "Top repo: MRNIU/nzh_factorio_mod"
+        ],
+        "patterns": [
+          "Primary activity type: refactor",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 27,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from Simple-XX/OSPP to MRNIU/nzh_factorio_mod",
+            "Dominant semantic tag changed from mixed to refactor",
+            "Commit volume increased by 24"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-041db80d2065c31d3474b38cc7ef3c66096d6e30",
       "type": "commit",
       "ts": "2025-06-23T11:58:54Z",
@@ -64,6 +148,21 @@
         "message": "fix\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 37,
         "deletions": 18
+      }
+    },
+    {
+      "id": "ai-roast-2025-06-16",
+      "type": "ai_roast",
+      "ts": "2025-06-22T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-06-16 ~ 2025-06-22",
+        "content": "26 commits to the Factorio mod: eight of them are bare \"fix\" and seven say \"refactor: clean code\" — that’s 15 commits powered by essentially two unique messages. This is what happens when your commit history starts moonlighting as a meditation mantra. The one PR you opened was presumably titled \"fix and clean things, trust me.\"",
+        "stats": {
+          "totalCommits": 26,
+          "topRepo": "MRNIU/nzh_factorio_mod"
+        }
       }
     },
     {
@@ -375,21 +474,6 @@
         "message": "update to spa\n\nSigned-off-by: Zhihong <zhihong@nzhnb.com>",
         "additions": 338,
         "deletions": 2294
-      }
-    },
-    {
-      "id": "ai-roast-2025-06-16",
-      "type": "ai_roast",
-      "ts": "2025-06-22T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-06-16 ~ 2025-06-22",
-        "content": "26 commits to the Factorio mod: eight of them are bare \"fix\" and seven say \"refactor: clean code\" — that’s 15 commits powered by essentially two unique messages. This is what happens when your commit history starts moonlighting as a meditation mantra. The one PR you opened was presumably titled \"fix and clean things, trust me.\"",
-        "stats": {
-          "totalCommits": 26,
-          "topRepo": "MRNIU/nzh_factorio_mod"
-        }
       }
     }
   ]

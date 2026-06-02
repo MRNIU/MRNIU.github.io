@@ -2,6 +2,48 @@
   "month": "2025-10",
   "events": [
     {
+      "id": "ai-summary-month-2025-10",
+      "type": "ai_summary",
+      "ts": "2025-10-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-10-01",
+          "end": "2025-10-31",
+          "label": "2025-10"
+        },
+        "content": "2025 年 10 月工程活动明显收缩，从 9 月的 41 个 commit 降至 5 个 commit，并且全部集中在 MRNIU/cpu_io 仓库。工作重心从 bmalloc 的内存分配测试彻底转向 aarch64 底层支持，所有提交均属于 feat 类型，持续添加 TCR_EL1、SCTLR_EL1 等寄存器位定义以及内核 / 用户页属性获取函数，推进虚拟内存功能的实现。本月未产生任何 PR、代码审查或 issue 交互，维持了独立推进的节奏，但与上一周期的高频迭代形成鲜明对比。",
+        "highlights": [
+          "5 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 5,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/bmalloc to MRNIU/cpu_io",
+            "Dominant semantic tag changed from test to feat",
+            "Commit volume decreased by 36"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-4a7e8f934cf7bda57097c200c987fff88d710bca",
       "type": "commit",
       "ts": "2025-10-30T09:56:03Z",

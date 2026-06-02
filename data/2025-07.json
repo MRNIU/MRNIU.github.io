@@ -2,6 +2,47 @@
   "month": "2025-07",
   "events": [
     {
+      "id": "ai-summary-month-2025-07",
+      "type": "ai_summary",
+      "ts": "2025-07-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-07-01",
+          "end": "2025-07-31",
+          "label": "2025-07"
+        },
+        "content": "July’s activity shifted decisively from personal repo development to upstream open-source contribution, with zephyrproject-rtos/zephyr becoming the top repo and 14 PRs submitted under a dominant feat tag. Work on low-level CPU features like CPUID and MSR APIC drove the bulk of these PRs, while 11 comments reflect active collaboration. Compared to June, when 27 refactor commits targeted a single Factorio mod, total commits dropped to 6, but PRs and discussions surged, marking a transition from solo rebuilding to structured feature delivery. Personal projects on MRNIU/resume and MRNIU/cpu_io continued in the background with occasional updates, preserving a consistent interest in systems-level programming.",
+        "highlights": [
+          "6 commits, 14 PRs, 0 reviews, 0 issues, 11 comments, 4 active repos",
+          "Top repo: zephyrproject-rtos/zephyr"
+        ],
+        "patterns": [
+          "Primary activity type: feat"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 6,
+          "totalPRs": 14,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 11,
+          "activeRepos": 4,
+          "topRepo": "zephyrproject-rtos/zephyr"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/nzh_factorio_mod to zephyrproject-rtos/zephyr",
+            "Dominant semantic tag changed from refactor to feat",
+            "Commit volume decreased by 21"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-c46d4569a94ff7ee570ab4baefcec73506722cad",
       "type": "commit",
       "ts": "2025-07-29T09:58:39Z",
@@ -25,6 +66,21 @@
         "message": "feat: add cpuid\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
         "additions": 151,
         "deletions": 15
+      }
+    },
+    {
+      "id": "ai-roast-2025-07-21",
+      "type": "ai_roast",
+      "ts": "2025-07-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-07-21 ~ 2025-07-27",
+        "content": "只有 1 个 commit，内容还只是“update”，却在 zephyrproject-rtos/zephyr 上开了 14 个 PR —— 要么你一夜之间成了开源高产大佬，要么就是在给一个主流 RTOS 项目 spam PR。11 条评论、14 个 PR 配上 1 个 commit，这个比例像极了那种在代码审查里话超多、自己却几乎不写代码的人。",
+        "stats": {
+          "totalCommits": 1,
+          "topRepo": "zephyrproject-rtos/zephyr"
+        }
       }
     },
     {
@@ -355,6 +411,21 @@
       }
     },
     {
+      "id": "ai-roast-2025-07-14",
+      "type": "ai_roast",
+      "ts": "2025-07-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2025-07-14 ~ 2025-07-20",
+        "content": "Three commits across two repos: a resume “update”, an “Initial commit” on something new, and a lone C++ optimization in cpu_io. The resume “update” is back, which means either job hunting season has started or you just remembered your GitHub profile exists. Starting a new repo while five other projects gather dust is peak developer ADHD.",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/resume"
+        }
+      }
+    },
+    {
       "id": "commit-6643d6bc37c7d19878627206f257c52d294e3eae",
       "type": "commit",
       "ts": "2025-07-17T10:00:02Z",
@@ -391,36 +462,6 @@
         "message": "perf: default copy cotr func\n\nSigned-off-by: Zone.N <zone.niuzh@hotmail.com>",
         "additions": 10,
         "deletions": 11
-      }
-    },
-    {
-      "id": "ai-roast-2025-07-14",
-      "type": "ai_roast",
-      "ts": "2025-07-20T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-07-14 ~ 2025-07-20",
-        "content": "Three commits across two repos: a resume “update”, an “Initial commit” on something new, and a lone C++ optimization in cpu_io. The resume “update” is back, which means either job hunting season has started or you just remembered your GitHub profile exists. Starting a new repo while five other projects gather dust is peak developer ADHD.",
-        "stats": {
-          "totalCommits": 3,
-          "topRepo": "MRNIU/resume"
-        }
-      }
-    },
-    {
-      "id": "ai-roast-2025-07-21",
-      "type": "ai_roast",
-      "ts": "2025-07-27T00:00:00Z",
-      "repo": null,
-      "semantic": null,
-      "data": {
-        "weekRange": "2025-07-21 ~ 2025-07-27",
-        "content": "只有 1 个 commit，内容还只是“update”，却在 zephyrproject-rtos/zephyr 上开了 14 个 PR —— 要么你一夜之间成了开源高产大佬，要么就是在给一个主流 RTOS 项目 spam PR。11 条评论、14 个 PR 配上 1 个 commit，这个比例像极了那种在代码审查里话超多、自己却几乎不写代码的人。",
-        "stats": {
-          "totalCommits": 1,
-          "topRepo": "zephyrproject-rtos/zephyr"
-        }
       }
     }
   ]

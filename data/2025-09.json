@@ -2,6 +2,92 @@
   "month": "2025-09",
   "events": [
     {
+      "id": "ai-summary-quarter-2025-Q3",
+      "type": "ai_summary",
+      "ts": "2025-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2025-07-01",
+          "end": "2025-09-30",
+          "label": "2025-Q3"
+        },
+        "content": "The quarter was defined by a deep refactoring campaign in MRNIU/bmalloc, concentrating on the slab allocator, linked list construction, and virtual memory management, with supporting work on platform primitives like MSR, APIC, and CPUID. The previous period had centered on MRNIU/nzh_factorio_mod refactoring, so the technical direction pivoted noticeably from game-mod configuration to low-level systems programming, mirrored by a jump from 35 to 194 commits. Despite 18 PRs and a slight rise in comments, collaboration remained an individual effort with 0 reviews, preserving the solo pattern observed in Q2. The project themes shifted from mod logic to foundational memory-subsystem design, signaling a deliberate move into kernel-adjacent development.",
+        "highlights": [
+          "194 commits, 18 PRs, 0 reviews, 0 issues, 12 comments, 6 active repos",
+          "Top repo: MRNIU/bmalloc"
+        ],
+        "patterns": [
+          "Primary activity type: refactor",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 194,
+          "totalPRs": 18,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 12,
+          "activeRepos": 6,
+          "topRepo": "MRNIU/bmalloc"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Dominant semantic tag stayed refactor"
+          ],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/nzh_factorio_mod to MRNIU/bmalloc",
+            "Commit volume increased by 159"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2025-09",
+      "type": "ai_summary",
+      "ts": "2025-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-09-01",
+          "end": "2025-09-30",
+          "label": "2025-09"
+        },
+        "content": "In September 2025, the primary focus on MRNIU/bmalloc shifted sharply from the refactor-heavy August to test-driven work, with 41 commits tagged test and 4 PRs opened across 2 active repos. The main effort centered on building out the test suite—adding many 4K aligned malloc test cases, removing obsolete slab cache counters from tests, and introducing features like logging, aligned_malloc_size / aligned_free, AllocSize, slab used/free count tracking, and a third-party buddy allocator. A minor dt-binding fix for input gear buttons was also contributed. Compared to the previous month’s 147 standalone commits, the appearance of PRs and a comment signals a move toward more structured collaboration and validation.",
+        "highlights": [
+          "41 commits, 4 PRs, 0 reviews, 0 issues, 1 comments, 2 active repos",
+          "Top repo: MRNIU/bmalloc"
+        ],
+        "patterns": [
+          "Primary activity type: test",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 41,
+          "totalPRs": 4,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 2,
+          "topRepo": "MRNIU/bmalloc"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Top repo stayed on MRNIU/bmalloc"
+          ],
+          "changedSincePrevious": [
+            "Dominant semantic tag changed from refactor to test",
+            "Commit volume decreased by 106"
+          ]
+        }
+      }
+    },
+    {
       "id": "ai-roast-2025-09-15",
       "type": "ai_roast",
       "ts": "2025-09-21T00:00:00Z",

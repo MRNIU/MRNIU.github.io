@@ -2,6 +2,47 @@
   "month": "2025-05",
   "events": [
     {
+      "id": "ai-summary-month-2025-05",
+      "type": "ai_summary",
+      "ts": "2025-05-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-05-01",
+          "end": "2025-05-31",
+          "label": "2025-05"
+        },
+        "content": "5 月的工作重心从 4 月的特性开发转向了文档支持，主要围绕 Simple-XX/OSPP 仓库持续更新 OSPP2025 相关文档。本月共提交 3 个 commit、提出 1 个 PR，未涉及代码审查和 issue 讨论，活动节奏相比上月在 MRNIU/cpu_io 的 5 次 feat 提交明显放缓。活跃仓库从单一项目扩展到 Simple-XX/SimpleKernel 和 Simple-XX/OSPP，体现了项目间文档协同维护的特点。",
+        "highlights": [
+          "3 commits, 1 PRs, 0 reviews, 0 issues, 0 comments, 2 active repos",
+          "Top repo: Simple-XX/OSPP"
+        ],
+        "patterns": [
+          "Primary activity type: mixed",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 3,
+          "totalPRs": 1,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 2,
+          "topRepo": "Simple-XX/OSPP"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/cpu_io to Simple-XX/OSPP",
+            "Dominant semantic tag changed from feat to mixed"
+          ]
+        }
+      }
+    },
+    {
       "id": "pr-191-Simple-XX/SimpleKernel",
       "type": "pull_request",
       "ts": "2025-05-06T09:24:20Z",

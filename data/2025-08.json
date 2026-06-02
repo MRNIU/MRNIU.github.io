@@ -2,6 +2,50 @@
   "month": "2025-08",
   "events": [
     {
+      "id": "ai-summary-month-2025-08",
+      "type": "ai_summary",
+      "ts": "2025-08-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2025-08-01",
+          "end": "2025-08-31",
+          "label": "2025-08"
+        },
+        "content": "In August 2025, activity centered almost entirely on the personal repo MRNIU/bmalloc, with 147 commits and no PRs or reviews, a major pivot from July's 6 commits and 14 PRs across external repos. The work was dominated by heavy refactoring, especially repetitive slab allocator improvements, integrating bmalloc.hpp, and replacing C-style casts with C++ static_cast and reinterpret_cast. A spike of 89 commits in 1 week shows a deep, sustained solo effort on internal code quality, continuing the refactor-oriented pattern that started late in the previous month.",
+        "highlights": [
+          "147 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 3 active repos",
+          "Top repo: MRNIU/bmalloc"
+        ],
+        "patterns": [
+          "Primary activity type: refactor",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 147,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 3,
+          "topRepo": "MRNIU/bmalloc"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from zephyrproject-rtos/zephyr to MRNIU/bmalloc",
+            "Dominant semantic tag changed from feat to refactor",
+            "Commit volume increased by 141"
+          ]
+        }
+      }
+    },
+    {
       "id": "ai-roast-2025-08-18",
       "type": "ai_roast",
       "ts": "2025-08-24T00:00:00Z",

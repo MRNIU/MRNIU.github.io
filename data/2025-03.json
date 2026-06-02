@@ -1,0 +1,49 @@
+{
+  "month": "2025-03",
+  "events": [
+    {
+      "id": "ai-summary-quarter-2025-Q1",
+      "type": "ai_summary",
+      "ts": "2025-03-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2025-01-01",
+          "end": "2025-03-31",
+          "label": "2025-Q1"
+        },
+        "content": "In Q1 2025, all 74 commits targeted MRNIU/cpu_io, reflecting an intense focus on low-level CPU bring‑up with a largely **feat**‑tagged stream. The technical direction centered on adding AArch64 system register accessors (e.g., VBAR_EL1, ELR_EL1, MAIR_EL1, timer controls) and GIC interrupt controller handling, along with early riscv64 virtual memory support. Development was entirely solo, with zero pull requests, reviews, or issues, following a direct‑commit workflow with no collaboration overhead. Compared to Q3 2024, activity pivoted sharply from a mixed workload spanning 4 repositories (led by MRNIU/nzh_factorio_mod) to a single, deeply specialized project, and commit volume more than tripled. The bulk of the work was concentrated in January (71 commits), while February saw only 3 minor updates, suggesting a burst of rapid implementation followed by a quiet maintenance period.",
+        "highlights": [
+          "74 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 1 active repos",
+          "Top repo: MRNIU/cpu_io"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 74,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 1,
+          "topRepo": "MRNIU/cpu_io"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/nzh_factorio_mod to MRNIU/cpu_io",
+            "Dominant semantic tag changed from mixed to feat",
+            "Commit volume increased by 53"
+          ]
+        }
+      }
+    }
+  ]
+}
