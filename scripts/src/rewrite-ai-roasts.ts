@@ -7,6 +7,7 @@ import type { AIRoastEvent, MonthlyData } from "./types.js";
 const DATA_DIR = path.resolve(process.cwd(), "data");
 const RATE_LIMIT_DELAY_MS = Number(process.env.AI_ROAST_REWRITE_DELAY_MS ?? "5000");
 const REQUEST_TIMEOUT_MS = Number(process.env.AI_ROAST_REWRITE_TIMEOUT_MS ?? "120000");
+const CONCURRENCY = Math.max(1, Number(process.env.AI_ROAST_REWRITE_CONCURRENCY ?? "1"));
 const maxRoasts = process.env.AI_ROAST_REWRITE_LIMIT
   ? Number(process.env.AI_ROAST_REWRITE_LIMIT)
   : Number.POSITIVE_INFINITY;
@@ -128,31 +129,51 @@ async function main() {
   let processed = 0;
   let updatedCount = 0;
   let failed = 0;
+  let nextIndex = 0;
+  let nextRequestAt = 0;
 
-  console.log(`[ai-roast] Rewriting ${roasts.length} existing roast(s)`);
+  console.log(`[ai-roast] Rewriting ${roasts.length} existing roast(s) with concurrency ${CONCURRENCY}`);
 
-  for (const { filePath, data, event } of roasts) {
-    if (processed > 0) {
-      await new Promise((resolve) => setTimeout(resolve, RATE_LIMIT_DELAY_MS));
+  async function waitForRequestSlot(): Promise<void> {
+    if (RATE_LIMIT_DELAY_MS <= 0) return;
+
+    const now = Date.now();
+    const waitMs = Math.max(0, nextRequestAt - now);
+    nextRequestAt = Math.max(now, nextRequestAt) + RATE_LIMIT_DELAY_MS;
+    if (waitMs > 0) {
+      await new Promise((resolve) => setTimeout(resolve, waitMs));
     }
+  }
 
-    try {
-      const updated = await rewriteRoast(event);
-      if (updated !== event.data.content) {
-        event.data.content = updated;
-        updatedFiles.set(filePath, data);
-        updatedCount++;
+  async function worker(): Promise<void> {
+    while (true) {
+      const index = nextIndex++;
+      if (index >= roasts.length) return;
+
+      const { filePath, data, event } = roasts[index];
+      await waitForRequestSlot();
+
+      try {
+        const updated = await rewriteRoast(event);
+        if (updated !== event.data.content) {
+          event.data.content = updated;
+          updatedFiles.set(filePath, data);
+          updatedCount++;
+        }
+
+        console.log(`  [ai-roast] Rewritten ${event.data.weekRange}`);
+      } catch (err) {
+        failed++;
+        const message = err instanceof Error ? err.message : String(err);
+        console.warn(`  [ai-roast] Skipped ${event.data.weekRange}: ${message}`);
       }
 
-      console.log(`  [ai-roast] Rewritten ${event.data.weekRange}`);
-    } catch (err) {
-      failed++;
-      const message = err instanceof Error ? err.message : String(err);
-      console.warn(`  [ai-roast] Skipped ${event.data.weekRange}: ${message}`);
+      processed++;
     }
-
-    processed++;
   }
+
+  const workerCount = Math.min(CONCURRENCY, roasts.length);
+  await Promise.all(Array.from({ length: workerCount }, () => worker()));
 
   writeUpdatedFiles(updatedFiles);
   console.log(`[ai-roast] Updated ${updatedCount} roast(s) in ${updatedFiles.size} monthly data file(s); skipped ${failed}`);
