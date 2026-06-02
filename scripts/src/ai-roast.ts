@@ -14,12 +14,14 @@ Give one gentle suggestion for improvement. Keep it under 3 sentences.
 Write in the same language as the commit messages.`,
 };
 
-const OUTPUT_STYLE_GUIDE = `Output style rules:
+export const OUTPUT_STYLE_GUIDE = `Output style rules:
 - For Chinese output, follow common Chinese technical writing style: insert spaces between Chinese characters and Latin letters, English words, Arabic numerals, and technical abbreviations. Example: "写了 3 个 PR", not "写了3个PR".
-- Use Chinese full-width punctuation in Chinese sentences, such as ，。！？；：（）. Do not put spaces before or after Chinese punctuation.
+- Use Chinese full-width punctuation in Chinese sentences, such as ，。！？；：（）. Do not put spaces before Chinese punctuation, and only keep a space after Chinese punctuation when the next token is Latin text, an Arabic numeral, or a code-like identifier.
 - Use English half-width punctuation in English sentences. Do not mix full-width Chinese punctuation into pure English output.
 - Keep repository names, commit types, API names, model names, code identifiers, and URLs exactly as written, using ASCII punctuation when they are code-like tokens.
 - Use Arabic numerals for counts, dates, versions, percentages, and measurements. Do not spell counts out as words unless the original technical term requires it.
+- Normalize wording before returning: avoid "三个 commit", "six commits", "AI修 bug", and "3个 PR"; write "3 个 commit", "6 commits", "AI 修 bug", and "3 个 PR" instead.
+- Before finalizing, silently review the answer against the spacing, punctuation, and numeral rules above, then return only the polished roast.
 - Keep the answer under 3 sentences and avoid markdown lists, headings, code blocks, and emoji.`;
 
 function withOutputStyleGuide(prompt: string): string {

@@ -7,6 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "fetch": "tsx scripts/src/fetch-data.ts",
+    "rewrite:ai-roasts": "tsx scripts/src/rewrite-ai-roasts.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "0 2 * * *"
   workflow_dispatch:
+    inputs:
+      rewrite_ai_roasts:
+        description: "Rewrite existing AI roast content with the configured LLM"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   fetch-data:
@@ -22,9 +28,18 @@ jobs:
       - run: npm ci
 
       - name: Fetch GitHub activity data
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.rewrite_ai_roasts == false }}
         run: npm run fetch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY || secrets.GITHUB_TOKEN }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+
+      - name: Rewrite existing AI roasts
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.rewrite_ai_roasts == true }}
+        run: npm run rewrite:ai-roasts
+        env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY || secrets.GITHUB_TOKEN }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
