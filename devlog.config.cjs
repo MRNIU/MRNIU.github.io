@@ -17,6 +17,7 @@ module.exports = {
     summaries: {
       enabled: true,
       periods: ["month", "quarter", "year"],
+      maxPerRun: 10,
     },
   },
   llm: {

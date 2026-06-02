@@ -61,6 +61,7 @@
 | `aiRoast.enabled` | `true` | 启用 AI 点评 |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`、`"encouraging_mentor"` 或 `"custom"` |
 | `aiRoast.summaries.periods` | `["month", "quarter", "year"]` | 要生成的周期复盘层级 |
+| `aiRoast.summaries.maxPerRun` | `10` | 每次抓取运行最多生成的周期复盘数量，用于渐进式回补 |
 | `llm.baseUrl` | `"https://models.github.ai/inference"` | 任意 OpenAI 兼容接口地址（默认：GitHub Models） |
 | `llm.model` | `"gpt-4o-mini"` | 模型名称 |
 
@@ -78,7 +79,7 @@ GitHub Actions（每日定时任务）
 ```
 
 - **数据** — 增量更新 + 渐进式回填，带断点续传。5xx 错误自动指数退避重试。检测到用户名变更时自动清空旧数据（模板使用场景）。
-- **AI 复盘** — 扫描所有历史数据，为缺少点评的周和已结束周期自动生成复盘。随时启用都安全。
+- **AI 复盘** — 扫描所有历史数据，为缺少点评的周和已结束周期自动生成复盘。周期复盘会跨年度、季度、月度逐批回补，随时启用都安全。
 - **前端** — Astro 静态生成，Cyber-Primer 设计系统，IntersectionObserver 无限滚动
 - **存储** — JSON 文件提交到仓库，作为静态资源提供
 

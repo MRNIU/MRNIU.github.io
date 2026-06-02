@@ -43,6 +43,11 @@ const COUNT_TARGETS = `(?:${COUNT_NOUNS}|saying|["“])`;
 const DEFAULT_SUMMARY_PERIODS: AISummaryPeriod[] = ["month", "quarter", "year"];
 const AI_REQUEST_DELAY_MS = 5000;
 const MAX_CONSECUTIVE_FAILURES = 3;
+const SUMMARY_PERIOD_PRIORITY: Record<AISummaryPeriod, number> = {
+  year: 0,
+  quarter: 1,
+  month: 2,
+};
 
 function withOutputStyleGuide(prompt: string): string {
   return `${prompt}\n\n${OUTPUT_STYLE_GUIDE}`;
@@ -427,6 +432,25 @@ function getSummaryPeriods(config: GitPulseConfig): AISummaryPeriod[] {
   return [...new Set(requested.filter((period): period is AISummaryPeriod => valid.has(period as AISummaryPeriod)))];
 }
 
+function getSummaryMaxPerRun(config: GitPulseConfig): number {
+  const raw = config.aiRoast.summaries?.maxPerRun;
+  if (raw === undefined) return Number.POSITIVE_INFINITY;
+
+  const value = Number(raw);
+  if (!Number.isFinite(value) || value <= 0) return 0;
+  return Math.floor(value);
+}
+
+function compareSummaryCandidates(a: PeriodSummary, b: PeriodSummary): number {
+  const endCompare = b.end.localeCompare(a.end);
+  if (endCompare !== 0) return endCompare;
+
+  const periodCompare = SUMMARY_PERIOD_PRIORITY[a.period] - SUMMARY_PERIOD_PRIORITY[b.period];
+  if (periodCompare !== 0) return periodCompare;
+
+  return b.start.localeCompare(a.start);
+}
+
 function getPeriodRange(period: AISummaryPeriod, date: Date): { key: string; label: string; start: string; end: string } {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth();
@@ -633,65 +657,79 @@ export async function generateAISummaries(
   const periods = getSummaryPeriods(config);
   if (periods.length === 0) return [];
 
-  const summariesByPeriod = new Map<AISummaryPeriod, PeriodSummary[]>();
-  for (const period of periods) {
-    summariesByPeriod.set(period, buildPeriodSummaries(events, period, now));
+  const maxPerRun = getSummaryMaxPerRun(config);
+  if (maxPerRun === 0) {
+    console.log("[ai-roast] AI summary generation capped at 0, skipping AI summaries");
+    return [];
   }
 
+  const summariesByPeriod = new Map<AISummaryPeriod, PeriodSummary[]>();
+  const chronologicalByPeriod = new Map<AISummaryPeriod, PeriodSummary[]>();
+  for (const period of periods) {
+    const summaries = buildPeriodSummaries(events, period, now);
+    summariesByPeriod.set(period, summaries);
+    chronologicalByPeriod.set(period, [...summaries].sort((a, b) => a.start.localeCompare(b.start)));
+  }
+
+  const pendingSummaries = [...summariesByPeriod.values()]
+    .flatMap(summaries => summaries)
+    .filter(summary => !existingSummaryIds.has(summary.id))
+    .sort(compareSummaryCandidates);
   const aiSummaries: AISummaryEvent[] = [];
   let consecutiveFailures = 0;
   let requestCount = 0;
 
-  for (const period of periods) {
-    const periodSummaries = summariesByPeriod.get(period) || [];
-    const chronological = [...periodSummaries].sort((a, b) => a.start.localeCompare(b.start));
+  for (const summary of pendingSummaries) {
+    if (aiSummaries.length >= maxPerRun) {
+      console.log(`[ai-summary] Reached per-run summary limit (${maxPerRun})`);
+      return aiSummaries;
+    }
+
+    const period = summary.period;
+    const chronological = chronologicalByPeriod.get(period) || [];
     const systemPrompt = withOutputStyleGuide(SUMMARY_PROMPTS[period]);
 
-    for (const summary of periodSummaries) {
-      if (existingSummaryIds.has(summary.id)) continue;
+    await delayBetweenRequests(requestCount);
+    requestCount++;
 
-      await delayBetweenRequests(requestCount);
-      requestCount++;
+    try {
+      const previous = getPreviousPeriod(summary, chronological);
+      const content = await callLLM(config, systemPrompt, buildSummaryUserMessage(summary, previous));
+      const continuity = buildContinuity(summary, previous);
 
-      try {
-        const previous = getPreviousPeriod(summary, chronological);
-        const content = await callLLM(config, systemPrompt, buildSummaryUserMessage(summary, previous));
-        const continuity = buildContinuity(summary, previous);
-
-        aiSummaries.push({
-          id: summary.id,
-          type: "ai_summary",
-          ts: summary.ts,
-          repo: null,
-          semantic: null,
-          data: {
-            period,
-            range: {
-              start: summary.start,
-              end: summary.end,
-              label: summary.label,
-            },
-            content,
-            highlights: buildHighlights(summary),
-            patterns: buildPatterns(summary),
-            risks: buildRisks(summary),
-            stats: summary.stats,
-            ...(continuity ? { continuity } : {}),
+      aiSummaries.push({
+        id: summary.id,
+        type: "ai_summary",
+        ts: summary.ts,
+        repo: null,
+        semantic: null,
+        data: {
+          period,
+          range: {
+            start: summary.start,
+            end: summary.end,
+            label: summary.label,
           },
-        });
-        console.log(`  [ai-summary] Generated ${period} summary for ${summary.label}`);
-        consecutiveFailures = 0;
-      } catch (err) {
-        const msg = (err as Error).message;
-        console.warn(`  [ai-summary] Failed for ${period} ${summary.label}:`, msg);
-        consecutiveFailures++;
+          content,
+          highlights: buildHighlights(summary),
+          patterns: buildPatterns(summary),
+          risks: buildRisks(summary),
+          stats: summary.stats,
+          ...(continuity ? { continuity } : {}),
+        },
+      });
+      console.log(`  [ai-summary] Generated ${period} summary for ${summary.label}`);
+      consecutiveFailures = 0;
+    } catch (err) {
+      const msg = (err as Error).message;
+      console.warn(`  [ai-summary] Failed for ${period} ${summary.label}:`, msg);
+      consecutiveFailures++;
 
-        if (await waitForRateLimitIfNeeded(msg)) {
-          consecutiveFailures = 0;
-          continue;
-        }
-        if (shouldStopForError(msg, consecutiveFailures)) return aiSummaries;
+      if (await waitForRateLimitIfNeeded(msg)) {
+        consecutiveFailures = 0;
+        continue;
       }
+      if (shouldStopForError(msg, consecutiveFailures)) return aiSummaries;
     }
   }
 

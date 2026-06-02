@@ -20,6 +20,7 @@ export interface GitPulseConfig {
     summaries?: {
       enabled?: boolean;
       periods?: Array<"month" | "quarter" | "year">;
+      maxPerRun?: number;
     };
   };
   llm: {

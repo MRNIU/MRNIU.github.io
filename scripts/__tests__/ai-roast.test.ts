@@ -328,4 +328,36 @@ describe("generateAISummaries", () => {
     expect(summaries).toHaveLength(0);
     expect(mockFetch).not.toHaveBeenCalled();
   });
+
+  it("limits summary backfills per run across period levels", async () => {
+    const config: GitPulseConfig = {
+      ...baseConfig,
+      aiRoast: {
+        ...baseConfig.aiRoast,
+        summaries: { enabled: true, periods: ["month", "quarter", "year"], maxPerRun: 1 },
+      },
+    };
+
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        choices: [{ message: { content: "The year stayed focused on kernel parser work." } }],
+      }),
+    });
+
+    const summaries = await generateAISummaries(
+      config,
+      sampleEvents,
+      new Set(),
+      new Date("2027-01-02T00:00:00Z")
+    );
+
+    expect(summaries).toHaveLength(1);
+    expect(summaries[0].id).toBe("ai-summary-year-2026");
+    expect(summaries[0].data.period).toBe("year");
+    expect(mockFetch).toHaveBeenCalledOnce();
+
+    const body = JSON.parse(mockFetch.mock.calls[0][1].body);
+    expect(body.messages[0].content).toContain("yearly engineering activity retrospective");
+  });
 });

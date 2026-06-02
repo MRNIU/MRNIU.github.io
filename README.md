@@ -61,6 +61,7 @@ All options in `devlog.config.cjs`:
 | `aiRoast.enabled` | `true` | Enable AI commentary |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`, `"encouraging_mentor"`, or `"custom"` |
 | `aiRoast.summaries.periods` | `["month", "quarter", "year"]` | Periodic retrospective levels to generate |
+| `aiRoast.summaries.maxPerRun` | `10` | Cap generated period summaries per fetch run for progressive backfills |
 | `llm.baseUrl` | `"https://models.github.ai/inference"` | Any OpenAI-compatible endpoint (default: GitHub Models) |
 | `llm.model` | `"gpt-4o-mini"` | Model name |
 
@@ -78,7 +79,7 @@ GitHub Actions (daily cron)
 ```
 
 - **Data** — Incremental + progressive backfill with checkpoint. Retries 5xx with exponential backoff. Auto-clears on username change (template usage).
-- **AI Reviews** — Scans all history for missing weekly roasts and completed period summaries. Safe to enable anytime.
+- **AI Reviews** — Scans all history for missing weekly roasts and completed period summaries. Period summaries backfill progressively across yearly, quarterly, and monthly levels. Safe to enable anytime.
 - **Frontend** — Astro SSG, Cyber-Primer design system, IntersectionObserver infinite scroll
 - **Storage** — JSON committed to repo, served as static assets
 
