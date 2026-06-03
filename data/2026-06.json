@@ -18,6 +18,44 @@
       }
     },
     {
+      "id": "pr-33-drivercraft/rdrive",
+      "type": "pull_request",
+      "ts": "2026-06-03T03:03:13Z",
+      "repo": "drivercraft/rdrive",
+      "semantic": "docs",
+      "data": {
+        "number": 33,
+        "title": "docs: 添加 agent 工作流指南",
+        "state": "open",
+        "body": "## Summary\n\n- 新增仓库级 `AGENTS.md`，记录项目结构、工具链入口、提交/验证边界和 Rust 约定。\n- 在 `.gitignore` 中忽略常用 AI/agent 工具的本地状态目录，避免个人工具缓存进入提交。\n\n## Verification\n\n- `git diff --staged --check`\n\n未运行 `cargo build` 或 `cargo test`：本 PR 仅修改仓库指导文档和 ignore 规则，不改 Rust 代码或构建配置。\n\n## Impact\n\nNo runtime behavior change.\n"
+      }
+    },
+    {
+      "id": "comment-drivercraft/ostool-119-0",
+      "type": "issue_comment",
+      "ts": "2026-06-03T02:02:22Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 119,
+        "issueTitle": "refactor(tool): 收敛 artifact 生命周期边界",
+        "body": "@ZR233 hi，麻烦 review"
+      }
+    },
+    {
+      "id": "pr-119-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-06-02T10:17:21Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 119,
+        "title": "refactor(tool): 收敛 artifact 生命周期边界",
+        "state": "open",
+        "body": "## 摘要\n\n- 将 `OutputArtifacts` 内部拆分为 Cargo source、runtime artifact 和 debug artifact registry 三类状态，同时保留现有 runner-facing accessors。\n- 新增 Rust object tools helper，并让现有 objcopy 调用和相关测试走统一入口。\n- 引入 `CargoBuildPlan` 负责渲染 Cargo 命令，集中 someboot 自动参数检测与追加，避免后续构建阶段重复追加。\n- 补充 custom build、Cargo artifact state、debug registry、someboot 注入和 profile/log feature 相关回归测试。\n\n## 整体思路\n\n这个 PR 是 #118 删除旧 `Tool` 兼容 API 后的后续内部重构切片。#118 已经把 public Rust API 收敛到 `Invocation` 与模块级 helper；本 PR 继续收窄 build/runtime 产物状态和 Cargo 命令构造边界，让后续 debug artifact pipeline 不需要复用 runtime `.bin` 字段或在多个阶段重复拼接 Cargo 参数。\n\n一次构建现在可以更清楚地区分三类产物：Cargo JSON message 解析出的原始 executable artifact、runner 当前消费的 runtime ELF/BIN，以及后续调试产物使用的 registry。runner-facing accessor 保持不变，内部状态则避免继续用平铺字段同时表达 source、runtime 和 future debug outputs。\n\nCargo 命令构造也从直接拼接 `Command` 调整为先形成 `CargoBuildPlan` 再渲染。features、profile、log feature、extra config、someboot 自动参数和用户传入的额外 args 都在一个 plan 中收敛，减少后续添加 post-build 阶段时重复注入或顺序漂移的风险。\n\n## 变更模块\n\n- `ostool/src/artifact/state.rs`: 将 artifact state 内部拆成 Cargo source、runtime artifact 和 debug artifact registry，并保留既有 runtime accessor。\n- `ostool/src/artifact/runtime.rs`: 区分 Cargo-reported source artifact dir 和非 Cargo/custom import 的 source artifact dir，保持旧 accessor 兼容语义。\n- `ostool/src/artifact/object_tools.rs`: 新增 Rust toolchain object tools helper，统一 `rust-objcopy`、`rust-objdump`、`rust-readobj` 和 `rust-nm` 的定位入口。\n- `ostool/src/build/cargo_pipeline.rs`: 引入 `CargoBuildPlan`，集中渲染 Cargo 命令并收敛 someboot 自动参数注入。\n- `ostool/src/build/mod.rs`, `ostool/src/invocation.rs`, `ostool/src/run/qemu.rs`: 将现有 objcopy 调用和相关测试改为使用 object tools helper，并补充 artifact lifecycle 护栏测试。\n\n## 兼容性\n\n- 不新增 CLI 参数或配置字段。\n- 不生成新的 debug artifacts。\n- 不改变 Cargo executable selection 规则。\n- 不改变 QEMU、U-Boot、TFTP、board runner 当前消费 runtime artifact 的对外语义。\n- 新增类型和 helper 都保持 crate-private，不扩大 public Rust API。\n\n## 验证\n\n已运行并通过：\n\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool`\n- `cargo clippy -p ostool --all-targets --all-features -- -D warnings`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features -- -D warnings`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n- GitHub Actions `Quality Check`\n\n## 风险 / 后续\n\n- 本 PR 只预留 debug artifact registry 和 object tools 边界，不实现 `.disassembly`、`.elf_info` 或 symbol dump 等用户可见产物生成。\n- 本 PR 只做 host-side Rust/CI 验证，没有实际启动 QEMU、U-Boot 或远程开发板 session。\n- 后续 debug artifact pipeline 可以基于本 PR 的 registry/object tools 边界继续实现，但应作为独立用户可见功能 PR 处理。"
+      }
+    },
+    {
       "id": "commit-8ac05825dd6ba18b22f12a6b600a5cb5d5e282e2",
       "type": "commit",
       "ts": "2026-06-02T07:37:59Z",
