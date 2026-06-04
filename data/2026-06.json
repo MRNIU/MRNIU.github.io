@@ -18,6 +18,32 @@
       }
     },
     {
+      "id": "commit-cb09ca1b167fce55107199fdb6e0fcc19861f172",
+      "type": "commit",
+      "ts": "2026-06-03T05:44:36Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "cb09ca1b167fce55107199fdb6e0fcc19861f172",
+        "message": "refactor(ostool): 收敛 artifact 生命周期边界 (#119)\n\n- 将 OutputArtifacts 内部拆成 Cargo source、runtime 和 debug registry 状态\n\n- 通过共享 Rust object tools helper 获取 objcopy 等工具入口\n\n- 通过 CargoBuildPlan 渲染 Cargo 命令，并集中 someboot 自动参数注入\n\nValidation:\n\n- cargo fmt --all -- --check\n\n- cargo test -p ostool\n\n- cargo clippy -p ostool --all-targets --all-features -- -D warnings\n\n- cargo clippy --target x86_64-unknown-linux-gnu --all-features -- -D warnings\n\n- cargo build --target x86_64-unknown-linux-gnu --all-features\n\n- cargo test --target x86_64-unknown-linux-gnu -- --nocapture\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 602,
+        "deletions": 114
+      }
+    },
+    {
+      "id": "issue-120-drivercraft/ostool",
+      "type": "issue",
+      "ts": "2026-06-03T04:07:30Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "number": 120,
+        "title": "申请成为 drivercraft member",
+        "state": "open",
+        "body": "hi @ZR233 ，\n\n我正在推进 ostool 这个仓库的相关工作，后续还打算参与 dma-api 与 rdrive，申请成为组织 member 方便协作。\n\n同时也希望可以留个邮箱或者加 vx，遇到需要社区决策的问题可以及时沟通\n\n谢谢！\n\n"
+      }
+    },
+    {
       "id": "pr-33-drivercraft/rdrive",
       "type": "pull_request",
       "ts": "2026-06-03T03:03:13Z",
