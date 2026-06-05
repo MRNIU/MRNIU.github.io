@@ -18,6 +18,44 @@
       }
     },
     {
+      "id": "comment-drivercraft/ostool-122-0",
+      "type": "issue_comment",
+      "ts": "2026-06-05T02:56:06Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 122,
+        "issueTitle": "refactor(tool): 抽出 U-Boot FIT 镜像生成边界",
+        "body": "Superseded by #123, which keeps this FIT generator extraction as the first commit and adds the boot artifact staging follow-up as the second commit in one reviewable PR."
+      }
+    },
+    {
+      "id": "pr-123-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-06-05T02:49:57Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 123,
+        "title": "refactor(tool): 抽出 U-Boot FIT 与 boot artifact 边界",
+        "state": "open",
+        "body": "## 摘要\n\n- 抽出 crate-private `boot::fit` 模块，集中处理 U-Boot FIT image 生成。\n- 抽出 crate-private `boot::artifacts` 模块，集中表达 boot artifact kind/path、QEMU DTB dump artifact 和 U-Boot staging result。\n- 将 FIT arch 映射、默认 `image.fit` 输出路径、默认 Linux kernel/FDT 配置和 FIT 写文件逻辑移出 U-Boot runner。\n- 将 QEMU `dtb_dump` 的默认 `target/qemu.dtb` 路径和旧文件清理移出 runner 主流程，同时保留现有 `-machine dumpdtb=...` 参数行为。\n- 将 U-Boot runner-local `PreparedBootArtifact` 收敛为 `StagedBootArtifact`，并让 backend staging 通过 `BootArtifact::fit_image()` 消费生成后的 FIT image。\n\n## 变更模块\n\n- `ostool/src/boot/fit.rs`: 新增 FIT generator、`FitInput`、`GeneratedFitImage`、arch mapping、默认输出路径和默认 FIT config 构造逻辑。\n- `ostool/src/boot/artifacts.rs`: 新增 `BootArtifact`、`QemuDtbDumpArtifact`、`StagedBootArtifact`、默认 QEMU DTB dump path 和 cleanup helper。\n- `ostool/src/boot/mod.rs`, `ostool/src/lib.rs`: 接入 crate-private boot helper module，不新增 public Rust API。\n- `ostool/src/run/qemu.rs`: 调用 `prepare_qemu_dtb_dump()` 获取 DTB dump artifact path，保留原有 QEMU 参数行为。\n- `ostool/src/run/uboot.rs`: 删除直接 `fitimage` 构造逻辑，改为解析地址后调用 `boot::fit::generate_fit_image()`；用 `StagedBootArtifact` 替代 runner-local `PreparedBootArtifact`，并通过 `BootArtifact::fit_image()` 传递 generated FIT image。\n\n## 兼容性\n\n- 不新增 CLI 参数、命令或配置字段。\n- 不改变 `.qemu.toml`、`.uboot.toml` 或 `.board.toml` 语义。\n- 不改变默认 FIT 输出路径、kernel/FDT component 默认值或 unsupported architecture 错误语义。\n- 不改变 QEMU `dtb_dump` 默认路径、旧文件清理或 `dumpdtb` 参数行为。\n- 不改变 U-Boot Linux system TFTP、existing TFTP dir、built-in TFTP、remote upload、YMODEM fallback 或 `bootm` 行为。\n- 不改变 runtime `.elf` / `.bin` artifact state，也不把 boot artifact 混入 runtime/debug artifact registry。\n- 新增类型和 helper 都保持 crate-private，不扩大 public Rust API。\n\n## 验证\n\n已运行并通过：\n\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool`\n- `cargo clippy -p ostool --all-targets --all-features -- -D warnings`\n- `git diff --check`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n\n## 风险 / 后续\n\n- 本 PR 只建立内部 FIT generator 和 boot artifact staging/value-type 边界，不新增用户可见 FIT config 或 `ostool prepare`。\n- 本 PR 不实现完整 boot artifact pipeline、boot script、rootfs 或 firmware chain。\n- 本 PR 只做 host-side Rust/CI target 验证，没有实际启动 U-Boot 串口、远程开发板 session 或硬件电源链路。\n"
+      }
+    },
+    {
+      "id": "pr-122-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-06-05T02:06:48Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 122,
+        "title": "refactor(tool): 抽出 U-Boot FIT 镜像生成边界",
+        "state": "closed",
+        "body": "## 摘要\n\n- 新增 crate-private `boot::fit` 模块，集中处理 U-Boot FIT image 生成。\n- 将 FIT arch 映射、默认 `image.fit` 输出路径、默认 Linux kernel/FDT 配置和 FIT 写文件逻辑移出 U-Boot runner。\n- 让 U-Boot runner 只负责解析地址、构造 `FitInput`、stage 生成的 FIT image，并继续执行现有 `bootm` / `loady` 流程。\n- 补充 FIT generator 单元测试，覆盖 arch 映射、unsupported arch、默认输出路径、默认 FIT 配置和可选 DTB 输入。\n\n## 整体思路\n\n这个 PR 是 #119 artifact lifecycle 边界之后的后续内部重构切片。#119 已经把 build/runtime 产物状态收敛为更清晰的内部生命周期；本 PR 继续收窄 U-Boot runner 中的 FIT 生成职责，让 FIT construction 可以脱离 runner staging、U-Boot shell state 和 board backend 独立测试。\n\n原来的 U-Boot runner 同时负责读取 U-Boot 环境、推导 load/entry 地址、构造 `fitimage` 配置、写出 FIT 文件、stage FIT 文件并执行启动命令。本 PR 把其中可独立测试的 FIT construction 移到 `boot::fit`，runner 主流程只保留启动阶段真正需要的 orchestration。\n\n默认行为保持不变：未显式指定输出路径时仍写入 kernel artifact 目录下的 `image.fit`，默认 kernel component 仍使用 `type = \"kernel\"`、`os = \"linux\"`、uncompressed kernel，DTB 仍是可选 FDT component，默认 configuration 仍是 `config-ostool`。\n\n## 变更模块\n\n- `ostool/src/boot/fit.rs`: 新增 FIT generator、`FitInput`、`GeneratedFitImage`、arch mapping、默认输出路径和默认 FIT config 构造逻辑。\n- `ostool/src/boot/mod.rs`, `ostool/src/lib.rs`: 接入 crate-private boot helper module，不新增 public Rust API。\n- `ostool/src/run/uboot.rs`: 删除直接 `fitimage` 构造逻辑，改为解析地址后调用 `boot::fit::generate_fit_image()`，并保留现有 staging、TFTP/YMODEM、remote board 和 `bootm` 行为。\n\n## 兼容性\n\n- 不新增 CLI 参数或配置字段。\n- 不改变 `.uboot.toml` / `.board.toml` 语义。\n- 不改变默认 FIT 输出路径、kernel/FDT component 默认值或 unsupported architecture 错误语义。\n- 不改变 TFTP、YMODEM、remote board session、serial console、matcher、timeout 或 `bootm` 行为。\n- 新增类型和 helper 都保持 crate-private，不扩大 public Rust API。\n\n## 验证\n\n已运行并通过：\n\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool`\n- `cargo clippy -p ostool --all-targets --all-features -- -D warnings`\n- `git diff --check`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features -- -D warnings`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n\n## 风险 / 后续\n\n- 本 PR 只抽出 FIT generator 边界，不新增用户可见 FIT 配置。\n- 本 PR 保持现有 Linux kernel FIT 默认语义；后续如需支持 `os = \"elf\"`、自定义 component 或多 configuration，应作为独立功能 PR 处理。\n- 本 PR 只做 host-side Rust/CI target 验证，没有实际启动 U-Boot 串口或远程开发板 session。\n"
+      }
+    },
+    {
       "id": "commit-cb09ca1b167fce55107199fdb6e0fcc19861f172",
       "type": "commit",
       "ts": "2026-06-03T05:44:36Z",
