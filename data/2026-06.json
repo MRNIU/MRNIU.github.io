@@ -18,6 +18,19 @@
       }
     },
     {
+      "id": "commit-6b5008599f2bdc8a36547d97a9753d204dfe5cef",
+      "type": "commit",
+      "ts": "2026-06-05T14:13:06Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "6b5008599f2bdc8a36547d97a9753d204dfe5cef",
+        "message": "refactor(tool): 抽出 U-Boot FIT 与 boot artifact 边界 (#123)\n\n* refactor(ostool): 抽出 U-Boot FIT 镜像生成边界\n\nExtract the U-Boot FIT image builder into a crate-private boot::fit module so FIT construction can be tested without runner staging or shell state.\n\nKeep the current default image.fit output, Linux kernel component, optional FDT component, config-ostool default config, and unsupported architecture error semantics. The U-Boot runner now only resolves addresses, builds FitInput, stages the generated FIT image, and runs the existing bootm/loady flow.\n\nValidation:\n- cargo fmt --all -- --check\n- cargo test -p ostool\n- cargo clippy -p ostool --all-targets --all-features -- -D warnings\n- git diff --check\n- cargo clippy --target x86_64-unknown-linux-gnu --all-features -- -D warnings\n- cargo build --target x86_64-unknown-linux-gnu --all-features\n- cargo test --target x86_64-unknown-linux-gnu -- --nocapture\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n* refactor(ostool): 抽出 boot artifact staging 边界\n\nMove boot artifact path and staging results into a crate-private boot::artifacts module so runner code can consume structured prepare results without owning path cleanup details.\n\n- Move QEMU dtb_dump default path and stale-file cleanup into prepare_qemu_dtb_dump while keeping the existing dumpdtb machine argument.\n- Replace the U-Boot runner-local PreparedBootArtifact with StagedBootArtifact and pass generated FIT images through BootArtifact::fit_image before backend staging.\n- Cover QEMU cleanup, local TFTP staging, built-in/no-network fallback, remote no-TFTP fallback, and FIT artifact kind validation in unit tests.\n\nValidation:\n- cargo fmt --all -- --check\n- cargo test -p ostool\n- cargo clippy -p ostool --all-targets --all-features -- -D warnings\n- git diff --check\n- cargo clippy --target x86_64-unknown-linux-gnu --all-features\n- cargo build --target x86_64-unknown-linux-gnu --all-features\n- cargo test --target x86_64-unknown-linux-gnu -- --nocapture\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n---------\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 705,
+        "deletions": 180
+      }
+    },
+    {
       "id": "comment-drivercraft/ostool-122-0",
       "type": "issue_comment",
       "ts": "2026-06-05T02:56:06Z",
