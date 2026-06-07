@@ -18,6 +18,19 @@
       }
     },
     {
+      "id": "pr-127-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-06-06T12:40:46Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "number": 127,
+        "title": "refactor(tool): 抽出 QEMU command 与 runner 执行边界",
+        "state": "open",
+        "body": "## 摘要\n\n- 新增 crate-private `run::qemu_plan`，把 QEMU executable、用户 args、默认 machine、`dtb_dump`、debug 和 boot source 参数组装集中到可测试的 command plan。\n- 用内部 `QemuBootSource` 表达现有 direct `-kernel` 兼容路径和 UEFI pflash/ESP 启动路径，QEMU runner 只消费已准备好的路径事实。\n- 新增 crate-private `run::execution`，集中映射 terminal timeout、success/fail regex 命中、进程退出状态和 stderr 输出到现有 runner 返回结果。\n- QEMU 与 U-Boot runner 对外仍返回 `anyhow::Result<()>`，保持 CLI、配置字段和 public Rust API 不变。\n\n## 整体思路\n\n本 PR 继续收窄 runner 主流程职责：QEMU runner 仍负责 OVMF 准备、DTB cleanup、stdio、spawn、terminal 和 matcher 等副作用，但不再直接拼接完整 QEMU command。command plan builder 只接收已解析事实，便于用单元测试锁住参数顺序和 boot source 行为。\n\n执行结果部分只建立内部 summary 边界，不改变现有错误语义。runner 在 terminal/matcher/process 完成后先构造 `RunnerExecutionSummary`，再统一还原为旧的 `anyhow::Result<()>`：terminal error 优先，其次 success/fail regex，最后处理非零进程退出状态。\n\n## 变更模块\n\n- `ostool/src/run/qemu_plan.rs`: 新增 `QemuCommandPlanInput`、`QemuCommandPlan`、`QemuBootSource` 和 plan builder；覆盖用户 machine override、`dtb_dump` 顺序、debug 参数、direct kernel loader 和 UEFI pflash 渲染。\n- `ostool/src/run/execution.rs`: 新增 runner execution summary、runner exit status 和 shared timeout helper；覆盖 timeout 映射、success/fail matcher、terminal error 优先级和非零进程退出映射。\n- `ostool/src/run/qemu.rs`: 保留 QEMU runner 的副作用边界，改为准备事实后调用 command plan，并通过 execution summary 汇总 terminal/matcher/process 结果。\n- `ostool/src/run/uboot.rs`: 复用 shared timeout helper，并将 kernel boot terminal/matcher 结果汇总交给 execution summary。\n- `ostool/src/run/mod.rs`: 接入 crate-private `execution` 和 `qemu_plan` 模块。\n\n## 兼容性\n\n- 不新增 CLI 参数、命令或配置字段。\n- 不改变 `.qemu.toml`、`.uboot.toml` 或 `.board.toml` 语义。\n- 不改变 QEMU 默认 direct `-kernel` 行为、UEFI pflash/ESP 参数行为、`dtb_dump` 默认路径或参数顺序。\n- 不改变 U-Boot FIT staging、TFTP/YMODEM fallback、serial terminal 或 `bootm` 行为。\n- 不新增 public Rust API；新增类型和 helper 都保持 crate-private。\n\n## 验证\n\n已运行并通过：\n\n- `cargo fmt --all -- --check`\n- `cargo test -p ostool`\n- `cargo clippy -p ostool --all-targets --all-features -- -D warnings`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n- `git diff --check`\n\n## 风险 / 后续\n\n- 本 PR 只建立内部 command plan、boot source value type 和 execution summary 边界，不新增 system test runner、repeat、Cargo `[[bin]]` 扫描或新的用户配置。\n- 本 PR 没有实际验证 guest OS boot、真实 U-Boot 串口、远程开发板 session 或硬件电源链路。\n"
+      }
+    },
+    {
       "id": "commit-6b5008599f2bdc8a36547d97a9753d204dfe5cef",
       "type": "commit",
       "ts": "2026-06-05T14:13:06Z",
