@@ -60,6 +60,9 @@ All options in `devlog.config.cjs`:
 | `filters.ignoreShortComments` | `true` | Filter "LGTM", "+1", etc. |
 | `aiRoast.enabled` | `true` | Enable AI commentary |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`, `"encouraging_mentor"`, or `"custom"` |
+| `aiRoast.repositoryContext.enabled` | `true` | Read GitHub repo metadata and README excerpts for weekly roast project context |
+| `aiRoast.repositoryContext.maxReposPerWeek` | `6` | Max repositories to enrich per weekly roast |
+| `aiRoast.repositoryContext.readmeChars` | `500` | Max README excerpt length per enriched repository |
 | `aiRoast.summaries.periods` | `["month", "quarter", "year"]` | Periodic retrospective levels to generate |
 | `aiRoast.summaries.maxPerRun` | `10` | Cap generated period summaries per fetch run for progressive backfills |
 | `llm.baseUrl` | `"https://models.github.ai/inference"` | Any OpenAI-compatible endpoint (default: GitHub Models) |

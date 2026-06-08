@@ -17,6 +17,11 @@ export interface GitPulseConfig {
     frequency: string;
     promptMode: "toxic_senior_dev" | "encouraging_mentor" | "custom";
     customPrompt: string;
+    repositoryContext?: {
+      enabled?: boolean;
+      maxReposPerWeek?: number;
+      readmeChars?: number;
+    };
     summaries?: {
       enabled?: boolean;
       periods?: Array<"month" | "quarter" | "year">;

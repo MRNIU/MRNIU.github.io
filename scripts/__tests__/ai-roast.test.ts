@@ -30,6 +30,7 @@ describe("generateAIRoasts", () => {
     vi.clearAllMocks();
     vi.unstubAllEnvs();
     vi.stubEnv("LLM_API_KEY", "test-key");
+    vi.stubEnv("GITHUB_TOKEN", "");
   });
 
   it("generates roast events from weekly summaries", async () => {
@@ -55,10 +56,14 @@ describe("generateAIRoasts", () => {
     expect(opts.headers.Authorization).toBe("Bearer test-key");
     const body = JSON.parse(opts.body);
     expect(body.max_tokens).toBe(384000);
+    expect(body.messages[0].content).toContain("Project boundary rules");
+    expect(body.messages[0].content).toContain("Do not blend unrelated repositories");
     expect(body.messages[0].content).toContain("insert spaces between Chinese characters and Latin letters");
     expect(body.messages[0].content).toContain("Chinese full-width punctuation");
     expect(body.messages[0].content).toContain("English half-width punctuation");
     expect(body.messages[0].content).toContain("Use Arabic numerals");
+    expect(body.messages[1].content).toContain("Current week repository breakdown");
+    expect(body.messages[1].content).toContain("Repository: MRNIU/SimpleKernel");
   });
 
   it("returns empty array when AI is disabled", async () => {
@@ -179,6 +184,55 @@ describe("generateAIRoasts", () => {
     expect(body.messages[1].content).toContain("fix: stabilize parser");
   });
 
+  it("adds GitHub repository metadata to weekly roast prompts when available", async () => {
+    vi.stubEnv("GITHUB_TOKEN", "github-token");
+    const config: GitPulseConfig = {
+      ...baseConfig,
+      aiRoast: {
+        ...baseConfig.aiRoast,
+        repositoryContext: { enabled: true, maxReposPerWeek: 1, readmeChars: 40 },
+      },
+    };
+    const multiRepoEvents: GitPulseEvent[] = [
+      ...sampleEvents.slice(0, 2),
+      { id: "c4", type: "commit", ts: "2026-03-27T11:00:00Z", repo: "MRNIU/ostool", semantic: "refactor", data: { sha: "ddd", message: "refactor: split tool runtime", additions: 4, deletions: 2 } },
+    ];
+
+    mockFetch
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          description: "Tiny teaching kernel",
+          language: "C++",
+          topics: ["kernel", "osdev"],
+        }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          encoding: "base64",
+          content: Buffer.from("SimpleKernel is an operating system learning project.").toString("base64"),
+        }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ choices: [{ message: { content: "roast" } }] }),
+      });
+
+    await generateAIRoasts(config, multiRepoEvents, new Map());
+
+    expect(mockFetch).toHaveBeenCalledTimes(3);
+    expect(mockFetch.mock.calls[0][0]).toBe("https://api.github.com/repos/MRNIU/SimpleKernel");
+    expect(mockFetch.mock.calls[1][0]).toBe("https://api.github.com/repos/MRNIU/SimpleKernel/readme");
+    const body = JSON.parse(mockFetch.mock.calls[2][1].body);
+    expect(body.messages[1].content).toContain("Repository: MRNIU/SimpleKernel");
+    expect(body.messages[1].content).toContain("description: Tiny teaching kernel");
+    expect(body.messages[1].content).toContain("language: C++");
+    expect(body.messages[1].content).toContain("topics: kernel, osdev");
+    expect(body.messages[1].content).toContain("README excerpt: SimpleKernel is an operating system lear");
+    expect(body.messages[1].content).toContain("Repository: MRNIU/ostool");
+  });
+
   it("gracefully handles LLM API failure", async () => {
     mockFetch.mockResolvedValueOnce({
       ok: false,
@@ -250,6 +304,7 @@ describe("generateAISummaries", () => {
     vi.clearAllMocks();
     vi.unstubAllEnvs();
     vi.stubEnv("LLM_API_KEY", "test-key");
+    vi.stubEnv("GITHUB_TOKEN", "");
   });
 
   it("generates completed monthly summary events", async () => {

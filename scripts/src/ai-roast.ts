@@ -1,15 +1,24 @@
+import { Buffer } from "node:buffer";
 import type { GitPulseConfig } from "./config.js";
 import type { AIRoastEvent, AISummaryEvent, AISummaryPeriod, AISummaryStats, GitPulseEvent } from "./types.js";
 
 const SYSTEM_PROMPTS: Record<string, string> = {
-  toxic_senior_dev: `You are a brutally honest senior developer reviewing a junior's weekly activity log.
+  toxic_senior_dev: `You are a brutally honest senior developer reviewing a weekly GitHub activity log across multiple independent projects.
 Your style: sarcastic, witty, technically sharp. Point out patterns like repetitive commit messages,
-too many "fix" commits, suspiciously small PRs, or overambitious refactors.
+too many "fix" commits, suspiciously small PRs, overambitious refactors, or missing review loops.
+Project boundary rules:
+- Treat each repository as a separate project unless the input explicitly marks repos as the same project family.
+- Do not blend unrelated repositories into one causal story, one metaphor, or one joke.
+- If the week spans multiple domains, call out 2-3 separate work streams briefly instead of forcing a single theme.
+- Use repository descriptions, languages, topics, and README excerpts only as context for that same repository.
+- Only compare continuity within the same repository or explicit project family.
+- Roast engineering patterns, commit hygiene, review habits, and scope control; avoid personal insults, vulgar metaphors, or unsupported claims.
 Keep it under 3 sentences. Be funny, not mean. Write in the same language as the commit messages -
 if they're in English, respond in English; if Chinese, respond in Chinese.`,
 
-  encouraging_mentor: `You are a warm and encouraging senior mentor reviewing a developer's weekly activity.
+  encouraging_mentor: `You are a warm and encouraging senior mentor reviewing a developer's weekly activity across multiple independent projects.
 Highlight what they did well, note impressive patterns (deep reviews, big features, cross-repo work).
+Keep unrelated repositories separate unless the input explicitly marks them as the same project family.
 Give one gentle suggestion for improvement. Keep it under 3 sentences.
 Write in the same language as the commit messages.`,
 };
@@ -43,6 +52,8 @@ const COUNT_TARGETS = `(?:${COUNT_NOUNS}|saying|["“])`;
 const DEFAULT_SUMMARY_PERIODS: AISummaryPeriod[] = ["month", "quarter", "year"];
 const AI_REQUEST_DELAY_MS = 5000;
 const MAX_CONSECUTIVE_FAILURES = 3;
+const DEFAULT_REPO_CONTEXT_MAX_REPOS_PER_WEEK = 6;
+const DEFAULT_REPO_CONTEXT_README_CHARS = 500;
 const SUMMARY_PERIOD_PRIORITY: Record<AISummaryPeriod, number> = {
   year: 0,
   quarter: 1,
@@ -104,6 +115,36 @@ interface WeekSummary {
   topRepo: string;
   sampleMessages: string[];
   sampleReviews: string[];
+  repoBreakdown: RepoActivitySummary[];
+}
+
+interface RepoActivitySummary {
+  repo: string;
+  totalEvents: number;
+  totalCommits: number;
+  totalPRs: number;
+  totalReviews: number;
+  totalIssues: number;
+  totalComments: number;
+  topSemantic: string | null;
+  sampleMessages: string[];
+  samplePRs: string[];
+  sampleReviews: string[];
+  sampleIssues: string[];
+}
+
+interface RepositoryContext {
+  repo: string;
+  description: string | null;
+  primaryLanguage: string | null;
+  topics: string[];
+  readmeExcerpt: string | null;
+}
+
+interface RepositoryContextOptions {
+  enabled: boolean;
+  maxReposPerWeek: number;
+  readmeChars: number;
 }
 
 interface PeriodSummary {
@@ -173,6 +214,70 @@ function getTopSemantic(events: GitPulseEvent[]): string | null {
   return [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || null;
 }
 
+function formatCountSummary(stats: {
+  totalCommits: number;
+  totalPRs: number;
+  totalReviews: number;
+  totalIssues: number;
+  totalComments: number;
+}): string {
+  return `${stats.totalCommits} commits, ${stats.totalPRs} PRs, ${stats.totalReviews} reviews, ${stats.totalIssues} issues, ${stats.totalComments} comments`;
+}
+
+function buildRepoBreakdown(events: GitPulseEvent[]): RepoActivitySummary[] {
+  const groups = new Map<string, GitPulseEvent[]>();
+  for (const event of events) {
+    const repo = event.repo || "unknown";
+    if (!groups.has(repo)) groups.set(repo, []);
+    groups.get(repo)!.push(event);
+  }
+
+  return [...groups.entries()]
+    .map(([repo, repoEvents]) => {
+      const stats = getStats(repoEvents);
+      const sampleMessages = repoEvents
+        .filter(e => e.type === "commit")
+        .slice(0, 6)
+        .map(e => e.type === "commit" ? e.data.message : "")
+        .filter(Boolean);
+      const samplePRs = repoEvents
+        .filter(e => e.type === "pull_request")
+        .slice(0, 4)
+        .map(e => e.type === "pull_request" ? `${e.data.state}: ${e.data.title}` : "")
+        .filter(Boolean);
+      const sampleReviews = repoEvents
+        .filter(e => e.type === "review")
+        .slice(0, 3)
+        .map(e => e.type === "review" ? `${e.data.state}: ${e.data.prTitle}` : "")
+        .filter(Boolean);
+      const sampleIssues = repoEvents
+        .filter(e => e.type === "issue" || e.type === "issue_comment")
+        .slice(0, 3)
+        .map(e => {
+          if (e.type === "issue") return `${e.data.state}: ${e.data.title}`;
+          if (e.type === "issue_comment") return `comment: ${e.data.issueTitle}`;
+          return "";
+        })
+        .filter(Boolean);
+
+      return {
+        repo,
+        totalEvents: repoEvents.length,
+        totalCommits: stats.totalCommits,
+        totalPRs: stats.totalPRs,
+        totalReviews: stats.totalReviews,
+        totalIssues: stats.totalIssues,
+        totalComments: stats.totalComments,
+        topSemantic: getTopSemantic(repoEvents),
+        sampleMessages,
+        samplePRs,
+        sampleReviews,
+        sampleIssues,
+      };
+    })
+    .sort((a, b) => b.totalEvents - a.totalEvents || a.repo.localeCompare(b.repo));
+}
+
 function totalActivity(stats: AISummaryStats): number {
   return stats.totalCommits + stats.totalPRs + stats.totalReviews + stats.totalIssues + stats.totalComments;
 }
@@ -222,6 +327,7 @@ function groupEventsByWeek(events: GitPulseEvent[]): WeekSummary[] {
       topRepo: stats.topRepo,
       sampleMessages,
       sampleReviews,
+      repoBreakdown: buildRepoBreakdown(weekEvents),
     });
   }
 
@@ -229,7 +335,7 @@ function groupEventsByWeek(events: GitPulseEvent[]): WeekSummary[] {
 }
 
 function formatWeekStats(summary: WeekSummary): string {
-  return `${summary.totalCommits} commits, ${summary.totalPRs} PRs, ${summary.totalReviews} reviews, ${summary.totalIssues} issues, ${summary.totalComments} comments`;
+  return formatCountSummary(summary);
 }
 
 function getPreviousWeeks(summary: WeekSummary, chronologicalWeeks: WeekSummary[]): WeekSummary[] {
@@ -238,31 +344,160 @@ function getPreviousWeeks(summary: WeekSummary, chronologicalWeeks: WeekSummary[
     .slice(-3);
 }
 
-function buildWeeklyUserMessage(summary: WeekSummary, previousWeeks: WeekSummary[]): string {
+function formatRepositoryContext(context: RepositoryContext | undefined): string {
+  if (!context) return "No repository metadata available.";
+
+  const parts: string[] = [];
+  if (context.description) parts.push(`description: ${context.description}`);
+  if (context.primaryLanguage) parts.push(`language: ${context.primaryLanguage}`);
+  if (context.topics.length > 0) parts.push(`topics: ${context.topics.join(", ")}`);
+  if (context.readmeExcerpt) parts.push(`README excerpt: ${context.readmeExcerpt}`);
+
+  return parts.length > 0 ? parts.join("; ") : "Repository metadata is empty.";
+}
+
+function formatRepoSamples(repo: RepoActivitySummary): string {
+  const samples: string[] = [];
+  samples.push(...repo.sampleMessages.map(message => `commit: ${firstLine(message)}`));
+  samples.push(...repo.samplePRs.map(title => `PR: ${title}`));
+  samples.push(...repo.sampleReviews.map(review => `review: ${review}`));
+  samples.push(...repo.sampleIssues.map(issue => `issue/comment: ${issue}`));
+  return samples.slice(0, 8).map(sample => `  - ${sample}`).join("\n");
+}
+
+function buildWeeklyUserMessage(
+  summary: WeekSummary,
+  previousWeeks: WeekSummary[],
+  repoContexts: Map<string, RepositoryContext> = new Map()
+): string {
   let msg = `Week: ${summary.weekStart} ~ ${summary.weekEnd}\n`;
   msg += `Stats: ${formatWeekStats(summary)}\n`;
-  msg += `Top repo: ${summary.topRepo}\n\n`;
+  msg += `Active repos: ${summary.repoBreakdown.length}\n`;
+  msg += `Top repo by activity count: ${summary.topRepo}\n\n`;
 
   if (previousWeeks.length > 0) {
-    msg += "Recent continuity context:\n";
+    msg += "Recent continuity context (compare only within the same repo or explicit project family):\n";
     for (const week of previousWeeks) {
       const samples = week.sampleMessages.slice(0, 3).map(firstLine).join(" | ");
-      msg += `- ${week.weekStart} ~ ${week.weekEnd}: ${formatWeekStats(week)}, top repo ${week.topRepo}`;
+      const repos = week.repoBreakdown.slice(0, 4).map(repo => `${repo.repo} (${repo.totalEvents})`).join(", ");
+      msg += `- ${week.weekStart} ~ ${week.weekEnd}: ${formatWeekStats(week)}, top repo ${week.topRepo}, repos: ${repos}`;
       if (samples) msg += `, sample commits: ${samples}`;
       msg += "\n";
     }
     msg += "\n";
-    msg += "When useful, mention whether this week continues, escalates, or changes those patterns.\n\n";
+    msg += "When useful, mention whether this week continues, escalates, or changes those patterns, but only for matching repos or explicit project families.\n\n";
   }
 
-  if (summary.sampleMessages.length > 0) {
-    msg += `Commit messages:\n${summary.sampleMessages.map(m => `- ${m}`).join("\n")}\n\n`;
-  }
-  if (summary.sampleReviews.length > 0) {
-    msg += `Review samples:\n${summary.sampleReviews.map(r => `- ${r}`).join("\n")}`;
+  msg += "Current week repository breakdown. Keep these project boundaries separate:\n";
+  for (const repo of summary.repoBreakdown) {
+    msg += `\nRepository: ${repo.repo}\n`;
+    msg += `Activity: ${repo.totalEvents} events, ${formatCountSummary(repo)}, primary semantic: ${repo.topSemantic || "mixed"}\n`;
+    msg += `Repository context: ${formatRepositoryContext(repoContexts.get(repo.repo))}\n`;
+    const samples = formatRepoSamples(repo);
+    if (samples) msg += `Samples:\n${samples}\n`;
   }
 
   return msg;
+}
+
+function getRepositoryContextOptions(config: GitPulseConfig): RepositoryContextOptions {
+  const raw = config.aiRoast.repositoryContext;
+  const enabled = raw?.enabled !== false;
+  const maxReposPerWeek = Number(raw?.maxReposPerWeek ?? DEFAULT_REPO_CONTEXT_MAX_REPOS_PER_WEEK);
+  const readmeChars = Number(raw?.readmeChars ?? DEFAULT_REPO_CONTEXT_README_CHARS);
+
+  return {
+    enabled,
+    maxReposPerWeek: Number.isFinite(maxReposPerWeek) && maxReposPerWeek > 0
+      ? Math.floor(maxReposPerWeek)
+      : DEFAULT_REPO_CONTEXT_MAX_REPOS_PER_WEEK,
+    readmeChars: Number.isFinite(readmeChars) && readmeChars > 0
+      ? Math.floor(readmeChars)
+      : DEFAULT_REPO_CONTEXT_README_CHARS,
+  };
+}
+
+function normalizeText(value: string, maxChars: number): string {
+  return value.replace(/\s+/g, " ").trim().slice(0, maxChars);
+}
+
+async function fetchGitHubJson<T>(url: string, token: string): Promise<T | null> {
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `bearer ${token}`,
+      "User-Agent": "GitPulse/1.0",
+    },
+  });
+
+  if (!response.ok) return null;
+  return await response.json() as T;
+}
+
+async function fetchRepositoryContext(
+  repo: string,
+  token: string | undefined,
+  readmeChars: number
+): Promise<RepositoryContext | null> {
+  if (!token) return null;
+  const [owner, name] = repo.split("/");
+  if (!owner || !name) return null;
+
+  const repoUrl = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(name)}`;
+  const readmeUrl = `${repoUrl}/readme`;
+  const metadata = await fetchGitHubJson<{
+    description?: string | null;
+    language?: string | null;
+    topics?: string[];
+  }>(repoUrl, token);
+
+  if (!metadata) return null;
+
+  const readme = await fetchGitHubJson<{
+    content?: string;
+    encoding?: string;
+  }>(readmeUrl, token);
+  let readmeExcerpt: string | null = null;
+  if (readme?.content && readme.encoding === "base64") {
+    readmeExcerpt = normalizeText(Buffer.from(readme.content, "base64").toString("utf8"), readmeChars);
+  }
+
+  return {
+    repo,
+    description: metadata.description || null,
+    primaryLanguage: metadata.language || null,
+    topics: metadata.topics || [],
+    readmeExcerpt,
+  };
+}
+
+async function getRepositoryContextsForWeek(
+  summary: WeekSummary,
+  options: RepositoryContextOptions,
+  cache: Map<string, RepositoryContext | null>
+): Promise<Map<string, RepositoryContext>> {
+  const contexts = new Map<string, RepositoryContext>();
+  if (!options.enabled) return contexts;
+
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return contexts;
+
+  const repos = summary.repoBreakdown.slice(0, options.maxReposPerWeek).map(repo => repo.repo);
+  for (const repo of repos) {
+    if (!cache.has(repo)) {
+      try {
+        cache.set(repo, await fetchRepositoryContext(repo, token, options.readmeChars));
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        console.warn(`  [ai-roast] Repository context skipped for ${repo}: ${message}`);
+        cache.set(repo, null);
+      }
+    }
+
+    const context = cache.get(repo);
+    if (context) contexts.set(repo, context);
+  }
+
+  return contexts;
 }
 
 async function callLLM(
@@ -370,6 +605,8 @@ export async function generateAIRoasts(
 
   const weeks = groupEventsByWeek(events);
   const chronologicalWeeks = [...weeks].sort((a, b) => a.weekStart.localeCompare(b.weekStart));
+  const repositoryContextOptions = getRepositoryContextOptions(config);
+  const repositoryContextCache = new Map<string, RepositoryContext | null>();
   const roasts: AIRoastEvent[] = [];
   let consecutiveFailures = 0;
   let requestCount = 0;
@@ -386,7 +623,16 @@ export async function generateAIRoasts(
     requestCount++;
 
     try {
-      const userMessage = buildWeeklyUserMessage(summary, getPreviousWeeks(summary, chronologicalWeeks));
+      const repoContexts = await getRepositoryContextsForWeek(
+        summary,
+        repositoryContextOptions,
+        repositoryContextCache
+      );
+      const userMessage = buildWeeklyUserMessage(
+        summary,
+        getPreviousWeeks(summary, chronologicalWeeks),
+        repoContexts
+      );
       const content = await callLLM(config, systemPrompt, userMessage);
 
       roasts.push({

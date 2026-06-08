@@ -60,6 +60,9 @@
 | `filters.ignoreShortComments` | `true` | 过滤 "LGTM"、"+1" 等短评论 |
 | `aiRoast.enabled` | `true` | 启用 AI 点评 |
 | `aiRoast.promptMode` | `"toxic_senior_dev"` | `"toxic_senior_dev"`、`"encouraging_mentor"` 或 `"custom"` |
+| `aiRoast.repositoryContext.enabled` | `true` | 为每周点评读取 GitHub 仓库元数据和 README 摘要，补充项目上下文 |
+| `aiRoast.repositoryContext.maxReposPerWeek` | `6` | 每条周度点评最多补充上下文的仓库数量 |
+| `aiRoast.repositoryContext.readmeChars` | `500` | 每个仓库最多使用的 README 摘要长度 |
 | `aiRoast.summaries.periods` | `["month", "quarter", "year"]` | 要生成的周期复盘层级 |
 | `aiRoast.summaries.maxPerRun` | `10` | 每次抓取运行最多生成的周期复盘数量，用于渐进式回补 |
 | `llm.baseUrl` | `"https://models.github.ai/inference"` | 任意 OpenAI 兼容接口地址（默认：GitHub Models） |

@@ -14,6 +14,11 @@ module.exports = {
     frequency: "weekly",
     promptMode: "toxic_senior_dev",
     customPrompt: "",
+    repositoryContext: {
+      enabled: true,
+      maxReposPerWeek: 6,
+      readmeChars: 500,
+    },
     summaries: {
       enabled: true,
       periods: ["month", "quarter", "year"],
