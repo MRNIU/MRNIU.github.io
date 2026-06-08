@@ -2,6 +2,32 @@
   "month": "2026-06",
   "events": [
     {
+      "id": "commit-f5e0580943915ab162499a5986733b9a690720f9",
+      "type": "commit",
+      "ts": "2026-06-08T01:09:30Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "refactor",
+      "data": {
+        "sha": "f5e0580943915ab162499a5986733b9a690720f9",
+        "message": "refactor(tool): 抽出 QEMU command 与 runner 执行边界 (#127)\n\n将 QEMU 命令组装从 runner 主流程中拆成 crate-private command plan，并用内部 boot source value type 表达现有 direct -kernel 与 UEFI pflash 启动路径。plan builder 只接收已准备好的事实，不持有 Invocation、runner 状态，也不执行 OVMF、DTB cleanup 或进程 spawn 等副作用。\n\n同时抽出 runner execution summary，用于集中映射 terminal timeout、success/fail regex 命中和进程退出状态。QEMU 与 U-Boot 仍对外返回 anyhow::Result<()>，CLI、配置字段和 public Rust API 保持不变。\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 533,
+        "deletions": 83
+      }
+    },
+    {
+      "id": "commit-86e8cb9eaad7c94a727fb38f20d6d951d2c18ab8",
+      "type": "commit",
+      "ts": "2026-06-07T06:12:49Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "86e8cb9eaad7c94a727fb38f20d6d951d2c18ab8",
+        "message": "Update spidertron logistics cargo",
+        "additions": 19,
+        "deletions": 10
+      }
+    },
+    {
       "id": "ai-roast-2026-06-01",
       "type": "ai_roast",
       "ts": "2026-06-07T00:00:00Z",
@@ -9,10 +35,10 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-06-01 ~ 2026-06-07",
-        "content": "这周日志像极了游戏 mod 更新日志——先调下热管和变电站，再把蜘蛛机器人货物改成栈式，最后突然祭出一整套 Tool facade 拆分，全靠 OpenAI Codex 替你写 commit body。下次至少让 AI 顺便把前两条的 commit message 也润色一下，别这么像修游戏 bug。",
-        "status": "draft",
+        "content": "本周 7 个 PR 0 次 review，贡献全堆在输出端；你花了一半的 commit 去修理那个写 AI roast 的系统，堪称用 AI 生成代码再让 AI 骂自己的永动机。 ostool 的重构每次都要拉上 Codex 联署并附上十二行验证命令，而那个《Update spidertron logistics cargo》提交怕是只改了个常量——你做的到底是嵌入式仿真还是异星工厂 mod？",
+        "status": "final",
         "stats": {
-          "totalCommits": 3,
+          "totalCommits": 15,
           "topRepo": "drivercraft/ostool"
         }
       }
