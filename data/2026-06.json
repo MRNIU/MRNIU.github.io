@@ -2,6 +2,87 @@
   "month": "2026-06",
   "events": [
     {
+      "id": "ai-roast-2026-06-08",
+      "type": "ai_roast",
+      "ts": "2026-06-14T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-06-08 ~ 2026-06-14",
+        "content": "This week you silenced all PRs, reviews, and comments, letting a single \"feat: add foundry\" copypasta bloom in two Factorio repos while BestLanding’s fix-then-update tango suggests you reviewed nothing and nobody. The one actual refactor in ostool even cites a PR number (#127) that apparently exists only in the commit message, and your personal homepage now \"adds repository context to AI roasts\" so it can better mock this very drought of collaboration.",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 6,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        }
+      }
+    },
+    {
+      "id": "commit-2f6eaca30578e7e9da56dce84fb50e218a8d681f",
+      "type": "commit",
+      "ts": "2026-06-08T16:15:31Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "2f6eaca30578e7e9da56dce84fb50e218a8d681f",
+        "message": "feat: add foundry\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-378a571e829ed9a971cfe89ef89570eae2b3ea65",
+      "type": "commit",
+      "ts": "2026-06-08T15:55:14Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "378a571e829ed9a971cfe89ef89570eae2b3ea65",
+        "message": "Fix blueprint-driven resource placement",
+        "additions": 284,
+        "deletions": 103
+      }
+    },
+    {
+      "id": "commit-7687c7d7c85db3cbbfae85306a52d57690478762",
+      "type": "commit",
+      "ts": "2026-06-08T13:46:01Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "7687c7d7c85db3cbbfae85306a52d57690478762",
+        "message": "feat: add foundry\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-36b6e6b58b10fdb0f69772a3a915f628930502a1",
+      "type": "commit",
+      "ts": "2026-06-08T13:16:21Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "36b6e6b58b10fdb0f69772a3a915f628930502a1",
+        "message": "Update BestLanding resource placement and blueprint handling",
+        "additions": 562,
+        "deletions": 38
+      }
+    },
+    {
+      "id": "commit-5a2cdd06f9d378a87f52e52a16389306270088a6",
+      "type": "commit",
+      "ts": "2026-06-08T06:49:41Z",
+      "repo": "MRNIU/MRNIU.github.io",
+      "semantic": "feat",
+      "data": {
+        "sha": "5a2cdd06f9d378a87f52e52a16389306270088a6",
+        "message": "feat: add repository context to AI roasts\n\nSeparate weekly roast prompts by repository so unrelated projects do not get merged into one narrative. Add project-boundary rules to the built-in prompt modes and include per-repo activity samples in the LLM input.\n\nWhen GitHub metadata is available, enrich weekly roast prompts with repository descriptions, languages, topics, and README excerpts for the active repositories. Keep the feature configurable and document the repository context options.\n\nVerification: npm test; npm run build; git diff --check.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 332,
+        "deletions": 15
+      }
+    },
+    {
       "id": "commit-f5e0580943915ab162499a5986733b9a690720f9",
       "type": "commit",
       "ts": "2026-06-08T01:09:30Z",
