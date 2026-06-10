@@ -18,6 +18,32 @@
       }
     },
     {
+      "id": "commit-22479cc8242dd86dba87f5230419620679c118c1",
+      "type": "commit",
+      "ts": "2026-06-09T14:52:08Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "22479cc8242dd86dba87f5230419620679c118c1",
+        "message": "feat: update ships\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-1bf286ce9e2315132a8d325a8776e9801765e367",
+      "type": "commit",
+      "ts": "2026-06-09T14:51:42Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "1bf286ce9e2315132a8d325a8776e9801765e367",
+        "message": "feat: update ships\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 15,
+        "deletions": 4
+      }
+    },
+    {
       "id": "commit-2f6eaca30578e7e9da56dce84fb50e218a8d681f",
       "type": "commit",
       "ts": "2026-06-08T16:15:31Z",
