@@ -18,6 +18,19 @@
       }
     },
     {
+      "id": "pr-129-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-06-11T10:15:04Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 129,
+        "title": "feat(ostool): prepare boot readiness artifacts",
+        "state": "open",
+        "body": "## 摘要\n\n- 新增可配置 analysis artifacts：`disassembly`、`elf_info`、`symbols`，字段表达产物名而不是底层命令名。\n- 新增 ELF boot metadata 推导，基于 prepared ELF 记录 entry/load、`__executable_start` 和首个 load segment。\n- 新增 `ostool boot prepare`，从构建出的 ELF 准备 `target/boot` 启动产物包、FIT、DTB copy、boot script、rootfs/boot-partition staging 目录和 `boot-artifacts.json` v1 manifest。\n- 扩展 FIT 生成输入，支持 `kernel_os` 与地址覆盖；需要 FIT 时自动派生 BIN，不要求用户显式配置 binary。\n- 新增 QEMU `[boot] mode = \"uboot\"` 配置骨架，当前对缺少 `boot.firmware` 的配置提前报错，固件构建与完整 QEMU U-Boot 启动留给后续 PR。\n- 更新中英文 README、CLI 解析测试、boot prepare/analysis/metadata/QEMU boot mode 单元测试。\n\n## 整体思路\n\n本 PR 先落非固件的 boot readiness 基座：ELF 仍是唯一 canonical kernel 产物，后续 FIT、BIN、manifest 和 staging 目录都从 ELF 与用户显式 DTB/地址覆盖派生。需要 raw BIN 的路径由 ostool 内部自动准备，避免让配置再暴露手动 binary 选择。\n\n固件相关只保留配置识别和 fail-fast 边界，不在本 PR 里引入 ATF/OpenSBI/U-Boot/UEFI 的 recipe、下载、构建或加载顺序设计。\n\n## 变更模块\n\n- `ostool/src/artifact/analysis.rs`: 新增 analysis artifact 生成器，使用现有 Rust object tools 映射生成 disassembly、ELF info 和 symbols 文本产物。\n- `ostool/src/artifact/elf_metadata.rs`: 新增 ELF boot metadata 读取器。\n- `ostool/src/boot/prepare.rs`: 新增 boot prepare API、v1 manifest、FIT/DTB/boot script/staging 目录准备逻辑。\n- `ostool/src/main.rs`: 新增 `ostool boot prepare` CLI，支持 build config、Cargo selector、DTB、输出目录、FIT 地址和 staging 开关。\n- `ostool/src/run/qemu.rs`: 新增 `[boot]` 配置和 `uboot` 模式 fail-fast。\n- `README.md` / `README.en.md`: 同步 boot prepare、analysis artifacts、QEMU boot mode 和 `to_bin` 兼容字段说明。\n\n## 兼容性\n\n- 现有 `.build.toml` / `.qemu.toml` 不需要修改；新增字段都有默认值。\n- `to_bin` 保留为兼容字段，现有配置仍可继续使用。\n- `boot prepare` 默认会生成 FIT；不支持 FIT arch 的目标可用 `--no-fit` 只生成 manifest、ELF metadata、boot script 和 staging 目录。\n- `mode = \"uboot\"` 当前不会静默 fallback 到 direct boot；缺少或即使显式提供 firmware 都会提前返回明确错误，避免误以为已经完成固件启动链。\n\n## 验证\n\n- `cargo fmt --all -- --check`\n- `cargo clippy --target x86_64-unknown-linux-gnu --all-features`\n- `cargo build --target x86_64-unknown-linux-gnu --all-features`\n- `cargo test --target x86_64-unknown-linux-gnu -- --nocapture`\n- `cargo test -p ostool`\n\n## 风险\n\n- 本 PR 没有接真实开发板，也没有宣称完成 QEMU U-Boot 固件启动链。\n- boot partition 目前是可检查的 staging directory，不是最终 FAT/分区镜像；后续固件/启动链 PR 可在同一 manifest 上继续扩展。\n- FIT 默认 metadata 来自 ELF；如果目标链接脚本没有暴露合适 load 地址，用户仍应通过 CLI 覆盖地址。\n\n## 后续\n\n- 设计并实现固件 recipe/cache/build：ATF、OpenSBI、U-Boot、UEFI 的版本覆盖、依赖顺序和加载阶段。\n- 将 QEMU U-Boot mode 从 fail-fast skeleton 扩展为完整 firmware boot source。\n- 在稳定 boot package manifest 上补 filesystem image/boot partition image 生成。"
+      }
+    },
+    {
       "id": "commit-22479cc8242dd86dba87f5230419620679c118c1",
       "type": "commit",
       "ts": "2026-06-09T14:52:08Z",
