@@ -18,6 +18,58 @@
       }
     },
     {
+      "id": "commit-ee86193454a78be16a03f38e1516951975af9e21",
+      "type": "commit",
+      "ts": "2026-06-12T09:11:07Z",
+      "repo": "MRNIU/resume",
+      "semantic": "docs",
+      "data": {
+        "sha": "ee86193454a78be16a03f38e1516951975af9e21",
+        "message": "docs(resume): 完善近期项目与开源经历\n\n补充 AI/Agent 工程能力、奔驰车机中间件 OnOff 架构职责和跨域通信边界，并更新开源贡献列表以突出近期系统软件项目。\n\n同步重新生成中文简历 PDF，保持交付产物与 LaTeX 源文件一致。\n\n验证：\n- make -B pdf\n- make clean\n- PDF 三页渲染检查\n- git diff --check\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 12,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-bd19b2d2906b4ec77eb777f0f30c05bbf44bbf0c",
+      "type": "commit",
+      "ts": "2026-06-12T08:24:52Z",
+      "repo": "MRNIU/resume",
+      "semantic": "docs",
+      "data": {
+        "sha": "bd19b2d2906b4ec77eb777f0f30c05bbf44bbf0c",
+        "message": "docs(resume): 更新近期项目经历\n\n补充企业级 Agent 开发经历，调整奔驰车机项目时间区间，并将部分 ThoughtWorks 项目从匿名描述更新为具体项目名称。\n\n同步重新生成中文简历 PDF，保持交付产物与 LaTeX 源文件一致。\n\n验证：\n\n- make -B pdf\n\n- make clean\n\n- PDF 两页渲染检查\n\n- git diff --check\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 13,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-50833ef0c37ac721128b30bb0576d8502d6a1a7b",
+      "type": "commit",
+      "ts": "2026-06-12T08:23:58Z",
+      "repo": "MRNIU/resume",
+      "semantic": "chore",
+      "data": {
+        "sha": "50833ef0c37ac721128b30bb0576d8502d6a1a7b",
+        "message": "chore(repo): 补齐基础协作与 CI 配置\n\n添加提交模板、贡献指南、PR 模板、编辑器与 Git 属性配置，并收敛 .gitignore 到简历仓库实际需要的辅助文件规则。\n\n- 增加 CI，检查 PDF 构建、提交同步、辅助文件清理和 PR DCO。\n\n- 将 README 与 AGENTS.md 连接到贡献规范。\n\n- 让 Makefile clean 清理 latexmk 留下的 xdv 中间文件。\n\n验证：\n\n- make -B pdf\n\n- make clean\n\n- PDF 两页渲染检查\n\n- git diff --check\n\n- YAML 基础解析\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 270,
+        "deletions": 267
+      }
+    },
+    {
+      "id": "commit-e5f5d5f67b36a9a2a4f37f477e56d562b76c4bb4",
+      "type": "commit",
+      "ts": "2026-06-12T07:50:51Z",
+      "repo": "MRNIU/resume",
+      "semantic": null,
+      "data": {
+        "sha": "e5f5d5f67b36a9a2a4f37f477e56d562b76c4bb4",
+        "message": "现代化简历构建流程\n\n将简历构建入口统一到 latexmk + XeLaTeX，避免构建前清理 PDF 的旧行为，并同步 VS Code LaTeX Workshop 配置到同一套入口。\n\n精简仓库文档，保留当前中文简历构建说明，删除旧模板历史说明。同时补充 AGENTS.md，记录简历内容、PDF 产物和构建验证约束。\n\n验证：\n\n- make pdf\n\n- make clean\n\n- PDF 两页渲染检查\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 89,
+        "deletions": 136
+      }
+    },
+    {
       "id": "pr-129-drivercraft/ostool",
       "type": "pull_request",
       "ts": "2026-06-11T10:15:04Z",

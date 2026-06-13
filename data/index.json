@@ -1,8 +1,8 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-12T03:08:47.397Z",
+  "generatedAt": "2026-06-13T03:07:42.629Z",
   "stats": {
-    "totalCommits": 2133,
+    "totalCommits": 2137,
     "totalPRs": 257,
     "totalReviews": 6,
     "totalIssues": 81,
@@ -15,24 +15,26 @@
     {
       "key": "2026-06",
       "file": "2026-06.json",
-      "eventCount": 37,
+      "eventCount": 41,
       "repos": [
         "MRNIU/MRNIU.github.io",
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
         "MRNIU/factorio_LegendaryShipStart",
         "MRNIU/ostool",
+        "MRNIU/resume",
         "drivercraft/ostool",
         "drivercraft/rdrive"
       ],
       "breakdown": {
         "ai_roast": 2,
+        "commit": 27,
         "pull_request": 8,
-        "commit": 23,
         "issue_comment": 3,
         "issue": 1
       },
       "repoBreakdown": {
+        "MRNIU/resume": 4,
         "drivercraft/ostool": 14,
         "MRNIU/factorio_LegendaryShipStart": 2,
         "MRNIU/factorio_BestLanding": 3,
