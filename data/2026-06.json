@@ -9,11 +9,11 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-06-08 ~ 2026-06-14",
-        "content": "This week you silenced all PRs, reviews, and comments, letting a single \"feat: add foundry\" copypasta bloom in two Factorio repos while BestLanding’s fix-then-update tango suggests you reviewed nothing and nobody. The one actual refactor in ostool even cites a PR number (#127) that apparently exists only in the commit message, and your personal homepage now \"adds repository context to AI roasts\" so it can better mock this very drought of collaboration.",
-        "status": "draft",
+        "content": "这周你最活跃的 repo 居然是 MRNIU/resume， 4 个 commit 从项目经历到 CI 配置一条龙服务， Review 数却稳如 0，看来简历比代码更需要被看见。两个 factorio mod 同时喊出“feat: add foundry”， LegendaryShipStart 也敷衍地连发两次“feat: update ships”，你这剧本写得像 AI 生成的 commit 列表。更嘲讽的是你在 MRNIU.github.io 上提交了“feat: add repository context to AI roasts”，亲手给 AI 喂了这周的 roast 素材，而 ostool 那个孤零零的 feat PR 居然既没 Review 也没合并，果然是 roast 别人容易， review 自己难。",
+        "status": "final",
         "stats": {
-          "totalCommits": 6,
-          "topRepo": "MRNIU/factorio_BestLanding"
+          "totalCommits": 12,
+          "topRepo": "MRNIU/resume"
         }
       }
     },
