@@ -2,6 +2,19 @@
   "month": "2026-06",
   "events": [
     {
+      "id": "commit-2658dc15ef14be243ea97aab6ed91a1f84fc2a2c",
+      "type": "commit",
+      "ts": "2026-06-15T15:26:37Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "2658dc15ef14be243ea97aab6ed91a1f84fc2a2c",
+        "message": "feat: update items\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 15,
+        "deletions": 5
+      }
+    },
+    {
       "id": "ai-roast-2026-06-08",
       "type": "ai_roast",
       "ts": "2026-06-14T00:00:00Z",
