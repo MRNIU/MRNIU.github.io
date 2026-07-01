@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-06-16T03:09:55.850Z",
+  "generatedAt": "2026-07-01T03:09:43.391Z",
   "stats": {
     "totalCommits": 2138,
     "totalPRs": 257,
@@ -9,13 +9,13 @@
     "totalComments": 192,
     "activeRepos": 72,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-06-15T15:26:37Z"
+    "latestEvent": "2026-06-30T00:00:00Z"
   },
   "months": [
     {
       "key": "2026-06",
       "file": "2026-06.json",
-      "eventCount": 42,
+      "eventCount": 44,
       "repos": [
         "MRNIU/MRNIU.github.io",
         "MRNIU/factorio_BestLanding",
@@ -27,6 +27,7 @@
         "drivercraft/rdrive"
       ],
       "breakdown": {
+        "ai_summary": 2,
         "commit": 28,
         "ai_roast": 2,
         "pull_request": 8,

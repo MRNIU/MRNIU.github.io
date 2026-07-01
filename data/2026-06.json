@@ -2,6 +2,91 @@
   "month": "2026-06",
   "events": [
     {
+      "id": "ai-summary-quarter-2026-Q2",
+      "type": "ai_summary",
+      "ts": "2026-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "label": "2026-Q2"
+        },
+        "content": "2026-Q2 的技术重心从 Q1 探索性功能开发明确转为以 ssXue/Nazh 为核心的架构治理与文档沉淀，主导标签 docs 反映了大量 ADR 编写和项目模板标准化。主要工程围绕 ADR-0013 子图恢复实施、ADR-0014 的 PinKind 类型系统引进和 modbusRead 双端口扩展展开，同时强化了 FlowGram 视觉区分、端到端测试和协作模板（SAD/SDD、语言策略、贡献约定）。协作上， PR 数量从 18 个翻倍至 34 个并伴随 25 条评论交流，但正式代码审查从 4 次降为 0，表明合入决策通过 PR 讨论而非强制 review 进行。相较于 Q1 的 22 个活跃仓库，本期收敛至 16 个且集中深耕 Nazh，提交量提升 53%， issue 则从 6 个降至 1 个，体现出问题收敛和工程纪律的增强。这一转变使项目模板、CI 工具链与决策记录更加成熟，为后续开发奠定了稳固基础。",
+        "highlights": [
+          "164 commits, 34 PRs, 0 reviews, 1 issues, 25 comments, 16 active repos",
+          "Top repo: ssXue/Nazh"
+        ],
+        "patterns": [
+          "Primary activity type: docs",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 164,
+          "totalPRs": 34,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 25,
+          "activeRepos": 16,
+          "topRepo": "ssXue/Nazh"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/MRNIU.github.io to ssXue/Nazh",
+            "Dominant semantic tag changed from feat to docs",
+            "Commit volume increased by 57"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2026-06",
+      "type": "ai_summary",
+      "ts": "2026-06-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-06-01",
+          "end": "2026-06-30",
+          "label": "2026-06"
+        },
+        "content": "本月工程节奏较 5 月有所放缓，但重构主线依旧延续，只是重心从 ssXue/Nazh 转移到了 drivercraft/ostool。核心重构围绕 ostool 的架构解耦推进，通过一系列连续提交抽出了 QEMU 命令、U-Boot FIT 以及 Tool 外观的执行边界。同时， resume 项目完成了构建流程的现代化与个人经历的更新， factorio 模组则持续优化了蓝图放置逻辑、蜘蛛机甲货物配置及新设备支持。此外，还穿插处理了一轮 AI 摘要生成与回填的批量修复。",
+        "highlights": [
+          "28 commits, 8 PRs, 0 reviews, 1 issues, 3 comments, 8 active repos",
+          "Top repo: drivercraft/ostool"
+        ],
+        "patterns": [
+          "Primary activity type: refactor",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 28,
+          "totalPRs": 8,
+          "totalReviews": 0,
+          "totalIssues": 1,
+          "totalComments": 3,
+          "activeRepos": 8,
+          "topRepo": "drivercraft/ostool"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Dominant semantic tag stayed refactor"
+          ],
+          "changedSincePrevious": [
+            "Top repo shifted from ssXue/Nazh to drivercraft/ostool",
+            "Commit volume decreased by 33"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-2658dc15ef14be243ea97aab6ed91a1f84fc2a2c",
       "type": "commit",
       "ts": "2026-06-15T15:26:37Z",
