@@ -1,0 +1,31 @@
+{
+  "month": "2026-07",
+  "events": [
+    {
+      "id": "commit-7f6e25868ee3766787f4e9408ac4c97539663775",
+      "type": "commit",
+      "ts": "2026-07-01T16:28:28Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": "feat",
+      "data": {
+        "sha": "7f6e25868ee3766787f4e9408ac4c97539663775",
+        "message": "feat: update items\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-3e9f4a71d8697200eb1a2b062723053251909530",
+      "type": "commit",
+      "ts": "2026-07-01T16:27:27Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "3e9f4a71d8697200eb1a2b062723053251909530",
+        "message": "Add planet trigger material reserves",
+        "additions": 35,
+        "deletions": 1
+      }
+    }
+  ]
+}
