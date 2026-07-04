@@ -2,6 +2,113 @@
   "month": "2026-07",
   "events": [
     {
+      "id": "ai-roast-2026-06-29",
+      "type": "ai_roast",
+      "ts": "2026-07-05T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-06-29 ~ 2026-07-05",
+        "content": "Another week of solo Factorio modding: 9 commits across 4 repos, zero collaboration, and a 7‑day review drought that would make any CI pipeline weep. Three mods got nearly identical “Update for Factorio 2.1” commit messages – at this point I assume you’ve bound that string to a macro. Over in LegendaryMechStart, you threw in a Revert right after a Refine, which tells me even legendary mechs suffer from late‑night “what have I done” regret.",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "MRNIU/factorio_LegendaryMechStart"
+        }
+      }
+    },
+    {
+      "id": "commit-e6dea999e5cb438e659afd556a44890b066b9602",
+      "type": "commit",
+      "ts": "2026-07-03T15:25:54Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "e6dea999e5cb438e659afd556a44890b066b9602",
+        "message": "Revert Aquilo heating tower quality",
+        "additions": 2,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-effe5dbf96ef605de750b50a2ceff02cd93a435b",
+      "type": "commit",
+      "ts": "2026-07-03T15:24:46Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "effe5dbf96ef605de750b50a2ceff02cd93a435b",
+        "message": "Refine planet spidertron bootstrap",
+        "additions": 60,
+        "deletions": 29
+      }
+    },
+    {
+      "id": "commit-6fd65765eb9040f617a3c67a683f644ff50c235e",
+      "type": "commit",
+      "ts": "2026-07-03T14:59:55Z",
+      "repo": "MRNIU/nzh_factorio_mod",
+      "semantic": null,
+      "data": {
+        "sha": "6fd65765eb9040f617a3c67a683f644ff50c235e",
+        "message": "Update modpack for Factorio 2.1",
+        "additions": 22,
+        "deletions": 15
+      }
+    },
+    {
+      "id": "commit-feb91b10b4525c88fd835c6170fdfba7c8444fa8",
+      "type": "commit",
+      "ts": "2026-07-03T14:59:55Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "feb91b10b4525c88fd835c6170fdfba7c8444fa8",
+        "message": "Update for Factorio 2.1",
+        "additions": 31,
+        "deletions": 25
+      }
+    },
+    {
+      "id": "commit-5785c1b95c0eeed27fbc23f64eb1b002ce69171e",
+      "type": "commit",
+      "ts": "2026-07-03T14:59:55Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": null,
+      "data": {
+        "sha": "5785c1b95c0eeed27fbc23f64eb1b002ce69171e",
+        "message": "Update for Factorio 2.1",
+        "additions": 35,
+        "deletions": 29
+      }
+    },
+    {
+      "id": "commit-61e4168f536ab9bc53aaae4461fc3448e2c8883d",
+      "type": "commit",
+      "ts": "2026-07-03T14:59:55Z",
+      "repo": "MRNIU/factorio_LegendaryShipStart",
+      "semantic": null,
+      "data": {
+        "sha": "61e4168f536ab9bc53aaae4461fc3448e2c8883d",
+        "message": "Update for Factorio 2.1",
+        "additions": 32,
+        "deletions": 26
+      }
+    },
+    {
+      "id": "commit-1d65e38aded2f5f15d2a68eb1ae82fd0368041e9",
+      "type": "commit",
+      "ts": "2026-07-03T14:17:11Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "1d65e38aded2f5f15d2a68eb1ae82fd0368041e9",
+        "message": "Add spidertron bootstrap roboports",
+        "additions": 106,
+        "deletions": 7
+      }
+    },
+    {
       "id": "commit-7f6e25868ee3766787f4e9408ac4c97539663775",
       "type": "commit",
       "ts": "2026-07-01T16:28:28Z",
