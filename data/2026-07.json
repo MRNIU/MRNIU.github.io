@@ -18,6 +18,32 @@
       }
     },
     {
+      "id": "commit-86aa617f9724c039643236cd0bf8c0e7b0da9a0c",
+      "type": "commit",
+      "ts": "2026-07-04T07:26:50Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "86aa617f9724c039643236cd0bf8c0e7b0da9a0c",
+        "message": "Refine science cache and planet cargo",
+        "additions": 16,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-5d89c1fa872e6ff31b641fe15e02fa0681555527",
+      "type": "commit",
+      "ts": "2026-07-04T04:46:54Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "5d89c1fa872e6ff31b641fe15e02fa0681555527",
+        "message": "Add compact science pack cache",
+        "additions": 210,
+        "deletions": 23
+      }
+    },
+    {
       "id": "commit-e6dea999e5cb438e659afd556a44890b066b9602",
       "type": "commit",
       "ts": "2026-07-03T15:25:54Z",
