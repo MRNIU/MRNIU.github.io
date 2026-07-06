@@ -9,10 +9,10 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-06-29 ~ 2026-07-05",
-        "content": "Another week of solo Factorio modding: 9 commits across 4 repos, zero collaboration, and a 7‑day review drought that would make any CI pipeline weep. Three mods got nearly identical “Update for Factorio 2.1” commit messages – at this point I assume you’ve bound that string to a macro. Over in LegendaryMechStart, you threw in a Revert right after a Refine, which tells me even legendary mechs suffer from late‑night “what have I done” regret.",
-        "status": "draft",
+        "content": "这一周你把 Factorio 2.1 当成了唯一客户， LegendaryMechStart 献上 8 次“Refine / Revert / Add” 的灵魂迭代，像在太空平台反复调整电路却没人审查；其他三个 Mod 直接复制粘贴了“Update for Factorio 2.1”的模板，连 commit 呼吸都懒得变。自 6 月初还在跨项目拉 PR 写简历，现在彻底切换成单人 mod 作者模式——没有 review、没有 issue，连 git log 都在陪你玩单机游戏。",
+        "status": "final",
         "stats": {
-          "totalCommits": 9,
+          "totalCommits": 11,
           "topRepo": "MRNIU/factorio_LegendaryMechStart"
         }
       }
