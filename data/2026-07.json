@@ -2,6 +2,100 @@
   "month": "2026-07",
   "events": [
     {
+      "id": "ai-roast-2026-07-13",
+      "type": "ai_roast",
+      "ts": "2026-07-19T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-07-13 ~ 2026-07-19",
+        "content": "6 commits, 0 reviews, and still no sign of a teammate — at this point Factorio's enemy AI is giving more feedback on your code than any human. \"feat: update items\" is the commit message equivalent of shrugging in Lua. At least the refactor confirms you finally accepted that your first feat wasn't as feated as you thought.",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 6,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        }
+      }
+    },
+    {
+      "id": "commit-521fa6b40d64fa929800ad890b5522aca0610aab",
+      "type": "commit",
+      "ts": "2026-07-18T17:41:30Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "521fa6b40d64fa929800ad890b5522aca0610aab",
+        "message": "feat: update items\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-98cd8253da2eba5476e5dedaa291882fcc7c7842",
+      "type": "commit",
+      "ts": "2026-07-18T15:53:42Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "98cd8253da2eba5476e5dedaa291882fcc7c7842",
+        "message": "feat: add four-level starter base pipeline",
+        "additions": 457,
+        "deletions": 68
+      }
+    },
+    {
+      "id": "commit-fac1b162afbd95c4925a6be2ff23a3c10d9fa86a",
+      "type": "commit",
+      "ts": "2026-07-18T13:23:43Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "fac1b162afbd95c4925a6be2ff23a3c10d9fa86a",
+        "message": "feat: infer ores from blueprint resource zones",
+        "additions": 304,
+        "deletions": 81
+      }
+    },
+    {
+      "id": "commit-f0c096b95dd47221939e42ca57f8918a9c62a925",
+      "type": "commit",
+      "ts": "2026-07-18T12:33:10Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "refactor",
+      "data": {
+        "sha": "f0c096b95dd47221939e42ca57f8918a9c62a925",
+        "message": "refactor: infer starter resources from blueprints",
+        "additions": 40,
+        "deletions": 433
+      }
+    },
+    {
+      "id": "commit-8c065d648b9c8a20ab665b45e6a7159381b16090",
+      "type": "commit",
+      "ts": "2026-07-18T12:23:07Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "8c065d648b9c8a20ab665b45e6a7159381b16090",
+        "message": "feat: add per-planet base levels",
+        "additions": 190,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-df5eabae992efff468cacd48bfeab8dd47d376d7",
+      "type": "commit",
+      "ts": "2026-07-18T12:10:38Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "df5eabae992efff468cacd48bfeab8dd47d376d7",
+        "message": "feat: initialize starter blueprint entities",
+        "additions": 64,
+        "deletions": 3
+      }
+    },
+    {
       "id": "ai-roast-2026-06-29",
       "type": "ai_roast",
       "ts": "2026-07-05T00:00:00Z",
