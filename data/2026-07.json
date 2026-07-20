@@ -9,8 +9,8 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-07-13 ~ 2026-07-19",
-        "content": "6 commits, 0 reviews, and still no sign of a teammate — at this point Factorio's enemy AI is giving more feedback on your code than any human. \"feat: update items\" is the commit message equivalent of shrugging in Lua. At least the refactor confirms you finally accepted that your first feat wasn't as feated as you thought.",
-        "status": "draft",
+        "content": "6 commits straight to `main`, 0 PRs, 0 reviews—fitting for a mod that deletes obstacles, because you've apparently deleted the concept of collaboration as well. Your four-level starter base pipeline now infers ores from blueprints, but I’m inferring a Factorio addiction that's running at full throughput without a single sanity check.",
+        "status": "final",
         "stats": {
           "totalCommits": 6,
           "topRepo": "MRNIU/factorio_BestLanding"
