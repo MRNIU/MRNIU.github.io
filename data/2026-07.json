@@ -2,6 +2,308 @@
   "month": "2026-07",
   "events": [
     {
+      "id": "ai-roast-2026-07-20",
+      "type": "ai_roast",
+      "ts": "2026-07-26T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-07-20 ~ 2026-07-26",
+        "content": "Twenty-2 commits straight to main with 0 reviews — at this point your landing-area cleanup mod should also run on your commit log. The double \"first 4 plants L3 done\" is either a copy-paste mistake or you’re planting factories so fast you committed it twice for symmetry. At least \"fix: honor absolute blueprint positions\" suggests you eventually realized the planet isn’t always at (0,0).",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 22,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        }
+      }
+    },
+    {
+      "id": "commit-d4d3e253057738afb29b1abc256769a553d38eed",
+      "type": "commit",
+      "ts": "2026-07-22T19:32:03Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "d4d3e253057738afb29b1abc256769a553d38eed",
+        "message": "feat: seed Gleba starter farms",
+        "additions": 379,
+        "deletions": 18
+      }
+    },
+    {
+      "id": "commit-6f23b5325ebb4be850bef200a039ca8a8712c66b",
+      "type": "commit",
+      "ts": "2026-07-22T19:21:06Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "6f23b5325ebb4be850bef200a039ca8a8712c66b",
+        "message": "feat: first 4 plants L3 done\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 0,
+        "deletions": 103
+      }
+    },
+    {
+      "id": "commit-0aefcce9a0323597b27a2a3ac35fae6a4c69031d",
+      "type": "commit",
+      "ts": "2026-07-22T19:20:17Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "0aefcce9a0323597b27a2a3ac35fae6a4c69031d",
+        "message": "feat: first 4 plants L3 done\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-19eb852425ac43da98f34413c82035fe6ddba2d3",
+      "type": "commit",
+      "ts": "2026-07-22T19:15:35Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "refactor",
+      "data": {
+        "sha": "19eb852425ac43da98f34413c82035fe6ddba2d3",
+        "message": "refactor: unify blueprint coordinate transforms",
+        "additions": 228,
+        "deletions": 204
+      }
+    },
+    {
+      "id": "commit-ed2fcc1c4d50377d6c4909f5ed9041e5ba11f054",
+      "type": "commit",
+      "ts": "2026-07-22T19:10:40Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "docs",
+      "data": {
+        "sha": "ed2fcc1c4d50377d6c4909f5ed9041e5ba11f054",
+        "message": "docs: define blueprint coordinate transform",
+        "additions": 103,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-9a2d4f4182ef70939387f916bf375eed5cfbc76e",
+      "type": "commit",
+      "ts": "2026-07-22T18:51:55Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "fix",
+      "data": {
+        "sha": "9a2d4f4182ef70939387f916bf375eed5cfbc76e",
+        "message": "fix: honor absolute blueprint positions",
+        "additions": 165,
+        "deletions": 35
+      }
+    },
+    {
+      "id": "commit-065894a66bf52a7d45bfcaec2494963a5965b66b",
+      "type": "commit",
+      "ts": "2026-07-22T18:37:39Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "fix",
+      "data": {
+        "sha": "065894a66bf52a7d45bfcaec2494963a5965b66b",
+        "message": "fix: cover full agricultural tower growth area",
+        "additions": 76,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-a833ff33cde1a41daa83c17d78461381a0ceda06",
+      "type": "commit",
+      "ts": "2026-07-22T18:35:59Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "a833ff33cde1a41daa83c17d78461381a0ceda06",
+        "message": "feat: Fulgora L3 done\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-e799ec1219f92770e21f2091b2332dbe1a7a9be2",
+      "type": "commit",
+      "ts": "2026-07-22T17:13:41Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "e799ec1219f92770e21f2091b2332dbe1a7a9be2",
+        "message": "feat: Fulgora L3 done\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 15,
+        "deletions": 1263
+      }
+    },
+    {
+      "id": "commit-dc8dae32a58c6644a77de5766c4ecfa2721eaba8",
+      "type": "commit",
+      "ts": "2026-07-22T17:08:01Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "fix",
+      "data": {
+        "sha": "dc8dae32a58c6644a77de5766c4ecfa2721eaba8",
+        "message": "fix: expand Vulcanus territory buffer",
+        "additions": 29,
+        "deletions": 19
+      }
+    },
+    {
+      "id": "commit-6eee771b1e36eeb5a655b9698afc24a67ffae64f",
+      "type": "commit",
+      "ts": "2026-07-22T17:03:58Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "fix",
+      "data": {
+        "sha": "6eee771b1e36eeb5a655b9698afc24a67ffae64f",
+        "message": "fix: prevent Vulcanus territory regeneration",
+        "additions": 146,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-32e6bea11a2466773169ed4936013dbddb7e971a",
+      "type": "commit",
+      "ts": "2026-07-22T16:15:46Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "32e6bea11a2466773169ed4936013dbddb7e971a",
+        "message": "feat: Fulgora L3 done\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 4,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-8a54fd893de8bf2ecbe2eef04c2909f428289b48",
+      "type": "commit",
+      "ts": "2026-07-22T15:03:09Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "8a54fd893de8bf2ecbe2eef04c2909f428289b48",
+        "message": "feat: Fulgora L3 done\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 9,
+        "deletions": 9
+      }
+    },
+    {
+      "id": "commit-19f01f9322b7f1cb5441e652f48be34b41d987d1",
+      "type": "commit",
+      "ts": "2026-07-22T14:33:24Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "19f01f9322b7f1cb5441e652f48be34b41d987d1",
+        "message": "feat: Nauvis Vulcanus L3 done\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 42,
+        "deletions": 17
+      }
+    },
+    {
+      "id": "commit-ff9fb3cf3aec4bdb391e9e7a7aa0c83bb75bac91",
+      "type": "commit",
+      "ts": "2026-07-22T14:20:10Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "fix",
+      "data": {
+        "sha": "ff9fb3cf3aec4bdb391e9e7a7aa0c83bb75bac91",
+        "message": "fix: resolve offshore tile LuaObjects",
+        "additions": 50,
+        "deletions": 13
+      }
+    },
+    {
+      "id": "commit-164411287582a6f79a5c7c5e808154e77033ca19",
+      "type": "commit",
+      "ts": "2026-07-22T14:08:50Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "fix",
+      "data": {
+        "sha": "164411287582a6f79a5c7c5e808154e77033ca19",
+        "message": "fix: resolve place-as-tile result prototypes",
+        "additions": 8,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-48afe953bb1dab734abe623a877f3f9b4dd40c91",
+      "type": "commit",
+      "ts": "2026-07-22T14:06:49Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "docs",
+      "data": {
+        "sha": "48afe953bb1dab734abe623a877f3f9b4dd40c91",
+        "message": "docs: document unified resource marker contract",
+        "additions": 50,
+        "deletions": 24
+      }
+    },
+    {
+      "id": "commit-94eeddcef539e7240c31c058174e3210fb8d7ae7",
+      "type": "commit",
+      "ts": "2026-07-22T14:03:57Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "refactor",
+      "data": {
+        "sha": "94eeddcef539e7240c31c058174e3210fb8d7ae7",
+        "message": "refactor: seed resources only from mining blueprints",
+        "additions": 24,
+        "deletions": 65
+      }
+    },
+    {
+      "id": "commit-e87695a49bd45cf26f8b84d90e42411de6bc1dd1",
+      "type": "commit",
+      "ts": "2026-07-22T14:03:09Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "e87695a49bd45cf26f8b84d90e42411de6bc1dd1",
+        "message": "feat: place all resources from marker zones",
+        "additions": 505,
+        "deletions": 467
+      }
+    },
+    {
+      "id": "commit-29999fcfc5f60cfeed581a4a4cd6114f52cba1e2",
+      "type": "commit",
+      "ts": "2026-07-22T14:00:59Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "feat",
+      "data": {
+        "sha": "29999fcfc5f60cfeed581a4a4cd6114f52cba1e2",
+        "message": "feat: resolve unified resource markers",
+        "additions": 423,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-478295c4db1b96b6c7216f85c01f577c842c3f41",
+      "type": "commit",
+      "ts": "2026-07-22T13:58:04Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "docs",
+      "data": {
+        "sha": "478295c4db1b96b6c7216f85c01f577c842c3f41",
+        "message": "docs: add unified resource marker plan",
+        "additions": 992,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-969af218615994c2f4296f482b97d31065a0e751",
+      "type": "commit",
+      "ts": "2026-07-22T13:45:49Z",
+      "repo": "MRNIU/factorio_BestLanding",
+      "semantic": "docs",
+      "data": {
+        "sha": "969af218615994c2f4296f482b97d31065a0e751",
+        "message": "docs: design unified resource markers",
+        "additions": 253,
+        "deletions": 0
+      }
+    },
+    {
       "id": "ai-roast-2026-07-13",
       "type": "ai_roast",
       "ts": "2026-07-19T00:00:00Z",
