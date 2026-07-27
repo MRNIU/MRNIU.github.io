@@ -9,8 +9,8 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-07-20 ~ 2026-07-26",
-        "content": "Twenty-2 commits straight to main with 0 reviews — at this point your landing-area cleanup mod should also run on your commit log. The double \"first 4 plants L3 done\" is either a copy-paste mistake or you’re planting factories so fast you committed it twice for symmetry. At least \"fix: honor absolute blueprint positions\" suggests you eventually realized the planet isn’t always at (0,0).",
-        "status": "draft",
+        "content": "22 commits, 0 reviews, and a duplicate “feat: first 4 plants L3 done” — your repo feels like a Factorio assembler stuck in an item spillage loop. The coordinate transform refactor immediately followed by “fix: honor absolute blueprint positions” proves you debug in production, which is quintessential modder behavior, but at least your landing zone is cleaner than your commit hygiene.",
+        "status": "final",
         "stats": {
           "totalCommits": 22,
           "topRepo": "MRNIU/factorio_BestLanding"
