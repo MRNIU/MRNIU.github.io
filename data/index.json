@@ -1,6 +1,6 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-07-27T03:05:20.532Z",
+  "generatedAt": "2026-08-01T03:03:52.943Z",
   "stats": {
     "totalCommits": 2177,
     "totalPRs": 257,
@@ -9,13 +9,13 @@
     "totalComments": 192,
     "activeRepos": 72,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-07-26T00:00:00Z"
+    "latestEvent": "2026-07-31T00:00:00Z"
   },
   "months": [
     {
       "key": "2026-07",
       "file": "2026-07.json",
-      "eventCount": 42,
+      "eventCount": 43,
       "repos": [
         "MRNIU/factorio_BestLanding",
         "MRNIU/factorio_LegendaryMechStart",
@@ -23,6 +23,7 @@
         "MRNIU/nzh_factorio_mod"
       ],
       "breakdown": {
+        "ai_summary": 1,
         "ai_roast": 3,
         "commit": 39
       },

@@ -2,6 +2,50 @@
   "month": "2026-07",
   "events": [
     {
+      "id": "ai-summary-month-2026-07",
+      "type": "ai_summary",
+      "ts": "2026-07-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-07-01",
+          "end": "2026-07-31",
+          "label": "2026-07"
+        },
+        "content": "In July, development shifted to the Factorio mod project MRNIU/factorio_BestLanding, with 39 commits entirely focused on feature work (feat). The main effort centered on seeding planetary starter farms, completing Level 3 setups for Gleba, Fulgora, Vulcanus, and Nauvis, and implementing a unified resource marker system alongside blueprint coordinate transforms. Compared to June’s refactor-heavy work across 8 repos, this month concentrated on a single repo, iterating rapidly on game mod features with frequent fix and docs commits, and no PRs or external collaboration were recorded. Recurring patterns included multi-commit feature sequences, immediate follow-up fixes for placement or coverage issues, and structured design docs preceding implementation.",
+        "highlights": [
+          "39 commits, 0 PRs, 0 reviews, 0 issues, 0 comments, 4 active repos",
+          "Top repo: MRNIU/factorio_BestLanding"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 39,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 0,
+          "activeRepos": 4,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from drivercraft/ostool to MRNIU/factorio_BestLanding",
+            "Dominant semantic tag changed from refactor to feat",
+            "Commit volume increased by 11"
+          ]
+        }
+      }
+    },
+    {
       "id": "ai-roast-2026-07-20",
       "type": "ai_roast",
       "ts": "2026-07-26T00:00:00Z",
