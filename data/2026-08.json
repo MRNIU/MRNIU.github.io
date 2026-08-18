@@ -1,0 +1,18 @@
+{
+  "month": "2026-08",
+  "events": [
+    {
+      "id": "commit-e3eff71929d32a778a13f8a06bf3beae6aa35267",
+      "type": "commit",
+      "ts": "2026-08-17T08:43:47Z",
+      "repo": "EHAPower/project_template",
+      "semantic": "chore",
+      "data": {
+        "sha": "e3eff71929d32a778a13f8a06bf3beae6aa35267",
+        "message": "chore(namespace): 切换模板镜像组织命名空间\n\nGitHub 组织更名后，模板基础镜像的构建、发布和派生项目示例需要统一使用 EHAPower 的 GHCR 命名空间。\n\n- 更新基础镜像的 FROM、构建标签和发布目标\n- 同步 CI 环境变量及容器文档示例\n- 保持现有 latest 标签策略和容器运行合同不变\n\n验证：\n- git diff --cached --check\n- 确认活动内容不再包含旧 GitHub/GHCR URL\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 13,
+        "deletions": 13
+      }
+    }
+  ]
+}
