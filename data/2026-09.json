@@ -1,0 +1,151 @@
+{
+  "month": "2026-09",
+  "events": [
+    {
+      "id": "ai-roast-2026-09-07",
+      "type": "ai_roast",
+      "ts": "2026-09-13T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-09-07 ~ 2026-09-13",
+        "content": "EHAPower/devcontainers 这周 8 个 commit 里有两个一模一样的 feat: update ci，后面又跟着 feat: remove .dockerignore，像在 CI 上反复横跳，最后靠 fix: 在预置虚拟环境中提供 Python 和 pip 才把基础镜像救回来， 0 PR 0 review 的传统保持得比镜像层还稳定。 EHAPower/project_template 上周刚切 namespace，这周直接 ci: 删除模板仓库的 CI 加 refactor(template)!: 移除容器环境及相关约定，模板已经自信到教新项目先删 CI、再拆 devcontainer 了？",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 10,
+          "topRepo": "EHAPower/devcontainers"
+        }
+      }
+    },
+    {
+      "id": "commit-a0fc602e6aa99f0d3bf8315ff8c765d7eb5ed755",
+      "type": "commit",
+      "ts": "2026-09-07T12:24:51Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": "feat",
+      "data": {
+        "sha": "a0fc602e6aa99f0d3bf8315ff8c765d7eb5ed755",
+        "message": "feat: update ci\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 55,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-f828bfb9d106be3834f910d48c967e57c85b0e53",
+      "type": "commit",
+      "ts": "2026-09-07T11:41:00Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": "feat",
+      "data": {
+        "sha": "f828bfb9d106be3834f910d48c967e57c85b0e53",
+        "message": "feat: update ci\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 5,
+        "deletions": 14
+      }
+    },
+    {
+      "id": "commit-f633742cd139e0af0b63a5041a760c8239396ee3",
+      "type": "commit",
+      "ts": "2026-09-07T11:32:23Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": "feat",
+      "data": {
+        "sha": "f633742cd139e0af0b63a5041a760c8239396ee3",
+        "message": "feat: remove .dockerignore\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 0,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-0b5f37a0ccc16de77e9297782f009dd950fa93b3",
+      "type": "commit",
+      "ts": "2026-09-07T11:25:03Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": null,
+      "data": {
+        "sha": "0b5f37a0ccc16de77e9297782f009dd950fa93b3",
+        "message": "build: 简化基础镜像工具安装与 latest 发布流程\n\n- 使用单个 Buildx/QEMU job 构建双架构镜像，仅发布 latest，\n  保留 PR 只构建和 main 发布条件。\n- 移除 mise、Neovim 和 cargo-binstall，常用工具改用 apt，\n  Rust 扩展使用 Cargo 安装，默认编辑器改为 Vim。\n- 将 zshrc 移至根目录，使用 fdfind 并更新构建上下文与触发路径。\n  apt 版 bat 使用 batcat，yq 使用 Python/jq 实现。\n- 添加简体中文语言包和 zh_CN.UTF-8，保留英文默认值，\n  移除固定 LC_ALL，统一通过 Dockerfile ENV 提供环境变量。\n- 精简 README，删除 AGENTS.md，补充配置文件版权声明。\n\n验证：暂存差异检查和 zshrc 语法检查通过；最终版本未重新构建。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 62,
+        "deletions": 133
+      }
+    },
+    {
+      "id": "commit-e17af6faaf93ecb595cd3310b5f80524f8966f09",
+      "type": "commit",
+      "ts": "2026-09-07T10:45:13Z",
+      "repo": "EHAPower/project_template",
+      "semantic": "ci",
+      "data": {
+        "sha": "e17af6faaf93ecb595cd3310b5f80524f8966f09",
+        "message": "ci: 删除模板仓库的 CI\n\n模板仓库只维护文档和协作配置，不再通过 GitHub Actions 运行模板检查及 DCO 检查。删除 CI workflow，并在 README 中明确由派生项目按实际需求配置 CI。\n\n验证：git diff --check 通过；未运行 CI 或构建。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 3,
+        "deletions": 56
+      }
+    },
+    {
+      "id": "commit-67d8d30765d6c448c46881c4cc86bd6962b3ecea",
+      "type": "commit",
+      "ts": "2026-09-07T10:45:13Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": "style",
+      "data": {
+        "sha": "67d8d30765d6c448c46881c4cc86bd6962b3ecea",
+        "message": "style: 整理 Dockerfile 排版并补充安装注释\n\n统一环境变量、依赖清单和安装命令的缩进与换行，补充各工具组、Python 环境和 zsh 配置的用途说明。保持工具清单和安装行为不变。\n\n验证：静态差异检查通过，未重新构建镜像。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 111,
+        "deletions": 30
+      }
+    },
+    {
+      "id": "commit-92175b3e88d720575f5c8bed9297a6e0607e8be9",
+      "type": "commit",
+      "ts": "2026-09-07T10:39:07Z",
+      "repo": "EHAPower/project_template",
+      "semantic": "refactor",
+      "data": {
+        "sha": "92175b3e88d720575f5c8bed9297a6e0607e8be9",
+        "message": "refactor(template)!: 移除容器环境及相关约定\n\n共享开发基础镜像已迁至 EHAPower/devcontainers，模板专注项目规则、\n文档结构和通用协作配置，开发环境由派生项目自行维护。\n\n删除 .devcontainer 目录及镜像发布 workflow，CI 改为直接在 runner\n执行 DCO 和 pre-commit 检查。清理 README、AGENTS 和各文档模板中的\n容器命名、挂载、执行入口及产物路径要求，保留通用产物归档约定。\n\n验证：pre-commit 全文件检查、变更文件复查及 git diff --check 通过；\n当前文件无 Docker/Dev Container 相关引用。未触发镜像构建。\n\nBREAKING CHANGE: 模板不再提供开发容器或发布基础镜像。派生项目需自行\n声明开发环境；需要共享镜像时使用 EHAPower/devcontainers。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 68,
+        "deletions": 626
+      }
+    },
+    {
+      "id": "commit-7c5796f0a8093b6d81f4dc6225f7b5e9e50aa787",
+      "type": "commit",
+      "ts": "2026-09-07T10:26:17Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": "fix",
+      "data": {
+        "sha": "7c5796f0a8093b6d81f4dc6225f7b5e9e50aa787",
+        "message": "fix: 在预置虚拟环境中提供 Python 和 pip\n\nuv 管理的解释器禁止直接安装 pip，导致双架构构建失败。\n用最新解释器创建带 pip 的虚拟环境，并统一默认 python/pip 的 PATH。\n项目环境和全局 Python CLI 仍各自隔离。\n\n验证：重新执行 Docker 构建，不增加测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 4,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-7f5f7da13664d203dfd03fa6c0b4275b6ccb9745",
+      "type": "commit",
+      "ts": "2026-09-07T10:20:39Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": null,
+      "data": {
+        "sha": "7f5f7da13664d203dfd03fa6c0b4275b6ccb9745",
+        "message": "build!: 按开发习惯完善基础镜像并精简约定\n\n改用默认 root 和 Oh My Zsh，补齐 Rust/嵌入式、Python、终端及排障工具。\n通过最新基础镜像、上游工具发行版和无缓存构建持续更新环境。\nCI 使用原生 amd64/arm64 runner 并行构建，成功后统一发布镜像标签。\n\nGit 属性、忽略文件与提交模板只在仓库维护，镜像仅配置工作区信任及 LFS。\n删除本仓库的常驻开发容器配置、模板版权和冗余维护规则。\n\nBREAKING CHANGE: 镜像不再提供 dev 用户；派生项目移除 USER dev 和 remoteUser: dev。\n\n验证：差异检查通过；以 CI 镜像构建作为验收，不添加测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 250,
+        "deletions": 226
+      }
+    },
+    {
+      "id": "commit-a66472c105de4ef5f4e95bf0d64e01edc240c363",
+      "type": "commit",
+      "ts": "2026-09-07T09:56:27Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": null,
+      "data": {
+        "sha": "a66472c105de4ef5f4e95bf0d64e01edc240c363",
+        "message": "build: 初始化共享开发基础镜像\n\n迁入通用开发工具，供各项目通过 FROM 追加专用依赖。\n使用官方 Node.js current，解决发行版 Node 与最新 npm 不兼容的问题。\n配置双架构构建、每周更新和 GHCR 发布；验收仅要求构建成功。\n\n验证：本地 linux/arm64 Docker 镜像构建成功；未运行测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 337,
+        "deletions": 0
+      }
+    }
+  ]
+}

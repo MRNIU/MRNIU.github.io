@@ -1,17 +1,34 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-08-18T02:24:44.949Z",
+  "generatedAt": "2026-09-08T02:11:45.588Z",
   "stats": {
-    "totalCommits": 2178,
+    "totalCommits": 2188,
     "totalPRs": 257,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 192,
-    "activeRepos": 73,
+    "activeRepos": 74,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-08-17T08:43:47Z"
+    "latestEvent": "2026-09-13T00:00:00Z"
   },
   "months": [
+    {
+      "key": "2026-09",
+      "file": "2026-09.json",
+      "eventCount": 11,
+      "repos": [
+        "EHAPower/devcontainers",
+        "EHAPower/project_template"
+      ],
+      "breakdown": {
+        "ai_roast": 1,
+        "commit": 10
+      },
+      "repoBreakdown": {
+        "EHAPower/devcontainers": 8,
+        "EHAPower/project_template": 2
+      }
+    },
     {
       "key": "2026-08",
       "file": "2026-08.json",
