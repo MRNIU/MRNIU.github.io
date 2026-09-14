@@ -2,6 +2,32 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "commit-4d2634a97a27d6f9551bbcf834cd9f1568ebdc18",
+      "type": "commit",
+      "ts": "2026-09-13T14:34:38Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "4d2634a97a27d6f9551bbcf834cd9f1568ebdc18",
+        "message": "Add legendary heating towers to common industry cargo",
+        "additions": 9,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-3f841ffe6d28fc9b099e7c4514c6f4df6e87db8b",
+      "type": "commit",
+      "ts": "2026-09-13T07:25:58Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "3f841ffe6d28fc9b099e7c4514c6f4df6e87db8b",
+        "message": "Add legendary quality modules and update Nauvis starter cargo",
+        "additions": 20,
+        "deletions": 3
+      }
+    },
+    {
       "id": "ai-roast-2026-09-07",
       "type": "ai_roast",
       "ts": "2026-09-13T00:00:00Z",
@@ -9,10 +35,10 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-09-07 ~ 2026-09-13",
-        "content": "EHAPower/devcontainers 这周 8 个 commit 里有两个一模一样的 feat: update ci，后面又跟着 feat: remove .dockerignore，像在 CI 上反复横跳，最后靠 fix: 在预置虚拟环境中提供 Python 和 pip 才把基础镜像救回来， 0 PR 0 review 的传统保持得比镜像层还稳定。 EHAPower/project_template 上周刚切 namespace，这周直接 ci: 删除模板仓库的 CI 加 refactor(template)!: 移除容器环境及相关约定，模板已经自信到教新项目先删 CI、再拆 devcontainer 了？",
-        "status": "draft",
+        "content": "EHAPower/devcontainers 这周 8 个 commit 里 2 个叫 `feat: update ci`，加上 `feat: remove .dockerignore`，感觉 `feat` 已经变成“我改了什么但不想写清”的统称； EHAPower/project_template 上周刚切模板镜像 namespace，这周就删 CI、移除容器环境，模板自己先跑路了。 MRNIU/factorio_LegendaryMechStart 的 2 个 commit 继续给 Nauvis 起始货舱塞 legendary heating towers 和 quality modules，跟之前的 factorio_BestLanding 蓝图流各写各的。旁边 12 个 commit、0 PR、0 review，三个仓库都默契地选择了“push -f 自己信自己”。",
+        "status": "final",
         "stats": {
-          "totalCommits": 10,
+          "totalCommits": 12,
           "topRepo": "EHAPower/devcontainers"
         }
       }
