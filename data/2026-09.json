@@ -2,6 +2,217 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "ai-roast-2026-09-14",
+      "type": "ai_roast",
+      "ts": "2026-09-20T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-09-14 ~ 2026-09-20",
+        "content": "这周 16 个 commit 全在裸奔： 0 个 PR、0 条 review、0 个 issue，看来 main 分支就是你的草稿纸。 MRNIU/odrive-can-protocol 用 9 个 chore / docs / feat 完成了一场发布前自我感动式清理， MRNIU/brt-can-protocol 则靠 1 个真正的 fix 和若干 refactor 快速滑向 0.1.1，两个 rust CAN 协议库各演各的独角戏。唯一还算有进取心的是 MRNIU/factorio_LegendaryMechStart 用 1 个 feat 把产能拉满，整体像在给仓库做美颜，不像在写代码。",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 16,
+          "topRepo": "MRNIU/odrive-can-protocol"
+        }
+      }
+    },
+    {
+      "id": "commit-659ac3a7e073aee05d8792deae00fff6548b1945",
+      "type": "commit",
+      "ts": "2026-09-15T10:12:37Z",
+      "repo": "MRNIU/brt-can-protocol",
+      "semantic": "chore",
+      "data": {
+        "sha": "659ac3a7e073aee05d8792deae00fff6548b1945",
+        "message": "chore(release): 发布 0.1.1 并更新项目文档\n\n将 crate 与依赖示例更新为 0.1.1，发布此前修正的命令端序和扩展地址长度兼容处理。\nREADME 添加 CI、crates.io、docs.rs、许可证和 MSRV 徽章，整理安装与文档导航。\n完善贡献和发布验证说明，删除 Issue 入口及问题报告章节。\n\n验证：完整 CI 检查矩阵的 33 项命令通过，包括默认与可选适配测试、\nClippy、rustdoc、Rust 1.85、ARM 构建、打包及发布预演。\ncrates.io 0.1.1 已发布，下载包校验和与验证包一致。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 66,
+        "deletions": 16
+      }
+    },
+    {
+      "id": "commit-38016d0aa0b8d9254c735c9f21fd300f46231e0f",
+      "type": "commit",
+      "ts": "2026-09-15T10:10:05Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": "chore",
+      "data": {
+        "sha": "38016d0aa0b8d9254c735c9f21fd300f46231e0f",
+        "message": "chore: 清理 Issue 入口并发布 0.1.2\n\n仓库已关闭 Issues，删除贡献指南中的 Issue 入口，保留 Pull Request 说明。\n将包版本、锁文件与安装示例统一更新为 0.1.2。\n\n验证：默认及全 feature 测试、doctest、fmt、Clippy、rustdoc、示例运行、\n两种 Cortex-M 目标构建、H723/F405 兼容层检查、Rust 1.85 MSRV 检查、\n依赖与元数据检查、打包及发布 dry-run 全部通过。\n已发布至 crates.io，注册表版本与本地发布包 SHA-256 一致。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 7,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-ec7b38362cf7a39ca156e10a204c84fef29b8e96",
+      "type": "commit",
+      "ts": "2026-09-15T10:03:19Z",
+      "repo": "MRNIU/brt-can-protocol",
+      "semantic": "docs",
+      "data": {
+        "sha": "ec7b38362cf7a39ca156e10a204c84fef29b8e96",
+        "message": "docs: 精简协议说明与 API 注释\n\n将勘误整理为协议差异表、完整帧示例和编解码兼容性说明。\n精简 README、贡献指南及 API 注释，保留字段端序、帧校验、\n地址匹配和原始状态等使用前提，删除与库用法无关的叙述。\n\n协议实现保持不变，测试函数名与注释同步使用技术描述。\n验证：14 个协议测试、默认与可选 feature 的 doctest/rustdoc、\nRust 1.85 doctest、cargo fmt 和 cargo package 通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 53,
+        "deletions": 89
+      }
+    },
+    {
+      "id": "commit-3a17fd0d0c6b7c38c59d176d5c6056d438788a00",
+      "type": "commit",
+      "ts": "2026-09-15T09:54:44Z",
+      "repo": "MRNIU/brt-can-protocol",
+      "semantic": "fix",
+      "data": {
+        "sha": "3a17fd0d0c6b7c38c59d176d5c6056d438788a00",
+        "message": "fix(protocol): 修正命令端序与扩展地址报文长度\n\n将 0x22 请求和应答状态、0x0B 与 0x0D 请求改为大端，\n保留位置和速度响应、回传周期请求的小端编码。\n\n0x22 请求解码兼容 LEN=04、DLC=7，编码统一使用 LEN=07；\n应答继续要求 LEN=07、DLC=7。保留帧形态、地址和完整数据位校验。\n\n新增协议勘误与独立字节回归测试，更新 DEVICE_ID 说明，\n并将勘误纳入 crate 包清单。波特率值 03 对应 125 kbps。\n\n验证：默认、embedded-can、Embassy H723 测试及 Clippy、rustdoc；\nRust 1.85 默认与 embedded-can；ARM、H723/F405 构建及 cargo package。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 282,
+        "deletions": 36
+      }
+    },
+    {
+      "id": "commit-c542c3221307eaa7d77afb907c791bb16b0bfe0c",
+      "type": "commit",
+      "ts": "2026-09-15T08:39:58Z",
+      "repo": "MRNIU/brt-can-protocol",
+      "semantic": "refactor",
+      "data": {
+        "sha": "c542c3221307eaa7d77afb907c791bb16b0bfe0c",
+        "message": "refactor: 简化协议入口并精简测试文档\n\n将 v2_7 模块重命名为 protocol，说明书版本和 PDF 地址集中说明于 README。\n同步示例与公开入口，保持全部 13 个功能的编解码行为。\n\n合并重复的给定字节测试，测试代码减少 300 行，保留参数边界、未知状态、\nLEN/DLC 冲突、扩展地址独立性及原生 FD/RTR 误分类的回归覆盖。\n精简贡献指南与适配说明，删除独立验证记录及其发布包条目。\n沿用当前 LICENSE 的项目版权行，复用源码保留原有版权头和 MIT 条款。\n\n验证：27 项默认、可选 feature、MSRV 1.85、ARM 构建及工具检查通过；\n依赖树、metadata、发布包验证、两种芯片的文档示例编译和 docs.rs\n目标的 rustdoc 检查通过。软件验证不涉及实板通信。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 454,
+        "deletions": 970
+      }
+    },
+    {
+      "id": "commit-f76c96540351d4ae17470b8fc9f1c6ce05a7e725",
+      "type": "commit",
+      "ts": "2026-09-15T08:21:51Z",
+      "repo": "MRNIU/brt-can-protocol",
+      "semantic": "feat",
+      "data": {
+        "sha": "f76c96540351d4ae17470b8fc9f1c6ce05a7e725",
+        "message": "feat: 初始化 BRT CAN V2.7 协议库与发布准备\n\n实现说明书明确给出的 13 个功能请求与响应，保留位置 u32、速度 i32、\n普通 u8 状态和 0x22 的完整 u32 状态。以正文裁决 LEN 与端序冲突，\n支持五种波特率及七种模式设置，不推测未定义的主动回传布局。\n\n保持单个 Rust 2024 library crate，默认 no_std、无 alloc、零运行依赖，\n禁止 unsafe。区分请求和响应入口、标准及扩展 ID、独立 DEVICE_ID，\n由调用方负责地址变更后的匹配与实际应用、持久化结果判断。\n\n提供可选 embedded-can 和 Embassy STM32 帧转换；保留 FDF/RTR，\n拒绝非法原生长度，芯片由消费方选择。补齐中文文档、示例、支持矩阵、\nCI、docs.rs 元数据、发布包白名单与验证记录，保留 MIT 原版权归属。\n\n验证：17 项协议测试、9 项完整适配测试、doctest、fmt、Clippy/rustdoc\n警告视为错误、默认 ARMv7-M/ARMv6-M、H723/F405 ARM 构建全部通过。\nRust 1.85 默认库及 embedded-can 的检查、测试和 doctest 均通过；\n依赖树、元数据、解包消费方、cargo package 与 publish --dry-run 通过。\n未执行设备操作、真实发布、push、tag 或 Release。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 3435,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-5b28d12b6c423f3e930f6cbde5a5fa5e64078c6c",
+      "type": "commit",
+      "ts": "2026-09-15T07:42:00Z",
+      "repo": "MRNIU/brt-can-protocol",
+      "semantic": null,
+      "data": {
+        "sha": "5b28d12b6c423f3e930f6cbde5a5fa5e64078c6c",
+        "message": "Initial commit",
+        "additions": 21,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-ab051c5ff77046cee827b4a961f76fe5df39f155",
+      "type": "commit",
+      "ts": "2026-09-15T07:14:38Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": "feat",
+      "data": {
+        "sha": "ab051c5ff77046cee827b4a961f76fe5df39f155",
+        "message": "feat: 将 CAN 兼容层内置为可选 feature 并精简维护内容\n\n提供 embedded-can、embassy-stm32、socketcan 三个可选 feature。\nEncodedFrame 可通过标准 From 转为 Embassy/SocketCAN 原生帧，\nFrameRef 通过 TryFrom 直接借用接收帧；通用 embedded-can 接收入口\n明确命名为 from_classic_embedded_can，避免隐藏 FD 或错误帧语义。\n\n删除复制式适配示例和临时消费方验证脚本，合并为 5 项关键边界测试，\n改用 Cargo feature 直接执行 CI。精简 README、示例指南和贡献文档。\n除自动生成的 lockfile 外，手写内容净减 278 行。\n\n默认构建继续保持 no_std、无 alloc、零运行时依赖及 Rust 1.85。\nEmbassy 芯片由应用依赖选择；SocketCAN feature 限 Linux/Rust 1.89。\n同步维护约束，保留 MKS ODrive Mini 指定 0.5.1 源码基线说明。\n\n验证：默认及全 feature 测试、doctest、Clippy、rustdoc、H723/F405\n交叉检查、两个 Cortex-M 默认构建、默认与 embedded-can 的 Rust 1.85\n检查、零默认依赖图、cargo package 和 publish --dry-run 均通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1348,
+        "deletions": 811
+      }
+    },
+    {
+      "id": "commit-4b1be7ce5d28f627b5a41b3a45eaf242338d6231",
+      "type": "commit",
+      "ts": "2026-09-15T07:03:45Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": "feat",
+      "data": {
+        "sha": "4b1be7ce5d28f627b5a41b3a45eaf242338d6231",
+        "message": "feat: 完善常用 CAN 框架适配并准备 0.1.1 发布\n\n补充 embedded-can/bxCAN 与 Linux SocketCAN 纯帧转换，扩展 Embassy\nFdFrame 容器支持，保留 Classic、RTR、扩展 ID 与 FDF 语义，并拒绝\n将 Linux 错误通知作为 ODrive 协议数据。明确 RTIC、STM32 HAL 和\nTokio 的复用边界，以及 fdcan 0.2.1 无法完整表达发送帧的限制。\n\n在临时消费方中编译和测试随包分发的适配源码，将帧测试、Clippy\n及 Embassy H723/F405 交叉检查纳入 CI。核心库仍为单个 no_std、\n无 alloc、零依赖、零 feature 的 library crate，MSRV 保持 1.85。\n\n将 MKS ODrive Mini 指定 0.5.1 源码包列入支持矩阵，记录重新核对\n的三份协议文件哈希及固件身份前提。版本提升至 0.1.1。\n\n验证：9 项协议测试、1 项文档测试、9 项原生适配帧测试、格式、\nClippy、rustdoc、两个 Cortex-M 目标、Rust 1.85、适配交叉检查、\n零依赖元数据检查、cargo package 和 cargo publish --dry-run 均通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 523,
+        "deletions": 23
+      }
+    },
+    {
+      "id": "commit-d04791ec012624afa93024fe9ad3550121e07b82",
+      "type": "commit",
+      "ts": "2026-09-15T06:50:49Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": "docs",
+      "data": {
+        "sha": "d04791ec012624afa93024fe9ad3550121e07b82",
+        "message": "docs: 精简快速开始与协议基线说明\n\n快速开始保留最小速度命令编码示例，通过链接提供完整 RTR 查询与 Heartbeat 解码。\n压缩基线证据为固定源码 revision、三项关键兼容差异和 MKS 源码一致性范围，\n删除重复说明与文件哈希表，保持其他 README 章节不变。\n\n验证通过：README doctest、rustdoc 警告检查、完整 encode_decode 示例运行和独立复核。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 27,
+        "deletions": 73
+      }
+    },
+    {
+      "id": "commit-fe7133be7ec64ee5887f63fe93ed214ae567cc1a",
+      "type": "commit",
+      "ts": "2026-09-15T06:48:48Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": null,
+      "data": {
+        "sha": "fe7133be7ec64ee5887f63fe93ed214ae567cc1a",
+        "message": "doc: update LICENSE\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 5
+      }
+    },
+    {
+      "id": "commit-5b0ebb6dd93ab5c38a8b93ce219a698cb3503f0f",
+      "type": "commit",
+      "ts": "2026-09-15T06:40:41Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": "chore",
+      "data": {
+        "sha": "5b0ebb6dd93ab5c38a8b93ce219a698cb3503f0f",
+        "message": "chore: 统一仓库名称并删除 CHANGELOG\n\n将仓库中的 GitHub 链接、包元数据、路径示例、版权头、开发约定及 CI 临时文件名\n统一为 odrive-can-protocol，配合 GitHub 仓库与 origin 的改名。\n删除 CHANGELOG.md 及打包清单、贡献指南中的关联引用，版本说明改由 GitHub Release 维护。\n保留 MIT 原始许可条款及版权信息；不改变协议 API 或已发布版本。\n\n验证通过：旧名称与文件引用扫描、MIT 条款比对、fmt、9 个协议测试、README doctest、\nClippy 与 rustdoc 警告检查、本地 cargo package、零依赖和打包内容核对。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 38,
+        "deletions": 53
+      }
+    },
+    {
+      "id": "commit-990a044d14f28840c15a566a45f7957926c92000",
+      "type": "commit",
+      "ts": "2026-09-15T06:33:42Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": "chore",
+      "data": {
+        "sha": "990a044d14f28840c15a566a45f7957926c92000",
+        "message": "chore(release): 准备 odrive-can-protocol 0.1.0 开源发布\n\n将发布包命名为 odrive-can-protocol，Rust 引用统一使用 odrive_can_protocol。\n项目面向通用 CANSimple 和后续固件支持，保留当前 fw_v0_5_1 模块的明确语义。\n\n删除 docs 目录，将完整消息表、官方 revision、实现差异和 MKS 源码兼容依据\n合并到 README。重写安装说明、API 示例和时序图，增加贡献指南与变更记录，\n同步包元数据与打包文件范围，具体驱动适配继续集中在 examples。\n\n验证通过：fmt、9 个协议测试、README doctest、运行示例、Clippy、rustdoc，\n两个 Cortex-M 目标构建、Rust 1.85 MSRV、零依赖及 feature 检查，\ncargo package 和 publish dry-run，以及适配模块的 2 个测试和 ARM 编译。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 291,
+        "deletions": 349
+      }
+    },
+    {
+      "id": "commit-754ba9a7c523a193834b0b7de73c831c566e2ba9",
+      "type": "commit",
+      "ts": "2026-09-15T06:20:23Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": "feat",
+      "data": {
+        "sha": "754ba9a7c523a193834b0b7de73c831c566e2ba9",
+        "message": "feat: 实现通用 ODrive CANSimple 协议库\n\n建立 Rust 2024、no_std、无 alloc 和外部依赖的单 library crate，\n以官方 fw-v0.5.1 固定 revision 完整实现 23 个有效 CANSimple 命令号。\n提供固定大小编码帧和借用解码视图，区分写命令、RTR 查询及设备数据。\n完整保留 u32 轴状态与未知错误位，显式处理节点、长度、非有限输入和帧形态边界。\n\n补齐中文 API 文档、协议来源及 MKS 发布源码兼容证据、独立字节测试和 CI。\n统一文件版权与中文职责介绍，保留原 MIT 条款及版权。\nREADME 增加协议交接时序图，通用文档仅描述库职责与可复现检查；\n具体驱动的帧适配方法集中在 examples，不向协议库引入 HAL 依赖。\n编码、发送、设备状态与运动结果分别表达，不内置设备控制或恢复流程。\n\n验证通过：fmt、9 个协议测试、README doctest、运行示例、Clippy 与 rustdoc 警告检查，\nthumbv7em-none-eabihf 和 thumbv6m-none-eabi 库构建，Rust 1.85 MSRV，\n零依赖及 feature 核对、本地 cargo package，以及独立消费方的适配模块编译检查。\n协议与提交内容均完成独立复核；软件结果不代表设备或总线验证。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2123,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-9390b768402c39ec092d1bd95c24a6b78910c0dd",
+      "type": "commit",
+      "ts": "2026-09-15T05:42:37Z",
+      "repo": "MRNIU/odrive-can-protocol",
+      "semantic": null,
+      "data": {
+        "sha": "9390b768402c39ec092d1bd95c24a6b78910c0dd",
+        "message": "Initial commit",
+        "additions": 21,
+        "deletions": 0
+      }
+    },
+    {
       "id": "commit-6e688514dc19bef18cea41b196af119668f1eaa8",
       "type": "commit",
       "ts": "2026-09-14T16:44:32Z",
