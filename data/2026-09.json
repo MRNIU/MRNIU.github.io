@@ -2,6 +2,19 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "pr-1-MRNIU/embassy",
+      "type": "pull_request",
+      "ts": "2026-09-20T15:27:01Z",
+      "repo": "MRNIU/embassy",
+      "semantic": null,
+      "data": {
+        "number": 1,
+        "title": "stm32/flash: add optional erase parallelism",
+        "state": "open",
+        "body": "STM32F2/F4/F7 and `flash_h7` erase routines inherit PSIZE from the register state, which programming can change. This adds an optional erase-parallelism selection through `flash::Config` and the `new_with_config` / `new_blocking_with_config` constructors.\n\n```rust\nlet mut config = Config::default();\nconfig.erase_parallelism = Some(EraseParallelism::X32);\nlet flash = Flash::new_blocking_with_config(p.FLASH, config);\n```\n\nExisting constructors remain source-compatible and use `None`, which leaves PSIZE unchanged, including changes made by writes. An explicit selection is applied before each sector erase and retained by both region-splitting methods. Programming access width, erase units, address layout, and existing error handling are unchanged.\n\nCallers must satisfy the selected device's voltage/VPP requirements throughout the erase. F2/F4/F7 x64 requires external VPP where supported; H7 has different electrical limits. The driver does not measure supply voltage. STM32H7A/B is excluded because its FLASH peripheral has no PSIZE selection; see the [ST register definitions](https://github.com/STMicroelectronics/cmsis-device-h7/blob/master/Include/stm32h7a3xx.h).\n\nValidation in a Linux development container:\n\n- All five STM32 host-test configurations from `.github/ci/test.sh` passed: F429VG single/dual bank, F732ZE, and F769NI single/dual bank.\n- ARM library builds with `-Dwarnings` passed for F207ZG, F429VG, F732ZE, H723ZG, H7A3ZI, H7B3AI, G474RE, and F103C8, covering supported and unaffected conditional branches.\n- Changed Rust files passed the repository's nightly formatter; `git diff --check` passed.\n\nHardware validation at `4bfdd3e0761c85b4aea60d3655600ecab552cf45`:\n\n- Tested an STM32H723VGT6 (single-bank, 1 MiB Flash) on an EHA Controller. The schematic specifies a 3.3 V MCU supply; supply voltage was not measured during this run.\n- A temporary RAM-resident program called this branch's public Flash APIs on one initially erased 128 KiB sector. All 12 cases passed: X8/X16/X32/X64 in blocking and async modes, both original constructors with the default `None`, and blocking/async region splitting.\n- Explicit selections were checked against a different preset PSIZE. Each case erased, wrote/read back one 32-byte Flash word, then erased again and checked the entire sector for `0xFF`. Register checks confirmed that explicit settings were reapplied after writes and that `None` preserved the current PSIZE.\n- A full 1 MiB Flash dump was byte-identical before and after the test, and the original application was restarted.\n\nThe async cases used a polling runner, so they do not independently verify executor wakeups. Other MCU families, dual-bank hardware, cancellation/power-loss behavior, and electrical/timing limits were not tested on hardware.\n\nThe PR retains the existing tests and does not add a host register-emulation harness or the temporary hardware-test program.\n"
+      }
+    },
+    {
       "id": "ai-roast-2026-09-14",
       "type": "ai_roast",
       "ts": "2026-09-20T00:00:00Z",
@@ -9,8 +22,8 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-09-14 ~ 2026-09-20",
-        "content": "这周 16 个 commit 全在裸奔： 0 个 PR、0 条 review、0 个 issue，看来 main 分支就是你的草稿纸。 MRNIU/odrive-can-protocol 用 9 个 chore / docs / feat 完成了一场发布前自我感动式清理， MRNIU/brt-can-protocol 则靠 1 个真正的 fix 和若干 refactor 快速滑向 0.1.1，两个 rust CAN 协议库各演各的独角戏。唯一还算有进取心的是 MRNIU/factorio_LegendaryMechStart 用 1 个 feat 把产能拉满，整体像在给仓库做美颜，不像在写代码。",
-        "status": "draft",
+        "content": "这周 MRNIU/odrive-can-protocol 和 MRNIU/brt-can-protocol 各自刷了 9 个和 6 个 chore/docs/feat 提交， 0 个 PR、0 个 review、0 个 issue、0 个 comment，堪称双开无人值守发版现场。 Embassy 那边只开了一个 stm32/flash 的 optional erase parallelism PR，没有 review 跟进，像是往上游丢了个 async 任务就切走了。 factorio_LegendaryMechStart 从上周 2 个 commit 缩到 1 个 feat: inc productivity，只能说 mod 里的效率 buff 没能在 commit 频率上体现。",
+        "status": "final",
         "stats": {
           "totalCommits": 16,
           "topRepo": "MRNIU/odrive-can-protocol"
