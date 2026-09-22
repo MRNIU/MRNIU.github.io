@@ -2,6 +2,61 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "ai-roast-2026-09-21",
+      "type": "ai_roast",
+      "ts": "2026-09-27T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-09-21 ~ 2026-09-27",
+        "content": "0 commits but 3 flash PRs across two separate Embassy repos? That's not development, that's drive-by PR management. embassy-rs/embassy got two open STM32 flash tweaks with 0 reviews, while MRNIU/embassy closed a nearly identical PSIZE cleanup with no visible discussion—self-merge or surrender, pick one. The only thing async here is the review queue.",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 0,
+          "topRepo": "embassy-rs/embassy"
+        }
+      }
+    },
+    {
+      "id": "pr-7046-embassy-rs/embassy",
+      "type": "pull_request",
+      "ts": "2026-09-21T13:39:23Z",
+      "repo": "embassy-rs/embassy",
+      "semantic": null,
+      "data": {
+        "number": 7046,
+        "title": "stm32/flash: preserve PSIZE during programming cleanup",
+        "state": "open",
+        "body": "Programming cleanup on STM32F2/F4/F7 and H7 resets PSIZE from x32 to x8, causing subsequent erases to use x8. Use modify instead of write during cleanup to preserve PSIZE while clearing PG and the applicable interrupt enables."
+      }
+    },
+    {
+      "id": "pr-2-MRNIU/embassy",
+      "type": "pull_request",
+      "ts": "2026-09-21T12:06:10Z",
+      "repo": "MRNIU/embassy",
+      "semantic": null,
+      "data": {
+        "number": 2,
+        "title": "stm32/flash: preserve PSIZE during programming cleanup",
+        "state": "closed",
+        "body": "Programming on STM32F2/F4/F7 and H7 selects x32 parallelism, but the cleanup writes a zero-initialized control register and resets PSIZE to x8. The next erase inherits x8. This PR preserves the existing x32 setting when programming finishes.\n\n- Scope\n\n    Change the six programming cleanup writes from `write` to `modify`, retaining PSIZE while clearing PG and the existing async interrupt enables. Programming setup and bank/region routing remain unchanged. H7A/B has no PSIZE field; its existing conditional compilation and control-bit cleanup remain intact.\n\n- Validation\n\n    On an **STM32H723VGT6**, the same RAM-resident test program was built against baseline `96be1098` and this patch. The blocking path completed two erase → program → readback cycles in each build:\n\n    - Baseline: PSIZE was x8 after both writes and the second erase.\n    - Patched: PSIZE remained x32 after both writes and the second erase; PG was cleared and Flash was locked.\n    - Both builds returned the expected data. Checking PSIZE directly distinguished the regression from successful readback alone.\n\n    Software checks passed: 11 ARM library configurations covering F207, F407, F429, F732, F769, H723, H743, H7A3 and H7B3, including applicable single/dual-bank configurations; six existing host-test configurations; all five existing F4/F7/H7 Flash examples; formatting and diff checks.\n\n    Hardware coverage of the patch is limited to H723 blocking operations. Patched async/region paths and other chips were not tested on hardware. Attempting to program FF over zeroes did not produce a hardware error, so hardware-error return paths remain unverified. Host tests and builds do not establish register behavior.\n\n- Compatibility\n\n    No configuration API or programming parallelism default changes. This preserves the x32 selected at programming entry; it does not restore an arbitrary earlier PSIZE or guarantee x32 for the first erase. F4's cancel-time `OnDrop` also uses the updated cleanup, but no cancellation wait/recovery logic or safety guarantee is added. The existing H7 cancellation limitation remains.\n\n- Notes\n\n    No example changes are included. Configurable erase parallelism in embassy-rs/embassy#7044 is a separate concern. Codex was used as an aid during implementation and validation.\n"
+      }
+    },
+    {
+      "id": "pr-7044-embassy-rs/embassy",
+      "type": "pull_request",
+      "ts": "2026-09-21T06:00:06Z",
+      "repo": "embassy-rs/embassy",
+      "semantic": null,
+      "data": {
+        "number": 7044,
+        "title": "stm32/flash: add optional erase parallelism",
+        "state": "open",
+        "body": "While using the STM32H723VGT6, I found that Flash erase speed was slow. After reading the driver code, I confirmed that there is currently no configurable erase parallelism option, so I am submitting this PR to allow applications to select the erase parallelism based on the chip and power supply conditions.\r\n\r\n```rust\r\nlet mut config = Config::default();\r\nconfig.erase_parallelism = Some(EraseParallelism::X32);\r\nlet flash = Flash::new_blocking_with_config(p.FLASH, config);\r\n```\r\n\r\n- Scope\r\n\r\n    This PR provides **X8, X16, X32, and X64** configurations for:\r\n\r\n    - STM32F2/F4/F7\r\n    - H7 series with PSIZE\r\n\r\n    It covers blocking, async, and split region paths. H7A/B does not have PSIZE and is **not** supported in this PR.\r\n\r\n- Validation\r\n\r\n    Hardware validation has been completed on the **STM32H723VGT6**, covering:\r\n\r\n    - All four configurations\r\n    - Default behavior\r\n    - Region path\r\n    - Erase, write-readback, and re-erase\r\n\r\n- Compatibility\r\n\r\n    The original constructor remains compatible. The default `None` preserves the current PSIZE without actively modifying it; once the user specifies a parallelism, the driver applies that configuration before each erase, including the next erase after a write operation changes PSIZE.\r\n\r\n    Callers must meet the corresponding power supply and VPP requirements for the chip.\r\n\r\n- Discussion\r\n\r\n    One point worth discussing: should `None` be removed and callers be required to explicitly select the erase parallelism? It is currently kept for compatibility with existing behavior.\r\n\r\n- Notes\r\n\r\n    Codex was used as an aid during implementation and validation."
+      }
+    },
+    {
       "id": "pr-1-MRNIU/embassy",
       "type": "pull_request",
       "ts": "2026-09-20T15:27:01Z",

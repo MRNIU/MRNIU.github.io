@@ -1,36 +1,38 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-09-21T02:15:01.078Z",
+  "generatedAt": "2026-09-22T02:12:26.876Z",
   "stats": {
     "totalCommits": 2206,
-    "totalPRs": 258,
+    "totalPRs": 261,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 192,
-    "activeRepos": 77,
+    "activeRepos": 78,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-09-20T15:27:01Z"
+    "latestEvent": "2026-09-27T00:00:00Z"
   },
   "months": [
     {
       "key": "2026-09",
       "file": "2026-09.json",
-      "eventCount": 31,
+      "eventCount": 35,
       "repos": [
         "EHAPower/devcontainers",
         "EHAPower/project_template",
         "MRNIU/brt-can-protocol",
         "MRNIU/embassy",
         "MRNIU/factorio_LegendaryMechStart",
-        "MRNIU/odrive-can-protocol"
+        "MRNIU/odrive-can-protocol",
+        "embassy-rs/embassy"
       ],
       "breakdown": {
-        "pull_request": 1,
-        "ai_roast": 2,
+        "ai_roast": 3,
+        "pull_request": 4,
         "commit": 28
       },
       "repoBreakdown": {
-        "MRNIU/embassy": 1,
+        "embassy-rs/embassy": 2,
+        "MRNIU/embassy": 2,
         "MRNIU/brt-can-protocol": 6,
         "MRNIU/odrive-can-protocol": 9,
         "MRNIU/factorio_LegendaryMechStart": 3,
