@@ -18,6 +18,57 @@
       }
     },
     {
+      "id": "comment-drivercraft/ostool-193-0",
+      "type": "issue_comment",
+      "ts": "2026-09-22T09:56:49Z",
+      "repo": "drivercraft/ostool",
+      "semantic": null,
+      "data": {
+        "issueNumber": 193,
+        "issueTitle": "feat(ostool): 支持可选 ELF 调试产物与元数据解析",
+        "body": "1 相关测试在 aarch64 上测试通过了\r\n2 commit 中被删除的测试用例也全部通过\r\n3 被删除的测试主要是对 llvm-tools 相关操作的测试，我认为意义不大，所以删掉了"
+      }
+    },
+    {
+      "id": "pr-17-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-09-22T09:23:01Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 17,
+        "title": "feat(ostool): 支持 ELF/BIN FIT 生成",
+        "state": "open",
+        "body": "支持生成包含 ELF 或 BIN 的 FIT 镜像；选择 BIN 时自动转换，无需手工处理。\n\n- 可选择 Linux 或 ELF OS，指定加载地址、入口地址、设备树和输出路径。\n- 地址支持自动获取或显式指定；无法可靠获取时明确报错。\n- 现有 U-Boot 默认生成行为保持兼容。\n\n本 PR 提供生成能力，暂未新增命令或用户配置入口；入口由 PR 3 接入。\n\n依赖 drivercraft/ostool#193，仅包含其上的 FIT 增量。\n"
+      }
+    },
+    {
+      "id": "pr-193-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-09-22T08:51:44Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 193,
+        "title": "feat(ostool): 支持可选 ELF 调试产物与元数据解析",
+        "state": "open",
+        "body": "新增可选的反汇编、ELF 信息和符号列表产物，支持 Cargo 和自定义构建，默认关闭。\r\n\r\n在 `.build.toml` 中启用：\r\n\r\n```toml\r\n[artifacts.analysis]\r\ndisassembly = true\r\nelf_info = true\r\nsymbols = true\r\n```\r\n\r\n- 产物写在原始 ELF 旁，文件名分别追加 `.disassembly`、`.elf-info`、`.symbols`。\r\n- ELF 信息包含架构、入口地址、加载段和可用的 `__executable_start`；缺失该符号不会导致构建失败。\r\n- 分析读取原始 ELF，避免运行时副本剥离符号的影响。\r\n- 每次构建重新生成已启用的产物；工具缺失、ELF 无效或生成失败时明确报错。\r\n"
+      }
+    },
+    {
+      "id": "pr-16-MRNIU/ostool",
+      "type": "pull_request",
+      "ts": "2026-09-22T07:24:41Z",
+      "repo": "MRNIU/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 16,
+        "title": "feat(ostool): 支持可选 ELF 调试产物与元数据解析",
+        "state": "closed",
+        "body": "新增可选的反汇编、ELF 信息和符号列表产物，支持 Cargo 和自定义构建，默认关闭。\n\n在 `.build.toml` 中启用：\n\n```toml\n[artifacts.analysis]\ndisassembly = true\nelf_info = true\nsymbols = true\n```\n\n- 产物写在原始 ELF 旁，文件名分别追加 `.disassembly`、`.elf-info`、`.symbols`。\n- ELF 信息包含架构、入口地址、加载段和可用的 `__executable_start`；缺失该符号不会导致构建失败。\n- 分析读取原始 ELF，避免运行时副本剥离符号的影响。\n- 每次构建重新生成已启用的产物；工具缺失、ELF 无效或生成失败时明确报错。\n"
+      }
+    },
+    {
       "id": "pr-7046-embassy-rs/embassy",
       "type": "pull_request",
       "ts": "2026-09-21T13:39:23Z",
