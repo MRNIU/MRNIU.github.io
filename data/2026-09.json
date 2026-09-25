@@ -18,6 +18,32 @@
       }
     },
     {
+      "id": "pr-196-drivercraft/ostool",
+      "type": "pull_request",
+      "ts": "2026-09-24T05:04:39Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "number": 196,
+        "title": "feat(ostool): 支持 ELF/BIN FIT 生成",
+        "state": "open",
+        "body": "支持生成包含 ELF 或 BIN 的 FIT 镜像；选择 BIN 时自动转换，无需手工处理。\r\n\r\n- 可选择 Linux 或 ELF OS，指定加载地址、入口地址、设备树和输出路径。\r\n- 地址支持自动获取或显式指定；无法可靠获取时明确报错。\r\n- 现有 U-Boot 默认生成行为保持兼容。\r\n\r\n本 PR 提供生成能力，暂未新增命令或用户配置入口；入口由 PR 3 接入。\r\n\r\n依赖 drivercraft/ostool#193，仅包含其上的 FIT 增量。\r\n"
+      }
+    },
+    {
+      "id": "commit-ee8061cee96f4669144caf745e7e341849cfd998",
+      "type": "commit",
+      "ts": "2026-09-24T04:13:39Z",
+      "repo": "drivercraft/ostool",
+      "semantic": "feat",
+      "data": {
+        "sha": "ee8061cee96f4669144caf745e7e341849cfd998",
+        "message": "feat(ostool): 支持可选 ELF 调试产物与元数据解析 (#193)\n\n* feat(ostool): 增加可选 ELF 调试产物与元数据\n\n新增默认关闭的 artifacts.analysis 配置，复用 Rust 工具链 LLVM 和现有\nartifact registry 生成反汇编、ELF 信息与符号列表。通过 object 解析架构、\n入口、PT_LOAD 与可选 __executable_start，显式请求失败时返回具体错误。\n\n分离原始 ELF 和运行时副本，避免 .elf 输入原地覆盖；添加 BIN 时保留\n符号来源与调试产物登记，新构建则清理旧登记。完整 BuildConfig 接入\n构建与运行入口，保留 Cargo 选择、hooks 和 Custom runner 配置读取顺序。\n同步中英文 README 与公开 API 编译用例。\n\n验证：devbox 原生格式化、workspace clippy/build/test 全部通过；\nostool all-targets/all-features clippy -D warnings 通过。新增实际 LLVM\n产物、ELF metadata、状态更新和 CLI hook 回归测试。\nx86_64 CI 命令已尝试，本地因缺少交叉 sysroot/libudev 与 C 编译器阻塞。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n* refactor(ostool): 精简 ELF 分析实现与必要测试\n\n复用 tempfile 管理分析产物的临时文件和替换，移除手工暂存路径及重复的\nruntime 来源状态。将完整配置运行入口收窄为 cargo_run_with_config，\nCustom CLI 继续在构建完成后读取 runner 配置，并同步中英文说明。\n\n删除重复成功/路径/默认配置断言和 ELF32 大端专项夹具，合并状态更新与\nrunner hooks 测试；保留 ELF 元数据、错误处理、strip 来源和构建兼容覆盖。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n* test(ostool): 删除重复验证并精简 ELF 测试夹具\n\n删除 metadata 层重复的非法 ELF 验证，保留分析入口的失败回归。\n将 Custom build-only 状态断言并入重建测试，删除配置通用序列化\n往返及可由其他检查推出的断言。简化无符号 ELF 与 PT_NOTE 夹具，\n保留多段地址区分、符号定义状态和原始 ELF 来源验证。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n* test(ostool): 精简分析测试并复用既有回归用例\n\n移除独立构建与 CLI 分析验收文件、手工 ELF 测试夹具和假工具测试。\n完整场景保留为本地验收，仓库仅新增短配置解析测试，并在已有\nruntime/build 用例中验证源 ELF 不被覆写及旧分析登记失效。\n\n移除只用于测试注入的 resolver 包装，直接调用既有 LLVM 定位函数。\n产物生成、metadata 解析及错误处理行为保持一致。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\n\n---------\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>\nCo-authored-by: OpenAI Codex <codex@openai.com>",
+        "additions": 560,
+        "deletions": 66
+      }
+    },
+    {
       "id": "commit-836794be43048430e303614a913eeaebfa76db25",
       "type": "commit",
       "ts": "2026-09-23T07:31:21Z",

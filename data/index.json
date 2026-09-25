@@ -1,9 +1,9 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-09-24T02:11:57.806Z",
+  "generatedAt": "2026-09-25T02:11:02.767Z",
   "stats": {
-    "totalCommits": 2208,
-    "totalPRs": 264,
+    "totalCommits": 2209,
+    "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 193,
@@ -15,7 +15,7 @@
     {
       "key": "2026-09",
       "file": "2026-09.json",
-      "eventCount": 41,
+      "eventCount": 43,
       "repos": [
         "EHAPower/devcontainers",
         "EHAPower/project_template",
@@ -30,13 +30,13 @@
       ],
       "breakdown": {
         "ai_roast": 3,
-        "commit": 30,
-        "issue_comment": 1,
-        "pull_request": 7
+        "pull_request": 8,
+        "commit": 31,
+        "issue_comment": 1
       },
       "repoBreakdown": {
+        "drivercraft/ostool": 4,
         "MRNIU/MRNIU": 2,
-        "drivercraft/ostool": 2,
         "MRNIU/ostool": 2,
         "embassy-rs/embassy": 2,
         "MRNIU/embassy": 2,
