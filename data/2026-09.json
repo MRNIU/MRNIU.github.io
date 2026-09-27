@@ -2,6 +2,45 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "commit-9f3d599a80ba2bbdb489d7e2d8f756193eda5ed6",
+      "type": "commit",
+      "ts": "2026-09-27T02:07:16Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "chore",
+      "data": {
+        "sha": "9f3d599a80ba2bbdb489d7e2d8f756193eda5ed6",
+        "message": "chore: 保留 Cargo 锁文件生成头的标准顺序\n\nCargo 发布会在非标准文件头前补写自动生成声明，造成打包前工作区变脏。\n将生成声明保留在前两行，版权与职责说明紧随其后；依赖解析完全不变。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 4,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-ca761d7a05026c36649d46585877318bbda24de0",
+      "type": "commit",
+      "ts": "2026-09-27T02:02:45Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "ci",
+      "data": {
+        "sha": "ca761d7a05026c36649d46585877318bbda24de0",
+        "message": "ci: 为 Linux 集成测试安装并加载 vcan 模块\n\nGitHub runner 的默认内核缺少 vcan 支持，导致创建接口时报 Unknown device type。\n按当前运行内核安装所需模块并显式加载，保留真实 SocketCAN 集成测试门禁。\n同时补全锁文件和台架构建配置的版权与职责注释，不改变依赖解析或代码。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 10,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-b818433c20a442ec8592bc80e92eb8ce4227a917",
+      "type": "commit",
+      "ts": "2026-09-27T01:59:12Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "feat",
+      "data": {
+        "sha": "b818433c20a442ec8592bc80e92eb8ce4227a917",
+        "message": "feat: 实现独立 ODrive CAN 驱动及三种收发后端\n\n以已发布 odrive-can-protocol 0.1.2 提供无分配 no_std 共享操作状态机，\n区分本地提交、反馈观察、期限、取消和未知副作用；共享总线保留原始帧。\n封装 embedded-can blocking/nb、Embassy FDCAN async 和 Linux SocketCAN。\n\n加入中文 API 文档、可运行示例、MSRV/目标 CI，以及独立 H723 台架。\nEmbassy 固定为已验证的 7b08a9c7 修订以修复 RTR DLC 8，并说明消费方 patch。\n完成核心/后端行为测试、vcan、交叉构建、Clippy、rustdoc 和发布 dry-run。\n实板确认 Heartbeat、查询、状态、故障恢复及 +0.5 turn/s 短时运动；\n最终 CAN/Fibre 读回 Idle。物理 Bus-Off 及另两个后端实板不在验证结论内。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6475,
+        "deletions": 0
+      }
+    },
+    {
       "id": "ai-roast-2026-09-21",
       "type": "ai_roast",
       "ts": "2026-09-27T00:00:00Z",
@@ -15,6 +54,19 @@
           "totalCommits": 0,
           "topRepo": "embassy-rs/embassy"
         }
+      }
+    },
+    {
+      "id": "commit-6a9fb583a4065d67f1c35a8d97b1849c4c4b10dc",
+      "type": "commit",
+      "ts": "2026-09-26T03:55:04Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": null,
+      "data": {
+        "sha": "6a9fb583a4065d67f1c35a8d97b1849c4c4b10dc",
+        "message": "Initial commit",
+        "additions": 21,
+        "deletions": 0
       }
     },
     {
