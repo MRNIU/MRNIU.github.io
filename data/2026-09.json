@@ -2,6 +2,32 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "commit-b5f66b31a23dc2be226e333cdefd27bc013f5171",
+      "type": "commit",
+      "ts": "2026-09-27T02:41:51Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "docs",
+      "data": {
+        "sha": "b5f66b31a23dc2be226e333cdefd27bc013f5171",
+        "message": "docs: 整理开源文档与示例并发布 0.1.1\n\n将三个后端的安装、基本用法和时序合入根 README，集中说明\nHeartbeat、指令、状态查询、清错及发送结果未知的处理边界。\n删除 docs、重复示例指南和专用 H723 台架应用，保留通用收发示例。\n\n移除贡献规则中的个人开发与提交习惯，精简重复 CI 检查；保留\n真实行为测试、后端兼容性、no_std、MSRV 和 Linux vcan 验证。\nEmbassy 仅保留修复 RTR 所需的 stm32 patch，已锁定依赖不变。\n\n本次不改驱动运行逻辑。合并 feature 的 API 文档构建与文档链接检查通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 235,
+        "deletions": 3058
+      }
+    },
+    {
+      "id": "commit-dd534f6d10f400d33c53cc2f0bc356364ff44865",
+      "type": "commit",
+      "ts": "2026-09-27T02:29:45Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "docs",
+      "data": {
+        "sha": "dd534f6d10f400d33c53cc2f0bc356364ff44865",
+        "message": "docs: 整合使用文档并补齐三后端示例与时序\n\n删除开发机、容器和专用现场身份描述，移除已完成的设计过程文档，\n合并软件与实板验证记录，集中维护安装、使用和结果边界。\n\nREADME 说明设备 Heartbeat、主机保活及 watchdog、指令与状态查询、\n清错、期限和未知结果处理；示例指南增加三个后端的 Mermaid 时序。\n以实际 embedded-can 轮询、Embassy 截止交换与 SocketCAN CLI 示例\n替代手动假提交示例，保留原始帧、错误、操作身份和终态处置。\n台架运行器不再默认连接固定 ODrive，fault/motion 要求显式序列号。\n\n验证：三后端示例构建与 Clippy、README 两段 rustdoc、三图 Mermaid\n解析、相对链接检查通过。SocketCAN CLI 在 vcan 验证被动心跳、\nRTR 回复、清错/Idle 本地提交以及无响应和迟到心跳超时。\n运行器帮助与缺失身份参数拒绝通过，无设备访问。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 911,
+        "deletions": 549
+      }
+    },
+    {
       "id": "commit-9f3d599a80ba2bbdb489d7e2d8f756193eda5ed6",
       "type": "commit",
       "ts": "2026-09-27T02:07:16Z",
@@ -48,11 +74,11 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-09-21 ~ 2026-09-27",
-        "content": "0 commits but 3 flash PRs across two separate Embassy repos? That's not development, that's drive-by PR management. embassy-rs/embassy got two open STM32 flash tweaks with 0 reviews, while MRNIU/embassy closed a nearly identical PSIZE cleanup with no visible discussion—self-merge or surrender, pick one. The only thing async here is the review queue.",
-        "status": "draft",
+        "content": "这周 9 commits、7 个 PR、0 个 review、0 个 issue、1 条 comment， review 数比新仓库的 CI badge 还稳定。 odrive-can-driver 从 Initial commit 一路发到 0.1.1， 6 个 commit 把 feat、ci、docs 全塞进同一周，版本发布速度明显跑赢了代码评审； drivercraft/ostool 与 MRNIU/ostool 各自挂着 ELF/FIT 相关 PR，唯一的一条 comment 还像在旁观。 embassy-rs/embassy 同时开着 stm32/flash 的 PSIZE 和 erase parallelism PR， MRNIU/embassy 则刚关掉一个 PSIZE PR，两边的 flash 讨论挺热闹， review 还是 0。",
+        "status": "final",
         "stats": {
-          "totalCommits": 0,
-          "topRepo": "embassy-rs/embassy"
+          "totalCommits": 9,
+          "topRepo": "MRNIU/odrive-can-driver"
         }
       }
     },
