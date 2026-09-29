@@ -2,6 +2,71 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "commit-160284a72b2846da632aae0c021cb6624e4dee7c",
+      "type": "commit",
+      "ts": "2026-09-28T15:54:15Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "style",
+      "data": {
+        "sha": "160284a72b2846da632aae0c021cb6624e4dee7c",
+        "message": "style(test): 格式化 vcan 发送帧断言\n\n修复 CI cargo fmt --check 报告的一处长行换行，不改变测试行为。\n已在 devbox 运行 cargo fmt --check 通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-dfc2881d3d9b51a961328dc0ce2bdac42c496480",
+      "type": "commit",
+      "ts": "2026-09-28T15:52:44Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "feat",
+      "data": {
+        "sha": "dfc2881d3d9b51a961328dc0ce2bdac42c496480",
+        "message": "feat!: 分离 CAN 收发与发送凭证并升级至 0.3.0\n\n共享 Driver 以 Session、一次消费的 SendPermit 和 TxAttempt 关联操作与发送尝试，\n拆开发送准备、真实 I/O 和结果回填。每次真实发送前检查取消和期限，等待期间\n允许应用处理 RX；只有后端确认原调用结束且未入队时才记录取消未提交。\n\n统一使用微秒 Instant / Duration，分别记录事件和处理时间，保留延迟回填的\n提交事实。反馈缓存与查询完成分离，应用可接纳、忽略或明确拒绝合法候选，\n未知副作用保持隔离且不自动重试。\n\n统一 embedded-can、Embassy 和 SocketCAN 的端点合同，保留原生帧、完整\n时间戳、错误及被置换帧；同步示例、rustdoc、README 迁移表和 Mermaid 时序图。\n\n验证：45 项组合特性测试、编译失败文档测试、Clippy、no_std 及 H723 目标\n检查、完整 API 文档通过；SocketCAN vcan 集成测试与 Cargo 发布预演通过。\nH723 实板验证分离收发、真实 TX Pending 期间 RX/期限推进、取消未提交、\n时间戳及查询接纳；低速命令产生编码器位移，测试后恢复 Idle。\n\nBREAKING CHANGE: Driver 构造需要 Session；prepare 返回线性凭证；时间改为\n微秒新类型；查询必须显式接纳；替换旧发送入口并移除 blocking 封装。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2540,
+        "deletions": 1988
+      }
+    },
+    {
+      "id": "commit-a4628275aa55d33e291db9721b144c488d29725c",
+      "type": "commit",
+      "ts": "2026-09-28T15:32:24Z",
+      "repo": "EHAPower/ranger-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "a4628275aa55d33e291db9721b144c488d29725c",
+        "message": "docs(sdk): 明确示例前置条件与执行证据获取边界\n\n将 motion 片段标为需调用方自行提供无硬件 mock Server 的 API\n示意，移除生产 socket 示例与重复代码；不暗示仓内已有 mock 或\ndry-run 程序。\n\n明确当前 Rust Client 没有 execution-status 或 diagnostics 查询\nAPI，动作与停止证据需要独立 Server 诊断/操作通道，不能从\nGateReceipt 推断。SDK 目录规则同步这些限制。\n\n验证：独立代理定向复核通过，无新增可执行问题；仅文档变化，\n不重复运行未变化源码与锁文件的已通过 Rust 门禁。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 7,
+        "deletions": 23
+      }
+    },
+    {
+      "id": "commit-f953b18117fb7fa64da0ba61fd5743c0bdc9887e",
+      "type": "commit",
+      "ts": "2026-09-28T15:29:10Z",
+      "repo": "EHAPower/ranger-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "f953b18117fb7fa64da0ba61fd5743c0bdc9887e",
+        "message": "feat(sdk): 建立独立 Ranger 公共接口与客户端仓库\n\n从 ranger-server a691ce1a999314eae5634876786de182915509cb 导入\ncrates/contracts、sdk/rust 和 sdk/schema，保留 Rust/YAML 输入与现有\n包名、wire 行为和依赖锁定版本。独立 workspace 只包含 contracts 与\nranger-client，不引入 Server、HAL 或硬件访问。\n\n建立面向贡献者的文档、API 示例与 Linux CI。明确当前 Rust Client\n未提供 suspension 或 ReadOnly diagnostics API，schema 身份不代表\n运行期协商，Accepted 不代表执行完成、停止确认或物理安全。\n\n本仓为迁移候选快照。Server/Go 仍消费原接口，切换固定依赖与\nschema 源包前不删除旧源，也不允许双源独立演进协议。\n\n验证：devbox Linux fmt、Clippy -D warnings、27 项测试、release build\n通过；导入 Rust/YAML 与来源一致，29 个 registry 包保留原锁身份；\nCI YAML 与文档链接检查通过。未验证组合互操作、设备或部署。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 4098,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-b0e9bbff7faa2513d282138495c61307c62593da",
+      "type": "commit",
+      "ts": "2026-09-28T13:43:13Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "feat",
+      "data": {
+        "sha": "b0e9bbff7faa2513d282138495c61307c62593da",
+        "message": "feat!: 合并协议与驱动并使用 Rust 1.98.1\n\n将 odrive-can-protocol 0.1.2 的编解码、帧适配、字节测试和示例\n迁入内置 protocol 模块，保留原版权和 MIT 许可。移除外部协议依赖，\n默认构建为 no_std、无分配、无正常第三方依赖。\n\n三个后端保留现有 I/O 和操作结果语义。统一 Rust 要求为最新稳定版\n1.98.1，CI 使用 stable，并覆盖迁入的协议与帧适配测试。\n根 README 补充纯协议用法、类型迁移说明和固定固件支持依据。\n\n验证：43 个行为/协议/适配测试及5个文档示例通过，合并feature的\nClippy与rustdoc通过；默认thumbv6m和H723示例构建通过。\nLinux vcan 收发集成继续由 CI 验证。\n\nBREAKING CHANGE: 协议类型改由本 crate 定义，不能与旧独立协议包的\n类型混用；Rust 最低要求提升至 1.98.1。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1977,
+        "deletions": 51
+      }
+    },
+    {
       "id": "commit-b5f66b31a23dc2be226e333cdefd27bc013f5171",
       "type": "commit",
       "ts": "2026-09-27T02:41:51Z",

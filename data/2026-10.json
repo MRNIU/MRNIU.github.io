@@ -1,0 +1,21 @@
+{
+  "month": "2026-10",
+  "events": [
+    {
+      "id": "ai-roast-2026-09-28",
+      "type": "ai_roast",
+      "ts": "2026-10-04T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-09-28 ~ 2026-10-04",
+        "content": "这周 5 个 commit、0 PR、0 review，延续了「提交即发布、评审靠自觉」的 solo 节奏。 MRNIU/odrive-can-driver 上周还在给 0.1.1 补文档，这周直接 feat! 合并协议与驱动并跳 0.3.0，版本号涨得比 review 数还快。 EHAPower/ranger-sdk 一个 feat 建仓库加一个 docs 划边界， README 里还写着迁移 owner 未定，颇有先把代码搬出来再补免责声明的艺术。",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 5,
+          "topRepo": "MRNIU/odrive-can-driver"
+        }
+      }
+    }
+  ]
+}
