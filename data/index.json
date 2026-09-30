@@ -1,13 +1,13 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-09-29T02:15:36.727Z",
+  "generatedAt": "2026-09-30T02:17:49.645Z",
   "stats": {
-    "totalCommits": 2220,
+    "totalCommits": 2222,
     "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 193,
-    "activeRepos": 80,
+    "activeRepos": 81,
     "earliestEvent": "2017-11-13T08:04:30Z",
     "latestEvent": "2026-10-04T00:00:00Z"
   },
@@ -25,11 +25,12 @@
     {
       "key": "2026-09",
       "file": "2026-09.json",
-      "eventCount": 54,
+      "eventCount": 56,
       "repos": [
         "EHAPower/devcontainers",
         "EHAPower/project_template",
         "EHAPower/ranger-sdk",
+        "EHAPower/ranger-vehicle-sdk",
         "MRNIU/MRNIU",
         "MRNIU/brt-can-protocol",
         "MRNIU/embassy",
@@ -41,12 +42,13 @@
         "embassy-rs/embassy"
       ],
       "breakdown": {
-        "commit": 42,
+        "commit": 44,
         "ai_roast": 3,
         "pull_request": 8,
         "issue_comment": 1
       },
       "repoBreakdown": {
+        "EHAPower/ranger-vehicle-sdk": 2,
         "MRNIU/odrive-can-driver": 9,
         "EHAPower/ranger-sdk": 2,
         "drivercraft/ostool": 4,

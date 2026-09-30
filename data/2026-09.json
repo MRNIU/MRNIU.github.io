@@ -2,6 +2,32 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "commit-174d10db714d9244aaa41dc6a2d8f7d16cdd2db2",
+      "type": "commit",
+      "ts": "2026-09-29T09:13:27Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "174d10db714d9244aaa41dc6a2d8f7d16cdd2db2",
+        "message": "docs(branches): 明确主干重构阶段与 SOP 维护基线\n\n将 main 的 README 与 AGENTS 明确标为架构重构入口，后续设计与实现迭代在主干推进。\n记录本次 release/sop-v1 的完整基线 commit：5d6aaa4ebfe36a78fe0200754c72f04a8b4030c3。\nSOP 分支基于同步后的主干切分，维护修复与整体重构分开，跨仓组合仍由集成 gitlink 固定。\n基线记录不随 main 滚动，也不作为产品发行、实时性能或实车验收结论。\n\n验证：基线包含已获取的 origin/main；文档 diff 检查通过。仅文档修改，无新增功能变更。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 16,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-5d6aaa4ebfe36a78fe0200754c72f04a8b4030c3",
+      "type": "commit",
+      "ts": "2026-09-29T03:09:22Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "5d6aaa4ebfe36a78fe0200754c72f04a8b4030c3",
+        "message": "refactor(repo): 统一车辆 SDK 名称与接口来源说明\n\n将仓库入口与 Cargo repository 元数据统一为 ranger-vehicle-sdk。\n说明当前处于架构设计阶段，SDK 是无常驻进程的接口与客户端库仓。\n明确本仓仍是冻结导入快照，Runtime 内 contracts/schema 继续服务当前生产消费者，\n接口 owner 迁移尚未完成，两处不得各自演进协议。\n同步文档、源码注释和跨仓名称；保留 crate 名、schema 原文、wire 与 socket 标识。\n\n验证：devbox 内 cargo metadata --locked --no-deps --format-version 1 通过；\ngit diff --check 通过；无 YAML schema 内容或协议行为变更。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 36,
+        "deletions": 26
+      }
+    },
+    {
       "id": "commit-160284a72b2846da632aae0c021cb6624e4dee7c",
       "type": "commit",
       "ts": "2026-09-28T15:54:15Z",
