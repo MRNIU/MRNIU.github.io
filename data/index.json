@@ -1,13 +1,13 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-09-30T02:17:49.645Z",
+  "generatedAt": "2026-10-01T02:23:25.533Z",
   "stats": {
-    "totalCommits": 2222,
+    "totalCommits": 2232,
     "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 193,
-    "activeRepos": 81,
+    "activeRepos": 83,
     "earliestEvent": "2017-11-13T08:04:30Z",
     "latestEvent": "2026-10-04T00:00:00Z"
   },
@@ -15,19 +15,28 @@
     {
       "key": "2026-10",
       "file": "2026-10.json",
-      "eventCount": 1,
-      "repos": [],
+      "eventCount": 7,
+      "repos": [
+        "EHAPower/eha-sdk",
+        "EHAPower/eha-tool"
+      ],
       "breakdown": {
-        "ai_roast": 1
+        "ai_roast": 1,
+        "commit": 6
       },
-      "repoBreakdown": {}
+      "repoBreakdown": {
+        "EHAPower/eha-sdk": 3,
+        "EHAPower/eha-tool": 3
+      }
     },
     {
       "key": "2026-09",
       "file": "2026-09.json",
-      "eventCount": 56,
+      "eventCount": 62,
       "repos": [
         "EHAPower/devcontainers",
+        "EHAPower/eha-sdk",
+        "EHAPower/eha-tool",
         "EHAPower/project_template",
         "EHAPower/ranger-sdk",
         "EHAPower/ranger-vehicle-sdk",
@@ -42,12 +51,15 @@
         "embassy-rs/embassy"
       ],
       "breakdown": {
-        "commit": 44,
+        "commit": 48,
+        "ai_summary": 2,
         "ai_roast": 3,
         "pull_request": 8,
         "issue_comment": 1
       },
       "repoBreakdown": {
+        "EHAPower/eha-tool": 2,
+        "EHAPower/eha-sdk": 2,
         "EHAPower/ranger-vehicle-sdk": 2,
         "MRNIU/odrive-can-driver": 9,
         "EHAPower/ranger-sdk": 2,

@@ -2,6 +2,142 @@
   "month": "2026-09",
   "events": [
     {
+      "id": "commit-66438dd0d2dc7430b8917d8872604cac99780caa",
+      "type": "commit",
+      "ts": "2026-09-30T17:18:10Z",
+      "repo": "EHAPower/eha-tool",
+      "semantic": "feat",
+      "data": {
+        "sha": "66438dd0d2dc7430b8917d8872604cac99780caa",
+        "message": "feat: 迁入独立 CLI、Shell 与 WebUI 工具\n\n迁入官方工具、内嵌页面资源及许可证，复用相邻 eha-sdk 的设备访问和配置检查能力。\n建立独立 Cargo workspace、版本、锁文件、检查入口和 CI，工具构建身份取自自身仓库。\n源码没有自身 Git 信息时报告 unknown，避免误用所在父仓的修订。\n\n迁入工具使用技能及公开协作、构建和运行文档，维护工具与 SDK 的职责边界。\n\n验证：在仅含工具与 SDK 的目录通过 Rust 测试、WebUI 测试、Clippy 与 release 构建；\n独立版本更新、构建来源归属及文档链接检查通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 8859,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-e17202f454162a534a51276c27ece98a6f3a7e36",
+      "type": "commit",
+      "ts": "2026-09-30T17:18:06Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "e17202f454162a534a51276c27ece98a6f3a7e36",
+        "message": "feat: 迁入 Rust SDK 与公共通信和配置实现\n\n将 SDK、传输无关协议、CAN/USB 绑定和公共配置表示集中到独立 Cargo workspace。\neha-config 维护 schema、字段编解码和纯换算；启动选源与存储读回由固件负责。\n\n迁入客户接入指南、对外交互合同、合成配置测试数据和示例，维护自足的公开文档与贡献入口。\n新增独立软件检查和 CI，版本及 Cargo.lock 在本仓维护。\n\n验证：在不含固件源码的独立目录通过 workspace 测试、Clippy、rustdoc 和 ARM no_std 检查；\n公共协议文档样例、链接检查及独立版本更新检查通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 22913,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-a2309800cc5ab6486b3e9ede105c6ecd2c87956d",
+      "type": "commit",
+      "ts": "2026-09-30T16:14:35Z",
+      "repo": "EHAPower/eha-tool",
+      "semantic": "chore",
+      "data": {
+        "sha": "a2309800cc5ab6486b3e9ede105c6ecd2c87956d",
+        "message": "chore: 初始化公共仓库协作基础\n\n建立项目说明、协作规则、MIT 许可证和忽略规则。业务源码由后续独立迁移处理，本提交不包含设备数据或固件实现。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 47,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-1a8d0df6be1aea3a7a1484b5970ad06d577fd7fe",
+      "type": "commit",
+      "ts": "2026-09-30T16:14:34Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "chore",
+      "data": {
+        "sha": "1a8d0df6be1aea3a7a1484b5970ad06d577fd7fe",
+        "message": "chore: 初始化公共仓库协作基础\n\n建立项目说明、协作规则、MIT 许可证和忽略规则。业务源码由后续独立迁移处理，本提交不包含设备数据或固件实现。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 46,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "ai-summary-quarter-2026-Q3",
+      "type": "ai_summary",
+      "ts": "2026-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "quarter",
+        "range": {
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "label": "2026-Q3"
+        },
+        "content": "2026-Q3 的技术主线从上一季度的 ssXue/Nazh 与 docs 转向 MRNIU/factorio_BestLanding 的 feat 实现，核心是 4 级 starter base pipeline、各星球 L3 完成、统一蓝图坐标变换与 resource marker 契约。提交集中在 7 月和 9 月， 8 月只有 1 个 commit，活跃仓库增至 18 个；相比 2026-Q2 的 164 个 commit 和 34 个 PR，本季度 88 个 commit、8 个 PR 且 0 次 review、1 条 comment，协作和评审强度明显下降。与上一季以 docs 为主不同，本季度 commits 以 feat/fix/refactor 为主， Factorio 2.1 modpack 更新、spidertron bootstrap 和 science cache 等主题持续推进。整体上是在把 Q2 的设计文档转入实现，但交流和反馈明显收缩。",
+        "highlights": [
+          "88 commits, 8 PRs, 0 reviews, 0 issues, 1 comments, 18 active repos",
+          "Top repo: MRNIU/factorio_BestLanding"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 88,
+          "totalPRs": 8,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 18,
+          "topRepo": "MRNIU/factorio_BestLanding"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from ssXue/Nazh to MRNIU/factorio_BestLanding",
+            "Dominant semantic tag changed from docs to feat",
+            "Commit volume decreased by 76"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-summary-month-2026-09",
+      "type": "ai_summary",
+      "ts": "2026-09-30T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "2026-09"
+        },
+        "content": "2026 年 9 月主要围绕 ODrive CAN 生态展开，重点在 MRNIU/odrive-can-driver 及其协议、 Rust SDK 与 CLI/Shell/WebUI 工具仓库，完成了驱动与协议合并、三种收发后端、公共客户端接口以及 0.1.x 系列发布准备。相比 2026 年 7 月以 MRNIU/factorio_BestLanding 为主、39 个 commit 且无 PR，本月活跃仓库扩展到 15 个，产出 48 个 commit 和 8 个 PR，工作重心从游戏内容转向嵌入式 Rust/CAN 开源项目。本月 commit 类型仍以 feat 为主，中下旬集中在协议与驱动仓库，并出现 docs、 chore、 ci、 refactor、 fix 等维护性提交，说明在功能开发之外持续补齐文档、发布和 Linux vcan 集成测试。周维度上 9 月 21 日至 27 日是 PR 与评论集中期，说明协作与合并活动集中在驱动合并和开源发布收尾阶段。整体延续了功能导向的提交习惯，但协作与发布节奏明显增强。",
+        "highlights": [
+          "48 commits, 8 PRs, 0 reviews, 0 issues, 1 comments, 15 active repos",
+          "Top repo: MRNIU/odrive-can-driver"
+        ],
+        "patterns": [
+          "Primary activity type: feat",
+          "Commit-heavy period"
+        ],
+        "risks": [],
+        "stats": {
+          "totalCommits": 48,
+          "totalPRs": 8,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 15,
+          "topRepo": "MRNIU/odrive-can-driver"
+        },
+        "continuity": {
+          "carriedThemes": [
+            "Dominant semantic tag stayed feat"
+          ],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/factorio_BestLanding to MRNIU/odrive-can-driver"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-174d10db714d9244aaa41dc6a2d8f7d16cdd2db2",
       "type": "commit",
       "ts": "2026-09-29T09:13:27Z",

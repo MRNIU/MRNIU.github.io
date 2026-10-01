@@ -16,6 +16,84 @@
           "topRepo": "MRNIU/odrive-can-driver"
         }
       }
+    },
+    {
+      "id": "commit-054dd734670ac7c4ed4bfe463470151aad20002e",
+      "type": "commit",
+      "ts": "2026-10-01T01:26:12Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "054dd734670ac7c4ed4bfe463470151aad20002e",
+        "message": "docs: 简化依赖说明并移除代际标签\n\n在贡献指南按用途列出构建、检查与可选 ODrive USB 读取的依赖，README 引用同一入口。\n保留 odrive==0.5.1.post0 的既有版本要求，由使用者自行安装，不新增安装脚本或依赖清单。\n清理公共协议、配置和客户端文档注释中的 V4 标签，软件版本与线上格式数值保持不变。\n\n验证：新增链接、代际标签残留与差异格式检查通过；仅修改文档与注释。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 22,
+        "deletions": 10
+      }
+    },
+    {
+      "id": "commit-d9fb6a7a6e78679bfc52026dd8ea199644520577",
+      "type": "commit",
+      "ts": "2026-10-01T01:26:12Z",
+      "repo": "EHAPower/eha-tool",
+      "semantic": "docs",
+      "data": {
+        "sha": "d9fb6a7a6e78679bfc52026dd8ea199644520577",
+        "message": "docs: 简化工具依赖说明并移除页面代际注释\n\n贡献指南按构建、检查、前端资源更新与运行列出依赖；可选 ODrive 环境引用 SDK 的唯一依赖说明。\nREADME 保留依赖入口，删除页面样式注释中的旧代际名称，不改变工具行为或资源内容。\n\n验证：新增链接、代际标签残留与差异格式检查通过；仅修改文档与注释。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 19,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-84c20496d275101d77beda9b917b550eac80d2ca",
+      "type": "commit",
+      "ts": "2026-10-01T01:08:21Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "84c20496d275101d77beda9b917b550eac80d2ca",
+        "message": "docs: 集中维护配置静态检查与 schema 约定\n\n将完整候选的检查顺序收敛到 SDK README，明确 eha-config 对字段、固定范围和纯换算的所有权。\nschema 编写约定由所属 crate 维护，供工具和固件引用，不改变现有校验行为。\n\n验证：新增文档链接与章节检查通过，差异格式检查通过；Rust 实现未变更。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 19,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-71a982cdce1d79033645055b22046f4239cd5075",
+      "type": "commit",
+      "ts": "2026-10-01T01:08:21Z",
+      "repo": "EHAPower/eha-tool",
+      "semantic": "docs",
+      "data": {
+        "sha": "71a982cdce1d79033645055b22046f4239cd5075",
+        "message": "docs: 引用 SDK 的唯一配置检查规则\n\n配置检查说明保留工具调用、静态检查结论和现场适用边界，完整算法与 schema 编写约定改为引用 SDK。\n删除工具中的镜像规则，避免公共配置能力在两个仓库分别维护。\n\n验证：新增链接与章节检查通过，差异格式检查通过；工具实现未变更。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 14
+      }
+    },
+    {
+      "id": "commit-e95f323fd4a44fce74fb52cc67a3a65994fb4189",
+      "type": "commit",
+      "ts": "2026-10-01T00:37:17Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "e95f323fd4a44fce74fb52cc67a3a65994fb4189",
+        "message": "docs: 清理公开 SDK 的本机开发信息\n\n移除 DevBox 偏好、固定工作目录、个人协作约定和提交模板。\n贡献指南与 README 使用独立 SDK 检查入口，串口示例采用可移植占位符。\n保留公共合同所有者、版本与锁文件更新，以及未知结果和 SWD 访问边界。\n\n验证：本轮三仓 Python 语法、Markdown 本地路径与私人环境标记扫描通过；\n暂存差异检查通过。未运行完整 Cargo 构建或设备验证。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 24,
+        "deletions": 43
+      }
+    },
+    {
+      "id": "commit-36a31dd75860db887561ed69947f13afbca876b9",
+      "type": "commit",
+      "ts": "2026-10-01T00:37:17Z",
+      "repo": "EHAPower/eha-tool",
+      "semantic": "docs",
+      "data": {
+        "sha": "36a31dd75860db887561ed69947f13afbca876b9",
+        "message": "docs: 清理官方工具的本机开发信息\n\n移除固定工作目录、SSH 别名、个人协作约定和提交模板。\n贡献指南保留实际 SDK 相邻依赖；README 与使用技能统一回环访问说明。\n保留 Host/Origin 校验、会话结束不停止设备和未知副作用不重放的语义。\n\n验证：本轮三仓 Python 语法、Markdown 本地路径与私人环境标记扫描通过；\n暂存差异检查通过。未运行完整 Cargo 构建或设备验证。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 21,
+        "deletions": 41
+      }
     }
   ]
 }
