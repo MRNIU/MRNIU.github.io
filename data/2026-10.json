@@ -9,11 +9,11 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-09-28 ~ 2026-10-04",
-        "content": "这周 5 个 commit、0 PR、0 review，延续了「提交即发布、评审靠自觉」的 solo 节奏。 MRNIU/odrive-can-driver 上周还在给 0.1.1 补文档，这周直接 feat! 合并协议与驱动并跳 0.3.0，版本号涨得比 review 数还快。 EHAPower/ranger-sdk 一个 feat 建仓库加一个 docs 划边界， README 里还写着迁移 owner 未定，颇有先把代码搬出来再补免责声明的艺术。",
-        "status": "draft",
+        "content": "EHAPower 的 eha-sdk 和 eha-tool 本周是双胞胎般的 docs 搬家，各 5 个 commit 全是“迁入”“初始化”“清理本机开发信息”， 0 个 PR、 0 个 review。 ranger-sdk 和 ranger-vehicle-sdk 也没闲着，各 2 个 commit 继续刷架构与基线说明，整体 17 个 commit 里 14 个是 docs， PR 按钮已经进入休眠。 MRNIU/odrive-can-driver 上周还在发 PR 和文档，这周直接两个 `feat!` 拆 CAN 收发、合并 protocol 与 driver 并升到 0.3.0，同样零 review 零 comment，勇敢得像个没有 CRC 校验的 CAN 帧。",
+        "status": "final",
         "stats": {
-          "totalCommits": 5,
-          "topRepo": "MRNIU/odrive-can-driver"
+          "totalCommits": 17,
+          "topRepo": "EHAPower/eha-tool"
         }
       }
     },
