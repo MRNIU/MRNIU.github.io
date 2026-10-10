@@ -2,6 +2,191 @@
   "month": "2026-10",
   "events": [
     {
+      "id": "ai-roast-2026-10-05",
+      "type": "ai_roast",
+      "ts": "2026-10-11T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-10-05 ~ 2026-10-11",
+        "content": "EHAPower/eha-sdk 本周用 11 个 fix 和 docs 提交继续维持 0 个 PR、0 个 review 的“裸奔式发布”，修得勤但没人看，就像 CAN 帧少了 ACK 还在疯狂重发。 ranger-vehicle-sdk 则用 refactor 后立刻 revert 的 2 个 commit 贡献了架构设计阶段的经典仰卧起坐。上一周 EHAPower 家族同样是 0 个 PR、0 个 review，看来代码审查主要靠开发者自己的良心。",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 13,
+          "topRepo": "EHAPower/eha-sdk"
+        }
+      }
+    },
+    {
+      "id": "commit-07c1e7482ad5a22316171d1eada365ee34d20e42",
+      "type": "commit",
+      "ts": "2026-10-09T14:17:02Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "07c1e7482ad5a22316171d1eada365ee34d20e42",
+        "message": "refactor(can)!: 将主机设备管理移交外部驱动通道\n\nSDK 原先内置 CANable2 SLCAN、适配器发现和速率配置，将公共 CAN\n接入限制在具体设备。改为由调用方提供 CanChannel 与 CanChannelFactory，\nSDK 只维护 EHA 帧收发、重组、提交语义和显式重连保护。\n\n官方工具通过外部 python-can 命名上下文接入，统一更新 CLI、Shell、\nWebUI 和示例；移除串口依赖、设备枚举与主机 profile 参数。保留单一\n通道拥有者、共享故障隔离、取消和到期边界，未知发送不重放。发送等待\n预算独立于接收轮询，保留驱动异常因果链与进程退出诊断。\n\n同步公共接入说明、协作规则和检查入口；新增注释、文档与自有提示\n使用中文。Python 是工具当前选择的通道实现，不是公共 SDK 的必需依赖。\n\n验证：Rust 工作区测试、SDK 33 项测试、WebUI 25 项测试、Python 4 项\n测试、Clippy、API 文档、ARM no_std 和 Windows GNU 编译检查通过。\nmacOS 实机 CAN FD 1M/2M 的查询、遥测、心跳和重连通过，16,384 B\n配置读取与 USB 逐字节一致。一次越界 CAN 标识符异常原因未定位；\n不覆盖运动、配置写入、其他适配器或 Windows/Linux 实物设备。\n\nBREAKING CHANGE: CAN 调用方须提供通道工厂；工具使用 --can-channel\n与 --node，可选 --can-mode 和 --can-python。移除 --can-port、主机\n--profile、can-devices 和 device list-can；外部驱动由部署方准备。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1955,
+        "deletions": 1846
+      }
+    },
+    {
+      "id": "commit-ed5de90c5c52170bc54ee589caf9491cf44b8a93",
+      "type": "commit",
+      "ts": "2026-10-09T10:59:48Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "ed5de90c5c52170bc54ee589caf9491cf44b8a93",
+        "message": "fix(webui): 稳定通知显示并区分遥测接收状态\n\n移除通知出现时动态增加的页面底部空间与自动滚动，避免右下角弹窗使页面跳动，\n保留后续键盘焦点被遮挡时的可见性处理。\n\n断开的会话显示“已停止接收”，不再在顶部持续显示旧数据计时；仍连接时保留\n真实接收年龄与超时警示，详情明确区分缓存距今和距最后一帧。Stop 语义不变。\n\n验证：devbox 中 14 项遥测测试及 JS 语法检查通过；离线浏览器确认弹窗显示和\n关闭不改变页面高度或滚动位置，并覆盖断连、正常接收及遥测超时。未做硬件测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 34,
+        "deletions": 12
+      }
+    },
+    {
+      "id": "commit-88544ed47bbe76eca72cad865fefd97b5e933295",
+      "type": "commit",
+      "ts": "2026-10-09T10:50:31Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "88544ed47bbe76eca72cad865fefd97b5e933295",
+        "message": "fix(webui): 修正试验状态提示与响应式操作布局\n\n以新鲜固件联系判断心跳状态，保留历史调度遗漏信息，避免旧错误持续覆盖当前有效联系。\n试验结束后明确显示已完成，并在页面监听器绑定前禁止表单交互，防止首次加载时原生提交。\n修复窄屏导航和停止按钮的触控尺寸，以及中等宽度窗口的顶部文字挤压。\n\n验证：17 项针对性前端测试、JS 语法检查和远端原生 release 构建通过；浏览器验证\n记录下载、图表交互、320/375 px 窄屏与桌面分栏。USB/CAN 低速与 Stop 验证通过，\n传感器输入仍为模拟值，不据此宣称位置或压力闭环性能。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 45,
+        "deletions": 20
+      }
+    },
+    {
+      "id": "commit-2c802941d72da55bc4b725a277d3f6345ee21ca2",
+      "type": "commit",
+      "ts": "2026-10-09T09:44:23Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "2c802941d72da55bc4b725a277d3f6345ee21ca2",
+        "message": "docs: 精简 SDK 文档并图解接入与协议流程\n\n按客户入口、操作流程和库职责重组说明，合并重复段落与源码目录罗列。\n使用流程图、时序图和职责表说明指令处理、控制与停止、维护结果及缓冲交接，保留精确字节布局、时限和失败条件。\n\n三份完整通信合同继续由公开 SDK 维护；将私有实现符号改为自包含的读回规则，并保留固件阶段隔离限制对用户的影响。收敛协作规则，清理源码中的历史措辞和重复注释，不改变运行逻辑、协议数值或公开行为。\n\n验证：独立对抗复审通过；11 张 Mermaid 图语法、132 个本地链接与锚点、git diff --check 均通过；RUSTDOCFLAGS=-Dwarnings cargo doc --workspace --no-deps --locked 通过。未运行功能测试或设备操作。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 377,
+        "deletions": 603
+      }
+    },
+    {
+      "id": "commit-8770f231f8d6a81ab30cc3eb91c452826caf22d6",
+      "type": "commit",
+      "ts": "2026-10-09T09:29:20Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "8770f231f8d6a81ab30cc3eb91c452826caf22d6",
+        "message": "fix(webui): 简化试验确认与页面说明\n\n移除试验页机械条件确认框及其勾选门槛，清理侧栏、页脚的三处说明和对应样式，减少操作干扰。试验仍按连接状态、运行状态和后端预检及包络约束执行。\n\n同步操作文档，补充运行记录的下载入口，以及服务日志与页面最近一次原始结果的区别。\n\n验证：release 构建通过，试验状态测试 5/5；浏览器验证页面加载、模式切换及 ODrive USB 枚举，无控制台错误。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 7,
+        "deletions": 48
+      }
+    },
+    {
+      "id": "commit-e28c7db11831f51d16c97b6d11a8307aa4db460f",
+      "type": "commit",
+      "ts": "2026-10-09T09:11:02Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "e28c7db11831f51d16c97b6d11a8307aa4db460f",
+        "message": "fix(webui): 修复控件联动、图表读数与错误反馈\n\n复用配置字段与 CAN 节点控件，保留轮询和字段编辑过程中的键盘焦点；群组范围即时联动并排除断连成员。保留试验输入错误，阻止 Enter 意外刷新，显示中文字段提示与即时 JSON 错误，允许离线编辑配置候选。\n\n补充目标与反馈图例、逐样本键盘读数、焦点清理与明确的本机趋势清除语义；修正 tooltip 主题、负零和极小量级坐标显示。通知限制高度并避让焦点，改进移动端触控区、空状态、配置基线提示和运行记录摘要。\n\n验证：21 项前端测试、语法与差异检查通过。主要流程在正式服务的真实浏览器验证；最后的纯显示改动使用相同生产模块在本机浏览器验证。未扩展设备控制语义，未新增运动或持久配置写入。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 329,
+        "deletions": 61
+      }
+    },
+    {
+      "id": "commit-96d41ff7ffff15bab754f446b8a3f33d1046685e",
+      "type": "commit",
+      "ts": "2026-10-09T08:07:53Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "96d41ff7ffff15bab754f446b8a3f33d1046685e",
+        "message": "feat(tool): 集成配置工作区、试验记录与多节点控制\n\n引入共享 CAN 网络与节点独占会话，支持节点发现、选择、分组预检和停止；连接、心跳与控制继续由显式操作驱动。\n\nWebUI 吸纳 Schema 配置表单与精确 JSON 导入导出、基线差异、目标反馈曲线、限时和到位试验、20 Hz 拖动目标合并，以及元数据、事件和完整遥测记录。试验保留身份、数据新鲜度、包络、未知结果与被动停止确认边界。限制 HTTP 慢请求占用，并压缩趋势快照以保证完整窗口可用。\n\n验证：工作区 Rust 测试及新增趋势回归、17 项前端测试、fmt、Clippy、rustdoc、no_std 和 Linux/macOS release 构建通过。真实浏览器完成配置、试验、记录、移动布局与完整趋势窗口验证。实机 USB/CAN 验证低速电机与停止；输入仍为模拟信号，尚未证明液压闭环或多个物理节点。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6113,
+        "deletions": 180
+      }
+    },
+    {
+      "id": "commit-30d50ec5c894ff9afa4d8f67f30f0b961a30ead6",
+      "type": "commit",
+      "ts": "2026-10-09T06:19:34Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "30d50ec5c894ff9afa4d8f67f30f0b961a30ead6",
+        "message": "docs: 补全公共交互边界并中文化 CI 名称\n\n公共规则迁移后，最新消息的消费边界与超频后果不够明确；工具文档\n也遗漏了原配套设计中的 ODrive 读取隔离要求。本次补回既有语义，\n不改变实现、线上协议或公共 API。\n\n- 明确消息取走后清空、相同内容仍参与覆盖、空槽不重放，以及覆盖\n  不取消已开始操作；超频本身不停止控制或复位。\n- 在工具自身 README 说明 ODrive USB 读取串行、忙碌返回及不阻塞\n  H723 会话和快照，避免依赖私有固件设计才能理解该行为。\n- CI 工作流、作业与步骤显示名称使用中文，保留命令、触发条件、\n  权限和依赖不变。\n\n验证：检查本地文档链接与锚点、git diff --check；比较去除显示名称后\n的 CI 内容，执行行为不变。只提交本轮文档段落，保留工作区已有\n工具、CAN、WebUI 及检查脚本改动。不重复运行程序与硬件测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 11,
+        "deletions": 7
+      }
+    },
+    {
+      "id": "commit-8cd3336aaf41d6ddf22ea71453df44663aa1add9",
+      "type": "commit",
+      "ts": "2026-10-09T05:48:16Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": null,
+      "data": {
+        "sha": "8cd3336aaf41d6ddf22ea71453df44663aa1add9",
+        "message": "revert(sdk): 撤销接口与 schema 源包迁移\n\n撤销 c6d9c07a4a83858a943cf4baa05b074e30a60c98，恢复迁移前的 SDK 源码、文档与构建配置。\n\n迁移提交已经推送，因此通过反向提交撤销，保留共享提交历史。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 412,
+        "deletions": 1730
+      }
+    },
+    {
+      "id": "commit-c6d9c07a4a83858a943cf4baa05b074e30a60c98",
+      "type": "commit",
+      "ts": "2026-10-09T05:45:17Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "c6d9c07a4a83858a943cf4baa05b074e30a60c98",
+        "message": "refactor(sdk): 迁入当前车辆接口并提供独立 schema 源包\n\n以 Runtime 11780dc 的公共接口为基线导入 wire v2、生命周期 DTO、严格 schema 协商、Rust Client 和既有 fixture，移除过期 parameter schema。\n\n新增无依赖 ranger-schema-sources，统一提供八份正式 YAML 与 checker registry。真实 Server 集成及 schema identity drift 测试移交 Runtime，SDK 不反向依赖 Server、core 或 checker。\n\n更新唯一 owner、子模块接入方式、文档示例、包元数据及源码来源声明，保留既有作者与许可归属。\n\n验证：Linux devbox 中 fmt、严格 Clippy、35 项测试、release build、源包打包清单通过。软件验证不代表硬件或发行验收。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1730,
+        "deletions": 412
+      }
+    },
+    {
+      "id": "commit-0de78789c7e375fd0a787afb006745e4b86e6f4b",
+      "type": "commit",
+      "ts": "2026-10-09T05:31:17Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "0de78789c7e375fd0a787afb006745e4b86e6f4b",
+        "message": "docs: 收敛公共交互规则与工具使用入口\n\n客户直接使用公开 SDK 时，不应依赖私有固件仓才能理解消息提交、\n覆盖、联系与未知结果；使用技能也不应再维护一份工具操作规则。\n\n- 在 README 的公共交互与结果中集中维护跨 CAN/USB 单调用方、\n  完整消息、总频率、共同最新消息、无效输入、持续目标与入口联系。\n- 明确未取走的 Stop 仍可被覆盖，拒绝新目标本身不改变旧目标，\n  另一入口心跳不接管或延续当前目标；这些是既有行为的归属收敛。\n- CAN 指南引用公共规则，工具技能仅保留入口选择，详细命令、\n  生命周期与结果仍由工具 README 和 rustdoc 维护。\n- 精简 AGENTS，保留公开合同、配置与工具职责及必要结果边界。\n\n本次只修改文档，不改变公共 Rust API、线上编码、SDK 实现或设备行为。\n已检查本仓 Markdown 本地链接与锚点，并通过 git diff --check。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 23,
+        "deletions": 49
+      }
+    },
+    {
+      "id": "commit-1601707f62e5219876706de86758aecc76a7c813",
+      "type": "commit",
+      "ts": "2026-10-09T05:09:12Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "chore",
+      "data": {
+        "sha": "1601707f62e5219876706de86758aecc76a7c813",
+        "message": "chore(repo): 合并忽略规则并精简使用文档\n\n将工具及 Web UI 的忽略规则收敛到仓库根，保留原有路径范围和\n.env.example 例外，删除两份重复 .gitignore。\n\nREADME 统一引用贡献指南的构建与检查入口；工具使用 skill 删除\n完整命令速查与重复参数，引用工具 README，保留身份核对、持续\n控制与显式停止、心跳、未知维护结果和证据边界。\n\n验证：90 个忽略路径场景、20 处文档路径与锚点、skill 格式及\n暂存差异格式检查通过。本次未改运行代码，不重复构建或设备验证。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 38,
+        "deletions": 94
+      }
+    },
+    {
+      "id": "commit-3a5497e229e678a46552b09d269fc4e5c7b3a519",
+      "type": "commit",
+      "ts": "2026-10-09T02:26:28Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "3a5497e229e678a46552b09d269fc4e5c7b3a519",
+        "message": "refactor(workspace): 合并官方工具并统一 SDK 交付\n\n将 eha-tool 的 CLI、Shell、WebUI 和使用技能纳入 crates/tool 与仓库技能入口，\n保留工具仓提交历史。SDK、公共库和工具共用 workspace、版本、锁文件与 CI，\n工具仍通过 SDK 访问设备，公共协议和控制行为保持不变。\n\n统一自有文件版权为 Copyright The eha-sdk Contributors，保留第三方许可证。\n合并开发与检查文档，更新构建、安装和页面资源路径，补齐控制与停止导航。\n构建身份从 SDK 仓根读取，缺少本仓 Git 信息时不误用上层仓库身份。\n\n验证：SDK 检查入口通过 131 项 Rust 测试和 9 项 WebUI 测试，以及格式、Clippy、\nAPI 文档、ARM no_std 检查和工具 release 构建；工具版本及源码身份输出正确。\n相关文档链接和锚点检查通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 7909,
+        "deletions": 109
+      }
+    },
+    {
       "id": "ai-roast-2026-09-28",
       "type": "ai_roast",
       "ts": "2026-10-04T00:00:00Z",

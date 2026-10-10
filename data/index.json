@@ -1,31 +1,33 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-10-05T02:23:26.494Z",
+  "generatedAt": "2026-10-10T02:19:58.181Z",
   "stats": {
-    "totalCommits": 2232,
+    "totalCommits": 2245,
     "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 193,
     "activeRepos": 83,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-10-04T00:00:00Z"
+    "latestEvent": "2026-10-11T00:00:00Z"
   },
   "months": [
     {
       "key": "2026-10",
       "file": "2026-10.json",
-      "eventCount": 7,
+      "eventCount": 21,
       "repos": [
         "EHAPower/eha-sdk",
-        "EHAPower/eha-tool"
+        "EHAPower/eha-tool",
+        "EHAPower/ranger-vehicle-sdk"
       ],
       "breakdown": {
-        "ai_roast": 1,
-        "commit": 6
+        "ai_roast": 2,
+        "commit": 19
       },
       "repoBreakdown": {
-        "EHAPower/eha-sdk": 3,
+        "EHAPower/eha-sdk": 14,
+        "EHAPower/ranger-vehicle-sdk": 2,
         "EHAPower/eha-tool": 3
       }
     },
