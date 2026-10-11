@@ -18,6 +18,58 @@
       }
     },
     {
+      "id": "commit-145a0f837c678fb43a47af5a7cd59020adcf74b6",
+      "type": "commit",
+      "ts": "2026-10-10T08:21:57Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "145a0f837c678fb43a47af5a7cd59020adcf74b6",
+        "message": "fix(tool): 保留断连试验并恢复同实例显式停止\n\n断连试验保留原成员、UID 和 run nonce，以明确未知状态呈现。\n同实例重连后显式 Stop 重入停止确认流程，只有新鲜 Idle 遥测可以完成；\n新运行实例不能继承旧试验，已提交或结果未知的 Stop 不自动重发。\n统一未结试验的业务门禁，修正 WebUI 重连入口与 Stop 可用状态。\n\n补充同实例恢复、换实例、状态投影及陈旧遥测等回归。\n验证：SDK 全套检查通过，含 181 项 Rust、31 项 JS、4 项 Python 测试；\n实板零速度闭环后关闭真实 Client I/O、同实例重连、显式 Stop 并确认 Idle。\n设备测试使用模拟位置和压力，不覆盖物理拔线或机械运动。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 403,
+        "deletions": 57
+      }
+    },
+    {
+      "id": "commit-343fd651d349b831bff3efe2609de5d8fc7366b0",
+      "type": "commit",
+      "ts": "2026-10-10T08:21:42Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "343fd651d349b831bff3efe2609de5d8fc7366b0",
+        "message": "fix(host): 报告普通事件队列溢出并保留未知提交语义\n\n普通事件 FIFO 淘汰 Submitted 或 Reply 时原先只有未读取的内部计数，\n调用方无法区分本地事件丢失。改为通过既有 TransportStatus 报告，\n错误计数统一饱和递增，并删除无读者的计数，不改变公开结构。\n\n补充超过 64 项普通事件的回归：丢失提交证据的写操作仍为 ResultUnknown，\n已确认提交但回复丢失仍保留 FullySubmitted，不重发未知副作用。\n验证：SDK 全套检查通过，含 181 项 Rust、31 项 JS、4 项 Python 测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 82,
+        "deletions": 8
+      }
+    },
+    {
+      "id": "commit-875fb9b0852647666a810c82366044958c8c9590",
+      "type": "commit",
+      "ts": "2026-10-10T06:01:54Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "875fb9b0852647666a810c82366044958c8c9590",
+        "message": "refactor(numeric): 合并原文输入解析并统一物理量容差比较\n\nWebUI 请求原先同时保存 Value、完整原文和原文字段表，动作解码还会\n重新解析完整对象。改为只保留 RawFields，路由、连接选择和 Command\n复用已验重字段；嵌套 Command 直接构造字段表，避免通用数值缓存。\n业务浮点继续从原文通过共享 parse_f32 一次量化，保留输入双重舍入修复。\n\n新增 within_tolerance，统一绝对与相对误差比较方法，由调用方按物理量\n设置预算。试验到位复用现有位置绝对容差；配置有效性、保护、方向和\n离散编码保持严格比较。非有限值、负预算或比较中间值溢出均不判为相近。\n\n保留重复字段拒绝和节点整数规则。CAN python 参数缺省/null 仍表示未指定，\n错误类型在连接或扫描前返回 400；未知字段不参与数值采用，不再受临时\nValue 的浮点表示范围限制。补充中点、嵌套输入、错型和后台操作边界回归。\n\n验证：eha-config 9 项、eha-tool 42 项测试通过；相关 Clippy -D warnings、\n格式、数值规则、API 文档与 SDK ARM no_std 检查通过。独立对抗审查无阻塞项。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 365,
+        "deletions": 245
+      }
+    },
+    {
+      "id": "commit-1f34bf9347e15e7218df62370a7bb6fc9af9be52",
+      "type": "commit",
+      "ts": "2026-10-10T05:43:18Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "1f34bf9347e15e7218df62370a7bb6fc9af9be52",
+        "message": "refactor(numeric)!: 统一业务浮点为 f32 并修复输入双重舍入\n\n业务换算、观测与工具计算统一采用 binary32，计数及运行时长保留整数。\n固定最近偶数舍入和运算顺序，拒绝非有限、溢出及原文非零归零，\n保留次正规数；保护关系比较实际采用值，不引入全局 epsilon。\n\n配置、CLI、Shell 和 WebUI 保留十进制原文直接解码，避开 Value 和\n带 tag 枚举的通用浮点中转。浏览器编辑及滑块保留数值字面值，\n重复字段明确拒绝，未知字段维持各入口原有兼容规则。静态配置\n校验补齐派生量与积分边界下溢，并同步公共合同、规则及检查入口。\n\n验证：本轮相关 Rust、工具、前端回归及 Clippy、rustdoc、格式检查\n通过，SDK ARM no_std 和工具 release 构建通过。真实 H723/ODrive\n与模拟位置、压力完成零速、小速度和中点输入采用验证；配置保存、\n读回、复位采用及原记录恢复通过。不代表真实传感器或机械性能验证。\n\nBREAKING CHANGE: 液压换算等公开浮点接口改用 f32，数值错误枚举\n增加下溢分类；调用方需迁移类型及穷尽匹配。原非零输入归零、\n中间溢出等配置现在明确拒绝，旧配置应重新校验。线上字段布局不变。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 956,
+        "deletions": 163
+      }
+    },
+    {
       "id": "commit-07c1e7482ad5a22316171d1eada365ee34d20e42",
       "type": "commit",
       "ts": "2026-10-09T14:17:02Z",
