@@ -2,6 +2,19 @@
   "month": "2026-10",
   "events": [
     {
+      "id": "commit-0fc8a52e644fba360ac52bfb70569a768057e80d",
+      "type": "commit",
+      "ts": "2026-10-12T01:49:43Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "0fc8a52e644fba360ac52bfb70569a768057e80d",
+        "message": "fix(tool): 收紧独立操作的停止与释放确认\n\nWebUI 按需组织现有配置、试验与记录入口，不新增 SOP 执行器。\nStop 确认超期继续保留试验所有权与未知事实；记录写入失败阻止新目标，\n已运行试验只发起一次 Stop，失败记录不写完成标记。\n\nRelease 先等待同实例、提交后且快照时间推进的被动清除事实，再查询原键。\n阻止后续普通请求覆盖未确认的 Release，保留显式 Stop 与心跳能力；\n同会话再次释放只继续确认，断连后的新 backend 不替旧 Release 补证。\n\n验证：SDK 61 项、工具 51 项、前端 32 项测试及补充超时回归通过；\nClippy、数值检查和 release 构建通过，独立对抗审查无剩余阻断。\n未执行实板或机械验收，未新增公共协议与固件机制。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1179,
+        "deletions": 42
+      }
+    },
+    {
       "id": "ai-roast-2026-10-05",
       "type": "ai_roast",
       "ts": "2026-10-11T00:00:00Z",
@@ -9,10 +22,10 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-10-05 ~ 2026-10-11",
-        "content": "EHAPower/eha-sdk 本周用 11 个 fix 和 docs 提交继续维持 0 个 PR、0 个 review 的“裸奔式发布”，修得勤但没人看，就像 CAN 帧少了 ACK 还在疯狂重发。 ranger-vehicle-sdk 则用 refactor 后立刻 revert 的 2 个 commit 贡献了架构设计阶段的经典仰卧起坐。上一周 EHAPower 家族同样是 0 个 PR、0 个 review，看来代码审查主要靠开发者自己的良心。",
-        "status": "draft",
+        "content": "EHAPower/eha-sdk 上周 5 个 commit 还只是直推，这周 15 个 commit 三倍加量，而且 0 个 PR / 0 个 review，提交主调还是 fix，像一边开车一边补胎。另一个仓库 EHAPower/ranger-vehicle-sdk 更抽象， 2 个 commit 一个 refactor 迁入、一个 revert 撤销，架构设计阶段玩起了往返跑，审查回路持续为 0，整体协作默契基本就是自己写、自己看、自己合并。",
+        "status": "final",
         "stats": {
-          "totalCommits": 13,
+          "totalCommits": 17,
           "topRepo": "EHAPower/eha-sdk"
         }
       }
