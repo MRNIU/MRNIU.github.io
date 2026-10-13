@@ -2,6 +2,126 @@
   "month": "2026-10",
   "events": [
     {
+      "id": "ai-roast-2026-10-12",
+      "type": "ai_roast",
+      "ts": "2026-10-18T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-10-12 ~ 2026-10-18",
+        "content": "eha-sdk 这周从上周的 15 个 commit 缩到 6 个，但 0 PR / 0 review 的“直接 push 修仙流”一点没变，还顺手塞了破坏性 feat(tool)! 和 refactor(maintenance)！，属实把 main 当草稿纸。 dsh-fieldkit 用 2 个 commit 把“基于公开 SDK”喊了 3 遍，像在跟合规部门对暗号。 ranger-vehicle-sdk 继续在架构设计阶段优雅地每次只交 1 个 feat，分支名叫重构，进度也像重构。",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 9,
+          "topRepo": "EHAPower/eha-sdk"
+        }
+      }
+    },
+    {
+      "id": "commit-3fbde0c4989e1a3db50e7b6ccca1e91e1b4c3218",
+      "type": "commit",
+      "ts": "2026-10-12T13:16:06Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "3fbde0c4989e1a3db50e7b6ccca1e91e1b4c3218",
+        "message": "fix(tool): 修正实板操作提示与 macOS 运行时测试\n\n实板验证发现普通 Stop 的 WebUI 成功提示也要求显式重连，容易把本地\n提交、设备停止事实和维护后的连接恢复混为一谈。独立 USB CLI 进程\n又会重新初始化传输编号，不能将连续启动它们视为同一个 SDK 会话。\n\n调整：\n- 将有 LocalSubmission 的统一提示改为依据后续状态或遥测判断效果，\n  不再要求普通控制和 Stop 必须重连；维护页面原有显式重连说明保留。\n- 说明单次 device 调用不保留心跳、USB 传输编号与保护状态；连续查询、\n  维护核对和脚本自动化使用现有 shell --batch 的同一会话。\n- 修正 macOS 符号链接测试中 /var 与 /private/var 的路径别名期待，\n  对预期 bundled Python 路径执行 canonicalize；生产运行时解析不变。\n\n范围与兼容性：\n- 不修改协议、公开 API、数值换算、维护准入或实际 Stop 行为。\n- 不增加跨进程状态、固定延时、自动重试、维护结果或恢复生命周期。\n- 独立 CLI 的超时仍按真实失败报告；同会话使用说明不是阶段隔离修复。\n\n验证：\n- 原生 macOS arm64 Rust 测试集合最终覆盖 198/198：初始 124 项通过，\n  修正后精确重跑路径测试 1 项，再补跑 protocol/transport 73 项。\n- WebUI Node 40/40、Python CAN 6/6 通过，board_check release 构建通过。\n- 最终提示文案完成原生 release 构建，并在真实 WebUI 的 CAN Stop\n  操作中确认显示新文案；没有为纯文字修改新增测试或重复全套测试。\n- 配套实板完成 USB/CAN 16 KiB 保存重启与原字节读回、显式重连，\n  持久 Shell 两条通路各 122 次查询、三种配置读取及断连重连零错误。\n- WebUI 实测读取/校验原文、保存、断连、显式重连新 nonce 和配置读回。\n- 独立对抗审查确认未将旧维护事务迁移到 SDK；USB 跨阶段隔离和\n  真实机械效果不由上述软件或正常通信测试证明。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 5,
+        "deletions": 3
+      }
+    },
+    {
+      "id": "commit-2a1af283cd60d2d73ac26fc21229a5a931339785",
+      "type": "commit",
+      "ts": "2026-10-12T12:13:02Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "2a1af283cd60d2d73ac26fc21229a5a931339785",
+        "message": "refactor(maintenance)!: 删除维护结果事务并采用保存重启接口\n\n原维护接口要求主机管理操作键、高水位、留存结果、结果版本和释放栅栏，\n使一次配置写入扩展为可恢复事务。此次直接取消这些产品承诺，让 SDK\n只负责身份绑定、一次发送和本地提交事实，不把固件状态机搬到主机。\n\n协议与公共接口：\n- 采用协议 v3，工作区版本升至 4.0.0-dev.3，不兼容 v2。\n- SaveAndRestart、ResetApplication、EnterUpdate 使用 query_id、UID 和\n  run_nonce；删除 OperationKey、ReadResult、ReleaseResult、OperationResult\n  及专用 RestoreFactory 消息。\n- 删除 Identity 中的维护高水位与留存标识、Communication 配置视图，\n  清除维护专属诊断字段、阶段、原因及建议动作；退役编码作为保留值拒绝。\n- 保留普通查询的新鲜度和关联检查，以及实际设备操作和未知副作用事实。\n\nSDK 与官方工具：\n- save_and_restart、restore_factory_and_restart、reset_application 和\n  enter_update 只返回 LocalSubmission；发送完成不代表固件准入或落盘成功。\n- 删除维护 pending、结果轮询、ReleaseFence、恢复与释放流程；不隐式 Stop、\n  重连、重发或读回。普通 Session 保留查询标识连续性以隔离迟到回复。\n- 恢复出厂通过同一绑定身份读取 Factory 原始记录，再复用保存重启接口；\n  不引入替代事务，读取与提交共用调用方的等待预算。\n- CLI、Shell、WebUI 改用 save-and-restart 等明确名称，移除旧结果/释放入口；\n  保存提交不清除配置草稿的未保存标志，只有真实读取才更新草稿。\n- 同步公共合同、CAN 接入说明、诊断展示和示例，移除错误后的自动查询。\n\n能力取舍：\n- 不再支持按维护键恢复操作结果、精确释放留存结果或确认保存后继续原运行。\n- 请求失联或本地提交成功后，用户须显式重新连接、核对新身份并读取配置；\n  这些读取只说明当前状态，不证明先前请求的执行历史，也不自动重放请求。\n- 协议和官方工具必须与配套固件一起升级；旧 API、命令和 v2 报文不再兼容。\n\n验证：\n- Rust 198 项测试通过：config 9、protocol 30、transport 43、SDK 39、\n  host 14、session 4、tool 59；相关示例编译通过。\n- WebUI Node 40 项通过；Python CAN 6 项中 5 项通过、1 项跳过。\n- 数值规则、fmt、严格 Clippy、rustdoc、ARM no_std 检查及 release 工具构建通过。\n- 补充独立报文/CRC 黄金向量和退役编码拒绝测试，保留普通通信回归覆盖。\n- 独立对抗审查已检查旧维护状态是否转移到 SDK，最终无阻塞发现。\n- 以上为软件验证；未刷写或操作设备，不构成 Flash、复位或机械效果验证。\n\nBREAKING CHANGE: 公共协议由 v2 升至 v3；删除维护结果恢复和释放合同，\n 保存改为固件准入后结束当前应用并重启。SDK、官方工具与固件需配套升级，\n 调用方应迁移到新的保存重启 API，并显式处理重连和当前配置读取。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2305,
+        "deletions": 5280
+      }
+    },
+    {
+      "id": "commit-1f6eff4263161cc66d065af926dd4cdc8e77c3c1",
+      "type": "commit",
+      "ts": "2026-10-12T11:50:22Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "1f6eff4263161cc66d065af926dd4cdc8e77c3c1",
+        "message": "feat(ipc)!: 提供受鉴权本地客户端与周期控制权确认\n\n为 Apps 与 Runtime mock 软件闭环提供 SDK owner 维护的 Linux\nSOCK_SEQPACKET 客户端，避免各应用复制公共 packet 和会话逻辑。\n\n- 增加人工 Takeover、按会话 Release、UID 角色和 clock_mode 合同；\n  逻辑模拟周期不改变客户端 linux.boot_monotonic 有效期。\n- 严格校验 Hello 的协议、时钟及不可用真实车辆能力，限定 packet 和\n  I/O 等待；网络未知结果不自动重发副作用或刷新原始截止时间。\n- 以弱引用 abort 句柄中止精确会话，不延长 lease 生命周期，也不影响\n  后续已复用的文件描述符。\n- 只读轮询 Result/Status，在原 deadline 内精确确认 Acquire/Takeover\n  已由控制周期应用；接纳与 HostApplied、SimulatedOnly 分别表达。\n- 补充真实 SeqPacket 的延迟确认、错误握手、断连和 abort 回归。\n\n验证：实验 crate 10 项测试、格式、Clippy 与 release build 通过；\n配套 Runtime 和 Apps 的真实网络、Unix IPC 及两种 mock 拓扑 E2E 通过。\n不声明 RNG1 兼容、真实设备执行或硬实时能力。\n\nBREAKING CHANGE: 实验 Hello/Status 新增角色与周期模式字段，消费者须固定\n匹配的 SDK 提交；此合同与原 RNG1 公共接口分开维护。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1051,
+        "deletions": 2
+      }
+    },
+    {
+      "id": "commit-56ddae9ac6534f9dcb47477ddd26bf2e1cb5f411",
+      "type": "commit",
+      "ts": "2026-10-12T08:03:20Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "56ddae9ac6534f9dcb47477ddd26bf2e1cb5f411",
+        "message": "feat(tool)!: 内置 CANable2 连接档案与私有 Python 运行时\n\n原有 CAN 入口要求用户准备 Python 环境、命名通道和易变串口路径，\nWebUI 更新、换机或更换适配器后需要重复维护这些部署细节。现在由\n工具负责已支持 CANable2/SLCAN 的连接设置与保存，SDK 继续只提供\n通用帧 I/O 和显式 python-can 配置，不实现厂商 USB 或 SLCAN 协议。\n\n新增每用户 connections.json，保存名称、适配器稳定 USB 序列号、\n节点、FD 模式、预期 EHA UID、默认及自动连接标记。每次打开重新\n解析唯一候选，使用 1 Mbps 仲裁/2 Mbps 数据位时序；缺失、歧义或\nUID 不匹配即失败，不回退其他适配器或 USB。文件锁内重读并拒绝\n旧快照覆盖，以临时文件原子替换；写入失败保留原有内存和磁盘状态。\n\nCLI 增加 connection adapters/list/save/connect/delete 与 device\n--connection；Shell 增加 connect-saved。WebUI 提供发现、连接并保存、\n更新/删除档案、默认选择和运行时状态，高级 python-can 上下文、\n解释器覆盖及多节点入口保留。WebUI 与交互 Shell 在启动时最多自动\n连接一次，失败保持界面可用。连接、重连和维护前刷新均核对身份，\n不自动启动心跳、恢复控制或重放动作；共享 CAN 网络仍由单一 owner 持有。\n\n正式 bundle 从实际可执行文件所在目录定位私有 runtime/python，\n以 Python 隔离模式运行并检查锁定依赖，不回退 PATH 或用户 Python\n环境。显式 Bus 配置忽略全局 can.conf，先构造真实 BitTimingFd，\n避免 SLCAN 忽略数据速率。保留命名 context 与显式解释器高级入口。\n打包脚本锁定 CPython、python-can、pyserial 及传递依赖，校验下载\n摘要与解包路径，收集许可证并检查导入；首批仅支持 macOS arm64。\n同步接入指南、工具说明、仓库边界与 CI 的真实 python-can 测试依赖。\n\n验证：相关 Rust 连接、UID/恢复、运行时和 Python provider 测试通过；\n真实 python-can 位时序等 6 项 Python 测试、40 项前端测试通过；\nSDK/tool 全目标 Clippy -D warnings、数值规则检查通过。macOS arm64\n原生 release 构建与 bundle 打包通过，CANable2 实机首次连接保存、\nUID 绑定与下次启动自动连接通过；限制 PATH 并设置无效 Python\n环境变量后仍使用随包运行时。物理拔插尚未实测；未启用心跳或控制。\n\nBREAKING CHANGE: eha-tool 的 CAN 默认解释器不再取 PATH 中的 python3。\n部署需携带完整 runtime 目录，或显式传入 --can-python；源码环境可按\n文档设置 EHA_TOOL_DEVELOPER_PYTHON。PythonCanOptions 新增私有配置\n状态，外部结构体字面量须改用 new/with_python/with_explicit_config\n构造器；线上 EHA 消息及既有命名 context 协议不变。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2460,
+        "deletions": 116
+      }
+    },
+    {
+      "id": "commit-d6b7dda4fb9c4a16aa24d0245c2487c3b9a2df3b",
+      "type": "commit",
+      "ts": "2026-10-12T04:59:58Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "d6b7dda4fb9c4a16aa24d0245c2487c3b9a2df3b",
+        "message": "fix(transport): 修正 USB 接收取时并保留 CAN 拒收原帧\n\nUSB 原来在 drain 开始前采样一次时间，并把它用于等待和后续多个\ncompletion，可能让刚开始的块立即超时，也可能接纳实际已迟到的片段。\n现在每次取得 completion 后从同一单调时基采样，再交给 Receiver。\n\n按 nusb 流式接收方式预挂 8 个 64 B IN 请求，成功完成后复用原缓冲，\n避免处理一个包时内核没有下一个接收请求。保持 20 ms 绝对期限、\n迟到拒收及取消后 drain 全部 pending 的阶段隔离；不添加自动重试。\n合同明确解析时间为接入层取得增量时的时间，不是总线到达或消息新鲜性。\n\nCAN 拒收现在保留实际帧数据与 ID、标志、DLC、实际长度，解决原始证据\n丢失；不放宽前缀校验。历史单次 InvalidPrefix 因缺原帧仍不能归因。\n\n验证：devbox workspace/all-targets 193 项测试、fmt、Clippy -D warnings、\n数值规则检查通过；取时回归经反向变异验证。独立对抗审查未发现阻断。\n\n实板：同一 H723/ODrive，位移与压力为模拟来源。正式无 trace 工具\nUSB 60 秒及 CAN FD 各 28 次查询全部完成、零传输错误；零速度闭环期间\n8 组 Status/Diagnostics 完成，Stop 后新鲜遥测确认 Idle、无当前目标。\n旧固件和旧历史均能出现 USB 超时；本次通过不关闭底层旧包隔离问题。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 231,
+        "deletions": 14
+      }
+    },
+    {
+      "id": "commit-34f5a420d2d160efa0ccacc90b6e05c52a71c3d6",
+      "type": "commit",
+      "ts": "2026-10-12T04:47:28Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "34f5a420d2d160efa0ccacc90b6e05c52a71c3d6",
+        "message": "feat(protocol)!: 为诊断副本增加独立年龄并采用 v2\n\nDiagnostics 增加 decision_age_us 和 device_evidence_age_us，分别说明最近完整\n控制决策与设备执行者事实副本的年龄，避免将查询时间当作事实的新鲜时间。\n固定头由 36 B 改为 44 B，完整消息上限由 1068 B 改为 1076 B；条目继续为\n64 B，最多 16 条。同步编码、视图、验证器、SDK、工具 JSON/CLI 及通信向量。\n\n公共消息版本统一切换到 2，不保留 v1 兼容解析。普通状态和遥测仍为 160 B。\n设备事实由固件实现捕获，本仓只维护公共年龄含义和编码。\n\n验证：SDK workspace 全目标测试、fmt 和 Clippy 通过；同版工具经 USB 和\nCAN FD 完成诊断、状态及测量查询，包含零速度闭环时的交错查询。\n已有链路偶发超时与拒收另行排查，本提交不将查询通过解释为链路零错误。\n\nBREAKING CHANGE: 公共线上版本改为 v2，Diagnostics 固定头及条目偏移改变；\n固件与 SDK/工具须配套升级。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 126,
+        "deletions": 81
+      }
+    },
+    {
+      "id": "commit-85e3264ec03ae594f2b89808e40be61d5d158f65",
+      "type": "commit",
+      "ts": "2026-10-12T04:46:55Z",
+      "repo": "EHAPower/dsh-fieldkit",
+      "semantic": "chore",
+      "data": {
+        "sha": "85e3264ec03ae594f2b89808e40be61d5d158f65",
+        "message": "chore(fieldkit): 提交开发说明并跟随公开 SDK 最新版本\n\n正常版本化 AGENTS.md，记录插件开发边界与验证方式。\nSDK 安装及更新流程改为跟随公开 main，不再要求固定具体提交。\n报告使用稳定的公开 SDK 项目链接，避免暗示运行工具被固定到某次提交。\n\n验证：git diff --check 通过；本次为文档和报告引用链接调整，未重复运行设备或功能测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 31,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-8d79faaa99e9af92f1df9e46ae31bf14f4950fc5",
+      "type": "commit",
+      "ts": "2026-10-12T04:36:21Z",
+      "repo": "EHAPower/dsh-fieldkit",
+      "semantic": "feat",
+      "data": {
+        "sha": "8d79faaa99e9af92f1df9e46ae31bf14f4950fc5",
+        "message": "feat(fieldkit): 发布基于公开 SDK 的现场诊断插件\n\n接入公开 eha-tool 的 USB 枚举、六步只读诊断与离线配置检查。\n按 UID 和运行实例关联证据，首个失败即返回不完整结果，保存本地报告。\n\n提供三条内置 SOP 与专用 Harness preset，限制为诊断工具和本次报告交付。\n使用合成数据覆盖固定命令、失败中断、身份变化、工具边界与报告保存。\n验证：6 项 Node 测试通过；适配 Harness 0.2.0-rc.2。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 913,
+        "deletions": 0
+      }
+    },
+    {
       "id": "commit-0fc8a52e644fba360ac52bfb70569a768057e80d",
       "type": "commit",
       "ts": "2026-10-12T01:49:43Z",
