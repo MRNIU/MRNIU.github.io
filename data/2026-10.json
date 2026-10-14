@@ -18,6 +18,45 @@
       }
     },
     {
+      "id": "commit-023ba7b010285129116001e3852960e7ccec8b0e",
+      "type": "commit",
+      "ts": "2026-10-13T09:05:35Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "023ba7b010285129116001e3852960e7ccec8b0e",
+        "message": "feat(sdk): 实现有界 Unix IPC 框架客户端\n\n实现版本化 Status/Probe 合同、帧边界和请求关联校验；Linux 建连、读写共享绝对期限，不自动重发。\n\n移除开发机与容器约定，保留通用构建说明。验证通过格式、Clippy、8 项 IPC 测试与构建。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 793,
+        "deletions": 6
+      }
+    },
+    {
+      "id": "commit-15dd92f560bbe524be6a31deec5729f9d13d0176",
+      "type": "commit",
+      "ts": "2026-10-13T08:38:50Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "refactor",
+      "data": {
+        "sha": "15dd92f560bbe524be6a31deec5729f9d13d0176",
+        "message": "refactor(architecture)!: 清除业务与历史归档并建立框架基线\n\n按端边云职责重置当前工作树，删除业务实现、协议、配置、测试和旧构建入口。\n移除历史归档，历史只通过 Git 和 release/sop-v1 查询；不迁移旧业务合同。\n保留仓库治理、职责边界与贡献规范，不创建空 crate 或未消费 Schema。\n\n该阶段尚无运行构件。验证清理范围、保留文档相对链接及 diff 检查；\n未运行已删除代码的构建或 E2E，不代表设备、实时或部署验收。\n\nBREAKING CHANGE: 旧业务接口和启动命令已移除，随后按新架构建立最小闭环。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 15,
+        "deletions": 5716
+      }
+    },
+    {
+      "id": "commit-6a703bd24a62d7e36e822a783b94fb5561718580",
+      "type": "commit",
+      "ts": "2026-10-13T05:29:29Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "6a703bd24a62d7e36e822a783b94fb5561718580",
+        "message": "docs(sdk): 明确实验合同与目标客户端职责\n\n按产品架构校准 SDK 的进程内库定位，区分当前 mock 软件组合使用的\nexperimental/local-ipc-protocol 与保留的 RNG1 客户端、合同和 schema 快照，\n删除消费者尚未迁移的过时说明。\n\n明确 Maintenance 仅通过已实现的 SDK 接口请求在线 Runtime；离线软件恢复、\nsystemd、RT 配置与硬件所有权不属于 SDK，不恢复旧控制会话或未知副作用。\n同步根规则、各目录说明和手写文档版权注释，不修改代码、schema 或 wire bytes。\n\n验证：活动文档链接及集成范围 Mermaid 检查通过，独立文档审查通过；\n本次 staged diff 检查通过。不重跑未变化的软件测试，不声明目标能力已实现。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 66,
+        "deletions": 27
+      }
+    },
+    {
       "id": "commit-3fbde0c4989e1a3db50e7b6ccca1e91e1b4c3218",
       "type": "commit",
       "ts": "2026-10-12T13:16:06Z",
