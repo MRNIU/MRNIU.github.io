@@ -1,8 +1,8 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-10-14T02:10:19.125Z",
+  "generatedAt": "2026-10-15T02:10:58.583Z",
   "stats": {
-    "totalCommits": 2261,
+    "totalCommits": 2266,
     "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 81,
@@ -15,7 +15,7 @@
     {
       "key": "2026-10",
       "file": "2026-10.json",
-      "eventCount": 38,
+      "eventCount": 43,
       "repos": [
         "EHAPower/dsh-fieldkit",
         "EHAPower/eha-sdk",
@@ -24,12 +24,12 @@
       ],
       "breakdown": {
         "ai_roast": 3,
-        "commit": 35
+        "commit": 40
       },
       "repoBreakdown": {
+        "EHAPower/dsh-fieldkit": 5,
+        "EHAPower/eha-sdk": 26,
         "EHAPower/ranger-vehicle-sdk": 6,
-        "EHAPower/eha-sdk": 24,
-        "EHAPower/dsh-fieldkit": 2,
         "EHAPower/eha-tool": 3
       }
     },

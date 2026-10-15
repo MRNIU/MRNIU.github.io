@@ -18,6 +18,71 @@
       }
     },
     {
+      "id": "commit-45f67060f1ffe518f1b05083c02fb38b2c1a3992",
+      "type": "commit",
+      "ts": "2026-10-14T13:37:31Z",
+      "repo": "EHAPower/dsh-fieldkit",
+      "semantic": "docs",
+      "data": {
+        "sha": "45f67060f1ffe518f1b05083c02fb38b2c1a3992",
+        "message": "docs: 归档 Fieldkit 迁移并统一冻结状态\n\n将协作说明、迁移记录、用户旅程、WebUI 维护说明及两份历史计划\n统一到最终决定：Fieldkit 冻结，SDK 的 DSH 支持已撤销，WebUI 继续维护。\n\n明确原部署、命令和交付步骤仅适用于冻结前版本，移除重新启动即可使用、\n插件与 WebUI 并存维护及迁移仍在实施中的现行表述。保留原验收版本、\n结果、证据和未覆盖范围，不将历史未执行事项改写为通过。\n\n仅修改六份文档，暂存差异检查通过，不涉及代码或重复运行软件测试。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 45,
+        "deletions": 36
+      }
+    },
+    {
+      "id": "commit-91ddfd7ad5b81aa6ddb5612532086eff64c170da",
+      "type": "commit",
+      "ts": "2026-10-14T13:31:42Z",
+      "repo": "EHAPower/dsh-fieldkit",
+      "semantic": "docs",
+      "data": {
+        "sha": "91ddfd7ad5b81aa6ddb5612532086eff64c170da",
+        "message": "docs: 冻结 Fieldkit 并指向持续维护的 WebUI\n\n标记仓库停止开发维护，说明 SDK 撤销 DSH 集成接口后的不兼容性，\n并将安装、服务和操作说明明确保留为历史参考。设备图形入口继续\n使用 eha-tool webui，撤销其冻结、弃用和未来删除计划。\n\n本提交仅修改 README，不改插件代码或其它未提交文档。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 6,
+        "deletions": 4
+      }
+    },
+    {
+      "id": "commit-a65d708951fbacc29c0c5c71b4e2da41a89a2b57",
+      "type": "commit",
+      "ts": "2026-10-14T13:30:55Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": null,
+      "data": {
+        "sha": "a65d708951fbacc29c0c5c71b4e2da41a89a2b57",
+        "message": "revert(tool)!: 撤销 DSH 支持并恢复独立 WebUI\n\n将 SDK 恢复到 DSH 集成前 3fbde0c 的模块布局和行为，保留\n1915459 的 ODrive 只读桥接退出及错误诊断修复。\n\n移除独立 serve、V1/V2 集成、直通 API、共享服务 CLI、物理通路占用层、\n服务控制和维护账本、轮询调度、专用验收夹具及 tiny_http 本地补丁。\n恢复原 WebUI HTTP/Workbench 后端、CLI 和 Shell；WebUI 继续维护。\n不修改通信协议、配置格式或固件实现，不改写已有提交历史。\n\n验证：devbox scripts/check.py 全部通过，包括 Rust、Python、WebUI 40 项\n测试、Clippy、文档、ARM no_std 检查和 release 构建；CLI 入口与出厂配置\n静态检查通过，采用方 H723 release 构建及布局检查通过。独立内容复核通过。\n\nBREAKING CHANGE: 删除 DSH 集成服务和新增的主机轮询/异步提交 API；\ndsh-fieldkit 不再兼容此 SDK，设备图形操作继续使用 eha-tool webui。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2433,
+        "deletions": 38898
+      }
+    },
+    {
+      "id": "commit-823f23a3f8433fd9ca747c2bcdf5c06294b9b947",
+      "type": "commit",
+      "ts": "2026-10-14T03:35:48Z",
+      "repo": "EHAPower/dsh-fieldkit",
+      "semantic": "feat",
+      "data": {
+        "sha": "823f23a3f8433fd9ca747c2bcdf5c06294b9b947",
+        "message": "feat: 将 Fieldkit 简化为 eha-tool 命令工作台\n\n将连接、命令表单与原始结果收拢到同一页面，通过 serve --direct-api\n直接使用官方 Workbench。移除插件维护的授权、占用、恢复账本与\nunknown 后续锁，保留官方命令语义、独立 Stop 和原始数字文本。\n\n按钮和对话共用目标与最近一次原始响应；固定命令目录覆盖连接、\n控制、配置、试验、记录、群组和 ODrive。删除旧 UI、诊断链及\n对应测试，移除未使用的图表依赖。旧 eha-tool webui 冻结弃用，\n当前仍可使用，未来删除，不更新其专属实现。\n\n验证：devbox 构建、34 项全套测试、最终 5 项 UI 定向测试和打包通过；\n前后端独立审查通过。\n官方 DSH 中完成原生服务启动、USB 连接、状态命令、原始配置错误、\n错误后继续、对话读取最近结果及页面刷新；未执行运动或维护写入。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1124,
+        "deletions": 11215
+      }
+    },
+    {
+      "id": "commit-c95bbcea608648969adf0acff727213f7aa417da",
+      "type": "commit",
+      "ts": "2026-10-14T03:05:09Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "c95bbcea608648969adf0acff727213f7aa417da",
+        "message": "feat(tool): 提供直通命令服务并冻结旧 WebUI\n\n新增 serve --direct-api，在独立认证服务中复用 Workbench 与 ToolSession 的\n/api 命令接口。DSH 插件不再需要 P3/P4 授权、预约、操作账本或 unknown 锁。\n该模式只暴露必要服务生命周期，不提供静态页面或自动连接，保留原生命令、\n试验及同步执行行为，并准确描述其能力和限制。\n\n旧 webui 标记冻结、弃用且未来删除，现有功能和专属代码保持可用。\n兼容服务及 v1 集成初始化保持原有行为。\n\n验证：devbox scripts/check.py 全部通过；最终直通路由/元数据定向测试和\neha-tool clippy 通过；独立静态审查通过，追加元数据由主代理核对。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 361,
+        "deletions": 91
+      }
+    },
+    {
       "id": "commit-023ba7b010285129116001e3852960e7ccec8b0e",
       "type": "commit",
       "ts": "2026-10-13T09:05:35Z",
