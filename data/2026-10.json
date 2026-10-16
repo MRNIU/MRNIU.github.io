@@ -18,6 +18,45 @@
       }
     },
     {
+      "id": "commit-ee0db93000910928bc32a4ce8858146852bb99a9",
+      "type": "commit",
+      "ts": "2026-10-15T06:04:25Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "ee0db93000910928bc32a4ce8858146852bb99a9",
+        "message": "fix(tool): 统一 Windows 制包与启动自检日志的 UTF-8 编码\n\nWindows ARM64 原生 CI 已通过 release 构建与静态 CRT 检查，但在\n下载 Python runtime 前打印中文日志时，setup-python 的重定向 stdout\n采用 cp1252，导致 UnicodeEncodeError 并中断制包。\n\n两个发行作者脚本在命令行入口将 stdout/stderr 明确配置为 UTF-8，\n覆盖帮助、进度和错误输出。处理位于脚本本身，保持中文日志，不要求\n调用者配置 PYTHONIOENCODING；不改变发行包解释器隔离或 CAN 行为。\n\n加入子进程回归测试：模拟 PYTHONIOENCODING=cp1252，两个脚本均须成功\n输出可按 UTF-8 解码的中文帮助。修复前两个子场景均失败，修复后通过，\n完整制包测试 10 项通过；Windows 实际制包与隔离启动由后续 CI 复验。\n\n失败证据：SDK 发行 CI 38689770166 / job 116272748487。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 21,
+        "deletions": 0
+      }
+    },
+    {
+      "id": "commit-a1042ea21b1a1deb0d039fa86cc3d7158d235fb1",
+      "type": "commit",
+      "ts": "2026-10-15T06:02:12Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "fix",
+      "data": {
+        "sha": "a1042ea21b1a1deb0d039fa86cc3d7158d235fb1",
+        "message": "fix(ci): 避免 glibc 版本输出触发 SIGPIPE\n\nUbuntu 22.04 amd64 发行任务已安装 Rust 并通过宿主检查，但用于显示\nglibc 版本的 ldd --version | head -n 1 在 GitHub Actions 的\nbash -e -o pipefail 下触发 SIGPIPE，以 141 退出，提前跳过构建与制包。\n\n直接保留 ldd 的完整版本输出，去掉提前关闭管道的 head；仍保留\npipefail 对真正错误的检查，不改变发行目标、构建参数或运行时内容。\n\n验证：修正后的命令在 devbox 的同等 bash 严格模式下返回 0。\n原始失败见 SDK 发行 CI 38689770166 / job 116272748480；修正后的\nUbuntu 22.04 完整制包仍由后续 CI 验证。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-a004e01482d48722e47074e2f140860af3ee5d37",
+      "type": "commit",
+      "ts": "2026-10-15T05:59:01Z",
+      "repo": "EHAPower/eha-sdk",
+      "semantic": "feat",
+      "data": {
+        "sha": "a004e01482d48722e47074e2f140860af3ee5d37",
+        "message": "feat(tool): 补齐 Windows 与 Linux 双架构独立发行包\n\n将原先仅覆盖 macOS arm64 的私有 CAN runtime 扩展到 Windows MSVC 和\nLinux GNU 的 amd64/arm64，使普通用户整体解压发行包即可使用 eha-tool，\n无需自行安装 Python、pip、虚拟环境或配置受管 CANable2 的 can.conf。\n\n- 固定 CPython 3.13.16/PBS 20261009 的五目标资产与校验值，并补齐\n  wrapt 的平台 wheel 哈希；保持 python-can 4.6.1、pyserial 3.5 及其\n  依赖版本不变，仍按锁文件和哈希安装二进制 wheel。\n- 打包前校验宿主 OS/CPU，兼容 Windows python.exe、Lib/site-packages\n  和许可证布局；新增 --archive 输出 Windows ZIP 或 Unix tar.gz，\n  保留完整目录，拒绝覆盖已有产物，健康检查失败时不发布半成品。\n- 修正 tar 硬链接与符号链接的相对根，拒绝 Windows/Unix 越界路径，\n  保留 Unix 执行权限，并兼容可复现归档中的 1980 年前 ZIP 时间戳。\n- Windows 连接档案使用 LOCALAPPDATA，缺失时回退 APPDATA；macOS/Linux\n  保留 XDG 与平台默认目录，无法确定用户目录时明确失败，不写入 cwd。\n- 新增五目标原生发行 CI：Linux 以 Ubuntu 22.04/glibc 2.35 为基线；\n  Windows 显式选择 MSVC host、静态链接 CRT，并检查成品 DLL 导入。\n  main 推送和手工运行上传可下载归档，不自动创建 GitHub Release。\n- 共用解压迁移自检：在含空格的新路径、空 PATH、无效 Python 环境和\n  独立用户档案目录下执行版本查询、档案读取和 CAN 适配器枚举。\n- 更新制包、下载使用和平台限制说明；保留高级 python-can context、\n  --can-python 覆盖及厂商驱动/权限要求，不改变身份绑定、显式重连、\n  心跳或控制行为。\n\n验证：Python 桥接与制包测试通过；Rust runtime/连接档案定向测试、fmt\n检查及 release 构建通过。Linux amd64/arm64 均在 Ubuntu 22.04 完成真实\n制包和隔离启动自检，其中 amd64 由仿真执行。两个 Windows MSVC target\n在静态 CRT 配置下 cargo check 通过；原生 Windows 制包、DLL 检查与\n启动自检由本提交推送后的 CI 继续验证。本次没有 CAN 硬件操作。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 727,
+        "deletions": 61
+      }
+    },
+    {
       "id": "commit-45f67060f1ffe518f1b05083c02fb38b2c1a3992",
       "type": "commit",
       "ts": "2026-10-14T13:37:31Z",
