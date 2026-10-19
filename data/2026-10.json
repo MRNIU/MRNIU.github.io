@@ -2,6 +2,19 @@
   "month": "2026-10",
   "events": [
     {
+      "id": "commit-c66ef876cbd93c7c26be990646eb8c45ed400148",
+      "type": "commit",
+      "ts": "2026-10-18T13:17:31Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "c66ef876cbd93c7c26be990646eb8c45ed400148",
+        "message": "docs(architecture): 同步 Base 分层引用\n\n将底盘协议与上层控制职责的引用同步到 ranger-vehicle-base 和 ranger-vehicle-apps。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 5,
+        "deletions": 5
+      }
+    },
+    {
       "id": "ai-roast-2026-10-12",
       "type": "ai_roast",
       "ts": "2026-10-18T00:00:00Z",
@@ -9,10 +22,10 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-10-12 ~ 2026-10-18",
-        "content": "eha-sdk 这周从上周的 15 个 commit 缩到 6 个，但 0 PR / 0 review 的“直接 push 修仙流”一点没变，还顺手塞了破坏性 feat(tool)! 和 refactor(maintenance)！，属实把 main 当草稿纸。 dsh-fieldkit 用 2 个 commit 把“基于公开 SDK”喊了 3 遍，像在跟合规部门对暗号。 ranger-vehicle-sdk 继续在架构设计阶段优雅地每次只交 1 个 feat，分支名叫重构，进度也像重构。",
-        "status": "draft",
+        "content": "EHAPower/eha-sdk 这周 12 个 commit 全走直接提交， 0 PR / 0 review，还上演了 feat → fix → revert(tool)! 的三幕剧：补发行包、修 UTF-8、撤销 DSH 支持并冻结旧 WebUI，仿佛 CI 是唯一读者。 EHAPower/dsh-fieldkit 拿 5 个 commit 给自己写冻结讣告； EHAPower/ranger-vehicle-sdk 在架构设计阶段就敢 refactor(architecture)! 和 feat(ipc)！且 0 review 落地； drivercraft/ostool 贡献了唯一的 issue comment， 1 个 feat 却不见 PR，像个孤独的直接提交者。",
+        "status": "final",
         "stats": {
-          "totalCommits": 9,
+          "totalCommits": 23,
           "topRepo": "EHAPower/eha-sdk"
         }
       }
