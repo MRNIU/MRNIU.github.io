@@ -2,6 +2,19 @@
   "month": "2026-10",
   "events": [
     {
+      "id": "commit-529c0d11a7fadae0f1e99e9f0bf70c14b1503afa",
+      "type": "commit",
+      "ts": "2026-10-19T03:24:34Z",
+      "repo": "EHAPower/ranger-vehicle-sdk",
+      "semantic": "docs",
+      "data": {
+        "sha": "529c0d11a7fadae0f1e99e9f0bf70c14b1503afa",
+        "message": "docs(sdk): 更新 Chassis 公共协议维护位置\n\n将根规则与 README 中的底盘 socket 合同引用指向 Chassis README\n的本地协议章节，保持 SDK 不代理或重定义该接口的边界。\n\n验证：受影响文档引用检查通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 2,
+        "deletions": 2
+      }
+    },
+    {
       "id": "commit-c66ef876cbd93c7c26be990646eb8c45ed400148",
       "type": "commit",
       "ts": "2026-10-18T13:17:31Z",
