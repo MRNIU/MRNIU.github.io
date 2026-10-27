@@ -1,38 +1,50 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-10-20T02:10:15.814Z",
+  "generatedAt": "2026-10-27T02:14:58.498Z",
   "stats": {
-    "totalCommits": 2273,
+    "totalCommits": 2276,
     "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 194,
     "activeRepos": 84,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-10-19T03:24:34Z"
+    "latestEvent": "2026-11-01T00:00:00Z"
   },
   "months": [
     {
+      "key": "2026-11",
+      "file": "2026-11.json",
+      "eventCount": 1,
+      "repos": [],
+      "breakdown": {
+        "ai_roast": 1
+      },
+      "repoBreakdown": {}
+    },
+    {
       "key": "2026-10",
       "file": "2026-10.json",
-      "eventCount": 51,
+      "eventCount": 54,
       "repos": [
         "EHAPower/dsh-fieldkit",
         "EHAPower/eha-sdk",
         "EHAPower/eha-tool",
         "EHAPower/ranger-vehicle-sdk",
+        "MRNIU/factorio_LegendaryMechStart",
         "drivercraft/ostool"
       ],
       "breakdown": {
-        "commit": 47,
+        "commit": 50,
         "ai_roast": 3,
         "issue_comment": 1
       },
       "repoBreakdown": {
+        "MRNIU/factorio_LegendaryMechStart": 2,
+        "EHAPower/dsh-fieldkit": 6,
         "EHAPower/ranger-vehicle-sdk": 8,
         "drivercraft/ostool": 2,
         "EHAPower/eha-sdk": 30,
-        "EHAPower/dsh-fieldkit": 5,
         "EHAPower/eha-tool": 3
       }
     },

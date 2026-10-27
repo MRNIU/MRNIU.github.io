@@ -2,6 +2,45 @@
   "month": "2026-10",
   "events": [
     {
+      "id": "commit-0569ba69cb2a6617fc79eea4c6cb25b57a130ff1",
+      "type": "commit",
+      "ts": "2026-10-27T00:43:41Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "0569ba69cb2a6617fc79eea4c6cb25b57a130ff1",
+        "message": "doc: update LICENSE\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1,
+        "deletions": 1
+      }
+    },
+    {
+      "id": "commit-c8b0630bfdf81471bb72adad831b5f18426f7ef8",
+      "type": "commit",
+      "ts": "2026-10-27T00:39:41Z",
+      "repo": "MRNIU/factorio_LegendaryMechStart",
+      "semantic": null,
+      "data": {
+        "sha": "c8b0630bfdf81471bb72adad831b5f18426f7ef8",
+        "message": "Fix starter inventory resets after custom cutscenes\n\nPrepare each new player once when their character becomes available instead\nof re-granting equipment on every cutscene completion or cancellation.\nRestore pending delivery subscriptions on load and migrate unfinished\nfirst-time deliveries from older saves.\n\nBump the mod to 1.6.8 and update its behavior documentation. Reviewed against\nFactorio API contracts, including multiplayer joins and save upgrades;\nno tests were run as requested.\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 67,
+        "deletions": 52
+      }
+    },
+    {
+      "id": "commit-c563a130fe4b97a3b7b4b7da8d638814b437ef25",
+      "type": "commit",
+      "ts": "2026-10-26T03:50:57Z",
+      "repo": "EHAPower/dsh-fieldkit",
+      "semantic": "docs",
+      "data": {
+        "sha": "c563a130fe4b97a3b7b4b7da8d638814b437ef25",
+        "message": "docs(fieldkit): 删除终止迁移文档并保留冻结入口\n\n删除七份已终止的安装、迁移、旅程和历史计划文档，将冻结状态、当前 SDK 不兼容性及 WebUI 入口集中到 README 和协作规则。\n\n保留插件启动直接读取的三份 SKILL.md，不修改源码。现有 thin-plugin 加载测试、文档链接、差异及独立审查通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 10,
+        "deletions": 618
+      }
+    },
+    {
       "id": "commit-529c0d11a7fadae0f1e99e9f0bf70c14b1503afa",
       "type": "commit",
       "ts": "2026-10-19T03:24:34Z",

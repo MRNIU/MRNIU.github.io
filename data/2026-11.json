@@ -1,0 +1,21 @@
+{
+  "month": "2026-11",
+  "events": [
+    {
+      "id": "ai-roast-2026-10-26",
+      "type": "ai_roast",
+      "ts": "2026-11-01T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "weekRange": "2026-10-26 ~ 2026-11-01",
+        "content": "MRNIU/factorio_LegendaryMechStart checks in a LICENSE edit and an unconventionally capitalized \"Fix starter inventory resets after custom cutscenes\" — 0 PRs, 0 reviews, pure solo Factorio trust-fall. Separately, EHAPower/dsh-fieldkit drops from 5 commits 2 weeks ago to 1 \"docs(fieldkit): 删除终止迁移文档并保留冻结入口\", deleting the migration doc while preserving the frozen entry, a real \"no way in, no way back\" energy. Total 3 commits, 0 PRs, 0 reviews, 0 issues, 0 comments: two unrelated projects, one shared commitment to historical preservation.",
+        "status": "draft",
+        "stats": {
+          "totalCommits": 3,
+          "topRepo": "MRNIU/factorio_LegendaryMechStart"
+        }
+      }
+    }
+  ]
+}
