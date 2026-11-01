@@ -2,6 +2,49 @@
   "month": "2026-10",
   "events": [
     {
+      "id": "ai-summary-month-2026-10",
+      "type": "ai_summary",
+      "ts": "2026-10-31T00:00:00Z",
+      "repo": null,
+      "semantic": null,
+      "data": {
+        "period": "month",
+        "range": {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "label": "2026-10"
+        },
+        "content": "2026 年 10 月活动集中在 EHAPower/eha-sdk，提交量 50 个与上月的 48 个基本持平，但 PR 从 8 个降为 0，活跃仓库也从 15 个收缩到 6 个。主要工作流围绕 SDK 文档收敛、Fieldkit 冻结与简化，以及 IPC 与 CAN 以及 tool 的 feat/fix/refactor 和 WebUI 修复，因此主导语义标签为 docs。节奏上前三周提交密集，最后两周仅 4 个提交，说明月底进入收尾或切换阶段。与上月以 MRNIU/odrive-can-driver 和 feat 为主相比，本月明显从多仓库功能开发转向单仓库的文档与架构整理，协作评审习惯仍未建立。",
+        "highlights": [
+          "50 commits, 0 PRs, 0 reviews, 0 issues, 1 comments, 6 active repos",
+          "Top repo: EHAPower/eha-sdk"
+        ],
+        "patterns": [
+          "Primary activity type: docs",
+          "Commit-heavy period"
+        ],
+        "risks": [
+          "High commit count with no PR activity"
+        ],
+        "stats": {
+          "totalCommits": 50,
+          "totalPRs": 0,
+          "totalReviews": 0,
+          "totalIssues": 0,
+          "totalComments": 1,
+          "activeRepos": 6,
+          "topRepo": "EHAPower/eha-sdk"
+        },
+        "continuity": {
+          "carriedThemes": [],
+          "changedSincePrevious": [
+            "Top repo shifted from MRNIU/odrive-can-driver to EHAPower/eha-sdk",
+            "Dominant semantic tag changed from feat to docs"
+          ]
+        }
+      }
+    },
+    {
       "id": "commit-0569ba69cb2a6617fc79eea4c6cb25b57a130ff1",
       "type": "commit",
       "ts": "2026-10-27T00:43:41Z",
