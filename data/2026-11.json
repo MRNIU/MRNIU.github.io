@@ -9,8 +9,8 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-10-26 ~ 2026-11-01",
-        "content": "MRNIU/factorio_LegendaryMechStart checks in a LICENSE edit and an unconventionally capitalized \"Fix starter inventory resets after custom cutscenes\" — 0 PRs, 0 reviews, pure solo Factorio trust-fall. Separately, EHAPower/dsh-fieldkit drops from 5 commits 2 weeks ago to 1 \"docs(fieldkit): 删除终止迁移文档并保留冻结入口\", deleting the migration doc while preserving the frozen entry, a real \"no way in, no way back\" energy. Total 3 commits, 0 PRs, 0 reviews, 0 issues, 0 comments: two unrelated projects, one shared commitment to historical preservation.",
-        "status": "draft",
+        "content": "MRNIU/factorio_LegendaryMechStart shipped the classic “LICENSE + one fix” pair, while EHAPower/dsh-fieldkit committed a docs deletion for a repo whose own README calls it frozen — truly peak archival energy. With 0 PRs, 0 reviews, and 0 issues across both, this week is less development and more commit-message ASMR. Compared to the earlier 23-commit EHA sprint, 3 commits across two unrelated repos sounds like a project powering down, not scaling up.",
+        "status": "final",
         "stats": {
           "totalCommits": 3,
           "topRepo": "MRNIU/factorio_LegendaryMechStart"
