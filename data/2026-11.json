@@ -2,6 +2,19 @@
   "month": "2026-11",
   "events": [
     {
+      "id": "commit-822862d76806579b17e47bf9c89f319e17553311",
+      "type": "commit",
+      "ts": "2026-11-02T08:50:31Z",
+      "repo": "EHAPower/devcontainers",
+      "semantic": null,
+      "data": {
+        "sha": "822862d76806579b17e47bf9c89f319e17553311",
+        "message": "添加 ranger-vehicle-chassis-firmware 需要的工具\n\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 4,
+        "deletions": 0
+      }
+    },
+    {
       "id": "ai-roast-2026-10-26",
       "type": "ai_roast",
       "ts": "2026-11-01T00:00:00Z",
