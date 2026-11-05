@@ -1,29 +1,33 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-11-03T02:06:53.450Z",
+  "generatedAt": "2026-11-05T02:08:01.929Z",
   "stats": {
-    "totalCommits": 2277,
+    "totalCommits": 2280,
     "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 81,
     "totalComments": 194,
     "activeRepos": 84,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-11-02T08:50:31Z"
+    "latestEvent": "2026-11-08T00:00:00Z"
   },
   "months": [
     {
       "key": "2026-11",
       "file": "2026-11.json",
-      "eventCount": 2,
+      "eventCount": 6,
       "repos": [
-        "EHAPower/devcontainers"
+        "EHAPower/devcontainers",
+        "EHAPower/eha-sdk",
+        "MRNIU/odrive-can-driver"
       ],
       "breakdown": {
-        "commit": 1,
-        "ai_roast": 1
+        "ai_roast": 2,
+        "commit": 4
       },
       "repoBreakdown": {
+        "EHAPower/eha-sdk": 1,
+        "MRNIU/odrive-can-driver": 2,
         "EHAPower/devcontainers": 1
       }
     },
