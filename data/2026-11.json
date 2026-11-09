@@ -9,8 +9,8 @@
       "semantic": null,
       "data": {
         "weekRange": "2026-11-02 ~ 2026-11-08",
-        "content": "这周又是 0 PR、0 review 的纯 solo 周： MRNIU/odrive-can-driver 用 2 个 commit 走完“发布 0.3.1 后修 Embassy RTR”的经典补丁流程， EHAPower/devcontainers 的单条 commit 像是给 EHAPower 工具链欠账补票。 EHAPower/eha-sdk 从两周前的 12 commits 跌到本周 1 个 fix，也算让代码产出和 review 参与度实现了难得的一致。",
-        "status": "draft",
+        "content": "这周 4 个 commit 分属三个独立工作流： MRNIU/odrive-can-driver 的 2 个 commit 是发布和修 Embassy RTR 查询帧构造； EHAPower/eha-sdk 延续上周但锐减到 1 个 fix； EHAPower/devcontainers 只补了 ranger-vehicle-chassis-firmware 的工具。 0 PR、0 review、0 issue 说明三个项目都选择直接 push 主分支， MRNIU/odrive-can-driver 那个 Embassy RTR 修复没 review，只能靠看门狗背书。",
+        "status": "final",
         "stats": {
           "totalCommits": 4,
           "topRepo": "MRNIU/odrive-can-driver"
