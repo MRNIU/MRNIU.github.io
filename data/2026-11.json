@@ -2,6 +2,122 @@
   "month": "2026-11",
   "events": [
     {
+      "id": "comment-hpmicro/hpm_sdk-149-0",
+      "type": "issue_comment",
+      "ts": "2026-11-22T23:23:40Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "issueNumber": 149,
+        "issueTitle": "直接调用 NOR 擦写函数时，接口文档未说明如何处理中断",
+        "body": "补查了 SDK 的 XPI NOR 示例。示例已说明擦写时要避免访问目标 Flash，并演示了由调用方保存和恢复中断状态。EEPROM 组件调用端口时也已经这样处理。头文件可以补一条提示，这里关闭单独的文档请求。见 [XPI 示例](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/samples/rom_api/xpi_nor_api/src/xpi_nor_api_demo.c#L371-L415)。"
+      }
+    },
+    {
+      "id": "issue-150-hpmicro/hpm_sdk",
+      "type": "issue",
+      "ts": "2026-11-22T23:13:43Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "number": 150,
+        "title": "USB 设备模式下，Bulk OUT 接收出错时应用收不到通知",
+        "state": "closed",
+        "body": "HPM SDK v1.13.0 自带的 CherryUSB 驱动中，如果应用每收到一次回调才提交下一次 Bulk OUT 接收，那么一次接收出错后，应用可能一直等不到回调。\n\n从 `USBD_IRQHandler()` 的处理流程看，控制器报告端点传输结束后，驱动会检查传输描述符（QTD）。如果描述符标记了传输错误，驱动只打印 `usbd transfer error!`，随后跳过这个端点的回调。应用因此无法得知是哪一次接收失败，也不知道何时能再次使用原缓冲区。[端点中断处理](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/middleware/cherryusb/port/hpmicro/usb_dc_hpm.c#L342-L389)\n\n预期驱动能告诉应用哪个端点接收失败，并说明何时可以复用缓冲区。以上是对 SDK 源码的检查，尚未在实板上复现这条错误路径。\n"
+      }
+    },
+    {
+      "id": "issue-476-cherry-embedded/CherryUSB",
+      "type": "issue",
+      "ts": "2026-11-22T23:04:48Z",
+      "repo": "cherry-embedded/CherryUSB",
+      "semantic": null,
+      "data": {
+        "number": 476,
+        "title": "HPMicro Device：Bulk OUT 的 QTD 错误完成没有通知端点使用方",
+        "state": "closed",
+        "body": "### 描述一下这个bug / Describe the bug\n\n在 HPMicro Device port，一个已提交的 Bulk OUT 传输若以 QTD 错误结束，中断处理程序会确认端点完成位，但应用收不到该端点的失败通知。依靠回调重新提交接收的应用会继续等待，也无法从这个接口判断何时可以复用缓冲区。\n\n### 复现步骤 / To Reproduce\n\n按当前源码跟踪一次已提交的 OUT 接收。控制器置位 `ENDPTCOMPLETE` 后，`USBD_IRQHandler()` 先清除完成位，再检查 QTD。若 QTD 有 `halted`、`xact_err` 或 `buffer_err`，处理程序记录日志，清除 `ep_cb_req` 并跳出循环。这条路径跳过了端点回调和正常完成分支里的 `in_use = false`。全局 `intr_error` 分支也仅记录日志。[端点完成处理](https://github.com/cherry-embedded/CherryUSB/blob/b518afb1475d9de4b019e2e6c7664a1a4f2d899a/port/hpmicro/usb_dc_hpm.c#L342-L389) · [全局错误处理](https://github.com/cherry-embedded/CherryUSB/blob/b518afb1475d9de4b019e2e6c7664a1a4f2d899a/port/hpmicro/usb_dc_hpm.c#L295-L302)\n\n预期应用可以得知哪个端点的传输已失败，以及何时能安全复用此次传输的缓冲区。\n\n### 设备信息 / Target Device\n\nHPMicro USB Device controller，`port/hpmicro`，Bulk OUT。已核对 CherryUSB `b518afb1` 和 HPM SDK v1.13.0 自带的同一移植。[SDK 中的实现](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/middleware/cherryusb/port/hpmicro/usb_dc_hpm.c#L342-L389)\n\n### 日志 / Log\n\n源码中该分支的日志为 `usbd transfer error!`。结论来自源码检查，尚无实板错误传输日志。\n"
+      }
+    },
+    {
+      "id": "issue-149-hpmicro/hpm_sdk",
+      "type": "issue",
+      "ts": "2026-11-22T23:04:46Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "number": 149,
+        "title": "直接调用 NOR 擦写函数时，接口文档未说明如何处理中断",
+        "state": "closed",
+        "body": "程序从 NOR Flash 直接运行（XIP）时，如果一边擦写这片 Flash，一边进入中断，中断处理函数可能还需要从同一片 Flash 取指或读取常量。如果 Flash 在擦写时不能读取，调用方就需要知道如何避开这类访问。\n\n在 HPM SDK v1.13.0 中，EEPROM 模拟组件会在写 Flash 前关闭中断，写完再恢复。直接调用 `nor_flash_write()` 或 `nor_flash_erase()` 时，这两个函数本身不会关闭中断，而头文件只说明了地址、缓冲区和长度。[EEPROM 的写入操作](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/eeprom_emulation.c#L159-L172) · [NOR 端口实现](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/port/hpm_nor_flash.c#L78-L115) · [接口注释](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/port/hpm_nor_flash.h#L52-L73)\n\n请在这两个接口的注释中说明，从同一片 NOR 运行程序时，哪些情况下调用方需要屏蔽中断。\n"
+      }
+    },
+    {
+      "id": "issue-148-hpmicro/hpm_sdk",
+      "type": "issue",
+      "ts": "2026-11-22T23:04:44Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "number": 148,
+        "title": "写入或擦除 NOR 的第一个扇区时，SDK 算错了地址偏移",
+        "state": "open",
+        "body": "HPM SDK v1.13.0 的 EEPROM 模拟组件提供 `nor_flash_write()` 和 `nor_flash_erase()`。头文件要求传入 Flash 的物理地址，端口负责把它换算成相对 Flash 起点的偏移，再调用 ROM。[接口说明](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/port/hpm_nor_flash.h#L52-L73)\n\n假设 Flash 映射在 `0x80000000`，每个扇区大小为 `0x1000`。下面是这两个函数按源码算出的偏移。\n\n| 传入地址 | 传给 ROM 的偏移 | 正确偏移 |\n| --- | --- | --- |\n| 第一个扇区起点 `0x80000000` | `0x80000000` | `0` |\n| 第二个扇区起点 `0x80001000` | `0x1000` | `0x1000` |\n\n写入和擦除都用了 `addr > cfg->base_addr` 这样的判断。地址恰好等于基址时，代码跳过了减去基址这一步。[写入和擦除的地址换算](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/port/hpm_nor_flash.c#L79-L98)\n"
+      }
+    },
+    {
+      "id": "issue-147-hpmicro/hpm_sdk",
+      "type": "issue",
+      "ts": "2026-11-22T23:04:42Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "number": 147,
+        "title": "EEPROM 写入途中复位，重启后的下一次写入可能报成功却读不回",
+        "state": "open",
+        "body": "在 HPM SDK v1.13.0 中，EEPROM 写入途中发生复位，可能连重启后新写的那条记录也读不回来。\n\nSDK 保存一条记录时，先写数据，再写描述符，记下数据的位置和长度。如果在两步之间复位，Flash 中已经有了数据，却没有描述符。重启时 SDK 只根据描述符寻找空闲位置，于是把刚写过的位置当成了空闲空间。[写入顺序](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/eeprom_emulation.c#L153-L177) · [重启时寻找空闲位置](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/eeprom_emulation.c#L407-L430)\n\n在模拟 NOR Flash 上复现了这个问题。模拟器按 NOR 的规则写入，擦除前只能把位从 1 写成 0。在写完数据、尚未写描述符时模拟复位。重新初始化后写入另一条记录，其中有些位需要从 0 变回 1。这次 `e2p_write()` 返回成功，紧接着用 `e2p_read()` 读取却得到 `E2P_ERROR_CRC`。\n\n预期是重启后写入的新记录能正确读回。\n"
+      }
+    },
+    {
+      "id": "issue-146-hpmicro/hpm_sdk",
+      "type": "issue",
+      "ts": "2026-11-22T23:04:40Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "number": 146,
+        "title": "EEPROM 整理时写入状态标记失败，SDK 仍擦除旧区并返回成功",
+        "state": "open",
+        "body": "HPM SDK v1.13.0 的 EEPROM 模拟组件整理数据时，先把记录从旧区复制到新区，再在新区写入“复制完成”标记（`finish`）。即使写这个标记失败，`e2p_flush()` 仍继续擦除旧区。\n\n在模拟 NOR Flash 上，先往主区写入一条能正常读回的记录，再把主区的记录整理到备用区。整理时，让写入新区“复制完成”和“新区有效”（`valid`）这两个标记的操作都返回错误。实际结果是整理返回 `E2P_STATUS_OK`，重新初始化后却找不到原记录。\n\n预期是“复制完成”标记写入失败时就向调用方报错，并保留还能读出记录的旧区。整理函数也忽略了前面两次状态写入、旧区擦除和旧区头写入的返回值。[写入状态标记](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/eeprom_emulation.c#L455-L465) · [擦除旧区和返回结果](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/eeprom_emulation.c#L511-L522)\n"
+      }
+    },
+    {
+      "id": "issue-145-hpmicro/hpm_sdk",
+      "type": "issue",
+      "ts": "2026-11-22T23:04:38Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "number": 145,
+        "title": "EEPROM 整理后，已损坏的记录反而通过了 CRC 校验",
+        "state": "open",
+        "body": "在 HPM SDK v1.13.0 的 EEPROM 模拟组件中，同一条损坏的记录，整理前读取会报 CRC 错误，整理后再读却返回成功。读出的数据仍然是错的。\n\n使用未修改的 SDK 和内存模拟的 NOR Flash 复现了这个问题。\n\n1. 用 `e2p_write()` 写入一条记录，再用 `e2p_read()` 确认能正确读回。\n2. 在模拟 Flash 中改变这条记录的数据，保留原来的 CRC。此时读取返回 `E2P_ERROR_CRC`。\n3. 调用 `e2p_flush(E2P_FLUSH_FORCE)` 整理，再读同一条记录。此时读取返回 `E2P_STATUS_OK`。\n\n整理时，SDK 把旧区的数据复制到新区，跳过了原来的 CRC 校验，又按损坏后的数据算了一个新 CRC。整理时应能识别这条记录已经损坏。[复制记录](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/eeprom_emulation.c#L475-L490) · [计算新 CRC](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/components/eeprom_emulation/eeprom_emulation.c#L153-L161)\n"
+      }
+    },
+    {
+      "id": "issue-144-hpmicro/hpm_sdk",
+      "type": "issue",
+      "ts": "2026-11-22T23:00:11Z",
+      "repo": "hpmicro/hpm_sdk",
+      "semantic": null,
+      "data": {
+        "number": 144,
+        "title": "MCL v2 首次初始化时会读取尚未赋值的配置指针",
+        "state": "open",
+        "body": "HPM SDK v1.13.0 的 `hpm_mcl_loop_init_v2()` 要根据本次传入的运行模式，判断是否必须提供硬件控制环 `hw_loop`。\n\n首次初始化一个清零的 `mcl_loop_t` 时，即使传入了有效的 `cfg`，第 22 行读的也是 `loop->cfg->mode`。此时 `loop->cfg` 仍是空指针，直到第 30 行才指向传入的配置。\n\n重新初始化时也会读错模式。例如，旧配置是混合 FOC，新配置是普通 FOC，函数仍会要求调用方提供 `hw_loop`。这里应按本次传入的 `cfg->mode` 检查。[模式检查与赋值的位置](https://github.com/hpmicro/hpm_sdk/blob/ccc5ec467a047f3ea85cd2fa4565e91db7135a38/middleware/hpm_mcl_v2/core/loop/hpm_mcl_loop.c#L14-L30)\n"
+      }
+    },
+    {
       "id": "commit-29899566799bf6018b6e1de4255bf66a5f8cd786",
       "type": "commit",
       "ts": "2026-11-18T18:38:03Z",
