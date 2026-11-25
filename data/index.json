@@ -1,40 +1,42 @@
 {
   "user": "MRNIU",
-  "generatedAt": "2026-11-23T02:08:12.639Z",
+  "generatedAt": "2026-11-25T02:07:47.210Z",
   "stats": {
-    "totalCommits": 2281,
+    "totalCommits": 2283,
     "totalPRs": 265,
     "totalReviews": 6,
     "totalIssues": 89,
     "totalComments": 195,
     "activeRepos": 86,
     "earliestEvent": "2017-11-13T08:04:30Z",
-    "latestEvent": "2026-11-22T23:23:40Z"
+    "latestEvent": "2026-11-24T11:59:59Z"
   },
   "months": [
     {
       "key": "2026-11",
       "file": "2026-11.json",
-      "eventCount": 16,
+      "eventCount": 18,
       "repos": [
         "EHAPower/devcontainers",
         "EHAPower/eha-sdk",
+        "MRNIU/brt-can-protocol",
         "MRNIU/odrive-can-driver",
         "cherry-embedded/CherryUSB",
         "hpmicro/hpm_sdk"
       ],
       "breakdown": {
+        "commit": 7,
         "issue_comment": 1,
         "issue": 8,
-        "commit": 5,
         "ai_roast": 2
       },
       "repoBreakdown": {
+        "MRNIU/brt-can-protocol": 1,
+        "MRNIU/odrive-can-driver": 3,
         "hpmicro/hpm_sdk": 8,
         "cherry-embedded/CherryUSB": 1,
         "EHAPower/devcontainers": 2,
-        "EHAPower/eha-sdk": 1,
-        "MRNIU/odrive-can-driver": 2
+        "EHAPower/eha-sdk": 1
       }
     },
     {

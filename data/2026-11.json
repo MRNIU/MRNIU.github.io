@@ -2,6 +2,32 @@
   "month": "2026-11",
   "events": [
     {
+      "id": "commit-83d5f28c7d81d6f4cc137e5813923b6d33605dff",
+      "type": "commit",
+      "ts": "2026-11-24T11:59:59Z",
+      "repo": "MRNIU/brt-can-protocol",
+      "semantic": "feat",
+      "data": {
+        "sha": "83d5f28c7d81d6f4cc137e5813923b6d33605dff",
+        "message": "feat(protocol): 增加原生 C17 编解码与 CMake 接入\n\n为 C 固件和宿主仿真提供可独立链接的静态库。四个无状态入口覆盖\nV2.7 的 13 个功能码，保留帧形态、原始计数、速度和应答状态，\n并对齐 Rust 的地址过滤、错误顺序和扩展设址长度兼容规则。\n\nRust 与 C 分别用 118 条共享向量核对报文和错误分类。独立断言校验\n公开枚举的线值，防止枚举值互换被数值转换掩盖。中文 Doxygen\n说明缓冲区、输出条件及主动回传语义。CI 增加 GCC、Clang\nASan/UBSan、外部消费者、Cortex-M7 硬浮点链接和文档检查。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 1832,
+        "deletions": 318
+      }
+    },
+    {
+      "id": "commit-fc6cc0ae3144bda5f8c359593ba17ea761117a81",
+      "type": "commit",
+      "ts": "2026-11-24T11:19:34Z",
+      "repo": "MRNIU/odrive-can-driver",
+      "semantic": "feat",
+      "data": {
+        "sha": "fc6cc0ae3144bda5f8c359593ba17ea761117a81",
+        "message": "feat: 增加原生 C17 CANSimple 驱动并对齐 Rust 行为\n\n提供可由 CMake 父工程直接链接的 C17 静态库，覆盖固定 v0.5.1 的\n双向编解码、独立反馈缓存和单槽 Driver。Rust 开放独立缓存写入，\n周期发送者可以在测速待答期间继续下发指令。\n\nC 通过实例与尝试序号识别旧凭证，一次消费在途结果。准备失败时\n保留具体协议诊断，区分已撤销和已过期的尝试。两种实现统一记录\n授权先发现到期的观察时刻，明确暂定查询超时与取走报告的边界。\n\n增加中文 Doxygen、无硬件的收发示例和跨语言验收。92 条协议向量\n及 12 条操作轨迹通过，GCC、Clang ASan/UBSan、外部 CMake 消费者\n和 Cortex-M7 交叉链接通过，Rust 组合后端测试及 Clippy 通过。\n\nCo-authored-by: OpenAI Codex <codex@openai.com>\nSigned-off-by: Niu Zhihong <zhihong@nzhnb.com>",
+        "additions": 5161,
+        "deletions": 566
+      }
+    },
+    {
       "id": "comment-hpmicro/hpm_sdk-149-0",
       "type": "issue_comment",
       "ts": "2026-11-22T23:23:40Z",
